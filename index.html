@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>홈 | 카카오페이지</title>
-  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-  </style>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
   <header>
-    <div>
-      <h1><img src="./img/logo-kakaopage.svg" alt="카카오페이지" /></h1>
-      <div>
-        <form action="#">
+    <div class="header-wrapper">
+      <div class="header-top">
+        <a href="#" class="logo"><img src="./img/logo-kakaopage.svg" alt="카카오페이지" /></a>
+        <form action="#" class="search-form">
           <input type="text" />
-          <button type="submit">검색</button>
+          <button type="submit" class="search-btn">검색</button>
         </form>
-        <a href="#">STAGE</a>
+        <a href="#" class="stage">
+          <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="스테이지" />
+        </a>
         <div class="link-area">
           <a href="#">캐시충전</a>
           <a href="#">로그인</a>
         </div>
       </div>
+      <nav>
+        <ul class="page-nav">
+          <li>홈</li>
+          <li class="selected">웹툰</li>
+          <li>웹소설</li>
+          <li>영화</li>
+          <li>방송</li>
+          <li>책</li>
+        </ul>
+      </nav>
     </div>
-    <nav class="page-nav">
-      <ul>
-        <li>홈</li>
-        <li>웹툰</li>
-        <li>웹소설</li>
-        <li>영화</li>
-        <li>방송</li>
-        <li>책</li>
-      </ul>
-    </nav>
   </header>
   <div class="main-contents-container">
     <div class="main-contents">
