@@ -1,0 +1,27 @@
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    --text-color: #333333;
+    --main-color: #FFFFFF;
+    --background-color: #EEEEEE;
+    --accent-color: #FCBC19;
+
+}
+body{
+    background-color: var(--background-color);
+}
+
+header{
+    display: flex;
+}
+
+.head__user{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
