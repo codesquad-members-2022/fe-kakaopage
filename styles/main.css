@@ -1,6 +1,43 @@
 .main {
-  background-color: #ffffff;
   margin-top: 140px;
   width: 720px;
-  height: 1000px;
+}
+
+.mainBox {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.main__nav-genre {
+  height: 60px;
+}
+
+.main__main-banner {
+  height: 340px;
+}
+
+.main__nav-detail {
+  height: 140px;
+}
+
+.main__sub-banner {
+  height: 120px;
+}
+
+.main__contents {
+  height: 300px;
+}
+
+.main__button {
+  display: flex;
+  height: 70px;
+  width: 100%;
+}
+
+.main__button button {
+  font-size: 19px;
+  width: 100%;
+  background-color: #fecc2e;
+  border: none;
 }
