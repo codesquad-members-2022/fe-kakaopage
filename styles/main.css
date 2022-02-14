@@ -1,26 +1,6 @@
-@import "reset.css";
-@import "header.css";
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #eeeeee;
-  width: 100%;
-}
-
 .main {
   background-color: #ffffff;
   margin-top: 140px;
   width: 720px;
   height: 1000px;
-}
-
-.span-bar {
-  color: #e2e2e2;
-  font-weight: 400;
-}
-
-footer {
-  width: 720px;
 }
