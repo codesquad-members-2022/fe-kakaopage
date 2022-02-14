@@ -152,4 +152,8 @@ BEM의 단점 ?
 4. header__bottom 요소 내에서는 메뉴들을 관리하는 네비게이션 태그를 사용하여 header__nav > header__ul > header__menu > header__link 로 네이밍을 지어주었다.
 
 
-BEM 관련 참고 사이트 : https://en.bem.info/
+`BEM 관련 참고 사이트 `
+
+1. https://en.bem.info/
+
+2. https://en.bem.info/methodology/css/#how-do-i-make-an-html-wrapper
