@@ -1,27 +1,90 @@
 :root{
     font-family: 'Noto Sans KR', sans-serif;
     --text-color: #333333;
-    --main-color: #FFFFFF;
+    --main-white: #FFFFFF;
     --background-color: #EEEEEE;
     --accent-color: #FCBC19;
 
 }
-body{
-    background-color: var(--background-color);
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-header{
+body{
+    background-color: var(--background-color);
+    text-align: center;
+   
+}
+h1{
+    font-size: 32px;
+    font-weight: 350;
+}
+.total{
+    background-color: var(--main-white);
+    width: 100%;
+    padding: 40px 15% 10px 15%;
+
+}
+
+.head{
     display: flex;
+    width: 100%;
+}
+
+.Search{
+    margin-left: 30px;
 }
 
 .head__user{
     display: flex;
     list-style: none;
-    cursor: pointer;
+    cursor: pointer; 
+    font-size: 22px;
+    color: #999999;
+}
+.head__user li{
+    display: inline-block;
+    justify-content: space-between;
+    width: 100px;
+    padding-right: 0;
+    padding-left: 0;
+}
+.head__user a{
+    color: #999999;
 }
 
+a{
+    text-decoration-line: none;
+}
+.searchBar input{
+    width: 30px;
+    border: 1px solid;
+}
+
+.navbar{
+    padding: 30px 0 10px 0;
+}
 .navbar__menu{
     display: flex;
     list-style: none;
     cursor: pointer;
+}
+
+.navbar__menu li{
+    align-items: space-between;
+    font-size: 22px;
+    font-weight: 400;
+
+}
+.navbar__menu a{
+    color: var(--text-color);
+}
+
+.main{
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 2% 30%;
 }
