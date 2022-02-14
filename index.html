@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./CSS/style.css">
+  <script src="https://kit.fontawesome.com/dcc474fa75.js" crossorigin="anonymous"></script>
   <title>cocoapage</title>
 </head>
 <body>
@@ -17,6 +18,7 @@
       <h1><a href="#" class="header__logo">cocoapage</a></h1>
       <form action="#" class="search-form">
         <input type="text" class="search-form__input">
+        <i class="fas fa-search"></i>
       </form>
       <ul class="header__contents">
         <li><a href="#">STAGE</a></li>
@@ -28,8 +30,8 @@
     <nav class="header__nav">
       <ul class="nav__list">
         <li class="nav__item"><a href="#">홈</a></li>
-        <li class="nav__item"><a href="#">웹툰</a></li>
-        <li class="nav__item"><a href="#">웹소설</a></li>
+        <li class="nav__item"><a href="#">웹툰·<i class="fas fa-clock"></i></a></li>
+        <li class="nav__item"><a href="#">웹소설·<i class="fas fa-clock"></i></a></li>
         <li class="nav__item"><a href="#">영화</a></li>
         <li class="nav__item"><a href="#">방송</a></li>
         <li class="nav__item"><a href="#">책</a></li>
@@ -53,12 +55,16 @@
     
     <article class="banner">
       <div class="banner__img">
-        <img src="#" alt="">
+        <img src="http://placehold.it/720x480" />
+        <button type="button" class="banner__prev"><i class="fas fa-chevron-left"></i></button>
+        <button type="button" class="banner__next"><i class="fas fa-chevron-right"></i></button>
       </div>
       <div class="banner__info">
         <h3 class="banner__title">타이틀</h3>
         <div class="banner__viewer">
+          <i class="fas fa-clock"></i>
           <span>웹툰</span>
+          <i class="fas fa-user"></i>
           <span>이용자 수</span>
         </div>
       </div>
@@ -82,70 +88,95 @@
       <div>
         <button type="button" class="select__total">전체</button>
         <button type="button" class="select__normal">웹툰</button>
-        <button type="button" class="select__free">웹툰</button>
+        <button type="button" class="select__free"><i class="fas fa-clock"></i> 웹툰</button>
       </div>
-      <button type="button" class="select__genre">전체(138)</button>
+      <button type="button" class="select__genre">전체(138)<i class="fas fa-sort-down"></i></button>
     </div>
 
     <section class="main__contents">
       <ul class="contents__list">
         <li class="contents__item">
-          <div class="item__img">
-            <img src="#" alt="">
-          </div>
-          <div class="item__review">
-            <span>별점</span>
+          <div class="item__thumbnail">
+            <div class="item__img">
+              <img src="http://placehold.it/120"/>
+            </div>
+            <div class="item__review">
+              <i class="fas fa-star"></i>
+              <span>별점</span>
+              <i class="fas fa-clock"></i>
+            </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
             <span class="item__count">이용자 수</span>
           </div>
         </li>
         <li class="contents__item">
-          <div class="item__img">
-            <img src="#" alt="">
-          </div>
-          <div class="item__review">
-            <span>별점</span>
+          <div class="item__thumbnail">
+            <div class="item__img">
+              <img src="http://placehold.it/120"/>
+            </div>
+            <div class="item__review">
+              <i class="fas fa-star"></i>
+              <span>별점</span>
+              <i class="fas fa-clock"></i>
+            </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
             <span class="item__count">이용자 수</span>
           </div>
         </li>
         <li class="contents__item">
-          <div class="item__img">
-            <img src="#" alt="">
-          </div>
-          <div class="item__review">
-            <span>별점</span>
+          <div class="item__thumbnail">
+            <div class="item__img">
+              <img src="http://placehold.it/120"/>
+            </div>
+            <div class="item__review">
+              <i class="fas fa-star"></i>
+              <span>별점</span>
+              <i class="fas fa-clock"></i>
+            </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
             <span class="item__count">이용자 수</span>
           </div>
         </li>
         <li class="contents__item">
-          <div class="item__img">
-            <img src="#" alt="">
-          </div>
-          <div class="item__review">
-            <span>별점</span>
+          <div class="item__thumbnail">
+            <div class="item__img">
+              <img src="http://placehold.it/120"/>
+            </div>
+            <div class="item__review">
+              <i class="fas fa-star"></i>
+              <span>별점</span>
+              <i class="fas fa-clock"></i>
+            </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
             <span class="item__count">이용자 수</span>
           </div>
         </li>
         <li class="contents__item">
-          <div class="item__img">
-            <img src="#" alt="">
-          </div>
-          <div class="item__review">
-            <span>별점</span>
+          <div class="item__thumbnail">
+            <div class="item__img">
+              <img src="http://placehold.it/120"/>
+            </div>
+            <div class="item__review">
+              <i class="fas fa-star"></i>
+              <span>별점</span>
+              <i class="fas fa-clock"></i>
+            </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
             <span class="item__count">이용자 수</span>
           </div>
         </li>
