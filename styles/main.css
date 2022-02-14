@@ -10,8 +10,10 @@ body {
 }
 
 .main {
-  background-color: red;
+  background-color: #ffffff;
+  margin-top: 140px;
   width: 720px;
+  height: 1000px;
 }
 
 .span-bar {
