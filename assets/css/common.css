@@ -122,7 +122,7 @@ main .gnb ul {
 }
 
 main .gnb ul li {
-    width: 100%;
+    flex: auto;
     padding: 30px 0 15px;
     border-bottom: 3px solid transparent;
     font-size: 20px;

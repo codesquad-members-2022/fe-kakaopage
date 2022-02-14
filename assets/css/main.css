@@ -1,0 +1,34 @@
+/* MAIN */
+
+.main_contents_box {
+    margin-top: 149px;
+    padding-top: 18px;
+}
+
+/* LNB */
+.main_contents_box .lnb {
+    background: #fff;
+}
+
+.main_contents_box .lnb ul {
+    display: flex;
+}
+
+.main_contents_box .lnb ul li {
+    padding: 21px 0;
+    font-size: 20px;
+    color: rgb(187, 187, 187);
+    font-weight: 350;
+    flex: auto;
+}
+
+.main_contents_box .lnb ul li.active {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+}
+
+.main_contents_box .lnb ul li button {
+    width: 100%;
+}
+
+/* //LNB */
