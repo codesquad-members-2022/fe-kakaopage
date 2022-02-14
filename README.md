@@ -36,3 +36,21 @@
 - 코드쓰기 전에 어떻게 묶을지 색깔로 표시하기
 - css 적용할 거 생각해서 html tag 묶기
 - 정적 html, css화면만 구성
+
+# 고민
+
+커밋 메세지를 얼마나 세분화해야하는지
+
+- 아무리 작아도 주제가 구분되면 구분해서 커밋해야하나? 예를 들어, 미션목표정하기 -> html 구조짜기
+
+html tag
+
+- session vs artice 차이
+
+css
+
+- naming: main\_\_carousel\_\_button vs main\_\_carousel > button
+
+# html 구조짜기 및 간단한 네이밍
+
+![이미지-1](https://user-images.githubusercontent.com/71386219/153881920-aa848f63-bb26-48c7-b39c-a000ceac688d.jpg)
