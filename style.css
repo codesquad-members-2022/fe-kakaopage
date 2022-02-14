@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-header {
+.firstHeader {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
@@ -95,8 +95,13 @@ form {
   background: #f1c164;
 }
 
+img {
+  border-radius: 12px 12px 12px 12px;
+}
+
 .firstSection {
   position: relative;
+  margin-top: 10px;
 }
 
 .imageText {
@@ -141,6 +146,7 @@ form {
   justify-content: center;
   background-color: aqua;
   padding: 5px;
+  margin-top: 15px;
 }
 
 .secondSection span {
@@ -149,4 +155,64 @@ form {
   margin-top: 20px;
   font-size: larger;
   font-weight: bolder;
+}
+
+.thirdSection {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: aquamarine;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.thirdSection span {
+  width: 50%;
+  height: auto;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.waitWebtoon {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.moreContent {
+  text-align: right;
+}
+
+.firstWebtoon,
+.secondWebtoon,
+.thirdWebtoon,
+.fourthWebtoon {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.firstWebtoon span,
+.secondWebtoon span,
+.thirdWebtoon span,
+.fourthWebtoon span {
+  position: absolute;
+  top: 0px;
+  width: 0%;
+  font-size: 18px;
+  left: 0px;
+}
+
+.information {
+  position: absolute;
+  top: 15px;
+  left: 20%;
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.information > div:nth-child(1),
+.information > div:nth-child(2),
+.information > div:nth-child(3) {
+  text-align: left;
 }
