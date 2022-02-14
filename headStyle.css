@@ -1,0 +1,110 @@
+body {
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.topHeader {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+.pageName {
+  display: flex;
+  flex-direction: row;
+}
+
+.page__title {
+  font-size: 50px;
+  padding: 10px;
+}
+
+.login {
+  display: flex;
+  position: absolute;
+  padding-right: 15px;
+  top: 25%;
+  right: 0%;
+}
+
+.login__text {
+  margin-left: 8px;
+}
+
+.searchEngine {
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+/* .pageName > form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-end;
+} */
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.recommand__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.recommand__nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  width: 1000px;
+}
+.recommand__image {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 400px;
+  margin-top: 5px;
+}
+
+.recommand__description {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+}
+
+.main__contents {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 1000px;
+}
+
+.main__nav__sortAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+}
+
+.main__nav__dow {
+  display: flex;
+}
+
+.sort {
+  display: flex;
+}
+
+.main__cartoon {
+  height: 600px;
+}
