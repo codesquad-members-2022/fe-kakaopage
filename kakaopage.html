@@ -10,54 +10,59 @@
     <title>kakaopage</title>
   </head>
   <body>
-    <header>
-      <h1>kakaopage</h1>
-      <form class="searchInput">
-        <input type="text" class="searchText" placeholder="검색" />
-        <input type="submit" class="searchSubmit" value="Enter" />
-      </form>
-      <div>
-        <button class="headerButton">STAGE</button>
-        <button class="headerButton">캐시충전</button>
-        <button class="headerButton">로그인</button>
-      </div>
-    </header>
-    <nav>
-      <ul class="navUlButton">
-        <button class="ulButton">홈</button>
-        <button class="ulButton">웹툰</button>
-        <button class="ulButton">웹소설</button>
-        <button class="ulButton">영화</button>
-        <button class="ulButton">방송</button>
-        <button class="ulButton">책</button>
-      </ul>
-    </nav>
+    <div id="wrapper">
+      <header>
+        <h1>kakaopage</h1>
 
-    <main>
-      <section class="longImage">
-        <img src=".\웹툰 _ 더 라이브.png" / alt="더 라이브">
-        <div class="imageText">
-          <h2 class="imageTitle">더 라이브</h2>
-          <span class="imageEvent">이벤트</span>
-          <span class="imageSpan">웹툰 |</span>
-          <span class="imageSpan">246.4만명</span>
+        <form class="searchInput">
+          <input type="text" class="searchText" placeholder="검색" />
+          <input type="submit" class="searchSubmit" value="Enter" />
+        </form>
+
+        <div>
+          <button class="headerButton">STAGE</button>
+          <button class="headerButton">캐시충전</button>
+          <button class="headerButton">로그인</button>
         </div>
-        <div class="imageFooter">시즌2 런칭 기념 대박 이벤트!!</div>
-      </section>
+      </header>
 
-      <section>
-        <span>오늘 신작7️⃣</span>
-        <span>달콤한 선물😍</span>
-        <span>숨겨진 명작👍</span>
-      </section>
+      <nav>
+        <ul class="navUlButton">
+          <button class="ulButton">홈</button>
+          <button class="ulButton">웹툰</button>
+          <button class="ulButton">웹소설</button>
+          <button class="ulButton">영화</button>
+          <button class="ulButton">방송</button>
+          <button class="ulButton">책</button>
+        </ul>
+      </nav>
 
-      <section>기다리면 무료 웹툰</section>
+      <main>
+        <section class="firstSection">
+          <img src=".\웹툰 _ 더 라이브.png" / alt="더 라이브">
+          <div class="imageText">
+            <h2 class="imageTitle">더 라이브</h2>
+            <span class="imageEvent">이벤트</span>
+            <span class="imageSpan">웹툰 |</span>
+            <span class="imageSpan">246.4만명</span>
+          </div>
+          <div class="imageFooter">시즌2 런칭 기념 대박 이벤트!!</div>
+        </section>
 
-      <section>인기 웹툰</section>
+        <section class="secondSection">
+          <span>오늘 신작7️⃣</span>
+          <span>달콤한 선물😍</span>
+          <span>숨겨진 명작👍</span>
+        </section>
 
-      <section>실시간 랭킹</section>
-    </main>
+        <section>기다리면 무료 웹툰</section>
 
-    <footer></footer>
+        <section>인기 웹툰</section>
+
+        <section>실시간 랭킹</section>
+      </main>
+
+      <footer></footer>
+    </div>
   </body>
 </html>
