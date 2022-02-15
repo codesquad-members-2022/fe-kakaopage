@@ -8,6 +8,7 @@
   --main-grey-dark: #9a9a9a;
   --main-white: #ffffff;
   --main-width: 720px;
+  --main-carousel-heigth: 480px;
 }
 
 .l-header {
@@ -40,4 +41,18 @@
 
 button:hover {
   cursor: pointer;
+}
+
+.move-button {
+  width: 42px;
+  height: 42px;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator > span {
+  margin: 0 4px;
 }

@@ -232,23 +232,23 @@
             />
             <div class="l-carousel__content">
               <div class="c-carousel__buttons">
-                <button type="button" class="c-carousel__button">
+                <button type="button" class="c-carousel__button move-button">
                   <i class="fas fa-angle-left"></i>
                 </button>
-                <button type="button" class="c-carousel__button">
+                <button type="button" class="c-carousel__button move-button">
                   <i class="fas fa-angle-right"></i>
                 </button>
               </div>
               <div class="c-carousel__content">
                 <h3 class="c-carousel__title">무인 이곽</h3>
                 <div class="c-carousel__footer">
-                  <div class="c-carousel__indicator">
-                    <span class="c-carousel__new">UP</span>
+                  <div class="c-carousel__indicator  indicator">
+                    <span class="c-carousel__new indicator__new">UP</span>
                     <span class="c-carousel__genre"
                       ><i class="fas fa-clock"></i> 웹툰</span
                     >
                     <div class="divider"></div>
-                    <span class="c-carousel__views"
+                    <span class="c-carousel__views indicator__view"
                       ><i class="fas fa-user"></i> 25.8만명</span
                     >
                   </div>
@@ -257,44 +257,89 @@
               </div>
             </div>
           </div>
-          <div class="c-carousel__sub-title">확인하러가기</div>
+          <div class="c-carousel__sub-title">
+            네 안의 늑대를 개로 만들지 마라!
+          </div>
+        </article>
+        <article class="c-grid l-main__child">
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 UP</span
+            ><span class="c-grid__number">206</span>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 신작</span
+            ><span class="c-grid__number">4</span>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오리지널</span
+            ><span class="c-grid__number">2,330</span>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">완결까지 정주행</span
+            ><span class="c-grid__number"></span>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">독립운동가 웹툰/span
+            ><span class="c-grid__number"></span>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 랭킹</span
+            ><span class="c-grid__number">1위</span>
+          </div>
         </article>
         <article class="c-event l-main__child">
-          <ul class="l-event">
-            <li class="c-event__elem">오늘 신작</li>
-            <li class="c-event__elem">달콤한 선물</li>
-            <li class="c-event__elem">숨겨진 명작</li>
-          </ul>
+          <button type="button" class="move-button">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="c-event__img">
+            <img src="./static/images/event-1.png" alt="event image">
+          </div>
+          <button type="button" class="move-button">
+            <i class="fas fa-angle-right"></i>
+          </button>
         </article>
         <article class="c-webtoons l-main__child">
-          <div class="c-webtoons__header">
-            <div class="l-webtoons__title">
-              <h3 class="c-webtoons__title">기다리면 무료 웹툰</h3>
-              <span class="c-webtoons__total">(3,524)</span>
+          <div class="l-webtoons__header">
+            <div class="c-webtoons__header">
+              <h2>요일 연제 TOP</h2>
+              <span>(1,622)</span>
             </div>
-            <div class="l-webtoons__more">
-              <span class="c-webtoons__more">더보기</span>
+            <div class="c-webtoons__more">
+              더보기 > 
             </div>
           </div>
-          <ul class="l-webtoons__body">
-            <li class="c-webtoon">
+          <div class="l-webtoons__dates">
+            <ul class="c-category">
+              <li class="header__index c-category__index main__index">월</li>
+              <li class="header__index c-category__index main__index">화</li>
+              <li class="header__index c-category__index main__index">수</li>
+              <li class="header__index c-category__index main__index">목</li>
+              <li class="header__index c-category__index main__index">금</li>
+              <li class="header__index c-category__index main__index">토</li>
+              <li class="header__index c-category__index main__index">일</li>
+              <li class="header__index c-category__index main__index">완결</li>
+            </ul>
+          </div>
+          <div class="l-webtoons__contents">
+            <div class="c-webtoon">
               <div class="l-webtoon__img">
-                <img class="c-webtoon__img" src="" alt="temp-image" />
-              </div>
-              <div class="l-webtoon__content">
-                <h5 class="c-webtoon__name">웹툰 제목</h5>
-                <div class="c-webtoon__content">
-                  <div class="l-webtoon__description">
-                    <span class="c-webtoon__description">웹툰 한 줄 설명</span>
-                  </div>
-                  <div class="c-webtoon__indicator">
-                    <span class="c-webtoon__views">40만 명</span>
-                    <span class="c-webtoon__artist">작가</span>
-                  </div>
+                <div class="c-webtoon--img"><img src="./static/images/webtoon-1.png" alt="webtoon thumbnail"></div>
+                <div class="c-webtoon__rank">
+                  <span>1위</span>
+                  <span><i class="fas fa-clock"></i></span>
                 </div>
               </div>
-            </li>
-          </ul>
+              <div class="l-webtton__description">
+                <div class="c-webtoon__title">도굴왕</div>
+                <div class="c-webtoon__indicator indicator">
+                  <span class="c-webtoon__new indicator__new">UP</span>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
       </main>
     </div>
