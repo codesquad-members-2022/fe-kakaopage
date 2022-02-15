@@ -152,3 +152,50 @@
 .week-list .active {
     border-bottom: solid 2px #ffd200;
 }
+
+.webtoon-card-wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.webtoon-card {
+    width: 120px;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.webtoon-card .thumbnail {
+    width: 100%;
+    display: block;
+}
+
+.webtoon-card .rank-info {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    color: #ffd200;
+    background-color: #242526;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.webtoon-card .rank-info img {
+    height: 16px;
+}
+
+.webtoon-card .title {
+    color: #333;
+    margin: 10px 0;
+}
+
+.webtoon-card .reader-info {
+    color: #9c9c9c;
+    font-size: 0.9rem;
+}
+
+.thumbnail-wrap {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}

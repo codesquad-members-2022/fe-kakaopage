@@ -62,3 +62,8 @@ button {
 .section-header .detail {
     color: #999;
 }
+
+.thumbnail-wrap {
+    border-radius: 8px;
+    background-color: #fff;
+}
