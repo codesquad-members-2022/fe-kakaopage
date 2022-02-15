@@ -89,11 +89,13 @@ body{
     height:70px;
     background:#fff;
     margin:0 auto;
+   
 }
 
 .subcategory ul {
     display: flex;
     justify-content: space-around;
+    
 }
 
 .subcategory ul li a{
@@ -199,25 +201,49 @@ body{
 /* ===============webtoon-list=============== */
 .webtoon-list ul{
     display:flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    /* flex-direction: row; */
-    /* align-content: space-around; */
     margin-top:20px;
-}
-.webtoon-list ul li:first-child{
-    margin-left:20px;
-}
-.webtoon-list ul li:nth-child(6n){
-    margin-left:20px;
 }
 
 .webtoon-list ul li{
-    margin-right:20px;
+    margin-left:20px;
+    margin-bottom:20px;
 }
 
 .webtoon-image{
     width:120px;
     height:120px;
     background:pink;
+    border-radius:10px 10px 0px 0px;
+}
+.webtoon-rank{
+    width:120px;
+    height:30px;
+    border-radius:0px 0px 10px 10px;
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+}
+.webtoon-rank span{
+    margin:5px 5px 5px 5px;
+    color:#fff;
+}
+.webtoon-title{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.webtoon-pop{
+    display:flex;
+    justify-content:flex-start;
+    color:#999;
+}
+
+.kakao-app{
+    width:720px;
+    height:70px;
+    background:yellow;
+    margin:10px auto;
+    text-align:center;
+    line-height:70px;
+    font-size:20px;
 }
