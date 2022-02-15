@@ -51,3 +51,23 @@ strong { font-weight: bold; }
 body { background: #e9ecef; color: #212529; }
 
 img { width: 100%; }
+
+.header { background: #fff; }
+
+.header__inner { margin: 0 auto; padding: 24px 0; width: 720px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.header__logo { width: 130px; height: 29px; }
+
+.header__search-form { margin: 0 0 0 132px; width: 186px; height: 33px; font-size: 1rem; border: 1px solid #ced4da; border-radius: 24px; background: #fff; }
+
+.header__search-input { margin: 0 0 0 12px; width: 136px; height: 31px; border: none; background: none; }
+
+.header__search-submit { width: 20px; height: 20px; }
+
+.header__link-box { margin: 3px 0 0 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.header__link--img { margin-right: 24px; width: 62px; height: 26px; }
+
+.header__link--txt { font-size: 1.125rem; color: #868e96; height: 26px; }
+
+.header__link-divider { margin: 6px 12px 0; width: 1px; height: 12px; background: #adb5bd; }
