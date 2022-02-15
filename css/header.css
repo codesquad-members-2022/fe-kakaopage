@@ -1,7 +1,3 @@
-
-body {
-    background-color: #eee;
-}
 header {
     position: fixed;
     top: 0px;
@@ -80,39 +76,4 @@ header {
 }
 .menu-nav__item--selected {
     border-bottom: 3px solid #ffd200;
-}
-
-main {
-    margin-top: 167px;
-    display: flex;
-    justify-content: center;
-}
-footer {
-    display: flex;
-    justify-content: center;
-    color: #bdbdbd;
-}
-footer > .container {
-    display: flex;
-}
-.footer-left {
-    width: 100%;
-}
-.footer-right > img {
-    width: 55px;
-    height: 55px;
-    margin-top: 60px;
-}
-.footer-right > p {
-    font-size: 12px;
-    margin-top: 3px;
-    text-align: center;
-}
-.policy {
-    padding: 60px 0 0;
-    color: #bdbdbd;
-    font-size: 14px;
-}
-.companyInfoWrap {
-    margin-top: 5px;
 }
