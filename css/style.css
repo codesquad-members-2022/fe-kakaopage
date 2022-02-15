@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0 auto;
+  width: 720px;
+  /* position: fixed; */
+}
+
+.container {
+  height: 80px;
+}
+
+.init > * {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style-type: none;
+}
+
+.h1 {
+  font-size: 26px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+
+.search {
+  margin-left: 80px;
+  height: 34px;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.icon-magnifier {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  right: 35px;
+  top: 5px;
+}
+
+.white {
+  background-color: white;
+}
+
+.user-account {
+  margin: auto 0;
+}
+
+.icon-stage {
+  background-image: url("https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f");
+  background-size: cover;
+  width: 62px;
+  height: 26px;
+  margin: auto 0;
+}
+
+.user-container {
+  padding: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-medium {
+  font-size: 16px;
+}
+
+.btn-gray {
+  background-color: white;
+  font-weight: bold;
+  color: gray;
+}
