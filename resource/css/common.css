@@ -20,6 +20,38 @@ common
     background: url('../images/common/ico-clock-black.png') no-repeat center / auto 20px;
     vertical-align: middle;
 }
+.slide-button-wrap {
+    position: absolute;
+    top: 50%;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+.slide-button {
+    width: 40px;
+    height: 40px;
+    background: no-repeat center / 100% auto;
+}
+.slide-button.prev {
+    background-image: url('../images/common/slide-previous-button_dark.svg');
+}
+.slide-button.next {
+    background-image: url('../images/common/slide-next-button_dark.svg');
+}
+.slide-paging-number {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+}
+.slide-paging-number__all:before {
+    content: ' / ';
+}
 
 /**
 display
@@ -29,9 +61,18 @@ display
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: calc(var(--gnb-height) + var(--header-height));
-    padding: 11px 0;
+    padding-top: calc(var(--gnb-height) + var(--header-height) + 14px);
     overflow: hidden;
+}
+.section {
+    margin-bottom: 11px;
+    background: #fff;
+}
+.float-bottom {
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    color: #fff;
 }
 
 /**
@@ -119,6 +160,7 @@ gnb
     background: #fff;
     border-bottom: 1px solid #dfdfdf;
     box-sizing: border-box;
+    z-index: 100;
 }
 .gnb {
     display: flex;
@@ -158,6 +200,10 @@ gnb
     background: var(--color-black);
     transform: translateY(-50%);
 }
+
+/**
+category
+**/
 .categories {
     display: flex;
     justify-content: space-around;
@@ -175,4 +221,75 @@ gnb
 }
 .category__link.on {
     color: inherit;
+}
+
+
+/**
+banner
+**/
+.main-banners {
+    position: relative;
+    overflow: hidden;
+}
+.main-banners__contents {
+    display: inline-flex;
+}
+.main-banner {
+    position: relative;
+    width: var(--max-width);
+    font-weight: 700;
+}
+.main-banner__title {
+    font-size: 28px;
+}
+.main-banner__tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1;
+}
+.main-banner__status {
+    padding: 0 5px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffd200;
+    background: #000;
+    border: 1px solid #ffd200;
+    border-radius: 3px;
+}
+.main-banner__category:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url('../images/common/ico-clock_white.svg') no-repeat left center / auto 20px;
+}
+.main-banner__category:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    margin-left: 10px;
+    background: #b0aeae;
+}
+.main-banner__reader:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url('../images/common/ico-user.svg') no-repeat left center / auto 20px;
+}
+.main-banner__description {
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    background: #ffd200;
+}
+.main-banners .slide-button-wrap {
+    margin-top: -10px;
 }
