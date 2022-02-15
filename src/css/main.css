@@ -91,3 +91,19 @@ img { width: 100%; }
 .footer__ok-mark { position: absolute; top: 110px; right: 0; }
 
 .footer__ok-mark img { width: 55px; height: 55px; }
+
+.gnb { padding: 20px 0 16px; border-bottom: 1px solid #dee2e6; background: #fff; }
+
+.gnb__inner { margin: 0 auto; width: 720px; }
+
+.gnb__list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.gnb__item { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0 38px; font-size: 1.25rem; cursor: pointer; }
+
+.gnb__item img { width: 18px; margin: -2px 0 0; }
+
+.gnb__item--active { position: relative; }
+
+.gnb__item--active:after { content: ''; position: absolute; left: 0; right: 0; bottom: -16px; height: 3px; background: #ffd200; }
+
+.gnb__item--dot:after { margin: -2px 0 0; display: block; content: ''; width: 6px; height: 6px; border-radius: 10px; background: #ffd200; }

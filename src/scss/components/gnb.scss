@@ -1,0 +1,50 @@
+.gnb {
+  padding: 20px 0 16px;
+  border-bottom: 1px solid $gray-3;
+  background: $gray-0;
+
+  &__inner {
+    margin: 0 auto;
+    width: 720px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    padding: 0 38px;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    img {
+      width: 18px;
+      margin: -2px 0 0;
+    }
+
+    &--active {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        height: 3px;
+        background: $yellow;
+      }
+    }
+
+    &--dot:after {
+      margin: -2px 0 0;
+      display: block;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      background: $yellow;
+    }
+  }
+}
