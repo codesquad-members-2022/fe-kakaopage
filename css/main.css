@@ -2,7 +2,7 @@
 
 main {
     width: 100%;
-    height: 80px;
+    height: 100%;
     padding-top: 5px;
     background-color: var(--main-gray);
 }
@@ -23,5 +23,61 @@ main {
 .main__navigation ul li {
     font-size: 20px;
     text-align: center;
+}
+
+.main__contents {
+    margin: 0 auto;
+    width: 50%
+}
+
+.main__contents__view {
+    position: relative;
+}
+
+.main__contents__view img {
+    width: 100%;
+}
+
+.main__contents__view__text {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    margin-bottom: 0;
+}
+
+._text__view__name {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--main-white);
+}
+
+._text__view__info {
+    margin-top: 5px;
+}
+
+._text__view__event {
+    display: inline;
+    padding: 2px;
+    border: 1px solid var(--main-gold);
+    background-color: black;
+    color: var(--main-gold);
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+._text__view__info span {
+    font-size: 18px;
+    margin-right: 2px;
+    color: var(--main-white);
+}
+
+.main__contents__sentence {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    background-color: var(--main-gold);
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 12px;
 }
 
