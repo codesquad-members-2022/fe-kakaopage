@@ -3,10 +3,6 @@
     margin-top: 150px;
 }
 
-main {
-    /* background-color: #fff; */
-}
-
 .sub-menu {
     margin-bottom: 11px;
     height: 66px;
@@ -55,8 +51,8 @@ main {
     height: 40px;
     background-color: #ffd200;
     color: #3a3a3a;
-    align-items: center;
     margin-top: 20px;
+    align-items: center;
     justify-content: center;
     font-weight: 400;
     font-size: 1.1rem;
@@ -77,4 +73,43 @@ main {
     right: 25px;
     bottom: 60px;
     opacity: 0.6;
+}
+
+.category {
+    margin-top: 11px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.category-links-wrap {
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+
+.category a {
+    width: 33%;
+    height: 60px;
+    color: #3a3a3a;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.category a:nth-of-type(3n) {
+    border-right: none;
+}
+
+.category .badge {
+    height: 24px;
+    background-color: #ffd200;
+    border-radius: 13px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
 }
