@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
 }
+/* 헤더 */
 .headerAndNavWrap {
   width: 100%;
   position: fixed;
@@ -87,7 +88,10 @@ nav {
 .logIn {
   margin: 0 0 0 10px;
 }
-
+/* 네비게이션바 */
+nav {
+  height: 69px;
+}
 .navWrap {
   height: 68px;
   width: 720px;
@@ -108,23 +112,132 @@ nav {
   width: 100%;
   height: 100px;
 }
+/* 웹툰장르바 */
 .webtoonGenreBar {
   height: 67px;
   display: flex;
   background: white;
+}
+.webtoonGenreBar > * {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webtoonGenreBar > * > * {
+  text-decoration: none;
+  font-size: 20px;
+  color: #999;
+  font-weight: bold;
+}
+.genreHome {
+  width: 52.8px;
+}
+.homeLink {
+  color: black;
+}
+.weekday,
+.action {
+  width: 108px;
+}
+.webtoon,
+.boy,
+.romanticFantasy {
+  width: 72.7px;
+}
+.drama,
+.romance {
+  width: 89.6px;
+}
+.bl {
+  width: 58px;
 }
 .event {
   height: 520px;
   margin: 10px 0 10px 0;
 }
 .eventSlide {
-  height: 480px;
+  height: 440px;
   width: 100%;
-}
-.slideImage {
-  width: 100%;
-  height: 100%;
+  background-image: url("/FE/FE01-html/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 20px;
+  position: static;
+}
+.slideMoveBtn {
+  position: absolute;
+  width: 680px;
+  bottom: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+.slideMoveBtn > * {
+  color: #eee;
+}
+.eventSlideInfo {
+  height: 75px;
+}
+.eventTitle {
+  height: 28px;
+  margin: 6px 0 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+.eventInfoWrap {
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 12px 0 0;
+}
+.eventLeft {
+  display: flex;
+  margin: 12px 0 0;
+}
+.eventLeft > * {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.eventStatusWrap {
+  display: flex;
+  align-items: center;
+}
+.eventStatus {
+  width: 52.8px;
+  height: 22px;
+  background-size: cover;
+  margin: 0 10px 0 0;
+}
+.clock {
+  color: white;
+  margin: 0 4px 0 0;
+}
+.eventGenreInfo {
+  margin: 0 1px 0 0;
+}
+.eventSlash {
+  margin: 0 8px;
+}
+.readCountEvent {
+  margin: 1px 0 0;
+}
+.eventFollow {
+  margin: 0 0 1px 4px;
+}
+.eventRight {
+  display: flex;
+}
+.eventRight > * {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  opacity: 0.6;
 }
 .imgCopyWrap {
   height: 40px;
@@ -139,48 +252,47 @@ nav {
   font-size: 18px;
 }
 .eventButtons {
-  height: 100px;
+  height: 161px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 10px 0 10px 0;
+  margin: 11px 0 0;
+  box-sizing: border-box;
+  padding: 20px;
 }
 .eventButtons > * {
-  width: 226px;
+  width: 220px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #eee;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  /* border: 1px solid black; */
+  border: 1px solid white;
 }
 
-.todayNew {
-  border-radius: 10px 0 0 10px;
+.todayUp {
+  border-radius: 10px 0 0 0;
 }
 .countNew {
-  width: 33px;
+  min-width: 24px;
   height: 24px;
   border-radius: 33px;
   background-color: #ffd200;
-  margin: 0 0 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0 0 10px;
 }
-.gift {
+/* .todayNew {
   margin: 0 2px 0 2px;
-}
-.giftCopy {
-  font-size: 18px;
-}
-
-.hiddenMasterPiece {
-  border-radius: 0 10px 10px 0;
-}
+} */
+/* .original {
+  border-radius: 0 10px 0 0;
+} */
 .waitForFreeWebtoon {
   height: 534px;
   margin: 10px 0 10px 0;
@@ -196,7 +308,6 @@ nav {
 }
 .copyAndCount {
   display: flex;
-  /* margin: 0 20px 0 20px; */
   align-items: center;
   font-weight: bold;
 }
