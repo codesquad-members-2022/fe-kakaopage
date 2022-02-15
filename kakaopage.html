@@ -13,27 +13,51 @@
   </head>
   <body>
     <header>
-      <div class="page_header">
-        <h1 class="page_header__title">kakaopage</h1>
-        <form class="search-form">
-          <input type="text" class="search-form__input" />
-        </form>
-        <nav class="page_header__searchBar">
-          <button class="nav__btn">STAGE</button>
-          <button class="nav__btn">캐시충전</button>
-          <button class="nav__btn">로그인</button>
+      <div class="inner">
+        <div class="page_header">
+          <h1 class="page_header__title">kakaopage</h1>
+          <form class="search-form">
+            <input type="text" class="search-form__input" />
+          </form>
+          <nav class="page_header__searchBar">
+            <div class="searchBar__stage">
+              <button class="nav__btn">STAGE</button>
+              <div class="firstRect"></div>
+              <div class="secondRect"></div>
+              <!-- <div class="searchBar__stage_msg">새로운 작가를 만나는 곳</div> -->
+            </div>
+
+            <button class="nav__btn">캐시충전</button>
+            <button class="nav__btn">로그인</button>
+          </nav>
+        </div>
+        <nav class="page-header__nav">
+          <ul class="nav__list">
+            <div class="nav__list_home">
+              <li class="nav__btn">홈</li>
+            </div>
+            <div class="nav__list_webtoon">
+              <li class="nav__btn">웹툰</li>
+              <div class="selected"></div>
+            </div>
+            <div class="nav__list_webNovel">
+              <li class="nav__btn">웹소설</li>
+            </div>
+            <div class="nav__list_movie">
+              <li class="nav__btn">영화</li>
+              <div class="alarm"></div>
+            </div>
+            <div class="nav__list_broadcast">
+              <li class="nav__btn">방송</li>
+              <div class="alarm"></div>
+            </div>
+            <div class="nav__list_book">
+              <li class="nav__btn">책</li>
+              <div class="alarm"></div>
+            </div>
+          </ul>
         </nav>
       </div>
-      <nav class="page-header__nav">
-        <ul class="nav__list">
-          <li class="nav__btn">홈</li>
-          <li class="nav__btn">웹툰</li>
-          <li class="nav__btn">웹소설</li>
-          <li class="nav__btn">영화</li>
-          <li class="nav__btn">방송</li>
-          <li class="nav__btn">책</li>
-        </ul>
-      </nav>
     </header>
 
     <div class="page-main">
@@ -51,36 +75,172 @@
         </ul>
       </nav>
 
-      <div class="page-main__adBanner">
-        <img
-          src="http://placehold.it/500x400.png"
-          class="page-main__adBanner_img"
-          alt="ad"
-        />
-        <div class="page-main__adBanner_title">롱리브더킹</div>
-        <div class="page-main__adBanner_info">up 웹툰 246.4만명</div>
-        <div class="page-main__adBanner_subtitle">
-          왕의 귀환! 장세출이 돌아왔다!
+      <div class="mainAdBanner">
+        <svg
+          class="mainAdBanner__back_btn"
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle
+              cx="20"
+              cy="20"
+              r="19.5"
+              fill="#000"
+              fill-opacity=".2"
+              stroke="#FFF"
+              stroke-opacity=".5"
+            />
+            <path
+              fill="#FFF"
+              d="M14.001 20.077c.014.236.111.468.292.648l6.997 6.987c.39.39 1.023.39 1.413 0l.006-.005c.39-.391.39-1.024-.002-1.415l-6.3-6.29 6.3-6.29c.391-.39.392-1.024.002-1.414l-.002-.002-.004-.004c-.39-.39-1.023-.39-1.413 0l-6.997 6.987c-.18.18-.278.412-.292.648z"
+            />
+          </g>
+        </svg>
+
+        <svg
+          class="mainAdBanner__next_btn"
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle
+              cx="20"
+              cy="20"
+              r="19.5"
+              fill="#000"
+              fill-opacity=".2"
+              stroke="#FFF"
+              stroke-opacity=".5"
+            />
+            <path
+              fill="#FFF"
+              d="M26 20.077c-.014.236-.112.468-.292.648l-6.997 6.987c-.39.39-1.023.39-1.413 0l-.006-.005c-.39-.391-.39-1.024.001-1.415l6.3-6.29-6.3-6.29c-.39-.39-.39-1.024 0-1.414v-.002l.005-.004c.39-.39 1.022-.39 1.413 0l6.997 6.987c.18.18.278.412.292.648z"
+            />
+          </g>
+        </svg>
+
+        <img src="png/에스티오.png" class="mainAdBanner__img" alt="ad" />
+        <div class="mainAdBanner__info">
+          <h2 class="mainAdBanner__title">무인이곽</h2>
+          <div class="mainAdBanner__status">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="20"
+              viewBox="0 0 32 20"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  fill="#000"
+                  stroke="#FFD200"
+                  d="M28 .5H4c-.966 0-1.841.392-2.475 1.025C.892 2.16.5 3.034.5 4v12c0 .966.392 1.841 1.025 2.475C2.16 19.108 3.034 19.5 4 19.5h24c.966 0 1.841-.392 2.475-1.025.633-.634 1.025-1.509 1.025-2.475V4c0-.966-.392-1.841-1.025-2.475C29.84.892 28.966.5 28 .5z"
+                />
+                <path
+                  fill="#FFD200"
+                  fill-rule="nonzero"
+                  d="M11.21 16.478c3.15 0 4.662-1.458 4.662-4.608V3.914h-1.98v7.884c0 2.268-.846 3.006-2.592 3.006-1.782 0-2.7-.756-2.7-3.006V3.914H6.35v8.028c0 3.042 1.728 4.536 4.86 4.536zm9.72-.216v-4.626h2.25c2.574 0 4.212-1.35 4.212-3.924 0-2.448-1.458-3.798-4.356-3.798h-4.32v12.348h2.214zm1.836-6.282H20.93V5.624h1.872c1.638 0 2.268.594 2.268 2.214 0 1.44-.63 2.142-2.304 2.142z"
+                />
+              </g>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#999"
+                fill-rule="evenodd"
+                d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-.5 4c-.828 0-1.5.672-1.5 1.5v4c0 .139.019.273.053.4-.128.485-.004 1.023.372 1.405l3.812 3.868.018.018c.557.545 1.451.536 1.997-.022.558-.57.557-1.483-.003-2.051l-3.277-3.327c.018-.094.028-.191.028-.291v-4c0-.828-.672-1.5-1.5-1.5z"
+              />
+            </svg>
+            <p class="mainAdBanner__webtoon">웹툰</p>
+            <img
+              class="mainAdBanner__status__seperator"
+              src="png/Seperator.png"
+              alt="seperator"
+            />
+            <img
+              class="mainAdBanner__status__person"
+              src="png/icon_read_count.png"
+              alt="person"
+            />
+            <p class="mainAdBanner__user">25.5만명</p>
+            <p class="mainAdBanner__page">1 / 3</p>
+          </div>
+          <p class="mainAdBanner__subtitle">네 안의 늑대를 개로 만들지 마라!</p>
         </div>
       </div>
 
-      <div class="page-main__promotionBanner">
-        <div class="page-main__promotionBanner_row">
-          <button class="page-main__promotionBanner_btn">오늘 UP</button
-          ><button class="page-main__promotionBanner_btn">오늘 신작</button
-          ><button class="page-main__promotionBanner_btn">오리지널</button>
+      <div class="promotionBanner">
+        <div class="promotionBanner_row">
+          <button class="promotionBanner_btn">오늘 UP</button
+          ><button class="promotionBanner_btn">오늘 신작</button
+          ><button class="promotionBanner_btn">오리지널</button>
         </div>
-        <div class="page-main__promotionBanner_row">
-          <button class="page-main__promotionBanner_btn">완결까지 정주행</button
-          ><button class="page-main__promotionBanner_btn">
-            독립운동가 웹툰</button
-          ><button class="page-main__promotionBanner_btn">오늘 랭킹</button>
+        <div class="promotionBanner_row">
+          <button class="promotionBanner_btn">완결까지 정주행</button
+          ><button class="promotionBanner_btn">독립운동가 웹툰</button
+          ><button class="promotionBanner_btn">오늘 랭킹</button>
         </div>
       </div>
 
-      <div class="page-main__adBanner">
-        <div class="page-main__adBanner_img">
-          <img src="http://placehold.it/250x80.png" alt="ad" />
+      <div class="subAdBanner">
+        <div class="subAdBanner__img">
+          <svg
+            class="previous_btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <circle
+                cx="20"
+                cy="20"
+                r="19.5"
+                fill="#000"
+                fill-opacity=".2"
+                stroke="#FFF"
+                stroke-opacity=".5"
+              />
+              <path
+                fill="#FFF"
+                d="M14.001 20.077c.014.236.111.468.292.648l6.997 6.987c.39.39 1.023.39 1.413 0l.006-.005c.39-.391.39-1.024-.002-1.415l-6.3-6.29 6.3-6.29c.391-.39.392-1.024.002-1.414l-.002-.002-.004-.004c-.39-.39-1.023-.39-1.413 0l-6.997 6.987c-.18.18-.278.412-.292.648z"
+              />
+            </g>
+          </svg>
+
+          <svg
+            class="next_btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <circle
+                cx="20"
+                cy="20"
+                r="19.5"
+                fill="#000"
+                fill-opacity=".2"
+                stroke="#FFF"
+                stroke-opacity=".5"
+              />
+              <path
+                fill="#FFF"
+                d="M26 20.077c-.014.236-.112.468-.292.648l-6.997 6.987c-.39.39-1.023.39-1.413 0l-.006-.005c-.39-.391-.39-1.024.001-1.415l6.3-6.29-6.3-6.29c-.39-.39-.39-1.024 0-1.414v-.002l.005-.004c.39-.39 1.022-.39 1.413 0l6.997 6.987c.18.18.278.412.292.648z"
+              />
+            </g>
+          </svg>
+
+          <img src="png/subAd.png" alt="ad" />
         </div>
       </div>
 
