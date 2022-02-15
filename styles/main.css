@@ -79,12 +79,6 @@
   height: 40px;
 }
 
-.main__contents {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-}
-
 .main__button {
   display: flex;
   height: 70px;
@@ -169,4 +163,125 @@
   font-size: 25px;
   color: #808e9b;
   border: 1px solid #bbbbbb;
+}
+
+.main__contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.contents {
+  margin: 20px 15px;
+}
+.contents__header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+.contents__header .contents__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contents__title > .titleNum {
+  font-size: 13px;
+  color: #bbbbbb;
+}
+
+.contents__more {
+  cursor: pointer;
+  font-size: 14px;
+  color: #999999;
+}
+.contents__body {
+  display: flex;
+  flex-direction: column;
+}
+.contents__body-nav {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #bbbbbb;
+}
+
+.contents__body-nav li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  border-bottom: 2px solid #f1f1f1;
+}
+.contents__body-nav li:nth-child(2) {
+  color: #333333;
+  border-bottom: 2px solid #ffd200;
+}
+.contents-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.contents-card .card {
+  cursor: pointer;
+  width: 18%;
+  height: 190px;
+  margin: 3px;
+  padding: 3px;
+}
+
+.card__imgBox {
+  border-radius: 10px;
+  background-color: #242526;
+  height: 150px;
+}
+.cardImg {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 120px;
+  object-fit: fill;
+}
+.card .imgInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 5px;
+  margin: 0px 5px;
+  color: #808e9b;
+}
+.imgInfo .rank {
+  color: #ffd200;
+}
+.card__title {
+  font-size: 15px;
+  margin: 9px 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card__info {
+  font-size: 5px;
+}
+.card__info .info-status {
+  border-radius: 2px;
+  padding: 1px 2px;
+  color: #f1f1f1;
+  background-color: #2e86de;
+}
+.card__info .info-age {
+  border-radius: 2px;
+  padding: 1px 2px;
+  background-color: #bbbbbb;
+  color: #f1f1f1;
+}
+.card__info .info-user {
+  color: #808e9b;
+}
+.card__info .info-user i {
+  margin-right: 3px;
+}
+.card__info .info-user span {
+  font-size: 12px;
 }
