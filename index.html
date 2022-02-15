@@ -11,13 +11,19 @@
     <header class="header">
         <div class="header__inner">
             <div class="header__top">
-                <h1 class="header__logo"><img src="images/logo-kakaopage.svg" /></h1>
+                <h1 class="header__logo">
+                    <img class="header__logo_kakao" src="images/logo-kakaopage.svg" />
+                </h1>
                 <div class="header__search">
-                    <form class="search__form"><input class="search__input" type="search"/></form>
+                    <form class="search__form">
+                        <input class="search__input" type="search"/>
+                    </form>
                     <img class="search_icon" src="images/btn_search.png" alt="검색 아이콘" />
                 </div>
                 <div class="header__buttons">
-                    <button class="header__button"><img src="images/pc-logo-stage.svg" alt="Stage" /></button>
+                    <button class="header__button">
+                        <img class="header__button_stage" src="images/pc-logo-stage.svg" alt="Stage" />
+                    </button>
                     <button class="header__button">캐시충전</button>
                     <button class="header__button">로그인</button>
                 </div>
@@ -26,10 +32,10 @@
                 <nav class="header__nav">
                     <ul class="header__ul">
                         <li class="header__menu"><a class="header__link" href="#">홈</a></li>
-                        <li class="header__menu header__menu_active"><a class="header__link" href="#"><img src="images/menu_toon.svg" alt="웹툰/만화"/></a></li>
+                        <li class="header__menu header__menu_active"><a class="header__link" href="#"><img class="header__link_toon" src="images/menu_toon.svg" alt="웹툰/만화"/></a></li>
                         <li class="header__menu">
                             <a class="header__link" href="#">
-                                <img src="images/menu_novel.svg" alt="웹소설/장르"/>
+                                <img class="header__link_novel" src="images/menu_novel.svg" alt="웹소설/장르"/>
                             </a>
                         </li>
                         <li class="header__menu">
@@ -116,6 +122,7 @@
                 </div>
             </section>
 
+            <!-- 요일연재 탭 콘텐트 -->
             <section class="main__content">
                 <a class="content__link">
                     <div class="content__item">

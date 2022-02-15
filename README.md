@@ -4,9 +4,9 @@
 
 > HTML는 용도에 맞는 tag를 찾아서 사용, 일정한 간격을 유지하며 모든 엘리먼트들은 가지런히 배치 => 배치를 할때 flex 속성을 사용
 
-article tag는 문서 혹은 요소가 독립적으로 존재할 수 있을 때 사용  
+article tag ? 문서 혹은 요소가 독립적으로 존재할 수 있을 때 사용  
 
-section tag는 논리적으로 관계 있는 문서 혹은 요소를 분리할 때 사용
+section tag ? 논리적으로 관계 있는 문서 혹은 요소를 분리할 때 사용
 
 ---
 
@@ -34,7 +34,8 @@ section tag는 논리적으로 관계 있는 문서 혹은 요소를 분리할 �
 
 ### Flexbox 사용법
 
-1. 플렉스 박스를 배치할 자식 요소들의 부모 태그에 플렉스 박스를 앞으로 쓸거다 알려줘야 한다.
+1. 플렉스 박스를 배치할 자식 요소들의 부모 태그에 플렉스 박스를 앞으로 쓸거다라고 알려줘야 한다.
+
 ```css
     display: flex;
 ```
@@ -61,6 +62,14 @@ flex-wrap은 감싸지 않고 자식의 사이즈를 줄여서라도 한 줄로 
 
 (Ex. 부모 width: 1000px, 자식요소 3개가 각각 width가 400px 일 때, flex-wrap: nowrap으로 속성 설정 시 각 자식 요소의 width는 250px로 변경된다.)  
 
+![flex_nowrap](./readmeImage/flex_nowrap.png)  
+
+빨간색으로 칠해진 영역이 이미지들의 부모 컨테이너 인데 부모 컨테이너 영역에 flex-wrap의 default 값인 no-wrap 일때는 자식 태그들의 width값 합이 부모 width: 720px 보다 커지면 흰 화면 바깥으로 계속 배치된다.
+
+![flex_wrap](./readmeImage/flex_wrap.png)  
+
+이번엔 부모 컨테이너 영역에 flex-wrap: wrap; 속성을 준 화면이다. 자식 태그들의 width 합이 720px이 넘어가면 자연스럽게 아래로 배치되었다.
+
 4. 플렉스 박스를 사용하여 이제 정렬!  
 
 FlexBox는 보이지 않는 두 개의 Axis로 정렬한다.  
@@ -74,6 +83,14 @@ Cross axis 조정 -> align-items(하나의 axis), align-content(전체의 큰 ax
 flex 속성 기본값은 flex: 0 1 auto (flex-grow, flex-shrink, flex-basis 을 의미한다.)   
 
 1. flex-grow : 속성값이 0이면 flex container의 크기가 커져도 flex item의 크기가 커지지 않고 원래 크기로 유지, flex container의 크기가 커질 때 flex item의 크기도 커지게 하려면 1 이상의 값을 속성값으로 설정한다. 속성값이 1 이상이면 flex item의 원래 크기에 상관없이 flex container를 채우도록 flex item의 크기가 커진다.  
+
+![flex_grow0](./readmeImage/flex_grow0.png)
+
+부모 컨테이너(ul태그의 main__nav-ul)의 자식 태그들 flex-grow 값이 default 값인 0일 때는 위 그림처럼 홈 ~ BL 메뉴가 왼쪽에 치우쳐져 있다. BL 오른쪽 빈공간이 홈 왼쪽에 비해 너무 많이 남아있음
+
+![flex_grow1](./readmeImage/flex_grow1.png)
+
+> 모든 항목의 flex-grow 값을 1로 지정하면 사용가능한 공간은 각 항목에게 동일하게 분배한다.
 
 2. flex-shrink : 속성값이 0이면 flex container의 크기가 flex item의 크기보다 작아져도 flex item의 크기가 줄어들지 않고 원래 크기로 유지된다. 속성값이 1 이상이면 flex container의 크기가 flex item의 크기보다 작아질 때 flex item의 크기가 flex container의 크기에 맞추어 줄어든다.  
 
@@ -118,39 +135,63 @@ BEM의 단점 ?
 
 1. 아무래도 block, element에 __, --를 붙여서 사용하다 보니 클래스이름이 너무 길어진다.
 
-2. 특정 DOM의 클래스를 복사해서 가져오려고 할 때 불편하다. 하이픈과 언더바의 혼용으로 인하여 더블클릭으로 한 번에 class 선택이 안된다는점  
+2. 특정 DOM의 클래스를 복사해서 가져오려고 할 때 불편하다. 하이픈과 언더바의 혼용으로 인하여 더블클릭으로 한 번에 class 선택이 안된다는점 => 속성태그를 언더바(_) 기준으로 하면 이 단점은 해결된다고 생각한다. (실제로 bem document에선 속성을 언더바로 사용하라고 소개한다.)
 
-### 카카오페이지 상단 부분만 BEM으로 작성해보자  
+### 카카오페이지 상단 헤더 부분만 BEM으로 작성해보자  
 
-![]()
+![header](readmeImage/header.png)
 
 위 헤더쪽 레이아웃만 우선 BEM 방법론을 적용해보았다.
 
 ```html
 <header class="header">
-    <div class="header__top">
-        <h1 class="header__logo">kakaopage</h1>
-        <div class="header__search">
-            <form class="search__form"><input class="search__input" type="search"/></form>
-            <img />
+    <div class="header__inner">
+        <div class="header__top">
+            <h1 class="header__logo">
+                <img class="header__logo_kakao" src="images/logo-kakaopage.svg" />
+            </h1>
+            <div class="header__search">
+                <form class="search__form">
+                    <input class="search__input" type="search"/>
+                </form>
+                <img class="search_icon" src="images/btn_search.png" alt="검색 아이콘" />
+            </div>
+            <div class="header__buttons">
+                <button class="header__button">
+                    <img class="header__button_stage" src="images/pc-logo-stage.svg" alt="Stage" />
+                </button>
+                <button class="header__button">캐시충전</button>
+                <button class="header__button">로그인</button>
+            </div>
         </div>
-        <div class="header__buttons">
-            <button class="header__button">STAGE</button>
-            <button class="header__button">캐시충전</button>
-            <button class="header__button">로그인</button>
+        <div class="header__bottom">
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__menu"><a class="header__link" href="#">홈</a></li>
+                    <li class="header__menu header__menu_active"><a class="header__link" href="#"><img class="header__link_toon" src="images/menu_toon.svg" alt="웹툰/만화"/></a></li>
+                    <li class="header__menu">
+                        <a class="header__link" href="#">
+                            <img class="header__link_novel" src="images/menu_novel.svg" alt="웹소설/장르"/>
+                        </a>
+                    </li>
+                    <li class="header__menu">
+                        <a class="header__link" href="#">영화
+                            <div class="header__link_circle"></div>
+                        </a>
+                    </li>
+                    <li class="header__menu">
+                        <a class="header__link" href="#">방송
+                            <div class="header__link_circle"></div>
+                        </a>
+                    </li>
+                    <li class="header__menu">
+                        <a class="header__link" href="#">책
+                            <div class="header__link_circle"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="header__bottom">
-        <nav class="header__nav">
-            <ul class="header__ul">
-                <li class="header__menu"><a class="header__link" href="#">홈</a></li>
-                <li class="header__menu"><a class="header__link" href="#"><img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰/만화"/></a></li>
-                <li class="header__menu"><a class="header__link" href="#"><img src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55" alt="웹소설/장르"/></a></li>
-                <li class="header__menu"><a class="header__link" href="#">영화</a></li>
-                <li class="header__menu"><a class="header__link" href="#">방송</a></li>
-                <li class="header__menu"><a class="header__link" href="#">책</a></li>
-            </ul>
-        </nav>
     </div>
 </header>
 ```
@@ -167,7 +208,9 @@ BEM의 단점 ?
     > search__form ? header__search--form ? 두 클래스 네이밍중에 뭐가 더 적합할까 생각을 해봤는데, 둘 다 괜찮고 뭘 사용해도 좋다고 생각하지만, search__form 네이밍 만으로도 해당 요소가 검색폼이라고 인지할 수 있고 불필요하게 네이밍을 길게 하는건 안좋다고 생각하여서다. 또한 가급적 modifier을 붙이는 속성은 더 직관적이고 명확한 태그에만 적용하는게 좋다고 생각했다.
     - 오른쪽 영역엔 3개의 버튼들을 감싸는 header__buttons
 
-4. header__bottom 요소 내에서는 메뉴들을 관리하는 네비게이션 태그를 사용하여 header__nav > header__ul > header__menu > header__link 로 네이밍을 지어주었다.
+4. header__bottom 요소 내에서는 메뉴들을 관리하는 네비게이션 태그를 사용하여 header__nav > header__ul > header__menu > header__link 로 네이밍을 지어주었다.  
+
+5. 속성이라고 생각되는 태그들에는 상위 요소태그 클래스 네이밍 + 언더바(_)를 사용하여 연결하였다
 
 
 `BEM 관련 참고 사이트 `
