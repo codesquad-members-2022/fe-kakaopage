@@ -241,3 +241,42 @@ main {
     font-size: 35px;
     color: pink;
 }
+
+.weekdays-webtoon {
+    height: 600px;
+    width: 720px;
+    background-color: red;
+    margin-top: 10px;
+}
+
+.weekdays-webtoon .article-header {
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+}
+
+.weekdays-webtoon .article-header .article-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 15px;
+}
+.weekdays-webtoon .article-header .article-header-container .article-header-text{
+    display: flex;
+    align-items: center;
+}
+
+.weekdays-webtoon .article-header .article-header-lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    height: 40px;
+    padding: 10px 40px;
+}
