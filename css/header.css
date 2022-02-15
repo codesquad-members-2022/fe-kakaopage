@@ -28,7 +28,7 @@ header {
     font-size: 1.1rem;
 }
 
-.user-menu-item a:last-child:before {
+.user-menu-item a:last-child::before {
     content: "";
     height: 10px;
     border-left: 1px solid #e2e2e2;
@@ -74,7 +74,27 @@ nav ul {
 
 nav li {
     height: 68px;
-    width: 95px;
+    width: 33%;
     text-align: center;
     line-height: 68px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: transparent;
+    position: relative;
+}
+
+nav .active {
+    border-bottom-color: #ffd200;
+}
+
+nav .alert::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: #ffd200;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
