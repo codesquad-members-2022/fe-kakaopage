@@ -111,8 +111,12 @@ a{
     height: 600px;
 }
 
-.main1{
+.mainbox{
     background-color: var(--main-white);
     margin-top: 15px;
     height: 100px;
+}
+.boxes{
+    width: 50px;
+    background-color: var(--background-color);
 }
