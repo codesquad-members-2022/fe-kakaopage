@@ -30,6 +30,10 @@ button {
     background: transparent;
 }
 
+.margin-top-default {
+    margin-top: 11px;
+}
+
 .title {
     font-weight: bold;
 }

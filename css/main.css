@@ -76,7 +76,6 @@
 }
 
 .category {
-    margin-top: 11px;
     background-color: #fff;
     padding: 20px;
 }
@@ -115,7 +114,6 @@
 }
 
 .slide-banner {
-    margin-top: 11px;
     flex-basis: auto;
 }
 
@@ -132,7 +130,6 @@
 }
 
 .weekday-serial-best {
-    margin-top: 11px;
     padding: 20px;
 }
 
