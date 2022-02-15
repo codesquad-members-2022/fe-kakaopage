@@ -1,3 +1,6 @@
+.l-category {
+  height: 40%;
+}
 .c-category {
   display: flex;
   width: 100%;
@@ -22,7 +25,7 @@
 }
 
 .c-category__content {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 

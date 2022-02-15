@@ -9,11 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
 }
 .l-header-child {
   width: var(--main-width);
-  height: 40%;
   display: flex;
   align-items: center;
 }

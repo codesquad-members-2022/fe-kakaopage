@@ -1,9 +1,11 @@
 .c-navigation {
   justify-content: space-between;
+  height: 60%;
 }
 
 .c-navigation__header {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .c-navigation__menu {
@@ -34,20 +36,21 @@
   justify-content: center;
   color: var(--main-grey-dark);
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .c-navigation__button_type_stage {
+  height: 20px;
   position: relative;
   background-color: var(--yellow);
   color: var(--main-black);
-  font-weight: 700;
+  font-weight: 900;
   margin: 0 20px;
 }
 
 .c-navigation__stage-description {
   position: absolute;
-  top: 46px;
+  top: 36px;
   width: max-content;
   padding: 8px;
   font-size: 0.8rem;
