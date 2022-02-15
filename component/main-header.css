@@ -68,15 +68,6 @@ body {
     color: grey;
 }
 
-.header__button {
-    background-color: #fff;
-    border: none;
-    margin: 3px;
-    font-size: 15px;
-    color: grey;
-}
-
-
 .header__nav-lists {
     display: flex;
     align-items: center;
