@@ -7,158 +7,98 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>FE-kakaopage</title>
   </head>
-  <!-- stick-man__head-size_small -->
   <body>
-    <header>
-      <div class="navigation">
-        <h1>kakaopage</h1>
-        <div class="navigation__menu">
-          <form>
-            <input type="text" />
-            <span>돋보기</span>
+    <header classname="l-header">
+      <div class="c-navigation">
+        <h1 class="c-navigation__header">kakaopage</h1>
+        <div class="c-navigation__menu">
+          <form class="c-nav-form">
+            <input class="c-nav-form__input" type="text" />
+            <span class="c-nav-form__icon">돋보기</span>
           </form>
-          <div
-            class="navigation__menu__button navigation__menu__button_type_stage"
-          >
-            Stage
-          </div>
-          <div
-            class="navigation__menu__button navigation__menu__button_type_cash"
-          >
-            캐시충전
-          </div>
-          <div
-            class="navigation__menu__button navigation__menu__button_type_login"
-          >
-            로그인
-          </div>
+          <div class="c-nav-button c-nav-button_type_stage">Stage</div>
+          <div class="c-nav-button c-nav-button_type_cash">캐시충전</div>
+          <div class="c-nav-button c-nav-button_type_login">로그인</div>
         </div>
       </div>
-      <nav class="category">
-        <ul>
-          <li class="category__index">
-            <span>홈</span>
+      <nav class="c-category">
+        <ul class="l-category">
+          <li class="c-category__index">
+            <span class="c-category__content">홈</span>
           </li>
-          <li class="category__index">
-            <span>웹툰</span>
+          <li class="c-category__index">
+            <span class="c-category__content">웹툰</span>
           </li>
-          <li class="category__index">
-            <span>웹소설</span>
+          <li class="c-category__index">
+            <span class="c-category__content">웹소설</span>
           </li>
-          <li class="category__index">
-            <span>영화</span>
+          <li class="c-category__index">
+            <span class="c-category__content">영화</span>
           </li>
-          <li class="category__index">
-            <span>방송</span>
+          <li class="c-category__index">
+            <span class="c-category__content">방송</span>
           </li>
-          <li class="category__index">
-            <span>책</span>
+          <li class="c-category__index">
+            <span class="c-category__content">책</span>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <article class="main__carousel">
-        <div class="main__carousel__img-container">
-          <img src="" alt="carousel image" />
-          <div class="main__carousel__img-container__move-button-container">
-            <button
-              class="main__carousel__img-container__move-button-container_type_prev"
-            >
+      <article class="l-carousel">
+        <div class="c-carousel">
+          <img class="c-carousel__img" src="" alt="carousel image" />
+          <div class="c-carousel__buttons">
+            <button class="c-carousel__button c-carousel__button_type_prev">
               prev
             </button>
-            <button
-              class="main__carousel__img-container__move-button-container_type_next"
-            >
+            <button class="c-carousel__button c-carousel__button_type_next">
               next
             </button>
           </div>
-          <div class="main__carousel__img-container__text-container">
-            <h3>숨겨진 명작 감상하고 100% 캐시 선물 받자</h3>
-            <div class="main__carousel__img-container__text-container__tags">
-              <span>이벤트</span>
-              <span>11/12</span>
+          <div class="c-carousel__content">
+            <h3 class="c-carousel__title">
+              숨겨진 명작 감상하고 100% 캐시 선물 받자
+            </h3>
+            <div class="c-carousel__footer">
+              <span class="c-carousel__event">이벤트</span>
+              <span class="c-carousel__index">11/12</span>
             </div>
           </div>
         </div>
-        <div class="main__carousel__check-button">
-          <span>확인하러가기</span>
-        </div>
+        <div class="c-carousel__check-btn">확인하러가기</div>
       </article>
-      <article class="main__event-container">
-        <ul>
-          <li class="main__event-container_elem">오늘 신작</li>
-          <li class="main__event-container_elem">달콤한 선물</li>
-          <li class="main__event-container_elem">숨겨진 명작</li>
+      <article class="c-event">
+        <ul class="l-event">
+          <li class="c-event__elem">오늘 신작</li>
+          <li class="c-event__elem">달콤한 선물</li>
+          <li class="c-event__elem">숨겨진 명작</li>
         </ul>
       </article>
-      <article class="main__list-container">
-        <div class="main__list-container__title-container">
-          <div class="main__list-container__title-container__header-container">
-            <h3>기다리면 무료 웹툰</h3>
-            <span>(3,524)</span>
+      <article class="c-webtoons">
+        <div class="c-webtoons__header">
+          <div class="l-webtoons__title">
+            <h3 class="c-webtoons__title">기다리면 무료 웹툰</h3>
+            <span class="c-webtoons__total">(3,524)</span>
           </div>
-          <div class="main__list-container__title-container__more-button">
-            <span>더보기</span>
+          <div class="l-webtoons__more">
+            <span class="c-webtoons__more">더보기</span>
           </div>
         </div>
-        <ul class="main__list-container__elem-container">
-          <li class="main__list-container__elem-container__elem">
-            <div class="main__list-container__elem-container__elem__img">
-              <img src="" alt="temp-image" />
+        <ul class="l-webtoons__body">
+          <li class="c-webtoon">
+            <div class="l-webtoon__img">
+              <img class="c-webtoon__img" src="" alt="temp-image" />
             </div>
-            <div class="main__list-container__elem-container__elem__content">
-              <h5>웹툰 제목</h5>
-              <div class="content">
-                <div class="content-desc"><span>웹툰 한 줄 설명</span></div>
-                <div class="content-span">
-                  <span>40만 명</span>
-                  <span>작가</span>
+            <div class="l-webtoon__content">
+              <h5 class="c-webtoon__name">웹툰 제목</h5>
+              <div class="c-webtoon__content">
+                <div class="l-webtoon__description">
+                  <span class="c-webtoon__description">웹툰 한 줄 설명</span>
                 </div>
-              </div>
-            </div>
-          </li>
-          <li class="main__list-container__elem-container__elem">
-            <div class="main__list-container__elem-container__elem__img">
-              <img src="" alt="temp-image" />
-            </div>
-            <div class="main__list-container__elem-container__elem__content">
-              <h5>웹툰 제목</h5>
-              <div class="content">
-                <div class="content-desc"><span>웹툰 한 줄 설명</span></div>
-                <div class="content-span">
-                  <span>40만 명</span>
-                  <span>작가</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="main__list-container__elem-container__elem">
-            <div class="main__list-container__elem-container__elem__img">
-              <img src="" alt="temp-image" />
-            </div>
-            <div class="main__list-container__elem-container__elem__content">
-              <h5>웹툰 제목</h5>
-              <div class="content">
-                <div class="content-desc"><span>웹툰 한 줄 설명</span></div>
-                <div class="content-span">
-                  <span>40만 명</span>
-                  <span>작가</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="main__list-container__elem-container__elem">
-            <div class="main__list-container__elem-container__elem__img">
-              <img src="" alt="temp-image" />
-            </div>
-            <div class="main__list-container__elem-container__elem__content">
-              <h5>웹툰 제목</h5>
-              <div class="content">
-                <div class="content-desc"><span>웹툰 한 줄 설명</span></div>
-                <div class="content-span">
-                  <span>40만 명</span>
-                  <span>작가</span>
+                <div class="c-webtoon__indicator">
+                  <span class="c-webtoon__views">40만 명</span>
+                  <span class="c-webtoon__artist">작가</span>
                 </div>
               </div>
             </div>
