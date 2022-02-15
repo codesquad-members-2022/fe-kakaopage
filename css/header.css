@@ -1,0 +1,47 @@
+.screen-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  position: fixed;
+}
+
+.screen-header__header {
+  display: flex;
+  width: 720px;
+  position: relative;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+.screen-header__header__headerBox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.screen-header__header__headerBox__searchBar {
+  margin-right: 20px;
+  border-radius: 20px;
+}
+.screen-header__header__headerBox__searchIcon {
+  position: absolute;
+  height: 80%;
+  top: 3px;
+  left: 110px;
+}
+
+.screen-header__header__headerBox__stage__comment {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+}
+.screen-header__header__headerBox__stage {
+  margin-right: 20px;
+}
+.screen-header__header__headerBox__option {
+  text-align: center;
+  margin-top: 5px;
+}
+.screen-header__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
