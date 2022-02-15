@@ -470,6 +470,11 @@ header {
 	overflow: hidden;
 }
 
+.list-item.banner a {
+	position: relative;
+	height: fit-content;
+}
+
 .list-item.banner .banner-info h2 {
 	font-size: 1.125rem;
 	margin-bottom: 4px;
@@ -508,12 +513,12 @@ header {
 	margin-bottom: 20px;
 }
 
-.contents-list.vertical .list-item {
+.contents-list.vertical .list-item a {
 	display: flex;
 	align-items: center;
 }
 
-.contents-list.vertical .list-item > * {
+.contents-list.vertical .list-item a > * {
 	margin-right: 22px;
 }
 
@@ -540,6 +545,7 @@ header {
 	top: 0;
 	left: 0;
 	width: 25px;
+	border-top-left-radius: 5px;
 }
 
 .info-container h4 {
