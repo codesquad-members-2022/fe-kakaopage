@@ -6,10 +6,14 @@
   justify-content: center;
 }
 
+.slider {
+  height: 478px;
+}
+
 .main-contents,
 .footer-contents,
 .slider__img {
-  width: 720px;
+  width: var(--main-width);
 }
 
 .main-contents > .navbar {
@@ -84,7 +88,7 @@
 
 .app-button {
   background-color: var(--color-yellow);
-  width: 720px;
+  width: var(--main-width);
   height: 60px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -94,4 +98,36 @@
   font-size: 0.8rem;
   color: var(--color-grey);
   margin: 40px 0 40px 0;
+}
+
+.c-days {
+  margin-top: 0;
+  height: 65px;
+  padding: 10px;
+}
+
+.c-days > .days {
+  display: flex;
+  justify-content: space-around;
+
+  color: var(--color-grey);
+  margin: 0;
+}
+
+.days__name {
+  cursor: pointer;
+  padding: 12px;
+}
+
+.days__name.whole {
+  padding: 12px 5px 12px 5px;
+}
+
+.selected-day {
+  width: 45px;
+  height: 45px;
+  color: var(--color-black);
+  background-color: var(--color-light-yellow);
+  border-radius: 50%;
+  font-weight: 600;
 }

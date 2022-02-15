@@ -9,7 +9,11 @@
   --color-light-grey: #eeeeee;
   --color-dark-grey: #6e6d6d;
   --color-black: #000000;
+  --color-light-yellow: #ffd200;
   --color-yellow: #fcbc19;
+
+  /* Size */
+  --main-width: 720px;
 }
 
 * {
