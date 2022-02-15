@@ -28,7 +28,7 @@
 }
 
 .work__information {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
