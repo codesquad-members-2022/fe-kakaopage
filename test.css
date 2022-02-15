@@ -1,0 +1,10 @@
+.parent {
+  width: 720px;
+  border: 2px solid salmon;
+}
+
+.parent img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
