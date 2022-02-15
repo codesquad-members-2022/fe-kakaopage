@@ -1,6 +1,9 @@
 @import url('./css/var.css');
 @import url('./css/reset.css');
 @import url('./css/pageHeader/header.css');
+@import url('./css/pageHeader/category.css');
+@import url('./css/pageMain/pageMain.css');
+@import url('./css/pageMain/category.css');
 
 * {
   box-sizing: border-box;
