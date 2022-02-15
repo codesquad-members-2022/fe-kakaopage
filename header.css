@@ -9,6 +9,7 @@ header{
     height:80px;
     background-color:#FFFFFF;
     display:flex;
+    z-index:200;
 }
 div.headerBar{
     width:720px;
@@ -68,7 +69,6 @@ div.icon{
     position: relative;
     margin-left: 24px;
     margin-top: 31px;
-
 }
 div.icon > a{
     width:auto;
@@ -87,7 +87,6 @@ div.icon>img{
     width: 137px;
     height: 33px;
     max-width: none;
-
 }
 button.navBtn{
     appearance: none;
@@ -102,10 +101,10 @@ button.navBtn{
     background-color: transparent;
     margin-top: 30px
 }
-button.navBtn>div{
+button.navBtn>{
     font-weight:400;
 }
-button.navBtn>div.separator{
+.navBtn>.separator{
     vertical-align: middle;
     margin: 7px 10px 2px;
     min-width: 1px;

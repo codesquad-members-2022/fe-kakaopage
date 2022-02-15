@@ -1,4 +1,4 @@
-div.mainContent{
+main.mainContent{
     margin-top: 167px;
 
 }
@@ -6,14 +6,14 @@ div.mainContent{
 nav.mainNav{
     position:fixed;
     top: 80px;
+    z-index: 199;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
     border-bottom: 1px solid #dfdfdf;
     width: 100%;
     background-color: #FFFFFF;
-    z-index:201;
-    display:block
+
 }
 nav.mainNav>ul.menuNav{
     display: flex;
@@ -41,14 +41,167 @@ li.menu>a{
     color: inherit;
     background-color: transparent;
 }
-li.menu.img{
+li.menu>a>img{
     max-width: 100%;
     cursor: pointer;
     display: block;
     margin: 0 auto;
     height: 20px;
 }
+li.menu>div.dot{
+    position:absolute;
+    width:7px;
+    height:7px;
+    top:23px;
+    right:30px;
+    border-radius:50%;
+    background-color:#ffd200;
+}
 main>section{
     width: 720px;
     margin: 0px auto;
+}
+div.BannerBox{
+    height:480px;
+    position:relative;
+    width:100%;
+
+}
+div.BannerBox>div.nextBtn{
+    position:absolute;
+    top:50%;
+    right:0;
+    margin-right:20px
+}
+div.carousel{
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+div.carousel>img{
+    width:100%;
+    height:100%;
+}
+div.carousel>div.info{
+    position:absolute;
+    width:100%  ;
+    padding-left:20px;
+    bottom:0;
+}
+
+div.info>div{
+    margin-bottom:10px;
+}
+
+div.description>span{
+    display:block;
+    color:#FFFFFF;
+    font-size:30px;
+}
+div.info>div.infographic{
+    display:flex;
+    position:relative;
+    justify-content: flex-start;
+    color:#FFFFFF;
+    font-size:20px;
+    margin-bottom: 18px;
+    width:100%;
+}
+div.infographic>div.page{
+    position:absolute;
+    right:30px;
+    opacity:0.6;
+}
+div.infographic > *{
+    margin-right:8px;
+}
+div.BannerBox>div.prevBtn{
+    position:absolute;
+    top:50%;
+    margin-left:20px;
+    left:0;
+}
+div.catchphrase{
+    display:flex;
+    align-items: center;
+    background-color:#ffd200;
+    width:100%;
+    height: 40px;
+    margin:0;
+    justify-content: center;
+    font-size:18px;
+    font-weight:300;
+}
+
+div.Cube{
+    padding:20px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    margin-top: 11px;
+}
+div.grayBox{
+    border-radius:8px;
+    flex-wrap:wrap;
+    display:flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    flex:1 1 auto;
+
+}
+div.grayBox>a{
+    width:33.33333333333%;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size:18px;
+}
+div.grayBox>a>div{
+    margin-right:10px;
+    margin-bottom:1px;
+}
+div.yellow{
+    display:flex;
+    align-items: center;
+    height:24px;
+    padding: 0 8px 2px;
+    margin-left:10px;
+    margin-right:0;
+    border-radius:13px;
+    background-color:#ffd200;
+}
+div.freeComics{
+    margin-top:12px;
+    background: #FFFFFF;
+}
+div.freeComics>div.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5px;
+}
+div.ifYouWait{
+    padding:20px;
+}
+div.ifYouWait>span:first-child{
+    font-size:18px;
+    font-weight:500;
+}
+div.ifYouWait>span:last-child{
+    font-size:15px;
+    opacity:0.4;
+}
+div.More{
+    padding:20px;
+    opacity:0.4;
+}
+ul.comics{
+    display:flex;
+    flex-direction: column;
 }
