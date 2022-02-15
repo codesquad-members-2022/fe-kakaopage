@@ -165,10 +165,31 @@ header {
 .slide-banner {
     height: 480px;
     background-color: gray;
+}
 
-    color: white;
-    font-size: 4rem;
+.img-with-line {
+    position: relative;
+}
+
+.img-with {
+    width: 720px;
+
+    position: absolute;
+}
+
+.line-with {
+    width: 720px;
+    height: 40px;
+    background-color: #ffd200;
+
+    position: absolute;
+    top: 440px;
     text-align: center;
+    line-height: 40px;
+
+    font-size: 1.1rem;
+    font-weight: 550;
+    color:rgb(77, 74, 74);
 }
 
 .recommendation {
@@ -213,12 +234,43 @@ header {
     margin-top: 10px;
     background-color: white;
 
-    font-size: 4rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-banner-wrap {
+    width: 550px;
+    height: 100px;
+
+    margin: 0 20px;
+}
+
+.slide-banner-img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 8px;
+}
+
+.slide-button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    background-color: transparent;
+
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: rgb(179, 179, 179);
 }
 
 .menu-form {
     margin-top: 10px;
+    margin-bottom: 10px;;
     background-color: white;
 
     padding: 20px 20px;
@@ -226,7 +278,7 @@ header {
 
 .menu-form-title {
     display: flex;
-
+    margin-bottom: 20px;
 }
 
 .title-name {
@@ -241,4 +293,25 @@ header {
     justify-content: flex-end;
     
     color:rgb(150, 137, 137);
+}
+
+.img-with-line-wrap{
+    box-sizing: border-box;
+    width: 335px;
+    height: 223px;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#img-with-small {
+    width: 100%;
+}
+
+#line-with-small {
+    width: 100%;
+    top: 200px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.8rem;
 }
