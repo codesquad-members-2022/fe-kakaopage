@@ -5,6 +5,7 @@
 @import url('./css/pageMain/main.css');
 @import url('./css/pageMain/category.css');
 @import url('./css/pageMain/preview.css');
+@import url('./css/pageMain/webtoonFilter.css');
 
 * {
   box-sizing: border-box;
