@@ -1,2 +1,11 @@
+@import url('./css/var.css');
 @import url('./css/reset.css');
-@import url('./css/header.css');
+@import url('./css/pageHeader/header.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+}
