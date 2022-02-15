@@ -22,7 +22,7 @@
 .main__nav-ul .main__nav_genre,
 .main__nav-ul .main__nav_day {
     flex-grow: 1;
-    padding: 0 15px;
+    padding: 15px;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
@@ -156,4 +156,11 @@
 
 .not_selected {
     color: #bbbbbb;
+}
+
+.selected {
+    background-image: url("./images/back_circle_new.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 40px;
 }
