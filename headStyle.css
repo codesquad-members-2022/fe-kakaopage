@@ -1,12 +1,20 @@
+:root {
+  --contents-width: 1000px;
+  --nav-fontSize: 18px;
+  --basic-fontColor: dimgrey;
+}
+
 body {
   background-color: #d9d9d9;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  list-style: none;
 }
 .topHeader {
   background-color: white;
+  color: var(--basic-fontColor);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +28,7 @@ body {
 
 .page__title {
   font-size: 50px;
+  color: black;
   padding: 10px;
 }
 
@@ -35,7 +44,7 @@ body {
   margin-left: 8px;
 }
 
-.searchEngine {
+.input__search {
   width: 100px;
   border-radius: 10px;
   border: 1px solid grey;
@@ -48,9 +57,21 @@ body {
 } */
 
 .header__nav {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: var(--nav-fontSize);
+}
+
+.header__nav--ul {
   display: flex;
   justify-content: space-around;
+  width: var(--contents-width);
 }
+
+/* .header__nav--ul > li {
+  padding-left: 40px;
+  padding-right: 40px;
+} */
 
 .recommand__section {
   display: flex;
@@ -58,18 +79,27 @@ body {
   align-items: center;
   /* justify-content: center; */
 }
+
 .recommand__nav {
   background-color: white;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: var(--contents-width);
+  font-size: var(--nav-fontSize);
+}
+
+.recommand__nav--ul {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-  width: 1000px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .recommand__image {
   background-color: black;
   display: flex;
   justify-content: center;
-  width: 1000px;
+  width: var(--contents-width);
   height: 400px;
   margin-top: 5px;
 }
@@ -78,31 +108,43 @@ body {
   background-color: yellow;
   display: flex;
   justify-content: center;
-  width: 1000px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: var(--contents-width); /*다이러는거 싫은데... */
 }
 
 .main__contents {
   background-color: white;
+  color: var(--basic-fontColor);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  width: 1000px;
+  width: var(--contents-width);
+}
+
+.main__nav__dow {
+  font-size: var(--nav-fontSize);
+  width: var(--contents-width);
+}
+
+.main__nav__dow--ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .main__nav__sortAll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1000px;
-}
-
-.main__nav__dow {
-  display: flex;
+  width: var(--contents-width);
 }
 
 .sort {
   display: flex;
+  justify-content: space-between;
+  width: 130px;
 }
 
 .main__cartoon {
