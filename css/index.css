@@ -271,3 +271,38 @@ header {
 .banner {
 	position: relative;
 }
+
+/* Category Menu */
+
+.category-menu {
+	padding: 20px;
+}
+
+.categories {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.categories a {
+	width: 33%;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	background-color: #eee;
+	padding: 16px;
+}
+
+.categories .badge {
+	position: relative;
+	top: -1px;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #ffd200;
+	border-radius: 20px;
+	padding: 0 8px 2px;
+	margin-left: 5px;
+}
