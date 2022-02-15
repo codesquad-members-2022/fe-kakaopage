@@ -6,8 +6,32 @@
 }
 
 .c-category__index {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  padding: 30px;
+}
+
+.c-category__index:hover {
+  cursor: pointer;
+}
+
+.c-category__index:active {
+  border-bottom: 4px solid var(--main-yellow);
+}
+
+.c-category__content {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.c-category__alaram {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--main-yellow);
+  top: 10px;
+  right: 20px;
 }
