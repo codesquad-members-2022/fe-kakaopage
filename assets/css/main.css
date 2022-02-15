@@ -39,70 +39,117 @@
     border-bottom: 1px solid #e6e6e6;
 }
 
-/* banner_slider */
-.main_contents .banner_slider {
+/* item */
+.item img {
+    display: block;
+}
+
+.item_type1 {
+    position: relative;
+    width: 100%;
+}
+
+.item_type1 .img img {
+    width: 100%;
+}
+
+.item_type1 .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.item_type1 .txt .info_box {
+    padding: 0 20px;
+    color: #fff;
+}
+
+.item_type1 .txt .info_box .info {
+    display: flex;
+    align-items: center;
+}
+
+.item_type1 .txt .info_box .info_txt {
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.item_type1 .txt .info_box .info_txt.cat {
+    background-image: url(../images/ico/ico-bigthum-wait.svg);
+}
+
+.item_type1 .txt .info_box .info_txt.viewer {
+    background-image: url(../images/ico/ico-bigthum-person.svg);
+}
+
+.item_type1 .txt .desc {
+    text-align: center;
+    font-weight: 350;
+    color: #222222;
+    background: #ffd200;
+}
+
+
+/* banner */
+.banner {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.main_contents .banner_slider .slider_items {
+.banner .slider_controller {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999em;
+}
+
+.banner .slider_items {
     display: flex;
     width: 100%;
 }
 
-.main_contents .banner_slider .item {
-    position: relative;
+.banner .slider_items .item {
     width: 100%;
     flex-shrink: 0;
 }
 
-.main_contents .banner_slider .img img {
-    display: block;
-    width: 100%;
+/* top banner */
+.top_banner .slider_controller {
+    width: 40px;
+    height: 40px;
 }
-
-.main_contents .banner_slider .txt {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.top_banner .slider_controller.prev {
+    left: 20px;
+    background-image: url(../images/ico/ic-banner-prev.svg);
 }
-
-.main_contents .banner_slider .txt .info_box {
-    padding-left: 20px;
+.top_banner .slider_controller.next {
+    right: 20px;
+    background-image: url(../images/ico/ic-banner-next.svg);
 }
-
-.main_contents .banner_slider .txt .ttl {
+.top_banner .item .ttl {
     font-size: 28px;
     font-weight: 500;
-    color: #fff;
 }
-
-.main_contents .banner_slider .txt .info {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
+.top_banner .item .info {
+    margin-top: 10px;
 }
-
-.main_contents .banner_slider .txt .info .tag {
+.top_banner .item .info .badge {
     margin-right: 10px;
-    font-size: 0;
 }
-
-.main_contents .banner_slider .txt .info_txt {
-    color: #fff;
+.top_banner .item .info .info_txt {
     font-size: 20px;
-    background-repeat: no-repeat;
     background-position: left calc(50% + 1px);
 }
-
-.main_contents .banner_slider .txt .info_txt+.info_txt {
+.top_banner .item .info .info_txt + .info_txt {
     position: relative;
     margin-left: 18px;
 }
 
-.main_contents .banner_slider .txt .info_txt+.info_txt::before {
+.top_banner .item .info .info_txt + .info_txt::before {
     content: '';
     position: absolute;
     left: -9px;
@@ -112,31 +159,22 @@
     height: 16px;
     background: url(../images/ico/line_top_banner.png);
 }
-
-.main_contents .banner_slider .txt .info_txt.cat {
+.top_banner .item .info .info_txt.cat {
     padding-left: 22px;
     background-size: 18px;
-    background-image: url(../images/ico/ico-bigthum-wait.svg);
 }
 
-.main_contents .banner_slider .txt .info_txt.viewer {
+.top_banner .item .info .info_txt.viewer {
     padding-left: 20px;
     background-size: 16px;
-    background-image: url(../images/ico/ico-bigthum-person.svg);
 }
-
-.main_contents .banner_slider .txt .desc {
+.top_banner .item .txt .desc {
     height: 40px;
     margin-top: 20px;
-    text-align: center;
     font-size: 18px;
-    font-weight: 350;
     line-height: 40px;
-    color: #222222;
-    background-color: #ffd200;
 }
-
-.main_contents .banner_slider .slider_pager {
+.top_banner .slider_pager {
     position: absolute;
     right: 24px;
     bottom: 57px;
@@ -145,29 +183,40 @@
     opacity: .6;
 }
 
-.main_contents .banner_slider .slider_controller {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    transform: translateY(-50%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    text-indent: -9999em;
+/* mid banner */
+.mid_banner {
+    background-color: #fff;
+}
+.mid_banner .slider_controller {
+    width: 85px;
+    height: 100%;
+}
+.mid_banner .slider_controller.prev {
+    left: 0;
+    background-image: url(../images/ico/ic-mid-banner-prev.svg);
+}
+.mid_banner .slider_controller.next {
+    right: 0;
+    background-image: url(../images/ico/ic-mid-banner-next.svg);
 }
 
-.main_contents .banner_slider .slider_controller.prev {
-    left: 20px;
-    background-image: url(../images/ico/ic-banner-prev.svg);
+.mid_banner .slider_box {
+    width: 550px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.main_contents .banner_slider .slider_controller.next {
-    right: 20px;
-    background-image: url(../images/ico/ic-banner-next.svg);
+.mid_banner .slider_items .item {
+    width: 550px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.mid_banner .slider_items .item img {
+    width: 100%;
+    border-radius: 5px;
 }
 
-/* //banner_slider */
+/* //banner */
 
 /* sub_nav */
 .main_contents .sub_nav {
@@ -229,3 +278,4 @@
 }
 
 /* /sub_nav */
+
