@@ -4,6 +4,7 @@
     --max-width: 720px;
     --header-height: 84px;
     --gnb-height: 69px;
+    --color-yellow: #ffd200;
 }
 
 /**
@@ -66,6 +67,7 @@ display
 }
 .section {
     margin-bottom: 11px;
+    padding: 22px 20px;
     background: #fff;
 }
 .float-bottom {
@@ -82,9 +84,9 @@ header
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     width: 100%;
     background: #fff;
-    z-index: 100;
 }
 .header__container {
     display: flex;
@@ -156,11 +158,11 @@ gnb
     position: fixed;
     top: var(--header-height);
     left: 0;
+    z-index: 100;
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #dfdfdf;
     box-sizing: border-box;
-    z-index: 100;
 }
 .gnb {
     display: flex;
@@ -181,7 +183,7 @@ gnb
 }
 .gnb__link.on {
     line-height: 55px;
-    border-bottom: 3px solid #ffd200;
+    border-bottom: 3px solid var(--color-yellow);
 }
 .gnb__link .clock-icon {
     position: relative;
@@ -229,6 +231,7 @@ banner
 **/
 .main-banners {
     position: relative;
+    margin: 11px 0;
     overflow: hidden;
 }
 .main-banners__contents {
@@ -239,8 +242,13 @@ banner
     width: var(--max-width);
     font-weight: 700;
 }
+.main-banner__img-wrap {
+    height: 440px;
+    overflow: hidden;
+}
 .main-banner__title {
     font-size: 28px;
+    font-weight: 500;
 }
 .main-banner__tags {
     display: flex;
@@ -254,9 +262,9 @@ banner
     padding: 0 5px;
     font-size: 16px;
     line-height: 20px;
-    color: #ffd200;
+    color: var(--color-yellow);
     background: #000;
-    border: 1px solid #ffd200;
+    border: 1px solid var(--color-yellow);
     border-radius: 3px;
 }
 .main-banner__category:before {
@@ -265,8 +273,8 @@ banner
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    vertical-align: middle;
     background: url('../images/common/ico-clock_white.svg') no-repeat left center / auto 20px;
+    vertical-align: middle;
 }
 .main-banner__category:after {
     content: '';
@@ -281,14 +289,14 @@ banner
     display: inline-block;
     width: 20px;
     height: 20px;
-    vertical-align: middle;
     background: url('../images/common/ico-user.svg') no-repeat left center / auto 20px;
+    vertical-align: middle;
 }
 .main-banner__description {
     font-size: 18px;
+    background: var(--color-yellow);
     line-height: 40px;
     text-align: center;
-    background: #ffd200;
 }
 .main-banners .slide-button-wrap {
     margin-top: -10px;
