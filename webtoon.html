@@ -4,40 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/fe-kakaopage/src/css/reset.css">
+  <link rel="stylesheet" href="/fe-kakaopage/src/css/common.css">
+  <link rel="stylesheet" href="/fe-kakaopage/src/css/header.css">
   <title>홈 - 웹툰ㅣ카카오페이지</title>
 </head>
 <body>
-  <header>
-    <div>
-      <a href="/fe-kakaopage/index.html">
-        <img src="./src/img/logo.png" alt="로고">
-      </a>
-    </div>
-    <div class="search-content-container">
-      <div>
-        <form name="search-content-form">
-          <label for="search-content-input">컨텐츠 검색 </label>
-          <input id="search-content-input" type="text">
-        </form>
+  <header class="l-center">
+    <div class="l-header page-width">
+      <div class="logo l-center">
+        <a href="/fe-kakaopage/index.html">
+          <img class="full-width" src="./src/img/logo.png" alt="로고">
+        </a>
       </div>
-      <div>
-        <img src="/fe-kakaopage/src/img/magnifying-glass.png" alt="검색 버튼">
+      <div class="header-right">
+        <div class="search-content-container">
+          <form name="search-content-form">
+            <label class="hidden" for="search-content-input">컨텐츠 검색 </label>
+            <input id="search-content-input" type="text">
+          </form>
+          <div class="search-btn">
+            <img class="full-width" src="/fe-kakaopage/src/img/magnifying-glass.png" alt="검색 버튼">
+          </div>
+        </div>
+        <div class="stage">
+          <a href="https://pagestage.kakao.com/bl">
+            <img class="full-width" src="/fe-kakaopage/src/img/stage.png" alt="스테이지">
+          </a>
+        </div>
+        <div>
+          <button class="login-btn">
+            <div>캐시충전</div>
+            <div>ㅣ</div>
+            <div>로그인</div>
+          </button>
+        </div>
       </div>
     </div>
-    <div>
-      <a href="https://pagestage.kakao.com/bl">
-        <img src="/fe-kakaopage/src/img/logo.png" alt="스테이지">
-      </a>
-    </div>
-    <div>
-      <button>
-        <div>캐시충전</div>
-        <div>ㅣ</div>
-        <div>로그인</div>
-      </button>
-    </div>
-    <nav>
-      <ul>
+    <nav class="page-width">
+      <ul class="category">
         <li>
           <a href="/fe-kakaopage/index.html">홈</a>
         </li>
@@ -61,7 +66,7 @@
   </header>
   <main>
     <nav>
-      <ul>
+      <ul class="category">
         <li>
           <a href="#">홈</a>
         </li>
@@ -729,6 +734,6 @@
         </a>
       </div>
     </div>
-    </footer>
+  </footer>
   </body>
   </html>
