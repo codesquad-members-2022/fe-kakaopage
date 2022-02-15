@@ -170,10 +170,11 @@ input {
   border-bottom: 3px solid var(--color-yellow);
 }
 
-.themes-container {
+.container {
   background-color: var(--color-white);
   height: 140px;
   padding: 20px;
+  margin: 10px 0 10px 0;
 }
 
 .themes {
@@ -190,4 +191,14 @@ input {
   text-align: center;
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+.mini-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini-slider__btn {
+  font-size: 1.8rem;
+  color: var(--color-grey);
 }

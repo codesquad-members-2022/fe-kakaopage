@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./src/js/index.js" defer></script>
+    <!-- <script src="./src/js/index.js" defer></script>-->
   </head>
   <body>
     <header class="header">
@@ -80,7 +80,7 @@
           />
         </div>
 
-        <div class="themes-container">
+        <div class="container">
           <ul class="themes">
             <li class="theme__name">오늘 UP</li>
             <li class="theme__name">오늘 신작</li>
@@ -90,12 +90,31 @@
             <li class="theme__name">오늘 랭킹</li>
           </ul>
         </div>
+
+        <div class="container">
+          <div class="mini-slider">
+            <button class="mini-slider__btn">
+              <i class="fas fa-chevron-circle-left"></i>
+            </button>
+            <img
+              src="./img/slider_mini.png"
+              class="mini-slider__img"
+              alt="webtoon image"
+            />
+            <button class="mini-slider__btn">
+              <i class="fas fa-chevron-circle-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
+
+      <!--
       <div class="main-contents" id="h__home">HOME</div>
       <div class="main-contents" id="h__novel">NOVEL</div>
       <div class="main-contents" id="h__movie">MOVIE</div>
       <div class="main-contents" id="h__broad">BROADCAST</div>
       <div class="main-contents" id="h__book">BOOKS</div>
+      -->
     </main>
   </body>
 </html>
