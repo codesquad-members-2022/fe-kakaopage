@@ -73,13 +73,27 @@
 .top-banner__status div {
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     justify-content: space-between;
     font-size: 20px;
 }
 
 .top-banner__status div img {
     margin-right: 5px;
+}
+
+.top-banner__status-upload {
+    background-color: black;
+    border: solid 2px #ffd200;
+    color: #ffd200;
+    font-weight: 600;
+    padding: 2px 10px 0px 10px;
+    border-radius: 5px;
+}
+
+.top-banner__status-views {
+    border-left: solid 2px rgba(255,255,255,0.6);
 }
 
 .top-banner__page-number {
@@ -94,3 +108,4 @@
 .top-banner__page-number span{
     margin: 0px 3px;
 }
+
