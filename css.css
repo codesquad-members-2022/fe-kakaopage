@@ -221,3 +221,23 @@ main {
 .today-banner button:hover {
     cursor: pointer;
 }
+
+.promotion-banner .promotion-banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 720px;
+    height: 140px;
+    background-color: #fff;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.promotion-banner .promotion-banner-container img {
+    width: 550px;
+}
+
+.promotion-banner .promotion-banner-container i {
+    font-size: 35px;
+    color: pink;
+}
