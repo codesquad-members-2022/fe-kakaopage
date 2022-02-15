@@ -1,0 +1,137 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+nav {
+  width: 720px;
+}
+.menu-top {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: none;
+}
+nav > div {
+  display: flex;
+  flex-direction: row;
+}
+.menu-list ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-list ul li {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  padding: 30px 0 15px;
+}
+
+.css-kakaopage {
+  margin-top: 27px;
+  margin-bottom: 19px;
+  cursor: pointer;
+}
+
+.search-wrap {
+  display: flex;
+  width: 180px;
+  line-height: 23px;
+  height: 34px;
+  padding: 2px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  border-radius: 30px;
+  margin-top: 27px;
+  margin-bottom: 19px;
+}
+
+.search-form {
+  display: block;
+}
+
+.search-input {
+  width: 136px;
+  height: 100%;
+  border: 0;
+  margin-left: 10px;
+  text-align: left;
+  background: #fff;
+}
+
+.css-searchBtn {
+  display: block;
+  min-width: 0;
+  padding-right: 0px;
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-stage {
+  min-width: 0;
+  position: relative;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.css-stage {
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.kakaopage-menu2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #999;
+  padding: 0;
+  background-color: transparent;
+  margin-top: 30px;
+  border: 0;
+  outline: 0;
+  font-weight: 600;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.4;
+}
+
+.kakaopage-menu2 div {
+  margin-left: 22px;
+}
+
+.kakaopage-menu {
+  position: relative;
+}
+
+.css-stage-tooltip {
+  position: absolute;
+  top: 59px;
+  left: 170px;
+  width: 137px;
+  height: 33px;
+  max-width: none;
+}
+
+.menu-list li a img {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 20px;
+}
