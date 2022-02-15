@@ -6,13 +6,15 @@ body {
   width: 100%;
   background-color: #eee;
   margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .headerAndNavWrap {
   width: 100%;
   position: fixed;
   background: white;
+  z-index: 10;
 }
-.header,
+header,
 nav {
   width: 100%;
   height: 80px;
@@ -106,6 +108,11 @@ nav {
   width: 100%;
   height: 100px;
 }
+.webtoonGenreBar {
+  height: 67px;
+  display: flex;
+  background: white;
+}
 .event {
   height: 520px;
   margin: 10px 0 10px 0;
@@ -137,6 +144,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
+  margin: 10px 0 10px 0;
 }
 .eventButtons > * {
   width: 226px;
@@ -158,7 +166,7 @@ nav {
   height: 24px;
   border-radius: 33px;
   background-color: #ffd200;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +174,125 @@ nav {
 .gift {
   margin: 0 2px 0 2px;
 }
+.giftCopy {
+  font-size: 18px;
+}
+
 .hiddenMasterPiece {
   border-radius: 0 10px 10px 0;
+}
+.waitForFreeWebtoon {
+  height: 534px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0 20px 20px 20px;
+}
+.contentTop {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.copyAndCount {
+  display: flex;
+  /* margin: 0 20px 0 20px; */
+  align-items: center;
+  font-weight: bold;
+}
+.sectionTitle {
+  font-size: 20px;
+  margin: 0 5px 0 0;
+}
+.sectionCount {
+  font-size: 14px;
+  color: #999;
+}
+.moreLink {
+  text-decoration: none;
+  color: #999;
+  font-weight: bold;
+}
+.waitForFreeWebtoonCopy {
+  font-size: 20px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.content {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+.contentImageWrap {
+  width: 142px;
+  height: 96px;
+  position: relative;
+  display: flex;
+}
+.contentImage {
+  width: 142px;
+  height: 96px;
+  background-size: cover;
+  border-radius: 6px;
+}
+.contentImageStatus {
+  position: absolute;
+  z-index: 1;
+  border-radius: 6px 0 0 0;
+}
+.waitFreeImageStatus {
+  width: 26px;
+  height: 26px;
+}
+.contentDetailWrap {
+  width: 540px;
+  height: 96px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.status {
+  display: flex;
+  align-items: center;
+}
+.statusIcon {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0;
+}
+.contantTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+.synopsis {
+  font-size: 14px;
+  color: #999;
+  font-weight: bold;
+}
+.followAndCreator {
+  display: flex;
+  font-size: 14px;
+  color: #999;
+  font-weight: bold;
+  align-items: center;
+}
+.readCount {
+  width: 11px;
+  height: 11px;
+  margin: 0 3px 0 0;
+}
+.contentSlash {
+  margin: 0 3px 0 3px;
+}
+.hotWebtoon {
+  box-sizing: border-box;
+  height: 534px;
+  padding: 0 20px 20px 20px;
+  background: white;
+}
+.webtoonStatus {
+  width: 40px;
+  height: 26px;
 }
