@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./CSS/style.css">
   <script src="https://kit.fontawesome.com/dcc474fa75.js" crossorigin="anonymous"></script>
   <title>cocoapage</title>
@@ -16,21 +15,24 @@
   <header class="header">
     <div class="header__container">
       <h1><a href="#" class="header__logo">cocoapage</a></h1>
-      <form action="#" class="search-form">
-        <input type="text" class="search-form__input">
-        <i class="fas fa-search"></i>
-      </form>
       <ul class="header__contents">
-        <li><a href="#">STAGE</a></li>
+        <li>
+          <form action="#" class="search-form">
+            <input type="text" class="search-form__input">
+            <i class="fas fa-search"></i>
+          </form>
+        </li>
+        <li><a href="#" class="contents__stage">STAGE</a></li>
         <li><button type="button" class="contents__cash">캐시충전</button></li>
+        <li><div class="divider"></div></li>
         <li><button type="button" class="contents__login">로그인</button></li>
       </ul>
     </div>
 
-    <nav class="header__nav">
+    <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item"><a href="#">홈</a></li>
-        <li class="nav__item"><a href="#">웹툰·<i class="fas fa-clock"></i></a></li>
+        <li class="nav__item nav__item--focused"><a href="#">웹툰·<i class="fas fa-clock"></i></a></li>
         <li class="nav__item"><a href="#">웹소설·<i class="fas fa-clock"></i></a></li>
         <li class="nav__item"><a href="#">영화</a></li>
         <li class="nav__item"><a href="#">방송</a></li>
@@ -43,7 +45,7 @@
   <main class="main">
     <ul class="genres__list">
       <li><a href="#">홈</a></li>
-      <li><a href="#">요일연재</a></li>
+      <li><a href="#" class="genres--focused">요일연재</a></li>
       <li><a href="#">웹툰</a></li>
       <li><a href="#">소년</a></li>
       <li><a href="#">드라마</a></li>
@@ -54,27 +56,24 @@
     </ul>
     
     <article class="banner">
-      <div class="banner__img">
-        <img src="http://placehold.it/720x480" alt="배너"/>
-        <button type="button" class="banner__prev"><i class="fas fa-chevron-left"></i></button>
-        <button type="button" class="banner__next"><i class="fas fa-chevron-right"></i></button>
-      </div>
+      <a href="#"><img src="http://placehold.it/720x480" alt="배너" class="banner__img"/></a>
+      <button type="button" class="banner__prev"><i class="fas fa-chevron-left"></i></button>
+      <button type="button" class="banner__next"><i class="fas fa-chevron-right"></i></button>
       <div class="banner__info">
         <h3 class="banner__title">타이틀</h3>
         <div class="banner__viewer">
-          <i class="fas fa-clock"></i>
-          <span>웹툰</span>
-          <i class="fas fa-user"></i>
-          <span>이용자 수</span>
+          <p><i class="fas fa-clock"></i> 웹툰</p>
+          <div class="divider"></div>
+          <p><i class="fas fa-user"></i> 이용자 수</p>
         </div>
-      </div>
-      <div class="banner__summary">
-        <span>한줄 요약</span>
+        <div class="banner__summary">
+          <span>한줄 요약</span>
+        </div>
       </div>
     </article>
 
-    <ul class="daily__webtoon">
-      <li><button type="button">월</button></li>
+    <ul class="select__day">
+      <li><button type="button" class="day--focused">월</button></li>
       <li><button type="button">화</button></li>
       <li><button type="button">수</button></li>
       <li><button type="button">목</button></li>
@@ -84,103 +83,212 @@
       <li><button type="button">완결</button></li>
     </ul>
 
-    <div class="select__webtoon">
-      <div>
-        <button type="button" class="select__total">전체</button>
-        <button type="button" class="select__normal">웹툰</button>
-        <button type="button" class="select__free"><i class="fas fa-clock"></i> 웹툰</button>
+    <div class="select__options">
+      <ul class="options__btn">
+        <li><button type="button" class="options__total options--focused">전체</button></li>
+        <li><div class="divider"></div></li>
+        <li><button type="button" class="options__normal">웹툰</button></li>
+        <li><div class="divider"></div></li>
+        <li><button type="button" class="options__waiting-free"><i class="fas fa-clock"></i> 웹툰</button></li>
+      </ul>
+      <div class="options__genre">
+        <button type="button" class="options__genre-btn">전체 (138)</button>
+        <i class="fas fa-sort-down"></i>
       </div>
-      <button type="button" class="select__genre">전체(138)<i class="fas fa-sort-down"></i></button>
     </div>
 
-    <section class="main__contents">
-      <ul class="contents__list">
-        <li class="contents__item">
-          <div class="item__thumbnail">
+    <section class="daily__webtoons">
+      <ul class="webtoons__list">
+        <li class="webtoons__item">
+          <div class="item__privew">
             <div class="item__img">
               <img src="http://placehold.it/120" alt="썸네일"/>
             </div>
-            <div class="item__review">
-              <i class="fas fa-star"></i>
-              <span>별점</span>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
               <i class="fas fa-clock"></i>
             </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
             <i class="fas fa-user"></i>
-            <span class="item__count">이용자 수</span>
+            <span class="item__viewer">이용자 수</span>
           </div>
         </li>
-        <li class="contents__item">
-          <div class="item__thumbnail">
+        <li class="webtoons__item">
+          <div class="item__privew">
             <div class="item__img">
               <img src="http://placehold.it/120" alt="썸네일"/>
             </div>
-            <div class="item__review">
-              <i class="fas fa-star"></i>
-              <span>별점</span>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
               <i class="fas fa-clock"></i>
             </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
             <i class="fas fa-user"></i>
-            <span class="item__count">이용자 수</span>
+            <span class="item__viewer">이용자 수</span>
           </div>
         </li>
-        <li class="contents__item">
-          <div class="item__thumbnail">
+        <li class="webtoons__item">
+          <div class="item__privew">
             <div class="item__img">
               <img src="http://placehold.it/120" alt="썸네일"/>
             </div>
-            <div class="item__review">
-              <i class="fas fa-star"></i>
-              <span>별점</span>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
               <i class="fas fa-clock"></i>
             </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
             <i class="fas fa-user"></i>
-            <span class="item__count">이용자 수</span>
+            <span class="item__viewer">이용자 수</span>
           </div>
         </li>
-        <li class="contents__item">
-          <div class="item__thumbnail">
+        <li class="webtoons__item">
+          <div class="item__privew">
             <div class="item__img">
               <img src="http://placehold.it/120" alt="썸네일"/>
             </div>
-            <div class="item__review">
-              <i class="fas fa-star"></i>
-              <span>별점</span>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
               <i class="fas fa-clock"></i>
             </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
             <i class="fas fa-user"></i>
-            <span class="item__count">이용자 수</span>
+            <span class="item__viewer">이용자 수</span>
           </div>
         </li>
-        <li class="contents__item">
-          <div class="item__thumbnail">
+        <li class="webtoons__item">
+          <div class="item__privew">
             <div class="item__img">
               <img src="http://placehold.it/120" alt="썸네일"/>
             </div>
-            <div class="item__review">
-              <i class="fas fa-star"></i>
-              <span>별점</span>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
               <i class="fas fa-clock"></i>
             </div>
           </div>
           <div class="item__info">
             <h4 class="item__title">타이틀</h4>
             <i class="fas fa-user"></i>
-            <span class="item__count">이용자 수</span>
+            <span class="item__viewer">이용자 수</span>
           </div>
         </li>
-      </ul>
+        <li class="webtoons__item">
+          <div class="item__privew">
+            <div class="item__img">
+              <img src="http://placehold.it/120" alt="썸네일"/>
+            </div>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="item__info">
+            <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
+            <span class="item__viewer">이용자 수</span>
+          </div>
+        </li>
+        <li class="webtoons__item">
+          <div class="item__privew">
+            <div class="item__img">
+              <img src="http://placehold.it/120" alt="썸네일"/>
+            </div>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="item__info">
+            <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
+            <span class="item__viewer">이용자 수</span>
+          </div>
+        </li>
+        <li class="webtoons__item">
+          <div class="item__privew">
+            <div class="item__img">
+              <img src="http://placehold.it/120" alt="썸네일"/>
+            </div>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="item__info">
+            <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
+            <span class="item__viewer">이용자 수</span>
+          </div>
+        </li>
+        <li class="webtoons__item">
+          <div class="item__privew">
+            <div class="item__img">
+              <img src="http://placehold.it/120" alt="썸네일"/>
+            </div>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="item__info">
+            <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
+            <span class="item__viewer">이용자 수</span>
+          </div>
+        </li>
+        <li class="webtoons__item">
+          <div class="item__privew">
+            <div class="item__img">
+              <img src="http://placehold.it/120" alt="썸네일"/>
+            </div>
+            <div class="item__rating">
+              <div class="rating-star">
+                <i class="fas fa-star"></i>
+                <span>9.9</span>
+              </div>
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="item__info">
+            <h4 class="item__title">타이틀</h4>
+            <i class="fas fa-user"></i>
+            <span class="item__viewer">이용자 수</span>
+          </div>
+        </li>
     </section>
   </main>
   
@@ -195,8 +303,9 @@
 
     <ul class="footer__info-business">
       <li>
-        <button type="button">(주)카카오엔터테인먼트 사업자 정보</button>
+        <button type="button">(주)코코아엔터테인먼트 사업자 정보</button>
       </li>
+      <li><div class="divider"></div></li>
       <li>
         <a href="#">사업자 정보 확인</a>
       </li>
