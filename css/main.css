@@ -1,0 +1,27 @@
+@import "style.css";
+
+main {
+    width: 100%;
+    height: 80px;
+    padding-top: 5px;
+    background-color: var(--main-gray);
+}
+
+.main__navigation {
+    margin: 5px auto;
+    background-color: white;
+    width: 60%;
+
+}
+
+.main__navigation ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.nav__under {
+    border-bottom: var(--main-yellow);
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}

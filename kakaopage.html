@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Kakaopage</title>
-    <link rel="stylesheet" href="./kakaopage.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header>
         <div class="head">
-            <h3>kakaopage</h3>
+           <h1>kakaopage</h1>
            <div class="head__item">
-                <form><input type="text"><button>돋보기</button></form>
+               <form>
+                   <input type="text">
+                   <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색버튼">
+               </form>
                 <ul>
-                    <li>stage</li>
-                    <li>cash</li>
+                    <li><img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="stage버튼"></li>
+                    <li>캐시충전</li>
+                    <div>|</div>
                     <li>로그인</li>
                 </ul>
             </div>
         </div>
-        <nav class="navigation">nav
+        <nav class="navigation">
             <ul>
                 <li><a href="">홈</a></li>
-                <li><a href="">웹툰</a></li>
+                <li class="nav__under"><a href=""><img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰버튼"></a></li>
                 <li><a href="">웹소설</a></li>
                 <li><a href="">영화</a></li>
                 <li><a href="">방송</a></li>
