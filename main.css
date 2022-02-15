@@ -1,0 +1,32 @@
+:root{
+    /* color */
+    font-family: 'Noto Sans KR', sans-serif;
+    --text-color: #333333;
+    --main-white: #FFFFFF;
+    --background-color: #EEEEEE;
+    --accent-color: #FCBC19;
+    /*size*/
+    --width: 13%;
+}
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+.head{
+    display: flex;
+    width: 100vw;
+    background-color: var(--main-white);
+    justify-content: center;
+}
+
+.item{
+    width: var(--width);
+    background-color: pink;
+}
+
+body{
+    background-color: var(--background-color);
+}
