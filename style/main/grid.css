@@ -1,0 +1,38 @@
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  grid-template-rows: repeat(2, 60px);
+  gap: 2px;
+  padding: 24px;
+}
+
+.c-grid__component {
+  background-color: var(--main-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-grid__component:nth-child(1) {
+  border-top-left-radius: 8px;
+}
+.c-grid__component:nth-child(3) {
+  border-top-right-radius: 8px;
+}
+.c-grid__component:nth-child(4) {
+  border-bottom-left-radius: 8px;
+}
+.c-grid__component:nth-child(6) {
+  border-bottom-right-radius: 8px;
+}
+
+.c-grid__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.c-grid__number {
+  margin-left: 10px;
+  background-color: var(--main-yellow);
+  border-radius: 20px;
+  text-align: center;
+}
