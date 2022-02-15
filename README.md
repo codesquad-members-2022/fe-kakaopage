@@ -39,17 +39,23 @@
 
 # 고민
 
-커밋 메세지를 얼마나 세분화해야하는지
+❓ 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
+
+![스크린샷 2022-02-14 오후 11 34 12](https://user-images.githubusercontent.com/71386219/153883813-ac766d7b-ef76-43c2-a275-efaaaadceca2.png)
+
+❓ 커밋 메세지를 얼마나 세분화해야하는지
 
 - 아무리 작아도 주제가 구분되면 구분해서 커밋해야하나? 예를 들어, 미션목표정하기 -> html 구조짜기
 
-html tag
+❓ html tag
 
 - session vs artice 차이
 
-css
+❓ css
 
-- naming: main\_\_carousel\_\_button vs main\_\_carousel > button
+- ✅ naming -> convention 정리
+- naming: `main__carousel__button` vs `main__carousel > button`
+- 1번 방식으로 하니가 class가 너무 길어지는데 2번 방식으로 하기
 
 # html 구조짜기 및 간단한 네이밍
 
