@@ -11,13 +11,13 @@
     <header class="header">
         <div class="header__inner">
             <div class="header__top">
-                <h1 class="header__logo"><img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954" /></h1>
+                <h1 class="header__logo"><img src="images/logo-kakaopage.svg" /></h1>
                 <div class="header__search">
                     <form class="search__form"><input class="search__input" type="search"/></form>
-                    <img class="search_icon" src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색 아이콘" />
+                    <img class="search_icon" src="images/btn_search.png" alt="검색 아이콘" />
                 </div>
                 <div class="header__buttons">
-                    <button class="header__button"><img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="Stage" /></button>
+                    <button class="header__button"><img src="images/pc-logo-stage.svg" alt="Stage" /></button>
                     <button class="header__button">캐시충전</button>
                     <button class="header__button">로그인</button>
                 </div>
@@ -26,11 +26,27 @@
                 <nav class="header__nav">
                     <ul class="header__ul">
                         <li class="header__menu"><a class="header__link" href="#">홈</a></li>
-                        <li class="header__menu header__menu_active"><a class="header__link" href="#"><img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰/만화"/></a></li>
-                        <li class="header__menu"><a class="header__link" href="#"><img src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55" alt="웹소설/장르"/></a></li>
-                        <li class="header__menu"><a class="header__link" href="#">영화</a></li>
-                        <li class="header__menu"><a class="header__link" href="#">방송</a></li>
-                        <li class="header__menu"><a class="header__link" href="#">책</a></li>
+                        <li class="header__menu header__menu_active"><a class="header__link" href="#"><img src="images/menu_toon.svg" alt="웹툰/만화"/></a></li>
+                        <li class="header__menu">
+                            <a class="header__link" href="#">
+                                <img src="images/menu_novel.svg" alt="웹소설/장르"/>
+                            </a>
+                        </li>
+                        <li class="header__menu">
+                            <a class="header__link" href="#">영화
+                                <div class="header__link_circle"></div>
+                            </a>
+                        </li>
+                        <li class="header__menu">
+                            <a class="header__link" href="#">방송
+                                <div class="header__link_circle"></div>
+                            </a>
+                        </li>
+                        <li class="header__menu">
+                            <a class="header__link" href="#">책
+                                <div class="header__link_circle"></div>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -40,31 +56,46 @@
         <section class="main__inner">
             <nav class="main__nav">
                 <ul class="main__nav-ul">
-                    <li class="main__nav_genre">홈</li>
-                    <li class="main__nav_genre">요일연재</li>
-                    <li class="main__nav_genre">웹툰</li>
-                    <li class="main__nav_genre">소년</li>
-                    <li class="main__nav_genre">드라마</li>
-                    <li class="main__nav_genre">로맨스</li>
-                    <li class="main__nav_genre">로판</li>
-                    <li class="main__nav_genre">액션무협</li>
-                    <li class="main__nav_genre">BL</li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">홈</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link main__nav_link_active">요일연재</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">웹툰</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">소년</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">드라마</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">로맨스</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">로판</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">액션무협</a></li>
+                    <li class="main__nav_genre"><a class="main__nav_link not_selected">BL</a></li>
                 </ul>
             </nav>
-            <aside class="carousel">
 
-            </aside>
+            <article class="carousel">
+                <img class="carousel_left_arrow" src="images/carousel_left_arrow.svg" />
+                <img class="carousel_right_arrow" src="images/carousel_right_arrow.svg" />
+                <div class="carousel__inner">
+                    <div class="carousel__content">
+                        <h1 class="carousel__title">학사 귀환</h1>
+                        <div class="carousel__detail">
+                            <img class="carousel_img" src="images/badge-bigthum-up.svg" />
+                            <img class="carousel_img" src="images/ico-bigthum-wait.svg" /> <span class="carousel_text">웹툰</span>
+                            <img class="carousel_img" src="images/line_top_banner.png" />
+                            <img class="carousel_img" src="images/ico-bigthum-person.svg" /> <span class="carousel_text">17.3만명</span>
+                        </div>
+                    </div>
+                    <div class="carousel_count">1 / 3</div>
+                </div>
+                <footer class="carousel__footer">학사 마현, 중원으로 돌아오다!</footer>
+            </article>
 
             <nav class="main__nav">
                 <ul class="main__nav-ul">
-                    <li class="main__nav_day">월</li>
+                    <li class="main__nav_day not_selected">월</li>
                     <li class="main__nav_day">화</li>
-                    <li class="main__nav_day">수</li>
-                    <li class="main__nav_day">목</li>
-                    <li class="main__nav_day">금</li>
-                    <li class="main__nav_day">토</li>
-                    <li class="main__nav_day">일</li>
-                    <li class="main__nav_day">완결</li>
+                    <li class="main__nav_day not_selected">수</li>
+                    <li class="main__nav_day not_selected">목</li>
+                    <li class="main__nav_day not_selected">금</li>
+                    <li class="main__nav_day not_selected">토</li>
+                    <li class="main__nav_day not_selected">일</li>
+                    <li class="main__nav_day not_selected">완결</li>
                 </ul>
             </nav>
             
@@ -72,22 +103,25 @@
             <section class="filter">
                 <div class="filter__left">
                     <button class="filter_button">전체</button>
-                    <button class="filter_button">웹툰</button>
-                    <button class="filter_button"><img src="https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a" alt="웹툰" />웹툰</button>
+                    <button class="filter_button not_selected">웹툰</button>
+                    <button class="filter_button not_selected"><img class="filter__img" src="images/ico_wait-off.svg" alt="웹툰" />웹툰</button>
                 </div>
                 <div class="filter__right">
-                    <span class="filter_genre_finds">전체(138)</span>
-                    <img src="https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345" alt="장르별 필터 보기" />
+                    <span class="filter_genre_finds">전체(180)</span>
+                    <img src="images/ico_sorting_arrow.svg" alt="장르별 필터 보기" />
                 </div>
             </section>
 
             <section class="main__content">
+                Content Section
+            </section>
 
+            <section class="main__app">
+                <button class="main__app_button">카카오페이지 앱으로 보기 ></button>
             </section>
         </section>
     </main>
     <footer>
-
     </footer>
 </body>
 </html>

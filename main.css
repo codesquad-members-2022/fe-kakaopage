@@ -2,3 +2,167 @@
     width: 720px;
     margin: 0 auto;
 }
+
+.main__nav {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.main__nav-ul {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.main__nav-ul .main__nav_genre,
+.main__nav-ul .main__nav_day {
+    flex-grow: 1;
+    padding: 0 15px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main__nav-ul .main__nav_link {
+    cursor: pointer;
+}
+
+.main__nav_link_active {
+    color: rgb(51, 51, 51);
+}
+
+.carousel {
+    width: 720px;
+    height: 480px;
+    position: relative;
+    background-color: hotpink;
+    background-image: url('images/carousel_background.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.carousel .carousel_left_arrow {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel_right_arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: absolute;
+    bottom: 10%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.carousel .carousel__title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.carousel__inner .carousel_count {
+    opacity: 0.6;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.carousel__detail {
+    display: flex;
+}
+
+.carousel__detail .carousel_img {
+    margin: 0 5px;
+}
+
+.carousel__detail .carousel_text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.carousel .carousel__footer {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #FFD300;
+    position: absolute;
+    bottom: 0;
+    color: #222222;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 70px;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.filter .filter_button {
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.filter .filter__right {
+    display: flex;
+    cursor: pointer;
+}
+
+.filter .filter_genre_finds {
+    font-size: 18px;
+    color: #999999;
+    margin-right: 10px;
+}
+
+.filter .filter__img {
+    margin-right: 5px;  
+}
+
+.main__content {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.main__app {
+    width: 720px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #fecc2c;
+}
+
+.main__app .main__app_button {
+    width: 500px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.not_selected {
+    color: #bbbbbb;
+}
