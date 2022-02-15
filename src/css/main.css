@@ -131,3 +131,53 @@
   border-radius: 50%;
   font-weight: 600;
 }
+
+.c-webtoons {
+  padding: 10px 20px 10px 20px;
+}
+
+.wt {
+  display: flex;
+}
+
+.wt__image {
+  width: 142px;
+  height: 96px;
+}
+
+.wt__discription {
+  margin-left: 10px;
+}
+
+.wt__discription > * {
+  margin-bottom: 10px;
+}
+
+.wt__discription > .title {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.wt__discription > .summary,
+.wt__discription > .info {
+  font-size: 0.8rem;
+  color: var(--color-dark-grey);
+}
+
+.c-webtoons.promotion {
+  height: 200px;
+}
+
+.c-webtoons > .promotion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion {
+  padding: 10px;
+}
+.promotion > .more {
+  color: var(--color-dark-grey);
+  font-size: 0.9rem;
+}

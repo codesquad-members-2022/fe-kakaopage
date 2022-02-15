@@ -49,3 +49,8 @@ input {
   border: none;
   outline: inherit;
 }
+
+h3,
+p {
+  margin: 0;
+}
