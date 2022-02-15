@@ -1,11 +1,7 @@
-@import url(./reset.css);
+@charset "utf-8";
 
-:root {
-    --max-width: 720px;
-    --header-height: 84px;
-    --gnb-height: 69px;
-    --color-yellow: #ffd200;
-}
+@import url(./reset.css);
+@import url(./variable.css);
 
 /**
 common

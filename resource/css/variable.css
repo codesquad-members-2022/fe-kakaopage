@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+:root {
+    --max-width: 720px;
+    --header-height: 84px;
+    --gnb-height: 69px;
+    --color-black: #333;
+    --color-gray: #999;
+    --color-yellow: #ffd200;
+}
