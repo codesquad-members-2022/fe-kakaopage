@@ -71,3 +71,23 @@ img { width: 100%; }
 .header__link--txt { font-size: 1.125rem; color: #868e96; height: 26px; }
 
 .header__link-divider { margin: 6px 12px 0; width: 1px; height: 12px; background: #adb5bd; }
+
+.footer { padding: 16px 0 40px; font-size: 0.875rem; line-height: 2; text-indent: 4px; color: #adb5bd; }
+
+.footer a { color: #adb5bd; }
+
+.footer__inner { position: relative; margin: 0 auto; width: 720px; }
+
+.footer__download-app-link { margin: 0 0 40px; height: 70px; line-height: 70px; text-align: center; color: #212529; font-size: 1.125rem; background: #ffd200; }
+
+.footer__download-app-link a { display: block; color: #212529; }
+
+.footer__links { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.footer__company-info-summary { cursor: pointer; }
+
+.footer__company-info-summary a { text-decoration: underline; }
+
+.footer__ok-mark { position: absolute; top: 110px; right: 0; }
+
+.footer__ok-mark img { width: 55px; height: 55px; }
