@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -33,19 +34,21 @@
 
       <nav class="navbar">
         <ul class="nav nav--header">
-          <li class="nav__name">홈</li>
-          <li class="nav__name selected-nav-header">
+          <li class="nav__name" data-id="h__home">홈</li>
+          <li class="nav__name selected-nav-header" data-id="h__webtoon">
             웹툰 • <i class="fas fa-clock"></i>
           </li>
-          <li class="nav__name">웹소설 • <i class="fas fa-clock"></i></li>
-          <li class="nav__name">영화</li>
-          <li class="nav__name">방송</li>
-          <li class="nav__name">책</li>
+          <li class="nav__name" data-id="h__novel">
+            웹소설 • <i class="fas fa-clock"></i>
+          </li>
+          <li class="nav__name" data-id="h__movie">영화</li>
+          <li class="nav__name" data-id="h__broad">방송</li>
+          <li class="nav__name" data-id="h__book">책</li>
         </ul>
       </nav>
     </header>
     <main class="main">
-      <div class="main-contents">
+      <div class="main-contents" id="h__webtoon">
         <nav class="navbar">
           <ul class="nav nav--main">
             <li class="nav__name selected-nav-main">홈</li>
@@ -61,7 +64,11 @@
         </nav>
 
         <div class="slider">
-          <img src="./img/webtoon1.png" class="slider__img" />
+          <img
+            src="./img/webtoon1.png"
+            class="slider__img"
+            alt="webtoon-image"
+          />
         </div>
 
         <div class="themes-container">
@@ -74,8 +81,6 @@
             <li class="theme__name">오늘 랭킹</li>
           </ul>
         </div>
-
-        <div class="webtoon-container"></div>
       </div>
     </main>
   </body>
