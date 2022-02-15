@@ -6,7 +6,10 @@
     --background-color: #EEEEEE;
     --accent-color: #FCBC19;
     /*size*/
-    --width: 13%;
+    --width: 30%;
+
+    /*font-size*/
+    --largefont: 22px;
 }
 * {
     padding: 0;
@@ -14,17 +17,55 @@
     box-sizing: border-box;
     font-size: 100%;
 }
-
-.head{
-    display: flex;
+.header{
     width: 100vw;
     background-color: var(--main-white);
+}
+.head{
+    display: flex;
+    flex-basis: 0; /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
+    margin: 0 20%;
+    /* padding: 40px; */
+    background-color: green;
     justify-content: center;
 }
 
 .item{
+    padding: 40px;
     width: var(--width);
     background-color: pink;
+}
+
+.search{
+   background-color: red;
+   margin-left: 100px;
+}
+
+.searchbar{
+    border: 3px;
+    border-radius: 15px;
+    border-color: #999999;
+    border: 1px solid;
+}
+
+.stage{
+    margin-left: 70px;
+    padding-left: 100px;
+    padding-right: 0;
+    
+}
+
+.stage img{
+    width: 70%;
+}
+
+.user{
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--largefont);
+    color: #999999;
+    border: 0;
+    padding-left: 0;
 }
 
 body{
