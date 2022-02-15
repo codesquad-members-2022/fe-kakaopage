@@ -113,3 +113,21 @@
     align-items: center;
     justify-content: center;
 }
+
+.slide-banner {
+    margin-top: 11px;
+    background-color: #fff;
+    flex-basis: auto;
+}
+
+.slide-banner .arrow {
+    width: 85px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-banner .banner {
+    width: 550px;
+    height: 100px;
+    margin: 20px 0;
+}
