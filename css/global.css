@@ -38,3 +38,7 @@ button {
 .group-flex {
     display: flex;
 }
+
+.bg-white {
+    background-color: #fff;
+}

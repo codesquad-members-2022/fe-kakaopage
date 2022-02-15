@@ -1,8 +1,26 @@
 .contents-wrap {
     background-color: #eee;
-    margin-top: 10rem;
+    margin-top: 150px;
 }
 
 main {
-    background-color: #fff;
+    /* background-color: #fff; */
+}
+
+.sub-menu {
+    margin-bottom: 11px;
+    height: 66px;
+    line-height: 66px;
+}
+
+.sub-menu li {
+    flex: auto;
+    text-align: center;
+    color: #bbb;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sub-menu .active {
+    color: #333;
 }
