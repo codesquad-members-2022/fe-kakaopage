@@ -5,6 +5,7 @@
   position: fixed;
   width: 100%;
   background-color: white;
+  z-index: 1;
 }
 .screen-header {
   display: flex;
@@ -45,6 +46,10 @@
 .screen-header__header__headerBox__option {
   text-align: center;
   margin-top: 5px;
+}
+.screen-header__header__headerBox__option span {
+  font-size: 20px;
+  color: #b5b5b5;
 }
 .screen-header__nav {
   display: flex;

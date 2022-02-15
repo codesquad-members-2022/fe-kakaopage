@@ -1,6 +1,7 @@
 /*components */
 @import "./components/nav-box.css";
 @import "./components/image-box.css";
+@import "./components/image-card.css";
 
 @import "reset.css";
 @import "header.css";
@@ -10,6 +11,5 @@ body {
   display: flex;
   background-color: #eeeeee;
   margin: 0 auto;
-  height: 5000px;
   justify-content: center;
 }

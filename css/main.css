@@ -38,4 +38,11 @@
 
 .main-content__content__main {
   background-color: white;
+  width: 720px;
+  display: flex;
+  justify-self: start;
+  flex-wrap: wrap;
+}
+.main-content__advertise {
+  margin-top: 15px;
 }

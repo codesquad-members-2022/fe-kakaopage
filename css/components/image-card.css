@@ -1,0 +1,51 @@
+.image-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 120px;
+  padding: 15px 0;
+  padding-left: 18px;
+}
+.image-card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px 10px 0 0;
+}
+.image-card__area {
+  height: 30px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background-color: #242526;
+}
+.image-card__area__content {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 140px;
+  left: 23px;
+}
+
+.image-card__rank {
+  font-size: 18px;
+  color: #ffd200;
+}
+.image-card__rank-icon {
+  position: absolute;
+  left: 88px;
+  bottom: 1px;
+}
+
+.image-card__comment__comment {
+  margin-top: 10px;
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용 */
+}
+.image-card__comment__info img {
+  margin-top: 10px;
+  width: 12%;
+}
+.image-card__comment__info span {
+  color: #afafaf;
+}
