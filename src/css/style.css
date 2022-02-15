@@ -70,7 +70,18 @@ input {
 }
 
 .nav--header > .nav__name {
-  padding: 10px 0 10px 0;
+  padding: 10px 15px 10px 15px;
+  position: relative;
+}
+
+.nav__circle {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-yellow);
+  border-radius: 100%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .logo {
