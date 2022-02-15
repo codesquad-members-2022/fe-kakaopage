@@ -8,7 +8,7 @@ header {
   /* position: fixed; */
 }
 
-.container {
+.header-container {
   height: 80px;
 }
 
@@ -42,23 +42,25 @@ a:hover {
 }
 
 .search {
-  margin-left: 80px;
-  height: 34px;
+  margin-left: 70px;
+  height: 30px;
   border-radius: 30px;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
 }
 
 .icon-magnifier {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 30px;
   position: relative;
-  right: 35px;
-  top: 5px;
+  right: 31px;
+  top: 6px;
 }
 
-.white {
-  background-color: white;
+.black {
+  background-color: black;
 }
 
 .user-account {
@@ -119,4 +121,105 @@ a:hover {
 
 .nav-btn-container {
   margin: auto 0;
+}
+
+.contents {
+  height: fit-content;
+  overflow: scroll;
+}
+
+.banner {
+  margin: 20px auto;
+  width: 720px;
+  height: 480px;
+}
+
+.slide {
+  margin: 0;
+  padding: 0;
+  height: 440px;
+}
+
+.picture-large {
+  width: 720px;
+  height: 440px;
+  background-color: aquamarine;
+  background-size: cover;
+}
+
+.btn-move {
+  border-color: white;
+}
+
+.btn-prev {
+  position: relative;
+  bottom: 250px;
+}
+
+.btn-next {
+  position: relative;
+  bottom: 250px;
+  left: 670px;
+}
+
+.ad {
+  background-color: #ffd200;
+  height: 40px;
+}
+
+.banner-progress {
+  position: relative;
+  bottom: 60px;
+  left: 520px;
+}
+
+.banner-info-container {
+  position: relative;
+  bottom: 60px;
+  left: 10px;
+}
+
+.text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn-container {
+  width: 720px;
+  height: 101px;
+  margin: 10px auto;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  padding: 18px;
+}
+
+.white {
+  background-color: white;
+}
+
+.box-small {
+  width: 226px;
+  height: 60px;
+  margin: auto 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.box-first {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.box-mid {
+  border-radius: 0;
+}
+
+.box-end {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.gray {
+  background-color: #eee;
 }
