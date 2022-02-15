@@ -4,54 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>홈 | 카카오페이지</title>
 </head>
 <body>
     <header>
-        <div style="display: flex;">
-            <div>
-                <h1>kakaopage</h1>
+        <div class="container">
+            <div class="main-header">
+                    <h1>
+                        <img src="/images/logo-kakaopage.svg" alt="kakaopage">
+                    </h1>
+                <nav class="main-nav">
+                    <div class="search-bar">
+                        <form id="search-form">
+                            <input type="text">
+                        </form>
+                        <button class="search-btn" type="submit" form="search-form">
+                            <img src="/images/btn_search.png" alt="🔍">
+                        </button>
+                    </div>
+                    <div class="main-nav__stage">
+                        <a href="">
+                            <img src="/images/pc-logo-stage.svg" alt="STAGE">
+                        </a>
+                    </div>
+                    <div class="main-nav__item">
+                        <a href="">캐시충전</a>
+                        <span>|</span>
+                        <a href="">로그인</a>
+                    </div>
+                </nav>
             </div>
-            <div>
-                <form>
-                    <input type="text">
-                    <button type="submit">🔍</button>
-                </form>
-            </div>
-            <div>
-                <a href="">STAGE</a>
-                <a href="">캐시충전</a>
-                <span>|</span>
-                <a href="">로그인</a>
-            </div>
+            <nav>
+                <ul class="menu-nav">
+                    <li class="menu-nav__item">
+                        <a href="">
+                            <img src="/images/menu/menu_home.svg" alt="홈">
+                        </a>
+                    </li>
+                    <li class="menu-nav__item menu-nav__item--selected">
+                        <a href="">
+                            <img src="/images/menu/menu_toon.svg" alt="웹툰">
+                        </a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="">
+                            <img src="/images/menu/menu_novel.svg" alt="웹소설">
+                        </a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="">
+                            <img src="/images/menu/menu_vod.svg" alt="영화">
+                        </a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="">
+                            <img src="/images/menu/menu_broadcast.svg" alt="방송">
+                        </a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="">
+                            <img src="/images/menu/menu_book.svg" alt="책">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul style="display: flex;">
-                <li>홈</li>
-                <li>웹툰</li>
-                <li>웹소설</li>
-                <li>영화</li>
-                <li>방송</li>
-                <li>책</li>
-            </ul>
-        </nav>
     </header>
-    
+    <main>
+        <div class="container">
+            main
+        </div>
+    </main>
     <footer>
-        <div>
+        <div class="container">
             <div>
-                <a href="">회사소개</a>
-                <a href="">이용약관</a>
-                <a href="">개인정보처리방침</a>
-                <a href="">청소년보호정책</a>
-                <a href="">공지사항</a>
+                <div>
+                    <a href="">회사소개</a>
+                    <a href="">이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">청소년보호정책</a>
+                    <a href="">공지사항</a>
+                </div>
+                <div>
+                    <a href="">(주)카카오엔터네이먼트 사업자 정보</a>
+                    <span>|</span>
+                    <a href="">사업자 정보 확인</a>
+                </div>
+                <span>ⓒ Kakao Entertainment Corp.</span>
             </div>
-            <div>
-                <a href="">(주)카카오엔터네이먼트 사업자 정보</a>
-                <span>|</span>
-                <a href="">사업자 정보 확인</a>
-            </div>
-            <span>ⓒ Kakao Entertainment Corp.</span>
         </div>
     </footer>
 </body>

@@ -44,3 +44,16 @@ table {
 input {
     border: none;
 }
+a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-nav {
+    
+}
