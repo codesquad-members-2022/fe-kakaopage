@@ -1,7 +1,15 @@
 @charset "utf-8";
+:root {
+  --main-bg-color: #fff;
+  --second-bg-color: #f5f3f3;
+  --identity-color: #fecc2e;
+  --header-border-color: #DFDFDF;
+  --main-text-color : #000;
+  --second-text-color: #cfcfcf;
+}
 
 body {
-  background-color: #f5f3f3;
+  background-color: var(--second-bg-color);
 }
 
 .l-center {
@@ -29,4 +37,5 @@ body {
   justify-content: space-around;
   height: 30px;
   font-weight: 500;
+  background-color: var(--main-bg-color);
 }
