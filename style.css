@@ -1,35 +1,59 @@
 @import "reset.css";
 
 body {
-  margin: 50px;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
+  background-color: #fdd578;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  width: 500px;
 }
 
 header {
+  width: 100%;
+  background-color: snow;
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  padding-top: 10px;
 }
 
-.header_title,
-.header_contents {
-  flex: none;
+.header_contents,
+.header_user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-.header_contents {
+.header_user {
   margin-left: auto;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  width: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav span {
+  flex: 1 1 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
 }
-
-section {
-  margin: 10px;
+main section {
+  padding: 10px;
+  background-color: snow;
+  margin-top: 10px;
+  border-radius: 0.5rem;
 }
 
 footer {
   margin-top: auto;
+  margin-bottom: 1rem;
 }
