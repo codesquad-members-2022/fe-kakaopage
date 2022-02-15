@@ -277,11 +277,47 @@
   color: #f1f1f1;
 }
 .card__info .info-user {
-  color: #808e9b;
+  color: #999999;
 }
 .card__info .info-user i {
   margin-right: 3px;
 }
 .card__info .info-user span {
   font-size: 12px;
+}
+
+.contents-bigCard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bigCard {
+  width: 50%;
+  padding: 5px;
+}
+.bigCard .info-title {
+  font-size: 18px;
+}
+.bigCard .info-event,
+.info-category,
+.info-users {
+  font-size: 12px;
+}
+.bigCard .banner__message {
+  font-size: 12px;
+}
+.contents-bigCard .main__main-banner {
+  height: 100%;
+}
+
+.contents-bigCard .main__main-banner .banner__imgBox {
+  height: 90%;
+}
+.bigCard .main__main-banner .banner__imgBox img {
+  border-radius: 10px 10px 0px 0px;
+}
+.bigCard .banner__message {
+  height: 10%;
+  border-radius: 0px 0px 10px 10px;
 }
