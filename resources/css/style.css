@@ -94,8 +94,41 @@ header {
 }
 
 .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 720px;
     height: 35%;
+    margin: 0 auto;
+}
+
+.header-nav__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 720px;
+    height: 100%;
+}
+
+.header-nav__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 33px;
+    padding-right: 26px;
+    font-size: 20px;
+}
+
+.header-nav__item--selected {
+    border-bottom: 3px solid #ffd200;
+}
+
+.header-nav__item > a {
+    color: black;
+}
+
+.header-nav__item > img {
+    width: 30px;
 }
 
 main {
