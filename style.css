@@ -2,11 +2,29 @@
   text-align: center;
   font-family: 'Hanna', sans-serif;
   color: #000;
+  box-sizing: border-box;
 }
 
 #wrapper {
   max-width: 660px;
   margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 660px;
+  z-index: 1;
+  background-color: rgb(227, 241, 253);
+}
+
+main {
+  padding-top: 165px;
+  left: 0;
+  right: 0;
+  background-color: white;
 }
 
 .firstHeader {
@@ -74,11 +92,8 @@ form {
   background: #f1c164;
 }
 
-.headerButton:hover {
-  background: #ff5722;
-}
-
-.navUlButton {
+.navUlButton,
+.menuBarTag {
   display: flex;
   justify-content: center;
   margin-block-start: 0px;
@@ -86,7 +101,10 @@ form {
   padding-inline-start: 0px;
 }
 
-.ulButton {
+.menuBarTag {
+  background-color: rgb(227, 241, 253);
+}
+.navUlButton button {
   width: 16.6666667%;
   height: 30px;
   margin: 10px;
@@ -95,11 +113,26 @@ form {
   background: #f1c164;
 }
 
-img {
-  border-radius: 12px 12px 12px 12px;
+.menuBarTag button {
+  width: 12.5%;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 25px 25px 25px 25px;
+  background: #f1c164;
 }
 
-.firstSection {
+.navUlButton button:hover,
+.menuBarTag button:hover,
+.headerButton:hover {
+  background: #ff5722;
+}
+
+img {
+  border-radius: 15px 15px 15px 15px;
+}
+
+.imageSection {
   position: relative;
   margin-top: 10px;
 }
@@ -143,59 +176,82 @@ img {
 
 .secondSection {
   display: flex;
-  justify-content: center;
-  background-color: aqua;
+  background-color: rgb(227, 241, 253);
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 5px;
   margin-top: 15px;
 }
 
-.secondSection span {
-  width: 33%;
-  height: 40px;
-  margin-top: 20px;
-  font-size: larger;
-  font-weight: bolder;
-}
-
-.thirdSection {
+.secondSection article {
+  width: 30%;
+  height: 60px;
+  margin: 3px;
+  font-weight: bold;
+  border: 2px solid white;
   display: flex;
-  padding: 5px;
-  flex-direction: row;
   flex-wrap: wrap;
-  background-color: aquamarine;
-  margin-top: 20px;
-  padding-left: 20px;
+  justify-content: center;
 }
 
-.thirdSection span {
+.secondSection article span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondSection article div {
+  position: relative;
+  top: 17px;
+  left: 7px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #f1c164;
+  height: 25px;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.moreContent {
+  text-align: right;
+  padding-top: 10px;
+}
+
+.sectionTitle,
+.moreContent {
   width: 50%;
   height: auto;
   font-size: larger;
   font-weight: bolder;
 }
 
-.waitWebtoon {
-  text-align: left;
-  margin-bottom: 10px;
+.thirdSection,
+.fourthSection {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(227, 241, 253);
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
-.moreContent {
-  text-align: right;
-}
-
-.firstWebtoon,
-.secondWebtoon,
-.thirdWebtoon,
-.fourthWebtoon {
+.firstContents,
+.secondContents,
+.thirdContents,
+.fourthContents {
   width: 100%;
   text-align: left;
   position: relative;
 }
 
-.firstWebtoon span,
-.secondWebtoon span,
-.thirdWebtoon span,
-.fourthWebtoon span {
+.firstContents span,
+.secondContents span,
+.thirdContents span,
+.fourthContents span {
   position: absolute;
   top: 0px;
   width: 0%;
@@ -203,16 +259,118 @@ img {
   left: 0px;
 }
 
-.information {
+.infoContents {
   position: absolute;
-  top: 15px;
-  left: 20%;
+  top: 10px;
+  left: 22%;
   font-weight: bolder;
   padding: 3px;
 }
 
-.information > div:nth-child(1),
-.information > div:nth-child(2),
-.information > div:nth-child(3) {
+.infoContents > div:nth-child(1) {
   text-align: left;
+  margin-left: 28px;
+  margin-bottom: 3px;
+}
+
+.infoContents > div:nth-child(2),
+.infoContents > div:nth-child(3) {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.infoContents span,
+.infoContents span,
+.infoContents span {
+  color: red;
+}
+
+.rankingSection {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(227, 241, 253);
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.ranking1st,
+.ranking2st,
+.ranking3st {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding-left: 30px;
+}
+
+.rankingNum {
+  position: absolute;
+  left: 0px;
+  top: 33px;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: black;
+  margin-right: 20px;
+}
+
+.ranking1st .timeIcon,
+.ranking2st .timeIcon,
+.ranking3st .timeIcon {
+  position: absolute;
+  top: 0px;
+  width: 0%;
+  font-size: 18px;
+  left: 30px;
+}
+
+.infoRanking {
+  position: absolute;
+  top: 15px;
+  left: 21%;
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.infoRanking > div:nth-child(1),
+.infoRanking > div:nth-child(2) {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.infoRanking > div:nth-child(3) {
+  text-align: left;
+  margin-bottom: 3px;
+  margin-top: 20px;
+}
+
+.upIcon {
+  color: blue;
+  padding-right: 5px;
+}
+
+.ranking1st .infoRanking .changeRanking {
+  position: absolute;
+  top: 12px;
+  left: 450px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: gray;
+}
+
+.ranking2st .infoRanking .changeRanking,
+.ranking3st .infoRanking .changeRanking {
+  position: absolute;
+  top: 25px;
+  left: 450px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.ranking2st .infoRanking .changeRanking {
+  color: red;
+}
+
+.ranking3st .infoRanking .changeRanking {
+  color: blue;
 }
