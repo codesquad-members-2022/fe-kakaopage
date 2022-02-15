@@ -11,7 +11,8 @@ header{
     height: 80px;
     position: fixed;
     top: 0;
-    left: 0; 
+    left: 0;
+    z-index: 1000; 
 }
 
 .header__container{
@@ -51,6 +52,7 @@ header{
     position: fixed;
     top: 80px;
     left: 0; 
+    z-index: 1000;
 }
 
 .tab__container {
