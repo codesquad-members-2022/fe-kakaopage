@@ -7,44 +7,64 @@
 a { text-decoration:none}
 
 body{
-    background:#999;
+    background:#ddd;
 }
 
 /* ===============header=============== */
 
 .header{
     width:100%;
+    height:150px;
     background:#fff;
+    /* position:fixed; */
+    top:0;
+    z-index:20;
 }
 
 .header_topbar{
     width:720px;
+    height:80px;
     margin:0 auto;
     display: flex;
     justify-content: space-between;
 }
-.navLeft{
-    margin-top:4px;
-}
-.navLeft h1 a{
-    color:black;
+
+.kakaologo img{
+    margin-top:30px;
 }
 
-.navRight{
+.header_nav{
     height:30px;
     display:flex;
-    margin-top:10px;
+    margin-top:30px;
 }
-.navRight a {
-    color:black;
+
+.header_search{
+    width:150px;
+    right:50px;
+    position:relative;
 }
-.navRight input{
-    height:25px;
-    margin-top:3px;
-    margin-right: 10px;
-    border-radius: 20px;
-    text-indent: 10px;
+
+.header_search input{
+    border:1px solid #ddd;
+    border-radius:20px;
+    width:180px;
+    height:35px;
+    text-indent:10px;
 }
+
+.header_search img{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:8px;
+    right:-20px;
+}
+
+.header_stage{
+    margin-right:20px;
+}
+
 .stage{
     font-weight: bold;
     margin-right:15px;
@@ -62,88 +82,106 @@ body{
 .lastbtn{
     margin-right:0px;
 }
-.category{
+
+
+.header_category{
     width:720px;
+    height:70px;
     margin:0 auto;
 }
-.category ul {
+.header_category ul {
     display: flex;
     justify-content: space-around;
     margin-top:30px;
     margin-bottom:10px;
     padding-bottom:20px;
 }
-.category ul li a{
-    color:black;
-    font-size:20px;
+.header_category ul li{
+    padding:0px 30px 10px 30px;
 }
 
-.sub-active{
-    border-bottom:yellow ;
+.category_active{
+    border-bottom:5px solid #ffe812 ;
 }
 
-
-/* ===============main=============== */
-.subcategory{
+/* ===============maincategory=============== */
+.main_category{
     width:720px;
     height:70px;
+    margin:10px auto;
     background:#fff;
-    margin:0 auto;
-   
+}
+.main_category ul{
+    display:flex;
+    justify-content:space-around;
 }
 
-.subcategory ul {
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-.subcategory ul li a{
+.main_category ul li a{
     color:#ddd;
     font-size:20px;
     line-height: 70px;
 }
 
-.sub-active{
+.main_category ul .sub-active a{
     color:#000;
+    font-weight:500;
 }
 
 /* ===============slide=============== */
 .slideshow{
     width:720px;
     margin:10px auto;
-    clear: n;
     position:relative;
 }
 
-.slide{
+.slideshow_slide{
     width:720px;
     height:450px;
-    background:#ddd;
+    background-image:url(img/roadofmoney.jpg);
+    background-size: cover;
     display:flex;
-    justify-content: space-between;
+    /* justify-content:space-between; */
     align-items:flex-end;
-    
-}
-.text{
-    margin-left:20px;
-    margin-bottom:20px;
-}
-.numbertext{
-    margin-right:20px;
-    margin-bottom:20px;
-    font-size:17px;
 }
 
-.slide-info{
+.slideshow_text{
+    /* display:flex; */
+    /* justify-content:flex-end; */
+    /* margin-left:20px; */
+    margin-bottom:20px;
+    margin-left:20px;
+    color:#fff;
+}
+
+
+.slideshow-press{
+    width:720px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+}
+.slideshow-icon{
+    display:flex;
+}
+.slideshow-icon p{
+    margin-right:10px;
+}
+
+.slideshow_numbertext{
+    margin-right:40px;
+    /* margin-bottom:20px; */
+    font-size:20px;
+}
+
+.slideshow-info{
     width:720px;
     height:40px;
     text-align:center;
     line-height: 40px;
-    background:yellow;
+    background:#ffe812;
 }
 
-.prev, .next {
+.slideshow-prev, .slideshow-next {
     width: 40px;
     height:40px;
     border-radius: 50%;
@@ -158,7 +196,7 @@ body{
     font-size:18px;
 }
 
-  .next {
+  .slideshow-next {
     right: 0;
     margin-right:20px;    
 }
@@ -171,7 +209,17 @@ body{
 }
 .underline{
     border-bottom: 1px solid #ddd;
+
 }
+
+/* .weekend_check{
+    width:40px;
+    height:40px;
+    background-image:url(img/circle.png);
+    background-size:cover;
+    text-align:center;
+    line-height:70px;
+} */
 
 .all-web{
     display:flex;
@@ -179,23 +227,34 @@ body{
     line-height: 70px;
     font-size:20px;
     color:#ddd;
+    
 }
 
 .all-web .left{
     display: flex;
-    margin-left:10px;
+    margin-left:20px;
+    cursor:pointer;
 }
 
-.all-web a, .right select{
-    font-size:20px;
-    padding-left:10px;
-    padding-right:10px;
-    color:#ddd;
+.all-web .left p{
+    margin-right:10px;
 }
+
+.all-web-check{
+    font-weight:bold;
+    color:#333;
+}
+
 .right{
     margin-right:20px;
     color:#999;
     border:#ddd;
+    display:flex;
+    cursor:pointer;
+}
+
+.right p:first-child {
+    margin-right:10px;
 }
 
 /* ===============webtoon-list=============== */
@@ -213,7 +272,8 @@ body{
 .webtoon-image{
     width:120px;
     height:120px;
-    background:pink;
+    background-image:url(img/pic1.png);
+    background-size:contain;
     border-radius:10px 10px 0px 0px;
 }
 .webtoon-rank{
@@ -223,11 +283,17 @@ body{
     background:#000;
     display:flex;
     justify-content:space-between;
+    line-height:30px;
 }
 .webtoon-rank span{
     margin:5px 5px 5px 5px;
     color:#fff;
 }
+
+.webtoon-rank .webtoon-rank_emit{
+    color:#ffe812
+}
+
 .webtoon-title{
     margin-top:10px;
     margin-bottom:10px;
@@ -237,13 +303,30 @@ body{
     justify-content:flex-start;
     color:#999;
 }
-
+.read_count{
+    margin-left:3px;
+    font-size:14px;
+    color:#999;
+}
 .kakao-app{
     width:720px;
     height:70px;
-    background:yellow;
-    margin:10px auto;
+    background:#ffe812;
+    margin:10px auto 0;
     text-align:center;
     line-height:70px;
     font-size:20px;
+}
+
+.footer{
+    width:720px;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+    color:#999;
+    font-size:14px;
+}
+
+.ceo{
+    margin:15px 0px 15px 0px;
 }
