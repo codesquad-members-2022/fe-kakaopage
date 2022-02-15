@@ -2,6 +2,7 @@
   width: 720px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .image-box__upload_webtoon {
@@ -13,4 +14,51 @@
   line-height: 40px;
   text-align: center;
   background-color: #ffd200;
+}
+
+.image-box__name {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.image-box__event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: 400px;
+  left: 20px;
+}
+.image-box__event div {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-box__event div span {
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.image-box__leftbutton {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+
+.image-box__rightbutton {
+  position: absolute;
+  top: 200px;
+  left: 650px;
+}
+.image-box__page-info {
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 410px;
+  left: 660px;
 }

@@ -19,4 +19,23 @@
 }
 .main-content__content__menu__left {
   margin-left: 15px;
+  display: flex;
+}
+.main-content__content__menu__text {
+  margin: 0 3px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.main-content__content__menu__webtoonbox {
+  display: flex;
+  align-items: center;
+}
+.main-content__content__menu__sortingbox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.main-content__content__main {
+  background-color: white;
 }
