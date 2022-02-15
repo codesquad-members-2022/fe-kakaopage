@@ -51,7 +51,7 @@
 
 - session vs artice 차이
 
-❓ css
+❓ css convetion
 
 - ✅ naming -> convention 정리
 - naming: `main__carousel__button` vs `main__carousel > button`
@@ -65,6 +65,8 @@ main__carousel__img-container__text-container
 carousel__img-container
 carousel__text-container
 ```
+
+❓ flexbox 남용?
 
 # html 구조짜기 및 간단한 네이밍
 

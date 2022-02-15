@@ -13,3 +13,20 @@
 .l-header {
   --yellow: #fbbc17;
 }
+
+.c-category {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-category__index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-category__index:hover {
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 @import './carousel.css';
 @import './event.css';
 @import './webtoons.css';
+@import './category.css';
 
 .l-main {
   background-color: var(--main-grey);
