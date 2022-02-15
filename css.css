@@ -217,3 +217,7 @@ main {
     background-color: var(--main-color);
     font-size: 20px;
 }
+
+.today-banner button:hover {
+    cursor: pointer;
+}
