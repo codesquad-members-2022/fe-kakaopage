@@ -12,6 +12,11 @@
   display: flex;
   justify-content: space-between;
 }
+.header__nav ul {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+}
 .header__title__search {
   border: 1px solid lightgray;
   border-radius: 18px;
