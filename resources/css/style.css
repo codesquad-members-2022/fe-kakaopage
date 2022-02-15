@@ -131,6 +131,19 @@ header {
     width: 30px;
 }
 
+.header-nav__badge {
+    width: 7px;
+    padding-left: 5px;
+    padding-bottom: 30px;
+}
+
+.header-nav__badge--icon {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffd200;
+}
+
 main {
     display: flex;
     width: 720px;
