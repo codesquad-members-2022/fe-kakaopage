@@ -39,11 +39,12 @@ h1 {
   min-width: 0;
   display: block;
   margin: 15px;
+  margin-top: 12px;
 }
 
 form {
   margin: 15px;
-  margin-top: 24px;
+  margin-top: 23px;
 }
 
 .searchText,
@@ -86,7 +87,7 @@ form {
   margin: 10px;
   width: 66px;
   height: 30px;
-  margin-top: 25px;
+  margin-top: 24px;
   cursor: pointer;
   border-radius: 25px 25px 25px 25px;
   background: #f1c164;
@@ -168,13 +169,13 @@ img {
   position: absolute;
   top: 411px;
   background-color: #f1c164;
-  padding: 4px;
+  padding: 8px;
   font-weight: bold;
   box-sizing: border-box;
   width: 660px;
 }
 
-.secondSection {
+.menuSection {
   display: flex;
   background-color: rgb(227, 241, 253);
   flex-direction: row;
@@ -183,8 +184,8 @@ img {
   margin-top: 15px;
 }
 
-.secondSection article {
-  width: 30%;
+.menuSection article {
+  width: 32.4%;
   height: 60px;
   margin: 3px;
   font-weight: bold;
@@ -194,19 +195,42 @@ img {
   justify-content: center;
 }
 
-.secondSection article span {
+.menuSection article span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.secondSection article div {
+.menuSection article div {
   position: relative;
   top: 17px;
   left: 7px;
   border-radius: 10px 10px 10px 10px;
   background-color: #f1c164;
   height: 25px;
+}
+
+.advert {
+  display: flex;
+  background-color: rgb(227, 241, 253);
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.back {
+  position: absolute;
+  left: 6%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.soon {
+  position: absolute;
+  right: 6%;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .sectionTitle {
@@ -228,8 +252,63 @@ img {
   font-weight: bolder;
 }
 
-.thirdSection,
-.fourthSection {
+.dramaTop,
+.boyTop {
+  width: 20%;
+  text-align: left;
+  position: relative;
+}
+
+.dramaTop > span:nth-child(2),
+.boyTop > span:nth-child(2) {
+  position: absolute;
+  top: 89px;
+  width: 0%;
+  font-size: 15px;
+  left: 5px;
+  color: yellow;
+  z-index: 1;
+}
+
+.dramaTop > span:nth-child(3),
+.boyTop > span:nth-child(3) {
+  position: absolute;
+  top: 92px;
+  width: 0%;
+  font-size: 18px;
+  left: 24px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: yellow;
+  z-index: 1;
+}
+
+.dramaTop > span:nth-child(4),
+.boyTop > span:nth-child(4) {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  width: 90px;
+  text-align: right;
+  background-color: #000;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.infoTop div {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.infoTop span {
+  color: red;
+}
+
+.dramaSection,
+.boySection,
+.waitWebtoonSection,
+.waitNovelSection,
+.rankingSection {
   display: flex;
   padding: 5px;
   flex-direction: row;
@@ -239,19 +318,13 @@ img {
   padding-left: 20px;
 }
 
-.firstContents,
-.secondContents,
-.thirdContents,
-.fourthContents {
+.waitContents {
   width: 100%;
   text-align: left;
   position: relative;
 }
 
-.firstContents span,
-.secondContents span,
-.thirdContents span,
-.fourthContents span {
+.waitContents span {
   position: absolute;
   top: 0px;
   width: 0%;
@@ -283,16 +356,6 @@ img {
 .infoContents span,
 .infoContents span {
   color: red;
-}
-
-.rankingSection {
-  display: flex;
-  padding: 5px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: rgb(227, 241, 253);
-  margin-top: 20px;
-  padding-left: 20px;
 }
 
 .ranking1st,
@@ -344,7 +407,7 @@ img {
   margin-top: 20px;
 }
 
-.upIcon {
+.NewIcon {
   color: blue;
   padding-right: 5px;
 }
