@@ -17,13 +17,15 @@
     box-sizing: border-box;
     font-size: 100%;
 }
+/*1. 헤더 세팅*/
 .header{
     width: 100vw;
-    background-color: var(--main-white);
+    background-color: orange;
 }
 .head{
     display: flex;
-    flex-basis: 0; /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
+    /* flex-basis: 0;  */
+    /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
     margin: 0 20%;
     /* padding: 40px; */
     background-color: green;
@@ -35,37 +37,52 @@
     width: var(--width);
     background-color: pink;
 }
-
+/*검색창 세팅*/
 .search{
+   display: flex;
    background-color: red;
-   margin-left: 100px;
+   margin-left: 200px;
+   padding-left: 100px;
+   position: relative;
 }
 
-.searchbar{
-    border: 3px;
+.searchborder{
+    position: relative;
+    width: 200px;
+    height: 30px;
     border-radius: 15px;
     border-color: #999999;
     border: 1px solid;
 }
-
+#searchInput{
+    margin-left: 10px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+}
+.search i{
+    position: absolute;
+    margin-left: 170px;
+    padding-top: 8px;
+    color: #898989;
+}
+/*stage 세팅*/
 .stage{
-    margin-left: 70px;
-    padding-left: 100px;
+    padding-left: 30px;
     padding-right: 0;
-    
 }
 
 .stage img{
-    width: 70%;
+    width: 60%;
 }
-
+/*로그인 세팅*/
 .user{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: var(--largefont);
     color: #999999;
     border: 0;
-    padding-left: 0;
+    padding-left:0; margin-left:0;
 }
 
 body{
