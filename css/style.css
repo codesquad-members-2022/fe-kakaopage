@@ -91,8 +91,32 @@ a:hover {
   font-size: 16px;
 }
 
+.btn-nav {
+  font-size: 20px;
+  padding: 0 40px 0 40px;
+}
+
 .btn-gray {
   background-color: white;
   font-weight: bold;
   color: gray;
+}
+
+.btn-black {
+  background-color: white;
+  font-weight: bold;
+  color: black;
+}
+
+.category {
+  margin: 0 auto;
+}
+
+.nav {
+  padding-left: 0;
+  height: 69px;
+}
+
+.nav-btn-container {
+  margin: auto 0;
 }
