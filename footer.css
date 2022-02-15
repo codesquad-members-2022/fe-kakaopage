@@ -1,8 +1,8 @@
 footer {
-    display: flex;
-    justify-content: space-between;
     width: 720px;
     height: 130px;
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
@@ -17,9 +17,9 @@ footer {
 }
 
 .footer__menu .footer__menu_link {
-    color: #bdbdbd;
     cursor: pointer;
     text-decoration: none;
+    color: #bdbdbd;
 }
 
 .footer__business {
