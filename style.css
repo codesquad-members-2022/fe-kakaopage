@@ -21,6 +21,8 @@ body{
 h1{
     font-size: 32px;
     font-weight: 350;
+    /* position: absolute;
+    right: 20%; */
 }
 .total{
     background-color: var(--main-white);
@@ -34,46 +36,53 @@ h1{
     width: 100%;
 }
 
-.searchBar input{
-    width: 300px;
-}
 
+.searchBar input{
+    top: 60px;
+    left: 45%;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    border: 3px;
+    border-radius: 15px;
+    border-color: #CFCFCF;
+    border: 1px solid;
+    margin: 0;
+}
+.stage{
+    width: 90px;
+    position: relative;
+    bottom: 10px;
+    /* left: 40%; */
+}
 .head__user{
     display: flex;
     list-style: none;
     cursor: pointer; 
     font-size: 22px;
     color: #999999;
+    width: 1000px;
 }
 .head__user li{
-    display: inline-block;
     justify-content: space-between;
-    width: 100px;
-    padding-right: 0;
-    padding-left: 0;
+    position: relative;
+    top: 20px;
 }
 .head__user a{
     color: #999999;
 }
 
+#bar{
+    width: 20px;
+}
+
 a{
     text-decoration-line: none;
-}
-
-.Search{
-    margin-left:250px;
-}
-
-.searchBar input{
-    width: 200px;
-    height: 30px;
-    border: 3px;
-    border-radius: 10px;
-    border: 1px solid;
+    margin:0;
 }
 
 .navbar{
-    padding: 30px 0 10px 0;
+    padding: 20px 0 10px 0;
 }
 .navbar__menu{
     display: flex;
@@ -100,4 +109,10 @@ a{
 
 .mainImage{
     height: 600px;
+}
+
+.main1{
+    background-color: var(--main-white);
+    margin-top: 15px;
+    height: 100px;
 }
