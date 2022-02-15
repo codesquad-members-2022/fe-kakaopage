@@ -9,10 +9,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   list-style: none;
 }
-.topHeader {
+.header {
   background-color: white;
   color: var(--basic-fontColor);
   display: flex;
@@ -20,20 +20,21 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  position: relative;
+  position: fixed;
 }
-.pageName {
+.header__top {
   display: flex;
   flex-direction: row;
 }
 
-.page__title {
+.header__top--logo {
   font-size: 30px;
-  color: black;
-  padding: 10px;
+  font-weight: bolder;
+  color: #3e320b;
+  padding: 25px;
 }
 
-.login {
+.header__top--login {
   display: flex;
   position: absolute;
   padding-right: 15px;
@@ -54,12 +55,6 @@ body {
   border-radius: 10px;
   border: 1px solid grey;
 }
-/* .pageName > form {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  justify-content: flex-end;
-} */
 
 .header__nav {
   padding-top: 5px;
@@ -73,16 +68,11 @@ body {
   width: var(--contents-width);
 }
 
-/* .header__nav--ul > li {
-  padding-left: 40px;
-  padding-right: 40px;
-} */
-
 .recommand__section {
+  margin-top: 110px; /* header을 position fixed로 바꾼후 이부분을 하드 코딩했다. 어떻게 해결할 수 있을까? */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .recommand__nav {
@@ -109,7 +99,7 @@ body {
 }
 
 .recommand__description {
-  background-color: yellow;
+  background-color: #f1c73d;
   display: flex;
   justify-content: center;
   padding-top: 5px;
@@ -148,16 +138,18 @@ body {
   border-bottom: 0.5px solid lightgrey;
 }
 
+/*네이밍 여기 다시해야함*/
 .sort {
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
   width: 130px;
 }
-
+/*네이밍 여기 다시해야함*/
 .all {
   padding-right: 20px;
 }
+
 .main__cartoonZone {
   display: flex;
   flex-wrap: wrap;
@@ -172,11 +164,37 @@ body {
   align-items: flex-start;
   margin: 20px 10px 20px 10px;
 }
-/* .main__cartoonZone--cartton {
-} */
+
+.main__cartoonZone--imageWrap {
+  position: relative;
+}
+
 .main__cartoonZone--image {
   border-radius: 15px;
 }
+
+.main__cartoonZone--imageTag {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  width: 150px; /*왜 inherit 했는데 부모 클래스인 imageWrap의 width를 따라가지 않는걸까?*/
+  border-radius: 0px 0px 15px 15px;
+  bottom: 0%;
+}
+
+.main__cartoonZone--tagLeftFont {
+  color: goldenrod;
+  font-weight: bold;
+  padding: 7px 10px 7px 10px;
+}
+
+.main__cartoonZone--tagRightFont {
+  font-weight: 550;
+  padding: 7px 10px 7px 10px;
+}
+
 .main__cartoonZone--info {
   padding: 10px 0px 10px 0px;
   color: black;
