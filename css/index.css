@@ -599,3 +599,41 @@ header {
 	background-image: url('../img/icons/icon_read_count.png');
 	margin-right: 3px;
 }
+
+/* Event Banner */
+
+.recommend-event .banner-container {
+	position: relative;
+}
+
+.recommend-event .banner-container img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.recommend-event .banner-count {
+	position: absolute;
+	bottom: 10%;
+	left: 8%;
+	color: #fff;
+	font-size: 1.125rem;
+	opacity: 0.6;
+}
+
+.recommend-event .banner-btn-group button {
+	width: 10px;
+	height: 16px;
+	top: auto;
+	bottom: 11%;
+	transform: none;
+}
+
+.recommend-event .back {
+	left: 5%;
+	background-image: url('../img/icons/icon_topBanner_prev.png');
+}
+
+.recommend-event .next {
+	left: 15%;
+	background-image: url('../img/icons/icon_topBanner_next.png');
+}
