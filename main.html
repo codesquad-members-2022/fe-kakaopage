@@ -6,40 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>홈 | 카카오페이지</title>
+    <script src="https://kit.fontawesome.com/1e626ba433.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="main_header">
-            <div class="main_header_title">
-                <h1>kakaopage</h1>
-            </div>
-            <div class="main_header_search">
-                <form>
-                    <input type="text"/>
-                    <input type="submit"/>
-                </form>
-            </div>
-            <div class="main_header_login">
-                <form>
-                    <button class="main_header_login_stage"><a href="">STAGE</a></button>
-                    <button class="main_header_login_cash"><a href="">캐시충전</a></button>
-                    <button class="main_header_login_login"><a href="">로그인</a></button>
-                </form>
-            </div>
+    <header class="header">
+        <div class="title">
+            <h1><a href="">kakaopage</a></h1>
         </div>
-        <nav class="nav_genre">
-            <form>
-                <button><a href="">홈</a></button>
-                <button><a href="">웹툰</a></button>
-                <button><a href="">웹소설</a></button>
-                <button><a href="">영화</a></button>
-                <button><a href="">방송</a></button>
-                <button><a href="">책</a></button>
+        <form class="search-form">
+            <input class="search-form--input" type="text"/>
+            <button class="search-form--button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+        </form>
+        <div class="login-box">
+            <div class="stage">
+                <img class="stage-icon" src="stage.svg">
+                <img class="stage-tooltip" src="tooltip.svg">
+            </div>
+            <form class="login-form">
+                <button class="login-form--button cash"><a href="">캐시충전</a></button>
+                <button class="login-form--button"><a href="">로그인</a></button>
             </form>
-        </nav>
+        </div>
     </header>
-    <div class="main_slide"></div>
-    <nav class="nav_event"></nav>
-    <div class="main_free_comic"></div>
+    <nav class="nav__genre">
+        <button class="nav__genre--button now"><a href="">홈</a></button>
+        <button class="nav__genre--button timer"><a href="">웹툰·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+        <button class="nav__genre--button timer"><a href="">웹소설·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+        <button class="nav__genre--button"><a href="">영화</a><div class="new-alarm"></div></button>
+        <button class="nav__genre--button"><a href="">방송</a><div class="new-alarm"></div></button>
+        <button class="nav__genre--button"><a href="">책</a><div class="new-alarm"></div></button>
+    </nav>
 </body>
 </html>
