@@ -55,7 +55,16 @@
 
 - ✅ naming -> convention 정리
 - naming: `main__carousel__button` vs `main__carousel > button`
-- 1번 방식으로 하니가 class가 너무 길어지는데 2번 방식으로 하기
+- BEM 규칙을 적용하여 하위 요소는 클래스 이름에 포함하지 않도록 한다.
+- 깊이가 깊은 하위 요소를 표현하기에 BEM이 불편하다. 다른 방법론도 공부해봐야겠다.
+
+```css
+/* 기존 */
+main__carousel__img-container__text-container
+/* 수정 */
+carousel__img-container
+carousel__text-container
+```
 
 # html 구조짜기 및 간단한 네이밍
 
