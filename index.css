@@ -12,15 +12,6 @@ header{
     left: 0; 
 }
 
-.main-tab{
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 80px;
-    left: 0; 
-}
-
 .header__container{
     display:flex;
     justify-content: space-between;
@@ -51,19 +42,49 @@ header{
     padding: 5px 10px 5px 0px;
 }
 
-.main-tab__container {
-    width: 720px;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    align-items: center;
+.main-tab{
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 80px;
+    left: 0; 
 }
 
-.main-tab__container li {
+.tab__container {
+    background-color: white;
+    width: 720px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
+    height: 80px;
+}
+
+.main-tab__container {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.tab__container li {
     width: 100%;
     list-style: none;
     text-align: center;
+}
+
+.main-tab__container li {
     font-size: x-large;
     font-weight: 400;
+}
+
+.genre-tab__container li {
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+.contents {
+    margin-top: 167px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
