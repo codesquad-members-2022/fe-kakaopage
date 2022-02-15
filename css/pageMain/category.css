@@ -1,1 +1,19 @@
+.page-main-category {
+  font-size: 20px;
+}
 
+.page-main-category a {
+  color: #bbbbbb;
+}
+
+.page-main-category ul {
+  display: flex;
+  align-items: center;
+}
+
+.page-main-category li {
+  padding: 22px 0;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
