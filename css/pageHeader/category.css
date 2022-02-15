@@ -1,5 +1,7 @@
 .page-header-container:last-child {
   height: 70px;
+  width: 100%;
+  border-bottom: 1px #dfdfdf solid;
 }
 
 .page-header-category {
