@@ -637,3 +637,76 @@ header {
 	left: 15%;
 	background-image: url('../img/icons/icon_topBanner_next.png');
 }
+
+/* App Download Link */
+
+.contents.app-download-link {
+	font-size: 1.25rem;
+	letter-spacing: -2px;
+	text-align: center;
+	background-color: #FECC2E;
+}
+
+.contents.app-download-link span {
+	font-weight: 500;
+}
+
+/* Footer */
+
+footer {
+	position: relative;
+	margin: 55px 0;
+}
+
+footer * {
+	color: #bdbdbd;
+	font-size: 0.875rem;
+}
+
+.policy-list,
+.company-info {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.policy-list li:not(:last-child)::after {
+	content: '•';
+	display: inline-block;
+	margin: 0 8px;
+}
+
+.company-info details {
+	line-height: 2;
+	margin-bottom: 10px;
+}
+
+.company-info a {
+	text-decoration: underline;
+}
+
+.company-info a::before {
+	content: '';
+	position: relative;
+	top: 2px;
+	display: inline-block;
+	width: 1px;
+	height: 14px;
+	border-right: 1px solid #bdbdbd;
+	margin: 0 8px;
+}
+
+.footer-image-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.footer-image-container img {
+	width: 60px;
+}
+
+.footer-image-container p {
+	position: relative;
+	left: 5px;
+	font-size: 0.75rem;
+}
