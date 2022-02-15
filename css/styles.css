@@ -1,10 +1,15 @@
+/*components */
+@import "./components/nav-box.css";
+@import "./components/image-box.css";
+
 @import "reset.css";
 @import "header.css";
+@import "main.css";
 
 body {
   display: flex;
+  background-color: #eeeeee;
   margin: 0 auto;
-  width: 720px;
   height: 5000px;
   justify-content: center;
 }

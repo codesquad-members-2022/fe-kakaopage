@@ -1,0 +1,22 @@
+.main-content {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content__image-box {
+  margin-top: 10px;
+}
+.main-content__content__nav {
+  margin-top: 10px;
+}
+.main-content__content__menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  border-color: rgba(0, 0, 0, 0.048);
+}
+.main-content__content__menu__left {
+  margin-left: 15px;
+}

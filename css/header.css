@@ -1,10 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
 .screen-header {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  position: fixed;
+  justify-content: center;
 }
-
 .screen-header__header {
   display: flex;
   width: 720px;
@@ -42,6 +48,7 @@
 }
 .screen-header__nav {
   display: flex;
+  width: 720px;
   justify-content: space-between;
   margin-bottom: 20px;
 }

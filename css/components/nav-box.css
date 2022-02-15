@@ -1,0 +1,12 @@
+.nav-box {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 720px;
+  height: 70px;
+}
+.nav-box__text {
+  font-size: 22px;
+  font-weight: 600;
+}
