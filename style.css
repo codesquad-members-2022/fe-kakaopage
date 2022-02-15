@@ -139,3 +139,67 @@ a {
 	background-color: #FCBC19;
 	border-radius: 100%;
 }
+.slide {
+	display: flex;
+	margin-top : 10px;
+	width: 720px;
+	height: 480px;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-image: url("comic.png");
+	background-size: contain;
+}
+.slide > .slide--title {
+	margin: 0 20px 0;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+}
+.slide > .slide--info {
+	margin: 0 20px 0;
+	display: flex;
+	align-items: center;
+	height: 55px;
+}
+.slide > .slide--info > .info-event {
+	display: flex;
+	width: 55px;
+	height: 20px;
+	border: 2px solid #FCBC19;
+	border-radius: 7px;
+	font-weight: bold;
+	color: #FCBC19;
+	margin-right: 10px;
+	background-color: black;
+	justify-content: center;
+	align-items: center;
+}
+.slide > .slide--info > .info-genre {
+	color: white;
+	font-weight: bold;
+}
+.slide > .slide--info > .slide-index {
+	text-align-last: right;
+}
+.slide > .slide--event {
+	display: flex;
+	height: 40px;
+	background-color: #FCBC19;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+.main-event--form {
+	display: flex;
+	margin-top : 10px;
+	width: 720px;
+	height: 100px;
+	justify-content: space-around;
+}
+.main-event--form > .main-event--button {
+	border : none;
+	width: 220px;
+	height: 65px;
+	font-size: 18px;
+	font-weight: bold;
+}
