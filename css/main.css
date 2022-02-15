@@ -24,3 +24,57 @@ main {
 .sub-menu .active {
     color: #333;
 }
+
+.slide-cover {
+    height: 480px;
+    width: 700px;
+    position: relative;
+    color: #fff;
+}
+
+.slide-cover img {
+    width: 100%;
+    position: relative;
+}
+
+.slide-cover .title {
+    font-size: 1.7rem;
+}
+
+.slide-cover .title,
+.slide-cover .description {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.slide-cover .description {
+    font-size: 20px;
+}
+
+.slide-cover .event-name {
+    height: 40px;
+    background-color: #ffd200;
+    color: #3a3a3a;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.slide-cover-description {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.slide-cover .page {
+    position: absolute;
+    right: 25px;
+    bottom: 60px;
+    opacity: 0.6;
+}
