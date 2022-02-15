@@ -186,6 +186,7 @@
     width: 120px;
     height: 120px;
     margin: 0;
+    vertical-align: top;
 }
 
 .content__detail .content__detail_img {
