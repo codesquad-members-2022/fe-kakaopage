@@ -126,6 +126,18 @@
     border-bottom: 1px solid #f1f1f1;
 }
 
+.filter__left {
+    display: flex;
+    align-items: center;
+}
+
+.filter__separator {
+    width: 1px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #d9d9d9;
+}
+
 .filter .filter_button {
     background-color: #fff;
     border: none;
@@ -144,7 +156,7 @@
     margin-right: 10px;
 }
 
-.filter .filter__img {
+.filter .filter__left_img {
     margin-right: 5px;  
 }
 
