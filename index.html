@@ -3,21 +3,29 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/global.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/main.css" />
         <title>홈 | 카카오페이지</title>
     </head>
     <body>
         <header>
-            <h1 class="logo">kakaopage</h1>
-            <form class="search-form">
-                <input type="text" /><button type="submit">검색</button>
-            </form>
-            <div class="user-menu">
-                <a href="">STAGE</a>
-                <a href="">캐시충전</a>
-                <a href="">로그인</a>
+            <div class="group-flex logo-area wrap">
+                <h1 class="logo">kakaopage</h1>
+                <div class="user-menu group-flex">
+                    <form class="search-form user-menu-item">
+                        <input type="text" name="serarch-input" />
+                        <button type="submit">검색</button>
+                    </form>
+                    <div class="user-menu-item">
+                        <a href="">STAGE</a>
+                        <a href="">캐시충전</a>
+                        <a href="">로그인</a>
+                    </div>
+                </div>
             </div>
-            <nav>
-                <ul>
+            <nav class="wrap">
+                <ul class="group-flex">
                     <li>홈</li>
                     <li class="active">웹툰</li>
                     <li>웹소설</li>
@@ -27,195 +35,200 @@
                 </ul>
             </nav>
         </header>
+        <div class="contents-wrap">
+            <main class="wrap">
+                <ul class="webtoon-menu">
+                    <li class="active">홈</li>
+                    <li>요일연재</li>
+                    <li>웹툰</li>
+                    <li>소년</li>
+                    <li>드라마</li>
+                    <li>로맨스</li>
+                    <li>로판</li>
+                    <li>액션무협</li>
+                    <li>BL</li>
+                </ul>
 
-        <main>
-            <ul class="webtoon-menu">
-                <li class="active">홈</li>
-                <li>요일연재</li>
-                <li>웹툰</li>
-                <li>소년</li>
-                <li>드라마</li>
-                <li>로맨스</li>
-                <li>로판</li>
-                <li>액션무협</li>
-                <li>BL</li>
-            </ul>
-
-            <div class="slide-webtoon-cover">
-                <img src="" alt="웹툰 타이틀의 이미지" />
-                <div>
-                    <p>이미지타이틀</p>
+                <div class="slide-webtoon-cover">
+                    <img src="" alt="웹툰 타이틀의 이미지" />
                     <div>
+                        <p>이미지타이틀</p>
                         <div>
-                            <span>이벤트</span>
-                            <span>아이콘</span>
-                            <span>분류(카테고리)</span>
+                            <div>
+                                <span>이벤트</span>
+                                <span>아이콘</span>
+                                <span>분류(카테고리)</span>
+                            </div>
+                            <div>슬라이드 이미지 수</div>
                         </div>
-                        <div>슬라이드 이미지 수</div>
-                    </div>
-                    <div>현재이미지 관련 이벤트 이름</div>
-                </div>
-            </div>
-
-            <div class="category">
-                <div><span>오늘 UP</span><span>갯수</span></div>
-                <div><span>오늘 신작</span><span>갯수</span></div>
-                <div><span>오리지널</span><span>갯수</span></div>
-                <div>완결까지 정주행</div>
-                <div>독립운동가 웹툰</div>
-                <div><span>오늘 랭킹</span><span>순위</span></div>
-            </div>
-
-            <div class="slide-banner">
-                <div>왼쪽방향</div>
-                <div>작은배너</div>
-                <div>오른쪽방향</div>
-            </div>
-
-            <div class="weekday-serial-best">
-                <div class="section-header">
-                    <div>
-                        <h3>요일 연재 TOP</h3>
-                        <span>(갯수)</span>
-                    </div>
-                    <div>
-                        <span>웹툰</span>
-                        <span>웹소설</span>
+                        <div>현재이미지 관련 이벤트 이름</div>
                     </div>
                 </div>
 
-                <div class="week-list">
+                <div class="category">
+                    <div><span>오늘 UP</span><span>갯수</span></div>
+                    <div><span>오늘 신작</span><span>갯수</span></div>
+                    <div><span>오리지널</span><span>갯수</span></div>
+                    <div>완결까지 정주행</div>
+                    <div>독립운동가 웹툰</div>
+                    <div><span>오늘 랭킹</span><span>순위</span></div>
+                </div>
+
+                <div class="slide-banner">
+                    <div>왼쪽방향</div>
+                    <div>작은배너</div>
+                    <div>오른쪽방향</div>
+                </div>
+
+                <div class="weekday-serial-best">
+                    <div class="section-header">
+                        <div>
+                            <h3>요일 연재 TOP</h3>
+                            <span>(갯수)</span>
+                        </div>
+                        <div>
+                            <span>웹툰</span>
+                            <span>웹소설</span>
+                        </div>
+                    </div>
+
+                    <div class="week-list">
+                        <ol>
+                            <li>월</li>
+                            <li>화</li>
+                            <li>수</li>
+                            <li>목</li>
+                            <li>금</li>
+                            <li>토</li>
+                            <li>일</li>
+                            <li>완결</li>
+                        </ol>
+                    </div>
+
                     <ol>
-                        <li>월</li>
-                        <li>화</li>
-                        <li>수</li>
-                        <li>목</li>
-                        <li>금</li>
-                        <li>토</li>
-                        <li>일</li>
-                        <li>완결</li>
+                        <li>
+                            <!-- li는 6반 반복 -->
+                            <div>
+                                <img src="" alt="몇위 웹툰의 썸네일" />
+                                <div>
+                                    <span>몇위</span>
+                                    <span>아이콘</span>
+                                </div>
+                                <p>이미지에 해당하는 제목</p>
+                                <div>
+                                    <span>UP</span>
+                                    <span>아이콘</span>
+                                    <span>인원수</span>
+                                </div>
+                            </div>
+                        </li>
                     </ol>
                 </div>
 
-                <ol>
-                    <li>
-                        <!-- li는 6반 반복 -->
-                        <div>
-                            <img src="" alt="몇위 웹툰의 썸네일" />
-                            <div>
-                                <span>몇위</span>
-                                <span>아이콘</span>
-                            </div>
-                            <p>이미지에 해당하는 제목</p>
-                            <div>
-                                <span>UP</span>
-                                <span>아이콘</span>
-                                <span>인원수</span>
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="new-best">
-                <div class="section-header">
-                    <h3>기대신작 TOP</h3>
-                    <span>더보기></span>
-                </div>
-
-                <div>
-                    <img src="" />
-                    <p>이미지에 맞는 웹툰 제목</p>
-                    <div>
-                        <span>이벤트</span>
-                        <span>아이콘</span>
-                        <span>웹툰</span>
-                        <span>아이콘</span>
-                        <span>독자수</span>
+                <div class="new-best">
+                    <div class="section-header">
+                        <h3>기대신작 TOP</h3>
+                        <span>더보기></span>
                     </div>
-                    <p>웹툰 한 줄 설명</p>
-                </div>
-            </div>
 
-            <div class="genre-best">
-                <div class="section-header">
-                    <h3>로맨스 TOP</h3>
-                    <span>더보기 ></span>
-                </div>
-
-                <div class="genre-card">
-                    <!-- 5개 반복 -->
-                    <img src="" />
                     <div>
-                        <span>별</span>
-                        <span>평점</span>
-                        <span>아이콘</span>
-                    </div>
-                    <div>
-                        <p>웹툰 제목</p>
+                        <img src="" />
+                        <p>이미지에 맞는 웹툰 제목</p>
                         <div>
-                            <span>UP</span>
+                            <span>이벤트</span>
+                            <span>아이콘</span>
+                            <span>웹툰</span>
+                            <span>아이콘</span>
                             <span>독자수</span>
                         </div>
+                        <p>웹툰 한 줄 설명</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="daily-best">
-                <div class="section-header">
-                    <h3>일간 랭킹 TOP</h3>
-                    <span>더보기 ></span>
-                </div>
+                <div class="genre-best">
+                    <div class="section-header">
+                        <h3>로맨스 TOP</h3>
+                        <span>더보기 ></span>
+                    </div>
 
-                <ol>
-                    <li>
-                        <!--3개 반복  -->
+                    <div class="genre-card">
+                        <!-- 5개 반복 -->
+                        <img src="" />
                         <div>
-                            <div class="daily-best-card"><img src="" /></div>
+                            <span>별</span>
+                            <span>평점</span>
+                            <span>아이콘</span>
+                        </div>
+                        <div>
+                            <p>웹툰 제목</p>
                             <div>
-                                <p>흑막을 버리는 데 실패했다</p>
-                                <p>
-                                    아이콘,독자수 | 기다무웹툰 | 로판 |
-                                    ASSAM,쑹늉,지은향
-                                </p>
-                                <p>연재날짜</p>
+                                <span>UP</span>
+                                <span>독자수</span>
                             </div>
                         </div>
-                    </li>
-                </ol>
-            </div>
+                    </div>
+                </div>
 
-            <div class="recommend-event">
-                <div class="section-header">
-                    <h3>추천 이벤트</h3>
-                    <span>더보기 ></span>
+                <div class="daily-best">
+                    <div class="section-header">
+                        <h3>일간 랭킹 TOP</h3>
+                        <span>더보기 ></span>
+                    </div>
+
+                    <ol>
+                        <li>
+                            <!--3개 반복  -->
+                            <div>
+                                <div class="daily-best-card">
+                                    <img src="" />
+                                </div>
+                                <div>
+                                    <p>흑막을 버리는 데 실패했다</p>
+                                    <p>
+                                        아이콘,독자수 | 기다무웹툰 | 로판 |
+                                        ASSAM,쑹늉,지은향
+                                    </p>
+                                    <p>연재날짜</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="recommend-event">
+                    <div class="section-header">
+                        <h3>추천 이벤트</h3>
+                        <span>더보기 ></span>
+                    </div>
+
+                    <div>
+                        <img src="" />
+                        <p>슬라이미드 이미지 페이지 수</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="wrap">
+                <div>
+                    <p>카카오 페이지 앱으로 보기 ></p>
                 </div>
 
                 <div>
-                    <img src="" />
-                    <p>슬라이미드 이미지 페이지 수</p>
+                    <div>
+                        <p>
+                            회사소개 이용약관 개인정보처리방침 청소년 보호정책
+                            공지사항
+                        </p>
+                        <p>
+                            (주)카카오엔터테인먼트 사업자정보 | 사업자정보확인
+                        </p>
+                        <p>(c) Kakao Entertainment Corp.</p>
+                    </div>
+                    <div class="copyright-mark">
+                        <img src="" />
+                    </div>
                 </div>
-            </div>
-        </main>
-
-        <footer>
-            <div>
-                <p>카카오 페이지 앱으로 보기 ></p>
-            </div>
-
-            <div>
-                <div>
-                    <p>
-                        회사소개 이용약관 개인정보처리방침 청소년 보호정책
-                        공지사항
-                    </p>
-                    <p>(주)카카오엔터테인먼트 사업자정보 | 사업자정보확인</p>
-                    <p>(c) Kakao Entertainment Corp.</p>
-                </div>
-                <div class="copyright-mark">
-                    <img src="" />
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>

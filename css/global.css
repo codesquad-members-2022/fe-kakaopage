@@ -1,0 +1,13 @@
+body {
+    font-size: 16px;
+    background-color: #eee;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.group-flex {
+    display: flex;
+}

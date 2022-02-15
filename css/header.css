@@ -1,0 +1,39 @@
+header {
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    position: fixed;
+    top: 0;
+}
+
+.logo-area {
+    height: 80px;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+.user-menu {
+    justify-content: flex-end;
+}
+
+.user-menu .user-menu-item {
+    margin-top: 20px;
+}
+
+nav {
+    height: 70px;
+}
+
+nav ul {
+    justify-content: space-between;
+}
+
+nav li {
+    height: 68px;
+    width: 95px;
+    text-align: center;
+    line-height: 68px;
+}
