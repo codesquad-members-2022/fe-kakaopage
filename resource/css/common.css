@@ -1,0 +1,100 @@
+@import url(./reset.css);
+
+:root {
+    --max-width: 720px;
+}
+
+/**
+common
+**/
+.hidden-text {
+    font-size: 0;
+    color: transparent;
+}
+
+
+/**
+display
+**/
+#container {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-top: 140px;
+    overflow: hidden;
+}
+
+
+/**
+header
+**/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    overflow: hidden;
+}
+#header__logo {
+    width: 130px;
+}
+.header__service-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.search {
+    width: 186px;
+    height: 34px;
+    padding: 6px 11px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 17px;
+    overflow: hidden;
+}
+.search__form {
+    display: flex;
+    justify-content: space-between;
+}
+.search__input {
+    width: calc(100% - 20px);
+    padding-right: 7px;
+    line-height: 20px;
+}
+.search__button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/common/ico-btn-search.png') no-repeat center / 100% auto;
+}
+.header__user-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #999;
+}
+.header__user-service:not(:first-child) {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.header__user-service:not(:first-child):after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #e2e2e2;
+}
