@@ -303,3 +303,30 @@ banner
 .main-banners .slide-buttons {
     margin-top: -10px;
 }
+
+/**
+section-title
+**/
+.section__top {
+    display: flex;
+    justify-content: space-between;
+}
+.section__title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.section__more-button {
+    color: var(--color-gray);
+}
+.section__more-button:after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-left: 5px;
+    background: url('../images/common/ico-more-gray.svg') no-repeat right center / auto 14px;
+}
+.section__work-number {
+    font-size: 14px;
+    color: var(--color-gray);
+}
