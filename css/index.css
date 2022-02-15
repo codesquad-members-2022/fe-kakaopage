@@ -77,8 +77,8 @@ header {
 }
 
 .link-area a {
-	font-size: 1.125rem;
 	color: #999;
+	font-size: 1.125rem;
 }
 
 .link-area a:not(:last-child)::after {
@@ -92,12 +92,13 @@ header {
 
 /* Page Nav */
 
-.page-nav {
+.page-nav ul {
 	display: flex;
+	justify-content: space-around;
 }
 
 .page-nav li {
-	width: 120px;
+	flex-grow: 1;
 	font-size: 18px;
 	font-weight: 500;
 	text-align: center;
@@ -112,4 +113,31 @@ header {
 
 .main-contents-container {
 	padding-top: 150px;
+}
+
+.contents {
+	margin-top: 15px;
+}
+
+.contents:not(.main-banner) {
+	background-color: #fff;
+}
+
+/* Main Nav */
+
+.main-nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main-nav li {
+	color: #cfcfcf;
+	font-size: 20px;
+	padding: 20px 0;
+	cursor: pointer;
+}
+
+.main-nav li.selected {
+	color: #333;
+	font-weight: 500;
 }
