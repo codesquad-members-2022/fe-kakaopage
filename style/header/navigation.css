@@ -40,7 +40,6 @@
 }
 
 .c-navigation__button_type_stage {
-  height: 20px;
   position: relative;
   background-color: var(--yellow);
   color: var(--main-black);
