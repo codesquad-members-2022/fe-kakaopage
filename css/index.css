@@ -95,24 +95,51 @@ header {
 	margin: 0 6px 0 8px;
 }
 
-/* Page Nav */
+/* Navigation */
 
-.page-nav ul {
+:is(.main-nav, .page-nav, .contents-nav) ul {
 	display: flex;
 	justify-content: space-around;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+:is(.main-nav, .contents-nav) li {
+	color: #CFCFCF;
+}
+
+:is(.page-nav, .contents-nav) li {
+	flex-grow: 1;
+	text-align: center;
+	padding: 13px;
+}
+
+.main-nav li {
+	padding: 20px 0;
 }
 
 .page-nav li {
-	flex-grow: 1;
-	font-size: 18px;
 	font-weight: 500;
-	text-align: center;
-	padding: 13px;
-	cursor: pointer;
+}
+
+.contents-nav li {
+	border-bottom: 1px solid #E6E6E6;
+}
+
+:is(.main-nav, .contents-nav) li.selected {
+	color: #333;
+}
+
+.main-nav li.selected {
+	font-weight: 500;
 }
 
 .page-nav li.selected {
 	border-bottom: 3px solid #FECC2E;
+}
+
+.contents-nav li.selected {
+	border-bottom: 2px solid #FECC2E;
 }
 
 /* Main Contents */
@@ -129,23 +156,8 @@ header {
 	background-color: #fff;
 }
 
-/* Main Nav */
-
-.main-nav ul {
-	display: flex;
-	justify-content: space-around;
-}
-
-.main-nav li {
-	color: #cfcfcf;
-	font-size: 20px;
-	padding: 20px 0;
-	cursor: pointer;
-}
-
-.main-nav li.selected {
-	color: #333;
-	font-weight: 500;
+.contents:not(.main-nav, .main-banner) {
+	padding: 20px;
 }
 
 /* Main Banner */
@@ -275,10 +287,6 @@ header {
 
 /* Category Menu */
 
-.category-menu {
-	padding: 20px;
-}
-
 .categories {
 	display: flex;
 	justify-content: center;
@@ -321,7 +329,7 @@ header {
 	margin: 0 auto;
 }
 
-.banner-container img {
+.banner-container > a img {
 	width: 100%;
 	border-radius: 5px;
 }
@@ -334,4 +342,36 @@ header {
 .sub-banner .next {
 	right: 22px;
 	background-image: url('../img/icons/ic-paging-next-nor.svg');
+}
+
+/* Contents */
+
+.contents-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.contents-title {
+	font-weight: 400;
+}
+
+.contents-header a {
+	color: #999;
+}
+
+.contents-header a::after {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background-image: url('../img/icons/ic-more-gray.svg');
+}
+
+/* Small list Contents */
+
+.contents-list {
+	padding: 20px 0;
 }
