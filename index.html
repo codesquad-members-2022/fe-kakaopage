@@ -2,10 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <style>
+            @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        </style>
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/global.css" />
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/main.css" />
+        font-family: "Noto Sans KR", sans-serif;
         <title>홈 | 카카오페이지</title>
     </head>
     <body>
@@ -13,12 +17,18 @@
             <div class="group-flex logo-area wrap">
                 <h1 class="logo">kakaopage</h1>
                 <div class="user-menu group-flex">
-                    <form class="search-form user-menu-item">
+                    <form class="search-form">
                         <input type="text" name="serarch-input" />
-                        <button type="submit">검색</button>
+                        <button type="submit">
+                            <img src="./images/btn_search.png" alt="검색버튼" />
+                        </button>
                     </form>
                     <div class="user-menu-item">
-                        <a href="">STAGE</a>
+                        <a href="" class="image-link"
+                            ><img
+                                src="./images/pc-logo-stage.svg"
+                                alt="카카오페이지 스테이지"
+                        /></a>
                         <a href="">캐시충전</a>
                         <a href="">로그인</a>
                     </div>
