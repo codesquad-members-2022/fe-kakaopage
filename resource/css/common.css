@@ -2,6 +2,7 @@
 
 :root {
     --max-width: 720px;
+    --header-height: 84px;
 }
 
 /**
@@ -11,7 +12,13 @@ common
     font-size: 0;
     color: transparent;
 }
-
+.clock-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/common/ico-clock-black.png') no-repeat center / auto 20px;
+    vertical-align: middle;
+}
 
 /**
 display
@@ -24,7 +31,6 @@ display
     padding-top: 140px;
     overflow: hidden;
 }
-
 
 /**
 header
@@ -97,4 +103,49 @@ header
     width: 1px;
     height: 100%;
     background: #e2e2e2;
+}
+
+/**
+gnb
+**/
+.gnb-container {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+}
+.gnb {
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.gnb__item {
+    flex: 1 1 auto;
+    font-size: 18px;
+    text-align: center;
+}
+.gnb__link {
+    padding: 30px 0 15px;
+    font-weight: 500;
+}
+.gnb__link .clock-icon {
+    position: relative;
+    margin-left: 20px;
+
+}
+.gnb__link .clock-icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-black);
+    transform: translateY(-50%);
 }
