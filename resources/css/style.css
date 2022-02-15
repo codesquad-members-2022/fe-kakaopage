@@ -6,13 +6,96 @@ body {
 
 header {
     display: flex;
-    width: 100%;
-    height: 150px;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 150px;
     background-color: #ffff;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    height: 65%;
+    margin: 0 auto;
+}
+
+.header__log {
+    width: 130px;
+}
+
+.header__sub {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 28px;
+    width: 186px;
+    padding: 3px;
+    border: 1px solid #cfcfcf;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.search__input {
+    width: 136px;
+    border: none;
+    background-color: transparent;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.header__stage {
+    margin-left: 25px;
+}
+
+.header__menu {
+    margin-left: 25px
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__button {
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background-color: #ffff;
+    outline: 0;
+    color: #999;
+    font-size: 18px;
+}
+
+.menu__separator {
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+    background-color: #e2e2e2;
+}
+
+.header-nav {
+    width: 720px;
+    height: 35%;
 }
 
 main {
