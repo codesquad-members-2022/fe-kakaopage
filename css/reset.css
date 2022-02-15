@@ -133,3 +133,11 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+input {
+  outline: none;
+}
+
+button {
+  outline: none;
+}
