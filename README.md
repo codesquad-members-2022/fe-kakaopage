@@ -65,6 +65,20 @@ Main axis 조정 -> justify-content 속성으로!
 
 Cross axis 조정 -> align-items(하나의 axis), align-content(전체의 큰 axis) 속성
 
+`👀 flex 속성이 뭐지 ? `
+
+flex 속성 기본값은 flex: 0 1 auto (flex-grow, flex-shrink, flex-basis 을 의미한다.)   
+
+1. flex-grow : 속성값이 0이면 flex container의 크기가 커져도 flex item의 크기가 커지지 않고 원래 크기로 유지, flex container의 크기가 커질 때 flex item의 크기도 커지게 하려면 1 이상의 값을 속성값으로 설정한다. 속성값이 1 이상이면 flex item의 원래 크기에 상관없이 flex container를 채우도록 flex item의 크기가 커진다.  
+
+2. flex-shrink : 속성값이 0이면 flex container의 크기가 flex item의 크기보다 작아져도 flex item의 크기가 줄어들지 않고 원래 크기로 유지된다. 속성값이 1 이상이면 flex container의 크기가 flex item의 크기보다 작아질 때 flex item의 크기가 flex container의 크기에 맞추어 줄어든다.  
+
+3. flex-basis : flex item의 기본 크기를 결정하는 속성 -> 기본값은 auto / flex-basis 속성의 값을 auto로 설정하면 flex item은 상대적 flex item(relative flex item)이 되어 콘텐츠의 크기를 기준으로 크기가 결정된다.  
+
+** 밑에 네이버에서 정리되어있는 flex 속성 부분을 복사해온 내용이다. 더 자세한 내용은 아래 링크를 참조하면 된다.
+
+출처 : https://d2.naver.com/helloworld/8540176#ch2-2-4
+
 ---
 
 ### HTML 시맨틱 태그
