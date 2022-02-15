@@ -1,0 +1,7 @@
+@import './navigation.css';
+@import './category.css';
+
+.l-header {
+  background-color: red;
+  background-color: var(--main-white);
+}

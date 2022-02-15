@@ -1,0 +1,13 @@
+@import './header/layout.css';
+@import './main/layout.css';
+
+:root {
+  --main-black: #333333;
+  --main-yellow: #ffd200;
+  --main-grey: #f3f3f3;
+  --main-whtie: #ffffff;
+}
+
+.l-header {
+  --yellow: #fbbc17;
+}
