@@ -13,43 +13,45 @@
 </head>
 <body>
     <header>
-        <div class="inner">
-            <h1 class="logo">
-                <a href="#"><img src="./assets/images/common/logo.svg" alt="kakaopage"></a>
-            </h1>
-            <div class="header_box">
-                <div class="search_box">
-                    <form action="#">
-                        <input type="text">
-                        <button type="submit">검색</button>
-                    </form>
+        <div class="header_top">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="./assets/images/common/logo.svg" alt="kakaopage"></a>
+                </h1>
+                <div class="header_box">
+                    <div class="search_box">
+                        <form action="#">
+                            <input type="text">
+                            <button type="button">검색</button>
+                        </form>
+                    </div>
+                    <nav class="header_nav">
+                        <div class="stage_box">
+                            <a href="#!"><img src="./assets/images/common/stage.svg" alt="스테이지"></a>
+                            <img src="./assets/images/common/stage-tooltip.svg" alt="새로운 작가를 만나는 곳" class="stage_tooltip">
+                        </div>
+                        <div class="user_nav">
+                            <button type="button">캐시충전</button>
+                            <button type="button">로그인</button>
+                        </div>
+                    </nav>
                 </div>
-                <nav class="header_nav">
-                    <div class="stage_box">
-                        <a href="#!"><img src="./assets/images/common/stage.svg" alt="스테이지"></a>
-                        <img src="./assets/images/common/stage-tooltip.svg" alt="새로운 작가를 만나는 곳" class="stage_tooltip">
-                    </div>
-                    <div class="user_nav">
-                        <button type="button">캐시충전</button>
-                        <button type="button">로그인</button>
-                    </div>
-                </nav>
             </div>
         </div>
-    </header>
-    <main>
         <nav class="gnb">
             <div class="inner">
                 <ul>
-                    <li class="active"><button type="button">홈</button></li>
-                    <li><button type="button">웹툰</button></li>
-                    <li><button type="button">웹소설</button></li>
-                    <li><button type="button">영화</button></li>
-                    <li><button type="button">방송</button></li>
-                    <li><button type="button">책</button></li>
+                    <li><button type="button"><img src="./assets/images/common/gnb_home.svg" alt="홈"></button></li>
+                    <li class="active"><button type="button"><img src="./assets/images/common/gnb_webtoon.svg" alt="웹툰"></button></li>
+                    <li><button type="button"><img src="./assets/images/common/gnb_novel.svg" alt="웹소설"></button></li>
+                    <li><button type="button"><img src="./assets/images/common/gnb_movie.svg" alt="영화"></button></li>
+                    <li><button type="button"><img src="./assets/images/common/gnb_broadcast.svg" alt="방송"></button></li>
+                    <li><button type="button"><img src="./assets/images/common/gnb_book.svg" alt="책"></button></li>
                 </ul>
             </div>
         </nav>
+    </header>
+    <main>
         <article class="main_contents_box">
             <div class="inner">
                 <nav class="lnb">
@@ -70,7 +72,7 @@
                         <div class="slider_items">
                             <div class="item">
                                 <div class="img">
-                                    <img src="./assets/images/data/resource" alt="학사귀환">
+                                    <img src="./assets/images/data/resource.jpg" alt="학사귀환">
                                 </div>
                                 <div class="txt">
                                     <div class="info_box">
@@ -102,6 +104,17 @@
                                 <li><a href="#!"><span class="sub_nav_ttl">오늘 랭킹</span> <span class="num">1위</span></a></li>
                             </ul>
                         </nav>
+                    </section>
+                    <section class="contents mid_banner">
+                        <div class="slider_items_box">
+                            <div class="slider_items">
+                                <div class="item">
+                                    <img src="./assets/images/data/mid_resource" alt="배너이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="slider_controller prev">이전</button>
+                        <button type="button" class="slider_controller next">다음</button>
                     </section>
                 </section>
             </div>

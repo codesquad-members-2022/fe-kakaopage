@@ -20,11 +20,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    border-bottom: 1px solid #dfdfdf;
     background-color: #fff;
     z-index: 10;
 }
 
-header .inner {
+header .header_top .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +61,7 @@ header .search_box button {
     flex-shrink: 0;
     width: 30px;
     height: 100%;
-    background: url(../images/common/btn_search.png) no-repeat left center / 20px;
+    background: url(../images/ico/btn_search.png) no-repeat left center / 20px;
     text-indent: -9999em;
 }
 
@@ -74,6 +75,11 @@ header .header_nav .stage_box {
     position: relative;
     margin-left: 24px;
     margin-right: 22px;
+}
+
+header .header_nav .stage_box a {
+    display: block;
+    font-size: 0;
 }
 
 header .header_nav .stage_box .stage_tooltip {
@@ -106,35 +112,25 @@ header .header_nav .user_nav button+button::before {
 /* //HEADER */
 
 /* GNB */
-main .gnb {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #dfdfdf;
-    background-color: #fff;
-}
-
-main .gnb ul {
+.gnb ul {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-main .gnb ul li {
-    flex: auto;
-    padding: 30px 0 15px;
-    border-bottom: 3px solid transparent;
-    font-size: 20px;
-    text-align: center;
-    line-height: 1;
-}
-
-main .gnb ul li button {
     width: 100%;
 }
 
-main .gnb ul li.active {
+.gnb ul li {
+    flex: auto;
+    padding: 30px 0 15px;
+    border-bottom: 3px solid transparent;
+    font-size: 0;
+}
+
+.gnb ul li button {
+    width: 100%;
+}
+
+.gnb ul li.active {
     border-bottom-color: #ffd200;
 }
 
