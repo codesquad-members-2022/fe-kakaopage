@@ -1,5 +1,4 @@
 header {
-    background-color: #fff;
     width: 100%;
     border-bottom: 1px solid #dfdfdf;
     position: fixed;
@@ -74,8 +73,8 @@ nav ul {
 
 nav li {
     height: 68px;
-    width: 33%;
     text-align: center;
+    flex: 1 1 auto;
     line-height: 68px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
