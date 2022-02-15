@@ -1,3 +1,7 @@
+.main {
+    margin-bottom: 60px;
+}
+
 .main__inner {
     width: 720px;
     margin: 0 auto;
