@@ -6,10 +6,13 @@
 @import "reset.css";
 @import "header.css";
 @import "main.css";
+@import "footer.css";
 
 body {
   display: flex;
+  flex-direction: column;
   background-color: #eeeeee;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
