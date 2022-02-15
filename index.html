@@ -136,6 +136,15 @@
         border-collapse: collapse;
         border-spacing: 0;
       }
+      button {
+        background: inherit;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        overflow: visible;
+        cursor: pointer;
+      }
     </style>
     <link
       rel="stylesheet"
@@ -143,140 +152,151 @@
     />
   </head>
   <body>
-    <header class="l-header">
-      <div class="c-navigation l-header-child">
-        <h1 class="c-navigation__header">kakaopage</h1>
-        <div class="c-navigation__menu">
-          <form class="c-navigation__form">
-            <input class="c-navigation__input" type="text" />
-            <span class="c-navigation__icon"
-              ><i class="fas fa-search"></i
-            ></span>
-          </form>
-          <div class="c-navigation__button c-navigation__button_type_stage">
-            <span>STAGE</span>
-            <div class="c-navigation__stage-description">
-              새로운 작가를 만나는 곳
+    <div class="body">
+      <header class="l-header">
+        <div class="c-navigation l-header-child">
+          <h1 class="c-navigation__header">kakaopage</h1>
+          <div class="c-navigation__menu">
+            <form class="c-navigation__form">
+              <input class="c-navigation__input" type="text" />
+              <span class="c-navigation__icon"
+                ><i class="fas fa-search"></i
+              ></span>
+            </form>
+            <div class="c-navigation__button c-navigation__button_type_stage">
+              <span>STAGE</span>
+              <div class="c-navigation__stage-description">
+                새로운 작가를 만나는 곳
+              </div>
             </div>
-          </div>
-          <div class="c-navigation__button c-navigation__button_type_cash">
-            <span>캐시충전</span>
-          </div>
-          <div class="c-navigation__button c-navigation__button_type_login">
-            <span>로그인</span>
-          </div>
-        </div>
-      </div>
-      <nav class="l-category l-header-child">
-        <ul class="c-category">
-          <li class="header__index c-category__index">
-            <span class="c-category__content">홈</span>
-          </li>
-          <li class="header__index c-category__index">
-            <span class="c-category__content"
-              >웹툰∙<i class="fas fa-clock"></i
-            ></span>
-            <div class="c-category__alaram"></div>
-          </li>
-          <li class="header__index c-category__index">
-            <span class="c-category__content"
-              >웹소설∙<i class="fas fa-clock"></i
-            ></span>
-            <div class="c-category__alaram"></div>
-          </li>
-          <li class="header__index c-category__index">
-            <span class="c-category__content">영화</span>
-            <div class="c-category__alaram"></div>
-          </li>
-          <li class="header__index c-category__index">
-            <span class="c-category__content">방송</span>
-            <div class="c-category__alaram"></div>
-          </li>
-          <li class="header__index c-category__index">
-            <span class="c-category__content">책</span>
-            <div class="c-category__alaram"></div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="l-main">
-      <article class="c-main__category l-main__child">
-        <ul class="c-category">
-          <li class="main__index c-category__index"><span>홈</span></li>
-          <li class="main__index c-category__index"><span>요일연재</span></li>
-          <li class="main__index c-category__index"><span>웹툰</span></li>
-          <li class="main__index c-category__index"><span>소년</span></li>
-          <li class="main__index c-category__index"><span>드라마</span></li>
-          <li class="main__index c-category__index"><span>로맨스</span></li>
-          <li class="main__index c-category__index"><span>로판</span></li>
-          <li class="main__index c-category__index"><span>액션무협</span></li>
-          <li class="main__index c-category__index"><span>BL</span></li>
-        </ul>
-      </article>
-      <article class="l-carousel l-main__child">
-        <div class="c-carousel">
-          <img
-            class="c-carousel__img"
-            src="./static/images/carousel_img-1.jpg"
-            alt="carousel image"
-          />
-          <div class="c-carousel__buttons">
-            <button class="c-carousel__button c-carousel__button_type_prev">
-              prev
-            </button>
-            <button class="c-carousel__button c-carousel__button_type_next">
-              next
-            </button>
-          </div>
-          <div class="c-carousel__content">
-            <h3 class="c-carousel__title">
-              숨겨진 명작 감상하고 100% 캐시 선물 받자
-            </h3>
-            <div class="c-carousel__footer">
-              <span class="c-carousel__event">이벤트</span>
-              <span class="c-carousel__index">11/12</span>
+            <div class="c-navigation__button c-navigation__button_type_cash">
+              <span>캐시충전</span>
+            </div>
+            <div class="c-navigation__button c-navigation__button_type_login">
+              <span>로그인</span>
             </div>
           </div>
         </div>
-        <div class="c-carousel__check-btn">확인하러가기</div>
-      </article>
-      <article class="c-event l-main__child">
-        <ul class="l-event">
-          <li class="c-event__elem">오늘 신작</li>
-          <li class="c-event__elem">달콤한 선물</li>
-          <li class="c-event__elem">숨겨진 명작</li>
-        </ul>
-      </article>
-      <article class="c-webtoons l-main__child">
-        <div class="c-webtoons__header">
-          <div class="l-webtoons__title">
-            <h3 class="c-webtoons__title">기다리면 무료 웹툰</h3>
-            <span class="c-webtoons__total">(3,524)</span>
-          </div>
-          <div class="l-webtoons__more">
-            <span class="c-webtoons__more">더보기</span>
-          </div>
-        </div>
-        <ul class="l-webtoons__body">
-          <li class="c-webtoon">
-            <div class="l-webtoon__img">
-              <img class="c-webtoon__img" src="" alt="temp-image" />
-            </div>
-            <div class="l-webtoon__content">
-              <h5 class="c-webtoon__name">웹툰 제목</h5>
-              <div class="c-webtoon__content">
-                <div class="l-webtoon__description">
-                  <span class="c-webtoon__description">웹툰 한 줄 설명</span>
-                </div>
-                <div class="c-webtoon__indicator">
-                  <span class="c-webtoon__views">40만 명</span>
-                  <span class="c-webtoon__artist">작가</span>
+        <nav class="l-category l-header-child">
+          <ul class="c-category">
+            <li class="header__index c-category__index">
+              <span class="c-category__content">홈</span>
+            </li>
+            <li class="header__index c-category__index">
+              <span class="c-category__content"
+                >웹툰∙<i class="fas fa-clock"></i
+              ></span>
+              <div class="c-category__alaram"></div>
+            </li>
+            <li class="header__index c-category__index">
+              <span class="c-category__content"
+                >웹소설∙<i class="fas fa-clock"></i
+              ></span>
+              <div class="c-category__alaram"></div>
+            </li>
+            <li class="header__index c-category__index">
+              <span class="c-category__content">영화</span>
+              <div class="c-category__alaram"></div>
+            </li>
+            <li class="header__index c-category__index">
+              <span class="c-category__content">방송</span>
+              <div class="c-category__alaram"></div>
+            </li>
+            <li class="header__index c-category__index">
+              <span class="c-category__content">책</span>
+              <div class="c-category__alaram"></div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="l-main">
+        <article class="c-main__category l-main__child">
+          <ul class="c-category">
+            <li class="main__index c-category__index"><span>홈</span></li>
+            <li class="main__index c-category__index"><span>요일연재</span></li>
+            <li class="main__index c-category__index"><span>웹툰</span></li>
+            <li class="main__index c-category__index"><span>소년</span></li>
+            <li class="main__index c-category__index"><span>드라마</span></li>
+            <li class="main__index c-category__index"><span>로맨스</span></li>
+            <li class="main__index c-category__index"><span>로판</span></li>
+            <li class="main__index c-category__index"><span>액션무협</span></li>
+            <li class="main__index c-category__index"><span>BL</span></li>
+          </ul>
+        </article>
+        <article class="l-carousel l-main__child">
+          <div class="c-carousel">
+            <img
+              class="c-carousel__img"
+              src="./static/images/carousel_img-1.jpg"
+              alt="carousel image"
+            />
+            <div class="l-carousel__content">
+              <div class="c-carousel__buttons">
+                <button type="button" class="c-carousel__button">
+                  <i class="fas fa-angle-left"></i>
+                </button>
+                <button type="button" class="c-carousel__button">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+              </div>
+              <div class="c-carousel__content">
+                <h3 class="c-carousel__title">무인 이곽</h3>
+                <div class="c-carousel__footer">
+                  <div class="c-carousel__indicator">
+                    <span class="c-carousel__new">UP</span>
+                    <span class="c-carousel__genre"
+                      ><i class="fas fa-clock"></i> 웹툰</span
+                    >
+                    <div class="divider"></div>
+                    <span class="c-carousel__views"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                  <div class="c-carousel__index">2/3</div>
                 </div>
               </div>
             </div>
-          </li>
-        </ul>
-      </article>
-    </main>
+          </div>
+          <div class="c-carousel__sub-title">확인하러가기</div>
+        </article>
+        <article class="c-event l-main__child">
+          <ul class="l-event">
+            <li class="c-event__elem">오늘 신작</li>
+            <li class="c-event__elem">달콤한 선물</li>
+            <li class="c-event__elem">숨겨진 명작</li>
+          </ul>
+        </article>
+        <article class="c-webtoons l-main__child">
+          <div class="c-webtoons__header">
+            <div class="l-webtoons__title">
+              <h3 class="c-webtoons__title">기다리면 무료 웹툰</h3>
+              <span class="c-webtoons__total">(3,524)</span>
+            </div>
+            <div class="l-webtoons__more">
+              <span class="c-webtoons__more">더보기</span>
+            </div>
+          </div>
+          <ul class="l-webtoons__body">
+            <li class="c-webtoon">
+              <div class="l-webtoon__img">
+                <img class="c-webtoon__img" src="" alt="temp-image" />
+              </div>
+              <div class="l-webtoon__content">
+                <h5 class="c-webtoon__name">웹툰 제목</h5>
+                <div class="c-webtoon__content">
+                  <div class="l-webtoon__description">
+                    <span class="c-webtoon__description">웹툰 한 줄 설명</span>
+                  </div>
+                  <div class="c-webtoon__indicator">
+                    <span class="c-webtoon__views">40만 명</span>
+                    <span class="c-webtoon__artist">작가</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </main>
+    </div>
   </body>
 </html>

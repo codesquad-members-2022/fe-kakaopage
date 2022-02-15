@@ -30,3 +30,14 @@
 .c-category__index:hover {
   cursor: pointer;
 }
+
+.divider {
+  display: inline-block;
+  width: 2px;
+  height: 80%;
+  background-color: var(--main-grey-dark);
+}
+
+button:hover {
+  cursor: pointer;
+}
