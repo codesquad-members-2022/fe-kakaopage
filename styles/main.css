@@ -79,15 +79,9 @@
   height: 40px;
 }
 
-.main__nav-detail {
-  height: 140px;
-}
-
-.main__sub-banner {
-  height: 120px;
-}
-
 .main__contents {
+  display: flex;
+  flex-direction: column;
   height: 300px;
 }
 
@@ -106,6 +100,7 @@
 }
 
 .main__nav-detail {
+  height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,4 +146,27 @@
 }
 .border_bottom_right {
   border-bottom-right-radius: 9px;
+}
+
+.main__sub-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+}
+
+.subImg {
+  width: 65%;
+  border-radius: 5px;
+}
+.arrow {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #808e9b;
+  border: 1px solid #bbbbbb;
 }
