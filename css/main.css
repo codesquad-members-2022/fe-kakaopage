@@ -9,9 +9,9 @@ main {
 
 .main__navigation {
     margin: 5px auto;
-    background-color: white;
-    width: 60%;
-
+    background-color: var(--main-white);
+    width: 50%;
+    line-height: 50px;
 }
 
 .main__navigation ul {
@@ -20,8 +20,8 @@ main {
     justify-content: space-evenly;
 }
 
-.nav__under {
-    border-bottom: var(--main-yellow);
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
+.main__navigation ul li {
+    font-size: 20px;
+    text-align: center;
 }
+
