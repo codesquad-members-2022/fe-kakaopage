@@ -1,5 +1,7 @@
 body {
     background-color: #eee;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -59,6 +61,7 @@ header{
     align-items: center;
     padding-left: 0;
     height: 80px;
+    margin-top: 0;
 }
 
 .main-tab__container {
@@ -83,8 +86,6 @@ header{
 }
 
 .contents {
-    margin-top: 167px;
+    margin-top: 168px;
     align-items: center;
-    display: flex;
-    justify-content: center;
 }
