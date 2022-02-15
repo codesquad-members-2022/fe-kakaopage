@@ -166,12 +166,12 @@ nav {
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 20px;
-  position: static;
+  position: relative;
 }
 .slideMoveBtn {
   position: absolute;
   width: 680px;
-  bottom: 130px;
+  bottom: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -397,13 +397,21 @@ nav {
 .contentSlash {
   margin: 0 3px 0 3px;
 }
-.hotWebtoon {
-  box-sizing: border-box;
-  height: 534px;
-  padding: 0 20px 20px 20px;
-  background: white;
+.slideAd {
+  height: 140px;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
-.webtoonStatus {
-  width: 40px;
-  height: 26px;
+.slideBtn {
+  width: 85px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideAdImg {
+  width: 550px;
+  height: 100px;
+  border-radius: 5px;
 }
