@@ -21,7 +21,15 @@ common
     background: url('../images/common/ico-clock-black.png') no-repeat center / auto 20px;
     vertical-align: middle;
 }
-.slide-button-wrap {
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+.slide-container {
+    display: inline-flex;
+}
+.slide-buttons {
     position: absolute;
     top: 50%;
     left:0;
@@ -75,6 +83,9 @@ display
     left: 20px;
     bottom: 60px;
     color: #fff;
+}
+.row-5 {
+    width: 20%;
 }
 
 /**
@@ -132,7 +143,7 @@ header
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    color: #999;
+    color: var(--color-gray);
 }
 .header__user-service:not(:first-child) {
     position: relative;
@@ -230,12 +241,7 @@ category
 banner
 **/
 .main-banners {
-    position: relative;
     margin: 11px 0;
-    overflow: hidden;
-}
-.main-banners__contents {
-    display: inline-flex;
 }
 .main-banner {
     position: relative;
@@ -298,6 +304,6 @@ banner
     line-height: 40px;
     text-align: center;
 }
-.main-banners .slide-button-wrap {
+.main-banners .slide-buttons {
     margin-top: -10px;
 }
