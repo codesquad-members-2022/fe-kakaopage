@@ -4,4 +4,16 @@
 
 .l-main {
   background-color: var(--main-grey);
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  height: 200vh;
+}
+.l-main__child {
+  width: var(--main-width);
+  background-color: var(--main-white);
+  margin: 0 auto;
+}
+.l-main__child:not(:first-child) {
+  margin-top: 10px;
 }
