@@ -105,6 +105,7 @@ form {
 .menuBarTag {
   background-color: rgb(227, 241, 253);
 }
+
 .navUlButton button {
   width: 16.6666667%;
   height: 30px;
@@ -187,7 +188,7 @@ img {
 .menuSection article {
   width: 32.4%;
   height: 60px;
-  margin: 3px;
+  margin: 0.5px;
   font-weight: bold;
   border: 2px solid white;
   display: flex;
@@ -208,6 +209,23 @@ img {
   border-radius: 10px 10px 10px 10px;
   background-color: #f1c164;
   height: 25px;
+  padding: 0px 3px 3px 3px;
+}
+
+.menuTopLeft {
+  border-radius: 10px 0px 0px 0px;
+}
+
+.menuTopRight {
+  border-radius: 0px 10px 0px 0px;
+}
+
+.menuBottomLeft {
+  border-radius: 0px 0px 0px 10px;
+}
+
+.menuBottomRight {
+  border-radius: 0px 0px 10px 0px;
 }
 
 .advert {
@@ -219,16 +237,17 @@ img {
   align-items: center;
   padding: 20px;
 }
+
 .back {
   position: absolute;
-  left: 6%;
+  left: 7%;
   font-size: x-large;
   font-weight: bolder;
 }
 
 .soon {
   position: absolute;
-  right: 6%;
+  right: 7%;
   font-size: x-large;
   font-weight: bolder;
 }
@@ -250,6 +269,33 @@ img {
   height: auto;
   font-size: larger;
   font-weight: bolder;
+}
+
+.newThings {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  background-color: aqua;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.firstNewThing {
+  position: relative;
+  width: 45%;
+}
+
+.secondNewThing {
+  position: relative;
+  width: 45%;
+}
+
+.newThingsText {
+  position: absolute;
+  top: 120px;
 }
 
 .dramaTop,
