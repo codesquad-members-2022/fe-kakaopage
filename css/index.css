@@ -357,6 +357,14 @@ header {
 	font-weight: 400;
 }
 
+.contents-title span {
+	position: relative;
+	top: -1px;
+	color: #999;
+	font-size: 14px;
+	line-height: 2;
+}
+
 .contents-header a {
 	color: #999;
 }
@@ -370,8 +378,80 @@ header {
 	background-image: url('../img/icons/ic-more-gray.svg');
 }
 
-/* Small list Contents */
+/* Small Contents List */
 
-.contents-list {
+.contents-list.small {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+:is(.daily-series-ranking) .contents-list.small {
 	padding: 20px 0;
+}
+
+.contents-list.small li {
+	width: 17.5%;
+}
+
+.contents-list.small .img-container {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.contents-list.small img {
+	width: 100%;
+	height: 100%;
+}
+
+.contents-list.small .ranking-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #242526;
+	padding: 5px 8px;
+}
+
+.contents-list.small .ranking-info span {
+	position: relative;
+	top: -1px;
+	color: #ffd200;
+}
+
+.contents-list.small .rating::before {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url('../img/icons/badge-thumbnail-star.svg');
+	margin-right: 5px;
+}
+
+.contents-list.small .ranking-info img {
+	width: 18px;
+}
+
+.contents-list.small .title {
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+}
+
+.contents-list.small .reader {
+	color: #999;
+	font-size: 14px;
+}
+
+.contents-list.small .reader::before {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url('../img/icons/icon_read_count.png');
+	margin-right: 5px;
 }
