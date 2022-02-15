@@ -1,3 +1,4 @@
+
 body {
     background-color: #eee;
 }
@@ -6,12 +7,11 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    display: flex;
-    justify-content: center;
     background-color: #fff;
 }
 .container {
     width: 720px;
+    margin: 0 auto;
 }
 .main-header {
     height: 80px;
@@ -90,4 +90,29 @@ main {
 footer {
     display: flex;
     justify-content: center;
+    color: #bdbdbd;
+}
+footer > .container {
+    display: flex;
+}
+.footer-left {
+    width: 100%;
+}
+.footer-right > img {
+    width: 55px;
+    height: 55px;
+    margin-top: 60px;
+}
+.footer-right > p {
+    font-size: 12px;
+    margin-top: 3px;
+    text-align: center;
+}
+.policy {
+    padding: 60px 0 0;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.companyInfoWrap {
+    margin-top: 5px;
 }
