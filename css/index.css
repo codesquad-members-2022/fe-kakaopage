@@ -13,6 +13,14 @@ body {
 	margin: 0 auto;
 }
 
+.pseudo-img::before,
+.pseudo-img::after {
+	content: '';
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 /* Header */
 
 header {
@@ -21,6 +29,7 @@ header {
 	left: 0;
 	background-color: #fff;
 	border-bottom: 1px solid #dfdfdf;
+	z-index: 100;
 }
 
 .header-wrapper {
@@ -59,7 +68,6 @@ header {
 }
 
 .search-btn::after {
-	content: '';
 	position: absolute;
 	right: 15px;
 	top: 48%;
@@ -67,9 +75,6 @@ header {
 	height: 18px;
 	transform: translateY(-50%);
 	background-image: url('../img/icons/search.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
 }
 
 .stage img {
@@ -103,6 +108,7 @@ header {
 	font-weight: 500;
 	text-align: center;
 	padding: 13px;
+	cursor: pointer;
 }
 
 .page-nav li.selected {
@@ -140,4 +146,128 @@ header {
 .main-nav li.selected {
 	color: #333;
 	font-weight: 500;
+}
+
+/* Main Banner */
+
+.main-banner {
+	position: relative;
+}
+
+.banner a {
+	display: block;
+	height: 480px;
+}
+
+.banner img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.banner-info {
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	padding: 20px;
+}
+
+.banner-info * {
+	color: #fff;
+}
+
+.banner-info h2 {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.banner-info div {
+	display: flex;
+	align-items: center;
+}
+
+.banner-info span:not(:first-child) {
+	display: block;
+	font-size: 20px;
+}
+
+.banner-info .badge {
+	position: relative;
+	top: 1px;
+	color: #ffd200;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.1;
+	border: 1px solid #ffd200;
+	border-radius: 4px;
+	background-color: #000;
+	padding: 0 4px 2px;
+	margin-right: 5px;
+}
+
+.banner-info span:not(:first-child)::before {
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.banner-info .genre::before {
+	background-image: url('../img/icons/ico-bigthum-wait.svg');
+}
+
+.banner-info .reader::before {
+	background-image: url('../img/icons/ico-bigthum-person.svg');
+}
+
+.banner-info .genre::after {
+	display: inline-block;
+	width: 1px;
+	height: 14px;
+	border-right: 2px solid #999;
+	margin: 0 6px 0 8px;
+}
+
+.banner-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #ffd200;
+	padding: 8px;
+}
+
+.main-banner .banner-count {
+	position: absolute;
+	bottom: 14%;
+	right: 17px;
+	color: #fff;
+	font-size: 20px;
+	opacity: 0.6;
+}
+
+.banner-btn-group button {
+	position: absolute;
+	top: 48%;
+	width: 40px;
+	height: 40px;
+	transform: translateY(-50%);
+}
+
+.banner-btn-group .back {
+	left: 15px;
+	background-image: url('../img/icons/ic-banner-paging-back-nor.svg');
+}
+
+.banner-btn-group .next {
+	right: 15px;
+	background-image: url('../img/icons/ic-banner-paging-next-nor.svg');
+}
+
+/* Banner */
+
+.banner {
+	position: relative;
 }
