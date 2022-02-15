@@ -146,9 +146,38 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
     width: 720px;
     margin: 170px auto 0;
     background-color: #ffff;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    margin: 0 auto;
+}
+
+.main-nav__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 720px;
+}
+
+.main-nav__item {
+    padding: 24px 0;
+    font-size: 20px;
+}
+
+.main-nav__item > a {
+    color: rgb(187, 187, 187);
+}
+
+.main-nav__item--selected > a{
+    color: black;
 }
 
 footer {
