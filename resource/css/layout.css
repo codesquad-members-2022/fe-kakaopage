@@ -34,3 +34,17 @@ webtoon
     line-height: 24px;
     border-radius: 12px;
 }
+
+.section-event-banner {
+    position: relative;
+}
+.event-banner {
+    width: calc(var(--max-width) - 170px);
+    margin: 0 auto;
+}
+.section-event-banner .slide-button.prev {
+    background-image: url('../images/common/slide-previous-button_light.svg');
+}
+.section-event-banner .slide-button.next {
+    background-image: url('../images/common/slide-next-button_light.svg');
+}
