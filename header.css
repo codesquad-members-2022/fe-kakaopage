@@ -63,17 +63,29 @@
 
 .header__menu {
     width: 16.3%;
-    text-align: center;
     position: relative;
+    text-align: center;
     padding: 30px 0 17px;
     cursor: pointer;
 }
 
 .header__link {
+    width: 100%;
+    position: relative;
     text-decoration: none;
     color: #333333;
     font-weight: 500;
     font-size: 20px;
+}
+
+.header__menu .header__link_circle {
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(255, 210, 0);
 }
 
 .header__menu.header__menu_active {
