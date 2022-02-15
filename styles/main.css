@@ -28,6 +28,9 @@
 .main__main-banner {
   height: 400px;
 }
+.contents .main__main-banner {
+  height: auto;
+}
 .main__main-banner .banner__imgBox {
   position: relative;
   height: 360px;
@@ -381,4 +384,9 @@
   padding: 1px 2px;
   color: #f3f3f3;
   border-radius: 1px;
+}
+.contents .imgBox__order {
+  left: 20px;
+  bottom: 30px;
+  opacity: 0.6;
 }
