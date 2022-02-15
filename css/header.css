@@ -83,10 +83,6 @@ nav li {
     position: relative;
 }
 
-nav .active {
-    border-bottom-color: #ffd200;
-}
-
 nav .alert::after {
     content: "";
     display: block;
@@ -97,4 +93,8 @@ nav .alert::after {
     position: absolute;
     top: 20px;
     right: 10px;
+}
+
+nav .active {
+    border-bottom-color: #ffd200;
 }

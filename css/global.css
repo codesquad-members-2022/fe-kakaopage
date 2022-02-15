@@ -11,6 +11,10 @@ a {
     color: inherit;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
 input {
     border: none;
     background: transparent;
@@ -41,4 +45,20 @@ button {
 
 .bg-white {
     background-color: #fff;
+}
+
+.section-header {
+    justify-content: space-between;
+}
+
+.section-header .count {
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.section-header .detail {
+    color: #999;
 }

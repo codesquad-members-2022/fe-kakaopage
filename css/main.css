@@ -116,7 +116,6 @@
 
 .slide-banner {
     margin-top: 11px;
-    background-color: #fff;
     flex-basis: auto;
 }
 
@@ -130,4 +129,26 @@
     width: 550px;
     height: 100px;
     margin: 20px 0;
+}
+
+.weekday-serial-best {
+    margin-top: 11px;
+    padding: 20px;
+}
+
+.week-list {
+    color: #bbb;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.week-list li {
+    padding: 15px;
+    flex: auto;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.week-list .active {
+    border-bottom: solid 2px #ffd200;
 }
