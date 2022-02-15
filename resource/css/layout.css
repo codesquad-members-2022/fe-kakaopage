@@ -48,3 +48,24 @@ webtoon
 .section-event-banner .slide-button.next {
     background-image: url('../images/common/slide-next-button_light.svg');
 }
+
+.section__day-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.section__day-tab {
+    flex: 1;
+}
+.day-tab__button {
+    width: 100%;
+    font-size: 20px;
+    line-height: 57px;
+    color: var(--color-gray);
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+.day-tab__button.on{
+    line-height: 56px;
+    border-bottom: 2px solid var(--color-yellow);
+}
