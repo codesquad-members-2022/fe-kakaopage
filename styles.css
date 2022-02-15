@@ -4,6 +4,7 @@
 @import url('./css/pageHeader/category.css');
 @import url('./css/pageMain/main.css');
 @import url('./css/pageMain/category.css');
+@import url('./css/pageMain/preview.css');
 
 * {
   box-sizing: border-box;
