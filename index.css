@@ -1,0 +1,19 @@
+@import "header.css";
+@import "mainContent.css";
+@import "reset.css";
+body{
+    background: #eee;
+    text-indent: 0;
+    user-select: none;
+}
+body>div.padding{
+    position:absolute;
+    top:0;
+    border-top: 5px solid #0088ff;
+    width: 100%;
+    opacity: 0;
+}
+*{
+    font-family:"Noto Sans",serif;
+    line-height: 1.4;
+}
