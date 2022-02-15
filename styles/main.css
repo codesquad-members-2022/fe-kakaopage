@@ -321,3 +321,64 @@
   height: 10%;
   border-radius: 0px 0px 10px 10px;
 }
+.content-row {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.content-row div {
+  margin: 9px;
+}
+.content-row .dateRank {
+  font-size: 20px;
+  font-weight: 700;
+}
+.content-row .contentImgBox {
+  position: relative;
+  width: 70px;
+}
+.contentImgBox .content-waitFreeIcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 3px;
+  font-size: 15px;
+  color: #fecc2e;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top-left-radius: 5px;
+}
+.contentImgBox img {
+  width: 100%;
+  border-radius: 5px;
+}
+.contentInfo {
+  display: flex;
+  flex-direction: column;
+  color: #999999;
+}
+.contentInfo .info-body,
+.contentInfo .info__titleInfo {
+  margin: 3px 9px;
+}
+
+.contentInfo .info__titleInfo {
+  color: #333333;
+  font-size: 14px;
+}
+.contentInfo .info-body {
+  font-size: 12px;
+}
+.info__title-status {
+  font-size: 12px;
+  background-color: #f53b57;
+  padding: 1px 3px;
+  color: #f3f3f3;
+  border-radius: 1px;
+}
+.info__title-age {
+  font-size: 12px;
+  background-color: #999999;
+  padding: 1px 2px;
+  color: #f3f3f3;
+  border-radius: 1px;
+}
