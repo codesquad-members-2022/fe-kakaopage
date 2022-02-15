@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    box-sizing: border-box;
+}
+a { text-decoration:none}
+
+body{
+    background:#999;
+}
+
+/* ===============header=============== */
+
+.header{
+    width:100%;
+    background:#fff;
+}
+
+.header_topbar{
+    width:720px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.navLeft{
+    margin-top:4px;
+}
+.navLeft h1 a{
+    color:black;
+}
+
+.navRight{
+    height:30px;
+    display:flex;
+    margin-top:10px;
+}
+.navRight a {
+    color:black;
+}
+.navRight input{
+    height:25px;
+    margin-top:3px;
+    margin-right: 10px;
+    border-radius: 20px;
+    text-indent: 10px;
+}
+.stage{
+    font-weight: bold;
+    margin-right:15px;
+    padding:8px;
+    background:yellow;
+}
+.btn{
+    font-size:18px;
+    margin-top:8px;
+    margin-right:15px;
+}
+.btn a {
+    color:#999;
+}
+.lastbtn{
+    margin-right:0px;
+}
+.category{
+    width:720px;
+    margin:0 auto;
+}
+.category ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top:30px;
+    margin-bottom:10px;
+    padding-bottom:20px;
+}
+.category ul li a{
+    color:black;
+    font-size:20px;
+}
+
+.sub-active{
+    border-bottom:yellow ;
+}
+
+
+/* ===============main=============== */
+.subcategory{
+    width:720px;
+    height:70px;
+    background:#fff;
+    margin:0 auto;
+}
+
+.subcategory ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.subcategory ul li a{
+    color:#ddd;
+    font-size:20px;
+    line-height: 70px;
+}
+
+.sub-active{
+    color:#000;
+}
+
+/* ===============slide=============== */
+.slideshow{
+    width:720px;
+    margin:10px auto;
+    clear: n;
+    position:relative;
+}
+
+.slide{
+    width:720px;
+    height:450px;
+    background:#ddd;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    
+}
+.text{
+    margin-left:20px;
+    margin-bottom:20px;
+}
+.numbertext{
+    margin-right:20px;
+    margin-bottom:20px;
+    font-size:17px;
+}
+
+.slide-info{
+    width:720px;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    background:yellow;
+}
+
+.prev, .next {
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    text-align:center;
+    line-height:40px;
+    color:#fff;
+    margin-left:20px;
+    font-size:18px;
+}
+
+  .next {
+    right: 0;
+    margin-right:20px;    
+}
+
+/* ===============tab=============== */
+.tab{
+    width:720px;
+    background:#fff;
+    margin:0 auto;
+}
+.underline{
+    border-bottom: 1px solid #ddd;
+}
+
+.all-web{
+    display:flex;
+    justify-content: space-between;
+    line-height: 70px;
+    font-size:20px;
+    color:#ddd;
+}
+
+.all-web .left{
+    display: flex;
+    margin-left:10px;
+}
+
+.all-web a, .right select{
+    font-size:20px;
+    padding-left:10px;
+    padding-right:10px;
+    color:#ddd;
+}
+.right{
+    margin-right:20px;
+    color:#999;
+    border:#ddd;
+}
+
+/* ===============webtoon-list=============== */
+.webtoon-list ul{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* align-content: space-around; */
+    margin-top:20px;
+}
+.webtoon-list ul li:first-child{
+    margin-left:20px;
+}
+.webtoon-list ul li:nth-child(6n){
+    margin-left:20px;
+}
+
+.webtoon-list ul li{
+    margin-right:20px;
+}
+
+.webtoon-image{
+    width:120px;
+    height:120px;
+    background:pink;
+}
