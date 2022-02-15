@@ -2,6 +2,17 @@
 @import './category.css';
 
 .l-header {
-  background-color: red;
   background-color: var(--main-white);
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.l-header-child {
+  width: var(--main-width);
+  height: 50%;
+  display: flex;
+  align-items: center;
 }

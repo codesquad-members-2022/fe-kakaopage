@@ -137,23 +137,38 @@
         border-spacing: 0;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
   </head>
   <body>
     <header class="l-header">
-      <div class="c-navigation">
+      <div class="c-navigation l-header-child">
         <h1 class="c-navigation__header">kakaopage</h1>
         <div class="c-navigation__menu">
-          <form class="c-nav-form">
-            <input class="c-nav-form__input" type="text" />
-            <span class="c-nav-form__icon">돋보기</span>
+          <form class="c-navigation__form">
+            <input class="c-navigation__input" type="text" />
+            <span class="c-navigation__icon"
+              ><i class="fas fa-search"></i
+            ></span>
           </form>
-          <div class="c-nav-button c-nav-button_type_stage">Stage</div>
-          <div class="c-nav-button c-nav-button_type_cash">캐시충전</div>
-          <div class="c-nav-button c-nav-button_type_login">로그인</div>
+          <div class="c-navigation__button c-navigation__button_type_stage">
+            <span>STAGE</span>
+            <div class="c-navigation__stage-description">
+              새로운 작가를 만나는 곳
+            </div>
+          </div>
+          <div class="c-navigation__button c-navigation__button_type_cash">
+            <span>캐시충전</span>
+          </div>
+          <div class="c-navigation__button c-navigation__button_type_login">
+            <span>로그인</span>
+          </div>
         </div>
       </div>
-      <nav class="c-category">
-        <ul class="l-category">
+      <nav class="l-category l-header-child">
+        <ul class="c-category">
           <li class="c-category__index">
             <span class="c-category__content">홈</span>
           </li>
