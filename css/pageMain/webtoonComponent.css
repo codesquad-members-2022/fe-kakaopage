@@ -22,22 +22,41 @@
   border-radius: 8px 8px 0 0;
 }
 
-.webtoon-score {
+.webtoon-rating {
   width: 120px;
   height: 30px;
   border-radius: 0 0 8px 8px;
   background-color: rgb(36, 37, 38);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--yellow);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 8px;
+  padding-right: 8px;
 }
 
-.webtoon-score img {
+.webtoon-score {
+  display: flex;
+}
+
+.webtoon-score__img {
   margin-right: 5px;
   position: relative;
   bottom: -1px;
+}
+
+.webtoon-badge {
+  display: flex;
+  align-items: center;
+}
+
+.webtoon-badge__waitfree-badge {
+  width: 16px;
+}
+
+.webtoon-badge__free-badge {
+  width: 30px;
 }
 
 .webtoon-info {
