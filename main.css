@@ -19,62 +19,35 @@
 }
 /*1. 헤더 세팅*/
 .header{
-    top:0px; /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
+    top:0px; 
+    /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
     background-color: var(--main-white);
     position: sticky;
+    width: 100vw;
+    height: 10rem;
 }
 .head, .navbar__menu{
     display: flex;
-    margin: 0 20%;
+    width: 50%;
+    height: 5rem;
+    margin: 0 auto;
     background-color: var(--main-white);
     justify-content: center;
-    
+    justify-content: space-between;
 }
 
 .item{
-    padding: 40px;
-    width: var(--width);
-    background-color: var(--main-white);
-    position: relative;
-}
-/*검색창 세팅*/
-.search{
-   display: flex;
-   background-color: var(--main-white);
-   margin-left: 200px;
-   padding-left: 100px;
-   position: relative;
+    background-color: beige;
+    padding-top: 2rem;
 }
 
-.searchborder{
-    position: relative;
-    width: 200px;
-    height: 30px;
-    border-radius: 15px;
-    border-color: #999999;
-    border: 1px solid;
-}
+/*검색창*/
 #searchInput{
-    margin-left: 10px;
-    position: absolute;
-    width: 150px;
-    height: 30px;
-    border-color: none;
+    border: 1px solid #999999;
+    border-radius: 15px;
 }
-.search i{
-    position: absolute;
-    margin-left: 170px;
-    padding-top: 8px;
-    color: #898989;
-}
-/*stage 세팅*/
-.stage{
-    padding-left: 30px;
-    padding-right: 0;
-}
-
 .stage img{
-    width: 60%;
+    width: 5rem;
 }
 /*로그인 세팅*/
 .user{
@@ -92,50 +65,20 @@ a{
 }
 
 .navbar__menu li{
-    padding: 20px;
-    width: var(--width);
+    padding: 2rem 1rem 0 1rem;
     background-color: pink;
     cursor: pointer;
     list-style: none;
     font-size: var(--largefont);
     text-align: center;
 }
-.underhead{
-    position: absolute;
-    margin: 0 auto;
-}
-/*3. 장르 */
-/* .contents__genre{
-    background-color: blue;
-    margin: 20px 20%;
-    width: 60%;
-    padding: 30px;
-    display: flex;
-    justify-content: space-around; 
-    justify-content: center;
-    
-}
-
-.contents__genre li{
-    padding: 15px 33px;
-    display: inline;
-    background-color: pink;
-    cursor: pointer;
-    list-style: none;
-    font-size: 20px;
-    text-align: center;
-   
-} */
-
-.contents__genre a{
-    color: var(--background-color);
-}
 
 /* 4. 배너 */
 .banner{
     width: 60%;
-    height: 90rem;
+    height: 80rem;
     background-color: red;
+    margin: 0 auto;
 }
 
 
