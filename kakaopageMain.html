@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="kakaopageMain.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+<body>
+    <div class="headerAndNavWrap">
+        <header>
+            <div class="headerLeft">
+                <h2 class="title">kakaopage</h2>
+            </div>
+            <div class="headerRight">
+                <div class="searchBarWrap">
+                    <div class="searchBar">
+                        <input class="searchInput"></input>
+                        <button class="searchBtn">
+                            <img src="/FE/FE01-html/images/검색 버튼.png" alt="" class="magnifyingGlass">
+                        </button>
+                    </div>
+                </div>
+                <div class="headerButtonWrap">
+                    <a class="stage" href="https://pagestage.kakao.com/free">
+                        <img src="/FE/FE01-html/images/스테이지.svg" alt="" class="stage">
+                    </a>
+                    <a class="chargeCash">캐시충전</a>
+                    <div class="slash">|</div>
+                    <a class="logIn">로그인</a>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="navWrap">
+                <a href="https://page.kakao.com/main" class="homeWrap">
+                    <image src="/FE/FE01-html/images/홈.svg" class="home"></image>
+                </a>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=10000" class="webtoonWrap">
+                    <img src="/FE/FE01-html/images/웹툰_만화.svg" alt="" class="webtoonNav">
+                </a>
+                <a href="https://page.kakao.com/main?categoryUid=11&subCategoryUid=11000" class="webNovelWrap">
+                    <img src="/FE/FE01-html/images//웹소설_장르.svg" alt="" class="webNovelNav">
+                </a>
+                <a href="https://page.kakao.com/main?categoryUid=21&subCategoryUid=21000" class="movieWrap">
+                    <img src="/FE/FE01-html/images/영화.svg" alt="" class="movieNav">
+                </a>
+                <a href="https://page.kakao.com/main?categoryUid=22&subCategoryUid=22000" class="broadcastWrap">
+                    <img src="/FE/FE01-html/images/예능_드라마.svg" alt="" class="broadcastNav">
+                </a>
+                <a href="https://page.kakao.com/main?categoryUid=16&subCategoryUid=16000" class="bookWrap">
+                    <img src="/FE/FE01-html/images/책.svg" alt="" class="bookNav">
+                </a>
+            </div>
+        </nav>
+
+    </div>
+    <div class="section">
+        <div class="webtoonGenreBar">
+            <div class="genreHome">
+                <a href="" class="homeLink">홈</a>
+            </div>
+            <div class="weekday">
+                <a href="" class="weekDayLink">요일연제</a>
+            </div>
+            <div class="webtoon">
+                <a href="" class="weekDayLink">웹툰</a>
+            </div>
+            <div class="boy">
+                <a href="" class="boyLink">소년</a>
+            </div>
+            <div class="drama">
+                <a href="" class="dramaLink">드라마</a>
+            </div>
+            <div class="romance">
+                <a href="" class="romanceLink">로맨스</a>
+            </div>
+            <div class="romanticFantasy">
+                <a href="" class="romanticFantasyLink">로판</a>
+            </div>
+            <div class="action">
+                <a href="" class="actionLink">액션무협</a>
+            </div>
+            <div class="bl">
+                <a href="" class="blLink">BL</a>
+            </div>
+
+        </div>
+        <div class="event">
+            <div class="eventSlide">
+                <div class="eventSlideInfo">
+                    <div class="slideMoveBtn">
+                        <img src="/FE/FE01-html/images/previous button.svg" alt="">
+                        <img src="/FE/FE01-html/images/next button.svg" alt="">
+                    </div>
+                    <div class="eventTitle">에스티오</div>
+                    <div class="eventInfoWrap">
+                        <div class="eventLeft">
+                            <div class="eventStatusWrap">
+                                <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt="" class="eventStatus">
+                            </div>
+                            <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
+                            <div class="eventGenreInfo">웹툰</div>
+                            <div class="eventSlash">|</div>
+                            <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt="" class="readCountEvent">
+                            <div class="eventFollow">31.3만명</div>
+                        </div>
+                        <div class="eventRight">
+                            <div class="eventPageNum">1</div>
+                            <div class="eventPageTotalNum">/3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgCopyWrap">
+                <div class="imgCopy">확인하러 가기</div>
+            </div>
+        </div>
+        <div class="eventButtons">
+            <div class="todayUp">
+                <div class="todayUpCopy">오늘 UP</div>
+                <div class="countNew">185</div>
+            </div>
+            <div class="todayNew">
+                <div class="todayNewCopy">오늘 신작</div>
+                <div class="countNew">10</div>
+            </div>
+
+            <div class="original">
+                <div class="originalCopy">오리지널</div>
+                <div class="countNew">2,322</div>
+            </div>
+            <div class="straightRun">
+                <div class="straightRunCopy">완결까지 정주행</div>
+            </div>
+            <div class="independence">
+                <div class="independenceCopy">독립운동가 웹툰</div>
+            </div>
+            <div class="todayLanking">
+                <div class="todayLankingCopy">오늘랭킹</div>
+                <div class="countNew">1위</div>
+            </div>
+        </div>
+        <!-- <div class="waitForFreeWebtoon">
+            <div class="waitFreeTop contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">기다리면 무료 웹툰</div>
+                    <div class="countwaitFreeWebtoon sectionCount">(3,526)</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="contentWrap">
+                <div class="content">
+                    <div class="contentImageWrap">
+                        <img src="/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png" class="contentImage">
+                        <img src="/FE/FE01-html/images/기다리면 무료.png" alt=""
+                            class="contentImageStatus waitFreeImageStatus">
+                    </div>
+                    <div class="contentDetailWrap">
+                        <div class="status">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="statusIcon">
+                            <div class="contantTitle">에스티오</div>
+                        </div>
+
+                        <div class="synopsis">날 부른게... 당신입니까?</div>
+                        <div class="followAndCreator">
+                            <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="readCount">
+                            <div class="follow">30.8만명</div>
+                            <div class="contentSlash">|</div>
+                            <div class="creator">탱커,뿡빠, 공든탑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="contentImageWrap">
+                        <img src="/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png" class="contentImage">
+                        <img src="/FE/FE01-html/images/기다리면 무료.png" alt=""
+                            class="contentImageStatus waitFreeImageStatus">
+                    </div>
+                    <div class="contentDetailWrap">
+                        <div class="status">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="statusIcon">
+                            <div class="contantTitle">에스티오</div>
+                        </div>
+
+                        <div class="synopsis">날 부른게... 당신입니까?</div>
+                        <div class="followAndCreator">
+                            <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="readCount">
+                            <div class="follow">30.8만명</div>
+                            <div class="contentSlash">|</div>
+                            <div class="creator">탱커,뿡빠, 공든탑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="contentImageWrap">
+                        <img src="/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png" class="contentImage">
+                        <img src="/FE/FE01-html/images/기다리면 무료.png" alt=""
+                            class="contentImageStatus waitFreeImageStatus">
+                    </div>
+                    <div class="contentDetailWrap">
+                        <div class="status">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="statusIcon">
+                            <div class="contantTitle">에스티오</div>
+                        </div>
+
+                        <div class="synopsis">날 부른게... 당신입니까?</div>
+                        <div class="followAndCreator">
+                            <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="readCount">
+                            <div class="follow">30.8만명</div>
+                            <div class="contentSlash">|</div>
+                            <div class="creator">탱커,뿡빠, 공든탑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="contentImageWrap">
+                        <img src="/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png" class="contentImage">
+                        <img src="/FE/FE01-html/images/기다리면 무료.png" alt=""
+                            class="contentImageStatus waitFreeImageStatus">
+                    </div>
+                    <div class="contentDetailWrap">
+                        <div class="status">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="statusIcon">
+                            <div class="contantTitle">에스티오</div>
+                        </div>
+
+                        <div class="synopsis">날 부른게... 당신입니까?</div>
+                        <div class="followAndCreator">
+                            <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="readCount">
+                            <div class="follow">30.8만명</div>
+                            <div class="contentSlash">|</div>
+                            <div class="creator">탱커,뿡빠, 공든탑</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="slideAd">
+            <div class="slideBtn">
+                <img src="/FE/FE01-html/images/ic-paging-back-nor.svg" alt="">
+            </div>
+            <img src="/FE/FE01-html/images/pkJfplo35eZ6KPVd803O11.jpg" alt="" class="slideAdImg">
+            <div class="slideBtn">
+                <img src="/FE/FE01-html/images/ic-paging-next-nor.svg" alt="">
+            </div>
+        </div>
+        <div class="weekdayTop">
+            <div class="weekdayTopTop contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">기다리면 무료 웹툰</div>
+                    <div class="countwaitFreeWebtoon sectionCount">(3,526)</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="weekdayTopWeekInfo">
+                <div class="monday">월</div>
+                <div class="tuesday">화</div>
+                <div class="wendesday">수</div>
+                <div class="thursday">목</div>
+                <div class="friday">금</div>
+                <div class="saturday">토</div>
+                <div class="sunday">일</div>
+                <div class="theEnd">완결</div>
+            </div>
+            <div class="weekdayContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="expectedWebtoon">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">기다리면 무료 웹툰</div>
+                    <div class="countwaitFreeWebtoon sectionCount">(3,526)</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="expectToonContentWrap">
+                <div class="event expectToonContentWRapper">
+                    <div class="eventSlide expectToonContent">
+                        <div class="eventSlideInfo expectToonInfo">
+                            <div class="eventTitle expectToonTitle">에스티오</div>
+                            <div class="eventInfoWrap expectToonInfoWrap">
+                                    <div class="eventStatusWrap ">
+                                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt="" class="eventStatus expectStatus">
+                                    </div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock expectToonClock"></img>
+                                    <div class="eventGenreInfo">웹툰</div>
+                                    <div class="eventSlash expectToonSlash">|</div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt="" class="readCountEvent readCountExpectToon">
+                                    <div class="eventFollow">31.3만명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgCopyWrap expectToonCopyWrap">
+                        <div class="imgCopy">확인하러 가기</div>
+                    </div>
+                </div>
+                <div class="event expectToonContentWRapper">
+                    <div class="eventSlide expectToonContent">
+                        <div class="eventSlideInfo expectToonInfo">
+                            <div class="eventTitle expectToonTitle">에스티오</div>
+                            <div class="eventInfoWrap expectToonInfoWrap">
+                                    <div class="eventStatusWrap ">
+                                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt="" class="eventStatus expectStatus">
+                                    </div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock expectToonClock"></img>
+                                    <div class="eventGenreInfo">웹툰</div>
+                                    <div class="eventSlash expectToonSlash">|</div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt="" class="readCountEvent readCountExpectToon">
+                                    <div class="eventFollow">31.3만명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgCopyWrap expectToonCopyWrap">
+                        <div class="imgCopy">확인하러 가기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">로맨스 TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">로판 TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">드라마 TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">BL/GL TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">소년 TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genreTop">
+            <div class="contentTop">
+                <div class="copyAndCount">
+                    <div class="waitFreeWebtoonCopy sectionTitle">액션 TOP</div>
+                </div>
+                <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
+            </div>
+            <div class="toonContentWrap">
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+                <div class="toonContent">
+                    <div class="toonContentTop">
+                        <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
+                    </div>
+                    <div class="contentLank">
+                        <div class="contentLankInfo">1위</div>
+                        <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+                    </div>
+                    <div class="contentTitle">웹툰 제목</div>
+                    <div class="contentInfo">
+                            <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+                        <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+                        <span class="contentFollow">28.8만명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="waitForFreeVod"></div>
+        <div class="broadcastHotpick"></div>
+        <div class="movie"></div>
+        <div class="recommendEvent"></div>
+    </div>
+    <!-- <footer></footer> -->
+</body>
+
+</html>
