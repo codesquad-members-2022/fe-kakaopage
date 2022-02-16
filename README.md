@@ -1,102 +1,44 @@
 # fe-kakaopage
 
+# 다른 사람 pr 엿보기
+
+- [ ] calc
+- [ ] stacking context
+- [ ] 구분하는 주석 표시도 좋네요.
+- [ ] 자주 쓰는 애들 class 묶기: flex center, box-sizing,
+- [ ] vw가 %단위 대비 상대적으로 가진 장점
+- [ ] rem vs em 차이
+- [ ] vsc - live sass compiler
+- [ ] 웹폰트?
+- [ ] css is 함수
+
 # 목표
 
-- 미션을 수행하기 위해 필요한 git 관련 지식 정리
-- 브라우저 동작원리 정리( + 웹 접근성)
-- 기획서도 고려해서 미션1을 설계하기
-- 용도에 맞는 tag 사용하기
-- flexbox, grid 사용법 정리
-- css 캐스캐이딩, 상속, selector 정리
-- 객체지향을 생각해서 viewer와 js부분을 구분해보기
-- DOM, Event, Templating 이 무엇인지, 동작방법, 동적기능 이해
+- spa 방식으로 해보기
+- template, logic 분리
+- scss 사용 -> [참고](https://ossam5.tistory.com/90)
 
-# git 사용법 정리
+# 진행 순서
 
-✅ Done
+## 큰 흐름
 
-- 간단한 명렁어들
-  - git config
-  - git init
-- commit 작성법 및 약속 정리
-- repository 관련 정리:
-  - clone vs fork
-  - fetch vs pull
-  - upstream / downstream
+- nested router 어느 깊이까지 도달할지
+- spa로 만들기(css폴더, 및 static유지)
+- css -> scss
+- static 소스 관리
+- 더미 데이터로 만들기
 
-❗️ Not yet
+## 구체적인 방향
 
-- branch -> 미션1PR 이후 정리할 예정
-  - rebase vs merge
+- js html탬플릿 만들어서 viewer분리
 
-# css convention 정리
+  - body#id로 가져올까하다가 header, main(main도 구분해서) 미리 표시될 수 있게하기
+  - 유튜브 로딩될 때 회색 화면 마냥
 
-BEM 방식 사용
+- nested router
 
-- Block, element, modifier
-- c- (Component): 독립형 구성 요소에 대한 외관 포함
-- l- (Layout): 외관 없이 구성 요소를 배치하고 레이아웃을 구성하는 데 사용
-- 구성 요소에 여러 수준의 하위 요소가 있는 경우 클래스 이름에 각 수준을 나타내지 않기(구조의 깊이를 전달하지 않는다.)
+  - 카카오 페이지는 주소의 파라피터가 변경되는 식임.
+  - https://page.kakao.com/main?`categoryUid`=10&`subCategoryUid`=10000
+  - 아래 요일 연재는 라우팅없이 ui만 변경됨.
 
-# Mission - 카카오페이지 클론
-
-## 목표
-
-- 코드쓰기 전에 어떻게 묶을지 색깔로 표시하기
-- css 적용할 거 생각해서 html tag 묶기
-- 정적 html, css화면만 구성
-
-# 고민
-
-❓ [x] 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
-
-![스크린샷 2022-02-14 오후 11 34 12](https://user-images.githubusercontent.com/71386219/153883813-ac766d7b-ef76-43c2-a275-efaaaadceca2.png)
-
-❓ [x] 커밋 메세지를 얼마나 세분화해야하는지
-
-- 아무리 작아도 주제가 구분되면 구분해서 커밋해야하나? 예를 들어, 미션목표정하기 -> html 구조짜기
-- ✅ commit convention에 따라 커밋
-
-❓ [x] css convetion
-
-- ✅ naming -> convention 정리
-- naming: `main__carousel__button` vs `main__carousel > button`
-- BEM 규칙을 적용하여 하위 요소는 클래스 이름에 포함하지 않도록 한다.
-- 깊이가 깊은 하위 요소를 표현하기에 BEM이 불편하다. 다른 방법론도 공부해봐야겠다. ->✅ 공통되는 요소는 묶어서 이름지어 따로 관리
-
-```css
-/* 기존 */
-main__carousel__img-container__text-container
-/* 수정 */
-carousel__img-container
-carousel__text-container
-```
-
-❓ [ ] flexbox 남용?
-
-- flexbox가 중복되는 부분이 많은데 어떻게 줄일 수 있을까? 팀원들이랑 고민을 공유했는데 궁금증이 해결되지 않았음.
-
-❓ [ ] css, html은 리팩토링 어떻게하지
-
-- 그냥 중복코드만 줄이면 될려나
-
-❓ [x] internal, external css 장단점
-
-- 선택자 우선순위, 적용 우선순위 공부하기
-
-- reset.css를 external로 하는게 좋을까 internal로 하는게 좋을까?
-- 다운로드해야할 소스가 많아진다면 애초에 html에 삽입하는게 좋을까?
-- ✅ 일단 reset.css로 분리하여 external로 관리
-
-# html 구조짜기 및 간단한 네이밍
-
-![이미지-1](https://user-images.githubusercontent.com/71386219/153881920-aa848f63-bb26-48c7-b39c-a000ceac688d.jpg)
-
-# Refactoring
-
-- [x] readme 작성
-- [ ] class 이름 중복되는거 줄이기
-- 디테일한 부분 수정하기
-  - [x] 노란 점 위치
-  - [x] 이벤트 grid의 노란 숫자 표시
-  - [x] 헤더 고정
+- carousel vanilla로 구현하기
