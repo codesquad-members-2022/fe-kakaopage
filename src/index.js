@@ -1,6 +1,13 @@
 const navGenre = document.querySelector(".main__navGenre");
-import { handleNavGenre } from "./genreNav.js";
+import { renderContents } from "./core.js";
+import { handleNavGenre } from "./navigation.js";
+import { route } from "../constants.js";
 
-[...navGenre.children].forEach((node) => {
-  node.addEventListener("click", handleNavGenre);
-});
+const init = () => {
+  renderContents(route.HOME);
+  [...navGenre.children].forEach((node) => {
+    node.addEventListener("click", handleNavGenre);
+  });
+};
+
+init();

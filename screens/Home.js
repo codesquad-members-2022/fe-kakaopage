@@ -80,15 +80,15 @@ const Home = () => {
       </div>
     </div>
     <div class="contents__body">
-      <ul class="contents__bodyNav">
-        <li>월</li>
-        <li>화</li>
-        <li>수</li>
-        <li>목</li>
-        <li>금</li>
-        <li>토</li>
-        <li>일</li>
-        <li>완결</li>
+      <ul class="contents__daysNav">
+        <li data-days="mon" data-series-end="false">월</li>
+        <li data-days="tue" data-series-end="false">화</li>
+        <li data-days="wed" data-series-end="false">수</li>
+        <li data-days="thu" data-series-end="false">목</li>
+        <li data-days="fri" data-series-end="false">금</li>
+        <li data-days="sat" data-series-end="false">토</li>
+        <li data-days="sun" data-series-end="false">일</li>
+        <li data-series-end="true">완결</li>
       </ul>
       <ul class="contentsCard">
         <li class="card">
