@@ -124,13 +124,9 @@ a:hover {
   color: black;
 }
 
-.category {
-  margin: 0 auto;
-}
-
 .nav {
   padding-left: 0;
-  height: 69px;
+  height: 37px;
 }
 
 .nav-btn-container {
@@ -141,13 +137,66 @@ a:hover {
   display: block;
   height: fit-content;
   overflow: scroll;
-  margin-top: 167px;
+  margin-top: 146px;
 }
 
 .banner {
   margin: 20px auto;
   width: 720px;
   height: 480px;
+}
+
+.banner__icon {
+  background-image: url("https://static-page.kakao.com/static/pc/badge-bigthum-new.svg?ffdef148078f601fa45da8b0ab56d834");
+  background-size: cover;
+  width: 55px;
+  height: 22px;
+  margin-top: 3px;
+}
+
+.banner__icon2 {
+  background-image: url("https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858");
+  background-size: cover;
+  width: 18px;
+  height: 20px;
+  margin: 4px 5px 0 5px;
+}
+
+.banner__category {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.banner__block-icon {
+  width: 2px;
+  height: 16px;
+  background-image: url("https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea");
+  background-size: cover;
+  margin: 7px 3px 0 3px;
+}
+
+.banner__views-icon {
+  width: 16px;
+  height: 20px;
+  background-image: url("https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e");
+  background-size: cover;
+  margin: 4px 5px 0 5px;
+}
+
+.banner__views {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.banner-title {
+  position: relative;
+  bottom: 160px;
+  left: 10px;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .slide {
@@ -183,26 +232,33 @@ a:hover {
   height: 40px;
 }
 
-.ad {
+.banner__ad {
   background-color: #ffd200;
   height: 40px;
 }
 
-.banner-progress {
+.banner__progress {
   position: relative;
-  bottom: 60px;
-  left: 520px;
+  bottom: 155px;
+  left: 400px;
+  font-size: 20px;
+  opacity: 0.6;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.banner-info-container {
+.banner__info-container {
   position: relative;
-  bottom: 60px;
+  bottom: 155px;
   left: 10px;
+  height: fit-content;
 }
 
-.text {
+.banner__ad-text {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 6px;
+  font-size: 18px;
+  color: #222222;
 }
 
 .btn-container {
