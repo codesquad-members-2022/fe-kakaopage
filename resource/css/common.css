@@ -50,7 +50,7 @@ common
     position: absolute;
     bottom: 60px;
     right: 20px;
-    font-size: 20px;
+    font-size: var(--font-size-XL);
     color: #fff;
     opacity: 0.6;
 }
@@ -200,7 +200,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: var(--font-size-L);
     color: var(--color-gray);
 }
 .header__user-service:not(:first-child) {
@@ -241,7 +241,7 @@ gnb
 }
 .gnb__item {
     flex: 1 1 auto;
-    font-size: 18px;
+    font-size: var(--font-size-L);
     text-align: center;
 }
 .gnb__link {
@@ -286,7 +286,7 @@ category
 }
 .category__link {
     display: block;
-    font-size: 20px;
+    font-size: var(--font-size-XL);
     color: rgb(187, 187, 187);
     line-height: 67px;
 }
@@ -314,11 +314,11 @@ banner
     font-size: 28px;
 }
 .main-banner__tags {
-    font-size: 20px;
+    font-size: var(--font-size-XL);
 }
 .main-banner__status {
     padding: 0 5px;
-    font-size: 16px;
+    font-size: var(--font-size-M);
     line-height: 20px;
     border-radius: 3px;
 }
@@ -352,7 +352,7 @@ section-title
     justify-content: space-between;
 }
 .section__title {
-    font-size: 20px;
+    font-size: var(--font-size-XL);
     font-weight: 500;
 }
 .section__more-button {
@@ -367,7 +367,7 @@ section-title
     background: url('../images/common/ico-more-gray.svg') no-repeat right center / auto 14px;
 }
 .section__work-number {
-    font-size: 14px;
+    font-size: var(--font-size-S);
     color: var(--color-gray);
 }
 
@@ -397,7 +397,7 @@ section-title
 }
 .work__reader {
     padding-left: 15px;
-    font-size: 14px;
+    font-size: var(--font-size-S);
     color: var(--color-gray);
     background: url('../images/common/icon-user_gray.png') no-repeat left center / auto 11px;
 }
@@ -410,10 +410,10 @@ section-title
     bottom: 40px;
 }
 .new-work__title {
-    font-size: 18px;
+    font-size: var(--font-size-L);
 }
 .new-work__tags {
-    font-size: 14px;
+    font-size: var(--font-size-S);
 }
 .new-work__status {
     padding: 0 3px;
@@ -475,11 +475,11 @@ section-title
     background: url('../images/common/ico-clock_yellow.png') no-repeat center / 26px auto;
 }
 .section-rank__work-info {
-    font-size: 14px;
+    font-size: var(--font-size-S);
     color: var(--color-gray);
 }
 .section-rank__title {
-    font-size: 16px;
+    font-size: var(--font-size-M);
     color: var(--color-black);
 }
 .section-rank__description {
