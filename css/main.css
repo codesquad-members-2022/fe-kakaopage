@@ -2,10 +2,7 @@
 
 main {
     margin-top: 167px;
-    display: flex;
-    justify-content: center;
 }
-
 .genre-nav {
     display: flex;
     background-color: white;
@@ -48,7 +45,11 @@ main {
     font-size: 14px;
 }
 .contents-wrapper {
+    width: inherit;
     margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .day-nav {
     margin-top: 15px;
@@ -65,4 +66,39 @@ main {
 .day-nav__item--selected {
     border-bottom: 2px solid #ffd200;
     color: #333;
+}
+
+.event-slide {
+    position: relative;
+}
+.event-img {
+    width: 678px;
+    height: 339px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.event-img img {
+    width: 100%;
+    height: auto;
+}
+.event-section-controller {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    bottom: 27px;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.5;
+}
+.event-section-prevBtn {
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.event-section-nextBtn {
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
 }
