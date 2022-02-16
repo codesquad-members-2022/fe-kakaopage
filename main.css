@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-.list-style--none {
+li {
   list-style: none;
 }
 
@@ -28,7 +28,7 @@ body {
   align-items: center;
 }
 
-.margin-right--auto {
+.mr--auto {
   margin-right: auto;
 }
 
@@ -129,19 +129,19 @@ main {
   font-weight: 600;
 }
 
-.left-top {
+.category-button:nth-child(1) {
   border-top-left-radius: 10px;
 }
 
-.right-top {
+.category-button:nth-child(3) {
   border-top-right-radius: 10px;
 }
 
-.left-bottom {
+.category-button:nth-child(4) {
   border-bottom-left-radius: 10px;
 }
 
-.right-bottom {
+.category-button:nth-child(6) {
   border-bottom-right-radius: 10px;
 }
 
