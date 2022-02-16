@@ -11,15 +11,11 @@
   --main-carousel-heigth: 480px;
 }
 
-.l-header {
-  --yellow: #fbbc17;
-}
-
 .c-category {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .c-category__index {
