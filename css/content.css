@@ -1,0 +1,20 @@
+.content-wrapper {
+    display: flex;
+}
+.conent-vertical-small {
+    flex-direction: column;
+}
+.thumbnail {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.thumbnail-img {
+
+}
+.content-title {
+    color: #333;
+    font-size: 16px;
+}
+.content-reader {
+
+}
