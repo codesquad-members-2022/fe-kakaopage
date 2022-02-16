@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webtoon.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+</head>
+<body>
+    <header class="header">
+            <div class="header__tittle-wrapper">
+                <h1>Kakaopage</h1>
+                <div class="header__button-wrapper">
+                    <div class="header__search-wrapper">
+                        <input type="text" class="header__search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="header__button">Stage</button>
+                    <button class="header__button">캐시충전</button>
+                    <button class="header__button">로그인</button>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-lists">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">웹툰 ・
+                        <i class="fas fa-solid fa-clock"></i>
+                    </a></li>
+                    <li><a href="#">웹소설 ・
+                        <i class="fas fa-solid fa-clock"></i>
+                    </a></li>
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">방송</a></li>
+                    <li><a href="#">책</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!-- header -->
+    <nav class="nav">
+        <ul class="nav__lists">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">요일연재</a></li>
+            <li><a href="#">웹툰</a></li>
+            <li><a href="#">소년</a></li>
+            <li><a href="#">드라마</a></li>
+            <li><a href="#">로맨스</a></li>
+            <li><a href="#">로판</a></li>
+            <li><a href="#">액션무협</a></li>
+            <li><a href="#">BL</a></li>
+        </ul>
+    </nav>
+    <!-- nav -->
+    <div class="aside__banner-wrapper">
+        <aside class="aside__banner">
+            <i class="fas fa-chevron-circle-left" id="left-icon"></i>
+            <i class="fas fa-chevron-circle-right" id="right-icon"></i>
+            <img src="./images/웹툰 _ 롱리브더킹 7타 _ 10-21.png" alt="image">
+            <div class="aside__banner-tittle-wrapper">
+                <br>
+                <h3 class="aside__banner-tittle">롱리브더킹</h3>
+            </div>
+            <div class="aside__banner-lists-wrapper">
+                <ul class="aside__banner-lists">
+                    <li><i class="fas fa-solid fa-clock">웹툰</i></li>
+                    <li><i class="fas fa-user-alt">30.5만명</i></li>
+                </ul>
+            </div>
+            <div class="aside__banner-footer"><p>어쩌고 저쩌고</p></div>
+        </aside>
+    </div>
+    <!-- banner -->
+    <nav class="nav__weekdays">
+        <ul class="nav__weekdays-lists">
+            <li class="nav__weekdays-list active"><a href="#">월</a></li>
+            <li class="nav__weekdays-list"><a href="#">화</a></li>
+            <li class="nav__weekdays-list"><a href="#">수</a></li>
+            <li class="nav__weekdays-list"><a href="#">목</a></li>
+            <li class="nav__weekdays-list"><a href="#">금</a></li>
+            <li class="nav__weekdays-list"><a href="#">토</a></li>
+            <li class="nav__weekdays-list"><a href="#">일</a></li>
+            <li class="nav__weekdays-list"><a href="#">완결</a></li>
+        </ul>
+    </nav>
+    <!-- weekdays/nav-weekdays 재사용 -->
+    <article class="article__webtoon-row">
+        <div class="article__webtoon-row-inner">
+            <ul class="article__webtoon-row-lists">
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+                <li class="article__webtoon-row-list">
+                    <div class="article__webtoon-row-img-wrapper">
+                        <img src="./images/row.png" alt="">
+                    </div>
+                    <div class="article__webtoon-row-text-wrapper">
+                        <h3 class="article__webtoon-row-tittle">
+                            제목
+                        </h3>
+                        <p class="article__webtoon-row-text">천천히 치유되는 그날의 상처</p>
+                        <p class="article__webtoon-row-text">1.3만명</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>
