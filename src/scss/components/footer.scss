@@ -1,0 +1,52 @@
+.footer {
+  padding: 16px 0 40px;
+  font-size: 0.875rem;
+  line-height: 2;
+  text-indent: 4px;
+  color: $gray-5;
+  background: $gray-2;
+  a {
+    color: $gray-5;
+  }
+
+  &__inner {
+    position: relative;
+    margin: 0 auto;
+    width: 720px;
+  }
+
+  &__download-app-link {
+    margin: 0 0 40px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: $gray-9;
+    font-size: 1.125rem;
+    background: $yellow;
+    a {
+      display: block;
+      color: $gray-9;
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__company-info-summary {
+    cursor: pointer;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__ok-mark {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
+}

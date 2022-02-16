@@ -1,0 +1,15 @@
+body {
+  background: $gray-2;
+  color: $gray-9;
+
+  &::before {
+    content: '';
+    display: block;
+    clear: both;
+    height: 148px;
+  }
+}
+
+img {
+  width: 100%;
+}

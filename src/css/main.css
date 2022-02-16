@@ -1,0 +1,113 @@
+*, :after, :before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html { overflow-y: scroll; }
+
+body { margin: 0; font-size: 1em; line-height: 1.5; height: 100%; font-family: sans-serif; }
+
+html, h1, h2, h3, h4, h5, h6, form, fieldset { margin: 0; padding: 0; border: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+header ul, nav ul, footer ul { margin: 0; padding: 0; list-style: none; }
+
+legend { position: absolute; font-size: 0; line-height: 0; text-indent: -9999em; overflow: hidden; }
+
+label, input, button, select { vertical-align: middle; }
+
+input, button { margin: 0; padding: 0; font-size: 1em; }
+
+button, input[type='submit'] { cursor: pointer; }
+
+button { padding: 0; border: none; font: inherit; color: inherit; background-color: transparent; cursor: pointer; }
+
+button:focus { outline: none; }
+
+input[type='checkbox'], input[type='text'], input[type='tel'], input[type='password'], input[type='submit'], input[type='image'], button, select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+input[type='text'], input[type='tel'], input[type='password'], textarea, select { outline: none; }
+
+textarea, select { font-size: 1em; }
+
+select::-ms-expand { display: none; }
+
+textarea { resize: none; border-radius: 0; -webkit-appearance: none; }
+
+p { margin: 0; padding: 0; word-break: break-all; }
+
+hr { display: none; }
+
+pre { overflow-x: scroll; font-size: 1.1em; }
+
+a:link, a:visited { text-decoration: none; }
+
+ul, li, dl, dt, dd { padding: 0; margin: 0; }
+
+ul, li { list-style: none; }
+
+strong { font-weight: bold; }
+
+body { background: #e9ecef; color: #212529; }
+
+body::before { content: ''; display: block; clear: both; height: 148px; }
+
+img { width: 100%; }
+
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1010; background: #fff; }
+
+.header__inner { margin: 0 auto; padding: 24px 0; width: 720px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.header__logo { width: 130px; height: 29px; }
+
+.header__search-form { margin: 0 0 0 132px; width: 186px; height: 33px; font-size: 1rem; border: 1px solid #ced4da; border-radius: 24px; background: #fff; }
+
+.header__search-input { margin: 0 0 0 12px; width: 136px; height: 31px; border: none; background: none; }
+
+.header__search-submit { width: 20px; height: 20px; }
+
+.header__link-box { margin: 3px 0 0 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.header__link--img { margin-right: 24px; width: 62px; height: 26px; }
+
+.header__link--txt { font-size: 1.125rem; color: #868e96; height: 26px; }
+
+.header__link-divider { margin: 6px 12px 0; width: 1px; height: 12px; background: #adb5bd; }
+
+.footer { padding: 16px 0 40px; font-size: 0.875rem; line-height: 2; text-indent: 4px; color: #adb5bd; background: #e9ecef; }
+
+.footer a { color: #adb5bd; }
+
+.footer__inner { position: relative; margin: 0 auto; width: 720px; }
+
+.footer__download-app-link { margin: 0 0 40px; height: 70px; line-height: 70px; text-align: center; color: #212529; font-size: 1.125rem; background: #ffd200; }
+
+.footer__download-app-link a { display: block; color: #212529; }
+
+.footer__links { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.footer__company-info-summary { cursor: pointer; }
+
+.footer__company-info-summary a { text-decoration: underline; }
+
+.footer__ok-mark { position: absolute; top: 110px; right: 0; }
+
+.footer__ok-mark img { width: 55px; height: 55px; }
+
+.gnb { position: fixed; top: 81px; left: 0; right: 0; z-index: 1010; padding: 20px 0 16px; border-bottom: 1px solid #dee2e6; background: #fff; }
+
+.gnb__inner { margin: 0 auto; width: 720px; }
+
+.gnb__list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.gnb__item { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0 38px; font-size: 1.25rem; cursor: pointer; }
+
+.gnb__item img { width: 18px; margin: -2px 0 0; }
+
+.gnb__item--active { position: relative; }
+
+.gnb__item--active:after { content: ''; position: absolute; left: 0; right: 0; bottom: -16px; height: 3px; background: #ffd200; }
+
+.gnb__item--dot { position: relative; }
+
+.gnb__item--dot:before { content: ''; position: absolute; top: -4px; right: 25%; width: 6px; height: 6px; border-radius: 10px; background: #ffd200; }
