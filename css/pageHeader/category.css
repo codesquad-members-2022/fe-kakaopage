@@ -1,4 +1,4 @@
-.page-header-container:last-child {
+.page-header__container:last-child {
   height: 70px;
   width: 100%;
   border-bottom: 1px #dfdfdf solid;
@@ -9,23 +9,23 @@
   height: 100%;
 }
 
-.page-header-category ul {
+.page-header-category__container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
 }
 
-.page-header-category li {
+.page-header-category__container li {
   padding-top: 30px;
   padding-bottom: 15px;
   border-bottom: 3px solid #fff;
 }
 
-.page-header-category li:nth-of-type(2) {
+.page-header-category__container li:nth-of-type(2) {
   border-bottom: 3px solid var(--yellow);
 }
 
-.page-header-category img {
+.page-header-category__container img {
   margin: 0 39px;
 }

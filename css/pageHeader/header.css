@@ -4,7 +4,7 @@
   /* margin-bottom: 18px; */
 }
 
-.page-header-container {
+.page-header__container {
   display: flex;
   width: 720px;
   height: 80px;
@@ -13,16 +13,16 @@
   align-items: center;
 }
 
-.page-header-content {
+.page-header__content {
   display: flex;
   align-items: center;
 }
 
-.page-header-content:first-child {
+.page-header__content:first-child {
   width: 130px;
 }
 
-.page-header-content:last-child {
+.page-header__content:last-child {
   width: 590px;
   justify-content: flex-end;
 }
