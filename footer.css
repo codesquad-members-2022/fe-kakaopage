@@ -28,6 +28,7 @@ footer {
 
 .footer__business .footer__business_link {
     text-decoration: underline;
+    color: #bdbdbd;
 }
 
 .footer__copyright .footer__copyright_img {
@@ -40,4 +41,27 @@ footer {
     font-size: 12px;
     text-align: center;
     color: #a8a8a8;
+}
+
+.footer__business .footer__business_info {
+    cursor: pointer;
+}
+
+.footer__business .footer__business_info::after {
+    content: '';    
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: var(--background, url(./images/icon_trace_off.png));
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+}
+
+.footer__details {
+    display: none;
+}
+
+.footer__details .footer__details_text {
+    margin-top: 7px;
 }
