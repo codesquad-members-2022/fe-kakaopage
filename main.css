@@ -108,6 +108,12 @@ h1 {
 .main-header-text {
   color: #868e96;
 }
+
+.round-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 /*========= main header nav ==========*/
 
 /*========== 웹툰 카테고리 탭 ==========*/
@@ -127,22 +133,6 @@ main {
 
   font-size: 16px;
   font-weight: 600;
-}
-
-.category-button:nth-child(1) {
-  border-top-left-radius: 10px;
-}
-
-.category-button:nth-child(3) {
-  border-top-right-radius: 10px;
-}
-
-.category-button:nth-child(4) {
-  border-bottom-left-radius: 10px;
-}
-
-.category-button:nth-child(6) {
-  border-bottom-right-radius: 10px;
 }
 
 /*========== footer ==========*/
