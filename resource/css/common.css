@@ -496,3 +496,10 @@ section-title
     margin-right: 5px;
     background: #dfdfdf;
 }
+
+/**
+추천 이벤트
+**/
+.section-recommand-event__img-wrap {
+    margin-top: 20px;
+}
