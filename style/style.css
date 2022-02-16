@@ -2,6 +2,9 @@
 @import url("header.css");
 @import url("genre-nav.css");
 @import url("carousel.css");
+@import url("main.css");
+@import url("list.css");
+@import url("footer.css");
 
 body {
 	background-color: rgba(0, 0, 0, 0.1);
@@ -12,33 +15,4 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
-}
-.main {
-	flex-direction: column;
-	display: flex;
-	align-items: center;
-}
-.main-event--form {
-	background-color: white;
-	display: flex;
-	margin-top : 10px;
-	width: 720px;
-	height: 100px;
-	justify-content: center;
-	align-items: center;
-}
-.main-event--form > .main-event--button {
-	margin: 1px;
-	border : 1px solid rgba(0, 0, 0, 0.03);
-	background-color: rgba(0, 0, 0, 0.03);
-	width: 230px;
-	height: 65px;
-	font-size: 18px;
-	font-weight: bold;
-}
-.main-event--button:first-child {
-	border-radius: 10px 0 0 10px;
-}
-.main-event--button:last-child {
-	border-radius: 0 10px 10px 0;
 }
