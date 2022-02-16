@@ -1,6 +1,8 @@
 @import "header.css";
-@import "mainContent.css";
+@import "MainBanner.css";
+@import "AdBanner.css";
 @import "reset.css";
+@import "comicsGrid.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 body{
     background: #eee;

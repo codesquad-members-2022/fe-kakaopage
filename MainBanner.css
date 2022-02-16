@@ -67,7 +67,7 @@ div.BannerBox{
     width:100%;
 
 }
-div.BannerBox>div.nextBtn{
+div.BannerBox>.nextBtn{
     position:absolute;
     top:50%;
     right:0;
@@ -117,7 +117,11 @@ div.infographic>div.page{
 div.infographic > *{
     margin-right:8px;
 }
-div.BannerBox>div.prevBtn{
+div.BannerBox>button{
+    background: none;
+    border:none;
+}
+div.BannerBox>.prevBtn{
     position:absolute;
     top:50%;
     margin-left:20px;
@@ -176,31 +180,8 @@ div.yellow{
     border-radius:13px;
     background-color:#ffd200;
 }
-div.freeComics{
-    margin-top:12px;
-    background: #FFFFFF;
-}
-div.freeComics>div.header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom:5px;
-}
-div.ifYouWait{
-    padding:20px;
-}
-div.ifYouWait>span:first-child{
-    font-size:18px;
-    font-weight:500;
-}
-div.ifYouWait>span:last-child{
-    font-size:15px;
-    opacity:0.4;
-}
-div.More{
-    padding:20px;
-    opacity:0.4;
-}
+
+
 ul.comics{
     display:flex;
     flex-direction: column;
