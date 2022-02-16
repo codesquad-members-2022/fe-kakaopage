@@ -10,7 +10,7 @@
 </head>
 <body>
   <header id="header">
-    <div class="header__container">
+    <div class="header__inner">
       <h1 id="header__logo"><a href="#"><img src="./resource/images/common/logo-kakaopage.svg" alt="kakaopage 로고"></a></h1>
       <div class="header__service-area">
         <div class="search">
@@ -29,8 +29,8 @@
   </header>
   <main id="container">
     <div class="contents">
-      <nav class="gnb-container">
-        <ul class="gnb">
+      <nav class="gnb">
+        <ul class="gnb__inner">
           <li class="gnb__item"><a href="#" class="gnb__link">홈</a></li>
           <li class="gnb__item"><a href="#" class="gnb__link on">웹툰<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
           <li class="gnb__item"><a href="#" class="gnb__link">웹소설<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
@@ -52,7 +52,7 @@
         <li class="category"><a href="#" class="category__link">BL</a></li>
       </ul>
       <div class="main-banners slider">
-        <ul class="main-banners__contents slide-container">
+        <ul class="main-banners__contents slide-wrap">
           <li class="main-banner main-banner1">
             <a href="#" class="main-banners__link">
               <div class="main-banner__img-wrap">
@@ -111,7 +111,7 @@
           <span class="slide-paging-number__all">3</span>
         </div>
       </div>
-      <div class="sub-categorise-container section">
+      <div class="section-sub-categorise">
         <ul class="sub-categories">
           <li class="sub-category"><a href="#" class="sub-category__link">오늘 UP<spn class="sub-category__number">206</spn></a></li>
           <li class="sub-category"><a href="#" class="sub-category__link">오늘 신작<spn class="sub-category__number">4</spn></a></li>
@@ -123,7 +123,7 @@
       </div>
       <div class="section section-event-banner">
         <div class="event-banner slider">
-          <ul class="event-banners__contents slide-container">
+          <ul class="event-banners__contents slide-wrap">
             <li class="event-banner event-banner1">
               <a href="#" class="event-banners__link">
                 <div class="event-banners__img-wrap">
@@ -404,5 +404,14 @@
     </div>
   </main>
   <a href="#" class="app-button"><span class="app-button__text"><em class="app-button__bold-text">카카오페이지</em> 앱으로 보기</span></a>
+  <footer id="footer">
+    <div class="footer__cont">
+      <address class="footer__address"><span class="address__section">대표자 : 이진수, 김성수</span><span>호스팅서비스사업자 : (주)카카오엔터테인먼트</span><br><span class="address__section">사업자 등록 번호 : 220-88-02594</span><span class="address__section">통신판매업신고 : 2018-성남분당B-0004</span><br><span class="address__section">대표전화 : 1644-4755</span><span class="address__section">이메일 : contact@kakaopage.com</span><br><span class="address__section">주소 : 경기도 성남시 분당구 판교역로 221</span></address>
+      <div class="footer__copyright-mark">
+        <img src="./resource/images/common/ok-mark.png" alt="저작권 OK 마크">
+        <span>저작권 ok</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

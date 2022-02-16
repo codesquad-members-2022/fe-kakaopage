@@ -22,7 +22,7 @@ common
     position: relative;
     overflow: hidden;
 }
-.slide-container {
+.slide-wrap {
     display: inline-flex;
 }
 .slide-buttons {
@@ -157,7 +157,7 @@ header
     width: 100%;
     background: #fff;
 }
-.header__container {
+.header__inner {
     display: flex;
     justify-content: space-between;
     max-width: var(--max-width);
@@ -223,7 +223,7 @@ header
 /**
 gnb
 **/
-.gnb-container {
+.gnb {
     position: fixed;
     top: var(--header-height);
     left: 0;
@@ -233,7 +233,7 @@ gnb
     border-bottom: 1px solid #dfdfdf;
     box-sizing: border-box;
 }
-.gnb {
+.gnb__inner {
     display: flex;
     width: 100%;
     max-width: var(--max-width);
