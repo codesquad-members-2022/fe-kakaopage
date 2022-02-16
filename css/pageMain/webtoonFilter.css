@@ -9,6 +9,7 @@
   font-size: 20px;
   text-align: center;
   color: #bbbbbb;
+  cursor: pointer;
 }
 
 .filter-container {
@@ -28,6 +29,7 @@
 
 .free-filter__container li {
   padding: 25px 10px;
+  cursor: pointer;
 }
 
 .free-filter__container .seperator {
