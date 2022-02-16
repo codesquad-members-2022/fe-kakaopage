@@ -108,4 +108,6 @@ img { width: 100%; }
 
 .gnb__item--active:after { content: ''; position: absolute; left: 0; right: 0; bottom: -16px; height: 3px; background: #ffd200; }
 
-.gnb__item--dot:after { margin: -2px 0 0; display: block; content: ''; width: 6px; height: 6px; border-radius: 10px; background: #ffd200; }
+.gnb__item--dot { position: relative; }
+
+.gnb__item--dot:before { content: ''; position: absolute; top: -4px; right: 25%; width: 6px; height: 6px; border-radius: 10px; background: #ffd200; }
