@@ -1,0 +1,43 @@
+.ranking-section {
+    margin-top: 15px;
+    width: 720px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ranking-section__header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width:100%
+}
+
+.ranking__title-box {
+    margin-left: 20px;
+}
+
+.ranking__title {
+    font-size: 16pt;
+}
+
+.ranking__title-num {
+    opacity: 0.5;
+}
+
+.more-btn {
+    margin-right: 20px;
+    font-size: 13pt;
+    opacity: 0.6;
+}
+
+.day-tab__container {
+    padding-top: 10px;
+    font-size: 16pt;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    width: 680px;
+    margin-bottom: 0;
+}
+
+
