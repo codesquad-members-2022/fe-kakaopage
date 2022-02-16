@@ -1,2 +1,5 @@
 import Header from "./header.js";
-const header = new Header();
+import Main from "./main.js";
+
+new Header();
+new Main();
