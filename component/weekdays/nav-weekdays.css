@@ -1,7 +1,9 @@
 .nav__weekdays {
     width: 720px;
-    height: 70px;
+    height: 65px;
     margin: 0;
+    padding: 5px 0 0 0;
+    background-color: #fff;
 }
 
 .nav__weekdays-lists {
