@@ -1,0 +1,93 @@
+/* ======== Header ======== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white-color);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 720px;
+  padding: 20px 0;
+}
+
+.header__logo {
+  text-align: left;
+  font-weight: 300;
+}
+
+.header__contents {
+  align-items: baseline;
+}
+
+.header__contents .divider {
+  height: 10px;
+}
+
+.contents__cash, .contents__login {
+  padding: 0 8px;
+  font-size: 16px;
+  color: var(--non-focus-font-color);
+}
+
+.contents__stage {
+  margin: 0 8px 0 16px;
+  padding: 0 4px;
+  background-color: var(--main-point-color);
+  font-weight: 600;
+}
+
+/* ======== search-form ======== */
+.search-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 180px;
+  height: 36px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  background-color: var(--white-color);
+}
+
+.search-form__input {
+  margin-left: 16px;
+  border: none;
+  border-radius: inherit;
+  background-color: inherit;
+}
+
+.search-form .fa-search {
+  margin-right: 20px;
+  color: var(--non-focus-font-color);
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+/* ======== nav ======== */
+.nav {
+  width: 720px;
+}
+
+.nav .fa-clock {
+  font-size: 16px;
+}
+
+.nav__item {
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 20px;
+}
+
+.nav__item--focused {
+  border-bottom: 3px solid var(--main-point-color);
+}
+

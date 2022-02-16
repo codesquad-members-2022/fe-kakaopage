@@ -1,0 +1,123 @@
+/* ======== main ======== */
+/* ======== genres__list ======== */
+.genres__list {
+  margin-top: 20px;
+  padding: 24px 0;
+  font-size: 20px;
+  background-color: var(--white-color);
+}
+
+.genres__list li a {
+  color: var(--non-focus-font-color);
+}
+
+.genres__list .genres--focused {
+  color: var(--black-color);
+}
+
+/* ======== select__day ======== */
+.select__day {
+  margin-top: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--main-bg-color);
+  background-color: var(--white-color);
+}
+
+.select__day li button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--non-focus-font-color);
+}
+
+.select__day .day--focused {
+  background-color: var(--main-point-color);
+  color: var(--black-color);
+}
+
+/* ======== select__options ======== */
+.select__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--main-bg-color);
+  font-size: 16px;
+  background-color: var(--white-color);
+  color: var(--non-focus-font-color);
+}
+
+.select__options .options--focused {
+  color: var(--black-color);
+} 
+
+.options__btn li button {
+  padding: 0 16px;
+  font-size: 20px;
+  color: var(--non-focus-font-color);
+}
+
+.options__genre {
+  display: flex;
+}
+
+.options__genre .options__genre-btn {
+  font-size: 16px;
+  color: var(--non-focus-font-color);
+}
+
+/* ======== daily__webtoons ======== */
+.daily__webtoons {  
+  padding: 20px 20px 0 20px;
+  background-color: var(--white-color);
+}
+
+.webtoons__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.webtoons__item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.item__privew {
+  margin-bottom: 12px;
+}
+
+.item__img img {
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.item__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+  font-size: 95%;
+  background-color: var(--black-color);
+  color: var(--main-point-color);
+}
+
+.item__rating .fa-clock {
+  color: var(--non-focus-font-color);
+}
+
+.item__title {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.item__rating .fa-star {
+  font-size: 95%;
+}
+
+.item__viewer, .item__info i {
+  font-size: 85%;
+  color: var(--non-focus-font-color);
+}

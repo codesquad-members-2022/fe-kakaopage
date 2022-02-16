@@ -1,0 +1,52 @@
+@import "./reset.css";
+@import "./header_nav.css";
+@import "./main_banner.css";
+@import "./main.css";
+@import "./footer.css";
+
+:root {
+  --white-color: #fff;
+  --black-color: rgb(36, 37, 38);
+  --non-focus-font-color: rgb(153, 153, 153);
+  --main-bg-color: rgb(238, 238, 238);
+  --main-point-color: rgb(255, 210, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--black-color);
+}
+
+main {
+  width: 720px;
+  margin: auto;
+}
+
+a { 
+	text-decoration: none;
+  color: var(--black-color);
+}
+
+ul, ol {
+	display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+button {
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background-image: url(/assets/divider.png);
+  background-color: lightgray;
+}
