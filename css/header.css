@@ -119,18 +119,6 @@ img.css-stage {
   height: auto;
 }
 
-button.menu-cash {
-  border: 0;
-  outline: 0;
-  font-weight: 400;
-  font-size: 18px;
-  color: #999;
-  background-color: transparent;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-}
-
 .kakaopage-menu2 {
   display: flex;
   justify-content: space-between;
@@ -141,6 +129,12 @@ button.menu-cash {
   margin-top: 30px;
   border: 0;
   outline: 0;
+  font-weight: 800;
+  color: #999;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.4;
 }
 
 .kakaopage-menu2 div {
@@ -158,4 +152,12 @@ img.css-stage-tooltip {
   width: 137px;
   height: 33px;
   max-width: none;
+}
+
+nav.menu-list li a img {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 20px;
 }
