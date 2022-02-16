@@ -20,26 +20,26 @@
 /*1. 헤더 세팅*/
 .header{
     width: 100vw;
-    background-color: orange;
+    background-color: var(--main-white);
 }
 .head, .navbar__menu{
     display: flex;
     /* flex-basis: 0;  */
     /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
     margin: 0 20%;
-    background-color: green;
+    background-color: var(--main-white);
     justify-content: center;
 }
 
 .item{
     padding: 40px;
     width: var(--width);
-    background-color: pink;
+    background-color: var(--main-white);
 }
 /*검색창 세팅*/
 .search{
    display: flex;
-   background-color: red;
+   background-color: var(--main-white);
    margin-left: 200px;
    padding-left: 100px;
    position: relative;
@@ -58,6 +58,7 @@
     position: absolute;
     width: 150px;
     height: 30px;
+    border-color: none;
 }
 .search i{
     position: absolute;
@@ -99,7 +100,7 @@ a{
     text-align: center;
 }
 
-
+/*3. 장르 */
 .contents__genre{
     background-color: blue;
     margin: 20px 20%;
@@ -126,7 +127,7 @@ a{
     color: var(--background-color);
 }
 
-
+/* 4. 배너 */
 .banner{
     margin: 20px 20%;
     width: 60%;
