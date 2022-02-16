@@ -79,16 +79,6 @@ body {
     color: black;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-
 .nav {
     width: 720px;
     height: 60px;
