@@ -171,3 +171,55 @@ main {
 .content-title {
   font-size: 15px;
 }
+
+.new {
+  display: flex;
+  justify-content: space-between;
+  height: 220px;
+}
+
+.new .slide-content {
+  width: 49%;
+  height: 100%;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.new .slide-info {
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+}
+
+.new .slide-info > p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.new .slide-info > div{
+  display: flex;
+  align-items: center;
+}
+
+.new .slide-info > div img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.new .slide-info > div span {
+  font-size: 13px;
+  color: #fff;
+}
+
+.new .slide-summary {
+  box-sizing: border-box;
+  width: 100%;
+  height: 25px;
+  padding-top: 3px;
+  background-color: var(--identity-color);
+  text-align: center;
+  font-size: 13px;
+}

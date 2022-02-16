@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
 }
 
 .l-center {
@@ -38,6 +38,10 @@ header {
 
 .border-bottom {
   border-bottom: 1px solid var(--header-border-color);
+}
+
+.relative {
+  position: relative;
 }
 
 .ellipsis {
