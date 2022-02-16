@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kakaopage</title>
+    <title>kakaopage clone</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
-      <div>
-        <button>kakaopage</button>
+      <div class="header__container">
+        <img
+          src="img/logo-kakaopage.svg"
+          alt="logo"
+          class="header__container__home"
+        />
         <form>
           <input />
         </form>
-        <nav>
-          <ul>
+        <nav class="header__navigation__container">
+          <ul class="header__navigation__sub">
             <li>
-              <button>STAGE</button>
+              <img src="img/pc-logo-stage.svg" alt="logo_stage" />
             </li>
             <li>
-              <button>캐시충전</button>
+              <button class="header__navigation__btn">캐시충전</button>
             </li>
             <li>
               <button>로그인</button>
@@ -28,25 +34,26 @@
         </nav>
       </div>
 
-      <nav>
-        <ul>
+      <nav class="header__navigation">
+        <ul class="header__navigation__menu">
           <li>
-            <button>홈</button>
+            <img src="img/menu_home.svg" alt="menu_home" />
           </li>
           <li>
-            <button>웹툰</button>
+            <img src="img/menu_toon.svg" alt="menu_toon" />
           </li>
           <li>
-            <button>웹소설</button>
+            <img src="img/menu_novel.svg" alt="menu_novel" />
           </li>
           <li>
-            <button>영화</button>
+            <img src="img/menu_vod.svg" alt="menu_vod" />
+          </li>
+
+          <li>
+            <img src="img/menu_broadcast.svg" alt="menu_broadcast" />
           </li>
           <li>
-            <button>방송</button>
-          </li>
-          <li>
-            <button>책</button>
+            <img src="img/menu_book.svg" alt="menu_book" />
           </li>
         </ul>
       </nav>
@@ -162,7 +169,7 @@
             <span>9.3</span>
             <span>clock</span>
           </div>
-          <h2>제목</h2>
+          <h2 class="title">제목</h2>
           <span>UP아이콘</span>
           <span>person아이콘</span>
           <span>11.5만명</span>

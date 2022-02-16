@@ -1,0 +1,40 @@
+body {
+  margin: 30px 400px 55px 400px;
+  background-color: #eeeeee;
+}
+
+header {
+  width: 720px;
+}
+
+header .header__navigation__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header
+  .header__container
+  .header__navigation__container
+  .header__navigation__sub {
+  display: flex;
+}
+
+header .header__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+
+header .header__navigation {
+  height: 80px;
+}
+
+header .header__container .header__container__home {
+  width: 130px;
+}
+
+header .header__container .header__navigation__container {
+  width: 590px;
+}
