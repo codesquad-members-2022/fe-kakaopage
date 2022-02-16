@@ -260,7 +260,7 @@ a:hover {
 }
 
 .items__title {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .items__thumbnail {
@@ -305,11 +305,31 @@ a:hover {
   height: 16px;
   background-image: url("https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9");
   background-size: cover;
+  margin-top: 3px;
+  margin-right: 3px;
 }
 
 .items__status-icon-up {
   width: 23.27px;
   height: 16px;
   background-image: url("https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f");
+  background-size: cover;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.items__views-icon {
+  width: 11px;
+  height: 11px;
+  background-image: url("https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871");
+  background-size: cover;
+  margin-top: 4px;
+  margin-right: 3px;
+}
+
+.items__thumbnail-icon {
+  width: 40px;
+  height: 26px;
+  background-image: url("https://static-page.kakao.com/static/common/badge_webtoon.png?109e859eacc8dea9c23ffa6375d6f992");
   background-size: cover;
 }
