@@ -1,0 +1,72 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 132px;
+	padding-top: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.head-box {
+	width: 750px;
+	display: flex;
+	justify-content: space-around;
+}
+.title > h1 {
+	font-size: 30px;
+	margin-right: 100px;
+}
+.search-form {
+	display: flex;
+	width: 180px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+}
+.search-form > .search-form--input {
+	font-size: 20px;
+	width: 135px;
+	height: 20px;
+	border: none;
+}
+.search-form > .search-form--input:focus {
+	outline: none;
+}
+.search-form > .search-form--button {
+	color: rgba(0, 0, 0, 0.6);
+	background-color: white;
+	border: none;
+}
+.login-box {
+	display: flex;
+	justify-content: space-between;
+}
+.stage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 10px;
+}
+.stage > .stage-icon {
+	height: 25px;
+	margin-bottom: 10px;
+}
+.login-box > .login-form {
+	display: block;
+}
+.login-box > .login-form > .login-form--button {
+	width: 75px;
+	height: 30px;
+	border: none;
+	padding: 0;
+	background-color: white;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,25 @@
+.nav__genre {
+	display: flex;
+	margin-top: 25px;
+	width: 750px;
+	justify-content: space-around;
+}
+.nav__genre > .nav__genre--button {
+	display: flex;
+	justify-content: center;
+	width: 15%;
+	font-size : 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	border: none;
+	background-color: white;
+}
+.nav__genre > .now {
+	border-bottom: 3px solid #FCBC19;
+}
+.new-alarm {
+	width: 7px;
+	height: 7px;
+	background-color: #FCBC19;
+	border-radius: 100%;
+}

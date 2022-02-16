@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>홈 | 카카오페이지</title>
+    <script src="https://kit.fontawesome.com/1e626ba433.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="main_header">
-            <div class="main_header_title">
-                <h1>kakaopage</h1>
+    <header class="header">
+        <div class="head-box">
+            <div class="title">
+                <h1><a href="">kakaopage</a></h1>
             </div>
-            <div class="main_header_search">
-                <form>
-                    <input type="text"/>
-                    <input type="submit"/>
-                </form>
-            </div>
-            <div class="main_header_login">
-                <form>
-                    <button class="main_header_login_stage"><a href="">STAGE</a></button>
-                    <button class="main_header_login_cash"><a href="">캐시충전</a></button>
-                    <button class="main_header_login_login"><a href="">로그인</a></button>
+            <form class="search-form">
+                <input class="search-form--input" type="text"/>
+                <button type="button" class="search-form--button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+            </form>
+            <div class="login-box">
+                <div class="stage">
+                    <img class="stage-icon" src="style/img/stage.svg">
+                    <img class="stage-tooltip" src="style/img/tooltip.svg">
+                </div>
+                <form class="login-form">
+                    <button type="button" class="login-form--button"><a href="">캐시충전</a></button>
+                    <button type="button" class="login-form--button"><a href="">로그인</a></button>
                 </form>
             </div>
         </div>
-        <nav class="nav_genre">
-            <form>
-                <button><a href="">홈</a></button>
-                <button><a href="">웹툰</a></button>
-                <button><a href="">웹소설</a></button>
-                <button><a href="">영화</a></button>
-                <button><a href="">방송</a></button>
-                <button><a href="">책</a></button>
-            </form>
+        <nav class="nav__genre">
+                <button type="button" class="nav__genre--button now"><a href="">홈</a></button>
+                <button type="button" class="nav__genre--button timer"><a href="">웹툰·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button timer"><a href="">웹소설·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">영화</a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">방송</a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">책</a><div class="new-alarm"></div></button>
         </nav>
     </header>
-    <div class="main_slide"></div>
-    <nav class="nav_event"></nav>
-    <div class="main_free_comic"></div>
+    <main class="main">
+        <div class="carousel">
+            <div class="carousel--title">
+                <h2>슈퍼 연쇄살인마 스테키동맨</h2>
+            </div>
+            <div class="carousel--info">
+                <div class="info-event">이벤트</div>
+                <div class="info-genre"><i class="fa-solid fa-clock"></i> 웹툰</div>
+            </div>
+            <div class="carousel--event"><span class="slide--event__info">응원하면 캐시와 경품이 와르르!</span></div>
+        </div>
+        <form class="main-event--form">
+            <button type="button" class="main-event--button">오늘 신작</button> 
+            <button type="button" class="main-event--button">달콤한 선물❤</button>
+            <button type="button" class="main-event--button">앗뜨거!!</button>
+        </form> 
+        <ul class="list">
+            <li class="list-info">
+                <div class="list-title">
+                    <span class="list-title--name">기다리면 무료 웹툰</span>
+                    <span class="list-title--info">(3,528)</span>
+                </div>
+                <button class="list-button">더보기></button>
+            </li>
+            <li class="list-item">
+                <div class="list-img">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="item-info">
+                    <div class="item-title">
+                        <div class="new-item">UP</div>
+                        <h3>슈퍼 연쇄살인마 스테키동맨</h3>
+                    </div>
+                    <div class="item-sum">무자비한 살인마 스테키동맨!</div>
+                    <div class="item-author"><i class="fa-solid fa-user"></i> 8474.6만명 | Nick</div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-img">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="item-info">
+                    <div class="item-title">
+                        <div class="new-item">UP</div>
+                        <h3>슈퍼 연쇄살인마 스테키동맨</h3>
+                    </div>
+                    <div class="item-sum">무자비한 살인마 스테키동맨!</div>
+                    <div class="item-author"><i class="fa-solid fa-user"></i> 8474.6만명 | Nick</div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-img">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="item-info">
+                    <div class="item-title">
+                        <div class="new-item">UP</div>
+                        <h3>슈퍼 연쇄살인마 스테키동맨</h3>
+                    </div>
+                    <div class="item-sum">무자비한 살인마 스테키동맨!</div>
+                    <div class="item-author"><i class="fa-solid fa-user"></i> 8474.6만명 | Nick</div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-img">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="item-info">
+                    <div class="item-title">
+                        <div class="new-item">UP</div>
+                        <h3>슈퍼 연쇄살인마 스테키동맨</h3>
+                    </div>
+                    <div class="item-sum">무자비한 살인마 스테키동맨!</div>
+                    <div class="item-author"><i class="fa-solid fa-user"></i> 8474.6만명 | Nick</div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer class="footer">
+        <button class="footer-button"><h3>카카오페이지</h3> 앱으로 보기 ></button>
+        <div class="footer-info">
+            <ul class="footer-notice">
+                <li>회사소개·이용약관·<h4>개인정보처리방침</h4>·청소년보호정책·공지사항</li>
+                <li>(주)카카오엔터테인먼트 사업자 정보<i class="fa-solid fa-caret-down"></i> | <h4>사업자 정보 확인</h4></li>
+                <li><i class="fa-solid fa-copyright"></i>Kakao Entertainment Corp.</li>
+            </ul>
+            <img src="style/img/okMark.png" class="footer-img">
+        </div>
+    </footer>
 </body>
 </html>

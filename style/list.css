@@ -1,0 +1,74 @@
+.list {
+    display: flex;
+    width: 720px;
+    margin-top: 10px;
+    flex-direction: column;
+    background-color: white;
+}
+.list > .list-info {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.list > .list-info > .list-title> .list-title--name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.list > .list-info > .list-title> .list-title--info {
+    color: rgba(0, 0, 0, 0.5);
+}
+.list > .list-info > .list-button {
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+}
+.list > .list-item {
+    display: flex;
+    padding: 0 0 20px 20px;
+}
+.list-img {
+    background-image: url("img/comic.png");
+    width: 145px;
+    height: 95px;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.list-img > i {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FCBC19;
+}
+.item-title {
+    display: flex;
+}
+.item-info {
+    padding: 15px;
+}
+.item-title > .new-item {
+    background-color: rgb(151, 194, 255);
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+.item-title > h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.item-sum {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.item-author {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
