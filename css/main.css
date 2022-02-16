@@ -81,3 +81,27 @@ main {
     padding-top: 12px;
 }
 
+.main__category {
+    margin: 10px auto;
+    width: 50%;
+    background-color: var(--main-white);
+}
+
+.main__category ul {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__category ul li {
+    margin: 2px;
+    padding-top: 20px;
+    width: 30%;
+    height: 40px;
+    background-color: var(--main-gray);
+    text-align: center;
+    font-size: 22px;
+}
