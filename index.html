@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="shortcut icon"
+      href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>홈 | 카카오페이지</title>
+    <title>홈 - 웹툰 | 카카오페이지</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header.css" />
   </head>
   <body>
     <header>
       <nav class="menu-top">
-        <h1 class="kakaopage">kakaopage</h1>
-        <div class="">
-          <form action=""><input type="text" name="" id="" /></form>
-          <div>
-            <button>STAGE</button>
-            <button>캐시충전</button>
-            <button>로그인</button>
+        <h1 class="kakaopage"></h1>
+        <div class="kakaopage-menu">
+          <div class="search-wrap">
+            <form class="search-form" action="">
+              <input
+                class="search-input"
+                type="text"
+                placeholder
+                value
+                maxlength="50"
+              />
+            </form>
           </div>
+          <button class="kakaopage-menu2">
+            <div class="menu-stage"></div>
+            <div class="menu-cash">캐시충전</div>
+            <div class="menu-login">로그인</div>
+          </button>
+          <div class="menu-stage-tooltip"></div>
         </div>
       </nav>
       <nav class="menu-list">
@@ -33,5 +49,5 @@
       </nav>
     </header>
   </body>
-  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/index.js"></script>
 </html>
