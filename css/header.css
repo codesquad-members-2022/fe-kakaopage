@@ -1,0 +1,79 @@
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+.main-header {
+    height: 80px;
+    display: flex;
+}
+.main-header > h1 > img {
+    margin-top: 30px;
+    margin-bottom: 22px;
+}
+.main-nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.search-bar {
+    width: 180px;
+    height: 23px;
+    padding: 2px;
+    border: 1px solid #cfcfcf;
+    border-radius: 30px;
+    margin-top: 27px;
+    margin-bottom: 19px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input {
+    padding: 2px 3px 2px 11px;
+}
+.search-btn {
+    background-color: transparent;
+    width: 20px;
+    height: 28px;
+    padding: 0 10px 0 0;
+    border: none;
+
+}
+.search-btn > img {
+    width: 20px;
+    height: 20px;
+}
+.main-nav__stage {
+    margin-top: 31px;
+    margin-left: 24px;
+}
+.main-nav__item {
+    margin-top: 30px;
+    margin-left: 22px;
+    color: #BBBBBB;
+    font-size: 18px;
+}
+.main-nav__item a {
+    color: #BBBBBB;
+}
+.main-nav__item span {
+    margin: 7px 10px 2px;
+}
+.menu-nav {
+    display: flex;
+}
+.menu-nav__item {
+    width: 100%;
+    padding: 30px 0px 15px;
+}
+.menu-nav__item img {
+    margin: 0px 39px;
+}
+.menu-nav__item--selected {
+    border-bottom: 3px solid #ffd200;
+}
