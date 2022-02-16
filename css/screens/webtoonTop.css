@@ -1,0 +1,173 @@
+.promotionBanner {
+  margin-top: 10px;
+  background-color: white;
+  padding: 15px;
+}
+
+.promotionBanner_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotionBanner_row > button {
+  /* colmn으로 바꾸기 */
+  width: 1000px;
+  height: 60px;
+  margin: 1px;
+  border-radius: 6px;
+}
+
+.page-main__eventBanner_img {
+  padding: 30px;
+}
+
+.page-main__dowTop,
+.dramaTop,
+.page-main__dailyTop,
+.page-main__eventBanner {
+  margin-top: 10px;
+  background-color: white;
+}
+
+.page-main__dowTop__header,
+.dramaTop__header,
+.page-main__dailyTop__header,
+.page-main__evnetBanner__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-main__dowTop_webtoon,
+.dramaTop__webtoon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  margin: 0px 30px;
+}
+
+.page-main__dowTop_webtoon_info,
+.dramaTop__webtoon_info {
+  position: relative;
+  margin: 0;
+}
+
+.page-main__dowTop_webtoon_info > img,
+.dramaTop__webtoon_info > img {
+  width: 120px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.page-main__dowTop__title {
+  display: flex;
+}
+
+.page-main__dailyTop_rank {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.page-main__dowTop_webtoon_info {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.webtoon_bar {
+  background-color: black;
+  padding: 15px 60px;
+  position: absolute;
+  margin: 0;
+  bottom: 5px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dowTop_rank {
+  position: absolute;
+  color: #ffd200;
+  bottom: 9px;
+  left: 10px;
+  z-index: 1;
+}
+
+.watch_icon {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
+
+.webtoon_bar__clock {
+  position: absolute;
+  z-index: 2;
+  bottom: 9px;
+  right: 0px;
+  font-size: 10px;
+}
+
+.page-main__dowTop__title,
+.dramaTop__title {
+  margin: 30px;
+}
+
+.page-main__dowTop__title > h3,
+.dramaTop__title > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-main__dowTop__title > h5 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+  color: #999999;
+}
+
+.page-main__dowTop__more,
+.dramaTop__more {
+  font-size: 18px;
+  color: #999999;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+.page-main__dowTop_webtoon_title,
+.dramaTop__webtoon_title {
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.webtoon_bar__up {
+  width: 21px;
+  height: 16px;
+}
+
+.page-main__dowTop_webtoon_user,
+.dramaTop__webtoon_user {
+  color: #9c9c9c;
+  margin-top: 6px;
+}
+
+.new_icon {
+  width: 13px;
+  margin-right: 3px;
+}
+
+.fifteen_icon {
+  width: 14px;
+  margin-right: -1px;
+}
+
+.mainAdBanner__status__person {
+  margin: 0;
+  width: 12px;
+}
+
+.page-main__dowTop_webtoon_card {
+  margin: 15px 0px;
+}
+
+.page-main__dowTop > nav > ul {
+  padding: 0px 30px;
+}
