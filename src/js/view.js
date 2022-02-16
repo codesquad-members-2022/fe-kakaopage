@@ -1,17 +1,21 @@
+import { createHeader } from './components/header.js';
+import { createFooter } from './components/footer.js';
+import { createGnb } from './components/gnb.js';
+
 const renderSet = {
-  renderHeader(header) {
+  renderHeader() {
     const headerEl = document.querySelector('.header');
-    headerEl.insertAdjacentHTML('afterbegin', header);
+    headerEl.insertAdjacentHTML('afterbegin', createHeader());
   },
 
-  renderGlobalNavigation(gnb) {
-    const gnbEl = document.querySelector('.gnb');
-    gnbEl.insertAdjacentHTML('afterbegin', gnb);
-  },
-
-  renderFooter(footer) {
+  renderFooter() {
     const footerEl = document.querySelector('.footer');
-    footerEl.insertAdjacentHTML('afterbegin', footer);
+    footerEl.insertAdjacentHTML('afterbegin', createFooter());
+  },
+
+  renderGnb() {
+    const gnbEl = document.querySelector('.gnb');
+    gnbEl.insertAdjacentHTML('afterbegin', createGnb());
   },
 };
 

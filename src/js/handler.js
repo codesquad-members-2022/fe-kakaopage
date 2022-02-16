@@ -1,9 +1,9 @@
-const addTabHandlerOnGnb = () => {
+const addHandlerOnGnb = () => {
   const gnbEl = document.querySelector('.gnb');
-  gnbEl.addEventListener('click', HandleGnbTab);
+  gnbEl.addEventListener('click', HandleGnb);
 };
 
-const HandleGnbTab = (event) => {
+const HandleGnb = (event) => {
   const tabName = event.target.dataset.tab;
   if (!tabName) return;
 
@@ -13,10 +13,10 @@ const HandleGnbTab = (event) => {
   const newTab = event.target;
   newTab.classList.add('gnb__item--active');
 
-  excuteTabContentCreator(tabName);
+  loadTabContent(tabName);
 };
 
-const excuteTabContentCreator = (tabName) => {
+const loadTabContent = (tabName) => {
   if (tabName === 'toon') {
     return;
   }
@@ -27,4 +27,4 @@ const excuteTabContentCreator = (tabName) => {
   main.innerHTML = `${tabName}탭은 준비 중입니다. 웹툰과 웹소설을 이용해주세요.`;
 };
 
-export { addTabHandlerOnGnb };
+export { addHandlerOnGnb };
