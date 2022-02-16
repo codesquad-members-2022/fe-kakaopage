@@ -9,7 +9,7 @@
   margin: 10px 0px;
 }
 
-.main__nav-genre {
+.main__navGenre {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -18,24 +18,25 @@
   font-weight: 500;
   height: 60px;
 }
-.nav-genre-item {
+.navGenre-item {
   cursor: pointer;
 }
-.nav-genre-item:nth-child(1) {
+.navGenre-item:nth-child(1) {
   color: #333333;
 }
 
-.main__main-banner {
+.main__mainBanner {
+  cursor: pointer;
   height: 400px;
 }
-.contents .main__main-banner {
+.contents .main__mainBanner {
   height: auto;
 }
-.main__main-banner .banner__imgBox {
+.main__mainBanner .banner__imgBox {
   position: relative;
   height: 360px;
 }
-.main__main-banner .imgBox__info {
+.main__mainBanner .imgBox__info {
   position: absolute;
   left: 20px;
   bottom: 10px;
@@ -50,15 +51,15 @@
   padding: 0px 4px;
   margin-right: 2px;
 }
-.info-title {
+.infoTitle {
   font-size: 22px;
   margin-bottom: 10px;
 }
-.info-body {
+.infoBody {
   font-size: 15px;
   margin-bottom: 5px;
 }
-.main__main-banner .imgBox__order {
+.main__mainBanner .imgBox__order {
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -72,7 +73,7 @@
   object-fit: cover;
   z-index: -1;
 }
-.main__main-banner .banner__message {
+.main__mainBanner .banner__message {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +97,7 @@
   border: none;
 }
 
-.main__nav-detail {
+.main__navDetail {
   height: 140px;
   display: flex;
   flex-direction: column;
@@ -132,20 +133,20 @@
   border-radius: 10px;
 }
 
-.border_top_left {
+.border-top-left {
   border-top-left-radius: 9px;
 }
-.border_top_right {
+.border-top-right {
   border-top-right-radius: 9px;
 }
-.border_bottom_left {
+.border-bottom-left {
   border-bottom-left-radius: 9px;
 }
-.border_bottom_right {
+.border-bottom-right {
   border-bottom-right-radius: 9px;
 }
 
-.main__sub-banner {
+.main__subBanner {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -153,6 +154,7 @@
 }
 
 .subImg {
+  cursor: pointer;
   width: 65%;
   border-radius: 5px;
 }
@@ -200,7 +202,7 @@
   display: flex;
   flex-direction: column;
 }
-.contents__body-nav {
+.contents__bodyNav {
   display: flex;
   justify-content: space-around;
   height: 30px;
@@ -209,7 +211,7 @@
   color: #bbbbbb;
 }
 
-.contents__body-nav li {
+.contents__bodyNav li {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -217,17 +219,17 @@
   width: 12%;
   border-bottom: 2px solid #f1f1f1;
 }
-.contents__body-nav li:nth-child(2) {
+.contents__bodyNav li:nth-child(2) {
   color: #333333;
   border-bottom: 2px solid #ffd200;
 }
-.contents-card {
+.contentsCard {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 15px;
 }
-.contents-card .card {
+.contentsCard .card {
   cursor: pointer;
   width: 18%;
   height: 190px;
@@ -289,7 +291,7 @@
   font-size: 12px;
 }
 
-.contents-bigCard {
+.contentsBigCard {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -299,7 +301,7 @@
   width: 50%;
   padding: 5px;
 }
-.bigCard .info-title {
+.bigCard .infoTitle {
   font-size: 18px;
 }
 .bigCard .info-event,
@@ -310,33 +312,33 @@
 .bigCard .banner__message {
   font-size: 12px;
 }
-.contents-bigCard .main__main-banner {
+.contentsBigCard .main__mainBanner {
   height: 100%;
 }
 
-.contents-bigCard .main__main-banner .banner__imgBox {
+.contentsBigCard .main__mainBanner .banner__imgBox {
   height: 90%;
 }
-.bigCard .main__main-banner .banner__imgBox img {
+.bigCard .main__mainBanner .banner__imgBox img {
   border-radius: 10px 10px 0px 0px;
 }
 .bigCard .banner__message {
   height: 10%;
   border-radius: 0px 0px 10px 10px;
 }
-.content-row {
+.contentRow {
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-.content-row div {
+.contentRow div {
   margin: 9px;
 }
-.content-row .dateRank {
+.contentRow .dateRank {
   font-size: 20px;
   font-weight: 700;
 }
-.content-row .contentImgBox {
+.contentRow .contentImgBox {
   position: relative;
   width: 70px;
 }
@@ -359,7 +361,7 @@
   flex-direction: column;
   color: #999999;
 }
-.contentInfo .info-body,
+.contentInfo .infoBody,
 .contentInfo .info__titleInfo {
   margin: 3px 9px;
 }
@@ -368,7 +370,7 @@
   color: #333333;
   font-size: 14px;
 }
-.contentInfo .info-body {
+.contentInfo .infoBody {
   font-size: 12px;
 }
 .info__title-status {

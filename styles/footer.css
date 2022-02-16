@@ -6,24 +6,24 @@ footer {
   height: 100px;
   color: #bdbdbd;
 }
-.footer-right {
+.footerRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.footer-right img {
+.footerRight img {
   width: 55px;
 }
-.footer-right span {
+.footerRight span {
   margin-top: 5px;
   font-size: 5px;
 }
-.footer-box {
+.footerBox {
   display: flex;
   margin: 10px 0px;
 }
-.footer-box span {
+.footerBox span {
   margin: 0px 2px;
 }
 footer details {

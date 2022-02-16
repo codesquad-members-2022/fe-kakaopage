@@ -16,10 +16,10 @@
   width: 720px;
   height: 75%;
 }
-.header__title-logo {
+.header__titleLogo {
   font-size: 25px;
 }
-.header__title-search {
+.header__titleSearch {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -32,18 +32,18 @@
   height: 15px;
   border-radius: 12px;
 }
-.header__title-search input {
+.header__titleSearch input {
   width: 80%;
   height: 100%;
   border: none;
 }
-.header__title-search input:focus-visible {
+.header__titleSearch input:focus-visible {
   outline: none;
 }
-.header__title-menus {
+.header__titleMenus {
   display: flex;
 }
-.header__title-menus .title-menus {
+.header__titleMenus .titleMenus {
   padding: 0px 10px;
 }
 .stage {
@@ -61,6 +61,7 @@
   border-bottom: 5px solid black;
 }
 .stage .stage-span {
+  cursor: pointer;
   background-color: #feb22e;
   padding: 2px;
   font-weight: bold;
@@ -78,7 +79,8 @@
   border-radius: 4px;
   background-color: black;
 }
-.header__title-menus .menu {
+.header__titleMenus .menu {
+  cursor: pointer;
   font-size: 15px;
   color: #999999;
 }
@@ -90,10 +92,18 @@
   font-size: 16px;
 }
 .header__nav-item {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   width: 120px;
 }
 .header__nav-item:nth-child(2) {
   border-bottom: 3px solid #ffd200;
+}
+.yellow-dot {
+  margin-left: 5px;
+  width: 5px;
+  height: 5px;
+  background-color: #ffd200;
+  border-radius: 3px;
 }
