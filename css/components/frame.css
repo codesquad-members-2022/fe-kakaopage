@@ -1,0 +1,33 @@
+.frame {
+  margin-top: 10px;
+  background-color: white;
+}
+
+.frame__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame__title {
+  display: flex;
+  margin: 30px;
+}
+
+.frame__title > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.frame__title > h5 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+  color: #999999;
+}
+
+.frame__more {
+  font-size: 18px;
+  color: #999999;
+  margin: 30px;
+}

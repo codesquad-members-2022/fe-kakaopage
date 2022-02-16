@@ -1,0 +1,19 @@
+.subAdBanner__img > img {
+  width: 620px;
+  display: flex;
+  justify-content: center;
+}
+
+.subAdBanner__img > svg {
+  position: absolute;
+}
+
+.subAdBanner__img .previous_btn {
+  top: 40px;
+  left: 0px;
+}
+
+.subAdBanner__img .next_btn {
+  top: 40px;
+  right: 0px;
+}

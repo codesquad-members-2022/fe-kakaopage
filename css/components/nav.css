@@ -1,0 +1,23 @@
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+.nav__btn:hover {
+  cursor: pointer;
+}
+
+.page-main__nav > ul {
+  background-color: white;
+  padding: 20px 30px;
+  margin: 0;
+}
+
+.page-main__nav > ul > li {
+  color: #c5c5c5;
+}
+
+.page-main__nav > ul > li:first-child {
+  color: black;
+}

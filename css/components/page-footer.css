@@ -1,0 +1,72 @@
+footer {
+  color: #c0c0c0;
+  width: 720px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+footer > button {
+  background-color: #fecc2f;
+  font-size: 20px;
+  border-style: none;
+  width: 100%;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__companyInfo {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+}
+
+.page-footer__policy {
+  display: flex;
+  margin-top: 65px;
+}
+
+.page-footer__policy > p:nth-child(3) {
+  font-weight: bold;
+}
+
+.page-footer__companyInfo {
+  display: flex;
+  margin-top: 15px;
+}
+
+.page-footer__copyright {
+  margin-top: 15px;
+}
+
+.page-footer__mark {
+  position: absolute;
+  right: 0;
+  top: 65px;
+}
+
+.page-footer__mark > img {
+  width: 50px;
+}
+
+.page-footer__mark > p {
+  font-size: 13px;
+}
+
+.seperator {
+  margin: 0px 6px 0px 4px;
+}
+
+.page-footer__companyInfo > p:first-child {
+  margin-right: 4px;
+}
+
+.page-footer__companyInfo_details {
+  margin-top: 13px;
+  margin-left: -200px;
+}
+
+.page-footer__companyInfo_details > p {
+  margin: 10px 0px;
+}
