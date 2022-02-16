@@ -41,24 +41,26 @@
     color: #ffffff;
 }
 
+.carousel__detail .carousel_img {
+    color: #fff;
+}
+
 .carousel__inner .carousel_count {
-    opacity: 0.6;
+    opacity: .6;
     font-size: 20px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .carousel__detail {
+    width: 200px;
     display: flex;
-}
-
-.carousel__detail .carousel_img {
-    margin: 0 5px;
+    justify-content: space-between;
 }
 
 .carousel__detail .carousel_text {
     font-weight: 400;
     font-size: 20px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .carousel .carousel__footer {

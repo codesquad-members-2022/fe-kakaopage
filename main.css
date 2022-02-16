@@ -19,13 +19,14 @@
     align-items: center;
 }
 
-.main__nav-ul .main__nav_genre,
-.main__nav-ul .main__nav_day {
+.main__nav_genre,
+.main__nav_day {
     flex-grow: 1;
     padding: 15px;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
+    color: #bbbbbb;
 }
 
 .main__nav-ul .main__nav_link {
@@ -34,6 +35,7 @@
 
 .main__nav_link_active {
     color: rgb(51, 51, 51);
+    font-weight: 500;
 }
 
 .filter {
@@ -59,11 +61,12 @@
     background-color: #d9d9d9;
 }
 
-.filter .filter_button {
+.filter_button {
     background-color: #fff;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    color: #bbbbbb;
 }
 
 .filter .filter__right {
@@ -154,13 +157,14 @@
     cursor: pointer;
 }
 
-.not_selected {
-    color: #bbbbbb;
-}
 
-.selected {
+.main__nav_day_selected {
     background-image: url("./images/back_circle_new.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 40px;
+}
+
+.text_selected {
+    color: #333333;
 }

@@ -31,10 +31,16 @@ footer {
     color: #bdbdbd;
 }
 
+
+.footer__copyright {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer__copyright .footer__copyright_img {
     width: 55px;
     height: 55px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .footer__copyright .footer__copyright_text {
