@@ -1,336 +1,1026 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.indent {
-  padding: 0 1rem;
-}
-
-.more {
-  font-size: 16px;
-  color: #999999;
-}
-
-.header-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  z-index: 1;
-}
-
-.header {
-  width: 720px;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.blank {
-  flex-grow: 1;
-}
-
-.search-box {
-  display: flex;
-  border: 0.5px rgb(230, 230, 230) solid;
-  border-radius: 30px;
-  width: 200px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.search-input {
-  border: 0;
-  width: 130px;
-  font-size: 1.1rem;
-  padding: 5px;
-}
-
-.search-input:focus {
-  outline: none;
-}
-
-.search-img {
-  width: 20px;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-header > ul > li > a:link {
-  font-size: 1.2rem;
-  color: #999999;
-  padding: 0 0.1rem;
-}
-
-.nav-header {
-  background-color: white;
-  top: 78px;
-  width: 720px;
-}
-
-.nav-header > ul > li {
-  padding: 0.3rem 2.2rem;
-  font-size: 1.2rem;
-  flex-grow: 1;
-}
-
-.contents {
-  padding-top: 162px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  background: rgb(230, 230, 230);
-}
-
-.nav-category {
-  width: 720px;
-}
-
-.nav-category > ul {
-  display: flex;
-}
-
-.nav-category > ul > li {
-  padding: 1.5rem 1rem;
-  font-size: 1.3rem;
-  flex-grow: 1;
-  background-color: white;
-  color: #bbbbbb;
-}
-
-.slide {
-  flex-direction: column;
-  display: flex;
-  border-bottom: #eee solid 12px;
-}
-
-.toon-script {
-  background-color: #ffd200;
-  padding: 0.4rem;
-  text-align: center;
-}
-
-.nav-type-container {
-  width: 720px;
-  background-color: white;
-  padding: 1rem;
-  box-sizing: border-box;
-  border-bottom: 8px rgb(230, 230, 230) solid;
-}
-
-.nav-type {
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
-.nav-type > a {
-  flex-grow: 1;
-  box-sizing: border-box;
-  width: 226px;
-  padding: 1rem 1.3rem;
-  background-color: rgb(230, 230, 230);
-  border: white 1px solid;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.event-box-container {
-  width: 720px;
-  box-sizing: border-box;
-  background-color: white;
-  padding: 1rem;
-  display: flex;
-  vertical-align: center;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 8px rgb(230, 230, 230) solid;
-}
-
-.event-box {
-  display: flex;
-  vertical-align: center;
-  align-items: center;
-}
-
-.event-banner {
-  padding: 1rem;
-  width: 550px;
-}
-
-.top-container {
-  width: 720px;
-  box-sizing: border-box;
-  background-color: white;
-  padding: 1rem;
-  border-bottom: #eee 12px solid;
-}
-
-.top-box {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  padding-bottom: 20px;
-}
-
-.top-header {
-  width: 100%;
-  display: flex;
-}
-
-.top-header > div {
-  font-size: 20px;
-}
-
-.top-header > div > span {
-  font-size: 14px;
-}
-
-.week-nav {
-  width: 100%;
-  display: flex;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.week-nav > a {
-  font-size: 20px;
-  padding: 1rem;
-  color: #bbbbbb;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.day-rank {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.day-rank > a {
-  padding: 0.5rem;
-}
-
-.ranking-box {
-  width: 120px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.expected-box {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  width: 335px;
-  overflow: hidden;
-}
-
-.rank {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.3rem;
-  display: flex;
-  background-color: #242526;
-  vertical-align: center;
-  align-content: center;
-}
-
-.rank > img {
-  padding: 0 0.2rem;
-}
-
-.title {
-  width: 120px;
-  padding: 10px 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.views {
-  font-size: 14px;
-  color: #9c9c9c;
-  vertical-align: text-top;
-}
-
-.views > img {
-  padding-right: 4px;
-}
-
-.day-ranking-top {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.day-ranking-top-img {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.day-ranking-top-description {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.by-application {
-  display: flex;
-  justify-content: center;
-  background-color: #fecc2e;
-  border-bottom: rgb(230, 230, 230) 70px solid;
-}
-
-footer {
-  background-color: rgb(230, 230, 230);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-box {
-  color: #bdbdbd;
-  display: flex;
-  width: 720px;
-}
-
-.policy {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.policy-img {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  text-align: center;
-  width: 55px;
-  font-size: 12px;
-}
-
-.policy > ul {
-  margin: 5px;
-}
-
-.policy a {
-  color: #bdbdbd;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>홈 | 카카오페이지</title>
+  </head>
+    <div class="header-box">
+      <header class="header">
+        <a href="#">
+          <img
+            src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"
+          />
+        </a>
+        <div class="blank"></div>
+        <div class="search-box">
+          <div>
+            <form action="">
+              <input class="search-input" type="text" />
+            </form>
+          </div>
+          <div style="padding-top: 8px">
+            <a href="#">
+              <img
+                class="search-img"
+                src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a"
+              />
+            </a>
+          </div>
+        </div>
+        <ul>
+          <a href="#">
+            <img
+              src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
+              class="indent"
+            />
+          </a>
+          <li><a href="#">캐시충전</a></li>
+          <li class="indent">|</li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </header>
+      <nav class="nav-header">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">웹툰</a></li>
+          <li><a href="#">웹소설</a></li>
+          <li><a href="#">영화</a></li>
+          <li><a href="#">방송</a></li>
+          <li><a href="#">책</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="contents">
+      <nav class="nav-category">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">요일연재</a></li>
+          <li><a href="#">웹툰</a></li>
+          <li><a href="#">소년</a></li>
+          <li><a href="#">드라마</a></li>
+          <li><a href="#">로맨스</a></li>
+          <li><a href="#">로판</a></li>
+          <li><a href="#">액션무협</a></li>
+          <li><a href="#">BL</a></li>
+        </ul>
+      </nav>
+      <a href="#">
+        <div class="slide">
+          <img
+            style="width: 720px"
+            src="//dn-img-page.kakao.com/download/resource?kid=cdF8v/hyZ8yB3IzB/SuOmLkIZ9jbP1FwGj2T3D0"
+          />
+          <div style="font-size: 18px; padding: 0.7rem 0" class="toon-script">
+            네 안의 늑대를 개로 만들지 마라!
+          </div>
+        </div>
+      </a>
+      <div class="nav-type-container">
+        <div class="nav-type">
+          <a href="#">오늘 UP</a>
+          <a href="#">오늘 신작</a>
+          <a href="#">오리지널</a>
+          <a href="#">완결까지 정주행</a>
+          <a href="#">독립운동가 웹툰</a>
+          <a href="#">오늘 랭킹</a>
+        </div>
+      </div>
+      <div class="event-box-container">
+        <div class="event-box">
+          <a href="#">
+            <img
+              src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c"
+            />
+          </a>
+        </div>
+        <div class="event-banner">
+          <a href="#">
+            <img
+              style="width: 100%"
+              src="//dn-img-page.kakao.com/download/resource?kid=bEngPM/hzhOgRLRNt/vmLyWbIeBrt9Vfi57beF61"
+            />
+          </a>
+        </div>
+        <div class="event-box">
+          <a href="#">
+            <img
+              src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              요일 연재 TOP
+              <span style="color: #999999">(1,622)</span>
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+          <div class="week-nav">
+            <a href="#">월</a>
+            <a href="#">화</a>
+            <a href="#">수</a>
+            <a href="#">목</a>
+            <a href="#">금</a>
+            <a href="#">토</a>
+            <a href="#">일</a>
+            <a href="#">완결</a>
+          </div>
+          <div class="day-rank">
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
+                />
+                <div class="rank">
+                  <div style="font-size: 16px; color: #ffd200">1위</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">도굴왕</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />200.8만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=qnE7v/hzb7xKF0sd/QKoyuFgYDkf53tKkWcm2yk&filename=th2"
+                />
+                <div class="rank">
+                  <div style="font-size: 16px; color: #ffd200">2위</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">빈껍데기 공작부인</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />146.7만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=cRT27X/hzb7xkvb7b/Aqq7Dg18kl4JNephTEoqXK&filename=th2"
+                />
+                <div class="rank">
+                  <div style="font-size: 16px; color: #ffd200">3위</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">다정한 그대를 지키는 방법</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />88.4만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=hczXh/hzmU2fMnub/cOpubbT9K34zgxegMOSmhk&filename=th2"
+                />
+                <div class="rank">
+                  <div style="font-size: 16px; color: #ffd200">4위</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">로열 셰프 영애님</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />90.3만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=biG4Nt/hzb7sXLBzm/Spy2JkLBLu3zUwNl9TaznK&filename=th2"
+                />
+                <div class="rank">
+                  <div style="font-size: 16px; color: #ffd200">5위</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div style="padding: 10px 0">궁귀검신</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />50.8만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=buFJDf/hzb7rKB44w/1dAWermHRTJPW3iLyVGlIk&filename=th2"
+                />
+                <div class="rank">
+                  <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                  <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">악녀는 두 번 산다</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />104.6만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=chziT9/hyQ9N8NQR9/6GVju4wTFEmenXTlBb8yX1&filename=th2"
+                />
+                <div class="rank">
+                  <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                  <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">용사의 전 여친입니다</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />77.9만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=cEXgMa/hyATr1CZmD/YoDlK2IoUrelLh02Ria3f1&filename=th2"
+                />
+                <div class="rank">
+                  <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                  <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">던전 리셋</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />70.4만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=dwMIuC/hzhOgD8UFe/J6wGhV1I0sWJ4jwJvUYun1&filename=th2"
+                />
+                <div class="rank">
+                  <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                  <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">화타가 된 외과...</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />27.4만명</div>
+            </a>
+            <a href="#">
+              <div class="ranking-box">
+                <img
+                  style="width: 100%"
+                  src="//dn-img-page.kakao.com/download/resource?kid=cppzaC/hzp2ifvC1J/IAy6e8p17VpMjWaIfr3bkK&filename=th2"
+                />
+                <div class="rank">
+                  <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                  <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                  <div class="blank"></div>
+                  <img
+                    style="width: 16px"
+                    src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                  />
+                </div>
+              </div>
+              <div class="title">막내 황녀님</div>
+              <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />116.1만명</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              기대 신작 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="expected-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cmJs9e/hzmU3MYOek/31ARHCsiGEuowXs4jk43b1"
+              />
+              <div style="font-size: 12px;" class="toon-script">
+                나도 그들처럼 영웅이 되고 싶었다.
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              로맨스 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bkV7n3/hy41OF0bDR/A9qKNVg2e3aAT3haZc5QWk&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">익애 ~봉황애사~</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />49.6만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bJ9TFT/hzmU1g5Qiq/fcap9qWuChIKBzcs6zYd40&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">상사가 나를 덕질한다</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />24.1만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cTTZMV/hzhOlduqrV/XVzRKIJCdlg4slfZFnTKnK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">쓰라는 글은 안쓰고</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />22.1만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=S4Ss5/hy41FP1JZI/xqCOyfM19jcgdBbUkflNKK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">열세 번째 밤</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />43.3만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cryGFr/hyCveyNFAy/AxEAcNtMvApipXvPOWrrfK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.6</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">이 봄을 갖고 싶다</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />67만명</div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              로판 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bAWNps/hzhOkzzDWy/HhkEoPQ2yErPuEjGLJDkJ0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">날 것 공작가의 하녀로 빙의했습니다.</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />130.2만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bvpATg/hzacfliii0/yKd4dbjb7KikTlcQnOw7z1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">여보, 나 파업할게요</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />57.6만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=o1p9f/hzb7scdgDR/IOhebuV4RwSZVa5UJNkDyK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.3</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">이 소원은 취소</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />31.4만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cGKNSa/hzhOkeTCtM/GKXu869jngiLIvhWl3CRyK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">당신의 후회는 받지 않겠습니다</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />32.7만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=ceElF6/hyZ8CRPlgC/3aKCNzG3GerNBVulnaC1t0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">두 얼굴의 황녀</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />40.8만명</div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              드라마 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=kCDiv/hzhOiPrNB5/tAgGcBZir9KzjXTtxwpBdK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">궁에 숨은 꽃</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />21만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cuB7v/hzp2nHLTXK/u0bXEtR2krGGdqtIRXCiD0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.6</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">나 혼자 천재 DNA</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />59.8만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bt3Gs8/hyZ8Ar5F17/wvz1ZKcL4k8I6nrc6qVcF1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">이 소원은 취소</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />271.3만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">정령왕의 딸</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />72.5만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=s5N56/hzhOgpTshw/bMiudoCew9PnBT4IAA5gMk&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 10.0</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">내 딸은 음악천재</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />27.3만명</div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              소년 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cQA6k3/hzhOgjHtQz/X0wgUYGA3b3CcRl54LCT4k&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">재능 삼킨 마법사</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />44.8만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bvpATg/hzacfliii0/yKd4dbjb7KikTlcQnOw7z1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">신과 함께 레벨업</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />53.8만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=bL6IuV/hy41IGAKGB/gmDTkXN74zdmoin7D6uXe0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.4</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">성좌들이 나만 좋아해</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />27.5만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=6iJrN/hzmU1aifCt/9kruzeXja6oBtgyFLycHK1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 8.3</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">1레벨 플레이어</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />19.5만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=zstn4/hyQ9Tm6gKE/AkKAhhygMBSLtsPGZp1Yv0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">나는 될놈이다</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />65.7만명</div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              액션무협 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <div class="day-rank">
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=dAm5MR/hzachbTWsl/Tq7DupyKI2yBL8xAlVfAA0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">낭선기환담</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />35.4만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=L1YaG/hyCvfFupwI/RKKFw4IwDhfsppjUQooOY1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.9</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">마검왕</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />229.7만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=lXh7u/hyLi8DRrKU/DjrnFYCVWWSP8V1VkIJmrK&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.7</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">신수제일검</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />21만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=cr2Kc9/hzb7ycnmms/tm18dfsnOsvzzyORUJaUP1&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.2</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">신마</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />8.4만명</div>
+          </a>
+          <a href="#">
+            <div class="ranking-box">
+              <img
+                style="width: 100%"
+                src="//dn-img-page.kakao.com/download/resource?kid=hj4Lk/hzp2moG9as/Vyr960qfgcUCNZgH6R58u0&filename=th2"
+              />
+              <div class="rank">
+                <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                <div style="font-size: 16px; color: #ffd200"> 9.8</div>
+                <div class="blank"></div>
+                <img
+                  style="width: 16px"
+                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+                />
+              </div>
+            </div>
+            <div class="title">프로파일러(개정판)</div>
+            <div class="views"><img style="width: 19px" src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f" /><img style="width: 11px" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />1.8만명</div>
+          </a>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="top-box">
+          <div class="top-header">
+            <div>
+              일간 랭킹 TOP
+            </div>
+            <div class="blank"></div>
+            <a href="#" class="more">더보기 ></a>
+          </div>
+        </div>
+        <ul style="display: flex; flex-direction: column">
+          <li style="width: 100%">
+            <a class="day-ranking-top" href="#">
+              <div style="font-weight: 700; padding: 10px; padding-right: 26px; font-size: 22px;">
+                1
+              </div>
+              <div class="day-ranking-top-img">
+                <div style="position: absolute">
+                  <img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a " style="width: 26px" />
+                </div>
+                <div style="display: flex">
+                  <img style="width: 84px;" src="//dn-img-page.kakao.com/download/resource?kid=CHb7E/hzmU2NVBFU/3xX6JB8B7kKFohHzH9LJtk&filename=th2" />
+                </div>
+              </div>
+              <div class="day-ranking-top-description">
+                <div style="padding: 4px 0">흑막을 버리는 데 실패했다</div>
+                <div style="font-size: 14px; color: #9c9c9c">
+                  <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />
+                  28.7만명 | 기다무웹툰 | 로판 | ASSAM,쓩늉,자은향
+                </div>
+                <p style="color: #9c9c9c">수 연재</p>
+              </div>
+            </a>
+          </li>
+          <li style="width: 100%">
+            <a class="day-ranking-top" href="#">
+              <div style="font-weight: 700; padding: 10px; padding-right: 26px; font-size: 22px;">
+                2
+              </div>
+              <div class="day-ranking-top-img">
+                <div style="position: absolute">
+                  <img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a " style="width: 26px" />
+                </div>
+                <div style="display: flex">
+                  <img style="width: 84px;" src="//dn-img-page.kakao.com/download/resource?kid=eVtdO/hzmU2tEBKW/VuaxFpaYkAsyGg2tUoNJKk&filename=th2" />
+                </div>
+              </div>
+              <div class="day-ranking-top-description">
+                <div style="padding: 4px 0">이번 생은 가주가 되겠습니다</div>
+                <div style="font-size: 14px; color: #9c9c9c">
+                  <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />
+                  122.6만명 | 기다무웹툰 | 로판 | 앤트스튜디오,몬,앤트스튜디오,김로아
+                </div>
+                <p style="color: #9c9c9c">월 연재</p>
+              </div>
+            </a>
+          </li>
+          <li style="width: 100%">
+            <a class="day-ranking-top" href="#">
+              <div style="font-weight: 700; padding: 10px; padding-right: 26px; font-size: 22px;">
+                3
+              </div>
+              <div class="day-ranking-top-img">
+                <div style="position: absolute">
+                  <img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a " style="width: 26px" />
+                </div>
+                <div style="display: flex">
+                  <img style="width: 84px;" src="//dn-img-page.kakao.com/download/resource?kid=cR1QGX/hzmU0WFP2T/kUMEn3fFoyhP9rFxck2mkK&filename=th2"/>
+                </div>
+              </div>
+              <div class="day-ranking-top-description">
+                <div style="padding: 4px 0">남주를 주웠더니 남편이 생겨버렸다</div>
+                <div style="font-size: 14px; color: #9c9c9c">
+                  <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" />
+                  51만명 | 기다무웹툰 | 로판 | 마리씨,서촌,초암
+                </div>
+                <p style="color: #9c9c9c">월 연재</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="recommand-event">
+        <div class="top-container">
+          <div class="top-box">
+            <div class="top-header">
+              <div style="padding-bottom: 20px">
+                추천 이벤트 
+              </div>
+              <div class="blank"></div>
+              <a href="#" class="more">더보기 ></a>
+            </div> 
+            <img style="border-radius: 8px;" src="//dn-img-page.kakao.com/download/resource?kid=jySqs/hzmU1hjQwo/MUcpK0XEI9k4AfWbJBfkZk" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="by-application">
+        <img style="width: 70%" src="https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b" alt="" />
+      </div>
+    </section>
+    <footer>
+      <div class="footer-box">
+        <div class="policy">
+          <ul>
+            <li>
+              <a href="#">회사소개</a>
+            </li>
+            <li>
+              <a href="#"> • 이용약관</a>
+            </li>
+            <li>
+              <a href="#"> • 개인정보처리방침</a>
+            </li>
+            <li>
+              <a href="#"> • 청소년보호정책</a>
+            </li>
+            <li>
+              <a href="#"> • 공지사함</a>
+            </li>
+          </ul>
+          <ul>
+            <details>
+              <summary>(주)카카오엔터테인먼트 사업자 정보</summary>
+            </details>
+            <a href="#">
+              | 사업자 정보 확인
+            </a>
+          </ul>
+          <p>ⓒ Kakao Entertainment Corp.</p>
+        </div>
+        <div class="blank"></div>
+        <div class="policy-img">
+          <img src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af" />
+          <p>저작권 ok</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
