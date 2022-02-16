@@ -1,0 +1,59 @@
+.header {
+	display: flex;
+	height: 80px;
+	justify-content: space-around;
+	align-items: center;
+}
+.title > h1 {
+	font-size: 30px;
+	margin-right: 100px;
+}
+.search-form {
+	display: flex;
+	width: 185px;
+	height: 35px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+}
+.search-form > .search-form--input {
+	font-size: 20px;
+	width: 135px;
+	height: 20px;
+	border: none;
+}
+.search-form > .search-form--input:focus {
+	outline: none;
+}
+.search-form > .search-form--button {
+	color: rgba(0, 0, 0, 0.6);
+	background-color: white;
+	border: none;
+}
+.login-box {
+	display: flex;
+	justify-content: space-between;
+}
+.stage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 35px;
+	margin-right: 10px;
+}
+.stage > .stage-icon {
+	height: 25px;
+	margin-bottom: 10px;
+}
+.login-box > .login-form {
+	display: flex;
+	align-items: center;
+}
+.login-box > .login-form > .login-form--button {
+	border: none;
+	background-color: white;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.5);
+}
