@@ -102,15 +102,19 @@ nav {
 
 .section {
   width: 720px;
-  padding: 180px 0 0 0;
+  padding: 160px 0 0 0;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
   /* border: 1px solid black; */
 }
 .section > * {
   width: 100%;
   height: 100px;
+  margin: 11px 0 0 0;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
 }
 /* 웹툰장르바 */
 .webtoonGenreBar {
@@ -154,7 +158,7 @@ nav {
 }
 .event {
   height: 520px;
-  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 .eventSlide {
   height: 440px;
@@ -258,7 +262,6 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 11px 0 0;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -295,7 +298,6 @@ nav {
 } */
 .waitForFreeWebtoon {
   height: 534px;
-  margin: 10px 0 10px 0;
   background-color: white;
   box-sizing: border-box;
   padding: 0 20px 20px 20px;
@@ -414,4 +416,91 @@ nav {
   width: 550px;
   height: 100px;
   border-radius: 5px;
+}
+.weekdayTop {
+  height: 606px;
+  background-color: white;
+}
+.weekdayTopWeekInfo {
+  width: 680px;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0 0 0;
+}
+.weekdayTopWeekInfo > * {
+  width: 85px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  color: #999;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+.weekdayContentWrap {
+  width: 100%;
+  height: 436px;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.weekdayContent {
+  width: 120px;
+  height: 208px;
+  border-radius: 8px;
+}
+.weekdayContentTop {
+  width: 100%;
+  height: 120px;
+}
+.weekdayContentImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+}
+.weekdayContentLank {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242526;
+  border-radius: 0 0 8px 8px;
+}
+.weekdayLankInfo {
+  color: #ffd200;
+  font-size: 16px;
+}
+.weekdayContentInfo {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.weekdayContentInfo > * {
+  margin: 0 2px 0 2px;
+}
+.weekdayClock {
+  width: 16px;
+  height: 16px;
+}
+.weekdayContentStatus {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  margin: 0 2px 0 0;
+}
+.weekdayContentCount {
+  width: 11px;
+  height: 11px;
+}
+.weekdayContentFollow {
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+  font-weight: bold;
 }
