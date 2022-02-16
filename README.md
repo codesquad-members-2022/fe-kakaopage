@@ -12,7 +12,7 @@ section tag ? 논리적으로 관계 있는 문서 혹은 요소를 분리할 �
 
 ### 기능 요구사항
 
-![기획서 링크](https://docs.google.com/presentation/d/1ez1rBqgAP9vQtr6_xiQW8Gn8WTncW1-s0sZaGnDm6FI/edit#slide=id.gad474f1470_0_8)
+기획서 링크 https://docs.google.com/presentation/d/1ez1rBqgAP9vQtr6_xiQW8Gn8WTncW1-s0sZaGnDm6FI/edit#slide=id.gad474f1470_0_8)
 
 ---
 
@@ -229,4 +229,39 @@ BEM의 단점 ?
 
 1. https://en.bem.info/
 
-2. https://en.bem.info/methodology/css/#how-do-i-make-an-html-wrapper
+2. https://en.bem.info/methodology/css/#how-do-i-make-an-html-wrapper  
+
+---
+
+### 가상연산자 js로 스타일 변경  
+
+css에서 var변수를 사용할 수 있다는건 알고 있었지만 이걸 응용해서 가상연산자의 스타일링 입힌건 처음이라 정리하였다. 현재 var변수를 정의하여 사용할 수 있는 브라우저 버전으론 IE를 제외한 최신 브라우저에선 동작한다.  
+
+```css
+.footer__business .footer__business_info::after {
+    content: '';    
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: var(--background, url(./images/icon_trace_off.png));
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+}
+```
+
+위 css 코드에서 after 가상연산자 스타일링 background 속성에 var 변수를 사용하여 --으로 시작하는 이름으로 --background 변수 이름을 정의하고 2번째 인자엔 해당 속성의 초기값을 적어주면된다.   
+
+```javascript
+businessInfoEl.addEventListener("click", ()=> {
+    if(businessInfoEl.classList.contains("footer__business_info_off")) {
+        businessInfoEl.style.setProperty("--background", "url(images/icon_trace_on.png)");
+    } else if(businessInfoEl.classList.contains("footer__business_info_on")) {
+        businessInfoEl.style.setProperty("--background", "url(images/icon_trace_off.png)");
+    }
+});
+```  
+
+businessInfoEl DOM에 click 이벤트리스너를 달아 특정 css가 포함되어 있는지 체킹하여 해당 DOM의 setProperty 함수로 첫번째 매개변수는 var 변수 이름으로 선언한 변수 이름, 두번째 매개변수는 변경값이 담긴다. 
+
+👀 이렇게 var 변수를 선언하여 사용하면 위 가상연산자에 스타일링을 줄 수 있을뿐만 아니라 여러곳에서 같은 스타일링을 재사용할 수 있어서 유지보수에 굉장히 좋다고 생각한다.
