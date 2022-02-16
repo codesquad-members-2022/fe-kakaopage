@@ -1,0 +1,11 @@
+.page-main {
+  width: 100%;
+  margin-top: 170px;
+}
+
+.page-main-container {
+  width: 720px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 14px;
+}

@@ -1,0 +1,92 @@
+.preview {
+  height: 480px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.preview-cover img {
+  width: 100%;
+  user-select: none;
+}
+
+.preview-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+}
+
+.preview-info-box {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.preview-detail {
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.preview-state img {
+  width: 35px;
+}
+
+.preview-state,
+.preview-type,
+.preview-subscribers {
+  display: flex;
+  align-items: center;
+}
+
+.preview-state {
+  margin-right: 10px;
+}
+
+.preview-type img,
+.preview-subscribers img {
+  margin-right: 4px;
+}
+
+.preview-summary {
+  background-color: var(--yellow);
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.preview .prev-btn,
+.preview .next-btn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top: 45%;
+  cursor: pointer;
+}
+
+.preview .prev-btn {
+  left: 20px;
+}
+
+.preview .next-btn {
+  right: 20px;
+}
+
+.preview .prev-btn:hover,
+.preview .next-btn:hover {
+  transform: scale(1.2);
+}

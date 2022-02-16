@@ -1,0 +1,23 @@
+@import url('./css/var.css');
+@import url('./css/reset.css');
+@import url('./css/pageHeader/header.css');
+@import url('./css/pageHeader/category.css');
+@import url('./css/pageMain/main.css');
+@import url('./css/pageMain/category.css');
+@import url('./css/pageMain/preview.css');
+@import url('./css/pageMain/webtoonFilter.css');
+@import url('./css/pageMain/webtoonComponent.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
