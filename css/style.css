@@ -8,8 +8,21 @@ header {
   /* position: fixed; */
 }
 
+nav {
+  position: fixed;
+  top: 80px;
+  background-color: white;
+  width: 100%;
+  z-index: 100;
+}
+
 .header-container {
   height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 100;
 }
 
 .init > * {
@@ -124,8 +137,10 @@ a:hover {
 }
 
 .contents {
+  display: block;
   height: fit-content;
   overflow: scroll;
+  margin-top: 167px;
 }
 
 .banner {
@@ -222,4 +237,79 @@ a:hover {
 
 .gray {
   background-color: #eee;
+}
+
+.items-container {
+  width: 720px;
+  height: 535px;
+  margin: 10px auto;
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.items-title-container {
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.items__more {
+  color: rgb(153, 153, 153);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.items__title {
+  font-size: 18px;
+}
+
+.items__thumbnail {
+  width: 142px;
+  height: 96px;
+  background-color: #aaa;
+  border-radius: 15px;
+}
+
+.items__info {
+  padding: 10px;
+}
+
+.items__description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+
+.items__views {
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+
+.items__author {
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+
+.items__subject {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.items__item {
+  margin: 20px 0 20px 0;
+}
+
+.items__status-icon-new {
+  width: 16px;
+  height: 16px;
+  background-image: url("https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9");
+  background-size: cover;
+}
+
+.items__status-icon-up {
+  width: 23.27px;
+  height: 16px;
+  background-image: url("https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f");
+  background-size: cover;
 }
