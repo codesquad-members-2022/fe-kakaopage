@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "title": "마검왕",
+      "imageHorizontalUrl": "",
+      "imageVerticalUrl": "",
+      "genre": "액션무협",
+      "day": ["수"],
+      "rank": "9.9",
+      "seriesEnd": false,
+      "adult": false,
+      "waitForFree": true,
+      "event": "UP",
+      "status": "N",
+      "userCount": 22970000,
+      "write": "",
+      "paint": "소구미",
+      "originalAuthor": "나민채"
+    },
+    {
+      "title": "흑막을 버리는 데 실패했다",
+      "imageHorizontalUrl": "",
+      "imageVerticalUrl": "",
+      "genre": "로판",
+      "day": ["수"],
+      "rank": "1위",
+      "seriesEnd": false,
+      "adult": true,
+      "waitForFree": true,
+      "event": "",
+      "status": "N",
+      "userCount": 2930000,
+      "write": "ASSAM",
+      "paint": "쓩늉",
+      "originalAuthor": "자은향"
+    }
+  ]
+}
