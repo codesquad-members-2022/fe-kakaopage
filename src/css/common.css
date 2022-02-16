@@ -27,6 +27,10 @@ header {
   display: flex;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .page-width {
   width: 750px;
   min-width: 750px;
