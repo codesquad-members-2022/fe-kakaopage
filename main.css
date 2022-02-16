@@ -1,0 +1,140 @@
+:root{
+    /* color */
+    font-family: 'Noto Sans KR', sans-serif;
+    --text-color: #333333;
+    --main-white: #FFFFFF;
+    --background-color: #EEEEEE;
+    --accent-color: #FCBC19;
+    /*size*/
+    --width: 30%;
+
+    /*font-size*/
+    --largefont: 22px;
+}
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+/*1. 헤더 세팅*/
+.header{
+    width: 100vw;
+    background-color: var(--main-white);
+}
+.head, .navbar__menu{
+    display: flex;
+    /* flex-basis: 0;  */
+    /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
+    margin: 0 20%;
+    background-color: var(--main-white);
+    justify-content: center;
+}
+
+.item{
+    padding: 40px;
+    width: var(--width);
+    background-color: var(--main-white);
+}
+/*검색창 세팅*/
+.search{
+   display: flex;
+   background-color: var(--main-white);
+   margin-left: 200px;
+   padding-left: 100px;
+   position: relative;
+}
+
+.searchborder{
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border-color: #999999;
+    border: 1px solid;
+}
+#searchInput{
+    margin-left: 10px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    border-color: none;
+}
+.search i{
+    position: absolute;
+    margin-left: 170px;
+    padding-top: 8px;
+    color: #898989;
+}
+/*stage 세팅*/
+.stage{
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+.stage img{
+    width: 60%;
+}
+/*로그인 세팅*/
+.user{
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--largefont);
+    color: #999999;
+    border: 0;
+    padding-left:0; margin-left:0;
+}
+/* 2. 네비바 세팅 */
+a{
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+
+.navbar__menu li{
+    padding: 20px;
+    width: var(--width);
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    font-size: var(--largefont);
+    text-align: center;
+}
+
+/*3. 장르 */
+.contents__genre{
+    background-color: blue;
+    margin: 20px 20%;
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around; 
+    justify-content: center;
+    
+}
+
+.contents__genre li{
+    padding: 15px 33px;
+    display: inline;
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+   
+}
+
+.contents__genre a{
+    color: var(--background-color);
+}
+
+/* 4. 배너 */
+.banner{
+    margin: 20px 20%;
+    width: 60%;
+    height: 500px;
+    background-color: red;
+}
+
+body{
+    background-color: var(--background-color);
+}
