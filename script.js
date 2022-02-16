@@ -1,7 +1,7 @@
-import footer from "./footer.js";
+import { footer } from "./footer.js";
 
 const init = () => {
-    footer();
+    footer.detailSlide();
 }
 
 // async function getWebtoonData() {
