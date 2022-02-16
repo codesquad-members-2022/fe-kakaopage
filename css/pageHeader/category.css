@@ -22,7 +22,7 @@
   border-bottom: 3px solid #fff;
 }
 
-.page-header-category__container li:nth-of-type(2) {
+.page-header-category__container li.yellow-border {
   border-bottom: 3px solid var(--yellow);
 }
 
