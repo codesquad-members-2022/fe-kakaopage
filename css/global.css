@@ -34,6 +34,10 @@ button {
     margin-top: 11px;
 }
 
+.padding-default {
+    padding: 20px;
+}
+
 .title {
     font-weight: bold;
 }
