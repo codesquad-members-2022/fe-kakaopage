@@ -16,6 +16,11 @@ body {
 .hide {
     display: none;
 }
+.text_ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* HEADER */
 header {

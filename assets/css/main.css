@@ -114,9 +114,6 @@
 .item .item_ttl {
     font-size: 16px;
     color: #333333;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 .item .txt .info {
@@ -560,9 +557,6 @@
 .main_contents .sub_nav ul li .sub_nav_ttl {
     font-weight: 500;
     font-size: 18px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .main_contents .sub_nav ul li .num {
