@@ -1,0 +1,71 @@
+/* ======== banner ======== */
+.banner {
+  position: relative;
+  margin-top: 12px;
+}
+
+.banner__list {
+  width: 720px;
+  height: 480px;
+}
+
+/* JS 구현전이라서 임시로 다른 li를 안보이게 설정 */
+.banner__item {
+  display: none;
+}
+
+.banner__item--focused {
+  display: block;
+}
+
+/* 배너 화살표 */
+.banner__prev, .banner__next {
+  position: absolute;
+  top: 45%;
+  padding: 10px 16px;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.banner__prev {
+  left: 20px;
+}
+
+.banner__next {
+  right: 20px;
+}
+
+/* 작품 정보 관련 */
+.banner__info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: var(--white-color);
+}
+
+.banner__title {
+  margin-left: 24px;
+  font-size: 28px;
+}
+
+.banner__viewer {
+  display: flex;
+  align-items: baseline;
+  margin: 16px;
+}
+
+.banner__viewer p {
+  padding: 0 8px;
+  font-size: 20px;
+}
+
+.banner__summary {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 20px;
+  background-color: var(--main-point-color);
+  color: var(--black-color);
+}
