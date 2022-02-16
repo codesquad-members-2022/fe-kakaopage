@@ -344,8 +344,6 @@ nav {
   display: flex;
 }
 .contentImage {
-  width: 142px;
-  height: 96px;
   background-size: cover;
   border-radius: 6px;
 }
