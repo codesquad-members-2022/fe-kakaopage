@@ -19,22 +19,23 @@
 }
 /*1. 헤더 세팅*/
 .header{
-    width: 100vw;
+    top:0px; /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
     background-color: var(--main-white);
+    position: sticky;
 }
 .head, .navbar__menu{
     display: flex;
-    /* flex-basis: 0;  */
-    /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
     margin: 0 20%;
     background-color: var(--main-white);
     justify-content: center;
+    
 }
 
 .item{
     padding: 40px;
     width: var(--width);
     background-color: var(--main-white);
+    position: relative;
 }
 /*검색창 세팅*/
 .search{
@@ -99,9 +100,12 @@ a{
     font-size: var(--largefont);
     text-align: center;
 }
-
+.underhead{
+    position: absolute;
+    margin: 0 auto;
+}
 /*3. 장르 */
-.contents__genre{
+/* .contents__genre{
     background-color: blue;
     margin: 20px 20%;
     width: 60%;
@@ -121,7 +125,7 @@ a{
     font-size: 20px;
     text-align: center;
    
-}
+} */
 
 .contents__genre a{
     color: var(--background-color);
@@ -129,12 +133,15 @@ a{
 
 /* 4. 배너 */
 .banner{
-    margin: 20px 20%;
     width: 60%;
-    height: 500px;
+    height: 90rem;
     background-color: red;
 }
 
+
 body{
     background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
 }
+
