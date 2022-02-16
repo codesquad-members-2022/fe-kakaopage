@@ -39,24 +39,21 @@
 
 # 고민
 
-❓ 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
+❓ [ ] 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
 
 ![스크린샷 2022-02-14 오후 11 34 12](https://user-images.githubusercontent.com/71386219/153883813-ac766d7b-ef76-43c2-a275-efaaaadceca2.png)
 
-❓ 커밋 메세지를 얼마나 세분화해야하는지
+❓ [x] 커밋 메세지를 얼마나 세분화해야하는지
 
 - 아무리 작아도 주제가 구분되면 구분해서 커밋해야하나? 예를 들어, 미션목표정하기 -> html 구조짜기
+- ✅ commit convention에 따라 커밋
 
-❓ html tag
-
-- session vs artice 차이
-
-❓ css convetion
+❓ [x] css convetion
 
 - ✅ naming -> convention 정리
 - naming: `main__carousel__button` vs `main__carousel > button`
 - BEM 규칙을 적용하여 하위 요소는 클래스 이름에 포함하지 않도록 한다.
-- 깊이가 깊은 하위 요소를 표현하기에 BEM이 불편하다. 다른 방법론도 공부해봐야겠다.
+- 깊이가 깊은 하위 요소를 표현하기에 BEM이 불편하다. 다른 방법론도 공부해봐야겠다. ->✅ 공통되는 요소는 묶어서 이름지어 따로 관리
 
 ```css
 /* 기존 */
@@ -66,8 +63,19 @@ carousel__img-container
 carousel__text-container
 ```
 
-❓ flexbox 남용?
+❓ [ ] flexbox 남용?
+
+- flexbox가 중복되는 부분이 많은데 어떻게 줄일 수 있을까? 팀원들이랑 고민을 공유했는데 궁금증이 해결되지 않았음.
 
 # html 구조짜기 및 간단한 네이밍
 
 ![이미지-1](https://user-images.githubusercontent.com/71386219/153881920-aa848f63-bb26-48c7-b39c-a000ceac688d.jpg)
+
+# Refactoring
+
+- [ ] readme 작성
+- [ ] class 이름 중복되는거 줄이기
+- 디테일한 부분 수정하기
+  - [ ] 노란 점 위치
+  - [ ] 이벤트 grid의 노란 숫자 표시
+  - [ ] 헤더 고정
