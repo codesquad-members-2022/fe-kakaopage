@@ -11,6 +11,7 @@ header .header__navigation__menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 80px;
 }
 
 header
@@ -27,14 +28,28 @@ header .header__container {
   height: 80px;
 }
 
-header .header__navigation {
-  height: 80px;
-}
-
 header .header__container .header__container__home {
   width: 130px;
 }
 
 header .header__container .header__navigation__container {
   width: 590px;
+}
+
+.main__navigation__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #bbbbbb;
+  background-color: #ffffff;
+  height: 65px;
+}
+
+/*
+  Todo : 이미지를 div크기에 맞게 확장하기
+*/
+.banner__box {
+}
+
+.banner__box .banner__content {
 }
