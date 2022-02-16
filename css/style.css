@@ -298,6 +298,8 @@ a:hover {
 
 .items__item {
   margin: 20px 0 20px 0;
+  position: relative;
+  right: 40px;
 }
 
 .items__status-icon-new {
@@ -332,4 +334,6 @@ a:hover {
   height: 26px;
   background-image: url("https://static-page.kakao.com/static/common/badge_webtoon.png?109e859eacc8dea9c23ffa6375d6f992");
   background-size: cover;
+  position: relative;
+  left: 40px;
 }
