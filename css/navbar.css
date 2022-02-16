@@ -1,3 +1,4 @@
+
 .navbar {
   box-sizing: border-box;
   margin: 0;
@@ -129,5 +130,109 @@ li {
   color: rgb(153, 153, 153);
   text-align: right;
   flex: 1 0 auto;
+}
+
+/* 여기부터 webtoon list */
+
+.webtoon-list {
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.webtoon-list-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.webtoon-content {
+  width: 120px;
+  box-sizing: border-box;
+  margin: 0px 0px 21px;
+  text-decoration-line: none;
+}
+
+.webtoon-img-1 {
+  height: 120px;
+  margin: 0;
+  overflow: hidden;
+  width: 120px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.webtoon-ranking-description {
+  background-color: #242526;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  height: 30px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;   /*중심축에서 center이므로 수직선에서 가운데라고 생각하면됨*/
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ranking {
+  line-height: 1;
+  font-weight: 400;
+  color: #ffd200;
+  font-size: 16px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ranking-logo {
+  box-sizing: border-box;
+  margin: 0;
+  height: 16px;
+  margin-top: 2px;
+  align-items: center;
+  display: flex;
+}
+
+.webtoon-list-description {
+  color: #333333;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+
+
+.viewers-num {
+  display: flex;
+  font-size: 14px;
+  font-weight: 350;
+  margin: 0;
+  box-sizing: border-box;
+  color: #9c9c9c;
+  align-items: center;
+}
+
+.viewers-logo {
+  box-sizing: border-box;
+  margin: 0;
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
 }
 
