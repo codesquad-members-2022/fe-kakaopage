@@ -6,7 +6,7 @@
 - 브라우저 동작원리 정리( + 웹 접근성)
 - 기획서도 고려해서 미션1을 설계하기
 - 용도에 맞는 tag 사용하기
-- flexbox 사용법 정리
+- flexbox, grid 사용법 정리
 - css 캐스캐이딩, 상속, selector 정리
 - 객체지향을 생각해서 viewer와 js부분을 구분해보기
 - DOM, Event, Templating 이 무엇인지, 동작방법, 동적기능 이해
@@ -29,6 +29,15 @@
 - branch -> 미션1PR 이후 정리할 예정
   - rebase vs merge
 
+# css convention 정리
+
+BEM 방식 사용
+
+- Block, element, modifier
+- c- (Component): 독립형 구성 요소에 대한 외관 포함
+- l- (Layout): 외관 없이 구성 요소를 배치하고 레이아웃을 구성하는 데 사용
+- 구성 요소에 여러 수준의 하위 요소가 있는 경우 클래스 이름에 각 수준을 나타내지 않기(구조의 깊이를 전달하지 않는다.)
+
 # Mission - 카카오페이지 클론
 
 ## 목표
@@ -39,7 +48,7 @@
 
 # 고민
 
-❓ [ ] 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
+❓ [x] 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
 
 ![스크린샷 2022-02-14 오후 11 34 12](https://user-images.githubusercontent.com/71386219/153883813-ac766d7b-ef76-43c2-a275-efaaaadceca2.png)
 
