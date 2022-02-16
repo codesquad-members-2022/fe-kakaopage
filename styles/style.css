@@ -1,0 +1,28 @@
+@import "header.css";
+@import "main.css";
+
+html {
+  /* display:block; */
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #eee;
+  /* text-indent: 0!important; */
+  user-select: none;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  font-family:NotoSans;
+  line-height:1.4;
+}
+div {
+  display:block;
+}
+/* nav {
+  
+} */
+/* @media screen and (max-width: 720px) */
