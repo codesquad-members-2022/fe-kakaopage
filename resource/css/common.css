@@ -81,7 +81,13 @@ display
     color: #fff;
 }
 .row-5 {
-    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.row-5 .row {
+    width: calc(20% - 16px);
 }
 
 /**
@@ -327,6 +333,27 @@ section-title
     background: url('../images/common/ico-more-gray.svg') no-repeat right center / auto 14px;
 }
 .section__work-number {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.work__inner-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.works .bg-black-bar {
+    padding: 0 8px;
+    line-height: 30px;
+    color: var(--color-yellow);
+    background: #242526 url('../images/common/ico-clock_gray.svg') no-repeat right 8px center / auto 16px;
+}
+.work__title {
+    margin: 9px 0 7px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.work__reader {
     font-size: 14px;
     color: var(--color-gray);
 }
