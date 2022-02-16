@@ -1,0 +1,100 @@
+header {
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo-area {
+    height: 80px;
+    justify-content: space-between;
+}
+
+.logo {
+    line-height: 80px;
+    font-size: 1.7rem;
+}
+.user-menu {
+    justify-content: flex-end;
+}
+
+.user-menu .user-menu-item {
+    line-height: 80px;
+}
+
+.user-menu-item a {
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.user-menu-item a:last-child::before {
+    content: "";
+    height: 10px;
+    border-left: 1px solid #e2e2e2;
+    margin: 0 10px;
+}
+
+.user-menu-item img {
+    vertical-align: text-bottom;
+    margin: 0 24px;
+}
+
+.search-form {
+    height: 2rem;
+    margin: auto 0;
+    border: 1px solid #cfcfcf;
+    border-radius: 18px;
+}
+
+.search-form input {
+    font-size: 1rem;
+    height: 2rem;
+    width: 136px;
+    border: 0;
+    padding: 0 0 0 10px;
+}
+.search-form button {
+    margin: 5px 0;
+}
+
+.search-form img {
+    width: 20px;
+}
+
+nav {
+    height: 70px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    justify-content: space-between;
+}
+
+nav li {
+    height: 68px;
+    text-align: center;
+    flex: 1 1 auto;
+    line-height: 68px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: transparent;
+    position: relative;
+}
+
+nav .alert::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: #ffd200;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+nav .active {
+    border-bottom-color: #ffd200;
+}

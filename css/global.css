@@ -1,0 +1,77 @@
+body {
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #eee;
+    color: #3a3a3a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+input {
+    border: none;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.margin-top-default {
+    margin-top: 11px;
+}
+
+.padding-default {
+    padding: 20px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.group-flex {
+    display: flex;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.section-header {
+    justify-content: space-between;
+}
+
+.section-header .count {
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.section-header .detail {
+    color: #999;
+}
+
+.thumbnail-wrap {
+    border-radius: 8px;
+    background-color: #fff;
+}

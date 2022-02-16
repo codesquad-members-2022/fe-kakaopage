@@ -1,0 +1,285 @@
+.contents-wrap {
+    background-color: #eee;
+    margin-top: 150px;
+}
+
+.sub-menu {
+    margin-bottom: 11px;
+    height: 66px;
+    line-height: 66px;
+}
+
+.sub-menu li {
+    flex: auto;
+    text-align: center;
+    color: #bbb;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sub-menu .active {
+    color: #333;
+}
+
+.cover-image {
+    height: 480px;
+    width: 700px;
+    position: relative;
+    color: #fff;
+}
+
+.cover-image img {
+    width: 100%;
+    position: relative;
+}
+
+.cover-image .title {
+    font-size: 1.7rem;
+}
+
+.cover-image .title,
+.cover-image .description {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.cover-image .description {
+    font-size: 20px;
+}
+
+.cover-image .cover-info-oneline {
+    height: 40px;
+    background-color: #ffd200;
+    color: #3a3a3a;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.cover-image-description {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.cover-image .page {
+    position: absolute;
+    right: 25px;
+    bottom: 60px;
+    opacity: 0.6;
+}
+
+.category-links-wrap {
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+
+.category a {
+    width: 33%;
+    height: 60px;
+    color: #3a3a3a;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.category a:nth-of-type(3n) {
+    border-right: none;
+}
+
+.category .badge {
+    height: 24px;
+    background-color: #ffd200;
+    border-radius: 13px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-banner .arrow {
+    width: 85px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-banner .banner {
+    width: 550px;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.week-list {
+    color: #bbb;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.week-list li {
+    padding: 15px;
+    flex: auto;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.week-list .active {
+    border-bottom: solid 2px #ffd200;
+}
+
+.webtoon-card-wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.webtoon-card {
+    width: 120px;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.webtoon-card .thumbnail {
+    width: 100%;
+    display: block;
+}
+
+.webtoon-card .rank-info {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    color: #ffd200;
+    background-color: #242526;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.webtoon-card .rank-info img {
+    height: 16px;
+}
+
+.webtoon-card .title {
+    color: #333;
+    margin: 10px 0;
+}
+
+.webtoon-card .reader-info {
+    color: #9c9c9c;
+    font-size: 0.9rem;
+}
+
+.thumbnail-wrap {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.new-best .cover-image {
+    width: 324px;
+    height: 214px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.new-best .new-best-img-wrap {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.new-best .cover-image .title {
+    font-size: 1.2rem;
+}
+
+.new-best .cover-image .description {
+    font-size: 0.9rem;
+}
+
+.new-best .cover-image .cover-info-oneline {
+    height: 24px;
+    font-size: 0.9rem;
+}
+
+.daily-best ol {
+    padding-top: 20px;
+}
+
+.daily-best-card {
+    width: 100%;
+    padding: 10px 10px 10px 0;
+}
+
+.daily-best-card .rank-num {
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    flex: 0 0 30px;
+    justify-content: center;
+}
+
+.daily-best-card .img-wrap {
+    width: 84px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.daily-best-card .thumbnail {
+    width: 100%;
+}
+
+.daily-best-card .badge {
+    height: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.daily-best-card .info {
+    margin-left: 20px;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.daily-best-card .info .title {
+    color: #333;
+}
+
+.daily-best-card .info .description {
+    color: #9c9c9c;
+    margin-top: 7px;
+    font-size: 0.9rem;
+}
+
+.daily-best-card .info .date {
+    color: #9c9c9c;
+    font-size: 0.9rem;
+}
+
+.recommend-event .img-wrap {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.recommend-event .info {
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0.6;
+}
