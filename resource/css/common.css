@@ -503,3 +503,23 @@ section-title
 .section-recommand-event__img-wrap {
     margin-top: 20px;
 }
+
+/**
+app으로 보기 버튼
+**/
+.app-button {
+    display: block;
+    background: var(--color-dark-yellow);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    line-height: 70px;
+    text-align: center;
+}
+.app-button__text {
+    padding-right: 22px;
+    font-size: var(--font-size-XL);
+    background: url('../images/common/arrow-right.png') no-repeat right bottom 1px / auto 22px;
+}
+.app-button__bold-text {
+    font-weight: var(--font-weight-M);
+}
