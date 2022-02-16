@@ -9,6 +9,7 @@
 }
 .main-content__content__nav {
   margin-top: 10px;
+  position: relative;
 }
 .main-content__content__menu {
   display: flex;
@@ -20,6 +21,7 @@
 .main-content__content__menu__left {
   margin-left: 15px;
   display: flex;
+  color: #c5c5c5;
 }
 .main-content__content__menu__text {
   margin: 0 3px;
@@ -34,6 +36,9 @@
   display: flex;
   align-items: center;
   margin-right: 15px;
+}
+.main-content__content__menu__sortingbox span {
+  color: #999999;
 }
 
 .main-content__content__main {
