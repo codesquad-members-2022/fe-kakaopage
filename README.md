@@ -38,20 +38,20 @@ CSS
 
 - layout 잡기 -> 사전 기획서를 보며 큰단위들로 나누어 단위를 나누어 사용한다.
 
-  <img src="../mdImage/kakaoPageBuild.png" width=50%>
+  <img src="./mdImage/kakaoPageBuild.png" width=50%>
 
 - 마크업? -> 처음 해보는데 flex박스를 사용하여 해보았다. -> 느낀점: 내가 하는게 맞는지 틀린지 판단이 안되어 괴롭다.
 - css스타일링 -> 만들어놓은 컨테이너 단위별로 스타일링을 해줬다.
   - -> refactoring을 어떻게 해야할지 난감했다. 우선 하드코딩하는 부분이 많아서 변수로 자주 사용되었거나 사용할 값들을 만들어서 최대한 사용했다.
 - 동적 기능 필요부분 분석하기.
 
-    <img src ="../mdImage/event1.png" width=50%>  
+    <img src ="./mdImage/event1.png" width=50%>  
     <br/>---> 좌우버튼 클릭시  
       
       이미지 변경 및 이미지 카운트 text 증감 이미지 관련정보 text 변경  
       이미지 애니메이션 css를 통해 제어를 생각중
 
-    <img src ="../mdImage/event2.png" width=50%>
+    <img src ="./mdImage/event2.png" width=50%>
 
   <br/>---> nav바 클릭시
 
