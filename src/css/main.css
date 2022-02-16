@@ -48,7 +48,7 @@ ul, li { list-style: none; }
 
 strong { font-weight: bold; }
 
-body { background: #e9ecef; color: #212529; }
+body { margin: 0 auto; width: 720px; background: #e9ecef; color: #212529; }
 
 body::before { content: ''; display: block; clear: both; height: 148px; }
 
