@@ -1,0 +1,18 @@
+.promotionBanner {
+  margin-top: 10px;
+  background-color: white;
+  padding: 15px;
+}
+
+.promotionBanner_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotionBanner_row > button {
+  /* colmn으로 바꾸기 */
+  width: 1000px;
+  height: 60px;
+  margin: 1px;
+  border-radius: 6px;
+}
