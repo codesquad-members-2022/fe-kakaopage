@@ -434,3 +434,43 @@ a:hover {
   position: relative;
   right: 142px;
 }
+
+.ad-slide {
+  width: 720px;
+  margin: 10px auto;
+}
+
+.ad-slide__container {
+  width: 720px;
+  height: 140px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.ad-slider__prev-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c");
+  background-size: cover;
+  margin: auto 0;
+  position: relative;
+  right: 20px;
+}
+
+.ad-slider__next-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c");
+  background-size: cover;
+  margin: auto 0;
+  position: relative;
+  left: 20px;
+}
+
+.ad-slider__content {
+  width: 550px;
+  height: 100px;
+  background-image: url("https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0");
+  background-size: cover;
+  margin: auto 0;
+}
