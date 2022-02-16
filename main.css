@@ -18,16 +18,15 @@
     font-size: 100%;
 }
 /*1. 헤더 세팅*/
-.header{
+.header, .navbar{
     width: 100vw;
     background-color: orange;
 }
-.head{
+.head, .navbar__menu{
     display: flex;
     /* flex-basis: 0;  */
     /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
     margin: 0 20%;
-    /* padding: 40px; */
     background-color: green;
     justify-content: center;
 }
@@ -83,6 +82,21 @@
     color: #999999;
     border: 0;
     padding-left:0; margin-left:0;
+}
+/* 2. 네비바 세팅 */
+a{
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+
+.navbar__menu li{
+    padding: 20px;
+    width: var(--width);
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    font-size: var(--largefont);
+    text-align: center;
 }
 
 body{
