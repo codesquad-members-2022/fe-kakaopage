@@ -1,9 +1,9 @@
 /* 
     header: width 100%
     main-content: 720px?, align-center
-
 */
 
+/* global */
 * {
   font-family: NotoSans;
   line-height: 1.4;
@@ -21,11 +21,14 @@ button {
   padding: 0px;
 }
 
+/* header */
 header {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-
+  top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
   background-color: #fff;
