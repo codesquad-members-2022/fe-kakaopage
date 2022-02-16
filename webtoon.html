@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/fe-kakaopage/src/css/reset.css">
   <link rel="stylesheet" href="/fe-kakaopage/src/css/common.css">
   <link rel="stylesheet" href="/fe-kakaopage/src/css/header.css">
+  <link rel="stylesheet" href="/fe-kakaopage/src/css/main.css">
   <title>홈 - 웹툰ㅣ카카오페이지</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
       </div>
     </div>
     <nav class="page-width">
-      <ul class="category">
+      <ul class="list header-nav">
         <li>
           <a href="/fe-kakaopage/index.html">홈</a>
         </li>
@@ -64,9 +65,9 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <nav>
-      <ul class="category">
+  <main class="page-width">
+    <nav class="container">
+      <ul class="list category">
         <li>
           <a href="#">홈</a>
         </li>
@@ -96,9 +97,9 @@
         </li>
       </ul>
     </nav>
-    <section class="ly-slide">
+    <section class="slide">
       <a href="#" class="slide-content">
-        <div>
+        <div class="slide-info">
           <p>8클래스 마법사의 회귀</p>
           <div>
             <img src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" alt="이벤트">
@@ -107,121 +108,61 @@
               <span>ㅣ</span>
               <span>80.9만명</span>
             </div>
-              <span>3 / 12</span>
           </div>
         </div>
-        <div>
-          <a href="#">시즌2 런칭 기념, 경품 이벤트!</a>
-        </div>
+        <p class="slide-summary">시즌2 런칭 기념, 경품 이벤트!</p>
       </a>
-      <a href="#" class="slide-content">
-        <div>
-          <p>최대 3만 캐시 역대 최고 금액 증정</p>
-          <div>
-            <img src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" alt="이벤트 뱃지">
-            <span>3 / 12</span>
-          </div>
-        </div>
-        <div>
-          <a href="#">지금 캐시 받으러 가기</a>
-        </div>
-      </a>
-      <a href="#" class="slide-content">
-        <div>
-          <p>에스티오</p>
-          <div>
-            <img src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2" alt="업데이트">
-            <div>
-              <span>웹툰</span>
-              <span>ㅣ</span>
-              <span>29.9만명</span>
-            </div>
-              <span>3 / 12</span>
-          </div>
-        </div>
-        <div>
-          <a href="#">날 부른 게... 당신입니까?</a>
-        </div>
-      </a>
-      <a href="#" class="slide-content">
-        <div>
-          <p>막내 황녀님</p>
-          <div>
-            <img src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" alt="이벤트">
-            <div>
-              <span>웹툰</span>
-              <span>ㅣ</span>
-              <span>114.6만명</span>
-            </div>
-              <span>3 / 12</span>
-          </div>
-        </div>
-        <div>
-          <a href="#">시즌3 오픈 기념 이벤트!</a>
-        </div>
-      </a>
-      <a href="#" class="slide-content">
-        <div>
-          <p>숨겨진 명작 감상하고 100% 캐시 선물 받자</p>
-          <div>
-            <img src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" alt="이벤트">
-              <span>3 / 12</span>
-          </div>
-        </div>
-        <div>
-          <a href="#">확인하러 가기</a>
-        </div>
-      </a>
+      <div class="slide-number">3 / 12</div>
       <div>
-        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="">
-        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="">
+        <img class="controller left" src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="">
+        <img class="controller right" src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="">
       </div>
     </section>
-    <section class="notice">
-      <div>
-        <a href="#">
+    <section class="container">
+      <div class="notice">
+        <a class="notice-btn" href="#">
           <div>
             <span>오늘 UP</span>
-            <span>205</span>
+            <span class="badge">205</span>
           </div>
         </a>
-        <a href="#">
+        <a class="notice-btn" href="#">
           <div>
             <span>오늘 신작</span>
-            <span>4</span>
+            <span class="badge">4</span>
           </div>
         </a>
-        <a href="#">
+        <a class="notice-btn" href="#">
           <div>
             <span>오리지널</span>
-            <span>2,328</span>
+            <span class="badge">2,328</span>
           </div>
         </a>
-        <a href="#">
+        <a class="notice-btn" href="#">
           <div>
             <span>완결까지 정주행</span>
           </div>
         </a>
-        <a href="#">
+        <a class="notice-btn" href="#">
           <div>
             <span>독립운동가 웹툰</span>
           </div>
         </a>
-        <a href="#">
+        <a class="notice-btn" href="#">
           <div>
             <span>오늘 랭킹</span>
-            <span>1위</span>
+            <span class="badge">1위</span>
           </div>
         </a>
       </div>
     </section>
-    <div class="ly-slide">
-      <a href="#" class="slide-content"></a>
-      <a href="#" class="slide-content"></a>
-      <a href="#" class="slide-content"></a>
+    <div class="ad-slide container">
       <div>
-        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="">
-        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="">
+        <a href="#"></a>
+      </div>
+      <div>
+        <img class="controller left" src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="">
+        <img class="controller right" src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="">
       </div>
     </div>
     <section class="content-container">
