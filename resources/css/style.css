@@ -1,11 +1,16 @@
 @import "reset.css";
 
+.flex__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     background-color: #eee;
 }
 
 header {
-    display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -29,14 +34,10 @@ header {
 }
 
 .header__sub {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
 .search {
-    display: flex;
-    align-items: center;
     justify-content: space-around;
     height: 28px;
     width: 186px;
@@ -71,11 +72,6 @@ header {
     margin-left: 25px
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-}
-
 .menu__button {
     height: 100%;
     padding: 0;
@@ -94,18 +90,13 @@ header {
 }
 
 .header-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 720px;
     height: 35%;
     margin: 0 auto;
 }
 
 .header-nav__list {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 720px;
     height: 100%;
 }
@@ -153,17 +144,12 @@ main {
 }
 
 .main-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 720px;
     margin: 0 auto;
 }
 
 .main-nav__list {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 720px;
 }
 
