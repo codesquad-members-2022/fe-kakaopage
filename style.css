@@ -1,0 +1,518 @@
+* {
+  text-align: center;
+  font-family: 'Hanna', sans-serif;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 660px;
+  z-index: 1;
+  background-color: rgb(227, 241, 253);
+}
+
+main {
+  padding-top: 165px;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.firstHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+h1 {
+  box-sizing: border-box;
+  min-width: 0;
+  display: block;
+  margin: 15px;
+  margin-top: 12px;
+}
+
+form {
+  margin: 15px;
+  margin-top: 23px;
+}
+
+.searchText,
+.searchSubmit {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.searchText {
+  background: #000;
+  color: white;
+  width: 120px;
+  height: 32px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+.searchSubmit {
+  position: relative;
+  left: -6px;
+  border-radius: 0 25px 25px 0;
+  width: 40px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  background: #f1c164;
+}
+
+.searchSubmit:hover {
+  background: #ff5722;
+}
+
+.headerButton {
+  font-size: 12px;
+  margin: 10px;
+  width: 66px;
+  height: 30px;
+  margin-top: 24px;
+  cursor: pointer;
+  border-radius: 25px 25px 25px 25px;
+  background: #f1c164;
+}
+
+.navUlButton,
+.menuBarTag {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.menuBarTag {
+  background-color: rgb(227, 241, 253);
+}
+
+.navUlButton button {
+  width: 16.6666667%;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 25px 25px 25px 25px;
+  background: #f1c164;
+}
+
+.menuBarTag button {
+  width: 12.5%;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 25px 25px 25px 25px;
+  background: #f1c164;
+}
+
+.navUlButton button:hover,
+.menuBarTag button:hover,
+.headerButton:hover {
+  background: #ff5722;
+}
+
+img {
+  border-radius: 15px 15px 15px 15px;
+}
+
+.imageSection {
+  position: relative;
+  margin-top: 10px;
+}
+
+.imageText {
+  position: absolute;
+  top: 310px;
+}
+
+.imageTitle {
+  margin-block-start: 12px;
+  margin-block-end: 12px;
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.imageEvent {
+  border-radius: 5px 5px 5px 5px;
+  background: black;
+  color: #f1c164;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.imageSpan {
+  font-weight: bold;
+  font-size: large;
+  color: white;
+}
+
+.imageFooter {
+  position: absolute;
+  top: 411px;
+  background-color: #f1c164;
+  padding: 8px;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 660px;
+}
+
+.menuSection {
+  display: flex;
+  background-color: rgb(227, 241, 253);
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.menuSection article {
+  width: 32.4%;
+  height: 60px;
+  margin: 0.5px;
+  font-weight: bold;
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menuSection article span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuSection article div {
+  position: relative;
+  top: 17px;
+  left: 7px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #f1c164;
+  height: 25px;
+  padding: 0px 3px 3px 3px;
+}
+
+.menuTopLeft {
+  border-radius: 10px 0px 0px 0px;
+}
+
+.menuTopRight {
+  border-radius: 0px 10px 0px 0px;
+}
+
+.menuBottomLeft {
+  border-radius: 0px 0px 0px 10px;
+}
+
+.menuBottomRight {
+  border-radius: 0px 0px 10px 0px;
+}
+
+.advert {
+  display: flex;
+  background-color: rgb(227, 241, 253);
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.back {
+  position: absolute;
+  left: 30%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.soon {
+  position: absolute;
+  right: 30%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.moreContent {
+  text-align: right;
+  padding-top: 10px;
+}
+
+.sectionTitle,
+.moreContent {
+  width: 50%;
+  height: auto;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.newThings {
+  display: flex;
+  width: 100%;
+  background-color: rgb(227, 241, 253);
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.firstNewThing {
+  position: relative;
+  width: 46%;
+  left: 0%;
+}
+
+.secondNewThing {
+  position: relative;
+  width: 46%;
+  left: 5%;
+}
+
+.newThingsText {
+  position: absolute;
+  top: 140px;
+  color: whitesmoke;
+  text-align: left;
+}
+
+.secondNewThing .newThingsText {
+  top: 120px;
+}
+
+.newThingsTitle {
+  margin: 0px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.newThingsNew {
+  border-radius: 5px 5px 5px 5px;
+  background: black;
+  color: #f1c164;
+  padding-bottom: 3px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.newThingsFooter {
+  position: absolute;
+  top: 193px;
+  background-color: #f1c164;
+  padding: 3px;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 310px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.dramaTop,
+.boyTop {
+  width: 20%;
+  text-align: left;
+  position: relative;
+}
+
+.dramaTop > span:nth-child(2),
+.boyTop > span:nth-child(2) {
+  position: absolute;
+  top: 89px;
+  width: 0%;
+  font-size: 15px;
+  left: 5px;
+  color: yellow;
+  z-index: 1;
+}
+
+.dramaTop > span:nth-child(3),
+.boyTop > span:nth-child(3) {
+  position: absolute;
+  top: 92px;
+  width: 0%;
+  font-size: 18px;
+  left: 24px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: yellow;
+  z-index: 1;
+}
+
+.dramaTop > span:nth-child(4),
+.boyTop > span:nth-child(4) {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  width: 90px;
+  text-align: right;
+  background-color: #000;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.infoTop div {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.infoTop span {
+  color: red;
+}
+
+.dramaSection,
+.boySection,
+.waitWebtoonSection,
+.waitNovelSection,
+.rankingSection {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(227, 241, 253);
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.waitContents {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.waitContents span {
+  position: absolute;
+  top: 0px;
+  width: 0%;
+  font-size: 18px;
+  left: 0px;
+}
+
+.infoContents {
+  position: absolute;
+  top: 10px;
+  left: 22%;
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.infoContents > div:nth-child(1) {
+  text-align: left;
+  margin-left: 28px;
+  margin-bottom: 3px;
+}
+
+.infoContents > div:nth-child(2),
+.infoContents > div:nth-child(3) {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.infoContents span,
+.infoContents span,
+.infoContents span {
+  color: red;
+}
+
+.ranking1st,
+.ranking2st,
+.ranking3st {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding-left: 30px;
+}
+
+.rankingNum {
+  position: absolute;
+  left: 0px;
+  top: 33px;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: black;
+  margin-right: 20px;
+}
+
+.ranking1st .timeIcon,
+.ranking2st .timeIcon,
+.ranking3st .timeIcon {
+  position: absolute;
+  top: 0px;
+  width: 0%;
+  font-size: 18px;
+  left: 30px;
+}
+
+.infoRanking {
+  position: absolute;
+  top: 15px;
+  left: 21%;
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.infoRanking > div:nth-child(1),
+.infoRanking > div:nth-child(2) {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.infoRanking > div:nth-child(3) {
+  text-align: left;
+  margin-bottom: 3px;
+  margin-top: 20px;
+}
+
+.NewIcon {
+  color: blue;
+  padding-right: 5px;
+}
+
+.ranking1st .infoRanking .changeRanking {
+  position: absolute;
+  top: 12px;
+  left: 450px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: gray;
+}
+
+.ranking2st .infoRanking .changeRanking,
+.ranking3st .infoRanking .changeRanking {
+  position: absolute;
+  top: 25px;
+  left: 450px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.ranking2st .infoRanking .changeRanking {
+  color: red;
+}
+
+.ranking3st .infoRanking .changeRanking {
+  color: blue;
+}
