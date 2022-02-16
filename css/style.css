@@ -125,6 +125,10 @@ a:hover {
 }
 
 .nav {
+  justify-content: center;
+}
+
+.nav__list {
   padding-left: 0;
   height: 37px;
 }
@@ -208,7 +212,10 @@ a:hover {
 .picture-large {
   width: 720px;
   height: 440px;
-  background-color: aquamarine;
+}
+
+.picture1 {
+  background-image: url("https://dn-img-page.kakao.com/download/resource?kid=ZF6kg/hzp2ht81QB/x0EaN7cBvWM5ut2s1WJnQK");
   background-size: cover;
 }
 
