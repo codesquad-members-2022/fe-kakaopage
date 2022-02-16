@@ -23,6 +23,10 @@ header {
   flex-wrap: wrap;
 }
 
+.l-flex {
+  display: flex;
+}
+
 .page-width {
   width: 750px;
   min-width: 750px;
@@ -101,4 +105,9 @@ header {
 
 .item-margin {
   margin-top: 10px;
+}
+
+.rank {
+  font-size: 18px;
+  font-weight: 500;
 }

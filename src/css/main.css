@@ -226,3 +226,53 @@ main {
   text-align: center;
   font-size: 13px;
 }
+
+.list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list-item > a {
+  display: flex;
+  align-items: center;
+}
+
+.list-item .thumnail {
+  width: 80px;
+  height: 110px;
+  margin: 0 20px 0;
+  background-color: var(--second-bg-color);
+}
+
+.list-item .thumnail > img {
+  width: 20px;
+}
+
+.list-item .content-info {
+  height: 100%;
+}
+
+.list-item .content-info > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.list-item .content-info > div:not(:first-child) {
+    font-size: 13px;
+    color: var(--second-text-color);
+}
+
+.list-item .content-info img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.event {
+  height: 340px;
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+}
+
+.app {
+  background-color: var(--identity-color);
+  font-size: 17px;
+  font-weight: 500;
+}
