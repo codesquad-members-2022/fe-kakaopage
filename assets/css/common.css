@@ -135,3 +135,113 @@ header .header_nav .user_nav button+button::before {
 }
 
 /* //GNB */
+
+/* FOOTER */
+footer {
+    padding: 60px 0 50px;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fnb {
+    display: flex;
+}
+
+.fnb li {
+    line-height: 24px;
+    margin-right: 3px;
+}
+
+.fnb li+li::before {
+    content: '• ';
+    display: inline-block;
+}
+
+.fnb li strong {
+    font-weight: 500;
+}
+
+footer .company_info {
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+footer .company_info .info_main {
+    display: flex;
+    align-items: center;
+}
+
+footer .company_info .info_main span.company_btn {
+    cursor: pointer;
+}
+
+footer .company_info .info_main span.company_btn::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    background: url(../images/common/f_company_btn.png) no-repeat center / 100%;
+}
+
+footer .company_info .info_main span.company_btn.open::after {
+    transform: rotateX(180deg);
+}
+
+footer .company_info .info_main span.underline {
+    text-decoration: underline;
+}
+
+footer .company_info .info_main span+span::before {
+    content: '|';
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .company_info .detail {
+    display: none;
+}
+
+footer .company_info .detail.open {
+    display: block;
+}
+
+footer .company_info .detail p {
+    margin-top: 7px;
+}
+
+footer .company_info .detail span + span::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 5px;
+    background-color: #d9d9d9;
+}
+
+footer .footer_info .copyright {
+    margin-top: 15px;
+    color: #cdcdcd;
+}
+
+footer .mark_box a {
+    display: block;
+}
+
+footer .mark_box img {
+    width: 55px;
+}
+
+footer .mark_box .mark_ttl {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+/* //FOOTER */
