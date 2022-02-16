@@ -42,14 +42,18 @@
       }
     }
 
-    &--dot:after {
-      margin: -2px 0 0;
-      display: block;
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 10px;
-      background: $yellow;
+    &--dot {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        right: 25%;
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background: $yellow;
+      }
     }
   }
 }
