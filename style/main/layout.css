@@ -10,6 +10,7 @@
   flex-direction: column;
   padding-top: 14px;
   height: 200vh;
+  margin-top: var(--main-header-heigth);
 }
 .l-main__child {
   width: var(--main-width);
