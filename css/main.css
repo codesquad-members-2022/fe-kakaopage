@@ -267,3 +267,19 @@
     color: #9c9c9c;
     font-size: 0.9rem;
 }
+
+.recommend-event .img-wrap {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.recommend-event .info {
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0.6;
+}
