@@ -1,0 +1,53 @@
+.main-content {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content__image-box {
+  margin-top: 10px;
+}
+.main-content__content__nav {
+  margin-top: 10px;
+  position: relative;
+}
+.main-content__content__menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  border-color: rgba(0, 0, 0, 0.048);
+}
+.main-content__content__menu__left {
+  margin-left: 15px;
+  display: flex;
+  color: #c5c5c5;
+}
+.main-content__content__menu__text {
+  margin: 0 3px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.main-content__content__menu__webtoonbox {
+  display: flex;
+  align-items: center;
+}
+.main-content__content__menu__sortingbox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.main-content__content__menu__sortingbox span {
+  color: #999999;
+}
+
+.main-content__content__main {
+  background-color: white;
+  width: 720px;
+  display: flex;
+  justify-self: start;
+  flex-wrap: wrap;
+}
+.main-content__advertise {
+  margin-top: 15px;
+}

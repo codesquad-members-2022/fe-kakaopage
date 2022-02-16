@@ -1,0 +1,17 @@
+.footer {
+  margin-top: 20px;
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-comment p {
+  font-size: 15px;
+}
+
+.footer-mark img {
+  width: 60px;
+}
+.footer-mark div {
+  font-size: 15px;
+}
