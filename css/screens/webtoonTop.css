@@ -1,19 +1,11 @@
-.dowTop,
-.dramaTop,
-.dailyTop {
-  margin-top: 10px;
-  background-color: white;
-}
-
-.dowTop__header,
-.dramaTop__header,
-.dailyTop__header {
-  display: flex;
-  justify-content: space-between;
+.dowTop__webtoon_title {
+  margin-top: 2px;
+  font-size: 18px;
 }
 
 .dowTop__webtoon,
-.dramaTop__webtoon {
+.dramaTop__webtoon,
+.expectedNewTop__body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -46,43 +38,6 @@
   bottom: 9px;
   left: 10px;
   z-index: 1;
-}
-
-.dowTop__title,
-.dramaTop__title,
-.dailyTop__title {
-  display: flex;
-  margin: 30px;
-}
-
-.dowTop__title > h3,
-.dramaTop__title > h3,
-.dailyTop__title > h3 {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.dowTop__title > h5 {
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 3px;
-  color: #999999;
-}
-
-.dowTop__more,
-.dramaTop__more,
-.dailyTop__more {
-  font-size: 18px;
-  color: #999999;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.dowTop__webtoon_title,
-.dramaTop__webtoon_title {
-  margin-top: 2px;
-  font-size: 18px;
 }
 
 .webtoon_bar__up {
@@ -146,4 +101,69 @@
 
 .dailyTop__webtoon_serialize {
   margin-top: 30px;
+}
+
+.expectedNewTop__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.expectedNewTop__webtoon > img {
+  width: 323px;
+  height: 220px;
+  border-radius: 7px;
+}
+
+.expectedNewTop__webtoon__title {
+  display: flex;
+  align-items: flex-start;
+  margin: 8px 20px;
+}
+
+.expectedNewTop__webtoon__subtitle {
+  color: black;
+  margin-top: 20px;
+  background-color: #ffd200;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 0px 0px 7px 7px;
+}
+
+.expectedNewTop__webtoon__status {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.expectedNewTop__webtoon__status__seperator {
+  margin: 0px 7px;
+  height: 16px;
+  width: 2px;
+}
+
+.expectedNewTop__webtoon__status__person {
+  margin: 0;
+}
+
+.expectedNewTop__webtoon__user {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.expectedNewTop__webtoon {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.expectedNewTop__webtoon__info {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.expectedNewTop__webtoon__info > h2 {
+  font-size: 20px;
 }

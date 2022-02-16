@@ -7,6 +7,9 @@
 @import "components/adBanner.css";
 @import "components/subAdBanner.css";
 @import "components/promotionBanner.css";
+@import "components/webtoon-bar.css";
+@import "components/eventBanner.css";
+@import "components/frame.css";
 
 /* Screens */
 @import "screens/webtoonTop.css";
