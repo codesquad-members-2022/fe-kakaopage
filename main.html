@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,32 +10,34 @@
 </head>
 <body>
     <header class="header">
-        <div class="title">
-            <h1><a href="">kakaopage</a></h1>
-        </div>
-        <form class="search-form">
-            <input class="search-form--input" type="text"/>
-            <button type="button" class="search-form--button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
-        </form>
-        <div class="login-box">
-            <div class="stage">
-                <img class="stage-icon" src="style/img/stage.svg">
-                <img class="stage-tooltip" src="style/img/tooltip.svg">
+        <div class="head-box">
+            <div class="title">
+                <h1><a href="">kakaopage</a></h1>
             </div>
-            <form class="login-form">
-                <button type="button" class="login-form--button cash"><a href="">캐시충전</a></button>
-                <button type="button" class="login-form--button"><a href="">로그인</a></button>
+            <form class="search-form">
+                <input class="search-form--input" type="text"/>
+                <button type="button" class="search-form--button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
             </form>
+            <div class="login-box">
+                <div class="stage">
+                    <img class="stage-icon" src="style/img/stage.svg">
+                    <img class="stage-tooltip" src="style/img/tooltip.svg">
+                </div>
+                <form class="login-form">
+                    <button type="button" class="login-form--button"><a href="">캐시충전</a></button>
+                    <button type="button" class="login-form--button"><a href="">로그인</a></button>
+                </form>
+            </div>
         </div>
+        <nav class="nav__genre">
+                <button type="button" class="nav__genre--button now"><a href="">홈</a></button>
+                <button type="button" class="nav__genre--button timer"><a href="">웹툰·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button timer"><a href="">웹소설·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">영화</a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">방송</a><div class="new-alarm"></div></button>
+                <button type="button" class="nav__genre--button"><a href="">책</a><div class="new-alarm"></div></button>
+        </nav>
     </header>
-    <nav class="nav__genre">
-        <button type="button" class="nav__genre--button now"><a href="">홈</a></button>
-        <button type="button" class="nav__genre--button timer"><a href="">웹툰·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
-        <button type="button" class="nav__genre--button timer"><a href="">웹소설·<i class="fa-solid fa-clock"></i></a><div class="new-alarm"></div></button>
-        <button type="button" class="nav__genre--button"><a href="">영화</a><div class="new-alarm"></div></button>
-        <button type="button" class="nav__genre--button"><a href="">방송</a><div class="new-alarm"></div></button>
-        <button type="button" class="nav__genre--button"><a href="">책</a><div class="new-alarm"></div></button>
-    </nav>
     <div class="carousel">
         <div class="carousel--title">
             <h2>슈퍼 연쇄살인마 스테키동맨</h2>
@@ -50,6 +52,6 @@
         <button type="button" class="main-event--button">오늘 신작</button> 
         <button type="button" class="main-event--button">달콤한 선물❤</button>
         <button type="button" class="main-event--button">앗뜨거!!</button>
-    </form>
+    </form> 
 </body>
 </html>

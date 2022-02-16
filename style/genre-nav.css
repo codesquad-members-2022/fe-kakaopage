@@ -3,7 +3,6 @@
 	margin-top: 25px;
 	width: 750px;
 	justify-content: space-around;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 .nav__genre > .nav__genre--button {
 	display: flex;

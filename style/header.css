@@ -1,8 +1,16 @@
 .header {
+	background-color: white;
 	display: flex;
-	height: 80px;
-	justify-content: space-around;
+	flex-direction: column;
 	align-items: center;
+	height: 132px;
+	padding-top: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.head-box {
+	width: 750px;
+	display: flex;
+	justify-content: space-around;
 }
 .title > h1 {
 	font-size: 30px;
@@ -10,8 +18,8 @@
 }
 .search-form {
 	display: flex;
-	width: 185px;
-	height: 35px;
+	width: 180px;
+	height: 30px;
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	border-radius: 20px;
 	justify-content: center;
@@ -39,7 +47,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 35px;
 	margin-right: 10px;
 }
 .stage > .stage-icon {
@@ -47,11 +54,13 @@
 	margin-bottom: 10px;
 }
 .login-box > .login-form {
-	display: flex;
-	align-items: center;
+	display: block;
 }
 .login-box > .login-form > .login-form--button {
+	width: 75px;
+	height: 30px;
 	border: none;
+	padding: 0;
 	background-color: white;
 	font-size: 18px;
 	font-weight: bold;

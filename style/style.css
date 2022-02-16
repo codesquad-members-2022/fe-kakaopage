@@ -1,12 +1,21 @@
-@import url("style/reset.css");
-@import url("style/header.css");
-@import url("style/genre-nav.css");
-@import url("style/carousel.css");
+@import url("reset.css");
+@import url("header.css");
+@import url("genre-nav.css");
+@import url("carousel.css");
 
+body {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
 .main-event--form {
 	display: flex;
 	margin-top : 10px;
-	width: 720px;
+	width: 750px;
 	height: 100px;
 	justify-content: space-around;
 }
