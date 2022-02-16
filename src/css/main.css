@@ -128,7 +128,6 @@ main {
 }
 
 .grid-item {
-  margin-top: 20px;
   width: 110px;
 }
 
@@ -170,6 +169,10 @@ main {
 
 .content-title {
   font-size: 15px;
+}
+
+.category-day > .grid-item {
+  margin-top: 20px;
 }
 
 .new {
