@@ -3,6 +3,7 @@
 @import 'carousel.css';
 @import 'main.css';
 @import 'footer.css';
+@import 'variable.css';
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 }
 
 body {
-    background-color: #eeeeee;
+    background-color: var(--color-white-smoke);
 }
 
 ul {

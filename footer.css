@@ -1,5 +1,5 @@
 footer {
-    width: 720px;
+    width: var(--max-width);
     height: 130px;
     display: flex;
     justify-content: space-between;
@@ -7,8 +7,8 @@ footer {
 }
 
 .footer__leftBox {
-    color: #bdbdbd;
-    font-size: 14px;
+    color: var(--color-pale-gray);
+    font-size: var(--font-14);
 }
 
 .footer__menus {
@@ -19,7 +19,7 @@ footer {
 .footer__menu .footer__menu_link {
     cursor: pointer;
     text-decoration: none;
-    color: #bdbdbd;
+    color: var(--color-pale-gray);
 }
 
 .footer__business {
@@ -28,7 +28,7 @@ footer {
 
 .footer__business .footer__business_link {
     text-decoration: underline;
-    color: #bdbdbd;
+    color: var(--color-pale-gray);
 }
 
 
@@ -44,9 +44,9 @@ footer {
 }
 
 .footer__copyright .footer__copyright_text {
-    font-size: 12px;
+    font-size: var(--font-12);
     text-align: center;
-    color: #a8a8a8;
+    color: var(--color-pale-gray);
 }
 
 .footer__business .footer__business_info {
