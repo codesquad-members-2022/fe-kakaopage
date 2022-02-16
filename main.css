@@ -11,6 +11,7 @@
     /*font-size*/
     --largefont: 22px;
 }
+/*0. 공통 적용 사항 */
 * {
     padding: 0;
     margin:0;
@@ -24,7 +25,6 @@ body{
     height: 100vh;
 }
 
-/*1. 헤더 세팅*/
 .header{
     top:0px; 
     /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
@@ -46,7 +46,18 @@ body{
     background-color: red;
     margin: 1rem auto;
 }
+a{
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+li{
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
 
+/*1. 헤더 세팅*/
 .item{
     background-color: beige;
     padding-top: 2rem;
@@ -70,16 +81,7 @@ body{
     padding-left:0; margin-left:0;
 }
 /* 2. 네비바 세팅 */
-a{
-    text-decoration-line: none;
-    color: var(--text-color);
-}
-li{
-    background-color: pink;
-    cursor: pointer;
-    list-style: none;
-    text-align: center;
-}
+
 .navbar__menu li{
     padding: 2rem 10px;
     font-size: var(--largefont);
@@ -148,6 +150,34 @@ li{
 } 
 
 /*5. 카테고리 */
-.category{
-    height: 8rem;
+.category__ele{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 1rem 1rem;
 }
+
+.category__ele li{
+    margin: 1rem;
+    padding: 1.7rem 3rem;
+    background-color: green;
+    text-align: center;
+}
+
+.category__ele a{
+    /* width: 2rem; */
+    margin: auto;
+    background-color: grey;
+    font-size: var(--largefont);
+}
+
+
+/*6. 기다리면 무료 */
+section .wating{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
