@@ -13,7 +13,7 @@ const footer = () => {
 
     <details class="footer__company-info-wrap">
       <summary class="footer__company-info-summary">
-        (주)카카오엔터테인먼트 사업자 정보 |<a target="blank" href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208802594"> 사업자 정보 확인</a>
+        (주)카카오엔터테인먼트 사업자 정보 | <a target="blank" href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208802594">사업자 정보 확인</a>
       </summary>
       <p class="footer__company-info-line">대표자: 이진수, 김성수 | 호스팅서비스사업자: (주)카카오엔터테인먼트</p>
       <p class="footer__company-info-line">사업자 등록 번호 : 220-88-02594 | 통신판매업신고 : 2018-성남분당B-0004</p>
