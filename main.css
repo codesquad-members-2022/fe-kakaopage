@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ecef;
+}
+
+/*========== 일반 ==========*/
+.center {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.list-style--none {
+  list-style: none;
+}
+
+.nav-item-sort {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.margin-right--auto {
+  margin-right: auto;
+}
+
+.container {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.button-style--none {
+  border: none;
+}
+
+/*========== main header ==========*/
+.main-header {
+  background-color: #fff;
+}
+
+/*========== footer ==========*/
+.footer-sort {
+  display: flex;
+  align-items: center;
+}
+
+.footer-item {
+  margin-right: 8px;
+}
