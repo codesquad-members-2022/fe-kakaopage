@@ -1,0 +1,58 @@
+div.toon-category {
+  margin-top: 163px;
+  width: 100%;
+  box-sizing: border-box;
+  color: rgb(187, 187, 187);
+  font-weight: 550;
+  line-height: 1.15;
+}
+
+div.toon-category ul {
+  display: flex;
+  width: 720px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px auto;
+  list-style-type: disc;
+}
+
+div.toon-category li {
+  box-sizing: border-box;
+  margin: 0px;
+  text-align: center;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0px;
+  font-size: 20px;
+  display: flex;
+}
+
+div.toon-main {
+  padding-top: 0px;
+  height: 480px;
+  width: 720px;
+  flex: 1 1 auto;
+  margin: 11px auto 0px auto;
+}
+
+div.toon-main .toon-jumbotron {
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  min-width: 0;
+  height: 480px;
+  background-color: rgb(255, 255, 255);
+}
+
+div.toon-jumbotron-title {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 6px;
+  font-size: 28px;
+  line-height: 1;
+}
