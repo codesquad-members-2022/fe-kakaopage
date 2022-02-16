@@ -1,0 +1,29 @@
+div.AdBanner{
+
+    position:relative;
+    background-color: #FFFFFF;
+    margin-top:12px;
+    display:flex;
+    padding: 10px 0;
+
+}
+div.AdBanner>img{
+    width:550px;
+    height:100px;
+    margin:0 auto;
+}
+div.AdBanner>button{
+    position:absolute;
+    top:40px;
+    border: none;
+    background-color:inherit;
+
+}
+div.AdBanner>.prevBtn{
+    left:0;
+    margin-left:20px;
+}
+div.AdBanner>.nextBtn{
+    right:0;
+    margin-right:20px;
+}
