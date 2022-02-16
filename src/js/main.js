@@ -1,14 +1,15 @@
 import { renderSet } from './view.js';
 
-import { header } from './components/header.js';
-import { footer } from './components/footer.js';
-import { globalNavigation } from './components/globalNavigation.js';
+import { createHeader } from './components/header.js';
+import { createFooter } from './components/footer.js';
+import { createGnb } from './components/gnb.js';
+
 import { addTabHandlerOnGnb } from './handler.js';
 
 const init = () => {
-  renderSet.renderHeader(header());
-  renderSet.renderFooter(footer());
-  renderSet.renderGlobalNavigation(globalNavigation());
+  renderSet.renderHeader(createHeader());
+  renderSet.renderFooter(createFooter());
+  renderSet.renderGlobalNavigation(createGnb());
   addTabHandlerOnGnb();
 };
 
