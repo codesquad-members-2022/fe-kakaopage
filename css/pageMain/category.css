@@ -2,10 +2,6 @@
   font-size: 20px;
 }
 
-.page-main-category a {
-  color: #bbbbbb;
-}
-
 .page-main-category__container {
   display: flex;
   align-items: center;
@@ -16,4 +12,5 @@
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
+  cursor: pointer;
 }

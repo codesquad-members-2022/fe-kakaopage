@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
   /* height: 200vh; */
 }
 
@@ -24,6 +24,14 @@ header {
   z-index: 1;
 }
 
+li {
+  color: #bbb;
+}
+
 .display-none {
   display: none;
+}
+
+.color-black {
+  color: #000;
 }
