@@ -18,7 +18,7 @@
     font-size: 100%;
 }
 /*1. 헤더 세팅*/
-.header, .navbar{
+.header{
     width: 100vw;
     background-color: orange;
 }
@@ -97,6 +97,41 @@ a{
     list-style: none;
     font-size: var(--largefont);
     text-align: center;
+}
+
+
+.contents__genre{
+    background-color: blue;
+    margin: 20px 20%;
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around; 
+    justify-content: center;
+    
+}
+
+.contents__genre li{
+    padding: 15px 33px;
+    display: inline;
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+   
+}
+
+.contents__genre a{
+    color: var(--background-color);
+}
+
+
+.banner{
+    margin: 20px 20%;
+    width: 60%;
+    height: 500px;
+    background-color: red;
 }
 
 body{
