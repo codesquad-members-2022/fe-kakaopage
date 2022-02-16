@@ -67,13 +67,25 @@ carousel__text-container
 
 - flexbox가 중복되는 부분이 많은데 어떻게 줄일 수 있을까? 팀원들이랑 고민을 공유했는데 궁금증이 해결되지 않았음.
 
+❓ [ ] css, html은 리팩토링 어떻게하지
+
+- 그냥 중복코드만 줄이면 될려나
+
+❓ [x] internal, external css 장단점
+
+- 선택자 우선순위, 적용 우선순위 공부하기
+
+- reset.css를 external로 하는게 좋을까 internal로 하는게 좋을까?
+- 다운로드해야할 소스가 많아진다면 애초에 html에 삽입하는게 좋을까?
+- ✅ 일단 reset.css로 분리하여 external로 관리
+
 # html 구조짜기 및 간단한 네이밍
 
 ![이미지-1](https://user-images.githubusercontent.com/71386219/153881920-aa848f63-bb26-48c7-b39c-a000ceac688d.jpg)
 
 # Refactoring
 
-- [ ] readme 작성
+- [x] readme 작성
 - [ ] class 이름 중복되는거 줄이기
 - 디테일한 부분 수정하기
   - [x] 노란 점 위치
