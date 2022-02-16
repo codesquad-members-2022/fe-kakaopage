@@ -57,6 +57,21 @@ common
 .slide-paging-number__all:before {
     content: ' / ';
 }
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background: no-repeat center / auto 16px;
+    vertical-align: middle;
+}
+.new-icon {
+    background-image: url('../images/common/ico-new.svg');
+}
+.year15-icon {
+    width: 18px;
+    background-image: url('../images/common/ico-year15.png');
+}
 
 /**
 display
@@ -424,4 +439,60 @@ section-title
 .new-work__description {
     font-size: 12px;
     line-height: 24px;
+}
+
+/**
+랭킹 TOP
+**/
+.section-rank__work {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+.section__top + .section-rank__work {
+    margin-top: 20px;
+}
+.section-rank__rank_number {
+    width: 16px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.section-rank__img-wrap {
+    position: relative;
+    width: 84px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.section-rank__img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url('../images/common/ico-clock_yellow.png') no-repeat center / 26px auto;
+}
+.section-rank__work-info {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+.section-rank__title {
+    font-size: 16px;
+    color: var(--color-black);
+}
+.section-rank__description {
+    margin: 7px 0 22px;
+}
+.section-rank__category {
+    margin-left: 5px;
+}
+.section-rank__category:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin-right: 5px;
+    background: #dfdfdf;
 }
