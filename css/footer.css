@@ -7,3 +7,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.website-info {
+    margin: 60px 0;
+    color: #c1c1c1;
+    font-size: 0.9rem;
+}
+
+.website-info .detail {
+    margin-top: 10px;
+}
