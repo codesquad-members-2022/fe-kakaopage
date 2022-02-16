@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+.header > .container {
+  width: 780px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header > .navbar {
+  width: 780px;
+}
+
+.nav--header {
+  margin: 0;
+}
+
+.nav--header > .nav__name {
+  padding: 10px 15px 10px 15px;
+  position: relative;
+}
+
+.nav__circle {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-yellow);
+  border-radius: 100%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.search-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 590px;
+}
+
+.search {
+  border: 1px solid var(--color-grey);
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  width: 186px;
+  height: 35px;
+}
+
+.search__input {
+  width: 140px;
+}
+
+.search__button {
+  color: var(--color-dark-grey);
+}
+
+.buttons > * {
+  color: var(--color-dark-grey);
+  margin-left: 10px;
+}
+
+.buttons > .btn--highlighted {
+  color: var(--color-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-yellow);
+  padding: 0px 5px 0px 5px;
+}
+
+.buttons > .buttons__divider {
+  color: var(--color-light-grey);
+}
+
+.navbar {
+  font-size: 1.2rem;
+  padding: 0 20px 0 20px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__name {
+  cursor: pointer;
+}

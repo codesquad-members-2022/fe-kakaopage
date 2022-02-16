@@ -1,0 +1,178 @@
+.main,
+.footer {
+  width: 100%;
+  background-color: var(--color-light-grey);
+  display: flex;
+  justify-content: center;
+}
+
+.mainbox.main__slider {
+  height: 478px;
+  padding: 0;
+}
+
+.main-contents,
+.footer-contents,
+.slider__img {
+  width: var(--main-width);
+}
+
+.main-contents > .main__navbar {
+  padding: 0;
+}
+
+.nav--main {
+  color: var(--color-grey);
+  background-color: var(--color-white);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 19px 0 10px 0;
+}
+
+.selected-nav-main {
+  color: var(--color-black);
+}
+
+.selected-nav-header {
+  border-bottom: 3px solid var(--color-yellow);
+}
+
+.mainbox {
+  background-color: var(--color-white);
+  padding: 20px;
+  margin: 10px 0 10px 0;
+}
+
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 0 auto;
+}
+
+.theme__name {
+  width: 224px;
+  background-color: var(--color-light-grey);
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-dark-grey);
+}
+
+.theme__info {
+  background-color: var(--color-yellow);
+  padding: 0 5px 0 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.mini-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini-slider__btn {
+  font-size: 1.8rem;
+  color: var(--color-grey);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-button {
+  background-color: var(--color-yellow);
+  width: var(--main-width);
+  height: 60px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-contents {
+  font-size: 0.8rem;
+  color: var(--color-grey);
+  margin: 40px 0 40px 0;
+}
+
+.main__days {
+  margin-top: 0;
+  height: 65px;
+  padding: 10px;
+}
+
+.main__days > .days {
+  display: flex;
+  justify-content: space-around;
+
+  color: var(--color-grey);
+  margin: 0;
+}
+
+.days__name {
+  cursor: pointer;
+  padding: 12px;
+}
+
+.days__name.whole {
+  padding: 12px 5px 12px 5px;
+}
+
+.selected-day {
+  width: 45px;
+  height: 45px;
+  color: var(--color-black);
+  background-color: var(--color-light-yellow);
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.main__webtoons {
+  padding: 10px 20px 10px 20px;
+}
+
+.wt {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.wt__image {
+  width: 142px;
+  height: 96px;
+}
+
+.wt__discription {
+  margin-left: 10px;
+}
+
+.wt__discription > * {
+  margin-bottom: 10px;
+}
+
+.wt__discription > .title {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.wt__discription > .summary,
+.wt__discription > .info {
+  font-size: 0.8rem;
+  color: var(--color-dark-grey);
+}
+
+.promotion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+.promotion > .more {
+  color: var(--color-dark-grey);
+  font-size: 0.9rem;
+}

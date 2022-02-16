@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kakaopage clone</title>
+    <script
+      src="https://kit.fontawesome.com/8d0a3fd827.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <!-- <script src="./src/js/index.js" defer></script>-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">kakaopage</h1>
+        <div class="search-buttons">
+          <form class="search">
+            <input class="search__input" type="text" />
+            <button type="submit" class="search__button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <div class="buttons">
+            <button type="button" class="btn--highlighted">stage</button>
+            <button type="button" class="btn">캐시충전</button>
+            <span class="buttons__divider"> | </span>
+            <button class="btn">로그인</button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav nav--header">
+          <li class="nav__name selected-nav-header" data-id="h__home">홈</li>
+          <li class="nav__name" data-id="h__webtoon">
+            웹툰 • <i class="fas fa-clock"></i>
+          </li>
+          <li class="nav__name" data-id="h__novel">
+            웹소설 • <i class="fas fa-clock"></i>
+          </li>
+          <li class="nav__name" data-id="h__movie">
+            영화
+            <div class="nav__circle"></div>
+          </li>
+          <li class="nav__name" data-id="h__broad">
+            방송
+            <div class="nav__circle"></div>
+          </li>
+          <li class="nav__name" data-id="h__book">
+            책
+            <div class="nav__circle"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main-contents" id="h__webtoon">
+        <nav class="mainbox main__navbar">
+          <ul class="nav nav--main">
+            <li class="nav__name selected-nav-main">홈</li>
+            <li class="nav__name">요일연재</li>
+            <li class="nav__name">웹툰</li>
+            <li class="nav__name">소년</li>
+            <li class="nav__name">드라마</li>
+            <li class="nav__name">로맨스</li>
+            <li class="nav__name">로판</li>
+            <li class="nav__name">액션무협</li>
+            <li class="nav__name">BL</li>
+          </ul>
+        </nav>
+
+        <div class="mainbox main__slider">
+          <img
+            src="./img/webtoon1.png"
+            class="slider__img"
+            alt="webtoon-image"
+          />
+        </div>
+
+        <div class="mainbox main__days">
+          <ul class="days">
+            <li class="days__name selected-day">월</li>
+            <li class="days__name">화</li>
+            <li class="days__name">수</li>
+            <li class="days__name">목</li>
+            <li class="days__name">금</li>
+            <li class="days__name">토</li>
+            <li class="days__name">일</li>
+            <li class="days__name whole">전체</li>
+          </ul>
+        </div>
+
+        <div class="mainbox main__webtoons">
+          <ul class="webtoons">
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mainbox main__webtoons promotion">
+          <div class="promotion__title">
+            <h3 class="title">🔥HOT 최근 프로모션 진행작</h3>
+            <p class="more">더보기 ></p>
+          </div>
+          <ul class="webtoons">
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+            <li class="wt">
+              <img
+                class="wt__image"
+                src="./img/webtoon3.png"
+                alt="webtoon-image"
+              />
+              <div class="wt__discription">
+                <p class="title">학사재생</p>
+                <p class="summary">금수저를 물고 태어나 버렸다!</p>
+                <p class="info">167만명|소유현,윰짝짝</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mainbox main__themes">
+          <ul class="themes">
+            <li class="theme__name">
+              오늘 UP<span class="theme__info">204</span>
+            </li>
+            <li class="theme__name">
+              오늘 신작<span class="theme__info">4</span>
+            </li>
+            <li class="theme__name">
+              오리지널<span class="theme__info">2,330</span>
+            </li>
+            <li class="theme__name">완결까지 정주행</li>
+            <li class="theme__name">독립운동가 웹툰</li>
+            <li class="theme__name">
+              오늘 랭킹<span class="theme__info">1위</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mainbox main__mini-slider">
+          <div class="mini-slider">
+            <button type="button" class="mini-slider__btn">
+              <i class="fas fa-chevron-circle-left"></i>
+            </button>
+            <img
+              src="./img/slider_mini.png"
+              class="mini-slider__img"
+              alt="webtoon image"
+            />
+            <button type="button" class="mini-slider__btn">
+              <i class="fas fa-chevron-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="main-contents" id="h__home">HOME</div>
+      <div class="main-contents" id="h__novel">NOVEL</div>
+      <div class="main-contents" id="h__movie">MOVIE</div>
+      <div class="main-contents" id="h__broad">BROADCAST</div>
+      <div class="main-contents" id="h__book">BOOKS</div>
+      -->
+    </main>
+    <footer class="footer">
+      <button type="button" class="app-button">
+        카카오페이지 앱으로 보기 >
+      </button>
+      <div class="footer-contents">
+        <div class="intro">
+          <p>회사소개 이용약관 개인정보처리방침 청소년보호정책 공지사항</p>
+          <p>(주)카카오엔터테인먼트 사업자 정보 | 사업자 정보 확인</p>
+        </div>
+        <div class="mark">저작권 ok</div>
+      </div>
+    </footer>
+  </body>
+</html>
