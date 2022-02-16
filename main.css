@@ -17,6 +17,12 @@
     box-sizing: border-box;
     font-size: 100%;
 }
+
+body{
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
 /*1. 헤더 세팅*/
 .header{
     top:0px; 
@@ -75,16 +81,66 @@ a{
 
 /* 4. 배너 */
 .banner{
-    width: 60%;
-    height: 80rem;
+    width: 50%;
+    height: 35rem;
     background-color: red;
-    margin: 0 auto;
+    margin: 1rem auto;
+    position: relative;
+    z-index: -5;
 }
 
-
-body{
-    background-color: var(--background-color);
-    width: 100vw;
-    height: 100vh;
+.banner__image img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
 }
+
+.banner__button{
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 16rem;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+}
+.banner__button button{
+    background-color:transparent;
+    border: none;
+}
+
+#btn2{
+    padding-left: 35rem;
+}
+
+.banner__info{
+    position: absolute;
+    width: 13rem;
+    margin-top: 25rem;
+    padding-left: 1rem;
+    background-color: green;
+    color: var(--main-white);
+    z-index: 1;
+}
+.count{
+    position: absolute;
+    width: 3rem;
+    background-color: brown;
+    text-align: center;
+    z-index: 1;
+    color: var(--background-color);
+    font-size: 2rem;
+    margin-top: 28rem;
+    margin-left: 37rem;
+} 
+
+.comment{
+    position: absolute;
+    width: 100%;
+    margin-top: 31.6rem;
+    padding: 1rem;
+    background-color: yellowgreen;
+    z-index: 1;
+    text-align: center;
+} 
 
