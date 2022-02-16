@@ -108,10 +108,6 @@
     justify-content: center;
 }
 
-.slide-banner {
-    flex-basis: auto;
-}
-
 .slide-banner .arrow {
     width: 85px;
     align-items: center;
@@ -211,5 +207,63 @@
 
 .new-best .cover-image .cover-info-oneline {
     height: 24px;
+    font-size: 0.9rem;
+}
+
+.daily-best ol {
+    padding-top: 20px;
+}
+
+.daily-best-card {
+    width: 100%;
+    padding: 10px 10px 10px 0;
+}
+
+.daily-best-card .rank-num {
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    flex: 0 0 30px;
+    justify-content: center;
+}
+
+.daily-best-card .img-wrap {
+    width: 84px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.daily-best-card .thumbnail {
+    width: 100%;
+}
+
+.daily-best-card .badge {
+    height: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.daily-best-card .info {
+    margin-left: 20px;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.daily-best-card .info .title {
+    color: #333;
+}
+
+.daily-best-card .info .description {
+    color: #9c9c9c;
+    margin-top: 7px;
+    font-size: 0.9rem;
+}
+
+.daily-best-card .info .date {
+    color: #9c9c9c;
     font-size: 0.9rem;
 }
