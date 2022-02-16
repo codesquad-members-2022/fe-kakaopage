@@ -13,6 +13,9 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+.hide {
+    display: none;
+}
 
 /* HEADER */
 header {
