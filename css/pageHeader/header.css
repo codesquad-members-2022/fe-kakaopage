@@ -36,7 +36,7 @@
 .search-bar-container {
   width: 180px;
   height: 35px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #00000033;
   border-radius: 20px;
   position: relative;
 }
@@ -80,7 +80,7 @@
 }
 
 .auth-container span {
-  color: rgba(0, 0, 0, 0.3);
+  color: #0000004d;
   font-weight: bold;
 }
 

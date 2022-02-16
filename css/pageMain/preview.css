@@ -73,7 +73,7 @@
 .preview .prev-btn,
 .preview .next-btn {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   top: 45%;
   cursor: pointer;
 }
