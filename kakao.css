@@ -10,6 +10,10 @@ body{
     background:#ddd;
 }
 
+:root{
+    --global-width:720px;
+}
+
 /* ===============header=============== */
 
 .header{
@@ -22,7 +26,7 @@ body{
 }
 
 .header_topbar{
-    width:720px;
+    width:var(--global-width);
     height:80px;
     margin:0 auto;
     display: flex;
@@ -83,9 +87,8 @@ body{
     margin-right:0px;
 }
 
-
 .header_category{
-    width:720px;
+    width:var(--global-width);
     height:70px;
     margin:0 auto;
 }
@@ -106,7 +109,7 @@ body{
 
 /* ===============maincategory=============== */
 .main_category{
-    width:720px;
+    width:var(--global-width);
     height:70px;
     margin:10px auto;
     background:#fff;
@@ -129,13 +132,13 @@ body{
 
 /* ===============slide=============== */
 .slideshow{
-    width:720px;
+    width:var(--global-width);
     margin:10px auto;
     position:relative;
 }
 
 .slideshow_slide{
-    width:720px;
+    width:var(--global-width);
     height:450px;
     background-image:url(img/roadofmoney.jpg);
     background-size: cover;
@@ -151,7 +154,7 @@ body{
 
 
 .slideshow_press{
-    width:720px;
+    width:var(--global-width);
     margin:0 auto;
     display:flex;
     justify-content:space-between;
@@ -169,7 +172,7 @@ body{
 }
 
 .slideshow_info{
-    width:720px;
+    width:var(--global-width);
     height:40px;
     text-align:center;
     line-height: 40px;
@@ -198,13 +201,12 @@ body{
 
 /* ===============tab=============== */
 .tab{
-    width:720px;
+    width:var(--global-width);
     background:#fff;
     margin:0 auto;
 }
 .underline{
     border-bottom: 1px solid #ddd;
-
 }
 
 .all_web{
@@ -295,7 +297,7 @@ body{
     color:#999;
 }
 .kakao_app{
-    width:720px;
+    width:var(--global-width);
     height:70px;
     background:#ffe812;
     margin:10px auto 0;
@@ -305,7 +307,7 @@ body{
 }
 
 .footer{
-    width:720px;
+    width:var(--global-width);
     margin:40px auto;
     display:flex;
     justify-content:space-between;
