@@ -122,6 +122,7 @@ h1 {
   height: 35px;
   padding: 5px;
   border: 1px solid #fff;
+  border-radius: 50%;
 }
 
 .arrow-left {
@@ -164,7 +165,6 @@ main {
 }
 
 .banner-arrow {
-  border-radius: 50%;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -195,6 +195,23 @@ main {
 
   font-size: 16px;
   font-weight: 600;
+}
+
+/*========== promotion part ==========*/
+.promotion-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion-arrow {
+  color: #adb5bd;
+  border-color: #dee2e6;
+}
+
+.promotion-container img {
+  width: 650px;
 }
 
 /*========== footer ==========*/
