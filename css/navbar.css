@@ -66,13 +66,17 @@ li {
 
 .slide-img {
   position: relative;
+  text-align: center;
+  margin-top: 11px;
 }
 
 .slide-name {
   position: absolute; 
-  top: 90px;
+  top: 340px;
   left: 20px;
   color: white;
   z-index: 1;
-  font-size: 30px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
 }
