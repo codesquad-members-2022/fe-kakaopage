@@ -14,6 +14,22 @@
     font-size: 0.9rem;
 }
 
-.website-info .detail {
-    margin-top: 10px;
+.website-info .info-detail-box {
+    flex: 1;
+}
+
+.website-info .copyright-info {
+    margin-top: 20px;
+}
+
+.website-info .copyright-mark {
+    font-size: 0.8rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.website-info .copyright-mark img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 5px;
 }
