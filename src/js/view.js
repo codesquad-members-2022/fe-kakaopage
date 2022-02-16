@@ -1,4 +1,4 @@
-export const renderSet = {
+const renderSet = {
   renderHeader(header) {
     const headerEl = document.querySelector('.header');
     headerEl.insertAdjacentHTML('afterbegin', header);
@@ -14,3 +14,5 @@ export const renderSet = {
     footerEl.insertAdjacentHTML('afterbegin', footer);
   },
 };
+
+export { renderSet };
