@@ -380,7 +380,7 @@ a:hover {
   margin-right: 3px;
 }
 
-.items__status-icon-up {
+.icon-up {
   width: 23.27px;
   height: 16px;
   background-image: url("https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f");
@@ -473,4 +473,121 @@ a:hover {
   background-image: url("https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0");
   background-size: cover;
   margin: auto 0;
+}
+
+/* 실시간 랭킹 */
+
+.ranking__container {
+  width: 720px;
+  height: 493px;
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+.ranking__header {
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.ranking__head {
+  font-size: 20px;
+}
+
+.ranking__more-btn {
+  color: rgb(153, 153, 153);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ranking__thumbnail {
+  width: 84.44px;
+  height: 114px;
+  background-image: url("//dn-img-page.kakao.com/download/resource?kid=pBLiw/hzp2iflJba/S680r4a37ohuiWwkmeMbW0&filename=th2");
+  background-size: cover;
+}
+
+.ranking__rank {
+  flex-basis: 56px;
+  text-align: center;
+  margin: auto 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.ranking__info {
+  flex-basis: 485px;
+  padding: 10px;
+}
+
+.ranking__time-icon {
+  width: 26px;
+  height: 26px;
+  background-image: url("https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a");
+  background-size: cover;
+  position: relative;
+  right: 84px;
+}
+
+.ranking__day-container {
+  margin-top: 30px;
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+}
+
+.ranking__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ranking__views {
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+}
+
+.ranking__category {
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+}
+
+.ranking__type {
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+}
+
+.ranking__author {
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+}
+
+.ranking__block-icon {
+  width: 2px;
+  height: 16px;
+  background-image: url("https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea");
+  background-size: cover;
+  margin: 0px 3px 0 3px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.ranking__views-icon {
+  width: 11px;
+  height: 11px;
+  background-image: url("https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871");
+  background-size: cover;
+  margin: 4px 5px 0 5px;
+}
+
+.ranking__change {
+  margin: auto 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.ranking__content {
+  margin-bottom: 30px;
 }
