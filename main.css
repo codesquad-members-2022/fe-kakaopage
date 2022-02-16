@@ -117,6 +117,25 @@ h1 {
   overflow: hidden;
 }
 
+.arrow-icon {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+}
+
 /*========= main header nav ==========*/
 .main-header-nav {
   font-weight: 700;
@@ -134,6 +153,34 @@ main {
   color: #adb5bd;
 
   padding: 15px 0;
+}
+
+/*========== banner ==========*/
+
+.banner-container > div {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner-arrow {
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner-container p {
+  text-align: center;
+  padding: 8px;
+  font-weight: 500;
+  background-color: #fcc419;
+}
+
+.banner-container img {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
 }
 
 /*========== category button  ==========*/
