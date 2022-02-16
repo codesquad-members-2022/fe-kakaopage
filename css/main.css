@@ -29,7 +29,7 @@ main {
     display: flex;
     justify-content: space-between;
 }
-.contents-header > h2 {
+.contents-header h2 {
     color: #333;
     font-size: 20px;
 }
@@ -37,7 +37,30 @@ main {
     color: #999;
     font-size: 16px;
 }
+.contents-header-left {
+    display: flex;
+}
+.number-of-contents {
+    margin-left: 4px;
+    color: #999;
+    font-size: 14px;
+}
 .contents-wrapper {
     margin-top: 22px;
-    padding: 0 20px 20px;
+}
+.day-nav {
+    margin-top: 15px;
+    display: flex;
+}
+.day-nav__item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f1f1;
+    flex: 1 1 auto;
+    text-align: center;
+    color: #BBB;
+    font-size: 20px;
+}
+.day-nav__item--selected {
+    border-bottom: 2px solid #ffd200;
+    color: #333;
 }
