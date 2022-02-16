@@ -5,3 +5,51 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/gnb';
+
+.snb {
+  margin: 20px 0 0;
+  background: $gray-0;
+
+  &__list {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    font-size: 1.25rem;
+    color: $gray-5;
+    cursor: pointer;
+  }
+}
+
+.grid-menu {
+  background: $gray-0;
+  padding: 20px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__item {
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    background: $gray-1;
+    cursor: pointer;
+  }
+
+  &__badge {
+    margin: 0 0 0 6px;
+    padding: 3px 8px 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 20px;
+    background: $yellow;
+  }
+}

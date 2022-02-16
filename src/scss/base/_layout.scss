@@ -1,6 +1,4 @@
 body {
-  margin: 0 auto;
-  width: 720px;
   background: $gray-2;
   color: $gray-9;
 
@@ -14,4 +12,12 @@ body {
 
 img {
   width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
