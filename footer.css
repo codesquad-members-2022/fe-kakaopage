@@ -57,6 +57,7 @@ footer {
     content: '';    
     width: 10px;
     height: 10px;
+    margin-left: 3px;
     display: inline-block;
     background: var(--background, url(./images/icon_trace_off.png));
     background-repeat: no-repeat;
@@ -64,7 +65,7 @@ footer {
     background-size: 100%;
 }
 
-.footer__details {
+.no_display {
     display: none;
 }
 
