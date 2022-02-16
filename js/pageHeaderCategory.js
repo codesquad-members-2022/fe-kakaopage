@@ -4,6 +4,18 @@ const pageHeaderCategoryList = document.querySelectorAll(
 
 let selectedIdx = 1;
 
+const drawDummyPage = (curIdx) => {
+  const mainPage = document.querySelector('.page-main');
+  const dummyPage = document.querySelector('.dummy');
+  if (curIdx === 1) {
+    mainPage.classList.remove('display-none');
+    dummyPage.classList.add('display-none');
+    return;
+  }
+  mainPage.classList.add('display-none');
+  dummyPage.classList.remove('display-none');
+};
+
 pageHeaderCategoryList.forEach((node, idx, list) => {
   node.addEventListener('click', (event) => {
     event.preventDefault();
