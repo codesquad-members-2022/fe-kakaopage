@@ -12,6 +12,7 @@
 }
 
 body {
+  font-size: 0.9rem;
   font-family: "gothic";
   background-color: var(--color-yellow-main);
   align-items: center;
@@ -25,7 +26,6 @@ section {
 }
 
 header {
-  font-size: 1rem;
   width: 100%;
   background-color: snow;
   align-items: center;
@@ -34,19 +34,21 @@ header {
   padding-top: 10px;
 }
 
-.header_search input {
-  all: unset;
+.header_search {
+  display: flex;
   padding: 0.2rem;
   border: var(--border-main) var(--color-yellow-main);
   border-radius: 0.5rem;
   width: 10rem;
+}
+.header_search input {
+  all: unset;
 }
 
 .header_contents,
 .header_user {
   font-size: 0.8rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 .header_user {
@@ -66,32 +68,60 @@ header nav {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-nav span {
+nav > * {
   flex: 1 1 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 main section {
-  padding: 10px;
   background-color: snow;
-  margin-top: 10px;
+  /* padding: 0.5rem; */
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
 }
 main nav {
   text-align: center;
   display: flex;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+}
+
+.subnav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ads img {
   width: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border-radius: var(--border-radius1);
+}
+
+.days > * {
+  padding: 1rem;
+}
+.days nav {
+  border-bottom: solid 0.1rem var(--color-yellow-main);
+}
+.days_menu > *::after {
+  content: "|";
+  /* float: right; */
+  display: inline-block;
+}
+
+.days_menu *:last-child::after {
+  content: "";
 }
 
 footer {
   margin-top: auto;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   border: var(--border-main) var(--color-black-main);
   border-radius: var(--border-radius1);
 }
