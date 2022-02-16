@@ -29,14 +29,20 @@
   align-items: center;
   justify-content: space-around;
   margin: 19px 0 10px 0;
+  font-size: 1.1rem;
 }
 
 .selected-nav-main {
   color: var(--color-black);
+  font-weight: 600;
 }
 
 .selected-nav-header {
   border-bottom: 3px solid var(--color-yellow);
+}
+
+.nav__subject {
+  padding: 10px 20px 10px 20px;
 }
 
 .mainbox {
@@ -109,17 +115,16 @@
 .main__days > .days {
   display: flex;
   justify-content: space-around;
-
   color: var(--color-grey);
   margin: 0;
 }
 
-.days__name {
+.day__name {
   cursor: pointer;
   padding: 12px;
 }
 
-.days__name.whole {
+.day__name.whole {
   padding: 12px 5px 12px 5px;
 }
 

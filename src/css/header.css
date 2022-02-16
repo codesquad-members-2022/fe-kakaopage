@@ -9,7 +9,7 @@
 }
 
 .header > .container {
-  width: 780px;
+  width: var(--main-width);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@
 }
 
 .header > .navbar {
-  width: 780px;
+  width: var(--main-width);
 }
 
 .nav--header {
@@ -87,7 +87,6 @@
 
 .navbar {
   font-size: 1.2rem;
-  padding: 0 20px 0 20px;
   font-weight: 600;
 }
 
