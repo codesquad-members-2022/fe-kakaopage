@@ -1,0 +1,11 @@
+.main__index {
+  padding: 22px 0;
+  width: 16%;
+  color: var(--main-grey-dark);
+  font-size: 1.2rem;
+}
+
+.main__index:hover,
+.main__index:active {
+  color: var(--main-black);
+}

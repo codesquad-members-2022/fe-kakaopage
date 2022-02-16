@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>FE-kakaopage</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <header class="l-header">
+        <div class="c-navigation l-header-child">
+          <h1 class="c-navigation__header">kakaopage</h1>
+          <div class="c-navigation__menu">
+            <form class="c-navigation__form">
+              <input class="c-navigation__input" type="text" />
+              <span class="c-navigation__icon"
+                ><i class="fas fa-search"></i
+              ></span>
+            </form>
+            <div class="c-navigation__button c-navigation__button_type_stage">
+              <span>STAGE</span>
+              <div class="c-navigation__stage-description">
+                새로운 작가를 만나는 곳
+              </div>
+            </div>
+            <div class="c-navigation__button c-navigation__button_type_cash">
+              <span>캐시충전</span>
+            </div>
+            <div class="c-navigation__button c-navigation__button_type_login">
+              <span>로그인</span>
+            </div>
+          </div>
+        </div>
+        <nav class="l-category l-header-child">
+          <ul class="c-category">
+            <li class="header__index c-category__index">
+              <div class="c-category__content">홈</div>
+            </li>
+            <li class="header__index c-category__index">
+              <div class="c-category__content">
+                <span>웹툰∙<i class="fas fa-clock"></i></span>
+                <div class="c-category__alaram"></div>
+              </div>
+            </li>
+            <li class="header__index c-category__index">
+              <div class="c-category__content">
+                <span>웹소설∙<i class="fas fa-clock"></i></span>
+                <div class="c-category__alaram"></div>
+              </div>
+            </li>
+            <li class="header__index c-category__index">
+              <div class="c-category__content">
+                <span>영화</span>
+                <div class="c-category__alaram"></div>
+              </div>
+            </li>
+            <li class="header__index c-category__index">
+              <div class="c-category__content">
+                <span>방송</span>
+                <div class="c-category__alaram"></div>
+              </div>
+            </li>
+            <li class="header__index c-category__index">
+              <div class="c-category__content">
+                <span>책</span>
+                <div class="c-category__alaram"></div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="l-main">
+        <article class="c-main__category l-main__child">
+          <ul class="c-category">
+            <li class="main__index c-category__index"><span>홈</span></li>
+            <li class="main__index c-category__index"><span>요일연재</span></li>
+            <li class="main__index c-category__index"><span>웹툰</span></li>
+            <li class="main__index c-category__index"><span>소년</span></li>
+            <li class="main__index c-category__index"><span>드라마</span></li>
+            <li class="main__index c-category__index"><span>로맨스</span></li>
+            <li class="main__index c-category__index"><span>로판</span></li>
+            <li class="main__index c-category__index"><span>액션무협</span></li>
+            <li class="main__index c-category__index"><span>BL</span></li>
+          </ul>
+        </article>
+        <article class="l-carousel l-main__child">
+          <div class="c-carousel">
+            <img
+              class="c-carousel__img"
+              src="./static/images/carousel_img-1.jpg"
+              alt="carousel image"
+            />
+            <div class="l-carousel__content">
+              <div class="c-carousel__buttons">
+                <button type="button" class="c-carousel__button move-button">
+                  <i class="fas fa-angle-left"></i>
+                </button>
+                <button type="button" class="c-carousel__button move-button">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+              </div>
+              <div class="c-carousel__content">
+                <h3 class="c-carousel__title">무인 이곽</h3>
+                <div class="c-carousel__footer">
+                  <div class="c-carousel__indicator indicator">
+                    <span class="c-carousel__new indicator__new">UP</span>
+                    <span class="c-carousel__genre"
+                      ><i class="fas fa-clock"></i> 웹툰</span
+                    >
+                    <div class="divider"></div>
+                    <span class="c-carousel__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                  <div class="c-carousel__index">2/3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-carousel__sub-title">
+            네 안의 늑대를 개로 만들지 마라!
+          </div>
+        </article>
+        <article class="c-grid l-main__child">
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 UP</span>
+            <div class="c-grid__number">206</div>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 신작</span>
+            <div class="c-grid__number">4</div>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오리지널</span>
+            <div class="c-grid__number">2,330</div>
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">완결까지 정주행</span>
+            <!-- <div class="c-grid__number"></div> -->
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">독립운동가 웹툰 </span>
+            <!-- <div class="c-grid__number"></div> -->
+          </div>
+          <div class="c-grid__component">
+            <span class="c-grid__name">오늘 랭킹</span>
+            <div class="c-grid__number">1위</div>
+          </div>
+        </article>
+        <article class="c-event l-main__child">
+          <button type="button" class="c-event__button move-button">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="l-event__img">
+            <img
+              class="c-event__img"
+              src="./static/images/event-1.png"
+              alt="event image"
+            />
+          </div>
+          <button type="button" class="c-event__button move-button">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </article>
+        <article class="c-webtoons l-main__child">
+          <div class="l-webtoons__header">
+            <div class="c-webtoons__header">
+              <h2>요일 연재 TOP</h2>
+              <span>(1,622)</span>
+            </div>
+            <div class="c-webtoons__more">
+              더보기 <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
+          <div class="l-webtoons__dates">
+            <ul class="c-category">
+              <li class="webtoon__index c-category__index">월</li>
+              <li class="webtoon__index c-category__index">화</li>
+              <li class="webtoon__index c-category__index">수</li>
+              <li class="webtoon__index c-category__index">목</li>
+              <li class="webtoon__index c-category__index">금</li>
+              <li class="webtoon__index c-category__index">토</li>
+              <li class="webtoon__index c-category__index">일</li>
+              <li class="webtoon__index c-category__index">완결</li>
+            </ul>
+          </div>
+          <div class="l-webtoons__contents">
+            <div class="c-webtoons__ranks l-webtoons__child">
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-1.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span>1위</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="22"
+                              height="22"
+                              fill="#EF5350"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M8.456 17L8.456 9.352 8.488 9.352 13.24 17 15.752 17 15.752 5.576 13.4 5.576 13.4 13.24 13.368 13.24 8.6 5.576 6.104 5.576 6.104 17z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-webtoons__grades l-webtoons__child">
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-2.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span><i class="fas fa-star"></i> 9.9</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="22"
+                        viewBox="0 0 32 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="32"
+                              height="22"
+                              fill="#7FB4FF"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M10.92 17.256c1.525 0 2.72-.376 3.584-1.128.864-.752 1.296-1.901 1.296-3.448V5.576h-2.512v7.104c0 .853-.17 1.48-.512 1.88-.341.4-.96.6-1.856.6-.512 0-.92-.072-1.224-.216-.304-.144-.541-.33-.712-.56-.17-.23-.283-.493-.336-.792-.053-.299-.08-.603-.08-.912V5.576H6.056v7.104c0 1.557.424 2.71 1.272 3.456.848.747 2.045 1.12 3.592 1.12zM20.472 17v-4.096h2.64c.715 0 1.323-.104 1.824-.312.501-.208.91-.483 1.224-.824.315-.341.544-.733.688-1.176.144-.443.216-.893.216-1.352 0-.47-.072-.923-.216-1.36-.144-.437-.373-.827-.688-1.168-.315-.341-.723-.616-1.224-.824-.501-.208-1.11-.312-1.824-.312H17.96V17h2.512zm1.952-6.048h-1.952V7.528h1.952c.288 0 .565.021.832.064s.501.125.704.248c.203.123.365.296.488.52.123.224.184.517.184.88s-.061.656-.184.88c-.123.224-.285.397-.488.52s-.437.205-.704.248c-.267.043-.544.064-.832.064z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-2.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span><i class="fas fa-star"></i> 9.9</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="22"
+                        viewBox="0 0 32 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="32"
+                              height="22"
+                              fill="#7FB4FF"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M10.92 17.256c1.525 0 2.72-.376 3.584-1.128.864-.752 1.296-1.901 1.296-3.448V5.576h-2.512v7.104c0 .853-.17 1.48-.512 1.88-.341.4-.96.6-1.856.6-.512 0-.92-.072-1.224-.216-.304-.144-.541-.33-.712-.56-.17-.23-.283-.493-.336-.792-.053-.299-.08-.603-.08-.912V5.576H6.056v7.104c0 1.557.424 2.71 1.272 3.456.848.747 2.045 1.12 3.592 1.12zM20.472 17v-4.096h2.64c.715 0 1.323-.104 1.824-.312.501-.208.91-.483 1.224-.824.315-.341.544-.733.688-1.176.144-.443.216-.893.216-1.352 0-.47-.072-.923-.216-1.36-.144-.437-.373-.827-.688-1.168-.315-.341-.723-.616-1.224-.824-.501-.208-1.11-.312-1.824-.312H17.96V17h2.512zm1.952-6.048h-1.952V7.528h1.952c.288 0 .565.021.832.064s.501.125.704.248c.203.123.365.296.488.52.123.224.184.517.184.88s-.061.656-.184.88c-.123.224-.285.397-.488.52s-.437.205-.704.248c-.267.043-.544.064-.832.064z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-2.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span><i class="fas fa-star"></i> 9.9</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="22"
+                        viewBox="0 0 32 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="32"
+                              height="22"
+                              fill="#7FB4FF"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M10.92 17.256c1.525 0 2.72-.376 3.584-1.128.864-.752 1.296-1.901 1.296-3.448V5.576h-2.512v7.104c0 .853-.17 1.48-.512 1.88-.341.4-.96.6-1.856.6-.512 0-.92-.072-1.224-.216-.304-.144-.541-.33-.712-.56-.17-.23-.283-.493-.336-.792-.053-.299-.08-.603-.08-.912V5.576H6.056v7.104c0 1.557.424 2.71 1.272 3.456.848.747 2.045 1.12 3.592 1.12zM20.472 17v-4.096h2.64c.715 0 1.323-.104 1.824-.312.501-.208.91-.483 1.224-.824.315-.341.544-.733.688-1.176.144-.443.216-.893.216-1.352 0-.47-.072-.923-.216-1.36-.144-.437-.373-.827-.688-1.168-.315-.341-.723-.616-1.224-.824-.501-.208-1.11-.312-1.824-.312H17.96V17h2.512zm1.952-6.048h-1.952V7.528h1.952c.288 0 .565.021.832.064s.501.125.704.248c.203.123.365.296.488.52.123.224.184.517.184.88s-.061.656-.184.88c-.123.224-.285.397-.488.52s-.437.205-.704.248c-.267.043-.544.064-.832.064z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-2.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span><i class="fas fa-star"></i> 9.9</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="22"
+                        viewBox="0 0 32 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="32"
+                              height="22"
+                              fill="#7FB4FF"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M10.92 17.256c1.525 0 2.72-.376 3.584-1.128.864-.752 1.296-1.901 1.296-3.448V5.576h-2.512v7.104c0 .853-.17 1.48-.512 1.88-.341.4-.96.6-1.856.6-.512 0-.92-.072-1.224-.216-.304-.144-.541-.33-.712-.56-.17-.23-.283-.493-.336-.792-.053-.299-.08-.603-.08-.912V5.576H6.056v7.104c0 1.557.424 2.71 1.272 3.456.848.747 2.045 1.12 3.592 1.12zM20.472 17v-4.096h2.64c.715 0 1.323-.104 1.824-.312.501-.208.91-.483 1.224-.824.315-.341.544-.733.688-1.176.144-.443.216-.893.216-1.352 0-.47-.072-.923-.216-1.36-.144-.437-.373-.827-.688-1.168-.315-.341-.723-.616-1.224-.824-.501-.208-1.11-.312-1.824-.312H17.96V17h2.512zm1.952-6.048h-1.952V7.528h1.952c.288 0 .565.021.832.064s.501.125.704.248c.203.123.365.296.488.52.123.224.184.517.184.88s-.061.656-.184.88c-.123.224-.285.397-.488.52s-.437.205-.704.248c-.267.043-.544.064-.832.064z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="c-webtoon">
+                <div class="l-webtoon__img">
+                  <img
+                    class="c-webtoon__img"
+                    src="./static/images/webtoon-2.png"
+                    alt="webtoon thumbnail"
+                  />
+                  <div class="c-webtoon__order">
+                    <span><i class="fas fa-star"></i> 9.9</span>
+                    <span><i class="fas fa-clock"></i></span>
+                  </div>
+                </div>
+                <div class="l-webtton__description">
+                  <div class="c-webtoon__title">도굴왕</div>
+                  <div class="c-webtoon__indicator indicator">
+                    <div class="c-webtoon__svg indicator__new">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="22"
+                        viewBox="0 0 32 22"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g>
+                            <rect
+                              width="32"
+                              height="22"
+                              fill="#7FB4FF"
+                              rx="2"
+                            />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M10.92 17.256c1.525 0 2.72-.376 3.584-1.128.864-.752 1.296-1.901 1.296-3.448V5.576h-2.512v7.104c0 .853-.17 1.48-.512 1.88-.341.4-.96.6-1.856.6-.512 0-.92-.072-1.224-.216-.304-.144-.541-.33-.712-.56-.17-.23-.283-.493-.336-.792-.053-.299-.08-.603-.08-.912V5.576H6.056v7.104c0 1.557.424 2.71 1.272 3.456.848.747 2.045 1.12 3.592 1.12zM20.472 17v-4.096h2.64c.715 0 1.323-.104 1.824-.312.501-.208.91-.483 1.224-.824.315-.341.544-.733.688-1.176.144-.443.216-.893.216-1.352 0-.47-.072-.923-.216-1.36-.144-.437-.373-.827-.688-1.168-.315-.341-.723-.616-1.224-.824-.501-.208-1.11-.312-1.824-.312H17.96V17h2.512zm1.952-6.048h-1.952V7.528h1.952c.288 0 .565.021.832.064s.501.125.704.248c.203.123.365.296.488.52.123.224.184.517.184.88s-.061.656-.184.88c-.123.224-.285.397-.488.52s-.437.205-.704.248c-.267.043-.544.064-.832.064z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="c-webtoon__views indicator__view"
+                      ><i class="fas fa-user"></i> 25.8만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

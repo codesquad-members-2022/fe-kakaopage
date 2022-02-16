@@ -1,0 +1,65 @@
+.c-navigation {
+  justify-content: space-between;
+  height: 60%;
+}
+
+.c-navigation__header {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.c-navigation__menu {
+  display: flex;
+}
+
+.c-navigation__form {
+  border: 1px solid var(--main-grey);
+  border-radius: 24px;
+  padding: 0.4rem;
+}
+.c-navigation__input {
+  border: none;
+}
+
+.c-navigation__input:focus {
+  outline: none;
+}
+
+.c-navigation__icon {
+  color: var(--main-grey-dark);
+}
+.c-navigation__button {
+  padding: 0 4px;
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-grey-dark);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.c-navigation__button_type_stage {
+  position: relative;
+  margin: 0 20px;
+}
+
+.c-navigation__button_type_stage > span {
+  background-color: var(--yellow);
+  color: var(--main-black);
+  font-weight: 900;
+  padding: 4px;
+}
+
+.c-navigation__stage-description {
+  position: absolute;
+  top: 36px;
+  width: max-content;
+  padding: 8px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  background-color: var(--main-black);
+  color: var(--main-white);
+  text-align: center;
+  border-radius: 6px;
+}

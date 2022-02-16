@@ -1,0 +1,23 @@
+@import './carousel.css';
+@import './event.css';
+@import './grid.css';
+@import './webtoons.css';
+@import './category.css';
+
+.l-main {
+  background-color: var(--main-grey-ligth);
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  height: 200vh;
+  margin-top: var(--main-header-heigth);
+}
+.l-main__child {
+  width: var(--main-width);
+  background-color: var(--main-white);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.l-main__child:not(:first-child) {
+  margin-top: 10px;
+}
