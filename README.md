@@ -38,7 +38,7 @@ CSS
 
 - layout 잡기 -> 사전 기획서를 보며 큰단위들로 나누어 단위를 나누어 사용한다.
 
-  <img src="../mdImage/카카오 페이지 계획서.png" width=50%>
+  <img src="../mdImage/kakaoPageBuild.png" width=50%>
 
 - 마크업? -> 처음 해보는데 flex박스를 사용하여 해보았다. -> 느낀점: 내가 하는게 맞는지 틀린지 판단이 안되어 괴롭다.
 - css스타일링 -> 만들어놓은 컨테이너 단위별로 스타일링을 해줬다.

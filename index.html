@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="resetDefault.css" />
-    <link rel="stylesheet" href="headStyle.css" />
+    <link rel="stylesheet" href="./headStyle.css" />
   </head>
   <body>
     <header class="header">
@@ -46,9 +46,34 @@
         </ul>
       </nav>
       <main class="recommand__image">
-        <img src="./pageImage/katana.jpg" width="1000px" height="auto" />
+        <div class="recommand__image--container">
+          <div class="recommand__image--wrapper">
+            <!-- 이부분 너무 하드코딩인데... -->
+            <div class="recommand__image--img">
+              <img src="./pageImage/katana.jpg" class="rec--cartoonImg" />
+            </div>
+            <div class="recommand__image--img">
+              <img src="./pageImage/lisa.jpg" class="rec--cartoonImg" />
+            </div>
+            <div class="recommand__image--img">
+              <img src="./pageImage/skul.jpg" class="rec--cartoonImg" />
+            </div>
+            <div class="recommand__image--img">
+              <img src="./pageImage/mother.png" class="rec--cartoonImg" />
+            </div>
+          </div>
+
+          <div class="recommand__image--controller">
+            <span class="next"></span>
+            <span class="prev"></span>
+            <!--이부분 next 와 prev 순서가 js 제어중 바뀌었다...-->
+          </div>
+
+          <div class="recommand__image--pageCount">1 / 3</div>
+        </div>
+
+        <div class="recommand__description">설명란</div>
       </main>
-      <div class="recommand__description">설명란</div>
     </section>
 
     <section class="main__contents">
@@ -85,9 +110,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -100,9 +128,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -115,9 +146,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -130,9 +164,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -145,9 +182,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -160,9 +200,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -175,9 +218,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -190,9 +236,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -205,9 +254,12 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
         <div class="main__cartoonZone__cell">
           <div class="main__cartoonZone--imageWrap">
             <img
@@ -220,10 +272,15 @@
               <span class="main__cartoonZone--tagRightFont">인기</span>
             </div>
           </div>
-          <span class="main__cartoonZone--info">테스트 테스트</span>
+          <div class="main__cartoonZone--info">
+            <span class="main__cartoonZone--title">제목</span>
+            <span class="main__cartoonZone--hiddenInfo">숨겨진 설명</span>
+            <span class="main__cartoonZone--description">조회 설명?</span>
+          </div>
         </div>
-        <!-- 이거 뭔가 아닌것 같은데... -->
       </article>
     </section>
+
+    <script src="./webEvent.js"></script>
   </body>
 </html>
