@@ -15,6 +15,12 @@ body {
   background-color: #eee;
 }
 
+button {
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -52,4 +58,104 @@ nav.menu-list ul li {
   min-width: none;
   flex: 1 1 auto;
   padding: 30px 0 15px;
+}
+
+.css-kakaopage {
+  margin-top: 27px;
+  margin-bottom: 19px;
+  cursor: pointer;
+}
+
+.search-wrap {
+  display: flex;
+  width: 180px;
+  line-height: 23px;
+  height: 28px;
+  padding: 2px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  border-radius: 30px;
+  margin-top: 27px;
+  margin-bottom: 19px;
+}
+
+.search-form {
+  display: block;
+}
+
+.search-input {
+  width: 136px;
+  height: 100%;
+  border: 0;
+  margin-left: 10px;
+  text-align: left;
+  background: #ffffff;
+}
+
+.css-searchBtn {
+  display: block;
+  margin: 0;
+  min-width: 0;
+  padding-right: 0px;
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+div.menu-stage {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+img.css-stage {
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+button.menu-cash {
+  border: 0;
+  outline: 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999;
+  background-color: transparent;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.kakaopage-menu2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #999;
+  padding: 0;
+  background-color: transparent;
+  margin-top: 30px;
+  border: 0;
+  outline: 0;
+}
+
+.kakaopage-menu2 div {
+  margin-left: 22px;
+}
+
+.kakaopage-menu {
+  position: relative;
+}
+
+img.css-stage-tooltip {
+  position: absolute;
+  top: 59px;
+  left: 170px;
+  width: 137px;
+  height: 33px;
+  max-width: none;
 }
