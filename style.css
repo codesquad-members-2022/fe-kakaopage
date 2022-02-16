@@ -1,0 +1,628 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: 30px 0 18px;
+  background-color: #fff; }
+  .header .top-nav {
+    display: flex;
+    justify-content: space-between; }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto; }
+
+.header__search {
+  padding: 0 6px;
+  margin-right: 25px;
+  line-height: 23px;
+  border: 1px solid #cfcfcf;
+  border-radius: 30px; }
+
+.header__search--form {
+  display: flex; }
+
+.header__search--text {
+  border: 0 solid #000; }
+  .header__search--text:focus {
+    outline: none; }
+
+.header__search--img {
+  margin-top: 5px;
+  margin-right: 3px;
+  cursor: pointer; }
+
+.top-nav {
+  margin-bottom: 50px; }
+  .top-nav .menus {
+    display: flex; }
+  .top-nav .logo {
+    cursor: pointer; }
+  .top-nav .menu {
+    display: flex;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500; }
+    .top-nav .menu .menu__item {
+      margin: 0 3px;
+      color: #999;
+      text-align: center;
+      cursor: pointer; }
+      .top-nav .menu .menu__item:first-child {
+        margin-right: 15px; }
+  .top-nav .menu__item--stage {
+    position: relative; }
+  .top-nav .menu__item--new {
+    position: absolute;
+    top: 28px;
+    left: -37px; }
+
+.btm-nav .menu {
+  display: flex;
+  justify-content: space-around; }
+
+.menu__item {
+  position: relative;
+  cursor: pointer; }
+  .menu__item .new-noti {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    margin: 0;
+    background-color: #ffd200;
+    border-radius: 50%; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.main {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  background-color: #eee; }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto; }
+
+.genre {
+  padding: 9px 7px;
+  margin: 10px 0;
+  background-color: #fff; }
+  .genre .genre-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px; }
+  .genre .genre-list__item {
+    margin: 15px 5px;
+    color: #999;
+    cursor: pointer; }
+  .genre .genre-list__item--focus {
+    color: #333; }
+
+.webtoon-slide {
+  margin-bottom: 10px; }
+
+.webtoon-slide__img {
+  position: relative;
+  cursor: pointer; }
+  .webtoon-slide__img .webtoon-slide__banner {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ffd200; }
+
+.webtoon-slide__imgs .webtoon-slide__imgs--first {
+  display: block; }
+
+.webtoon-slide__btn .webtoon-slide__btn--back {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+  transform: translateY(-50%); }
+
+.webtoon-slide__btn .webtoon-slide__btn--next {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+  transform: translateY(-50%); }
+
+.webtoon-slide__desc {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  font-weight: 600;
+  color: #fff; }
+  .webtoon-slide__desc .slide-title {
+    font-size: 28px; }
+  .webtoon-slide__desc .slide-desc__list {
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px; }
+
+.slide-desc__clock {
+  display: flex; }
+
+.slide-desc__cnt {
+  display: flex; }
+
+.slide-desc__item--desc {
+  margin-left: 5px; }
+
+.slide-desc__item {
+  margin-right: 10px; }
+
+.webtoon-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff; }
+  .webtoon-menu .webtoon-menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 228px;
+    padding: 20px;
+    margin: 1px;
+    cursor: pointer;
+    background-color: #f3f3f3; }
+
+.webtoon-menu__list--top-left {
+  border-radius: 5px 0 0 0; }
+
+.webtoon-menu__list--top-right {
+  border-radius: 0 5px 0 0; }
+
+.webtoon-menu__list--bottom-left {
+  border-radius: 0 0 0 5px; }
+
+.webtoon-menu__list--bottom-right {
+  border-radius: 0 0 5px 0; }
+
+.ad {
+  margin-top: 10px;
+  background-color: #fff; }
+
+.ad-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+  .ad-slide .ad-slide__img {
+    cursor: pointer; }
+  .ad-slide .ad-slide__btn--back {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    cursor: pointer;
+    transform: translateY(-50%); }
+  .ad-slide .ad-slide__btn--next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    cursor: pointer;
+    transform: translateY(-50%); }
+
+.serial {
+  padding: 15px 10px;
+  margin-top: 10px;
+  background-color: #fff; }
+
+.serial__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px; }
+
+.serial__head-left {
+  display: flex; }
+
+.serial__title {
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600; }
+
+.serial__desc {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #999; }
+
+.serial__head-right {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer; }
+
+.serial__list {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #f1f1f1; }
+
+.serial__item {
+  color: #bbb;
+  cursor: pointer; }
+  .serial__item--focus {
+    color: #333; }
+
+.serial__webtoons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px; }
+
+.serial__webtoon {
+  cursor: pointer; }
+
+.serial__thumbnail {
+  border-radius: 55px; }
+
+.serial__thumbnail--img {
+  display: block;
+  margin: 0;
+  border-radius: 10px 10px 0 0; }
+
+.serial__banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #242526;
+  border-radius: 0 0 10px 10px; }
+
+.serial-webtoon__desc {
+  padding: 10px 5px; }
+
+.serial-webtoon__title {
+  width: 104.4px;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.serial__ranking {
+  color: #ffd200; }
+
+.serial-webtoon__user {
+  display: flex;
+  margin-top: 5px;
+  color: #9c9c9c; }
+
+.serial-webtoon__user--icon {
+  margin-right: 5px; }
+
+.serial-webtoon__user--cnt {
+  margin-top: 1.5px;
+  font-size: 13px; }
+
+.serial__footer {
+  width: 100%; }
+
+.serial__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 174px;
+  height: 44px;
+  padding: 0;
+  margin: 0 auto;
+  color: #adadad;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 20px; }
+
+.serial__more--desc {
+  margin-right: 6px; }
+
+.kakaopage-app {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: #ffd200; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px; }
+  .footer .logo__img {
+    display: block;
+    cursor: pointer; }
+  .footer .logo__desc {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #a8a8a8;
+    text-align: center; }
+
+.footer__menu {
+  display: flex;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #bdbdbd; }
+
+.footer__company {
+  cursor: pointer; }
+
+.footer__company2 {
+  margin-right: 5px; }
+  .footer__company2:first-child {
+    cursor: pointer; }
+  .footer__company2:last-child {
+    cursor: pointer; }
+
+.footer__company3 {
+  font-weight: 400; }
+
+.noti--cnt {
+  padding: 4px 6px;
+  margin-left: 5px;
+  font-size: 13px;
+  background-color: #ffd200;
+  border: 0;
+  border-radius: 10px; }

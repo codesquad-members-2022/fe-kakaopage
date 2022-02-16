@@ -1,0 +1,54 @@
+.kakaopage-app {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: $yellow;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+
+  .logo__img {
+    display: block;
+    cursor: pointer;
+  }
+
+  .logo__desc {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $copyright-gray;
+    text-align: center;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $footer-gray;
+}
+
+.footer__company {
+  cursor: pointer;
+}
+
+.footer__company2 {
+  margin-right: 5px;
+
+  &:first-child {
+    cursor: pointer;
+  }
+
+  &:last-child {
+    cursor: pointer;
+  }
+}
+
+.footer__company3 {
+  font-weight: 400;
+}
