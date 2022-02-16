@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ecef;
+}
+
+/*========== 일반 ==========*/
+.center {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.list-style--none {
+  list-style: none;
+}
+
+.nav-item-sort {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.margin-right--auto {
+  margin-right: auto;
+}
+
+.container {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.button-style--none {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-2row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+}
+
+/*========== main header ==========*/
+
+.main-header {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.main-header-form {
+  position: relative;
+}
+
+.main-header-input {
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  height: 30px;
+  width: 180px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin-right: 15px;
+}
+
+.main-header-input:focus {
+  outline: none;
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+  color: #495057;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+
+.main-header-item {
+  margin-right: 15px;
+}
+
+#stage {
+  color: #000;
+  font-weight: 600;
+  background-color: #fab005;
+  padding: 2px 4px;
+}
+
+.main-header-text {
+  color: #868e96;
+}
+/*========= main header nav ==========*/
+
+/*========== 웹툰 카테고리 탭 ==========*/
+main {
+  margin-top: 15px;
+}
+
+/*========== category button  ==========*/
+.category-buttons-container {
+  padding: 20px;
+}
+
+.category-button {
+  background-color: #f1f3f5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.left-top {
+  border-top-left-radius: 10px;
+}
+
+.right-top {
+  border-top-right-radius: 10px;
+}
+
+.left-bottom {
+  border-bottom-left-radius: 10px;
+}
+
+.right-bottom {
+  border-bottom-right-radius: 10px;
+}
+
+/*========== footer ==========*/
+.footer-sort {
+  display: flex;
+  align-items: center;
+}
+
+.footer-item {
+  margin-right: 8px;
+}
