@@ -5,7 +5,7 @@
 @import './category.css';
 
 .l-main {
-  background-color: var(--main--grey-ligth);
+  background-color: var(--main-grey-ligth);
   display: flex;
   flex-direction: column;
   padding-top: 14px;

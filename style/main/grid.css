@@ -7,7 +7,7 @@
 }
 
 .c-grid__component {
-  background-color: var(--main-grey);
+  background-color: var(--main-grey-ligth);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,8 @@
 
 .c-grid__number {
   margin-left: 10px;
+  padding: 4px 8px 0 8px;
   background-color: var(--main-yellow);
-  border-radius: 20px;
-  text-align: center;
+  border-radius: 13px;
+  font-size: 1.1rem;
 }

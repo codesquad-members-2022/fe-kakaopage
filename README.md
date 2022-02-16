@@ -77,5 +77,5 @@ carousel__text-container
 - [ ] class 이름 중복되는거 줄이기
 - 디테일한 부분 수정하기
   - [x] 노란 점 위치
-  - [ ] 이벤트 grid의 노란 숫자 표시
+  - [x] 이벤트 grid의 노란 숫자 표시
   - [x] 헤더 고정
