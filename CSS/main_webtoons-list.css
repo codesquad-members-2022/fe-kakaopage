@@ -1,0 +1,51 @@
+/* ======== webtoons__list======== */
+.webtoons__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+  background-color: var(--white-color);
+}
+
+.webtoons__item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.item__privew {
+  margin-bottom: 12px;
+}
+
+.item__img img {
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.item__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+  font-size: 95%;
+  background-color: var(--black-color);
+  color: var(--main-point-color);
+}
+
+.item__rating .fa-clock {
+  color: var(--non-focus-font-color);
+}
+
+.item__title {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.item__rating .fa-star {
+  font-size: 14px;
+}
+
+.item__viewer, .item__info i {
+  font-size: 14px;
+  color: var(--non-focus-font-color);
+}
