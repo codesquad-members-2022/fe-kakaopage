@@ -88,3 +88,8 @@ div.ifYouWait>span:last-child{
     height:16px;
     margin-top:2px
 }
+.wrapper>.title{
+    margin-bottom: 7px;
+    text-overflow: ellipsis;
+
+}
