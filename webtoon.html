@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kakao page - home</title>
+  <link rel="stylesheet" type="text/css" href="./resource/css/common.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/layout.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header__inner">
+      <h1 id="header__logo"><a href="#"><img src="./resource/images/common/logo-kakaopage.svg" alt="kakaopage 로고"></a></h1>
+      <div class="header__service-area">
+        <div class="search">
+          <form class="search__form">
+            <input type="text" name="search" class="search__input">
+            <button type="button" class="search__button"><span class="hidden-text">검색하기 버튼</span></button>
+          </form>
+        </div>
+        <a href="#" class="header__stage-logo"><img src="./resource/images/common/logo-stage.svg" alt="stage 로고"></a>
+        <div class="header__user-services">
+          <a href="#" class="header__user-service">캐시충전</a>
+          <a href="#" class="header__user-service">로그인</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="container">
+    <div class="contents">
+      <nav class="gnb">
+        <ul class="gnb__inner">
+          <li class="gnb__item"><a href="#" class="gnb__link">홈</a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link on">웹툰<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">웹소설<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">영화</a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">방송</a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">책</a></li>
+        </ul>
+      </nav>
+      <ul class="categories">
+        <li class="category"><a href="#" class="category__link on">홈</a></li>
+        <li class="category"><a href="#" class="category__link">요일연재</a></li>
+        <li class="category"><a href="#" class="category__link">웸툰</a></li>
+        <li class="category"><a href="#" class="category__link">소년</a></li>
+        <li class="category"><a href="#" class="category__link">드라마</a></li>
+        <li class="category"><a href="#" class="category__link">로맨스</a></li>
+        <li class="category"><a href="#" class="category__link">로판</a></li>
+        <li class="category"><a href="#" class="category__link">로판</a></li>
+        <li class="category"><a href="#" class="category__link">액션무협</a></li>
+        <li class="category"><a href="#" class="category__link">BL</a></li>
+      </ul>
+      <div class="main-banners slider">
+        <ul class="main-banners__contents slide-wrap">
+          <li class="main-banner main-banner1">
+            <a href="#" class="main-banners__link">
+              <div class="main-banner__img-wrap">
+                <img src="./resource/images/webtoon/main-banner_1.png" alt="알고있지만 포스터">
+              </div>
+              <div class="baner__info">
+                <p class="main-banner__title banner__title">알고있지만</p>
+                <div class="main-banner__tags banner__tags">
+                  <span class="main-banner__status banner__status">UP</span>
+                  <span class="main-banner__category banner__category"><span class="main-banner__category-name">웹툰</span></span>
+                  <span class="main-banner__reader banner__reader"><span class="reader-number">1.7</span>만명</span>
+                </div>
+              </div>
+              <p class="banner__description">우리 아직 이혼 안했어요</p>
+            </a>
+          </li>
+          <li class="main-banner main-banner1">
+            <a href="#" class="main-banners__link">
+              <div class="main-banner__img-wrap">
+                <img src="./resource/images/webtoon/main-banner_1.png" alt="알고있지만 포스터">
+              </div>
+              <div class="baner__info">
+                <p class="main-banner__title banner__title">알고있지만</p>
+                <div class="main-banner__tags banner__tags">
+                  <span class="main-banner__status banner__status">UP</span>
+                  <span class="main-banner__category banner__category"><span class="main-banner__category-name">웹툰</span></span>
+                  <span class="main-banner__reader banner__reader"><span class="reader-number">1.7</span>만명</span>
+                </div>
+              </div>
+              <p class="banner__description">우리 아직 이혼 안했어요</p>
+            </a>
+          </li>
+          <li class="main-banner main-banner1">
+            <a href="#" class="main-banners__link">
+              <div class="main-banner__img-wrap">
+                <img src="./resource/images/webtoon/main-banner_1.png" alt="알고있지만 포스터">
+              </div>
+              <div class="baner__info">
+                <p class="main-banner__title banner__title">알고있지만</p>
+                <div class="main-banner__tags banner__tags">
+                  <span class="main-banner__status banner__status">UP</span>
+                  <span class="main-banner__category banner__category"><span class="main-banner__category-name">웹툰</span></span>
+                  <span class="main-banner__reader banner__reader"><span class="reader-number">1.7</span>만명</span>
+                </div>
+              </div>
+              <p class="banner__description">우리 아직 이혼 안했어요</p>
+            </a>
+          </li>
+        </ul>
+        <div class="slide-buttons">
+          <button class="slide-button prev" type="button"><span class="hidden-text">왼쪽으로 이동</span></button>
+          <button class="slide-button next" type="button"><span class="hidden-text">오른쪽으로 이동</span></button>
+        </div>
+        <div class="slide-paging-number">
+          <span class="slide-paging-number__current">1</span>
+          <span class="slide-paging-number__all">3</span>
+        </div>
+      </div>
+      <div class="section-sub-categorise">
+        <ul class="sub-categories">
+          <li class="sub-category"><a href="#" class="sub-category__link">오늘 UP<spn class="sub-category__number">206</spn></a></li>
+          <li class="sub-category"><a href="#" class="sub-category__link">오늘 신작<spn class="sub-category__number">4</spn></a></li>
+          <li class="sub-category"><a href="#" class="sub-category__link">오리지널<spn class="sub-category__number">2,330</spn></a></li>
+          <li class="sub-category"><a href="#" class="sub-category__link">완결까지 정주행</a></li>
+          <li class="sub-category"><a href="#" class="sub-category__link">독립운동가 웹툰</a></li>
+          <li class="sub-category"><a href="#" class="sub-category__link">오늘 랭킹<spn class="sub-category__number">1위</spn></a></li>
+        </ul>
+      </div>
+      <div class="section section-event-banner">
+        <div class="event-banner slider">
+          <ul class="event-banners__contents slide-wrap">
+            <li class="event-banner event-banner1">
+              <a href="#" class="event-banners__link">
+                <div class="event-banners__img-wrap">
+                  <img src="./resource/images/webtoon/event-banner_1.png" alt="알고있지만 포스터">
+                </div>
+              </a>
+            </li>
+            <li class="event-banner event-banner2">
+              <a href="#" class="event-banners__link">
+                <div class="event-banners__img-wrap">
+                  <img src="./resource/images/webtoon/event-banner_1.png" alt="알고있지만 포스터">
+                </div>
+              </a>
+            </li>
+            <li class="event-banner event-banner3">
+              <a href="#" class="event-banners__link">
+                <div class="event-banners__img-wrap">
+                  <img src="./resource/images/webtoon/event-banner_1.png" alt="알고있지만 포스터">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="slide-buttons">
+          <button class="slide-button prev" type="button"><span class="hidden-text">왼쪽으로 이동</span></button>
+          <button class="slide-button next" type="button"><span class="hidden-text">오른쪽으로 이동</span></button>
+        </div>
+      </div>
+      <section class="section">
+        <div class="section__top">
+          <h3 class="section__title">요일 연재 TOP <span class="section__work-number">(1,624)</span></h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <ul class="section__day-tabs">
+          <li class="section__day-tab"><button type="button" class="day-tab__button">월</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">화</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button on">수</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">목</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">금</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">토</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">일</button></li>
+          <li class="section__day-tab"><button type="button" class="day-tab__button">완결</button></li>
+        </ul>
+        <div class="works">
+          <div class="section__rank-area row-5">
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+                <div class="work__rank bg-black-bar"><span class="work__rank-number">1</span>위</div>
+              </div>
+              <h4 class="work__title">도굴왕왕왕왕왕왕왕왕왕</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+                <div class="work__rank bg-black-bar"><span class="work__rank-number">1</span>위</div>
+              </div>
+              <h4 class="work__title">빈껍데기 공장</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+                <div class="work__rank bg-black-bar"><span class="work__rank-number">1</span>위</div>
+              </div>
+              <h4 class="work__title">도굴왕왕왕왕왕왕왕왕왕</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+                <div class="work__rank bg-black-bar"><span class="work__rank-number">1</span>위</div>
+              </div>
+              <h4 class="work__title">빈껍데기 공장</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+                <div class="work__rank bg-black-bar"><span class="work__rank-number">1</span>위</div>
+              </div>
+              <h4 class="work__title">도굴왕</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+          </div>
+          <div class="section__score-area row-5">
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+                <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+              </div>
+              <h4 class="work__title">빈껍데기 공장</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+                <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+              </div>
+              <h4 class="work__title">도굴왕</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+                <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+              </div>
+              <h4 class="work__title">빈껍데기 공장공장공장공장공장</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+                <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+              </div>
+              <h4 class="work__title">도굴왕</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+            <article class="row">
+              <div class="work__inner-wrap">
+                <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+                <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+              </div>
+              <h4 class="work__title">빈껍데기 공장</h4>
+              <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section-new-work">
+        <div class="section__top">
+          <h3 class="section__title">기대신작 TOP</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <div class="works row-2">
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/new-work_1.jpg" alt="">
+              <div class="new-work__info baner__info">
+                <p class="new-work__title banner__title">화산전생</p>
+                <div class="new-work__tags banner__tags">
+                  <span class="new-work__status banner__status">이벤트</span>
+                  <span class="new-work__category banner__category"><span class="banner__category-name">웹툰</span></span>
+                  <span class="new-work__reader banner__reader"><span class="banner__reader-number">183.1</span>만명</span>
+                </div>
+              </div>
+              <p class="new-work__description banner__description">나도 그들처럼 영웅이 되고 싶었다.</p>
+            </div>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/new-work_2.jpg" alt="">
+              <div class="new-work__info baner__info">
+                <p class="new-work__title banner__title">화산전생</p>
+                <div class="new-work__tags banner__tags">
+                  <span class="new-work__status banner__status">이벤트</span>
+                  <span class="new-work__category banner__category"><span class="banner__category-name">웹툰</span></span>
+                  <span class="new-work__reader banner__reader"><span class="banner__reader-number">183.1</span>만명</span>
+                </div>
+              </div>
+              <p class="new-work__description banner__description">나도 그들처럼 영웅이 되고 싶었다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__top">
+          <h3 class="section__title">로맨스 TOP</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <div class="works row-5">
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+              <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+            </div>
+            <h4 class="work__title">도굴왕</h4>
+            <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+              <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+            </div>
+            <h4 class="work__title">빈껍데기 공장</h4>
+            <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+              <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+            </div>
+            <h4 class="work__title">도굴왕</h4>
+            <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/day-work_2.png" alt="빈껍데기 공장">
+              <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+            </div>
+            <h4 class="work__title">빈껍데기 공장</h4>
+            <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/day-work_1.png" alt="도굴왕">
+              <div class="work__score bg-black-bar"><span class="work__score-number">9.9</span></div>
+            </div>
+            <h4 class="work__title">도굴왕</h4>
+            <span class="work__reader"><span class="work__reader-number">200.8</span>만명</span>
+          </article>
+        </div>
+      </section>
+      <section class="section section-rank">
+        <div class="section__top">
+          <h3 class="section__title">일간 랭킹 TOP</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">1</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title"><i class="new-icon icon hidden-text">new 아이콘</i><i class="year15-icon icon hidden-text">15세 관람 아이콘</i>흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">2</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title"><i class="year15-icon icon hidden-text">15세 관람 아이콘</i>흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">3</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title">흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+      </section>
+      <section class="section section-recommand-event">
+        <div class="section__top">
+          <h3 class="section__title">추천 이벤트</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <div class="section-recommand-event__img-wrap">
+          <img src="./resource/images/webtoon/recommand-event-banner_1.png" alt="필부필부 이벤트 배너">
+        </div>
+      </section>
+    </div>
+  </main>
+  <a href="#" class="app-button"><span class="app-button__text"><em class="app-button__bold-text">카카오페이지</em> 앱으로 보기</span></a>
+  <footer id="footer">
+    <div class="footer__cont">
+      <address class="footer__address"><span class="address__section">대표자 : 이진수, 김성수</span><span>호스팅서비스사업자 : (주)카카오엔터테인먼트</span><br><span class="address__section">사업자 등록 번호 : 220-88-02594</span><span class="address__section">통신판매업신고 : 2018-성남분당B-0004</span><br><span class="address__section">대표전화 : 1644-4755</span><span class="address__section">이메일 : contact@kakaopage.com</span><br><span class="address__section">주소 : 경기도 성남시 분당구 판교역로 221</span></address>
+      <div class="footer__copyright-mark">
+        <img src="./resource/images/common/ok-mark.png" alt="저작권 OK 마크">
+        <span>저작권 ok</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

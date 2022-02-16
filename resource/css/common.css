@@ -1,0 +1,525 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./variable.css);
+
+/**
+common
+**/
+.hidden-text {
+    font-size: 0;
+    color: transparent;
+}
+.clock-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/common/ico-clock-black.png') no-repeat center / auto 20px;
+    vertical-align: middle;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+.slide-wrap {
+    display: inline-flex;
+}
+.slide-buttons {
+    position: absolute;
+    top: 50%;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+.slide-button {
+    width: 40px;
+    height: 40px;
+    background: no-repeat center / 100% auto;
+}
+.slide-button.prev {
+    background-image: url('../images/common/slide-previous-button_dark.svg');
+}
+.slide-button.next {
+    background-image: url('../images/common/slide-next-button_dark.svg');
+}
+.slide-paging-number {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    font-size: var(--font-size-XL);
+    color: #fff;
+    opacity: 0.6;
+}
+.slide-paging-number__all:before {
+    content: ' / ';
+}
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background: no-repeat center / auto 16px;
+    vertical-align: middle;
+}
+.new-icon {
+    background-image: url('../images/common/ico-new.svg');
+}
+.year15-icon {
+    width: 18px;
+    background-image: url('../images/common/ico-year15.png');
+}
+
+/**
+display
+**/
+#container {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-top: calc(var(--gnb-height) + var(--header-height) + 14px);
+    overflow: hidden;
+}
+.section {
+    margin-bottom: 11px;
+    padding: 22px 20px;
+    background: #fff;
+}
+.baner__info {
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+}
+.banner__title {
+    font-weight: 500;
+    color: #fff;
+}
+.banner__tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    color: #fff;
+    line-height: 1;
+}
+.banner__status {
+    color: var(--color-yellow);
+    background: #000;
+    border: 1px solid var(--color-yellow);
+}
+.banner__category:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/common/ico-clock_white.svg') no-repeat left center;
+    vertical-align: middle;
+}
+.banner__category:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    background: #b0aeae;
+}
+.banner__reader:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/common/ico-user.svg') no-repeat left center;
+    vertical-align: middle;
+}
+.banner__description {
+    background: var(--color-yellow);
+    text-align: center;
+}
+.row-5, .row-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.row-5 .row {
+    width: calc(20% - 16px);
+}
+.row-2 .row {
+    width: calc(50% - 5px);
+}
+
+/**
+header
+**/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    overflow: hidden;
+}
+#header__logo {
+    width: 130px;
+}
+.header__service-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.search {
+    width: 186px;
+    height: 34px;
+    padding: 6px 11px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 17px;
+    overflow: hidden;
+}
+.search__form {
+    display: flex;
+    justify-content: space-between;
+}
+.search__input {
+    width: calc(100% - 20px);
+    padding-right: 7px;
+    line-height: 20px;
+}
+.search__button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/common/ico-btn-search.png') no-repeat center / 100% auto;
+}
+.header__user-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-L);
+    color: var(--color-gray);
+}
+.header__user-service:not(:first-child) {
+    position: relative;
+    margin-left: 12px;
+    padding-left: 13px;
+}
+.header__user-service:not(:first-child):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 60%;
+    background: #e2e2e2;
+    transform: translateY(-50%);
+}
+
+/**
+gnb
+**/
+.gnb {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    box-sizing: border-box;
+}
+.gnb__inner {
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.gnb__item {
+    flex: 1 1 auto;
+    font-size: var(--font-size-L);
+    text-align: center;
+}
+.gnb__link {
+    display: block;
+    padding-top: 10px;
+    font-weight: 500;
+    line-height: 58px;
+}
+.gnb__link.on {
+    line-height: 55px;
+    border-bottom: 3px solid var(--color-yellow);
+}
+.gnb__link .clock-icon {
+    position: relative;
+    margin-left: 20px;
+
+}
+.gnb__link .clock-icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-black);
+    transform: translateY(-50%);
+}
+
+/**
+category
+**/
+.categories {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+.category {
+    flex: 1 1 auto;
+    text-align: center;
+}
+.category__link {
+    display: block;
+    font-size: var(--font-size-XL);
+    color: rgb(187, 187, 187);
+    line-height: 67px;
+}
+.category__link.on {
+    color: inherit;
+}
+
+
+/**
+banner
+**/
+.main-banners {
+    margin: 11px 0;
+}
+.main-banner {
+    position: relative;
+    width: var(--max-width);
+    font-weight: 700;
+}
+.main-banner__img-wrap {
+    height: 440px;
+    overflow: hidden;
+}
+.main-banner__title {
+    font-size: 28px;
+}
+.main-banner__tags {
+    font-size: var(--font-size-XL);
+}
+.main-banner__status {
+    padding: 0 5px;
+    font-size: var(--font-size-M);
+    line-height: 20px;
+    border-radius: 3px;
+}
+.main-banner__category:before {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: auto 20px;
+}
+.main-banner__category:after {
+    height: 18px;
+    margin-left: 10px;
+}
+.main-banner__reader:before {
+    width: 20px;
+    height: 20px;
+    background-size: auto 20px;
+}
+.main-banners .slide-buttons {
+    margin-top: -10px;
+}
+.main-banners .banner__description {
+    line-height: 40px;
+}
+
+/**
+section-title
+**/
+.section__top {
+    display: flex;
+    justify-content: space-between;
+}
+.section__title {
+    font-size: var(--font-size-XL);
+    font-weight: 500;
+}
+.section__more-button {
+    color: var(--color-gray);
+}
+.section__more-button:after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-left: 5px;
+    background: url('../images/common/ico-more-gray.svg') no-repeat right center / auto 14px;
+}
+.section__work-number {
+    font-size: var(--font-size-S);
+    color: var(--color-gray);
+}
+
+/**
+가로 5칸 section 공통
+**/
+.work__inner-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.works .bg-black-bar {
+    padding: 0 8px;
+    line-height: 30px;
+    color: var(--color-yellow);
+    background: #242526 url('../images/common/ico-clock_gray.svg') no-repeat right 8px center / auto 16px;
+}
+.work__score-number {
+    padding-left: 20px;
+    background: url('../images/common/ico-star.svg') no-repeat left center / auto 14px;
+}
+.work__title {
+    margin: 9px 0 7px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.work__reader {
+    padding-left: 15px;
+    font-size: var(--font-size-S);
+    color: var(--color-gray);
+    background: url('../images/common/icon-user_gray.png') no-repeat left center / auto 11px;
+}
+
+/**
+기대 신작
+**/
+.new-work__info {
+    left: 16px;
+    bottom: 40px;
+}
+.new-work__title {
+    font-size: var(--font-size-L);
+}
+.new-work__tags {
+    font-size: var(--font-size-S);
+}
+.new-work__status {
+    padding: 0 3px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 2px;
+}
+.new-work__category:before {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    background-size: auto 14px;
+}
+.new-work__category:after {
+    height: 12px;
+    margin-left: 7px;
+}
+.new-work__reader:before {
+    width: 14px;
+    height: 14px;
+    background-size: auto 14px;
+}
+.new-work__description {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+/**
+랭킹 TOP
+**/
+.section-rank__work {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+.section__top + .section-rank__work {
+    margin-top: 20px;
+}
+.section-rank__rank_number {
+    width: 16px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.section-rank__img-wrap {
+    position: relative;
+    width: 84px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.section-rank__img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url('../images/common/ico-clock_yellow.png') no-repeat center / 26px auto;
+}
+.section-rank__work-info {
+    font-size: var(--font-size-S);
+    color: var(--color-gray);
+}
+.section-rank__title {
+    font-size: var(--font-size-M);
+    color: var(--color-black);
+}
+.section-rank__description {
+    margin: 7px 0 22px;
+}
+.section-rank__category {
+    margin-left: 5px;
+}
+.section-rank__category:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin-right: 5px;
+    background: #dfdfdf;
+}
+
+/**
+추천 이벤트
+**/
+.section-recommand-event__img-wrap {
+    margin-top: 20px;
+}
+
+/**
+app으로 보기 버튼
+**/
+.app-button {
+    display: block;
+    background: var(--color-dark-yellow);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    line-height: 70px;
+    text-align: center;
+}
+.app-button__text {
+    padding-right: 22px;
+    font-size: var(--font-size-XL);
+    background: url('../images/common/arrow-right.png') no-repeat right bottom 1px / auto 22px;
+}
+.app-button__bold-text {
+    font-weight: var(--font-weight-M);
+}
