@@ -4,7 +4,7 @@ const addHandlerOnGnb = () => {
 };
 
 const HandleGnb = (event) => {
-  const tabName = event.target.dataset.tab;
+  const tabName = event.target.dataset.category;
   if (!tabName) return;
 
   const currTab = document.querySelector('.gnb__item--active');
