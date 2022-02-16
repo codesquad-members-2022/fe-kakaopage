@@ -1,6 +1,61 @@
+main {
+    --kakao-yellow: #ffd200;
+    --dark-gray: #9c9c9c;
+    --light-gray: #bbb;
+    --ligtest-gray: #f3f3f3;
+    --middle-font-size: 1.1rem;
+    --small-font-size: 0.9rem;
+}
+
+.margin-top-default {
+    margin-top: 11px;
+}
+
+.padding-default {
+    padding: 20px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.group-flex {
+    display: flex;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.section-header {
+    justify-content: space-between;
+}
+
+.section-header .count {
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-gray);
+    font-size: var(--small-font-size);
+    margin-left: 5px;
+}
+
+.section-header .detail {
+    color: #999;
+}
+
+.thumbnail-wrap {
+    border-radius: 8px;
+    background-color: #fff;
+}
+
 .contents-wrap {
     background-color: #eee;
-    margin-top: 150px;
+    margin-top: 165px;
 }
 
 .sub-menu {
@@ -12,7 +67,7 @@
 .sub-menu li {
     flex: auto;
     text-align: center;
-    color: #bbb;
+    color: var(--light-gray);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -49,13 +104,13 @@
 
 .cover-image .cover-info-oneline {
     height: 40px;
-    background-color: #ffd200;
+    background-color: var(--kakao-yellow);
     color: #3a3a3a;
     margin-top: 20px;
     align-items: center;
     justify-content: center;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: var(--middle-font-size);
 }
 
 .cover-image-description {
@@ -78,7 +133,7 @@
 .category-links-wrap {
     flex-wrap: wrap;
     border-radius: 8px;
-    background-color: #f3f3f3;
+    background-color: var(--ligtest-gray);
 }
 
 .category a {
@@ -86,7 +141,7 @@
     height: 60px;
     color: #3a3a3a;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: var(--middle-font-size);
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
     align-items: center;
@@ -99,11 +154,11 @@
 
 .category .badge {
     height: 24px;
-    background-color: #ffd200;
+    background-color: var(--kakao-yellow);
     border-radius: 13px;
     padding: 2px 8px;
     margin-left: 8px;
-    font-size: 0.9rem;
+    font-size: var(--small-font-size);
     align-items: center;
     justify-content: center;
 }
@@ -121,7 +176,7 @@
 }
 
 .week-list {
-    color: #bbb;
+    color: var(--light-gray);
     font-size: 1.2rem;
     margin-top: 15px;
 }
@@ -130,11 +185,11 @@
     padding: 15px;
     flex: auto;
     text-align: center;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid var(--ligtest-gray);
 }
 
 .week-list .active {
-    border-bottom: solid 2px #ffd200;
+    border-bottom: solid 2px var(--kakao-yellow);
 }
 
 .webtoon-card-wrap {
@@ -157,7 +212,7 @@
     box-sizing: border-box;
     height: 30px;
     width: 100%;
-    color: #ffd200;
+    color: var(--kakao-yellow);
     background-color: #242526;
     padding: 0 8px;
     align-items: center;
@@ -174,12 +229,12 @@
 }
 
 .webtoon-card .reader-info {
-    color: #9c9c9c;
-    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-size: var(--small-font-size);
 }
 
 .thumbnail-wrap {
-    border: 1px solid #eee;
+    border: 1px solid var(--ligtest-gray);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -198,16 +253,16 @@
 }
 
 .new-best .cover-image .title {
-    font-size: 1.2rem;
+    font-size: var(--middle-font-size);
 }
 
 .new-best .cover-image .description {
-    font-size: 0.9rem;
+    font-size: var(--small-font-size);
 }
 
 .new-best .cover-image .cover-info-oneline {
     height: 24px;
-    font-size: 0.9rem;
+    font-size: var(--small-font-size);
 }
 
 .daily-best ol {
@@ -232,7 +287,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 6px;
-    border: 1px solid #eee;
+    border: 1px solid var(--ligtest-gray);
 }
 
 .daily-best-card .thumbnail {
@@ -258,14 +313,14 @@
 }
 
 .daily-best-card .info .description {
-    color: #9c9c9c;
+    color: var(--dark-gray);
     margin-top: 7px;
-    font-size: 0.9rem;
+    font-size: var(--small-font-size);
 }
 
 .daily-best-card .info .date {
-    color: #9c9c9c;
-    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-size: var(--small-font-size);
 }
 
 .recommend-event .img-wrap {
