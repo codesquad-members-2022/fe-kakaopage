@@ -99,6 +99,7 @@ a:hover {
 
 .btn {
   border: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -162,19 +163,24 @@ a:hover {
   background-size: cover;
 }
 
-.btn-move {
-  border-color: white;
-}
-
 .btn-prev {
   position: relative;
-  bottom: 250px;
+  bottom: 230px;
+  left: 20px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 
 .btn-next {
   position: relative;
-  bottom: 250px;
-  left: 670px;
+  bottom: 270px;
+  left: 660px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 
 .ad {
