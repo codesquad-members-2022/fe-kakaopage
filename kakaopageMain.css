@@ -203,7 +203,8 @@ nav {
   display: flex;
   margin: 12px 0 0;
 }
-.eventLeft > * {
+.eventLeft > *,
+.expectToonInfoWrap > * {
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -503,4 +504,61 @@ nav {
   font-size: 14px;
   color: #999;
   font-weight: bold;
+}
+.expectedWebtoon {
+  height: 313px;
+  background: white;
+}
+.expectToonContentWrap {
+  height: 223px;
+  display: flex;
+  justify-content: space-between;
+}
+.expectToonContentWrapper {
+  height: 223px;
+}
+.expectToonContent {
+  width: 335px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 6px 6px 0 0;
+}
+.expectToonInfo {
+  height: 50px;
+}
+.expectToonTitle {
+  height: 18px;
+  font-size: 18px;
+  margin: 4px 0 0;
+}
+.expectToonInfoWrap {
+  height: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.expectToonInfoWrap > * {
+  height: 20px;
+  font-size: 14px;
+}
+.expectStatus {
+  width: 40px;
+  height: 16px;
+}
+.expectToonClock {
+  width: 12px;
+  height: 12px;
+}
+.readCountExpectToon {
+  width: 10px;
+  height: 12px;
+}
+.expectToonSlash {
+  margin: 0 8px;
+  font-weight: 100;
+}
+.expectToonCopyWrap {
+  width: 100%;
+  height: 24px;
+  border-radius: 0 0 6px 6px;
 }
