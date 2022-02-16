@@ -1,0 +1,133 @@
+.navbar {
+  box-sizing: border-box;
+  margin: 0;
+  border-bottom: 1px solid #dfdfdf;
+  width: 100%;
+  height: 68px;
+  
+}
+
+.content-list {
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px auto;
+  width: 720px;
+  height: 67px;
+}
+
+
+
+li {
+  margin: 0;
+  list-style: none;
+  flex: 1 1 auto;
+  padding: 13px 0 15px;
+  box-sizing: border-box;
+  border-bottom-width: 3px;
+  text-align: center;
+}
+
+/* 여기부터 nabvar second */
+
+.navbar-second {
+  width: 100%;
+  margin: 0px auto;
+  padding-top: 17px; 
+}
+
+.navbar-second-1 {
+  box-sizing: border-box;
+  background-color: white;
+  width: 720px;
+  padding: 0px;
+  margin: 0px auto;
+  display: flex;
+}
+
+.navbar-second-content {
+  box-sizing: border-box;
+  margin: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  font-size: 20px;
+  padding: 22px 0px;
+  font-weight: 500;
+  color: rgb(187, 187, 187);
+  text-decoration: none;
+  line-height: 1.15;
+  background-color: transparent;
+}
+
+
+.slide-img {
+  position: relative;
+  text-align: center;
+  margin-top: 11px;
+}
+
+.slide-name {
+  position: absolute; 
+  top: 340px;
+  left: 20px;
+  color: white;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.navbar-week {
+  box-sizing: border-box;
+  padding-top: 7px;
+}
+
+/* 여기부터 전체 웹툰 웹툰 navbar */
+
+.navbar-webtoon {
+  display: flex;
+  width: 720px;
+  justify-content: space-between;
+  list-style: none;
+  background-color: white;
+  margin: 0 auto;
+  border-top: 1px solid rgb(241, 241, 241);
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.navbar-webtoon-1 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-webtoon-menu {
+  padding: 20px 10px;
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  color: rgb(187, 187, 187);
+  font-size: 20px;
+  text-align: center;
+}
+
+.navbar-webtoon-total-menu {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px;
+  padding: 26px 13px 10px;
+}
+
+.navbar-webtoon-total-menu-1 {
+  display: flex;
+  font-size: 18px;
+  color: rgb(153, 153, 153);
+  text-align: right;
+  flex: 1 0 auto;
+}
+
