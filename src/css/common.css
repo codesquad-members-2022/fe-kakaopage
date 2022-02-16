@@ -10,9 +10,14 @@
 
 body {
   background-color: var(--second-bg-color);
+  padding-top: 170px;
 }
 
 header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
   background-color: var(--main-bg-color);
 }
 
