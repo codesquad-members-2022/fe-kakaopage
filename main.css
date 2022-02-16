@@ -51,6 +51,9 @@ a {
   grid-gap: 3px;
 }
 
+.font-color--black {
+  color: #000;
+}
 /*========== main header ==========*/
 
 .main-header {
@@ -115,10 +118,22 @@ h1 {
 }
 
 /*========= main header nav ==========*/
+.main-header-nav {
+  font-weight: 700;
+  font-size: 16px;
+}
 
 /*========== 웹툰 카테고리 탭 ==========*/
 main {
   margin-top: 15px;
+}
+
+.webtoon-category {
+  font-size: 17px;
+  font-weight: 600;
+  color: #adb5bd;
+
+  padding: 15px 0;
 }
 
 /*========== category button  ==========*/
