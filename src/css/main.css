@@ -6,8 +6,9 @@
   justify-content: center;
 }
 
-.slider {
+.mainbox.main__slider {
   height: 478px;
+  padding: 0;
 }
 
 .main-contents,
@@ -16,7 +17,7 @@
   width: var(--main-width);
 }
 
-.main-contents > .navbar {
+.main-contents > .main__navbar {
   padding: 0;
 }
 
@@ -38,7 +39,7 @@
   border-bottom: 3px solid var(--color-yellow);
 }
 
-.container {
+.mainbox {
   background-color: var(--color-white);
   padding: 20px;
   margin: 10px 0 10px 0;
@@ -99,13 +100,13 @@
   margin: 40px 0 40px 0;
 }
 
-.c-days {
+.main__days {
   margin-top: 0;
   height: 65px;
   padding: 10px;
 }
 
-.c-days > .days {
+.main__days > .days {
   display: flex;
   justify-content: space-around;
 
@@ -131,7 +132,7 @@
   font-weight: 600;
 }
 
-.c-webtoons {
+.main__webtoons {
   padding: 10px 20px 10px 20px;
 }
 
