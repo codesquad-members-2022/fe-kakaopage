@@ -40,7 +40,6 @@
 
 .container {
   background-color: var(--color-white);
-  height: 140px;
   padding: 20px;
   margin: 10px 0 10px 0;
 }
@@ -53,9 +52,9 @@
 }
 
 .theme__name {
-  width: 222px;
+  width: 224px;
   background-color: var(--color-light-grey);
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   font-weight: 600;
   font-size: 1.1rem;
@@ -138,6 +137,7 @@
 
 .wt {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .wt__image {
@@ -164,19 +164,13 @@
   color: var(--color-dark-grey);
 }
 
-.c-webtoons.promotion {
-  height: 200px;
-}
-
-.c-webtoons > .promotion {
+.promotion__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0 10px 0;
 }
 
-.promotion {
-  padding: 10px;
-}
 .promotion > .more {
   color: var(--color-dark-grey);
   font-size: 0.9rem;
