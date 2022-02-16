@@ -1,29 +1,10 @@
-.promotionBanner {
-  margin-top: 10px;
-  background-color: white;
-  padding: 15px;
-}
-
-.promotionBanner_row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.promotionBanner_row > button {
-  /* colmn으로 바꾸기 */
-  width: 1000px;
-  height: 60px;
-  margin: 1px;
-  border-radius: 6px;
-}
-
 .page-main__eventBanner_img {
   padding: 30px;
 }
 
 .page-main__dowTop,
 .dramaTop,
-.page-main__dailyTop,
+.dailyTop,
 .page-main__eventBanner {
   margin-top: 10px;
   background-color: white;
@@ -31,7 +12,7 @@
 
 .page-main__dowTop__header,
 .dramaTop__header,
-.page-main__dailyTop__header,
+.dailyTop__header,
 .page-main__evnetBanner__header {
   display: flex;
   justify-content: space-between;
@@ -57,16 +38,6 @@
   width: 120px;
   height: 150px;
   border-radius: 10px;
-}
-
-.page-main__dowTop__title {
-  display: flex;
-}
-
-.page-main__dailyTop_rank {
-  padding: 20px;
-  display: flex;
-  align-items: center;
 }
 
 .page-main__dowTop_webtoon_info {
@@ -106,12 +77,14 @@
 }
 
 .page-main__dowTop__title,
-.dramaTop__title {
+.dramaTop__title,
+.dailyTop__title {
   margin: 30px;
 }
 
 .page-main__dowTop__title > h3,
-.dramaTop__title > h3 {
+.dramaTop__title > h3,
+.dailyTop__title > h3 {
   font-size: 20px;
   font-weight: 500;
   margin: 0;
@@ -125,7 +98,8 @@
 }
 
 .page-main__dowTop__more,
-.dramaTop__more {
+.dramaTop__more,
+.dailyTop__more {
   font-size: 18px;
   color: #999999;
   margin: 30px;
@@ -159,15 +133,33 @@
   margin-right: -1px;
 }
 
-.mainAdBanner__status__person {
-  margin: 0;
-  width: 12px;
-}
-
 .page-main__dowTop_webtoon_card {
   margin: 15px 0px;
 }
 
 .page-main__dowTop > nav > ul {
   padding: 0px 30px;
+}
+
+.dailyTop__rank {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dailyTop__webtoon_img {
+  width: 80px;
+  height: 110px;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+
+.dailyTop___webtoon_card {
+  display: flex;
+  position: relative;
+}
+
+.dailyTop__webtoon_card__clockBar {
+  position: absolute;
+  width: 25px;
 }
