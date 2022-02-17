@@ -266,4 +266,49 @@ businessInfoEl.addEventListener("click", ()=> {
 
 businessInfoEl DOM에 click 이벤트리스너를 달아 특정 css가 포함되어 있는지 체킹하여 해당 DOM의 setProperty 함수로 첫번째 매개변수는 var 변수 이름으로 선언한 변수 이름, 두번째 매개변수는 변경값이 담긴다. 
 
-👀 이렇게 var 변수를 선언하여 사용하면 위 가상요소 선택자에 스타일링을 줄 수 있을뿐만 아니라 여러곳에서 같은 스타일링을 재사용할 수 있어서 유지보수에 굉장히 좋다고 생각한다.
+👀 이렇게 var 변수를 선언하여 사용하면 위 가상요소 선택자에 스타일링을 줄 수 있을뿐만 아니라 여러곳에서 같은 스타일링을 재사용할 수 있어서 유지보수에 굉장히 좋다고 생각한다.  
+
+---
+
+### Event delegation ?  
+
+이벤트 위임이라고도 불리우는 이 개념은 같은 클래스명을 공유하는 여러개의 엘리먼트에 한 번에 이벤트를 주기 위해서 사용되어진다.  
+
+querySelectorAll을 사용하여 한꺼번에 DOM 들을 찾고 이벤트를 달 때 for문을 사용하는 것만 약간 다르지.. 전체적은 방법은 비슷하다!  
+
+현재 카카오페이지 상단 gnb 메뉴에는 9개가 존재한다. 여기 메뉴마다 querySelectorAll로 돔들을 모두 찾아와 이벤트를 달수야 있다. 하지만 앞으로 메뉴를 나타내는 갯수를 확장해야 한다면 ?  
+
+=> 브라우저가 기억하고 있어야 하는 이벤트 리스너 갯수가 많아져서 메모리를 많이 사용해야 한다는 단점이 존재.
+
+그럼 이런 단점들을 제거하기 위하여 이벤트 위임은 어떻게 사용할까 ?  
+
+👀 상위 엘리먼트 하나에만 이벤트를 줘서 하위 엘리먼트들의 이벤트를 제어하면 된다!  
+
+```html
+<ul class="main__nav-ul">
+    <li class="main__nav_genre"><a class="main__nav_link">홈</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link main__nav_link_active">요일연재</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">웹툰</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">소년</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">드라마</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">로맨스</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">로판</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">액션무협</a></li>
+    <li class="main__nav_genre"><a class="main__nav_link">BL</a></li>
+</ul>
+```
+
+카카오페이지 클론 코딩을 진행하며 마크업한 gnb 메뉴 영역이다. li 모든 태그에 이벤트 리스너를 다는게 아닌 ul 태그 하나에만 달면 된다!  
+
+```javascript
+const categoryEl = document.querySelector(".main__nav-ul");
+    categoryEl.addEventListener("click", (e) => {
+        if(e.target.tagName === 'A') {
+            this.changeColor(categoryEl.children);
+            e.target.classList.add('main__nav_link_active');
+        }
+    });
+```
+
+li 태그들에 이벤트를 달기 위하여 li를 관리하는 ul(부모태그)를 main__nav-ul 클래스이름으로 가져왔다.  
+해당 ul태그에 이벤트 리스너를 달게되면 아래 li > a에 모든 이벤트가 걸리게 된다!
