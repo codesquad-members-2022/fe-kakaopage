@@ -1,0 +1,31 @@
+Arguments: 
+  /Users/inust/.nvm/versions/node/v16.13.1/bin/node /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js --init
+
+PATH: 
+  /Applications/Postgres.app/Contents/Versions/latest/bin:/Users/inust/.yarn-global/bin:/Users/inust/.nvm/versions/node/v16.13.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/inust/projects/masters/fe-kakaopage/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

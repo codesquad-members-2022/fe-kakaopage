@@ -1,9 +1,15 @@
-main.mainContent{
+@import "/HomeHeader/HomeHeader.css";
+@import "/AdBanner/AdBanner.css";
+@import "/GrayCube/GrayCube.css";
+@import "/dailyHeader/dailyHeader.css";
+.mainContent{
     margin-top: 167px;
 
 }
 
-nav.mainNav{
+
+
+.mainNav{
     position:fixed;
     top: 80px;
     z-index: 199;
@@ -31,7 +37,7 @@ ul.menuNav>li.menu{
     border-bottom-color: transparent;
     border-bottom-width: 3px;
     border-bottom-style: solid;
-
+    transition: all 0.3s linear;
 }
 ul.menuNav>li.selected{
     border-bottom-color: #ffd200;
@@ -61,11 +67,35 @@ main>section{
     width: 720px;
     margin: 0px auto;
 }
+.TopBanner{
+    background-color: #FFFFFF;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+}
+.TopBanner>span{
+    color:rgb(187, 187, 187);
+    text-align:center;
+    font-size:20px;
+    padding:22px 0;
+    display: flex;
+    flex:1 1 auto;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.1s linear;
+    cursor:pointer;
+}
+.TopBanner>.selected{
+    color:rgb(51, 51, 51);
+}
+
+
 div.BannerBox{
     height:480px;
     position:relative;
     width:100%;
-
+    margin-top:11px;
 }
 div.BannerBox>.nextBtn{
     position:absolute;
@@ -137,48 +167,6 @@ div.catchphrase{
     justify-content: center;
     font-size:18px;
     font-weight:300;
-}
-
-div.Cube{
-    padding:20px;
-    border-bottom: 1px solid #e6e6e6;
-    background-color: #ffffff;
-    margin-top: 11px;
-}
-div.grayBox{
-    border-radius:8px;
-    flex-wrap:wrap;
-    display:flex;
-    align-items: center;
-    background-color: #f3f3f3;
-    flex:1 1 auto;
-
-}
-div.grayBox>a{
-    width:33.33333333333%;
-    height:60px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #FFFFFF;
-    border-right: 2px solid #FFFFFF;
-    text-decoration: none;
-    color: #3a3a3a;
-    font-size:18px;
-}
-div.grayBox>a>div{
-    margin-right:10px;
-    margin-bottom:1px;
-}
-div.yellow{
-    display:flex;
-    align-items: center;
-    height:24px;
-    padding: 0 8px 2px;
-    margin-left:10px;
-    margin-right:0;
-    border-radius:13px;
-    background-color:#ffd200;
 }
 
 

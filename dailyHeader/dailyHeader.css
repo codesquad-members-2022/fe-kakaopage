@@ -1,0 +1,36 @@
+
+.dailyHeader{
+    margin-top:11px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    background-color: #FFFFFF;
+}
+.dailyHeader>li{
+    font-size:20px;
+    text-align: center;
+    color:rgb(187, 187, 187);
+    padding:  21px 0;
+    width:100%;
+    cursor:pointer;
+}
+.dailyCategory{
+    padding: 0 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(241, 241, 241);;
+}
+
+.dailyCategory>ul{
+    display: flex;
+    align-items: center;
+}
+.dailyCategory>ul>li{
+    padding:20px 10px;
+    cursor:pointer;
+    color: #333333;
+    font-size: 20px;
+    text-align: center;
+}

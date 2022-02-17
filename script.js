@@ -1,33 +1,76 @@
+import {dailyHeader} from "./dailyHeader/dailyHeader.js";
+import {HomeHeader} from "./HomeHeader/HomeHeader.js";
+import {comicItem} from "./comicsGrid/comicsGrid.js";
+import {infographic} from "./infographic.js";
+import {images} from "./images.js";
+import {AdBanner} from "./AdBanner/AdBanner.js";
+import {GrayCube} from "./GrayCube/GrayCube.js";
 
 const main = document.querySelector('main.mainContent');
 const nav = main.firstElementChild;
 const section = nav.nextElementSibling;
-const el = (tag, attr = {}) => Object.entries(attr).reduce((el, v) => {
-    typeof el[v[0]] == 'function' ? el[v[0]](v[1]) : (el[v[0]] = v[1])
-    return el;
-}, document.createElement(tag));
-const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
-const baner = [
-    "https://dn-img-page.kakao.com/download/resource?kid=LzhAs/hzmU2AvYlu/EOPE8ht7JN5zxGT8v1v4ak",
-    "https://dn-img-page.kakao.com/download/resource?kid=t6r3x/hzmU1Iolov/kG6uNECVt13YMlZP3QdVDK",
-    "https://dn-img-page.kakao.com/download/resource?kid=LzhAs/hzmU2AvYlu/EOPE8ht7JN5zxGT8v1v4ak"
-]
-const thumbnails = ["https://dn-img-page.kakao.com/download/resource?kid=liDhp/hzp2mPH4pp/avQh3sIi2DG85rCRUegvG0&filename=th2"];
-const infoGraphic = [
-    ' <img src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2"/>',
-    ' <img src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"/>',
-    '<img src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea" alt="Seperator"/>',
-    '<img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"/>'
-]
-const ad = ["https://dn-img-page.kakao.com/download/resource?kid=byYqGK/hzp2i0TB9G/5Mpksv1Ooovlk7sy696kMK"]
-const boxes = section.querySelectorAll('.listContentBox');
-nav.addEventListener('click', (e) => {
-    if (!e.target.closest('li').classList.contains('toon')) {
-        boxes.forEach(box=>box.style.display = 'none');
-        section.insertAdjacentHTML('afterbegin', '<span>This is Dummy Page!</span>');
-    } else {
-        boxes.forEach(box=>box.style.display='');
 
+const renderGrid = ()=>{
+    const gridBox =document.querySelector('.comicsGrid');
+    for(let i=0; i<20; i++){
+        gridBox.insertAdjacentHTML('afterbegin', comicItem(images, infographic));
+    }
+}
+
+let template=''
+nav.addEventListener('click', (e) => {
+    const li =e.target.closest('li');
+    nav.querySelector('.selected').classList.remove('selected')
+    li.classList.add('selected');
+    if (!li.classList.contains('toon')) {
+        if(template)return;
+       template = section.innerHTML;
+       section.innerHTML= "<span>This is Dummy Page</span>";
+    } else {
+        if(!template)return;
+        section.innerHTML = template;
+        template = "";
     }
 })
+const topBanner = section.querySelector('.TopBanner');
+
+topBanner.addEventListener('click', (e)=>{
+    const span = e.target.closest('span');
+    topBanner.querySelector('.selected').classList.remove('selected');
+    span.classList.add('selected');
+    if(span.classList.contains('daily')){
+        const dailyTab = topBanner.querySelector('.daily');
+        const grid = document.querySelector('.comicsGrid');
+        let prev = grid.previousElementSibling;
+        while(prev){ //grid 이전의 노드를 삭제
+            grid.parentNode.removeChild(prev);
+            prev = grid.previousElementSibling;
+        }
+        let parentPrev = grid.parentElement.previousElementSibling
+        while(parentPrev.className!=='catchphrase'){
+            parentPrev.parentNode.removeChild(parentPrev);
+            parentPrev = grid.parentElement.previousElementSibling;
+        }
+        grid.parentElement.insertAdjacentHTML('beforebegin',dailyHeader());
+        grid.innerHTML= '';
+        renderGrid();
+    }
+
+})
+topBanner.querySelector('.home').addEventListener('click', (e)=>{
+    const comicsBox = document.querySelector('.freeComics');
+    const grid =comicsBox.querySelector('.comicsGrid')
+    let prev = comicsBox.previousElementSibling;
+    while(prev.className !== 'catchphrase') {
+        prev.parentNode.removeChild(prev);
+        prev= comicsBox.previousElementSibling;
+    }
+    comicsBox.insertAdjacentHTML('afterbegin', HomeHeader());
+    comicsBox.insertAdjacentHTML('beforebegin', GrayCube());
+    comicsBox.insertAdjacentHTML('beforebegin', AdBanner());
+    grid.innerHTML ='';
+    renderGrid();
+})
+renderGrid();
+
 
