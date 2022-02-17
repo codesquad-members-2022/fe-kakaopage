@@ -1,3 +1,5 @@
+import setPreview from './setPreview.js';
+
 const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
@@ -18,7 +20,9 @@ pageMainCategory.forEach((li, idx, list) => {
     if (curIdx === idx) return;
     const prevTarget = list[curIdx];
     const curTarget = event.target;
+    const category = li.textContent;
     setCurIdx(idx);
     moveBlackColor(prevTarget, curTarget);
+    setPreview(category);
   });
 });
