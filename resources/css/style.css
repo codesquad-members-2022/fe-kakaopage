@@ -279,6 +279,23 @@ main {
     color: rgba(34,34,34, 0.8);;
 }
 
+.banner__order {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__order>span {
+    width: 100%;
+    text-align: right;
+    color: var(--color-white);
+    font-size: 21px;
+    opacity: 0.6;
+    margin-top: 400px;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
 footer {
     display: flex;
     width: 720px;
