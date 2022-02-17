@@ -1,6 +1,7 @@
 import { createHeader } from './components/header.js';
 import { createFooter } from './components/footer.js';
 import { createGnb } from './components/gnb.js';
+import { createPromotionBanner } from './components/promotionBanner.js';
 
 const renderSet = {
   renderHeader() {
@@ -16,6 +17,12 @@ const renderSet = {
   renderGnb() {
     const gnbEl = document.querySelector('.gnb');
     gnbEl.insertAdjacentHTML('afterbegin', createGnb());
+  },
+
+  renderPromotionBanner(bannerImgUrls) {
+    const mainEl = document.querySelector('.main');
+    const promotionBannerEl = createPromotionBanner(bannerImgUrls);
+    mainEl.insertAdjacentHTML('afterbegin', promotionBannerEl);
   },
 };
 

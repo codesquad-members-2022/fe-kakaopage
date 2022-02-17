@@ -1,3 +1,5 @@
+import { renderSet } from './view.js';
+
 const addHandlerOnGnb = () => {
   const gnbEl = document.querySelector('.gnb');
   gnbEl.addEventListener('click', HandleGnb);
@@ -25,6 +27,12 @@ const loadTabContents = (tabName) => {
     main.innerHTML = `${tabName} 탭은 준비 중입니다. 웹툰을 이용해주세요.`;
     return;
   }
+
+  loadWebToonTab();
+};
+
+const loadWebToonTab = () => {
+  renderSet.renderPromotionBanner(['promo_toon_1.png', 'promo_toon_2.png']);
 };
 
 export { addHandlerOnGnb };
