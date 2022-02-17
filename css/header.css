@@ -27,9 +27,17 @@ common
 /*
 header
  */
-.header {
-    background-color: var(--main-white);
+.headerFix {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 130px;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
 }
+
 
 .head {
     justify-content: space-between;
