@@ -15,6 +15,7 @@ const webtoonMenu = {
         "recommend-best",
     ],
     요일연재: ["weekday-serial"],
+    // FIXME:무의미한 임시 값, 수정필요
     웹툰: 3,
     소년: 4,
     드라마: 5,
