@@ -2,6 +2,7 @@ import { DATA_URL, $ } from './util.js';
 
 const $days = $('.days');
 const $webtoons = $('.webtoons');
+const $webtoonsPromotion = $('.webtoons--promotion');
 
 async function loadWebtoons() {
   // Better way?
@@ -15,8 +16,8 @@ async function loadWebtoons() {
   //   .then(json => json.webtoon);
 }
 
-function displayWebtoons(wt) {
-  $webtoons.innerHTML = wt.map(w => createWebtoonList(w)).join('');
+function displayWebtoon(data, node) {
+  node.innerHTML = data.map(wt => createWebtoonList(wt)).join('');
 }
 
 function createWebtoonList(wt) {
@@ -43,8 +44,11 @@ function filterWebtoons(wt) {
 function filterWebtoonsByDay(e, wt) {
   const day = e.target.id;
   day === 'whole'
-    ? displayWebtoons(wt)
-    : displayWebtoons(wt.filter(v => v.day === day));
+    ? displayWebtoon(wt, $webtoons)
+    : displayWebtoon(
+        wt.filter(v => v.day === day),
+        $webtoons
+      );
 }
 
 function activateDay({ target }) {
@@ -55,7 +59,14 @@ function activateDay({ target }) {
 
 loadWebtoons()
   .then(wt => {
-    displayWebtoons(wt.filter(v => v.day === 'mon'));
+    displayWebtoon(
+      wt.filter(v => v.day === 'mon'),
+      $webtoons
+    );
+    displayWebtoon(
+      wt.filter(v => v.promotion),
+      $webtoonsPromotion
+    );
     filterWebtoons(wt);
   })
   .catch(console.log);

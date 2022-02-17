@@ -146,6 +146,7 @@
 .wt__image {
   width: 142px;
   height: 96px;
+  border-radius: 10px;
 }
 
 .wt__discription {
