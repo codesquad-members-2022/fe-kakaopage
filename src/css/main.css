@@ -23,6 +23,7 @@
 }
 
 .nav--main {
+  cursor: pointer;
   color: var(--color-grey);
   background-color: var(--color-white);
   height: 64px;
@@ -33,13 +34,9 @@
   font-size: 1.1rem;
 }
 
-.selected-nav-main {
+.nav__category.selected {
   color: var(--color-black);
   font-weight: 600;
-}
-
-.selected-nav-header {
-  border-bottom: 3px solid var(--color-yellow);
 }
 
 .mainbox {
@@ -125,7 +122,7 @@
   padding: 12px 5px 12px 5px;
 }
 
-.selected-day {
+.day__name.selected {
   width: 45px;
   height: 45px;
   color: var(--color-black);

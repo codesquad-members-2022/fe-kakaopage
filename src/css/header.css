@@ -99,3 +99,7 @@
 .nav__name {
   cursor: pointer;
 }
+
+.nav__subject.selected {
+  border-bottom: 3px solid var(--color-yellow);
+}
