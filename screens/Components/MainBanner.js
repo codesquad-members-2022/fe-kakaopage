@@ -4,7 +4,7 @@ const MainBanner = () => {
       <img src="./images/mainBanner/sambong.jpeg" />
       <div class="imgBox__info">
         <div class="infoTitle">
-          <span></span>
+          <span>삼봉이발소</span>
         </div>
         <div class="infoBody">
           <span class="info-event">UP</span>
