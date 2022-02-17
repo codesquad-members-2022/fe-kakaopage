@@ -268,12 +268,18 @@
 .card__info {
   font-size: 5px;
 }
+.card__info .blue {
+  background-color: #2e86de;
+}
+.card__info .red {
+  background-color: #eb3b5a;
+}
 .card__info .info-status {
   border-radius: 2px;
   padding: 1px 2px;
   color: #f1f1f1;
-  background-color: #2e86de;
 }
+
 .card__info .info-age {
   border-radius: 2px;
   padding: 1px 2px;

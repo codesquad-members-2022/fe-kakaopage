@@ -7,7 +7,6 @@
 import Card from "./Card.js";
 
 const DaysList = (day, webtoons, count) => {
-  console.log(webtoons);
   const cardList = webtoons
     .filter((webtoon) => webtoon.days.includes(day))
     .slice(0, count ? count : cardList.length);
