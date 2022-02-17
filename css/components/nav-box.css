@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 720px;
+  margin: 0;
 }
 .nav-box__list {
   display: flex;
@@ -11,6 +12,7 @@
   width: 720px;
   height: 70px;
   padding: 0 20px;
+  margin: 0;
 }
 .nav-box__text {
   display: block;
