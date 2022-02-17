@@ -1,0 +1,79 @@
+:root{
+    /* color */
+    font-family: 'Noto Sans KR', sans-serif;
+    --text-color: #333333;
+    --main-white: #FFFFFF;
+    --background-color: #EEEEEE;
+    --accent-color: #FCBC19;
+    /*size*/
+    --width: 30%;
+
+    /*font-size*/
+    --largefont: 22px;
+}
+/*0. 공통 적용 사항 */
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    top:0px; 
+    /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
+    background-color: var(--main-white);
+    position: sticky;
+    width: 100vw;
+    height: 10rem;
+}
+.head, .navbar__menu{
+    display: flex;
+    height: 5rem;
+    background-color: var(--main-white);
+    justify-content: space-around;
+}
+
+.head, .navbar__menu, section{
+    width: 50%;
+    background-color: var(--main-white);
+    margin: 0 auto;
+}
+
+section{
+    margin-top: 1rem;
+}
+a{
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+li{
+    background-color: pink;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+/* 콘텐츠 bar 양식 */
+.genrebar,.days{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+}
+/* 제목 양식 */
+.wating__title,.daily__title{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+/* 콘텐츠 높이 */
+.wating,.daily{
+    height: 30rem;
+}
