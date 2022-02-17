@@ -11,6 +11,10 @@
   margin-top: 10px;
   position: relative;
 }
+.main-content__content__nav__circle {
+  position: absolute;
+  left: 242px;
+}
 .main-content__content__menu {
   display: flex;
   justify-content: space-between;
