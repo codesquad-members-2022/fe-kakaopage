@@ -3,9 +3,9 @@ import { getJson } from "../../src/utils.js";
 import { renderGenreContents } from "../../src/core.js";
 
 const WebtoonCategory = async (initGenre) => {
-  const webtoons = await getJson("webtoons");
+  const { results: webtoonResults } = await getJson("webtoon");
   const webtoonGenre = genres.webtoon;
-  const initScreenGenre = webtoonGenre[initGenre].screen();
+  const initScreenGenre = webtoonGenre[initGenre].screen(webtoonResults);
   renderGenreContents(initScreenGenre);
   const genreObjs = Object.keys(webtoonGenre).map((genre) => ({
     genre,

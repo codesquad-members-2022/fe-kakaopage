@@ -7,9 +7,9 @@ import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 
-const HomeGenre = () => {
+const HomeGenre = (webtoons) => {
   return `
-    ${MainBanner()}
+    ${MainBanner(webtoons.filter((wt) => wt.isMain))}
     ${NavDetail()}
     ${SubBanner()}
     ${DaysTop("화")}

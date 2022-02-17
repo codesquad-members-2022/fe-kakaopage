@@ -5,8 +5,8 @@ const SubBanner = () => {
     </div>
     <img
       class="subImg"
-      src="./images/subBanner/subOne.png"
-      alt="8클래스 마법사의 회귀"
+      src="https://dn-img-page.kakao.com/download/resource?kid=cOMNfP/hzp2fXqtDJ/Tswxss4NFzkbDtL6gdvBSK"
+      alt="미슐랭스타"
     />
     <div class="arrow">
       <span>></span>
