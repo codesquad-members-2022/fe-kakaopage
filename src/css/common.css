@@ -22,3 +22,8 @@
 .section-total, .more {
   color: var(--second-text-color);
 }
+
+.round-border {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
