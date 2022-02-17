@@ -9,6 +9,7 @@
 .mainbox.main__slider {
   height: 478px;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .main-contents,
@@ -39,10 +40,6 @@
 
 .selected-nav-header {
   border-bottom: 3px solid var(--color-yellow);
-}
-
-.nav__subject {
-  padding: 10px 20px 10px 20px;
 }
 
 .mainbox {

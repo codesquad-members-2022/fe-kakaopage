@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./src/css/index.css" />
-    <!-- <script src="./src/js/index.js" defer></script>-->
+    <script type="module" src="./src/js/index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -82,68 +82,19 @@
 
         <div class="mainbox main__days">
           <ul class="days">
-            <li class="day__name selected-day">월</li>
-            <li class="day__name">화</li>
-            <li class="day__name">수</li>
-            <li class="day__name">목</li>
-            <li class="day__name">금</li>
-            <li class="day__name">토</li>
-            <li class="day__name">일</li>
-            <li class="day__name whole">전체</li>
+            <li class="day__name selected-day" id="mon">월</li>
+            <li class="day__name" id="tue">화</li>
+            <li class="day__name" id="wed">수</li>
+            <li class="day__name" id="thu">목</li>
+            <li class="day__name" id="fri">금</li>
+            <li class="day__name" id="sat">토</li>
+            <li class="day__name" id="sun">일</li>
+            <li class="day__name whole" id="whole">전체</li>
           </ul>
         </div>
 
         <div class="mainbox main__webtoons">
-          <ul class="webtoons">
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="webtoons"></ul>
         </div>
 
         <div class="mainbox main__webtoons promotion">
@@ -152,42 +103,6 @@
             <p class="more">더보기 ></p>
           </div>
           <ul class="webtoons">
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
-            <li class="wt">
-              <img
-                class="wt__image"
-                src="./img/webtoon3.png"
-                alt="webtoon-image"
-              />
-              <div class="wt__discription">
-                <p class="title">학사재생</p>
-                <p class="summary">금수저를 물고 태어나 버렸다!</p>
-                <p class="info">167만명|소유현,윰짝짝</p>
-              </div>
-            </li>
             <li class="wt">
               <img
                 class="wt__image"
@@ -238,14 +153,6 @@
           </div>
         </div>
       </div>
-
-      <!--
-      <div class="main-contents" id="h__home">HOME</div>
-      <div class="main-contents" id="h__novel">NOVEL</div>
-      <div class="main-contents" id="h__movie">MOVIE</div>
-      <div class="main-contents" id="h__broad">BROADCAST</div>
-      <div class="main-contents" id="h__book">BOOKS</div>
-      -->
     </main>
     <footer class="footer">
       <button type="button" class="app-button">
