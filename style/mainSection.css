@@ -20,7 +20,7 @@
   padding: 20px;
 }
 
-.main__nav__sortAll {
+.main__nav--toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,14 +30,16 @@
 }
 
 /*네이밍 여기 다시해야함*/
-.sort {
+.main--toggle--left {
   display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
   justify-content: space-between;
   padding-left: 20px;
-  width: 130px;
 }
 /*네이밍 여기 다시해야함*/
-.all {
+.main--toggle--right {
   padding-right: 20px;
 }
 

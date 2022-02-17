@@ -1,6 +1,7 @@
 document.querySelector(".prev").addEventListener("click", onclickPrev);
 
 let pageCount = 0;
+let contentsChecker = "";
 
 function onclickPrev(target) {
   const maxPage =
@@ -32,11 +33,57 @@ function onclicknext() {
 
 document
   .querySelector(".recommand__nav--ul")
-  .children[0].addEventListener("click", onclickRecNavHome);
+  .addEventListener("click", onclickRecNav);
 
 const $mainComponet = document.querySelector(".main");
 
-function onclickRecNavHome() {
+function onclickRecNav(event) {
+  //추후 target의 textContent에 따라 내용이 달라지게 구성할 예정
+  if (event.target.textContent !== contentsChecker) {
+    chageMainSecHome();
+  }
+}
+
+function chageMainSecHome() {
+  const leftNavToggleFont = [
+    "기다리면 무료웹툰",
+    "인기웹툰",
+    "기다리면 무료 소설",
+    "인기 웹소설",
+  ];
   const $navBar = document.querySelector(".main__nav__dow");
   $navBar.style.display = "none";
+
+  // [...$mainNavSort].forEach((toggle, idx) => {
+  //   if (idx > 0) {
+  //     toggle.classList.add("ev__main--toggle--left");
+  //   }
+  // });
+  const $mainCartoonZone = document.querySelector(".main__cartoonZone");
+  switchMainCartoonZone($mainCartoonZone);
+
+  for (let i = 0; i < 3; i++) {
+    const $cloneMain = $mainComponet.cloneNode(true);
+    document.querySelector("body").appendChild($cloneMain);
+  }
+
+  switchToggleText(leftNavToggleFont);
+  contentsChecker = "홈";
 }
+
+function switchToggleText(textArray) {
+  const $toggleleftAll = document.querySelectorAll(".main--toggle--left");
+
+  $toggleleftAll.forEach((toggle, idx) => {
+    let toggleArr = toggle.children;
+    [...toggleArr].forEach((el, el_idx) => {
+      console.log(el);
+      if (el_idx === 0) {
+        el.textContent = textArray[idx];
+      } else {
+        el.classList.add("ev__main--toggle--sort");
+      }
+    });
+  });
+}
+function switchMainCartoonZone() {}
