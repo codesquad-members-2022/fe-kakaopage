@@ -1,0 +1,30 @@
+.image-poster__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-poster {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-poster__img {
+    width: 155px;
+    height: 220px;
+    background-image: url("/images/sample_content_img.png");
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.image-poster__title {
+    margin-bottom: 15px;
+    font-size: var(--font-16);
+    color: var(--color-gray);
+}
+
+.image-poster__subscription {
+    font-size: var(--font-14);
+    color: var(--color-pale-gray);
+}
