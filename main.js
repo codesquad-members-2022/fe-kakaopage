@@ -19,10 +19,10 @@ window.onload = function () {
     )
   }
 
-  function setIcon(root, src, alt, newFlag = false) {
+  function setIcon(root, src, alt) {
     const $icons = $webtoon_copy.querySelector(root)
 
-    if (newFlag) addNewIcon($icons, src, alt)
+    addNewIcon($icons, src, alt)
   }
 
   function setUserCnt(root, text) {
@@ -31,16 +31,19 @@ window.onload = function () {
     $userCnt.textContent = text
   }
 
-  // function setDay(root) {
-  //   const $
-  // }
+  function setDay(root, text) {
+    const $day = $webtoon_copy.querySelector(root)
 
-  const $webtoons = document.querySelector('.serial__webtoons')
-  const $webtoon_copy = $webtoons.cloneNode(true)
-  $webtoons.appendChild($webtoon_copy)
+    $day.textContent = text
+  }
 
-  // $webtoons.firstElementChild.classList.add('display__none')
-  // replace를 써서 add, remove를 하나 줄이자
+  const $serial = document.querySelector('.serial')
+  const $webtoon = document.querySelector('.serial__webtoons')
+  // 월요일 웹툰 목록 HTML구조를 복사한것을 화요일 웹툰 목록으로 사용
+  const $webtoon_copy = $webtoon.cloneNode(true)
+  $webtoon_copy.classList.replace('display__flex', 'display__none')
+  $webtoon_copy.setAttribute('data-day', 'tue')
+  $serial.appendChild($webtoon_copy)
 
   setThumbnail(
     '.serial__thumbnail--img',
@@ -48,14 +51,9 @@ window.onload = function () {
     '병약한? 남편의 계약 아내'
   )
   setTitle('.serial-webtoon__title', '병약한? 남편의 계약 아내')
-  setIcon(
-    '.serial-webtoon__user--icon',
-    './images/icon_new.svg',
-    '새작품',
-    true
-  )
+  setIcon('.serial-webtoon__user--icon', './images/icon_new.svg', '새작품')
   setUserCnt('.serial-webtoon__user--cnt', '26.6만명')
-
+  setDay('.serial__more--desc', '화요 연재 더보기')
   const dayTab = document.querySelector('.serial__list')
   const dayTabList = dayTab.querySelectorAll('.serial__item')
 
@@ -75,7 +73,25 @@ window.onload = function () {
     }
   }
 
+  const $webtoons = document.querySelectorAll('.serial__webtoons')
+
+  function toggleActiveWebtoonTab() {
+    const tabItem = this
+    // 1. 웹툰 목록을 전부 display none 시킴
+    $webtoons.forEach((e) => {
+      e.classList.add('display__none')
+    })
+
+    $webtoons.forEach((e) => {
+      // 2. 클릭한 요소에 data-day를 가져옴
+      // 3. 가져온 값에 맞는 웹툰 목록을 display-flex
+      if (tabItem.getAttribute('data-day') === e.getAttribute('data-day'))
+        e.classList.replace('display__none', 'display__flex')
+    })
+  }
+
   dayTabList.forEach((e) => {
     e.addEventListener('click', toggleActiveTab)
+    e.addEventListener('click', toggleActiveWebtoonTab)
   })
 }

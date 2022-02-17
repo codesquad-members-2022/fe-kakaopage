@@ -134,7 +134,7 @@ table {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 99999999999;
   padding: 30px 0 18px;
   background-color: #fff; }
   .header .top-nav {
@@ -512,7 +512,6 @@ table {
     border-bottom: 2px solid #ffd200; }
 
 .serial__webtoons {
-  display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 20px; }
@@ -630,6 +629,9 @@ table {
 
 .display__block {
   display: block; }
+
+.display__flex {
+  display: flex; }
 
 .display__none {
   display: none; }
