@@ -64,6 +64,10 @@ main {
     line-height: 66px;
 }
 
+.sub-menu a {
+    display: block;
+}
+
 .sub-menu li {
     flex: auto;
     text-align: center;
