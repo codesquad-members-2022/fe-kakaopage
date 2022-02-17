@@ -137,11 +137,6 @@ main {
     margin: 165px auto 0;
 }
 
-.section {
-    background-color: var(--color-white);
-    margin-top: 11px;
-}
-
 .main-nav {
     width: 720px;
     margin: 0 auto;
@@ -342,6 +337,50 @@ main {
 
 .sub-banner .banner__paging {
     top : 35%;
+}
+
+.comic-list__item {
+    flex-direction: column;
+    width: 120px;
+}
+
+.comic-thumb {
+    width: 120px;
+    height: 150px;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.comic-thumb__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comic-thumb__bottom {
+    width: 104px;
+    height: 35px;
+    justify-content: space-between;
+    padding: 0 8px;
+    background-color: var(--color-black-thumb);
+    color: var(--color-yellow);
+    font-size: 16px;
+}
+
+.comic-thumb__rating {
+    text-align: center;
+}
+
+.comic-thumb__star {
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.comic-thumb__wait {
+    width: 16px;
+    height: 16px;
 }
 
 footer {
