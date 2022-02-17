@@ -19,13 +19,16 @@ common
     flex-flow: row;
 }
 
+.margin-center {
+    margin: 0 auto;
+    width: 50%
+}
+
 /*
 header
  */
-header {
+.header {
     background-color: var(--main-white);
-    margin: 0 auto;
-    width: 50%
 }
 
 .head {

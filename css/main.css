@@ -29,8 +29,6 @@ main {
 }
 
 .contents {
-    margin: 0 auto;
-    width: 50%;
     position: relative;
 }
 
@@ -125,4 +123,31 @@ main {
     text-align: center;
     line-height: 40px;
     font-size: 22px;
+}
+
+.daily {
+
+}
+
+.daily__nav {
+    width: 100%;
+    justify-content: space-around;
+    background-color: var(--main-white);
+    height: 60px;
+
+}
+
+.daily__button {
+    border: 0;
+    background-color: inherit;
+    font-size: 20px;
+    color: var(--main-lightgray)
+}
+
+.daily__button-on {
+    color: var(--main-black);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--main-gold);
 }
