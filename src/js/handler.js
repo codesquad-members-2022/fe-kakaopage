@@ -22,12 +22,13 @@ const toggleTabStyle = (eventTarget) => {
 };
 
 const loadTabContents = (tabName) => {
-  if (!(tabName === 'webtoon')) {
+  document.title = `${tabName} | 카카오페이지`;
+
+  if (!(tabName === '웹툰')) {
     const main = document.querySelector('.main');
     main.innerHTML = `${tabName} 탭은 준비 중입니다. 웹툰을 이용해주세요.`;
     return;
   }
-
   loadWebToonTab();
 };
 
