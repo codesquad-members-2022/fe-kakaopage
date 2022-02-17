@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>홈 - 웹툰 | 카카오페이지</title>
-    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/global.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
     <header class="main-header">
@@ -28,9 +29,9 @@
           </svg>
         </form>
         <span class="main-header-item"><a id="stage" href="#">STAGE</a></span>
-        <span class="main-header-item main-header-text"
-          ><a class="main-header-text" href="#">캐시충전</a> |
-          <a class="main-header-text" href="#">로그인</a></span
+        <span class="main-header-item text-color--gray"
+          ><a class="text-color--gray" href="#">캐시충전</a> |
+          <a class="text-color--gray" href="#">로그인</a></span
         >
       </div>
       <nav class="main-header-nav center">
@@ -61,7 +62,10 @@
       </nav>
 
       <div class="center container banner-container">
-        <img class="banner-img" src="./src/banner-img.png" />
+        <img
+          class="banner-img"
+          src="https://dn-img-page.kakao.com/download/resource?kid=boPfot/hzacdN1xHr/Erv1JHofHUV7eK46ofjynk"
+        />
         <svg
           class="arrow-icon arrow-left arrow--white"
           xmlns="http://www.w3.org/2000/svg"
@@ -92,21 +96,17 @@
             d="M9 5l7 7-7 7"
           />
         </svg>
-        <p class="banner-bottom-text">무림과 현세를 넘나들다!</p>
+        <p class="banner-bottom-text">시각이 다르면 무공도 다르다</p>
       </div>
 
       <div class="center container category-buttons-container">
-        <div class="round-container grid-2row">
-          <button class="category-button button-style--none">오늘 UP</button>
-          <button class="category-button button-style--none">오늘 신작</button>
-          <button class="category-button button-style--none">오리지널</button>
-          <button class="category-button button-style--none">
-            완결까지 정주행
-          </button>
-          <button class="category-button button-style--none">
-            독립운동가 웹툰
-          </button>
-          <button class="category-button button-style--none">오늘 랭킹</button>
+        <div class="round-container grid-3col">
+          <button class="category-button">오늘 UP</button>
+          <button class="category-button">오늘 신작</button>
+          <button class="category-button">오리지널</button>
+          <button class="category-button">완결까지 정주행</button>
+          <button class="category-button">독립운동가 웹툰</button>
+          <button class="category-button">오늘 랭킹</button>
         </div>
       </div>
 
@@ -127,7 +127,9 @@
             d="M15 19l-7-7 7-7"
           />
         </svg>
-        <img src="./src/promotion.png" />
+        <img
+          src="https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK"
+        />
         <svg
           class="arrow-icon arrow--gray"
           xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +151,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">요일 연재 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +186,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">기대신작 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +229,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">로맨스 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +253,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">로판 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +277,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">드라마 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +301,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">BL/GL TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -323,7 +325,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">소년 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +349,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">액션무협 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -371,7 +373,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">일간 랭킹 TOP</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +397,7 @@
       <div class="center container contents-container">
         <header class="header-container">
           <h2 class="mr--auto">추천 이벤트</h2>
-          <span class="text-contents-more">더보기</span>
+          <span class="text-color--gray">더보기</span>
           <svg
             class="arrow-with-text arrow--light-gray"
             xmlns="http://www.w3.org/2000/svg"
@@ -419,7 +421,7 @@
       </div>
 
       <div class="center">
-        <button class="app-button button-style--none">
+        <button class="app-button">
           <b>카카오페이지</b>
           &nbsp;앱으로 보기
           <svg

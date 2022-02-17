@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ecef;
+}
+
+/*========== 일반 ==========*/
+.center {
+  width: 700px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-item-sort {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.mr--auto {
+  margin-right: auto;
+}
+
+.container {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+}
+
+.font-color--black {
+  color: #000;
+}
+
+.contents-container .header-container {
+  margin-bottom: 25px;
+}
+
+.text-color--gray {
+  color: #868e96;
+}
+
+.round-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contents-container {
+  padding: 20px 15px;
+}
+
+.contents-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.arrow-with-text {
+  width: 18px;
+  height: 18px;
+}
+
+/*========== arrow ==========*/
+
+.arrow-icon {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 45%;
+  left: 3%;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 45%;
+  right: 3%;
+}
+
+.arrow--white {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow--gray {
+  color: #adb5bd;
+  border-color: #dee2e6;
+}
+
+.arrow--black {
+  color: #000;
+}
+
+.arrow--light-gray {
+  color: #dee2e6;
+}
