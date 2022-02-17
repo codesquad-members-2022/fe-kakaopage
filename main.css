@@ -263,6 +263,13 @@ main {
   gap: 12px;
 }
 
+/*========== 추천 이벤트 ==========*/
+
+.event-img {
+  object-fit: cover;
+  width: 100%;
+}
+
 /*========== footer ==========*/
 .footer-sort {
   display: flex;
