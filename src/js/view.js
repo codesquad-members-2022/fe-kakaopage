@@ -23,7 +23,7 @@ const renderSet = {
   renderPromotionBanner(bannerImgUrls) {
     const mainEl = document.querySelector('.main');
     const promotionBannerEl = createPromotionBanner(bannerImgUrls);
-    mainEl.insertAdjacentHTML('afterbegin', promotionBannerEl);
+    mainEl.insertAdjacentHTML('beforeend', promotionBannerEl);
   },
 
   renderGridMenu(menuItemLabels) {
