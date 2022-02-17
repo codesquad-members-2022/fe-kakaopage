@@ -104,7 +104,7 @@ li{
 .banner__button{
     padding: 0 1rem;
     width: 100%;
-    margin-top: 16rem;
+    margin-top: 30%;
     z-index: 3;
     display: flex;
     position: absolute;
@@ -153,28 +153,20 @@ li{
 } 
 
 /*5. 카테고리 */
+
 .category__ele{
     height: 7rem;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     margin: 1rem 1rem;
 }
 
-.category__ele li{
+ .category__ele li{
     margin: 1rem;
-    padding: 1.7rem 3rem;
+    padding-top: 1.7rem;
     background-color: green;
     text-align: center;
 }
-
-.category__ele a{
-    /* width: 2rem; */
-    margin: auto;
-    background-color: grey;
-    font-size: var(--largefont);
-}
-
 
 /*6. 기다리면 무료 */
 section .wating{
