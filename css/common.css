@@ -1,0 +1,9 @@
+/* // 공통으로 쓰는 css들 */
+
+.underline {
+  border-bottom-color: #ffd200;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+

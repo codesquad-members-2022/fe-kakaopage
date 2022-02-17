@@ -1,0 +1,36 @@
+// header의 홈 웹툰 웹소설 영화~~까지의 javascript
+
+function showCurrentPage(e) {
+  pageArr.forEach((el) => {
+    el.classList.remove('underline');
+  });
+  
+  if(e.target.tagName === "A") {
+    e.target.parentElement.classList.add('underline');
+  } else if (e.target.tagName === "IMG") {
+    e.target.parentElement.parentElement.classList.add('underline');
+  }
+
+  if (e.target.className === "list-webtoon" || e.target.className ==="list-webtoon content-list-2") {
+    document.querySelector(".slide-img").innerHTML = '<img src="./pic/slide1.png" style="width: 720px; height: 480px;">'
+  } else {
+    document.querySelector(".slide-img").innerHTML = '<img src="./pic/jimmy.png" style="width: 720px; height: 480px;">'
+  };
+
+}
+const main_html = document.body.innerHTML;
+const pageArr = Array.from(document.querySelectorAll(".content-list-1"));
+pageArr.forEach((el) => {
+  el.addEventListener('mousedown', showCurrentPage);
+});
+
+
+// function showCurrentPage(e) {
+//   const pageArr = Array.from(document.querySelectorAll(".content-list-1"));
+//   pageArr.forEach((el) => {
+//     el.classList.remove('underline');
+  
+  
+//   });
+
+
