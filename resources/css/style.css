@@ -1,21 +1,7 @@
 @import "reset.css";
 @import "constants.css";
+@import "common.css";
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-.border__ellipse {
-    border-radius: 20px 20px 20px 20px;
-}
-
-.flex__center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.z-index_1 {
-    position: absolute;
-    z-index: 1;
-}
 
 body {
     background-color: var(--color-gray-background);

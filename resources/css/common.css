@@ -1,0 +1,14 @@
+.border__ellipse {
+    border-radius: 20px 20px 20px 20px;
+}
+
+.flex__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.z-index_1 {
+    position: absolute;
+    z-index: 1;
+}
