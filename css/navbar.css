@@ -55,13 +55,15 @@ li {
   flex: 1 1 auto;
   font-size: 20px;
   padding: 22px 0px;
-  font-weight: 500;
-  color: rgb(187, 187, 187);
-  text-decoration: none;
-  line-height: 1.15;
   background-color: transparent;
 }
 
+.navbar-second-content-link {
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  font-weight: 350;
+  line-height: 1.15;
+}
 
 .slide-img {
   position: relative;

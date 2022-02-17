@@ -6,4 +6,9 @@
   border-bottom-style: solid;
 }
 
-
+.makeBold {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+  line-height: 1.15;
+}

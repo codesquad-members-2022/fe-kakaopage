@@ -25,12 +25,22 @@ pageArr.forEach((el) => {
 });
 
 
-// function showCurrentPage(e) {
-//   const pageArr = Array.from(document.querySelectorAll(".content-list-1"));
-//   pageArr.forEach((el) => {
-//     el.classList.remove('underline');
-  
-  
-//   });
 
 
+function showCurrentList() {
+  const listArr = Array.from(document.querySelectorAll(".navbar-second-content"));
+  listArr.forEach((el) => {
+    el.addEventListener('mousedown', ChangeHtmlCss);
+  });
+  
+  function ChangeHtmlCss(e) {
+    listArr.forEach((el) => {
+      el.firstChild.classList.remove('makeBold');
+    });
+    if(e.target.tagName === "A") {
+      e.target.classList.add('makeBold');
+    }
+  } 
+}  
+
+showCurrentList();
