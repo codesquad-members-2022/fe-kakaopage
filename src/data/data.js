@@ -8,7 +8,7 @@ const webtoonData = {
         tag: 'up',
         type: '웹툰',
         view: '30.5',
-        path: 'static/thumb/main_toon_1.png',
+        path: 'static/thumb/main_toon_0_1.png',
       },
       {
         title: '내가 죽였다',
@@ -16,7 +16,7 @@ const webtoonData = {
         tag: 'event',
         type: '웹툰',
         view: '20.4',
-        path: 'static/thumb/main_toon_2.png',
+        path: 'static/thumb/main_toon_0_2.png',
       },
     ],
     gridMenu: [
@@ -27,8 +27,15 @@ const webtoonData = {
       ['독립운동가 웹툰'],
       ['오늘 랭킹', '1위'],
     ],
-    promotionBanner: ['promo_toon_1.png', 'promo_toon_2.png'],
+    promotionBanner: ['promo_toon_0_1.png', 'promo_toon_0_2.png'],
   },
+  1: {},
+  2: {},
+  3: {},
+  4: {},
+  5: {},
+  6: {},
+  7: {},
 };
 
 export { webtoonData };
