@@ -32,6 +32,14 @@ const loadTabContents = (tabName) => {
 };
 
 const loadWebToonTab = () => {
+  renderSet.renderGridMenu([
+    ['오늘 UP', '195'],
+    ['오늘 신작', '3'],
+    ['오리지널', '2,335'],
+    ['완결까지 정주행'],
+    ['독립운동가 웹툰'],
+    ['오늘 랭킹', '1위'],
+  ]);
   renderSet.renderPromotionBanner(['promo_toon_1.png', 'promo_toon_2.png']);
 };
 
