@@ -163,16 +163,6 @@ img {
   font-weight: bolder;
 }
 
-.image_status {
-  border: 2px solid #f1c164;
-  border-radius: 5px 5px 5px 5px;
-  background: black;
-  color: #f1c164;
-  padding: 5px;
-  margin-left: 0px;
-  font-weight: bolder;
-}
-
 .image_span {
   font-weight: bold;
   font-size: large;
@@ -491,7 +481,8 @@ img {
   left: 0px;
 }
 
-.info_contents {
+.info_contents,
+.info_promotion {
   position: absolute;
   top: 10px;
   left: 22%;
@@ -505,16 +496,35 @@ img {
   margin-bottom: 3px;
 }
 
+.info_promotion > div:nth-child(1) {
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 3px;
+}
+
 .info_contents > div:nth-child(2),
-.info_contents > div:nth-child(3) {
+.info_contents > div:nth-child(3),
+.info_promotion > div:nth-child(2),
+.info_promotion > div:nth-child(3) {
   text-align: left;
   margin-bottom: 3px;
 }
 
-.info_contents span,
-.info_contents span,
 .info_contents span {
   color: red;
+}
+
+.plus_info {
+  position: absolute;
+  top: 0px;
+  width: 6%;
+  font-size: 14px;
+  font-weight: bold;
+  left: 0px;
+  padding: 3px;
+  color: #f1c164;
+  background-color: #000;
+  border-radius: 15px 0px 0px 0px;
 }
 
 .ranking_1st,
