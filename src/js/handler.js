@@ -22,10 +22,11 @@ const toggleTabStyle = (eventTarget) => {
 };
 
 const loadTabContents = (tabName) => {
+  const main = document.querySelector('.main');
+  main.innerHTML = '';
   document.title = `${tabName} | 카카오페이지`;
 
   if (!(tabName === '웹툰')) {
-    const main = document.querySelector('.main');
     main.innerHTML = `${tabName} 탭은 준비 중입니다. 웹툰을 이용해주세요.`;
     return;
   }
@@ -33,6 +34,25 @@ const loadTabContents = (tabName) => {
 };
 
 const loadWebToonTab = () => {
+  renderSet.renderMainBanner([
+    {
+      title: '도사강호',
+      caption: '시각이 다르면 무공도 다르다',
+      tag: 'up',
+      type: '웹툰',
+      view: '30.5',
+      path: 'static/thumb/main_toon_1.png',
+    },
+    {
+      title: '내가 죽였다',
+      caption: '누가 아군이고, 누가 적인가',
+      tag: 'event',
+      type: '웹툰',
+      view: '20.4',
+      path: 'static/thumb/main_toon_2.png',
+    },
+  ]);
+
   renderSet.renderGridMenu([
     ['오늘 UP', '195'],
     ['오늘 신작', '3'],
@@ -41,6 +61,7 @@ const loadWebToonTab = () => {
     ['독립운동가 웹툰'],
     ['오늘 랭킹', '1위'],
   ]);
+
   renderSet.renderPromotionBanner(['promo_toon_1.png', 'promo_toon_2.png']);
 };
 

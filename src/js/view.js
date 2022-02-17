@@ -3,6 +3,7 @@ import { createFooter } from './components/footer.js';
 import { createGnb } from './components/gnb.js';
 import { createPromotionBanner } from './components/promotionBanner.js';
 import { createGridMenu } from './components/gridMenu.js';
+import { createMainBanner } from './components/mainBanner.js';
 
 const renderSet = {
   renderHeader() {
@@ -20,16 +21,22 @@ const renderSet = {
     gnbEl.insertAdjacentHTML('afterbegin', createGnb());
   },
 
-  renderPromotionBanner(bannerImgUrls) {
-    const mainEl = document.querySelector('.main');
-    const promotionBannerEl = createPromotionBanner(bannerImgUrls);
-    mainEl.insertAdjacentHTML('beforeend', promotionBannerEl);
-  },
-
   renderGridMenu(menuItemLabels) {
     const mainEl = document.querySelector('.main');
     const gridMenuEl = createGridMenu(menuItemLabels);
     mainEl.insertAdjacentHTML('beforeend', gridMenuEl);
+  },
+
+  renderMainBanner(bannerItems) {
+    const mainEl = document.querySelector('.main');
+    const mainBannerEl = createMainBanner(bannerItems);
+    mainEl.insertAdjacentHTML('beforeend', mainBannerEl);
+  },
+
+  renderPromotionBanner(bannerImgUrls) {
+    const mainEl = document.querySelector('.main');
+    const promotionBannerEl = createPromotionBanner(bannerImgUrls);
+    mainEl.insertAdjacentHTML('beforeend', promotionBannerEl);
   },
 };
 
