@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: var(--color-body);
 }
 ol, ul {
 	list-style: none;
@@ -59,7 +60,7 @@ button {
 }
 
 img {
-	max-width: 100%;
+	width: 100%;
 }
 
 a {

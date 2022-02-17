@@ -1,8 +1,10 @@
 :root {
     --header-height: 80px;
     --main-width: 720px;
+    --nav-height: 70px;
 
     --color-white: #fff;
     --color-yellow: #ffd200;
     --color-gray: #999;
+    --color-body: #eee;
 }
