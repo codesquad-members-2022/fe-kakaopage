@@ -3,6 +3,7 @@ import { DATA_URL, $ } from './util.js';
 const $days = $('.days');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
+const $navHeader = $('.nav--header');
 
 async function loadWebtoons() {
   // Better way?
@@ -56,6 +57,17 @@ function activateDay({ target }) {
     day.classList.toggle('selected-day', day === target);
   });
 }
+
+function removeCircle(e) {
+  if (!e.target.matches('.nav--header > .nav__subject')) return;
+  const circle = [...e.target.children].find(
+    v => v.className === 'nav__circle'
+  );
+  if (!circle) return;
+  e.target.removeChild(circle);
+}
+
+$navHeader.addEventListener('click', removeCircle);
 
 loadWebtoons()
   .then(wt => {

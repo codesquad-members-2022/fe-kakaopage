@@ -28,6 +28,7 @@
 .nav--header > .nav__subject {
   padding: 10px 15px 10px 15px;
   position: relative;
+  cursor: pointer;
 }
 
 .nav__circle {
