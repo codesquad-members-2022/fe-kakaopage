@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1010;
-  padding: 20px 0 16px;
+  padding: 24px 0 12px;
   border-bottom: 1px solid $gray-3;
   background: $gray-0;
 
@@ -36,7 +36,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -16px;
+        bottom: -12px;
         height: 3px;
         background: $yellow;
       }

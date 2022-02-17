@@ -58,7 +58,7 @@ img { width: 100%; }
 
 .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1010; background: #fff; }
 
-.header__inner { margin: 0 auto; padding: 24px 0; width: 720px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.header__inner { margin: 0 auto; padding: 32px 0 24px; width: 720px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .header__logo { width: 130px; height: 29px; }
 
@@ -88,6 +88,8 @@ img { width: 100%; }
 
 .footer__links { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
+.footer__company-info-wrap { display: inline-block; }
+
 .footer__company-info-summary { cursor: pointer; }
 
 .footer__company-info-summary a { text-decoration: underline; }
@@ -96,7 +98,7 @@ img { width: 100%; }
 
 .footer__ok-mark img { width: 55px; height: 55px; }
 
-.gnb { position: fixed; top: 81px; left: 0; right: 0; z-index: 1010; padding: 20px 0 16px; border-bottom: 1px solid #dee2e6; background: #fff; }
+.gnb { position: fixed; top: 81px; left: 0; right: 0; z-index: 1010; padding: 24px 0 12px; border-bottom: 1px solid #dee2e6; background: #fff; }
 
 .gnb__inner { margin: 0 auto; width: 720px; }
 
@@ -108,7 +110,7 @@ img { width: 100%; }
 
 .gnb__item--active { position: relative; }
 
-.gnb__item--active:after { content: ''; position: absolute; left: 0; right: 0; bottom: -16px; height: 3px; background: #ffd200; }
+.gnb__item--active:after { content: ''; position: absolute; left: 0; right: 0; bottom: -12px; height: 3px; background: #ffd200; }
 
 .gnb__item--dot { position: relative; }
 
@@ -116,7 +118,7 @@ img { width: 100%; }
 
 .snb { margin: 20px 0 0; background: #fff; }
 
-.snb__list { padding: 20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
+.snb__list { padding: 20px 0 16px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
 
 .snb__item { font-size: 1.25rem; color: #adb5bd; cursor: pointer; }
 
@@ -146,7 +148,7 @@ img { width: 100%; }
 
 .main-banner__tag-divider { width: 2px; height: 15px; background: #ced4da; }
 
-.main-banner__caption { position: absolute; bottom: 0; right: 0; left: 0; height: 40px; line-height: 40px; text-align: center; font-size: 1.125rem; background: #ffd200; }
+.main-banner__caption { position: absolute; bottom: 0; right: 0; left: 0; height: 40px; line-height: 42px; text-align: center; font-size: 1.125rem; background: #ffd200; }
 
 .main-banner__btn { position: absolute; top: 50%; margin-top: -20px; }
 
