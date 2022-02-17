@@ -1,0 +1,87 @@
+<!-- How TO  -  Collapsibles/Accordion
+source: https://www.w3schools.com/howto/howto_js_accordion.asp -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+       <!-- THE VIEWPORT is the user's vusubke area if a web page. -->
+       <style>
+         .accordion {
+           background-color: yellowgreen;
+           color: brown;
+           cursor: pointer;
+           padding: 18px;
+           width: 100%;
+           text-align: left;
+           border: none;
+           outline: none;
+           font-size: 15px;
+           transition: 0.4s;
+         }
+         .active, .accordion:hover {
+           background-color: #ccc;
+         }
+         .panel {
+           padding: 0 18px;
+           background-color: white;
+           display: none;
+           overflow: hidden;
+           /* to slide down the content */
+           transition: max-height 0.2s ease-out;
+         }
+         /* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+         .accordion:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+         }
+         .active:after {
+             content: "\2796"; /* Unicode character for "minus" sign (-) */
+         }
+      </style>
+    </head>
+    <body>
+        <!-- Step 1) Add HTML -->
+        <h2>Accordion with Symbol</h2>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <!-- Step 3) Add JavaScript -->
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for(i=0; i<acc.length;i++){
+          acc[i].addEventListener("click", function(){
+              /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel. */
+                this.classList.toggle("active");
+                
+                var panel=this.nextElementsSibling;
+                if(panel.style.display === "block"){
+                    // panel.style.display = "none";
+                    panel.style.maxHeight = null;
+                } else {
+                    // panel.style.display = "block";
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+          });
+        }
+      </script>
+    </body>
+</html>
+
