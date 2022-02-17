@@ -1,37 +1,86 @@
 # Flexbox
 
+https://studiomeal.com/archives/197
+
 1. 컨테이너를 꾸미는 속성값과 아이템 각각을 꾸미는 속성값이 있다.
 2. 축 2개
-   - main axis
-   - cross axis
+
+   - `main axis` : 아이템이 배치된 방향의 축
+   - `cross axis` : 메인축과 수직인 축
    - 축은 수직이냐 수평이냐에 따라 달라짐
+
+3. Flex 아이템은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 된다. (inline 요소처럼)
+   - height은 컨테이너의 높이만큼 늘어남
 
 ## `container`
 
-- display
-  - flex
-- flex-direction
-  - row (기본)
-  - row-reverse
-  - column
-  - column-reverse
-- flex-wrap
-  - nowrap (기본)
-  - wrap : 아이템이 한 줄에 꽉 차면 자동으로 다음 줄로
-  - wrap-reverse
-- flex-flow
-  - `flex-direction`과 `flex-wrap`을 합친 것
-- justify-content : `중심축`에서 아이템을 어떻게 배치할 것인지
-  - flex-start (기본) : 왼쪽에서 오른쪽 or 위에서 아래로
-  - flex-end
-  - center
-  - space-around : 박스 둘러싸게 space 넣어줌
-  - space-evenly
-  - space-between
-- align-items : `반대축`에서 아이템을 어떻게 배치할 것인지
-  - baseline : 텍스트 균등하게 baseline에 맞춰서
-- align-content : `반대축`에서 아이템을 배치
-  - `justify-content` 랑 동일
+### `display`
+
+- flex
+
+### `flex-direction`
+
+- 배치 방향 결정
+  - 메인축의 방향이 가로 or 세로인지 결정하는 속성
+- row (기본)
+- row-reverse
+- column
+- column-reverse
+
+### `flex-wrap`
+
+- 줄넘김 처리 설정
+  - 컨테이너가 아이템들을 더 이상 한 줄에 담을 수 없을 때 줄바꿈 결정하는 속성
+- nowrap (기본)
+  - 줄바꿈 x, 넘치면 아이템 탈출
+- wrap
+  - 줄바꿈 o, float나 inline-block으로 배치한 요소들과 비슷하게 동작
+- wrap-reverse
+  - 줄바꿈 o, 아이템 역순
+
+### `flex-flow`
+
+- `flex-direction`과 `flex-wrap`을 합친 것
+
+### `justify` vs `align`
+
+- justify
+  - 메인축 방향으로 정렬
+- align
+  - 수직축 방향으로 정렬
+
+### `justify-content` : `중심축`에서 아이템을 어떻게 배치할 것인지
+
+- flex-start (기본)
+  - 시작점으로 정렬
+- flex-end
+  - 끝점으로 정렬
+- center
+  - 가운데로 정렬
+- space-between
+  - 아이템 '사이(between)'에 균일한 간격 넣어줌
+- space-around
+  - 아이템 '둘레(around)'에 균일한 간격 넣어줌
+- space-evenly
+  - 아이템의 사이와 양 끝에 균일한 간격 넣어줌
+
+### `align-items`
+
+- 반대축`에서 아이템을 어떻게 배치할 것인지
+- stretch
+  - 아이템들이 수직축 방향으로 끝까지 늘어남
+- flex-start
+- flex-end
+- center
+- baseline
+  - 아이템들을 텍스트 베이스라인 기준으로 정렬
+
+### align-content
+
+- 여러 행 정렬
+- `flex-wrap:wrap;`이 설정된 상태에서, 아이템의 행이 2줄 이상 되었을 때 수직축 방향 설정하는 속성
+
+- `justify-content` 랑 동일
 
 ## `item`
 
