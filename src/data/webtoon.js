@@ -13,6 +13,8 @@ const Webtoon = [
     serialDate: ['월'],
     shortDesc: '“…한번 해 보자. 내가 가주가 되는 거야.”',
     isComplete: false,
+    rating: '10.0',
+    image: 'src/img/webtoon-image.png',
   },
   {
     title: '도굴왕',
@@ -28,6 +30,8 @@ const Webtoon = [
     serialDate: ['화', '금'],
     shortDesc: '다시 살아난 도굴꾼, 그가 세상 모든 무덤을 접수하기 시작한다!',
     isComplete: false,
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2',
   },
   {
     title: '일곱번째 배심원',
@@ -43,6 +47,8 @@ const Webtoon = [
     serialDate: ['금'],
     shortDesc: '진실을 밝히는 자는 누구일까.',
     isComplete: false,
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=FOBEL/hzb7vUhAb3/hQslarKDqwlOtk4FBKDKJ0&filename=th2',
   },
   {
     title: '녹지 않는 말',
@@ -56,6 +62,9 @@ const Webtoon = [
     ageLimit: '15',
     serialDate: ['일'],
     shortDesc: '서로 대비되는 두 인종의 사랑을 그린 세기말 로맨스',
+    isComplete: true,
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=buGo1k/hyATxtXdgC/d1XPK9F7cT1P7yWA5yNEAK&filename=th2',
   },
   {
     title: '화산전생',
@@ -69,6 +78,8 @@ const Webtoon = [
     ageLimit: 'All',
     serialDate: ['토'],
     shortDesc: '영웅을 동경했던 한 사내의 악전고투기',
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=bmxLRK/hzp2mI0hMJ/NSDWKWoCxLz0qDRXFDrdR0&filename=th2',
   },
   {
     title: '관계의 고리',
@@ -82,6 +93,8 @@ const Webtoon = [
     ageLimit: 'All',
     serialDate: ['수'],
     shortDesc: '운명의 상대와 연결된 붉은 띠-링.',
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=WKyz9/hzhOe60YLf/FeyNU55oWxHnFLOuQtvYN1&filename=th2',
   },
 ];
 
