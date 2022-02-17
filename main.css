@@ -86,6 +86,18 @@ li{
     padding: 2rem 10px;
     font-size: var(--largefont);
 }
+/*3. 장르 */
+.contents__genre{
+    display: none;
+}
+
+.genrebar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+}
 
 /* 4. 배너 */
 .banner{
@@ -109,7 +121,6 @@ li{
     z-index: 3;
     display: flex;
     position: absolute;
-    background-color: grey;
     justify-content: space-between;
 }
 .banner__button button{
@@ -117,9 +128,6 @@ li{
     border: none;
 }
 
-#btn2{
-    background-color: blue;
-}
 .underbtn{
     width: 100%;
     display: flex;
