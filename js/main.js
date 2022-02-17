@@ -2,7 +2,7 @@ import { $ } from "./utils.js";
 import { issueComponent } from "../component/issueComponent.js";
 import { advertiseComponent } from "../component/advertiseComponent.js";
 import { issueObj, recommendationObj, rowListTitleObj } from "./constants.js";
-import { rowListComponent } from "../component/rowListComponent.js";
+import { rowListContainer } from "../container/rowListContainer.js";
 
 const main = {
     addAdvertiseComponent: function() {
@@ -25,7 +25,7 @@ const main = {
     },
     addRecommendationComponent: function(menu) {
         this.removeRecommendationComponent();
-        return rowListComponent(rowListTitleObj.recommendation, recommendationObj[menu]);
+        return rowListContainer(rowListTitleObj.recommendation, recommendationObj[menu]);
     },
     removeRecommendationComponent: function() {
         const recommendEl = $(".recommend");
