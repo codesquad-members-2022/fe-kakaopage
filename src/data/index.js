@@ -1,4 +1,4 @@
 import { MainNavItems, ContentsNavItems } from './navItems.js';
-import Webtoon from './webtoon.js';
+import Webtoons from './webtoons.js';
 
-export { MainNavItems, ContentsNavItems, Webtoon };
+export { MainNavItems, ContentsNavItems, Webtoons };

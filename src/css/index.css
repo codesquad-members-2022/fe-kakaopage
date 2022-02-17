@@ -397,6 +397,12 @@ header {
 	width: 17.5%;
 }
 
+.contents-list .guide-text {
+	color: #999;
+	text-align: center;
+	margin: 0 auto;
+}
+
 .contents-list.small .img-container {
 	display: flex;
 	flex-direction: column;

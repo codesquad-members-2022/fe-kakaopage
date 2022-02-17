@@ -1,4 +1,4 @@
-import { renderMainNav, renderContentsNav } from '../render.js';
+import { renderMainNav, renderDailySeriesRanking } from '../render.js';
 import { MainNavItems, ContentsNavItems } from '../data';
 
 const changeSelectedItem = (items, selectedItem) => {
@@ -17,7 +17,7 @@ const handleNav = (e) => {
 
   else if (nav.classList.contains('contents-nav')) {
     changeSelectedItem(ContentsNavItems, selectedItem);
-    renderContentsNav();
+    renderDailySeriesRanking();
   }
 };
 

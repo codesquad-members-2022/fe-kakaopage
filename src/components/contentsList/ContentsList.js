@@ -2,7 +2,9 @@ import { ContentsListItem } from '../index.js';
 
 const ContentsList = (contentsList) => {
   return `<ul class="contents-list small">
-            ${contentsList.reduce((prev, cur) => prev += ContentsListItem(cur), '')}
+            ${contentsList.length ? 
+                contentsList.reduce((prev, cur) => prev += ContentsListItem(cur), '') :
+                '<li class="guide-text">No Data</li>'}
           </ul>`
 }
 

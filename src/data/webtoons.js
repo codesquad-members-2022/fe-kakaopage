@@ -1,4 +1,4 @@
-const Webtoon = [
+const Webtoons = [
   {
     title: '이번 생은 가주가 되겠습니다',
     writer: {
@@ -12,7 +12,6 @@ const Webtoon = [
     ageLimit: 'All',
     serialDate: ['월'],
     shortDesc: '“…한번 해 보자. 내가 가주가 되는 거야.”',
-    isComplete: false,
     rating: '10.0',
     image: 'src/img/webtoon-image.png',
   },
@@ -29,7 +28,6 @@ const Webtoon = [
     ageLimit: 'All',
     serialDate: ['화', '금'],
     shortDesc: '다시 살아난 도굴꾼, 그가 세상 모든 무덤을 접수하기 시작한다!',
-    isComplete: false,
     rating: '10.0',
     image: 'https://dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2',
   },
@@ -46,7 +44,6 @@ const Webtoon = [
     ageLimit: 'All',
     serialDate: ['금'],
     shortDesc: '진실을 밝히는 자는 누구일까.',
-    isComplete: false,
     rating: '10.0',
     image: 'https://dn-img-page.kakao.com/download/resource?kid=FOBEL/hzb7vUhAb3/hQslarKDqwlOtk4FBKDKJ0&filename=th2',
   },
@@ -60,9 +57,8 @@ const Webtoon = [
     genre: '로맨스',
     waitFree: true,
     ageLimit: '15',
-    serialDate: ['일'],
+    serialDate: ['완결'],
     shortDesc: '서로 대비되는 두 인종의 사랑을 그린 세기말 로맨스',
-    isComplete: true,
     rating: '10.0',
     image: 'https://dn-img-page.kakao.com/download/resource?kid=buGo1k/hyATxtXdgC/d1XPK9F7cT1P7yWA5yNEAK&filename=th2',
   },
@@ -98,4 +94,4 @@ const Webtoon = [
   },
 ];
 
-export default Webtoon;
+export default Webtoons;

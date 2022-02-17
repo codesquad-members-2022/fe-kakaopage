@@ -1,5 +1,5 @@
-import { $ } from './utils.js';
-import { Nav, MainContents } from './components';
+import { $, convertStringToHTML } from './utils.js';
+import { Nav, MainContents, DailySeriesRanking } from './components';
 import { ContentsNavItems, MainNavItems } from './data';
 import { navCallback } from './js';
 
@@ -11,10 +11,15 @@ const renderContentsNav = () => {
   $('.contents-nav').innerHTML = Nav(ContentsNavItems);
 }
 
+const renderDailySeriesRanking = () => {
+  $('.daily-series-ranking').replaceWith(convertStringToHTML(DailySeriesRanking()));
+  $('.contents-nav').addEventListener('click', navCallback);
+}
+
 const renderAll = () => {
   $('.main-contents-container').insertAdjacentHTML('afterbegin', MainContents());
   $('.main-nav').addEventListener('click', navCallback);
   $('.contents-nav').addEventListener('click', navCallback);
 };
 
-export { renderMainNav, renderContentsNav, renderAll };
+export { renderMainNav, renderContentsNav, renderDailySeriesRanking, renderAll };
