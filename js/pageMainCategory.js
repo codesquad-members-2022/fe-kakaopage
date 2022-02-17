@@ -1,5 +1,6 @@
 import setPreview from './setPreview.js';
 import createTagList from './createTagList.js';
+import clearTagList from './clearTagList.js';
 
 const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
@@ -25,6 +26,8 @@ pageMainCategory.forEach((li, idx, list) => {
     setCurIdx(idx);
     moveBlackColor(prevTarget, curTarget);
     setPreview(category);
+
+    clearTagList();
     createTagList(category);
   });
 });
