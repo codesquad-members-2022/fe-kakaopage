@@ -8,6 +8,7 @@
 @import url('./css/pageMain/webtoonFilter.css');
 @import url('./css/pageMain/webtoonComponent.css');
 @import url('./css/pageMain/banner.css');
+@import url('./css/pageMain/taglist.css');
 
 * {
   box-sizing: border-box;
