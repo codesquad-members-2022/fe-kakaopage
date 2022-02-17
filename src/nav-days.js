@@ -1,10 +1,16 @@
 import { renderDaysContents } from "./core.js";
-import { updateSelectedNode } from "./utils.js";
+import { updateSelectedNode, getJson } from "./utils.js";
 import DaysList from "../screens/Components/DaysList.js";
 
-const handleNavDays = (event) => {
+const headerNav = document.querySelector(".header__nav");
+
+const handleNavDays = async (event) => {
+  const category = [...headerNav.children].find((categoryNode) =>
+    [...categoryNode.classList].some((cl) => cl === "selected")
+  ).dataset.category;
   const daysNav = document.querySelector(".contents__daysNav");
-  const daysContents = DaysList(event.target.textContent, 10);
+  const { results: webtoons } = await getJson(category);
+  const daysContents = DaysList(event.target.textContent, webtoons, 10);
 
   updateSelectedNode(daysNav, event.target);
   renderDaysContents(daysContents);

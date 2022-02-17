@@ -8,11 +8,12 @@ import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 
 const HomeGenre = (webtoons) => {
+  const today = new Date().getDay();
   return `
     ${MainBanner(webtoons.filter((wt) => wt.isMain))}
     ${NavDetail()}
     ${SubBanner()}
-    ${DaysTop("화")}
+    ${DaysTop(today, webtoons)}
     ${BigCardList("기대 신작 TOP")}
     ${GenreTop("로맨스")}
     ${GenreTop("드라마")}

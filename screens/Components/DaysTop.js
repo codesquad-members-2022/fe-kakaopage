@@ -5,8 +5,9 @@
  */
 import DaysList from "./DaysList.js";
 
-const DaysTop = (inputDay) => {
+const DaysTop = (inputDay, webtoons) => {
   const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
+  const koreaDay = days[inputDay];
 
   return `<li class="mainBox main__contents">
     <div class="contents">
@@ -24,12 +25,12 @@ const DaysTop = (inputDay) => {
           ${days
             .map(
               (day) =>
-                `<li class='${inputDay === day ? "selected" : ""}'>${day}</li>`
+                `<li class='${koreaDay === day ? "selected" : ""}'>${day}</li>`
             )
             .join("")}
         </ul>
         <ul class="contentsCard">
-          ${DaysList(inputDay, 10)}
+          ${DaysList(koreaDay, webtoons, 10)}
         </ul>
       </div>
     </div>
