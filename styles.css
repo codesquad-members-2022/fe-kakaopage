@@ -29,8 +29,17 @@ li {
   color: #bbb;
 }
 
+.padding-sides {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .display-none {
   display: none;
+}
+
+.color-gray {
+  color: #bbb;
 }
 
 .color-black {
@@ -39,4 +48,12 @@ li {
 
 .flex {
   display: flex;
+}
+
+.big-font {
+  font-size: 20px;
+}
+
+.small-font {
+  font-size: 14px;
 }
