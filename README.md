@@ -123,6 +123,7 @@ CSS
 
 계획
 
+- css파일 컴포넌트 별로 나누고 css 단위를 나눠보기
 - hover 효과 nav에 부여
 - 이벤트 계획 구체적으로 짜보기
 - 현재 이미지 슬라이드는 그대로 두고 컨텐츠 부분을  
@@ -132,13 +133,103 @@ CSS
 
 검색 및 고민하고 시작할 사항
 
+- 반복되는 dom요소 js로 복사 삽입하기  
+  -> cloneNode(), cloneNode(true) 자식까지 복사
 - 이벤트 하나 더 만들것 탐색하고 분석하기
-- js로 컴포넌트를 어떻게 효율적으로 생산하는지
+- js로 컴포넌트를 어떻게 효율적으로 생산하는지  
+  -> temlplate literal + InnerHTML
 - 이벤트 발생 시킨후 기존 이벤트로 효율적으로 돌아올 방법?  
   -> css는 이후 추가된 클래스가 우선순위가 높으니깐?
   이벤트 발생 레이아웃 클래스를 하나 덧대어서 배치를 바꾸는법?  
    (아이디어라 테스트가 필요하다. 럼카의 pr 사항중에 클래스를 중복으로 사용한 점이  
    우수하다 한점을 차용해 보자)
+
+---
+
+## 노드탐색
+
+### CSS선택자를 이용한 요소 노드 취득
+
+- document.querySelector을 이용하여 인수로 전달한 CSS선택자 만족시키는  
+  하나이상의 요소노드만 반환 (복수를 원할시 querySelectorAll 사용 []로 요소노드반환)
+
+### 부모노드 탐색
+
+Node.ParentNode
+
+- 부모 노드를 반환한다.
+
+### 자식 노드 탐색
+
+<br/>
+Node.childNodes
+
+- 자식 노드를 모두 탐색하여 NodeList에 담아 반환  
+  이떄 반환된 NodeList에는 요소 노드 뿐만 아닌 텍스트 노드도 포함됨
+
+Node.children
+
+- 자식 노드중에서 요소 노드만 모두 탐색하여 HTMLCollection에  
+  담아서 반환함 텍스트 노드가 포함되지 않는다.
+
+Node.firstChild
+
+- 첫 번째 자식 노드를 반환. 반환값은 텍스트 노드이거나 요소노드이다.
+
+Node.lastChild
+
+- 마지막 자식 노드를 반환. 반환값은 텍스트 노드이거나 요소노드이다.
+
+Element.firstElementChild
+
+- 첫번째 자식 요소 노드를 반환한다. 반환값은 요소 노드이다.
+
+Element.lastElementChild
+
+- 마지막 자식 요소 노드를 반환한다. 반환값은 요소 노드이다.
+
+Tip: 요소노드의 텍스트 노드탐색 방법
+
+- document.getElementById('example').firstChild // #text
+
+### 형제 노드 탐색
+
+<br/>
+
+Node.previousSibling
+
+- 부모 노드가 같은 형제 노드 중에서 자신의 이전 형제노드를 탐색후 반환  
+  반환 하는 형제 노드는 요소 노드 뿐만 아니라 텍스트 노드일 수 있다.
+
+Node.nextSibling
+
+- 부모 노드가 같은 형제 노드 중에서 자신의 다음 형제 노드를 탐색하여 반환  
+  반환하는 형제 노드는 요소 노드 뿐만 아니라 텍스트 노드일 수 있다.
+
+Element.previousElementSibling
+
+- 부모 노드가 같은 형제 요소 노드중 자신 이전의 형제 요소 노드 탐색후 반환  
+  요소 노드만 반환한다.
+
+Element.nextElementSibling
+
+- 부모 노드가 같은 형제 요소 노드중 자신 다음의 형제 요소 노드 탐색후 반환  
+  요소 노드만 반환한다.
+
+### 요소 노드의 텍스트 조작
+
+nodeValue VS textContent
+
+- nodeValue: 텍스트 노드를 참조할시 텍스트를 반환한다. 이때 텍스트 노드가 아닐시  
+  null을 반환하므로 의미가 없다(쓰기불편).  
+   - ex) document.getElementbyID('example').nodeValue // null 이다 - document.getElementbyID('example').firstChild.nodeValue // text값이 나온다.
+
+- textContent: 요소노드를 참조해도 텍스트를 반환한다. textContent 프로퍼티에  
+  문자열을 할당하면 요소 노드의 모든 자식 노드가 제거되고 할당한 문자열이  
+  텍스트로 추가된다. HTML 마크업이 포함되어도 문자열 그대로 인식되어 텍스트  
+  취급이 된다.
+  - ex) document.getElementbyID('example').textContent = `HI <span>there</there>`  
+    결과는 `HI <span>there</there>` 문자열 그대로
 
 ---
 

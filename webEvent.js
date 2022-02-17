@@ -1,4 +1,5 @@
 document.querySelector(".prev").addEventListener("click", onclickPrev);
+
 let pageCount = 0;
 
 function onclickPrev(target) {
@@ -31,16 +32,11 @@ function onclicknext() {
 
 document
   .querySelector(".recommand__nav--ul")
-  .children[1].addEventListener("click", onclickRecommand__nav);
+  .children[0].addEventListener("click", onclickRecNavHome);
 
-function onclickRecommand__nav() {
-  document.querySelector(".main__cartoonZone").style.flexDirection = "column";
-  document.querySelectorAll(".main__cartoonZone__cell").forEach((element) => {
-    element.style.flexDirection = "row";
-    element.style.alignItems = "flexEnd";
-    console.log(element.children[1]);
-    element.children[1].style.height = element.children[0].style.height;
-    element.querySelector(".main__cartoonZone--hiddenInfo").style.display =
-      "block";
-  });
+const $mainComponet = document.querySelector(".main");
+
+function onclickRecNavHome() {
+  const $navBar = document.querySelector(".main__nav__dow");
+  $navBar.style.display = "none";
 }

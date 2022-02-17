@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="resetDefault.css" />
-    <link rel="stylesheet" href="./headStyle.css" />
+    <link rel="stylesheet" href="./style/resetDefault.css" />
+    <link rel="stylesheet" href="./style/headSection.css" />
+    <link rel="stylesheet" href="./style/recommandSection.css" />
+    <link rel="stylesheet" href="./style/mainSection.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--display">
       <div class="header__top">
         <h1 class="header__top--logo">kakaopage</h1>
-        <div class="header__top--login">
+        <div class="header header__top--toggle">
           <form><input class="input__search" /></form>
           <span class="login__text">STAGE</span>
           <span class="login__text">캐치충전</span>
@@ -21,7 +23,7 @@
       </div>
 
       <nav class="header__nav">
-        <ul class="header__nav--ul">
+        <ul class="header header__nav--ul">
           <li>홈</li>
           <li>웹툰</li>
           <li>웹소설</li>
@@ -32,7 +34,7 @@
       </nav>
     </header>
 
-    <section class="recommand__section">
+    <section class="recommand">
       <nav class="recommand__nav">
         <ul class="recommand__nav--ul">
           <li>홈</li>
@@ -47,26 +49,26 @@
       </nav>
       <main class="recommand__image">
         <div class="recommand__image--container">
-          <div class="recommand__image--wrapper">
+          <ul class="recommand__image--wrapper">
             <!-- 이부분 너무 하드코딩인데... -->
-            <div class="recommand__image--img">
+            <li class="recommand__image--img">
               <img src="./pageImage/katana.jpg" class="rec--cartoonImg" />
-            </div>
-            <div class="recommand__image--img">
+            </li>
+            <li class="recommand__image--img">
               <img src="./pageImage/lisa.jpg" class="rec--cartoonImg" />
-            </div>
-            <div class="recommand__image--img">
+            </li>
+            <li class="recommand__image--img">
               <img src="./pageImage/skul.jpg" class="rec--cartoonImg" />
-            </div>
-            <div class="recommand__image--img">
+            </li>
+            <li class="recommand__image--img">
               <img src="./pageImage/mother.png" class="rec--cartoonImg" />
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <div class="recommand__image--controller">
             <span class="next"></span>
             <span class="prev"></span>
-            <!--이부분 next 와 prev 순서가 js 제어중 바뀌었다...-->
+            <!--이부분 next 와 prev 순서가 js 제어중 바꾸었다...-->
           </div>
 
           <div class="recommand__image--pageCount">1 / 3</div>
@@ -76,7 +78,7 @@
       </main>
     </section>
 
-    <section class="main__contents">
+    <section class="main">
       <nav class="main__nav__dow">
         <ul class="main__nav__dow--ul">
           <li>월</li>
@@ -90,24 +92,24 @@
         </ul>
       </nav>
       <nav class="main__nav__sortAll">
-        <div class="sort">
+        <ul class="sort">
           <li>전체</li>
           <li>웹툰</li>
           <li>웹툰</li>
-        </div>
+        </ul>
         <div class="all">전체 (129)</div>
       </nav>
       <ul class="main__cartoonZone">
         <li class="main__cartoonZone__cell">
-          <div class="main__cartoonZone--imageWrap">
+          <div class="main__cartoonZone--imageWrapper">
             <img
               src="./pageImage/madothuki.png"
               width="150px"
               class="main__cartoonZone--image"
             />
-            <div class="main__cartoonZone--imageTag">
-              <span class="main__cartoonZone--tagLeftFont">TOP</span>
-              <span class="main__cartoonZone--tagRightFont">인기</span>
+            <div class="main__cartoonZone--imgTag">
+              <span class="main__cartoonZone--imgTagLeft">TOP</span>
+              <span class="main__cartoonZone--imgTagRight">인기</span>
             </div>
           </div>
           <div class="main__cartoonZone--info">

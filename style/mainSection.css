@@ -1,0 +1,105 @@
+.main {
+  background-color: white;
+  color: var(--basic-fontColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: var(--contents-width);
+}
+
+.main__nav__dow {
+  font-size: var(--nav-fontSize);
+  width: var(--contents-width);
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.main__nav__dow--ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main__nav__sortAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--contents-width);
+  padding: 10px 20px 10px 20px;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+/*네이밍 여기 다시해야함*/
+.sort {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  width: 130px;
+}
+/*네이밍 여기 다시해야함*/
+.all {
+  padding-right: 20px;
+}
+
+.main__cartoonZone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px 20px 10px 20px;
+  width: var(--contents-width);
+}
+
+.main__cartoonZone__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.main__cartoonZone--imageWrapper {
+  position: relative;
+  margin: 10px 0px;
+}
+
+.main__cartoonZone--image {
+  border-radius: 15px;
+}
+
+.main__cartoonZone--imgTag {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  width: 150px; /*왜 inherit 했는데 부모 클래스인 imageWrap의 width를 따라가지 않는걸까?*/
+  border-radius: 0px 0px 15px 15px;
+  bottom: 0%;
+}
+
+.main__cartoonZone--imgTagLeft {
+  color: goldenrod;
+  font-weight: bold;
+  padding: 7px 10px 7px 10px;
+}
+
+.main__cartoonZone--imgTagRight {
+  font-weight: 550;
+  padding: 7px 10px 7px 10px;
+}
+
+.main__cartoonZone--info {
+  color: black;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__cartoonZone--info span {
+  padding: 5px 0px;
+}
+
+/* 이렇게 자손을 선택하지 않아도 되지만 궁금해서 해봄 */
+.main__cartoonZone--info .main__cartoonZone--hiddenInfo {
+  display: none;
+}
