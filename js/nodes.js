@@ -5,11 +5,11 @@ export const nodes = {
     "slide-banner": `<div
     class="slide-banner group-flex bg-white margin-top-default"
 >
-    <div class="arrow group-flex">
+    <div class="arrow group-flex flex-center">
         <img src="./images/paging_back.svg" alt="이전" />
     </div>
     
-    <div class="arrow group-flex">
+    <div class="arrow group-flex flex-center">
         <img src="./images/paging_next.svg" alt="다음" />
     </div>
 </div>`,
@@ -19,7 +19,7 @@ export const nodes = {
     <div class="section-header group-flex">
         <div class="group-flex">
             <h3>요일 연재 TOP</h3>
-            <span class="count group-flex">(갯수)</span>
+            <span class="count group-flex flex-center">(갯수)</span>
         </div>
         <div>
             <span class="detail">더보기 ></span>

@@ -16,6 +16,11 @@ main {
     padding: 20px;
 }
 
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
 .title {
     font-weight: bold;
 }
@@ -38,8 +43,6 @@ main {
 }
 
 .section-header .count {
-    align-items: center;
-    justify-content: center;
     color: var(--dark-gray);
     font-size: var(--small-font-size);
     margin-left: 5px;
@@ -112,8 +115,6 @@ main {
     background-color: var(--kakao-yellow);
     color: #3a3a3a;
     margin-top: 20px;
-    align-items: center;
-    justify-content: center;
     font-weight: 400;
     font-size: var(--middle-font-size);
 }
@@ -149,8 +150,6 @@ main {
     font-size: var(--middle-font-size);
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    align-items: center;
-    justify-content: center;
 }
 
 .category a:nth-of-type(3n) {
@@ -164,14 +163,10 @@ main {
     padding: 2px 8px;
     margin-left: 8px;
     font-size: var(--small-font-size);
-    align-items: center;
-    justify-content: center;
 }
 
 .slide-banner .arrow {
     width: 85px;
-    align-items: center;
-    justify-content: center;
 }
 
 .slide-banner .banner {
@@ -280,11 +275,9 @@ main {
 }
 
 .daily-best-card .rank-num {
-    align-items: center;
     font-size: 1.2rem;
     font-weight: 500;
     flex: 0 0 30px;
-    justify-content: center;
 }
 
 .daily-best-card .img-wrap {
