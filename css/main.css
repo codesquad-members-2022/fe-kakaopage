@@ -159,7 +159,7 @@
 
 
 .main__nav_day_selected {
-    background-image: url("./images/back_circle_new.png");
+    background-image: url("../images/back_circle_new.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 40px;
