@@ -1,9 +1,10 @@
 import { createHeader } from './components/header.js';
 import { createFooter } from './components/footer.js';
 import { createGnb } from './components/gnb.js';
-import { createPromotionBanner } from './components/promotionBanner.js';
+import { createSnb } from './components/snb.js';
 import { createGridMenu } from './components/gridMenu.js';
 import { createMainBanner } from './components/mainBanner.js';
+import { createPromotionBanner } from './components/promotionBanner.js';
 
 const renderSet = {
   renderHeader() {
@@ -19,6 +20,12 @@ const renderSet = {
   renderGnb() {
     const gnbEl = document.querySelector('.gnb');
     gnbEl.insertAdjacentHTML('afterbegin', createGnb());
+  },
+
+  renderSnb(subCategorys) {
+    const mainEl = document.querySelector('.main');
+    const snbEl = createSnb(subCategorys);
+    mainEl.insertAdjacentHTML('beforeend', snbEl);
   },
 
   renderGridMenu(menuItemLabels) {
