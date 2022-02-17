@@ -1,7 +1,9 @@
 import { $ } from "./dom.js";
 import { nodes } from "./nodes.js";
 import { romanceTop } from "./genreItems.js";
+import { waitCreateEl } from "./mutationObserver.js";
 
+// FIXME:파일분리
 const webtoonMenu = {
     홈: [
         "category",
@@ -22,6 +24,7 @@ const webtoonMenu = {
     BL: 9,
 };
 
+// FIXME:파일분리
 const coverImg = {
     img: {
         홈: "./images/img_cover.png",
@@ -47,6 +50,40 @@ const coverImg = {
         액션무협: "웹툰-액션무협",
         BL: "웹툰-BL",
     },
+};
+
+// FIXME:테스트중: 홈 클릭시(로 가정하고), 로맨스TOP 정보를 genreItems.js에서 가져와서 화면에 표시
+const createGenreItems = () => {
+    const parentNode = $(".genre-best").querySelector("ol.webtoon-card-wrap");
+    let romanceTopChildren = "";
+    romanceTop.forEach((curItem) => {
+        romanceTopChildren += `<li class="webtoon-card">
+        <div class="thumbnail-wrap">
+            <img
+                src="${curItem.img}"
+                alt="${curItem.title}"
+                class="thumbnail"
+            />
+            <div class="group-flex rank-info">
+                <div>
+                    <span>★</span>
+                    <span>${curItem.score}</span>
+                </div>
+                <img
+                    src="./images/bmbadge_waitfree.svg"
+                    alt="기다리면 무료 아이콘"
+                />
+            </div>
+        </div>
+        <p class="title">${curItem.title}</p>
+        <div class="reader-info">
+            <span>UP</span>
+            <span>아이콘</span>
+            <span>인원수</span>
+        </div>
+    </li>`;
+    });
+    parentNode.insertAdjacentHTML("afterbegin", romanceTopChildren);
 };
 
 const changeCoverImg = (subMenu) => {
@@ -104,6 +141,8 @@ const bindSubMenuEvents = () => {
             getElements(targetPage)
         );
         //TODO: 추가한 노드들에 자식노드 추가
+        // FIXME:테스트중: .genre-best가 만들어지면, createGenreItems()를 실행 (mutationObserver사용)
+        waitCreateEl(".genre-best", createGenreItems);
 
         // 새로 생긴 노드에도 preventDefaults()적용
         preventDefaults();
