@@ -9,3 +9,23 @@
   margin: 0 auto;
   margin-bottom: 14px;
 }
+
+.contents-container {
+  padding: 20px;
+}
+
+.contents-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contents-more {
+  display: flex;
+  align-items: center;
+}
+
+.contents-more img {
+  margin-left: 4px;
+}

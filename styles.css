@@ -57,3 +57,7 @@ li {
 .small-font {
   font-size: 14px;
 }
+
+.relative {
+  position: relative;
+}
