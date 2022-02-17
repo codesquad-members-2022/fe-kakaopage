@@ -1,19 +1,24 @@
 import { createEl } from "../js/utils.js";
 
 export const issueComponent = (issues) => {
-    const articleEl = createEl("article");
-    const innerDivEl = createEl("div");
-    articleEl.classList.add("issue");
-    innerDivEl.classList.add("issue__inner");
-    articleEl.appendChild(innerDivEl);
+    const wrapper = createEl("article");
+    const inner = createEl("div");
+
+    wrapper.classList.add("issue");
+    inner.classList.add("issue__inner");
+
+    wrapper.appendChild(inner);
     for(let i = 0; i < issues.length; i++) {
-        const divEl = createEl("div");
-        const spanEl = createEl("span");
-        divEl.classList.add("issue__box");
-        spanEl.classList.add("issue__box_text");
-        spanEl.textContent = issues[i];
-        divEl.appendChild(spanEl);
-        innerDivEl.appendChild(divEl);
+        const box = createEl("div");
+        const text = createEl("span");
+        
+        box.classList.add("issue__box");
+        text.classList.add("issue__box_text");
+
+        text.textContent = issues[i];
+        
+        box.appendChild(text);
+        inner.appendChild(box);
     }
-    return articleEl.outerHTML;
+    return wrapper.outerHTML;
 }
