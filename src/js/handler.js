@@ -9,25 +9,33 @@ const HandleGnb = (event) => {
   const tabName = event.target.dataset.category;
   if (!tabName) return;
 
-  toggleTabStyle(event.target);
-  loadTabContents(tabName);
+  loadGnbTab(tabName);
 };
 
-const toggleTabStyle = (eventTarget) => {
+const loadGnbTab = (tabName) => {
+  toggleGnbTabStyle(tabName);
+  loadGnbTabContents(tabName);
+};
+
+const toggleGnbTabStyle = (tabName) => {
   const currTab = document.querySelector('.gnb__item--active');
   if (currTab) currTab.classList.remove('gnb__item--active');
 
-  const newTab = eventTarget;
+  const newTab = document.querySelector(`.gnb__item[data-category="${tabName}"]`);
   newTab.classList.add('gnb__item--active');
 };
 
-const loadTabContents = (tabName) => {
+const loadGnbTabContents = (tabName) => {
   const main = document.querySelector('.main');
   main.innerHTML = '';
   document.title = `${tabName} | 카카오페이지`;
 
   if (!(tabName === '웹툰')) {
-    main.innerHTML = `${tabName} 탭은 준비 중입니다. 웹툰을 이용해주세요.`;
+    main.innerHTML = `
+    <div style="text-align:center;padding:80px 0;font-size:1.25rem">
+      ${tabName} 탭은 준비 중입니다. <strong>웹툰</strong> 탭을 이용해주세요.
+    </div>
+    `;
     return;
   }
   loadWebToonTab();
@@ -76,4 +84,4 @@ const loadWebToonTab = () => {
   renderSet.renderPromotionBanner(['promo_toon_1.png', 'promo_toon_2.png']);
 };
 
-export { addHandlerOnGnb };
+export { addHandlerOnGnb, loadGnbTab };
