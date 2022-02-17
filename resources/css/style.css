@@ -109,6 +109,10 @@ header {
     border-bottom: 3px solid var(--color-yellow);
 }
 
+.week-nav__item-selected {
+    border-bottom: 1px solid var(--color-yellow);
+}
+
 .header-nav__item > a {
     color: var(--color-black);
 }
@@ -342,10 +346,12 @@ main {
 .comic-list {
     width: 680px;
     flex-flow: row wrap;
+    flex-grow: 1;
     justify-content: space-between;
 }
 
 .comic-list__item {
+    margin-top: 24px;
     flex-direction: column;
     width: 120px;
 }
@@ -417,6 +423,27 @@ main {
 .comic-thumb__wait {
     width: 16px;
     height: 16px;
+}
+
+.week-nav__list {
+    width: 680px;
+    justify-content: space-around;
+    border-bottom: 1px solid var( --color-gray-week-border);
+    margin-top: 15px;
+}
+
+.week-nav__item {
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-gray-week-font);
+    font-size: 20px;
+    text-align: center;
+}
+
+.week-nav__item-selected {
+    border-bottom: 2px solid var(--color-yellow);
+    color: var(--color-black-contents-menu);
 }
 
 .contents-container__comic-count {
