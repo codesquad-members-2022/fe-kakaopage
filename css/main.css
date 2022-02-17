@@ -14,58 +14,81 @@ main {
     line-height: 50px;
 }
 
-.mainNav__ul {
-    display: flex;
-    flex-flow: row;
+.mainNav__menus {
     justify-content: space-evenly;
 }
 
-.mainNav__ul li {
+.mainNav__menu {
     font-size: 20px;
+    color: var(--main-lightgray);
     text-align: center;
+}
+
+.menu-on {
+    color: var(--main-black)
 }
 
 .contents {
     margin: 0 auto;
-    width: 50%
-}
-
-.contents__view {
+    width: 50%;
     position: relative;
 }
 
 .contents__img {
     width: 100%;
+    margin-bottom: -3px;
+}
+
+.contents__prevButton {
+    display: block;
+    position: absolute;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    left: 2%;
+    top: 45%;
+    background: url("../images/slide-previous-button.svg") no-repeat center / 100% auto;
+}
+
+.contents__nextButton {
+    display: block;
+    position: absolute;
+    left: 93%;
+    top: 45%;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    background: url("../images/slide-next-button.svg") no-repeat center / 100% auto;
 }
 
 .contents__text {
     position: absolute;
     bottom: 50px;
     left: 20px;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 
-.contents_text__name {
+.text__name {
     font-size: 34px;
     font-weight: bold;
     color: var(--main-white);
 }
 
-.contents_text__info {
+.text__info {
     margin-top: 5px;
 }
 
-.contents_text__event {
+.text__event {
     display: inline;
     padding: 2px;
     border: 1px solid var(--main-gold);
-    background-color: black;
+    background-color: var(--main-black);
     color: var(--main-gold);
     font-size: 15px;
     border-radius: 3px;
 }
 
-.contents_text__info span {
+.text__info-style {
     font-size: 18px;
     margin-right: 2px;
     color: var(--main-white);
@@ -73,12 +96,11 @@ main {
 
 .contents__sentence {
     text-align: center;
-    vertical-align: middle;
     font-size: 18px;
     background-color: var(--main-gold);
     height: 30px;
-    margin-top: 0px;
     padding-top: 12px;
+    margin-top: -1px
 }
 
 .category {
@@ -87,21 +109,20 @@ main {
     background-color: var(--main-white);
 }
 
-.category__ul {
-    padding: 10px;
-    display: flex;
+.category__menus {
+    padding: 12px 0;
     width: 100%;
-    flex-flow: row wrap;
+    flex-flow: wrap;
     justify-content: center;
-    align-items: center;
+    height: 95px;
+    gap: 0px 7px;
 }
 
-.category__ul li {
-    margin: 2px;
-    padding-top: 20px;
+.category__menu {
     width: 30%;
     height: 40px;
     background-color: var(--main-gray);
     text-align: center;
+    line-height: 40px;
     font-size: 22px;
 }
