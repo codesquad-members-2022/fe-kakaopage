@@ -331,6 +331,17 @@ main {
     font-weight: 500;
 }
 
+.count_badge {
+    margin-left: 10px;
+}
+
+.count_badge__text {
+    height: 22px;
+    padding: 0px 8px 2px 8px;
+    background-color: var(--color-yellow);
+    font-size: 16px;
+}
+
 footer {
     display: flex;
     width: 720px;
