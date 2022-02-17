@@ -56,5 +56,3 @@
   - 일단 DOMContentLoaded이후 body를 로드한 후 위의 기능적인 것을 작동시키기 위해 navigation이 있을 때만 작동할 수 있도록 `if(!navigation){}`이런식으로 작동시키기
 
 - script를 body아래 썼으면 DOMContentLoaded이거 안써도 되나.
-- 정적 변수 관리
-  - id나 class를 정적 변수에 관리해야하나?
