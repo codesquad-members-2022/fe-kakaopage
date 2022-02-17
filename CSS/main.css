@@ -7,11 +7,11 @@
   background-color: var(--white-color);
 }
 
-.genres__list li a {
+.genres__item {
   color: var(--non-focus-font-color);
 }
 
-.genres__list .genres--focused {
+.genres--focused {
   color: var(--black-color);
 }
 
