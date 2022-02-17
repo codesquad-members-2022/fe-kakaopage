@@ -35,8 +35,6 @@ document
   .querySelector(".recommand__nav--ul")
   .addEventListener("click", onclickRecNav);
 
-const $mainComponet = document.querySelector(".main");
-
 function onclickRecNav(event) {
   //추후 target의 textContent에 따라 내용이 달라지게 구성할 예정
   if (event.target.textContent !== contentsChecker) {
@@ -45,6 +43,7 @@ function onclickRecNav(event) {
 }
 
 function chageMainSecHome() {
+  const $mainComponet = document.querySelector(".main");
   const leftNavToggleFont = [
     "기다리면 무료웹툰",
     "인기웹툰",
@@ -52,15 +51,10 @@ function chageMainSecHome() {
     "인기 웹소설",
   ];
   const $navBar = document.querySelector(".main__nav__dow");
+
   $navBar.style.display = "none";
 
-  // [...$mainNavSort].forEach((toggle, idx) => {
-  //   if (idx > 0) {
-  //     toggle.classList.add("ev__main--toggle--left");
-  //   }
-  // });
-  const $mainCartoonZone = document.querySelector(".main__cartoonZone");
-  switchMainCartoonZone($mainCartoonZone);
+  switchMainCartoonZone();
 
   for (let i = 0; i < 3; i++) {
     const $cloneMain = $mainComponet.cloneNode(true);
@@ -73,11 +67,13 @@ function chageMainSecHome() {
 
 function switchToggleText(textArray) {
   const $toggleleftAll = document.querySelectorAll(".main--toggle--left");
+  const $toggleRightAll = document.querySelectorAll(".main--toggle--right");
+
+  $toggleRightAll.forEach((el) => (el.textContent = "더보기"));
 
   $toggleleftAll.forEach((toggle, idx) => {
     let toggleArr = toggle.children;
     [...toggleArr].forEach((el, el_idx) => {
-      console.log(el);
       if (el_idx === 0) {
         el.textContent = textArray[idx];
       } else {
@@ -86,4 +82,30 @@ function switchToggleText(textArray) {
     });
   });
 }
-function switchMainCartoonZone() {}
+
+function switchMainCartoonZone() {
+  const $cartoonZone = document.querySelector(".main__cartoonZone");
+  $cartoonZone.classList.add("ev__main__cartoonZone");
+
+  const $imgShell = document.querySelectorAll(".main__cartoonZone__cell");
+  $imgShell.forEach((el) => el.classList.add("ev__main__cartoonZone__cell"));
+
+  const $imgTag = document.querySelectorAll(".main__cartoonZone--imgTag");
+  $imgTag.forEach((el) => el.classList.add("ev__main__cartoonZone--imgTag"));
+
+  const $imgInfo = document.querySelectorAll(".main__cartoonZone--info");
+  $imgInfo.forEach((el) => el.classList.add("ev__main__cartoonZone--info"));
+
+  const $newCartoonZone = document.querySelectorAll(
+    ".main__cartoonZone.ev__main__cartoonZone"
+  )[0];
+
+  while ($newCartoonZone.hasChildNodes()) {
+    $newCartoonZone.removeChild($newCartoonZone.firstChild);
+  }
+
+  for (let i = 0; i < 4; i++) {
+    const $cloneimgShell = $imgShell[0].cloneNode(true);
+    $newCartoonZone.append($cloneimgShell);
+  }
+}

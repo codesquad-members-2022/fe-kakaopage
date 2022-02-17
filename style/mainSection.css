@@ -34,13 +34,17 @@
   display: flex;
   font-size: 25px;
   font-weight: bold;
-  color: black;
   justify-content: space-between;
-  padding-left: 20px;
+}
+
+.main--toggle--left > li {
+  padding: 10px 0px 10px 15px;
 }
 /*네이밍 여기 다시해야함*/
 .main--toggle--right {
-  padding-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 15px 10px 0px;
 }
 
 .main__cartoonZone {
@@ -60,11 +64,12 @@
 
 .main__cartoonZone--imageWrapper {
   position: relative;
-  margin: 10px 0px;
+  width: 150px;
 }
 
 .main__cartoonZone--image {
   border-radius: 15px;
+  width: 100%;
 }
 
 .main__cartoonZone--imgTag {
