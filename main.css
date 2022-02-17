@@ -131,13 +131,13 @@ h1 {
 
 .arrow-left {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 3%;
 }
 
 .arrow-right {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 3%;
 }
 
