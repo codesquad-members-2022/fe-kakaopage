@@ -19,7 +19,11 @@
 }
 
 .image-poster__title {
+    width: 155px;
     margin-bottom: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: var(--font-16);
     color: var(--color-gray);
 }
