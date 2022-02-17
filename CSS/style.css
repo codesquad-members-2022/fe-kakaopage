@@ -6,9 +6,13 @@
 
 :root {
   --color-yellow-main: #fdd578;
-  --color-black-main: black;
+  --color-black-main: #14110a;
+  --color-white-main: #f7f1e2;
+  --color-grey-main: #999999;
   --border-radius1: 0.5rem;
   --border-main: solid 0.2rem;
+  --width-main: 550px;
+  --padding-main-top-down: 1.2rem;
 }
 
 body {
@@ -21,9 +25,20 @@ body {
   min-height: 100vh;
 }
 
-section {
-  width: 500px;
+nav {
+  text-align: center;
+  display: flex;
 }
+
+nav > * {
+  flex: 1 1 0;
+}
+
+section {
+  width: var(--width-main);
+}
+
+/* HEADER ============================================================ */
 
 header {
   width: 100%;
@@ -53,24 +68,20 @@ header {
 }
 .header_user {
   margin-left: auto;
-  /* width: 200px; */
   justify-content: space-between;
 }
 .header_user span,
-form {
+.header_user form {
   margin-left: 10px;
 }
 
 header nav {
-  text-align: center;
-  display: flex;
   width: 500px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-nav > * {
-  flex: 1 1 0;
-}
+
+/* MAIN ============================================================ */
 
 main {
   display: flex;
@@ -80,48 +91,71 @@ main {
 }
 main section {
   background-color: snow;
-  /* padding: 0.5rem; */
   margin-top: 0.5rem;
   border-radius: 0.5rem;
 }
-main nav {
-  text-align: center;
-  display: flex;
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-}
 
 .subnav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--padding-main-top-down);
+  padding-bottom: var(--padding-main-top-down);
+}
+
+.ads {
+  background-color: var(--color-yellow-main);
 }
 
 .ads img {
-  width: 500px;
+  width: var(--width-main);
   border-radius: var(--border-radius1);
 }
 
 .days > * {
-  padding: 1rem;
-}
-.days nav {
+  padding-top: var(--padding-main-top-down);
+  padding-bottom: var(--padding-main-top-down);
   border-bottom: solid 0.1rem var(--color-yellow-main);
 }
-.days_menu > *::after {
-  content: "|";
-  /* float: right; */
-  display: inline-block;
+
+.days > *:last-child {
+  border-bottom: none;
 }
 
-.days_menu *:last-child::after {
-  content: "";
+.days_menu {
+  display: flex;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
+
+.days_menu_left > * {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.days_menu_right {
+  font-size: 0.8rem;
+  color: var(--color-grey-main);
+  margin-left: auto;
+}
+
+.days_contents {
+}
+/* .days_menu_left > *::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.days_menu_left > *:last-child::after {
+  content: "";
+} */
+
+/* FOOTER ============================================================ */
 
 footer {
+  color: var(--color-black-main);
+  width: 100%;
+  padding: 1rem;
   margin-top: auto;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: var(--border-main) var(--color-black-main);
-  border-radius: var(--border-radius1);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
