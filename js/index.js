@@ -86,7 +86,8 @@ const clearMainContents = () => {
 };
 
 const bindSubMenuEvents = () => {
-    // TODO:콜백함수 따로 빼기
+    // TODO: 콜백함수 따로 빼기
+    // TODO: 서브메뉴 외 다른 메뉴에도 적용되도록
     $(".sub-menu").addEventListener("click", (e) => {
         const curEl = e.target.parentNode;
         const targetPage = e.target.innerText;
