@@ -49,12 +49,9 @@ body {
   background-color: var(--main-bg-color);
 }
 
-h1, h2, h3 {
-  font-size: 100%;
-}
-
-p {
+p, h1, h2, h3 {
   margin: 0;
+  font-size: 100%;
 }
 
 a {

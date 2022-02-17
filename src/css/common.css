@@ -4,3 +4,21 @@
   width: 100%;
   background-color: var(--second-bg-color);
 }
+
+.section-title {
+  margin-right: 5px;
+  font-size: var(--font-20px);
+  font-weight: var(--font-thin);
+}
+
+.section-total {
+  font-size: var(--font-14px);
+}
+
+.more {
+  font-size: var(--font-16px);
+}
+
+.section-total, .more {
+  color: var(--second-text-color);
+}
