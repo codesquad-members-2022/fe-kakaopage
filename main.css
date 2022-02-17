@@ -54,6 +54,10 @@ a {
 .font-color--black {
   color: #000;
 }
+
+.contents-container .header-container {
+  margin-bottom: 25px;
+}
 /*========== main header ==========*/
 
 .main-header {
@@ -137,6 +141,32 @@ h1 {
   right: 3%;
 }
 
+.contents-container {
+  padding: 20px 15px;
+}
+
+.contents-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.arrow-with-text {
+  width: 18px;
+  height: 18px;
+  color: #dee2e6;
+}
+
+.text-contents-more {
+  color: #868e96;
+}
+.nav-days {
+  font-size: 18px;
+  font-weight: 500;
+  color: #adb5bd;
+  padding: 20px 0px;
+
+  border-bottom: 1px solid #e9ecef;
+}
 /*========= main header nav ==========*/
 .main-header-nav {
   font-weight: 700;
