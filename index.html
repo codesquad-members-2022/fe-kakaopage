@@ -4,35 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/work-container.css">
-    <link rel="stylesheet" href="./css/new_work.css">
-    <link rel="stylesheet" href="./css/banner.css">
-    <link rel="stylesheet" href="./css/category_tab.css">
-    <link rel="stylesheet" href="./css/ranking_section.css">
-    <link rel="stylesheet" href="./css/webtoon.css">
-    <link rel="stylesheet" href="./css/daily-ranked-webtoon.css">
-    <link rel="stylesheet" href="./css/event.css">
-    <link rel="stylesheet" href="./css/app-link.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Alan | Kakaopage-clone</title>
 </head>
 <body>
-    <header>
+    <header class="top">
         <div class="header__container">
-            <h1 class="header__title">Kakaopage</h1>
-            <div class="header__elements">
+            <h1 class="header__logo"><a href="#"><img src="./img/kakaopage logo.svg" alt="카카오페이지 메인 로고" /></a></h1>
+            <div class="header__utils">
                 <form class="header__search-form">
-                    <input class="header__search-input" />
-                    <img class="header__search-icon" src='./img/icon/btn_search.png'>
+                    <input type="text" class="header__search-input" />
+                    <button type="submit" class="header__search-btn"><img src="img/검색 버튼.png"></button>
                 </form>
-                <button class="header__stage-btn">Stage</button>
-                <button class="header__charge-btn">캐시충전</button>
-                <button class="header__login-btn">로그인</button>
+                <div class="header__stage">
+                    <a href="#" class="header__stage-logo"><img src="img/스테이지.svg" alt="스테이지 로고"></a>
+                    <img class="header__stage-tooltip" src="img/stage-tooltip.svg" alt="스테이지 툴팁">
+                </div>
+                <div class="header__user-services">
+                    <div class="header__user-service"><a href="#">캐시충전</a></div>
+                    <div class="divider"></div>
+                    <div class="header__user-service"><a href="#">로그인</a></div>
+                </div>
             </div>
         </div>
     </header>
-    <nav class="main-tab tab">
+    <!-- <nav class="main-tab tab">
         <ul class="main-tab__container tab__container">
             <li>홈</li>
             <li>웹툰</li>
@@ -795,6 +791,6 @@
             <span>카카오페이지 앱으로 보기</span>
             <img class="inverted" src="./img/icon/right_arrow.svg">
         </a>
-    </div>
+    </div> -->
 </body>
 </html>
