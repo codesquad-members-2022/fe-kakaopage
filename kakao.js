@@ -1,3 +1,4 @@
+
 //웹툰을 클릭한다.
 const preCategoryMenu = document.querySelector(".main_category ul li:nth-child(2)")
 const mainCategoryMenu = document.querySelector(".main_category ul li:nth-child(3)");
