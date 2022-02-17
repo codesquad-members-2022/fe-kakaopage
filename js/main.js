@@ -1,7 +1,8 @@
 import { $ } from "./utils.js";
 import { issueComponent } from "../component/issueComponent.js";
 import { advertiseComponent } from "../component/advertiseComponent.js";
-import { issueObj, recommendationObj, rowListTitleObj } from "./constants.js";
+import { issueObj, rowListTitleObj } from "./constants.js";
+import { recommendationObj } from "./dummy.js";
 import { rowListContainer } from "../container/rowListContainer.js";
 
 const main = {
