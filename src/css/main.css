@@ -122,6 +122,8 @@ img { width: 100%; }
 
 .snb__item { font-size: 1.25rem; color: #adb5bd; cursor: pointer; }
 
+.snb__item--active { color: #212529; font-weight: 500; }
+
 .grid-menu { background: #fff; padding: 20px; }
 
 .grid-menu__list { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr 1fr; grid-template-columns: 1fr 1fr 1fr; gap: 2px; border-radius: 8px; overflow: hidden; }

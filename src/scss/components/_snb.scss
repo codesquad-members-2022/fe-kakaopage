@@ -13,4 +13,9 @@
     color: $gray-5;
     cursor: pointer;
   }
+
+  &__item--active {
+    color: $gray-9;
+    font-weight: 500;
+  }
 }
