@@ -1,8 +1,8 @@
-import { renderContents } from "./core.js";
+import { renderGenreContents } from "./core.js";
 
 const handleNavGenre = (event) => {
   const genre = event.target.dataset.genre;
-  renderContents(genre);
+  renderGenreContents(genre);
 };
 
 const handleNavDays = (event) => {};

@@ -1,15 +1,15 @@
 const main = document.querySelector(".main");
 const contentsBox = main.querySelector(".main__contentsBox");
 
-import Home from "../screens/Home.js";
-import Days from "../screens/Days.js";
-import Webtoon from "../screens/Webtoon.js";
-import Boy from "../screens/Boy.js";
-import Drama from "../screens/Drama.js";
-import Romance from "../screens/Romance.js";
-import Rofan from "../screens/Rofan.js";
-import Action from "../screens/Action.js";
-import BL from "../screens/BL.js";
+import Home from "../screens/Webtoon/genre/Home.js";
+import Days from "../screens/Webtoon/genre/Days.js";
+import Webtoon from "../screens/Webtoon/genre/Webtoon.js";
+import Boy from "../screens/Webtoon/genre/Boy.js";
+import Drama from "../screens/Webtoon/genre/Drama.js";
+import Romance from "../screens/Webtoon/genre/Romance.js";
+import Rofan from "../screens/Webtoon/genre/Rofan.js";
+import Action from "../screens/Webtoon/genre/Action.js";
+import BL from "../screens/Webtoon/genre/BL.js";
 
 const screens = {
   home: Home,
@@ -23,9 +23,9 @@ const screens = {
   bl: BL,
 };
 
-const renderContents = (genre) => {
+const renderGenreContents = (genre) => {
   const screen = screens[genre]();
   contentsBox.innerHTML = screen;
 };
 
-export { renderContents };
+export { renderGenreContents };
