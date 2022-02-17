@@ -598,15 +598,249 @@ export const nodes = {
     </div>
 </div>`,
     "weekday-serial": `<div class="weekday-serial bg-white margin-top-default">
-<ul class="week-day-menu group-flex bg-white">
-    <li class="active"><a href="">월</a></li>
-    <li><a href="">화</a></li>
-    <li><a href="">수</a></li>
-    <li><a href="">목</a></li>
-    <li><a href="">금</a></li>
-    <li><a href="">토</a></li>
-    <li><a href="">일</a></li>
-    <li><a href="">완결</a></li>
-</ul>
-</div>`,
+                        <ul class="week-day-menu group-flex bg-white">
+                            <li class="active"><a href="">월</a></li>
+                            <li><a href="">화</a></li>
+                            <li><a href="">수</a></li>
+                            <li><a href="">목</a></li>
+                            <li><a href="">금</a></li>
+                            <li><a href="">토</a></li>
+                            <li><a href="">일</a></li>
+                            <li><a href="">완결</a></li>
+                        </ul>
+
+                            <ol class="webtoon-card-wrap group-flex padding-default">
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+
+                <li class="webtoon-card">
+                    <div class="thumbnail-wrap">
+                        <img
+                            src="./images/dog.png"
+                            alt="극한견주"
+                            class="thumbnail"
+                        />
+                        <div class="group-flex rank-info">
+                            <span>1위</span>
+                            <img
+                                src="./images/bmbadge_waitfree.svg"
+                                alt="기다리면 무료 아이콘"
+                            />
+                        </div>
+                    </div>
+                    <p class="title">극한견주</p>
+                    <div class="reader-info">
+                        <span>UP</span>
+                        <span>아이콘</span>
+                        <span>인원수</span>
+                    </div>
+                </li>
+            </ol>
+
+
+                    </div>`,
 };

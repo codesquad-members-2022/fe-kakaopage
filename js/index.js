@@ -11,7 +11,7 @@ const webtoonMenu = {
         "daily-best",
         "recommend-best",
     ],
-    요일연재: ["weekday-serial", "weekday-serial-best"],
+    요일연재: ["weekday-serial"],
     웹툰: 3,
     소년: 4,
     드라마: 5,

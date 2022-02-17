@@ -344,11 +344,8 @@ main {
     opacity: 0.6;
 }
 
-.weekday-serial {
-    height: 60px;
-}
-
 .week-day-menu {
+    height: 60px;
     color: var(--light-gray);
     font-size: 1.2rem;
     text-align: center;
