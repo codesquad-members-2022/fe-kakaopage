@@ -349,18 +349,18 @@ table {
   margin: 0 auto; }
 
 .genre {
-  padding: 9px 7px;
   margin: 10px 0;
   background-color: #fff; }
   .genre .genre-list {
     display: flex;
     justify-content: space-between;
-    font-size: 18px; }
+    font-size: 19px; }
   .genre .genre-list__item {
-    margin: 15px 5px;
+    padding: 25px 15px;
     color: #999;
     cursor: pointer; }
   .genre .genre-list__item--focus {
+    font-weight: 600;
     color: #333; }
 
 .webtoon-slide {
@@ -500,15 +500,16 @@ table {
 .serial__list {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
   font-size: 18px;
   border-bottom: 1px solid #f1f1f1; }
 
 .serial__item {
+  padding: 20px 30px;
   color: #bbb;
   cursor: pointer; }
   .serial__item--focus {
-    color: #333; }
+    color: #333;
+    border-bottom: 2px solid #ffd200; }
 
 .serial__webtoons {
   display: flex;
@@ -626,3 +627,9 @@ table {
   background-color: #ffd200;
   border: 0;
   border-radius: 10px; }
+
+.display__block {
+  display: block; }
+
+.display__none {
+  display: none; }

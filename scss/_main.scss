@@ -13,23 +13,23 @@
 }
 
 .genre {
-  padding: 9px 7px;
   margin: 10px 0;
   background-color: $white;
 
   .genre-list {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .genre-list__item {
-    margin: 15px 5px;
+    padding: 25px 15px;
     color: $nav-gray;
     cursor: pointer;
   }
 
   .genre-list__item--focus {
+    font-weight: 600;
     color: $black;
   }
 }
@@ -211,17 +211,18 @@
 .serial__list {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
   font-size: 18px;
   border-bottom: 1px solid $border-gray;
 }
 
 .serial__item {
+  padding: 20px 30px;
   color: $day-gray;
   cursor: pointer;
 
   &--focus {
     color: $black;
+    border-bottom: 2px solid $yellow;
   }
 }
 

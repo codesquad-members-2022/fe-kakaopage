@@ -19,6 +19,7 @@
       href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611"
       type="image/x-icon"
     />
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -231,7 +232,11 @@
           </div>
           <div class="serial__nav">
             <ul class="serial__list">
-              <li><div class="serial__item serial__item--focus">월</div></li>
+              <li>
+                <div class="serial__item serial__item--focus" data-day="mon">
+                  월
+                </div>
+              </li>
               <li><div class="serial__item">화</div></li>
               <li><div class="serial__item">수</div></li>
               <li><div class="serial__item">목</div></li>
@@ -242,7 +247,7 @@
             </ul>
           </div>
           <div class="serial__webtoons">
-            <ul>
+            <ul class="serial-webtoon__list">
               <li class="serial__webtoon">
                 <div class="serial__thumbnail">
                   <img
@@ -268,6 +273,7 @@
                     <div class="serial-webtoon__user">
                       <div class="serial-webtoon__user--icon">
                         <img
+                          class="serial-webtoon__user--ico"
                           src="./images/icon_read_count.png"
                           alt="유저 아이콘"
                           width="11px"
