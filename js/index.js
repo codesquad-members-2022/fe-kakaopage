@@ -1,4 +1,8 @@
 import { createBanner } from "../components/banner/index.js";
+import { createCategory } from "../components/category/index.js";
+import { CATEGORIES } from "./constants.js";
+
+const category = createCategory(CATEGORIES);
 
 const banner = createBanner({
   title: "내가 죽였다",
@@ -12,4 +16,5 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
+$(".contents").insertAdjacentHTML("beforeend", category);
 $(".contents").insertAdjacentHTML("beforeend", banner);

@@ -1,3 +1,10 @@
+:root {
+  /* font size */
+  --medium: 20px;
+  /* color */
+  --white: #fff;
+}
+
 .header-container {
   height: 80px;
   position: fixed;
@@ -101,12 +108,30 @@
 .contents {
   display: block;
   height: fit-content;
-  overflow: scroll;
+  overflow: hidden;
   margin-top: 146px;
 }
 
+.category {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.category > ul {
+  width: 720px;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 22px 0 22px 0;
+  background-color: var(--white);
+}
+
+.category > ul > li {
+  font-size: var(--medium);
+  cursor: pointer;
+}
+
 .banner {
-  margin: 20px auto;
+  margin: 10px auto;
   width: 720px;
   height: 480px;
 }
