@@ -122,13 +122,13 @@ body{
     justify-content:space-around;
 }
 
-.main_category ul li a{
+.main_category ul li{
     color:var(--letter-color);
     font-size:20px;
     line-height: 70px;
 }
 
-.main_category ul .sub_active a{
+.main_category ul .sub_active{
     color:#000;
     font-weight:500;
 }
