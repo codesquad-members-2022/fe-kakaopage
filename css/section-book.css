@@ -52,3 +52,7 @@
     margin: 8px 5px;
     color: black;
 }
+
+.section__book-text-wrapper h4 {
+    margin: 0;
+}
