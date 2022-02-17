@@ -1,5 +1,5 @@
-import { renderMainNav } from '../render.js';
-import { MainNavItems } from '../data';
+import { renderMainNav, renderContentsNav } from '../render.js';
+import { MainNavItems, ContentsNavItems } from '../data';
 
 const changeSelectedItem = (items, selectedItem) => {
   items.forEach((item) =>
@@ -15,7 +15,10 @@ const handleNav = (e) => {
     renderMainNav();
   }
 
-  // if (nav.classList.contains('contents-nav')) changeSelectedItem(ContentsNavItems, selectedItem);
+  else if (nav.classList.contains('contents-nav')) {
+    changeSelectedItem(ContentsNavItems, selectedItem);
+    renderContentsNav();
+  }
 };
 
 const checkTarget = (e) => e.target.tagName === 'LI';
