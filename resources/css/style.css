@@ -356,6 +356,9 @@ main {
     margin-bottom: 11px;
     font-size: 16px;
     color: var(--color-black-contents-menu);
+    overflow : hidden; 
+    text-overflow : ellipsis; 
+    white-space : nowrap;
 }
 
 .comic-list__info {
