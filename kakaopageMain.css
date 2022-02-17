@@ -134,17 +134,14 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.webtoonGenreBar > * > * {
-  text-decoration: none;
+.webtoonGenreBar > * {
   font-size: 20px;
   color: #999;
   font-weight: bold;
 }
 .genreHome {
   width: 52.8px;
-}
-.homeLink {
-  color: black;
+  color: #000;
 }
 .weekday,
 .action {
@@ -442,6 +439,10 @@ nav {
   color: #999;
   font-weight: bold;
   border-bottom: 1px solid #eee;
+}
+.monday {
+  border-bottom: 3px solid #ffd200;
+  color: black;
 }
 .weekdayContentWrap {
   width: 100%;
