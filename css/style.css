@@ -31,19 +31,20 @@
     justify-content: center;
 }
 
-.nav {
-    height: var(--nav-height);
+.contents > *{
+    width: var(--main-width);
+    background-color: var(--color-white);
 }
 
-.nav__container {
+.tab__container {
     box-sizing: border-box;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto;
 }
 
-.nav__item--selected {
+.tab__item--selected {
     border-bottom: solid 2px var(--color-yellow);
 }
 
@@ -131,6 +132,7 @@ header {
 
 .gnb__container {
     width: var(--main-width);
+    height: var(--nav-height);
     padding-top: 30px;
 }
 
@@ -143,8 +145,7 @@ header {
 /* genre-tab */
 
 .genre-tab {
-    width: var(--main-width);
-    background-color: var(--color-white);
+    height: 70px;
 }
 
 .genre-tab__container {
@@ -153,7 +154,7 @@ header {
 }
 
 .genre-tab__item {
-    height: 70px;
+    height: 100%;
     font-weight: 400;
     font-size: 1.25rem;
     color: var(--color-light-gray);
@@ -164,3 +165,4 @@ header {
     font-weight: 600;
 }
 
+/* main-banner */
