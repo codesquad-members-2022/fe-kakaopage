@@ -1,0 +1,26 @@
+
+.footer {
+    background-color: var(--main-gray);
+    height: 150px;
+}
+
+.footerWrap {
+    height: 100%;
+}
+
+.footer__menus {
+    padding-top: 70px;
+}
+
+.footer__menu {
+    text-decoration: none;
+    color: var(--main-darkgray);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.footer__kakao {
+
+    font-size: 17px;
+}
+
