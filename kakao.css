@@ -126,6 +126,7 @@ body{
     color:var(--letter-color);
     font-size:20px;
     line-height: 70px;
+    cursor:pointer;
 }
 
 .main_category ul .sub_active{
