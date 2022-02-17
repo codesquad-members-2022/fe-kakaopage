@@ -2,6 +2,10 @@
 @import "constants.css";
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+.border__ellipse {
+    border-radius: 20px 20px 20px 20px;
+}
+
 .flex__center {
     display: flex;
     align-items: center;
@@ -48,7 +52,6 @@ header {
     width: 186px;
     padding: 3px;
     border: 1px solid var(--color-gray-border);
-    border-radius: 20px 20px 20px 20px;
 }
 
 .search__input {
@@ -148,6 +151,11 @@ main {
     margin: 165px auto 0;
 }
 
+.section {
+    background-color: var(--color-white);
+    margin-top: 11px;
+}
+
 .main-nav {
     width: 720px;
     margin: 0 auto;
@@ -176,8 +184,6 @@ main {
     display: flex;
     width: 720px;
     height: 480px;
-    margin-top: 11px;
-    background-color: var(--color-white);
 }
 
 .banner {
@@ -295,6 +301,34 @@ main {
     font-weight: 500;
     text-align: right;
     opacity: 0.6;
+}
+
+.contents_menu {
+    padding: 20px;
+}
+
+.contents_menu * {
+    color: var(--color-black-contents-menu);
+}
+
+.contents_menu__container {
+    flex-flow: row wrap;
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+}
+
+.contents_menu__item {
+    width: calc((100% / 3) - 22px);
+    height: 58px;
+    padding: 0 10px 0 10px;
+    border-bottom: 2px solid var(--color-white);
+    border-right: 2px solid var(--color-white);
+    background-color: var(--color-contents-background);
+}
+
+.contents_menu__title {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 footer {
