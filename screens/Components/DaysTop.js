@@ -3,23 +3,9 @@
  * CardList
  * CardList
  */
+import DaysList from "./DaysList.js";
 
-import Card from "./Card.js";
-
-const DaysTop = () => {
-  // TODO: Data 넣기
-  const cardList = [
-    { title: "도굴왕" },
-    { title: "빈껍데기공작부인" },
-    { title: "다정한 그대를 모시기" },
-    { title: "로열 셰프 영애님" },
-    { title: "궁귀검신" },
-    { title: "악녀는 두번 산다" },
-    { title: "용사의 전 여친 입니다" },
-    { title: "던전 리셋" },
-    { title: "화타가 된 외과의사" },
-    { title: "막내 황녀님" },
-  ];
+const DaysTop = (day) => {
   return `<li class="mainBox main__contents">
     <div class="contents">
       <div class="contents__header">
@@ -33,17 +19,33 @@ const DaysTop = () => {
       </div>
       <div class="contents__body">
         <ul class="contents__daysNav">
-          <li data-days="mon" data-series-end="false">월</li>
-          <li data-days="tue" data-series-end="false">화</li>
-          <li data-days="wed" data-series-end="false">수</li>
-          <li data-days="thu" data-series-end="false">목</li>
-          <li data-days="fri" data-series-end="false">금</li>
-          <li data-days="sat" data-series-end="false">토</li>
-          <li data-days="sun" data-series-end="false">일</li>
-          <li data-series-end="true">완결</li>
+          <li class="${
+            day === "월" ? "selected" : ""
+          }" data-days="mon" data-series-end="false">월</li>
+          <li class="${
+            day === "화" ? "selected" : ""
+          }" data-days="tue" data-series-end="false">화</li>
+          <li class="${
+            day === "수" ? "selected" : ""
+          }" data-days="wed" data-series-end="false">수</li>
+          <li class="${
+            day === "목" ? "selected" : ""
+          }" data-days="thu" data-series-end="false">목</li>
+          <li class="${
+            day === "금" ? "selected" : ""
+          }" data-days="fri" data-series-end="false">금</li>
+          <li class="${
+            day === "토" ? "selected" : ""
+          }" data-days="sat" data-series-end="false">토</li>
+          <li class="${
+            day === "일" ? "selected" : ""
+          }" data-days="sun" data-series-end="false">일</li>
+          <li class="${
+            day === "완료" ? "selected" : ""
+          }" data-series-end="true">완결</li>
         </ul>
         <ul class="contentsCard">
-          ${cardList.map((card) => Card(card)).join("")}
+          ${DaysList(day, 10)}
         </ul>
       </div>
     </div>

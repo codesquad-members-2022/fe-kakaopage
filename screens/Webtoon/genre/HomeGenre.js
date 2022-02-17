@@ -12,7 +12,7 @@ const HomeGenre = () => {
     ${MainBanner()}
     ${NavDetail()}
     ${SubBanner()}
-    ${DaysTop()}
+    ${DaysTop("화")}
     ${BigCardList("기대 신작 TOP")}
     ${GenreTop("로맨스")}
     ${GenreTop("드라마")}

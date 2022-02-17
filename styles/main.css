@@ -219,7 +219,7 @@
   width: 12%;
   border-bottom: 2px solid #f1f1f1;
 }
-.contents__daysNav li:nth-child(2) {
+.contents__daysNav .selected {
   color: #333333;
   border-bottom: 2px solid #ffd200;
 }
