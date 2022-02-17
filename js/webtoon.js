@@ -1,7 +1,9 @@
 import { makeImageSection } from './contents.js';
 import { makeDate } from './contents.js';
 import { makeWebtoonInfo } from './contents.js';
+import { makeTitle } from './contents.js';
 import { makePromotion } from './contents.js';
+import { makeClockImage } from './contents.js';
 
 export default function addHTML() {
   document.querySelector('.clear').innerHTML = `
@@ -12,6 +14,8 @@ export default function addHTML() {
     '21.1',
     '자살 아니야. 내가 죽였어'
   )}
+
+  <section class="today_top">
   ${makeDate('전체')} 
   ${makeWebtoonInfo(
     'https://dn-img-page.kakao.com/download/resource?kid=dy1Oc2/hywgI1bMRS/7QsDTWgZtp8XA30K0Si1u0&filename=th2',
@@ -46,13 +50,12 @@ export default function addHTML() {
     '어른이',
     '20대가 되면 멋진 어른이 되는 줄 알았어.',
     '12.4',
-    '하힘',
-    false
+    '하힘'
   )}
+  </section>
 
   <section class="today_top">
-  <span class="section_title">🔥HOT 최근 프로모션 진행작</span>
-  <span class="more_content">더보기👉</span>
+  ${makeTitle('🔥HOT 최근 프로모션 진행작', '더보기👉')}
   ${makePromotion(
     'https://dn-img-page.kakao.com/download/resource?kid=rQjE3/hzp2l39Lfz/8MWGhF07tZNNjDE8txEzW0&filename=th2',
     '인터넷 중독 캠프',
@@ -69,13 +72,12 @@ export default function addHTML() {
     '허니보이',
     '웹툰'
   )}
-  ${makePromotion(
+  ${makeClockImage(
     'https://dn-img-page.kakao.com/download/resource?kid=B9yif/hyoXEYHVNL/gMonAbOI5FKnlnRpgUvmR0&filename=th2',
     '학사재생',
     '금수저를 물고 태어나 버렸다!',
     '167',
-    '소유현, 윰짝짝',
-    '🕔'
+    '소유현, 윰짝짝'
   )}
   ${makePromotion(
     'https://dn-img-page.kakao.com/download/resource?kid=n79ft/hywgA9NVsj/sTq4TRecVyVL4cMEKuziO1&filename=th2',
