@@ -597,4 +597,16 @@ export const nodes = {
         <p class="info">슬라이드 페이지 수</p>
     </div>
 </div>`,
+    "weekday-serial": `<div class="weekday-serial bg-white margin-top-default">
+<ul class="week-day-menu group-flex bg-white">
+    <li class="active"><a href="">월</a></li>
+    <li><a href="">화</a></li>
+    <li><a href="">수</a></li>
+    <li><a href="">목</a></li>
+    <li><a href="">금</a></li>
+    <li><a href="">토</a></li>
+    <li><a href="">일</a></li>
+    <li><a href="">완결</a></li>
+</ul>
+</div>`,
 };
