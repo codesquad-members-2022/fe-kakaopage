@@ -1,9 +1,10 @@
 :root {
     --color-white: #fff;
     --color-black: #000;
-    --color-gray-border: #ccc;
-    --color-gray-background: #eee;
+    --color-black-font: #222;
+    --color-gray-border: #cfcfcf;
+    --color-gray-background: #e2e2e2;
     --color-darkgray-font: #999;
     --color-gray-font: #bbb;
-    --color-yellow: #fd0;
+    --color-yellow: #ffd200;
 }
