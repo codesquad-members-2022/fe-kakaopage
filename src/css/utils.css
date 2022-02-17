@@ -1,0 +1,8 @@
+.content--center {
+  width: var(--main-width);
+  margin: auto;
+}
+
+.underline--yellow {
+  border-bottom: 3px solid #ffd200;
+}
