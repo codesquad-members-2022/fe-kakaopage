@@ -34,6 +34,8 @@ body{
     height: 10rem;
 }
 .head, .navbar__menu{
+    /* top:0px; 
+    position: sticky; */
     display: flex;
     height: 5rem;
     background-color: var(--main-white);
@@ -75,5 +77,5 @@ li{
 }
 /* 콘텐츠 높이 */
 .wating,.daily{
-    height: 30rem;
+    height: 35rem;
 }
