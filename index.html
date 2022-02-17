@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
     <title>홈 | 카카오페이지</title>
 </head>
 <body>
@@ -42,12 +42,12 @@
         <nav class="gnb">
             <div class="inner">
                 <ul>
-                    <li><button type="button"><img src="./assets/images/common/gnb_home.svg" alt="홈"></button></li>
-                    <li class="active"><button type="button"><img src="./assets/images/common/gnb_webtoon.svg" alt="웹툰"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_novel.svg" alt="웹소설"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_movie.svg" alt="영화"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_broadcast.svg" alt="방송"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_book.svg" alt="책"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_home.svg" alt="홈"></button></li>
+                    <li class="active" data-gnb="webtoon"><button type="button"><img src="./assets/images/common/gnb_webtoon.svg" alt="웹툰"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_novel.svg" alt="웹소설"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_movie.svg" alt="영화"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_broadcast.svg" alt="방송"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_book.svg" alt="책"></button></li>
                 </ul>
             </div>
         </nav>
@@ -57,15 +57,15 @@
             <div class="inner">
                 <nav class="lnb">
                     <ul>
-                        <li class="active"><button type="button">홈</button></li>
-                        <li><button type="button">요일연재</button></li>
-                        <li><button type="button">웹툰</button></li>
-                        <li><button type="button">소년</button></li>
-                        <li><button type="button">드라마</button></li>
-                        <li><button type="button">로맨스</button></li>
-                        <li><button type="button">로판</button></li>
-                        <li><button type="button">액션무협</button></li>
-                        <li><button type="button">BL</button></li>
+                        <li class="active" data-lnb="home"><button type="button">홈</button></li>
+                        <li data-lnb="day"><button type="button">요일연재</button></li>
+                        <li data-lnb="webtoon"><button type="button">웹툰</button></li>
+                        <li data-lnb="boy"><button type="button">소년</button></li>
+                        <li data-lnb="drama"><button type="button">드라마</button></li>
+                        <li data-lnb="romance"><button type="button">로맨스</button></li>
+                        <li data-lnb="romance_fantasy"><button type="button">로판</button></li>
+                        <li data-lnb="action"><button type="button">액션무협</button></li>
+                        <li data-lnb="BL"><button type="button">BL</button></li>
                     </ul>
                 </nav>
                 <section class="main_contents">
