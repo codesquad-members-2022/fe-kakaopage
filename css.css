@@ -4,6 +4,7 @@
 @import url(./css/article.css);
 @import url(./css/recommend-banner.css);
 @import url(./css/footer.css);
+@import url(./weekdays.css);
 
 :root {
     --main-color: #eeeeee;

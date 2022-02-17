@@ -24,7 +24,13 @@ navListsEl.forEach((navList) => {
             })
             main.innerHTML = '';
             e.target.classList.add('active');
-            main.innerHTML += renderArticle__webtoonRowList();
+
+            if(e.target.textContent === "요일") {
+                main.innerHTML += renderWeekdays_base();
+                addWeekdays_ArticleSection(10);
+            }
         }
     })
 })
+
+import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';
