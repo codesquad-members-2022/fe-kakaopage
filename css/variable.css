@@ -3,8 +3,10 @@
     --main-width: 720px;
     --nav-height: 70px;
 
+    --color-black: #000;
     --color-white: #fff;
     --color-yellow: #ffd200;
     --color-gray: #999;
+    --color-light-gray: #BBB;
     --color-body: #eee;
 }

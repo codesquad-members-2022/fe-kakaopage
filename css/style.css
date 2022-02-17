@@ -26,7 +26,9 @@
 }
 
 .contents {
-    background-color: var(--color-gray);
+    margin-top: calc(var(--header-height) + var(--nav-height) + 20px);
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
@@ -136,4 +138,29 @@ header {
     padding: 0px 30px;
 }
 
+/* contents */
+
+/* genre-tab */
+
+.genre-tab {
+    width: var(--main-width);
+    background-color: var(--color-white);
+}
+
+.genre-tab__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.genre-tab__item {
+    height: 70px;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--color-light-gray);
+}
+
+.genre-tab__item--selected {
+    color: var(--color-black);
+    font-weight: 600;
+}
 
