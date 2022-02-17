@@ -3,6 +3,8 @@
 @import url(./css/section-book.css);
 @import url(./css/article.css);
 @import url(./css/recommend-banner.css);
+@import url(./css/footer.css);
+
 :root {
     --main-color: #eeeeee;
     --sub-color: #f9d201;
