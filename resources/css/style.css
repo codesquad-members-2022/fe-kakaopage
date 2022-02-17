@@ -419,6 +419,13 @@ main {
     height: 16px;
 }
 
+.contents-container__comic-count {
+    font-size: 14px;
+    color: var(--color-darkgray-font);
+    margin-left: 3px;
+    margin-right: auto;
+}
+
 footer {
     display: flex;
     width: 720px;
