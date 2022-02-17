@@ -65,3 +65,41 @@
     background-color: #fff;
 }
 
+
+.article__ranking3 {
+    width: 720px;
+    height: 490px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.article__ranking3 header {
+    height: 50px;
+}
+
+.article__ranking3-list {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px;
+}
+
+.article__ranking3-num {
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.article__ranking3 img {
+    width: 80px;
+    height: 110px;
+    margin: 10px;
+}
+
+.article__ranking-list-text-wrapper {
+    padding: 10px;
+}
+
+.article__ranking-list-text {
+    font-size: 16px;
+}
