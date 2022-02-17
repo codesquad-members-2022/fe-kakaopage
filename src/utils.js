@@ -5,4 +5,12 @@ const updateSelectedNode = (nodeList, target) => {
   target.classList.add("selected");
 };
 
-export { updateSelectedNode };
+const getJson = (dataName) => {
+  return new Promise((resolve) => {
+    fetch(`../data/${dataName}.json`)
+      .then((response) => response.json())
+      .then((json) => resolve(json));
+  });
+};
+
+export { updateSelectedNode, getJson };

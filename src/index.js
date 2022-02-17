@@ -3,7 +3,7 @@ import { renderCategoryContents } from "./core.js";
 import WebtoonCategory from "../screens/Webtoon/WebtoonCategory.js";
 import { handleNavCategory } from "./nav-category.js";
 
-const init = (category, genre) => {
+const init = async (category, genre) => {
   const initCategory = category;
   const initGenre = genre;
   [...headerNav.children].forEach((categoryNode) => {
@@ -12,7 +12,7 @@ const init = (category, genre) => {
     }
     categoryNode.addEventListener("click", handleNavCategory);
   });
-  renderCategoryContents(WebtoonCategory(initGenre));
+  renderCategoryContents(await WebtoonCategory(initGenre));
 };
 
 init("webtoon", "home");

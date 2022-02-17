@@ -5,7 +5,7 @@ import categories from "../categories.js";
 const headerNav = document.querySelector(".header__nav");
 const nav = document.querySelector(".main__navGenre");
 
-const handleNavCategory = (event) => {
+const handleNavCategory = async (event) => {
   const target = event.target.closest(".header__nav-item");
   updateSelectedNode(headerNav, target);
 
@@ -16,7 +16,7 @@ const handleNavCategory = (event) => {
   } else {
     nav.style.display = "flex";
   }
-  renderCategoryContents(categories[category]("home"));
+  renderCategoryContents(await categories[category]("home"));
 };
 
 export { handleNavCategory };
