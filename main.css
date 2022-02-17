@@ -224,6 +224,12 @@ main {
   left: 0px;
 }
 
+.banner-bottom-text--small {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 5px;
+}
+
 /*========== category button  ==========*/
 .category-buttons-container {
   padding: 20px;
@@ -248,6 +254,13 @@ main {
 
 .promotion-container img {
   width: 80%;
+}
+
+/*========== 기대신작 ==========*/
+.upto-webtoons-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 /*========== footer ==========*/
