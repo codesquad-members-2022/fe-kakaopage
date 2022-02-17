@@ -1,5 +1,7 @@
+import home from './home.js';
 import serial from './serial.js';
 import webtoon from './webtoon.js';
+import boy from './boy.js';
 
 (function init() {
   const $ = (selector) =>
@@ -21,6 +23,7 @@ function changeUI(e) {
 
   switch (title) {
     case '홈':
+      home();
       break;
     case '요일연재':
       serial();
@@ -29,6 +32,7 @@ function changeUI(e) {
       webtoon();
       break;
     case '소년':
+      boy();
       break;
     case '드라마':
       break;
