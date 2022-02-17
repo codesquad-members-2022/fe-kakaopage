@@ -552,3 +552,16 @@
 .ranking__content {
   margin-bottom: 30px;
 }
+
+.ad {
+  width: 720px;
+  height: 98px;
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+.ad__contents {
+  width: 504px;
+  height: 98px;
+  margin: auto auto;
+}
