@@ -33,13 +33,13 @@
   top: 400px;
   left: 20px;
 }
-.image-box__event div {
+.image-box__event__comment-box {
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.image-box__event div span {
+.image-box__event__comment-box__comment {
   margin-left: 5px;
   font-size: 1.25rem;
 }
