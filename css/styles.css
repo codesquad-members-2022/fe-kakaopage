@@ -18,7 +18,7 @@ body {
 }
 
 .selected-text {
-  color: black;
+  color: #000000;
   position: relative;
   z-index: 1;
 }

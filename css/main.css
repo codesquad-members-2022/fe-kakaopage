@@ -16,7 +16,7 @@
   justify-content: space-between;
   border-top: solid 2px;
   border-bottom: solid 2px;
-  border-color: rgba(0, 0, 0, 0.048);
+  border-color: #f3f3f3;
 }
 .main-content__content__menu__left {
   margin-left: 15px;
@@ -42,7 +42,7 @@
 }
 
 .main-content__content__main {
-  background-color: white;
+  background-color: #ffffff;
   width: 720px;
   display: flex;
   justify-self: start;
