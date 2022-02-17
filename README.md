@@ -1,5 +1,13 @@
 # fe-kakaopage
 
+# step2 미션관련 목표 체크리스트
+
+- [ ] css 리팩토링
+- [x] 이미지 슬라이드 (무한 루프 실패)
+- [x] 홈 화면 클릭시 하단 구성 배치 변경
+- [ ] 요일 연재 클릭시 기존 화면으로 재배치
+- [x] 깃로그 스타일 변경해보기
+
 ## 미션 1 - 카카오페이지 클론-HTML,CSS개발
 
 ---
@@ -221,8 +229,9 @@ Element.nextElementSibling
 nodeValue VS textContent
 
 - nodeValue: 텍스트 노드를 참조할시 텍스트를 반환한다. 이때 텍스트 노드가 아닐시  
-  null을 반환하므로 의미가 없다(쓰기불편).  
-   - ex) document.getElementbyID('example').nodeValue // null 이다 - document.getElementbyID('example').firstChild.nodeValue // text값이 나온다.
+  null을 반환하므로 의미가 없다(쓰기불편).
+
+  - ex) document.getElementbyID('example').nodeValue // null 이다 - document.getElementbyID('example').firstChild.nodeValue // text값이 나온다.
 
 - textContent: 요소노드를 참조해도 텍스트를 반환한다. textContent 프로퍼티에  
   문자열을 할당하면 요소 노드의 모든 자식 노드가 제거되고 할당한 문자열이  

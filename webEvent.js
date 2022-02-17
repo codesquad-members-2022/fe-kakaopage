@@ -36,12 +36,20 @@ document
   .addEventListener("click", onclickRecNav);
 
 function onclickRecNav(event) {
-  //추후 target의 textContent에 따라 내용이 달라지게 구성할 예정
-  if (event.target.textContent !== contentsChecker) {
+  if (
+    event.target.textContent === "요일연재" &&
+    event.target.textContent !== contentsChecker
+  ) {
     chageMainSecHome();
+  } else if (
+    event.target.textContent === "홈" &&
+    event.target.textContent !== contentsChecker
+  ) {
+    chageMainSecWoD();
   }
 }
 
+// 메인화면 홈으로 레이아웃 변경
 function chageMainSecHome() {
   const $mainComponet = document.querySelector(".main");
   const leftNavToggleFont = [
@@ -54,7 +62,7 @@ function chageMainSecHome() {
 
   $navBar.style.display = "none";
 
-  switchMainCartoonZone();
+  cartoonZoneSwitchVertical();
 
   for (let i = 0; i < 3; i++) {
     const $cloneMain = $mainComponet.cloneNode(true);
@@ -62,7 +70,7 @@ function chageMainSecHome() {
   }
 
   switchToggleText(leftNavToggleFont);
-  contentsChecker = "홈";
+  contentsChecker = "요일연재";
 }
 
 function switchToggleText(textArray) {
@@ -83,7 +91,8 @@ function switchToggleText(textArray) {
   });
 }
 
-function switchMainCartoonZone() {
+// 메인컨텐츠(만화로)수직배치
+function cartoonZoneSwitchVertical() {
   const $cartoonZone = document.querySelector(".main__cartoonZone");
   $cartoonZone.classList.add("ev__main__cartoonZone");
 
@@ -96,9 +105,9 @@ function switchMainCartoonZone() {
   const $imgInfo = document.querySelectorAll(".main__cartoonZone--info");
   $imgInfo.forEach((el) => el.classList.add("ev__main__cartoonZone--info"));
 
-  const $newCartoonZone = document.querySelectorAll(
+  const $newCartoonZone = document.querySelector(
     ".main__cartoonZone.ev__main__cartoonZone"
-  )[0];
+  );
 
   while ($newCartoonZone.hasChildNodes()) {
     $newCartoonZone.removeChild($newCartoonZone.firstChild);
@@ -109,3 +118,6 @@ function switchMainCartoonZone() {
     $newCartoonZone.append($cloneimgShell);
   }
 }
+
+// 메인화면을 요일연재로 바꾸는함수
+function chageMainSecWoD() {}
