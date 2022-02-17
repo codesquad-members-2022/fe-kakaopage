@@ -22,23 +22,16 @@
 
 ## 큰 흐름
 
-- nested router 어느 깊이까지 도달할지
-- spa로 만들기(css폴더, 및 static유지)
-- css -> scss
-- static 소스 관리
-- 더미 데이터로 만들기
+- `클래스를 사용하지 말라는 요구사항을 못보고 클래스를 사용하다가 리팩토링`
+- spa로 헤더의 탭을 누르면 하위 콘텐츠및 타이틀이 변경되게 하기
 
-## 구체적인 방향
+## 고민
 
-- js html탬플릿 만들어서 viewer분리
+- spa처럼 만들려다가 주소를 `a href="/" -> a href="/path"` 이런식으로 하면 html이 하나여서 빈화면으로 넘어감.
 
-  - body#id로 가져올까하다가 header, main(main도 구분해서) 미리 표시될 수 있게하기
-  - 유튜브 로딩될 때 회색 화면 마냥
+  - 어떤 path이던지 index.html을 다시 랜더링하면 될려나?
+  - 서버가 있다면 app.get("/\*" (\_, res) => res.sendfile(<root file path>, "index.html"))로 계속 html파일을 렌더링해야할듯.
+  - 서버 없이는 불가능한가? ->
 
-- nested router
-
-  - 카카오 페이지는 주소의 파라피터가 변경되는 식임.
-  - https://page.kakao.com/main?`categoryUid`=10&`subCategoryUid`=10000
-  - 아래 요일 연재는 라우팅없이 ui만 변경됨.
-
-- carousel vanilla로 구현하기
+- 하위 컨텐츠 렌더링
+  - carousel, eventbox 및 컨텐츠 들은 겹치니까 해당 요소들을 감싸는 layout의 id를 고정으로 가져오고 안에 내용만 변경하기
