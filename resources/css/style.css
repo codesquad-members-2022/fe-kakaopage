@@ -328,6 +328,22 @@ main {
     font-size: 16px;
 }
 
+.sub-banner {
+    width: 720px;
+    height: 140px;
+    overflow: hidden;
+}
+
+.sub-banner__image {
+    width: 550px;
+    height: 100px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.sub-banner .banner__paging {
+    top : 35%;
+}
+
 footer {
     display: flex;
     width: 720px;
