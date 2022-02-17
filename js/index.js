@@ -1,6 +1,11 @@
 import { footer } from "./footer.js";
+import { gnb } from "./gnb.js"
 
 const init = () => {
+    // gnb listener
+    gnb.menuClick();
+
+    // footer listener
     footer.detailSlide();
 }
 
