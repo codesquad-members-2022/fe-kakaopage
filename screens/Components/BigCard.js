@@ -1,0 +1,3 @@
+/**
+ * use in MainBanner, BigCardList
+ */
