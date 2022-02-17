@@ -91,6 +91,14 @@ a {
   border-color: #dee2e6;
 }
 
+.arrow--black {
+  color: #000;
+}
+
+.arrow--light-gray {
+  color: #dee2e6;
+}
+
 /*========== main header ==========*/
 
 .main-header {
@@ -166,7 +174,6 @@ h1 {
 .arrow-with-text {
   width: 18px;
   height: 18px;
-  color: #dee2e6;
 }
 
 .text-contents-more {
@@ -268,6 +275,19 @@ main {
 .event-img {
   object-fit: cover;
   width: 100%;
+}
+
+/*========== 카카오페이지 앱으로 보기 버튼 ==========*/
+.app-button {
+  background-color: #fcc419;
+  width: 100%;
+  padding: 18px;
+  font-size: 17px;
+  letter-spacing: -1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*========== footer ==========*/
