@@ -1,5 +1,7 @@
 import { renderSet } from './view.js';
+import { webtoonData } from '../data/data.js';
 
+/* Gnb 관련 */
 const addHandlerOnGnb = () => {
   const gnbEl = document.querySelector('.gnb');
   gnbEl.addEventListener('click', HandleGnb);
@@ -26,62 +28,72 @@ const toggleGnbTabStyle = (tabName) => {
 };
 
 const loadGnbTabContents = (tabName) => {
-  const main = document.querySelector('.main');
-  main.innerHTML = '';
+  const mainEl = document.querySelector('.main');
+  mainEl.innerHTML = '';
   document.title = `${tabName} | 카카오페이지`;
 
   if (!(tabName === '웹툰')) {
-    main.innerHTML = `
+    mainEl.innerHTML = `
     <div style="text-align:center;padding:80px 0;font-size:1.25rem">
       ${tabName} 탭은 준비 중입니다. <strong>웹툰</strong> 탭을 이용해주세요.
     </div>
     `;
     return;
   }
-  loadWebToonTab();
+
+  loadWebToon('0');
 };
 
-const loadWebToonTab = () => {
-  renderSet.renderSnb([
-    '홈',
-    '요일연재',
-    '웹툰',
-    '소년',
-    '드라마',
-    '로맨스',
-    '로판',
-    '액션무협',
-    'BL',
-  ]);
-  renderSet.renderMainBanner([
-    {
-      title: '도사강호',
-      caption: '시각이 다르면 무공도 다르다',
-      tag: 'up',
-      type: '웹툰',
-      view: '30.5',
-      path: 'static/thumb/main_toon_1.png',
-    },
-    {
-      title: '내가 죽였다',
-      caption: '누가 아군이고, 누가 적인가',
-      tag: 'event',
-      type: '웹툰',
-      view: '20.4',
-      path: 'static/thumb/main_toon_2.png',
-    },
-  ]);
+const loadWebToon = (category) => {
+  renderSet.renderSnb(webtoonData.category);
+  renderSet.renderCategoryContentWrap();
+  addHandlerOnSnb();
+  toggleSnbTabStyle(category);
+  loadSnbTabContents(category);
+};
 
-  renderSet.renderGridMenu([
-    ['오늘 UP', '195'],
-    ['오늘 신작', '3'],
-    ['오리지널', '2,335'],
-    ['완결까지 정주행'],
-    ['독립운동가 웹툰'],
-    ['오늘 랭킹', '1위'],
-  ]);
+/* Snb 관련 */
+const addHandlerOnSnb = () => {
+  const snbEl = document.querySelector('.snb');
+  snbEl.addEventListener('click', HandleSnb);
+};
 
-  renderSet.renderPromotionBanner(['promo_toon_1.png', 'promo_toon_2.png']);
+const HandleSnb = (event) => {
+  const category = event.target.dataset.subcategory;
+  if (!category) return;
+
+  const currCategory = document.querySelector('.snb__item--active').dataset.subcategory;
+  if (currCategory === category) return;
+
+  toggleSnbTabStyle(category);
+  loadSnbTabContents(category);
+};
+
+const toggleSnbTabStyle = (category) => {
+  const currTab = document.querySelector('.snb__item--active');
+  if (currTab) currTab.classList.remove('snb__item--active');
+
+  const newTab = document.querySelector(`.snb__item[data-subcategory="${category}"]`);
+  newTab.classList.add('snb__item--active');
+};
+
+const loadSnbTabContents = (category) => {
+  const categoryContentEl = document.querySelector('.category-content');
+  categoryContentEl.innerHTML = '';
+
+  const categoryData = webtoonData[category];
+
+  switch (category) {
+    case '0':
+      renderSet.renderMainBanner(categoryData.mainBanner);
+      renderSet.renderGridMenu(categoryData.gridMenu);
+      renderSet.renderPromotionBanner(categoryData.promotionBanner);
+      break;
+    default:
+      categoryContentEl.innerHTML = `
+        <div style="text-align:center;padding:80px 0;font-size:1.25rem">준비 중입니다.</div>
+      `;
+  }
 };
 
 export { addHandlerOnGnb, loadGnbTab };

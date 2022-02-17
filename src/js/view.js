@@ -25,25 +25,32 @@ const renderSet = {
   renderSnb(subCategorys) {
     const mainEl = document.querySelector('.main');
     const snbEl = createSnb(subCategorys);
-    mainEl.insertAdjacentHTML('beforeend', snbEl);
+    mainEl.insertAdjacentHTML('afterbegin', snbEl);
+  },
+
+  renderCategoryContentWrap() {
+    const mainEl = document.querySelector('.main');
+    const categoryContentEl = document.createElement('div');
+    categoryContentEl.classList.add('category-content');
+    mainEl.append(categoryContentEl);
   },
 
   renderGridMenu(menuItemLabels) {
-    const mainEl = document.querySelector('.main');
+    const categoryContentEl = document.querySelector('.category-content');
     const gridMenuEl = createGridMenu(menuItemLabels);
-    mainEl.insertAdjacentHTML('beforeend', gridMenuEl);
+    categoryContentEl.insertAdjacentHTML('beforeend', gridMenuEl);
   },
 
   renderMainBanner(bannerItems) {
-    const mainEl = document.querySelector('.main');
+    const categoryContentEl = document.querySelector('.category-content');
     const mainBannerEl = createMainBanner(bannerItems);
-    mainEl.insertAdjacentHTML('beforeend', mainBannerEl);
+    categoryContentEl.insertAdjacentHTML('beforeend', mainBannerEl);
   },
 
   renderPromotionBanner(bannerImgUrls) {
-    const mainEl = document.querySelector('.main');
+    const categoryContentEl = document.querySelector('.category-content');
     const promotionBannerEl = createPromotionBanner(bannerImgUrls);
-    mainEl.insertAdjacentHTML('beforeend', promotionBannerEl);
+    categoryContentEl.insertAdjacentHTML('beforeend', promotionBannerEl);
   },
 };
 
