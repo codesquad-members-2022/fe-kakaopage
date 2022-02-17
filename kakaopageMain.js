@@ -140,23 +140,29 @@ const weekdayContents = [
   ],
 ];
 
-function changeBorderColor(e) {
+function resetCssStyle(e) {
   const Tabs = e.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {
     const tab = Tabs[i];
     tab.style.borderBottom = "none";
+    tab.style.color = "#999";
   }
+}
+
+function changeBorderColor(e) {
+  resetCssStyle(e);
   e.style.borderBottom = "3px solid #ffd200";
 }
 function changeDayAndContents(e) {
+  changeBorderColor(e);
   const dayInfo = e.innerText;
+  e.style.color = "black";
   const weekdayContentWrap = document.querySelector("#weekdayContentWrapId");
   while (weekdayContentWrap.hasChildNodes()) {
     weekdayContentWrap.removeChild(weekdayContentWrap.firstChild);
   }
   weekdayContents.map((day) => {
     if (dayInfo === day[0]) {
-      console.log(`${dayInfo}, ${day[0]}`);
       let temp = "";
       for (let i = 0; i < 10; i++) {
         temp += `${day[1]}`;
