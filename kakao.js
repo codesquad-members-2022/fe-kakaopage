@@ -13,4 +13,11 @@ function changeContent(){
     slideshowInfo.innerText = "외발소년의 스포츠 성장드라마";
 }
 
+function originalContent(){
+    preCategoryMenu.classList.add("sub_active");
+    mainCategoryMenu.classList.remove("sub_active");
+    slideShow.style.backgroundImage ="url('img/roadofmoney.jpg')";
+    slideshowInfo.innerText = "세상에 없던 꼴통 재벌이 되다.";
+}
+preCategoryMenu.addEventListener("click",originalContent);
 mainCategoryMenu.addEventListener("click",changeContent);
