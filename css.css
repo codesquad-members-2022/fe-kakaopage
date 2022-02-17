@@ -1,0 +1,27 @@
+@import url(./css/header-nav-banner.css);
+@import url(./css/mid-button.css);
+@import url(./css/section-book.css);
+@import url(./css/article.css);
+:root {
+    --main-color: #eeeeee;
+    --sub-color: #f9d201;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
