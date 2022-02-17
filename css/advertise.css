@@ -1,0 +1,34 @@
+.advertise {
+    display: flex;
+    height: 140px;
+    background-color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.advertise__center {
+    width: 550px;
+    height: 100px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-image: url("../images/home_ad3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.advertise__left {
+    width: 85px;
+    height: 100px;
+    background-image: url("../images/ad_back_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 25px 80%;
+    cursor: pointer;
+}
+
+.advertise__right {
+    width: 85px;
+    height: 100px;
+    background-image: url("../images/ad_next_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 25px 80%;
+    cursor: pointer;
+}
