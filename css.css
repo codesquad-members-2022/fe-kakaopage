@@ -28,3 +28,7 @@ a:visited {
     text-decoration: none;
     color: black;
 }
+
+.nav__list.active {
+    font-weight: 800;
+}

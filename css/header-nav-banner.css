@@ -73,12 +73,16 @@
     margin: 10px 0;
 }
 
-.nav__lists {
+.nav__ul {
     display: flex;
     justify-content: space-around;
     padding: 0;
     font-size: 20px;
     list-style: none;
+}
+
+.nav__list.active {
+    font-weight: 800;
 }
 
 /* nav */
