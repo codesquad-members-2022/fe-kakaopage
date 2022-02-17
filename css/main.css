@@ -34,7 +34,7 @@ main {
 
 .contents__img {
     width: 100%;
-    margin-bottom: -3px;
+    display: block;
 }
 
 .contents__prevButton {
@@ -151,3 +151,47 @@ main {
     border-radius: 50%;
     background-color: var(--main-gold);
 }
+
+.daily__contents {
+    flex-flow: wrap;
+    background-color: var(--main-white);
+}
+
+.daily__content {
+    width: 110px;
+    margin: 15px;
+}
+.content__inner {
+    border: var(--main-lightgray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.daily__img {
+    width: 100%;
+    display: block;
+}
+.daily__bar {
+    background-color: var(--main-black);
+    color: var(--main-gold);
+    height: 20px;
+    line-height: 20px;
+    padding-left: 4px;
+}
+
+.daily__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.daily__views {
+    padding-left: 15px;
+    color: var(--main-lightgray);
+    font-size: 15px;
+    background: url('../images/icon_read_count.png') no-repeat left center / auto 14px;
+}
+
+
