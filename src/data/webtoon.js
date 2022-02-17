@@ -1,0 +1,88 @@
+const Webtoon = [
+  {
+    title: '이번 생은 가주가 되겠습니다',
+    writer: {
+      writing: '앤트스튜디오',
+      drawing: '몬, 앤트스튜디오',
+      original: '김로아',
+    },
+    readers: '122.6만명',
+    genre: '로판',
+    waitFree: true,
+    ageLimit: 'All',
+    serialDate: ['월'],
+    shortDesc: '“…한번 해 보자. 내가 가주가 되는 거야.”',
+    isComplete: false,
+  },
+  {
+    title: '도굴왕',
+    writer: {
+      writing: '윤쓰(REDICE STUDIO)',
+      drawing: '쓰리비투에스',
+      original: '산지직송',
+    },
+    readers: '200.9만명',
+    genre: '소년',
+    waitFree: true,
+    ageLimit: 'All',
+    serialDate: ['화', '금'],
+    shortDesc: '다시 살아난 도굴꾼, 그가 세상 모든 무덤을 접수하기 시작한다!',
+    isComplete: false,
+  },
+  {
+    title: '일곱번째 배심원',
+    writer: {
+      writing: '김펄럭, 용두식',
+      drawing: '박스',
+      original: '윤홍기',
+    },
+    readers: '4.8만명',
+    genre: '드라마',
+    waitFree: false,
+    ageLimit: 'All',
+    serialDate: ['금'],
+    shortDesc: '진실을 밝히는 자는 누구일까.',
+    isComplete: false,
+  },
+  {
+    title: '녹지 않는 말',
+    writer: {
+      writing: '미치',
+      drawing: '녹차',
+    },
+    readers: '4.8만명',
+    genre: '로맨스',
+    waitFree: true,
+    ageLimit: '15',
+    serialDate: ['일'],
+    shortDesc: '서로 대비되는 두 인종의 사랑을 그린 세기말 로맨스',
+  },
+  {
+    title: '화산전생',
+    writer: {
+      writing: '토마씨',
+      drawing: '정준',
+    },
+    readers: '183.2만명',
+    genre: '액션무협',
+    waitFree: true,
+    ageLimit: 'All',
+    serialDate: ['토'],
+    shortDesc: '영웅을 동경했던 한 사내의 악전고투기',
+  },
+  {
+    title: '관계의 고리',
+    writer: {
+      writing: 'WHAT',
+      drawing: '첼리아케',
+    },
+    readers: '6.3만명',
+    genre: 'BL',
+    waitFree: true,
+    ageLimit: 'All',
+    serialDate: ['수'],
+    shortDesc: '운명의 상대와 연결된 붉은 띠-링.',
+  },
+];
+
+export default Webtoon;
