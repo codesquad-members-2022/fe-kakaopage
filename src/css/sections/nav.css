@@ -1,0 +1,12 @@
+.nav {
+  --nav-text-base-color: #bbb;
+  --nav-text-selected-color: var(--main-text-color);
+}
+
+.sub-category {
+  font-size: var(--font-20px);
+}
+
+.sub-category-link {
+  color: var(--nav-text-base-color);
+}
