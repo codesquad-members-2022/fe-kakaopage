@@ -19,30 +19,16 @@ const DaysTop = (day) => {
       </div>
       <div class="contents__body">
         <ul class="contents__daysNav">
-          <li class="${
-            day === "월" ? "selected" : ""
-          }" data-days="mon" data-series-end="false">월</li>
-          <li class="${
-            day === "화" ? "selected" : ""
-          }" data-days="tue" data-series-end="false">화</li>
-          <li class="${
-            day === "수" ? "selected" : ""
-          }" data-days="wed" data-series-end="false">수</li>
-          <li class="${
-            day === "목" ? "selected" : ""
-          }" data-days="thu" data-series-end="false">목</li>
-          <li class="${
-            day === "금" ? "selected" : ""
-          }" data-days="fri" data-series-end="false">금</li>
-          <li class="${
-            day === "토" ? "selected" : ""
-          }" data-days="sat" data-series-end="false">토</li>
-          <li class="${
-            day === "일" ? "selected" : ""
-          }" data-days="sun" data-series-end="false">일</li>
+          <li class="${day === "월" ? "selected" : ""}" data-days="mon">월</li>
+          <li class="${day === "화" ? "selected" : ""}" data-days="tue">화</li>
+          <li class="${day === "수" ? "selected" : ""}" data-days="wed">수</li>
+          <li class="${day === "목" ? "selected" : ""}" data-days="thu">목</li>
+          <li class="${day === "금" ? "selected" : ""}" data-days="fri">금</li>
+          <li class="${day === "토" ? "selected" : ""}" data-days="sat">토</li>
+          <li class="${day === "일" ? "selected" : ""}" data-days="sun">일</li>
           <li class="${
             day === "완료" ? "selected" : ""
-          }" data-series-end="true">완결</li>
+          }" data-days="comp">완결</li>
         </ul>
         <ul class="contentsCard">
           ${DaysList(day, 10)}
