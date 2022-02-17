@@ -1,4 +1,4 @@
-import Header from './views/Header.js';
+import Header from './pages/Header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('일반 script 파일 실행된 이후에 실행');

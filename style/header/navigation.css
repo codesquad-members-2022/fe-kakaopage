@@ -45,10 +45,10 @@
 }
 
 .c-navigation__button_type_stage > span {
-  background-color: var(--yellow);
+  background-color: var(--main-yellow);
   color: var(--main-black);
   font-weight: 900;
-  padding: 4px;
+  padding: 8px 4px 4px 4px;
 }
 
 .c-navigation__stage-description {
