@@ -200,7 +200,7 @@ function changeEventSlideContents(e) {
   eventContents.map((content) => {
     if (genre === content[0]) {
       const imageUrl = content[1];
-      slide.style.backgroundImage = `url('${imageUrl}')`; // 안된다...
+      slide.style.backgroundImage = `url('${imageUrl}')`;
     }
   });
 }
