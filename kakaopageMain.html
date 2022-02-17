@@ -260,16 +260,16 @@
                 <a href="https://page.kakao.com/main?categoryUid=10&subCategoryUid=1001" class="moreLink">더보기 ></a>
             </div>
             <div class="weekdayTopWeekInfo" Id="weekdayTopweekInfoId">
-                <div class="monday" onclick="changeBorderColor(this)">월</div>
-                <div class="tuesday" onclick="changeBorderColor(this)">화</div>
-                <div class="wendesday" onclick="changeBorderColor(this)">수</div>
-                <div class="thursday" onclick="changeBorderColor(this)">목</div>
-                <div class="friday" onclick="changeBorderColor(this)">금</div>
-                <div class="saturday" onclick="changeBorderColor(this)">토</div>
-                <div class="sunday" onclick="changeBorderColor(this)">일</div>
-                <div class="theEnd" onclick="changeBorderColor(this)">완결</div>
+                <div class="monday" onclick="changeBorderColor(this),changeDayAndContents(this)">월</div>
+                <div class="tuesday" onclick="changeBorderColor(this),changeDayAndContents(this)">화</div>
+                <div class="wendesday" onclick="changeBorderColor(this),changeDayAndContents(this)">수</div>
+                <div class="thursday" onclick="changeBorderColor(this),changeDayAndContents(this)">목</div>
+                <div class="friday" onclick="changeBorderColor(this),changeDayAndContents(this)">금</div>
+                <div class="saturday" onclick="changeBorderColor(this),changeDayAndContents(this)">토</div>
+                <div class="sunday" onclick="changeBorderColor(this),changeDayAndContents(this)">일</div>
+                <div class="theEnd" onclick="changeBorderColor(this),changeDayAndContents(this)">완결</div>
             </div>
-            <div class="weekdayContentWrap">
+            <div class="weekdayContentWrap" id="weekdayContentWrapId">
                 <div class="toonContent">
                     <div class="toonContentTop">
                         <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
@@ -1079,18 +1079,12 @@
             </div>
         </div>
     </div>
+
+
+
+
     <!-- <footer></footer> -->
     <script src="kakaopageMain.js"></script>
-    <script>
-        function changeDayAndContents(e) {
-    const weekDayWrap = document.querySelector('#weekDayTopWeekInfoId');
-    const weekDays = weekDayWrap.childNodes;
-    for(let i = 1; i< weekDays.length; i+=2){
-        const weekDay = weekDays[i]
-
-    }
-}
-    </script>
 </body>
 
 </html>

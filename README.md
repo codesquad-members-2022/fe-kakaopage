@@ -103,4 +103,6 @@ width:100%. height:100%;
 
 ### 구글링해 보니, DOM은 특정 언어에 의존하지 않도록 설계되었고, DOM API가 반환하는 모든 유형은 기본 유형이 아닌 호스트 유형이 된다는 걸 알았다.
 
+https://stackoverflow.com/questions/21768551/javascript-why-use-nodelist-instead-of-using-array
+
 ### 그러니 js 고유의 고차함수인 map은 사용할 수 없었다. 기본 for 문으로 대체해서 해결했다.
