@@ -1,13 +1,18 @@
-const navGenre = document.querySelector(".main__navGenre");
-import { renderGenreContents } from "./core.js";
-import { handleNavGenre } from "./navigation.js";
-import { route } from "../constants.js";
+const headerNav = document.querySelector(".header__nav");
+import { renderCategoryContents } from "./core.js";
+import WebtoonCategory from "../screens/Webtoon/WebtoonCategory.js";
+import { handleNavCategory } from "./nav-category.js";
 
-const init = () => {
-  renderGenreContents(route.HOME);
-  [...navGenre.children].forEach((node) => {
-    node.addEventListener("click", handleNavGenre);
+const init = (category, genre) => {
+  const initCategory = category;
+  const initGenre = genre;
+  [...headerNav.children].forEach((categoryNode) => {
+    if (categoryNode.dataset.category === initCategory) {
+      categoryNode.classList.add("selected");
+    }
+    categoryNode.addEventListener("click", handleNavCategory);
   });
+  renderCategoryContents(WebtoonCategory(initGenre));
 };
 
-init();
+init("webtoon", "home");

@@ -7,7 +7,7 @@ import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 
-const Home = () => {
+const HomeGenre = () => {
   return `
     ${MainBanner()}
     ${NavDetail()}
@@ -21,4 +21,4 @@ const Home = () => {
 `;
 };
 
-export default Home;
+export default HomeGenre;
