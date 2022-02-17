@@ -108,6 +108,8 @@ li{
     z-index: 3;
     display: flex;
     position: absolute;
+    background-color: grey;
+    justify-content: space-between;
 }
 .banner__button button{
     background-color:transparent;
@@ -115,13 +117,14 @@ li{
 }
 
 #btn2{
-    padding-left: 35rem;
+    background-color: blue;
 }
 
 .banner__info{
     position: absolute;
-    width: 13rem;
+    width: 30%;
     margin-top: 25rem;
+    font-size: var(--largefont);
     padding-left: 1rem;
     background-color: green;
     color: var(--main-white);
@@ -136,7 +139,7 @@ li{
     color: var(--background-color);
     font-size: 2rem;
     margin-top: 28rem;
-    margin-left: 37rem;
+    margin-left: 90%;
 } 
 
 .comment{
