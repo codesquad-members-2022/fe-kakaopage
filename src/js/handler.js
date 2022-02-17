@@ -83,17 +83,24 @@ const loadSnbTabContents = (category) => {
 
   const categoryData = webtoonData[category];
 
-  switch (category) {
-    case '0':
-      renderSet.renderMainBanner(categoryData.mainBanner);
-      renderSet.renderGridMenu(categoryData.gridMenu);
-      renderSet.renderPromotionBanner(categoryData.promotionBanner);
-      break;
-    default:
-      categoryContentEl.innerHTML = `
-        <div style="text-align:center;padding:80px 0;font-size:1.25rem">준비 중입니다.</div>
-      `;
+  if (!(category === '0')) {
+    categoryContentEl.innerHTML = `
+    <div style="text-align:center;padding:80px 0;font-size:1.25rem">준비 중입니다.</div>`;
+    return;
   }
+
+  renderSet.renderMainBanner(categoryData.mainBanner);
+  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderSet.renderPromotionBanner(categoryData.promotionBanner);
+  renderSet.renderSectionBasic('기대신작 TOP');
+  renderSet.renderSectionBasic('로맨스 TOP');
+  renderSet.renderSectionBasic('로판 TOP');
+  renderSet.renderSectionBasic('드라마 TOP');
+  renderSet.renderSectionBasic('BL TOP');
+  renderSet.renderSectionBasic('소년 TOP');
+  renderSet.renderSectionBasic('액션무협 TOP');
+  renderSet.renderSectionBasic('일간 랭킹 TOP');
+  renderSet.renderSectionBasic('추천 이벤트 TOP');
 };
 
 export { addHandlerOnGnb, loadGnbTab };

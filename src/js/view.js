@@ -5,6 +5,7 @@ import { createSnb } from './components/snb.js';
 import { createGridMenu } from './components/gridMenu.js';
 import { createMainBanner } from './components/mainBanner.js';
 import { createPromotionBanner } from './components/promotionBanner.js';
+import { createSectionBasic } from './components/sectionBasic.js';
 
 const renderSet = {
   renderHeader() {
@@ -51,6 +52,12 @@ const renderSet = {
     const categoryContentEl = document.querySelector('.category-content');
     const promotionBannerEl = createPromotionBanner(bannerImgUrls);
     categoryContentEl.insertAdjacentHTML('beforeend', promotionBannerEl);
+  },
+
+  renderSectionBasic(title, content) {
+    const categoryContentEl = document.querySelector('.category-content');
+    const sectionBasicEl = createSectionBasic(title, content);
+    categoryContentEl.insertAdjacentHTML('beforeend', sectionBasicEl);
   },
 };
 
