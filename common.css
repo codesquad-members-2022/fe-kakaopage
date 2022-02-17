@@ -61,6 +61,13 @@ li{
     list-style: none;
     text-align: center;
 }
+button{
+    background-color: pink;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
 /* 콘텐츠 bar 양식 */
 .genrebar,.days{
     display: flex;

@@ -24,7 +24,12 @@
 }
 /* 2. 네비바 세팅 */
 
-.navbar__menu li{
+/* .navbar__menu li{
+    padding: 2rem 10px;
+    font-size: var(--largefont);
+} */
+
+.navbar__menu button{
     padding: 2rem 10px;
     font-size: var(--largefont);
 }
