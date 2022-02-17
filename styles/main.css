@@ -21,7 +21,7 @@
 .navGenre-item {
   cursor: pointer;
 }
-.navGenre-item:nth-child(1) {
+.main__navGenre .selected {
   color: #333333;
 }
 
