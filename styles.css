@@ -36,3 +36,7 @@ li {
 .color-black {
   color: #000;
 }
+
+.flex {
+  display: flex;
+}

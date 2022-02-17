@@ -106,10 +106,6 @@
   top: -2px;
 }
 
-.webtoon-score {
-  display: flex;
-}
-
 .webtoon-score__img {
   margin-right: 5px;
   position: relative;

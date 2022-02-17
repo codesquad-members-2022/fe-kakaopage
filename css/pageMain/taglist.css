@@ -18,6 +18,7 @@
   font-weight: bold;
   width: 33%;
   height: 60px;
+  cursor: pointer;
 }
 
 .tag-list__tag {
