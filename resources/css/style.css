@@ -166,7 +166,7 @@ main {
     color: var(--color-black);
 }
 
-.main__banner {
+.main-banner {
     display: flex;
     width: 720px;
     height: 480px;
