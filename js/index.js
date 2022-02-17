@@ -1,5 +1,6 @@
 import { $ } from "./dom.js";
 import { nodes } from "./nodes.js";
+import { romanceTop } from "./genreItems.js";
 
 const webtoonMenu = {
     홈: [
@@ -65,17 +66,13 @@ const toggleClass = (curEl, className) => {
     curEl.classList.add(className);
 };
 
-const getNode = (node) => {
-    return nodes[node];
-};
-
-const createElements = (targetPage) => {
-    const nodesName = webtoonMenu[targetPage];
-    let elements = "";
-    for (let i = 0; i < nodesName.length; i++) {
-        elements += getNode(nodesName[i]);
+const getElements = (targetPage) => {
+    const nodeNames = webtoonMenu[targetPage];
+    let tag = "";
+    for (let i = 0; i < nodeNames.length; i++) {
+        tag += nodes[nodeNames[i]];
     }
-    return elements;
+    return tag;
 };
 
 const preventDefaults = () => {
@@ -100,11 +97,13 @@ const bindSubMenuEvents = () => {
         changeCoverImg(targetPage);
         // 메인컨텐츠 비우기
         clearMainContents();
-        // 필요한 노드들 추가하기
+        // 필요한 노드들 추가하기(부모)
         $(".contents-wrap").insertAdjacentHTML(
             "afterbegin",
-            createElements(targetPage)
+            getElements(targetPage)
         );
+        //TODO: 추가한 노드들에 자식노드 추가
+
         // 새로 생긴 노드에도 preventDefaults()적용
         preventDefaults();
     });
