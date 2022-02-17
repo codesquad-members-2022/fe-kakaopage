@@ -1,0 +1,57 @@
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: 160px;
+}
+
+.search-content-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  margin-right: 20px;
+  width: 170px;
+  height: 30px;
+  border: 1px solid var(--second-text-color);
+  border-radius: 30px;
+}
+
+#search-content-input {
+  font-size: 16px;
+  width: 120px;
+  height: 25px;
+}
+
+.search-btn {
+  position: absolute;
+  top: 3px;
+  right: 9px;
+  width: 20px;
+  transform: rotate(270deg);
+}
+
+.stage {
+  margin-right: 20px;
+  width: 55px;
+}
+
+.login-btn {
+  display: flex;
+  color: var(--second-text-color);
+  font-size: 16px;
+}
+
+.header-nav {
+  height: 50px;
+}

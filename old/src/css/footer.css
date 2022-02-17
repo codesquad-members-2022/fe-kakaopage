@@ -1,0 +1,32 @@
+footer {
+  box-sizing: border-box;
+  padding: 30px;
+  color: var(--second-text-color);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--second-text-color);
+}
+
+.company-info > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.ok img {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.toggle:after {
+  content: '▾';
+  margin-left: 5px;
+}
