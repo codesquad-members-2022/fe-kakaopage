@@ -8,3 +8,5 @@
 - [x] Categoty 선택 시 class 명 selected 주기
 - [x] 다른 Category 선택 시 selected 클래스명 삭제하기
 - [x] Genre 도 동일하게 selected 클래스 생성+삭제하기
+
+- [x] Days Nav (요일별 이동) 만들기
