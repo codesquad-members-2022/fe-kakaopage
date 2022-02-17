@@ -37,38 +37,44 @@
             </div>
           </div>
         </div>
-        <nav class="l-category l-header-child">
+        <nav class="l-category l-header-child" id="main__nav">
           <ul class="c-category">
-            <li class="header__index c-category__index">
-              <div class="c-category__content">홈</div>
-            </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>웹툰∙<i class="fas fa-clock"></i></span>
+                <a data-category="0" href="/?categoryUid=0">홈</a>
+              </div>
+            </li>
+            <li class="header__index c-category__index" data-link>
+              <div class="c-category__content">
+                <a data-category="1" href="/?categoryUid=1"
+                  >웹툰∙<i class="fas fa-clock"></i
+                ></a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>웹소설∙<i class="fas fa-clock"></i></span>
+                <a data-category="2" href="/?categoryUid=2"
+                  >웹소설∙<i class="fas fa-clock"></i
+                ></a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>영화</span>
+                <a data-category="3" href="/?categoryUid=3">영화</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>방송</span>
+                <a data-category="4" href="/?categoryUid=4">방송</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>책</span>
+                <a data-category="5" href="/?categoryUid=5">책</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
@@ -469,5 +475,6 @@
         </article>
       </main>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>
