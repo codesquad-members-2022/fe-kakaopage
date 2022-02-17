@@ -1,0 +1,22 @@
+.badge {
+  display: inline-block;
+  padding: 6px 7px 2px 7px;
+  background-color: var(--identity-color);
+  border-radius: 50px;
+}
+
+.notice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3px;
+  column-gap: 3px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.notice-btn {
+  padding: 15px;
+  font-size: var(--font-18px);
+  font-weight: var(--font-bold);
+  background-color: var(--main-bg-color);
+}
