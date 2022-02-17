@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "constants.css";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .flex__center {
     display: flex;
@@ -14,6 +15,7 @@
 
 body {
     background-color: var(--color-gray-background);
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 header {
@@ -110,6 +112,7 @@ header {
     padding-left: 33px;
     padding-right: 26px;
     font-size: 20px;
+    font-family:'Gothic';
 }
 
 .header-nav__item--selected {
@@ -164,7 +167,7 @@ main {
     color: var(--color-gray-font);
 }
 
-.main-nav__item--selected > a{
+.main-nav__item--selected > a {
     color: var(--color-black);
 }
 
