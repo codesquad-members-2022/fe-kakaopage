@@ -299,7 +299,7 @@ main {
 
 .contents_menu__container {
     flex-flow: row wrap;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -337,7 +337,7 @@ main {
 .sub-banner__image {
     width: 550px;
     height: 100px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
 }
 
 .sub-banner .banner__paging {
