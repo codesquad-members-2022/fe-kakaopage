@@ -118,14 +118,21 @@
 .daily__contents{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(2,3fr);
+    grid-template-rows: repeat(2,1fr);
     margin: 1rem 1rem;
     column-gap: 2rem;
-    height: 20rem;
-    
+    height: 25rem;
 }
 
 .daily__contents .content{
     background-color: grey;
-    border: 1px solid var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
+
+.daily__contents .content .c_img{
+    height: 70%;
+    background-color: skyblue;
+}
+
