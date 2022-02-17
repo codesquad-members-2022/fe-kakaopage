@@ -115,3 +115,17 @@
 }
 
 /*7. 요일별 웹툰 */
+.daily__contents{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,3fr);
+    margin: 1rem 1rem;
+    column-gap: 2rem;
+    height: 20rem;
+    
+}
+
+.daily__contents .content{
+    background-color: grey;
+    border: 1px solid var(--background-color);
+}
