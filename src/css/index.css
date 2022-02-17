@@ -13,8 +13,6 @@
   --main-text-color : #333;
   --second-text-color: #999;
   --third-text-color: #9c9c9c;
-  --text-on-img-color: #fff;
-  
 
   /*font-size*/
   --root-size: 16px;
@@ -53,6 +51,10 @@ body {
 
 h1, h2, h3 {
   font-size: 100%;
+}
+
+p {
+  margin: 0;
 }
 
 a {
