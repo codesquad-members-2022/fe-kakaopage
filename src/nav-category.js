@@ -1,4 +1,5 @@
 import { renderCategoryContents } from "./core.js";
+import { updateSelectedNode } from "./utils.js";
 import categories from "../categories.js";
 
 const headerNav = document.querySelector(".header__nav");
@@ -6,11 +7,7 @@ const nav = document.querySelector(".main__navGenre");
 
 const handleNavCategory = (event) => {
   const target = event.target.closest(".header__nav-item");
-
-  [...headerNav.children].forEach((category) => {
-    category.classList.remove("selected");
-  });
-  target.classList.add("selected");
+  updateSelectedNode(headerNav, target);
 
   const category = target.dataset.category;
 
