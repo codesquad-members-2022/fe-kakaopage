@@ -17,6 +17,12 @@ export function addToContents(input){
     contents.innerHTML += input;
 }
 
+export function initPage(){
+    const contents = document.getElementById('contents');
+
+    contents.innerHTML = '';
+}
+
 export function createContentForms(num) {
     let res = '';
 
@@ -117,7 +123,7 @@ export function createHorizontalContents(num){
         </div>
         <div class="ranking-desc">
             <div class="ranking-desc-title">${pickFromArr(dummy.contentName)}</div>
-            <div class="desc">${pickFromArr(dummy.contentDesc)}</div>
+            <div class="desc" style="margin-top: 10px">${pickFromArr(dummy.contentDesc)}</div>
             <div class="ranking-desc-info">
                 <img src="./img/img6.png" class="img-view">
                 <div class="desc">${randomView()}만명</div>

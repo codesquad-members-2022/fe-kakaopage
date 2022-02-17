@@ -242,3 +242,14 @@ export const createFormat11 = (formatTitle) => {
 
     return format11
 }
+
+export const createFormat12 = () => {
+    const format12 =`
+    <div class="menu-form">
+        <div class="menu-form-ranking">
+            ${createHorizontalContents(20)}
+        </div>
+    </div>`
+
+return format12
+}
