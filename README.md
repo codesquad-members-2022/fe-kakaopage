@@ -18,17 +18,13 @@
 - template, logic 분리
 - scss 사용 -> [참고](https://ossam5.tistory.com/90)
 
-# 이론정리
-
-- script 위치에 따른 로딩
-
 # 진행 순서
 
 ## 큰 흐름
 
 - nested router 어느 깊이까지 도달할지
 - spa로 만들기(css폴더, 및 static유지)
-- css -> scss 혹은 css리팩토링
+- css -> scss
 - static 소스 관리
 - 더미 데이터로 만들기
 
@@ -46,13 +42,3 @@
   - 아래 요일 연재는 라우팅없이 ui만 변경됨.
 
 - carousel vanilla로 구현하기
-
-## 고민
-
-- html, documen가 loaded되고 난 뒤에 실행되는것이 아닌 특정 dom이 렌더링 되고 js동작할 수 있도록 할 수 있나?
-
-  - navigation을 먼저 렌더링하고, 해당 부분이 완료되면 나머지 부분을 렌더링하고 싶음.
-  - 별 차이는 없지만 스크립트가 로드되기전에 navigation의 이동버튼을 눌렀을 때 동작하면 안되니까
-  - 일단 DOMContentLoaded이후 body를 로드한 후 위의 기능적인 것을 작동시키기 위해 navigation이 있을 때만 작동할 수 있도록 `if(!navigation){}`이런식으로 작동시키기
-
-- script를 body아래 썼으면 DOMContentLoaded이거 안써도 되나.
