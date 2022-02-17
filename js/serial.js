@@ -1,5 +1,7 @@
 import { makeImageSection } from './contents.js';
 import { makeDate } from './contents.js';
+import { makeTitle } from './contents.js';
+
 import { makeTodayRecommend } from './contents.js';
 import { makeTodayRanking } from './contents.js';
 
@@ -13,11 +15,9 @@ export default function addHTML() {
     '23.9',
     '이번 새엔 반드시 화녀를 지키리라!'
   )}
+  <section class="today_top">
   ${makeDate('완결')}
-
-  <span class="section_title">전체 | 웹툰 | 🕔웹툰</span>
-  <span class="more_content">전체▼</span>
-
+  ${makeTitle('전체 | 웹툰 | 🕔웹툰', '전체▼')}
   ${makeTodayRanking(
     '	https://dn-img-page.kakao.com/download/resource?kid=JKbkM/hzhOksSPjb/Zk4kiHai3IGS77dRy1iO1K&filename=th2',
     '1위',
@@ -83,5 +83,6 @@ export default function addHTML() {
     '대놓고 사내연애',
     '35.5'
   )}
+  </section>
 `;
 }
