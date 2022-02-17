@@ -43,8 +43,8 @@ body{
 
 .head, .navbar__menu, section{
     width: 50%;
-    background-color: red;
-    margin: 1rem auto;
+    background-color: var(--main-white);
+    margin: 0 auto;
 }
 a{
     text-decoration-line: none;
@@ -92,6 +92,7 @@ li{
     height: 35rem;
     position: relative;
     z-index: -5;
+    margin-top: 1rem;
 }
 
 .banner__image img{
@@ -104,7 +105,7 @@ li{
 .banner__button{
     padding: 0 1rem;
     width: 100%;
-    margin-top: 30%;
+    margin-top: 15rem;
     z-index: 3;
     display: flex;
     position: absolute;
@@ -119,28 +120,21 @@ li{
 #btn2{
     background-color: blue;
 }
-
-.banner__info{
-    position: absolute;
-    width: 30%;
-    margin-top: 25rem;
-    font-size: var(--largefont);
-    padding-left: 1rem;
-    background-color: green;
-    color: var(--main-white);
-    z-index: 1;
-}
-.count{
-    position: absolute;
-    width: 3rem;
+.underbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
     background-color: brown;
-    text-align: center;
-    z-index: 1;
+    margin-top: 28rem;
+    position: absolute;
+    padding: 0 5%;
+}
+
+.count{
     color: var(--background-color);
     font-size: 2rem;
-    margin-top: 28rem;
-    margin-left: 90%;
-} 
+}  
 
 .comment{
     position: absolute;
@@ -169,10 +163,19 @@ li{
 }
 
 /*6. 기다리면 무료 */
-section .wating{
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
+.wating{
+    height: 30rem;
 }
 
+.wating__title{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.wating__contents .wc{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    height: 5em;
+}
