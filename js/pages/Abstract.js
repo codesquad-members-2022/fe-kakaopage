@@ -6,7 +6,7 @@ export default class {
   setTitle(title) {
     this.title = title;
   }
-  async getBlock() {
+  async getHtml() {
     return '';
   }
 }

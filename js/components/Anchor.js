@@ -4,9 +4,9 @@ export default class extends Element {
   constructor() {
     super();
   }
-  async getElement(classname, children, path) {
+  async getElement(classname, children) {
     return `
-    <a href="/${path}" class="${classname}">
+    <a class="${classname}">
       ${children}
     </a>`;
   }

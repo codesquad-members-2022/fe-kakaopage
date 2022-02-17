@@ -4,9 +4,8 @@ import Form from '../components/Form.js';
 import Ul from '../components/Ul.js';
 import Abstract from './Abstract.js';
 import { NAVIGATION } from '../constant/header-c.js';
-import Navigation from '../components/Navigation.js';
 
-const { CATEGORY } = NAVIGATION;
+const { CATEGORY_NAMES } = NAVIGATION;
 
 const insideForm = `<input class="c-navigation__input" type="text" />
 <span class="c-navigation__icon"
@@ -18,16 +17,10 @@ export default class extends Abstract {
     super();
     this.setTitle('Header');
   }
-  async getBlock() {
+  async getHtml() {
     const form = new Form();
     const anchor = new Anchor();
     const ul = new Ul();
-    const nav = new Navigation();
-    const insideUl = await ul.getElement(
-      'c-category',
-      CATEGORY,
-      'header__index c-category__index'
-    );
     return `
     <div class="c-navigation l-header-child">
     <h1 class="c-navigation__header">kakaopage</h1>
@@ -50,7 +43,13 @@ export default class extends Abstract {
       )}
     </div>
   </div>
-  ${await nav.getElement('l-category l-header-child', insideUl)}
-  `;
+  <nav class="l-category l-header-child">
+    ${await ul.getElement(
+      'c-category',
+      CATEGORY_NAMES,
+      'header__index c-category__index'
+    )}
+  </nav>
+    `;
   }
 }
