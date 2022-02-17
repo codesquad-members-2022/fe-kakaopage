@@ -1,4 +1,25 @@
 import { $ } from "./dom.js";
+import { nodes } from "./nodes.js";
+
+const webtoonMenu = {
+    홈: [
+        "category",
+        "slide-banner",
+        "weekday-serial-best",
+        "new-best",
+        "genre-best",
+        "daily-best",
+        "recommend-best",
+    ],
+    요일연재: ["weekday-serial-best"],
+    웹툰: 3,
+    소년: 4,
+    드라마: 5,
+    로맨스: 6,
+    로판: 7,
+    액션무협: 8,
+    BL: 9,
+};
 
 const coverImg = {
     img: {
@@ -27,7 +48,7 @@ const coverImg = {
     },
 };
 
-const changeCoverImgSection = (subMenu) => {
+const changeCoverImg = (subMenu) => {
     const coverImgSection = $(".cover-image");
     const imgSrc = coverImg.img[subMenu];
     const title = coverImg.title[subMenu];
@@ -44,7 +65,18 @@ const toggleClass = (curEl, className) => {
     curEl.classList.add(className);
 };
 
-const createElements = () => {};
+const getNode = (node) => {
+    return nodes[node];
+};
+
+const createElements = (targetPage) => {
+    const nodesName = webtoonMenu[targetPage];
+    let elements = "";
+    for (let i = 0; i < nodesName.length; i++) {
+        elements += getNode(nodesName[i]);
+    }
+    return elements;
+};
 
 const preventDefaults = () => {
     document.querySelectorAll("a").forEach((anchor) => {
@@ -52,13 +84,27 @@ const preventDefaults = () => {
     });
 };
 
+const clearMainContents = () => {
+    $(".contents-wrap").innerHTML = "";
+};
+
 const bindSubMenuEvents = () => {
     // TODO:콜백함수 따로 빼기
     $(".sub-menu").addEventListener("click", (e) => {
         const curEl = e.target.parentNode;
         const targetPage = e.target.innerText;
+
+        // 서브메뉴 active 클래스 토글
         toggleClass(curEl, "active");
-        changeCoverImgSection(targetPage);
+        // 커버이미지란 변경
+        changeCoverImg(targetPage);
+        // 메인컨텐츠 비우기
+        clearMainContents();
+        // 필요한 노드들 추가하기
+        $(".contents-wrap").insertAdjacentHTML(
+            "afterbegin",
+            createElements(targetPage)
+        );
     });
 };
 
