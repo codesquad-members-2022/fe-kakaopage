@@ -137,4 +137,7 @@ button {
   overflow: visible;
   cursor: pointer;
 }
-</style>
+a {
+  text-decoration: none;
+  color: #000;
+}

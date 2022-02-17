@@ -47,6 +47,15 @@
 
 - carousel vanilla로 구현하기
 
+- 최종 폴더구조는
+
+```bash
+├── component
+│   ├── sample.js
+│   └── sample.css
+└── index.html
+```
+
 ## 고민
 
 - html, documen가 loaded되고 난 뒤에 실행되는것이 아닌 특정 dom이 렌더링 되고 js동작할 수 있도록 할 수 있나?
@@ -56,5 +65,11 @@
   - 일단 DOMContentLoaded이후 body를 로드한 후 위의 기능적인 것을 작동시키기 위해 navigation이 있을 때만 작동할 수 있도록 `if(!navigation){}`이런식으로 작동시키기
 
 - script를 body아래 썼으면 DOMContentLoaded이거 안써도 되나.
+
 - 정적 변수 관리
+
   - id나 class를 정적 변수에 관리해야하나?
+
+- spa처럼 생각처럼 안됨
+  - 서버가 없어서 그런가
+  - 그냥 해당 태그 누르면 맞는 id 값이 다르면 display: none으로 안보여주기
