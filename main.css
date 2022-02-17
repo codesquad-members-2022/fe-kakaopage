@@ -198,8 +198,8 @@ header {
 }
 
 .recommendation {
-    height: 160px;
     margin-top: 10px;
+    padding: 15px 0;
 
     background-color: white;
 
@@ -221,7 +221,7 @@ header {
     margin: 2px 2px;
 }
 
-.rec-btn:nth-child(1){
+/* .rec-btn:nth-child(1){
     border-radius: 8px 0 0 0;
 }
 .rec-btn:nth-child(3){
@@ -232,7 +232,7 @@ header {
 }
 .rec-btn:nth-child(6){
     border-radius: 0 0 8px 0;
-}
+} */
 
 .slide-event {
     height: 140px;
@@ -367,6 +367,7 @@ header {
 }
 
 .content-name{
+    font-size: 0.9rem;
     font-weight: 550;
     color:rgb(77, 74, 74);
 

@@ -1,14 +1,11 @@
+import { createFormat0, createFormat1A, createFormat1B, createFormat2, createFormat3, createFormat4, createFormat5 } from "./format.js";
 import { dummy } from "./sources.js";
-import { pickFromArr, randomView } from "./util.js";
+import { addToContents, pickFromArr, randomView } from "./util.js";
 
-function a (){
-    console.log("a")
-}
-
-var contents = document.getElementById('contents')
-
-function plusImg () {
-    var imgUrl = pickFromArr(dummy.slideBannerEventImg)
-
-    contents.innerHTML += `<img src=${imgUrl}>`
-}
+addToContents(createFormat0());
+addToContents(createFormat1A());
+addToContents(createFormat1B('독점 신작', '이벤트로 달리자', 'ㄸㅂㅇㄹ ㄹㅂㅇ'));
+addToContents(createFormat2());
+addToContents(createFormat3());
+addToContents(createFormat4());
+addToContents(createFormat5('로판 TOP'));
