@@ -1,0 +1,74 @@
+{
+  "webtoon": [
+    {
+      "day": "mon",
+      "title": "학사재생",
+      "summary": "금수저를 물고 태어나 버렸다!",
+      "info": "167만명|소유현,윰짝짝",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=B9yif/hyoXEYHVNL/gMonAbOI5FKnlnRpgUvmR0&filename=th2"
+    },
+    {
+      "day": "mon",
+      "title": "후궁계약",
+      "summary": "후궁으로 입금해 줘. 입금~",
+      "info": "93.5만명|밀리",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=coL2BT/hzb7AO2NDX/kUIOK8kQUGSR1jVL7R9Sx0&filename=th2"
+    },
+    {
+      "day": "mon",
+      "title": "그 책에 마음을 주지 마세요",
+      "summary": "책을 많이 읽읍시다.",
+      "info": "35.5만명|밀리",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=4i2ND/hy41JLoVim/MEkdJfaKxe99QY1C20PExk&filename=th2"
+    },
+    {
+      "day": "mon",
+      "title": "카르세아린",
+      "summary": "모험을 떠나보자 코딩의 세계로",
+      "info": "35.5만명|밀리",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=cws2hh/hyfOlucjuP/ElSIwCpSyNvmQnZG2oXlU0&filename=th2"
+    },
+    {
+      "day": "tue",
+      "title": "아비무쌍",
+      "summary": "좌충우돌 무협 액션&육아 일지!",
+      "info": "73.7만명|노경진,이현석",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bjeleh/hyqE8jN3G6/EVu8C9UFE6lHrix03zV4d0&filename=th2"
+    },
+    {
+      "day": "wed",
+      "title": "세화, 가는 길",
+      "summary": "천천히 치유되는 그날의 상처",
+      "info": "1.9만명|한혜연",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=Y1Pyq/hzhOmK0732/Zqtg8dgUDhppRa9vTIS3Ok&filename=th2"
+    },
+    {
+      "day": "thu",
+      "title": "코드스쿼드의 목요일 수업",
+      "summary": "JavaScript Deep Dive",
+      "info": "1.9만명|크롱",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=chUX1P/hyVkI3H0ff/oBYHB6BQ8ZZCwsdZEfsod0&filename=th2"
+    },
+    {
+      "day": "fri",
+      "title": "불금",
+      "summary": "불타는 금요일의 코딩",
+      "info": "190만명|Millie",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=dy1Oc2/hywgI1bMRS/7QsDTWgZtp8XA30K0Si1u0&filename=th2"
+    },
+    {
+      "day": "sat",
+      "title": "코딩테스트",
+      "summary": "열심히 풀자 ",
+      "info": "1.9만명|한혜연",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=Y1Pyq/hzhOmK0732/Zqtg8dgUDhppRa9vTIS3Ok&filename=th2"
+    },
+    {
+      "day": "sun",
+      "title": "회복의 날",
+      "summary": "월요일에 다시 달리기 위해서 충전",
+      "info": "1.9만명|한혜연",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bgozrm/hzacc9w4du/IPiCrWsGU7P6buvUwydcGk&filename=th2"
+    }
+  ]
+}
