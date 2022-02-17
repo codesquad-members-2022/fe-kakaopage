@@ -3,6 +3,7 @@
   --medium: 20px;
   /* color */
   --white: #fff;
+  --gray: #eee;
 }
 
 .header-container {
@@ -254,9 +255,9 @@
   color: #222222;
 }
 
-.btn-container {
+.recommend {
   width: 720px;
-  height: 101px;
+  height: fit-content;
   margin: 10px auto;
   justify-content: space-between;
   padding: 10px;
@@ -264,34 +265,25 @@
   padding: 18px;
 }
 
-.white {
-  background-color: white;
+.recommend__container {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.box-small {
+.white {
+  background-color: var(--white);
+}
+
+.recommend__btn {
   width: 226px;
   height: 60px;
-  margin: auto 0;
+  margin: 1px;
   font-size: 16px;
   font-weight: 600;
 }
 
-.box-first {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.box-mid {
-  border-radius: 0;
-}
-
-.box-end {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 .gray {
-  background-color: #eee;
+  background-color: var(--gray);
 }
 
 .items-container {
@@ -441,6 +433,7 @@
   margin: auto 0;
   position: relative;
   right: 20px;
+  cursor: pointer;
 }
 
 .ad-slider__next-btn {
@@ -451,6 +444,7 @@
   margin: auto 0;
   position: relative;
   left: 20px;
+  cursor: pointer;
 }
 
 .ad-slider__content {

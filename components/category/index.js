@@ -1,7 +1,7 @@
 /**
  *
  * @param {arrray} categories
- * @returns {Node}
+ * @returns {string}
  */
 export function createCategory(categories) {
   return `
