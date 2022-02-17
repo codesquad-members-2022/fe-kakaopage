@@ -63,6 +63,10 @@ a {
   color: #868e96;
 }
 
+.text-color--light-gray {
+  color: #adb5bd;
+}
+
 .round-container {
   border-radius: 10px;
   overflow: hidden;

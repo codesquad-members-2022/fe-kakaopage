@@ -163,11 +163,35 @@ main {
 }
 
 /*========== footer ==========*/
+.footer {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-sort {
   display: flex;
   align-items: center;
 }
 
+.footer-list:nth-child(1) {
+  margin-bottom: 6px;
+}
+
+.footer-list:nth-child(2) {
+  margin-bottom: 9px;
+}
+
 .footer-item {
-  margin-right: 8px;
+  margin-right: 4px;
+}
+
+#copyright-img {
+  width: 60px;
+}
+
+#copyright-text {
+  font-size: 13px;
+  font-weight: 600;
 }
