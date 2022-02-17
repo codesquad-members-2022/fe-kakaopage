@@ -4,6 +4,7 @@
 @import "utils.css";
 @import "screens/main-banner-header.css";
 @import "screens/main-banner-nav.css";
+@import "screens/main-nav.css";
 
 body {
   background-color: var(--main-color);
@@ -14,8 +15,5 @@ body {
 header {
   position: fixed;
   width: 100%;
-}
-
-* {
-  box-sizing: border-box;
+  top: 0px;
 }
