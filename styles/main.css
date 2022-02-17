@@ -299,6 +299,7 @@
 
 .bigCard {
   width: 50%;
+  height: 223px;
   padding: 5px;
 }
 .bigCard .infoTitle {
