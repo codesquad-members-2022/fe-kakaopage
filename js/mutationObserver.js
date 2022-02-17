@@ -2,7 +2,6 @@ export const waitCreateEl = (selector, fn) => {
     const observer = new MutationObserver(() => {
         if (document.querySelector(selector)) {
             fn();
-            console.log("??");
             observer.disconnect();
         }
     });
