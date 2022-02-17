@@ -1,9 +1,11 @@
+@import 'variable.css';
 @import 'reset.css';
 @import 'header.css';
 @import 'carousel.css';
 @import 'main.css';
 @import 'footer.css';
-@import 'variable.css';
+@import 'issue.css';
+
 
 * {
     box-sizing: border-box;
