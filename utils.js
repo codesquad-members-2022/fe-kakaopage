@@ -13,3 +13,13 @@ export const AddEvent = (target, eventType, selector, callback)=>{
         callback(event);
     })
 }
+function render(target){
+    if(render.map.has(target)){
+        target.innerHTML = render.map.get(target)
+        render.map.delete(target);
+    }else{
+        render.map.put(target, target.innerHTML);
+        target.innerHTML = ''
+    }
+}
+render.map = new Map();

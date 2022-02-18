@@ -59,35 +59,38 @@ const renderHeader = ()=>{
     BannerBox(bannerBox, 'afterbegin', images, infographic);
 }
 
-
-let template=''
-nav.addEventListener('click', (e) => {
-    const li =e.target.closest('li');
+let template = '';
+const map = new Map()
+AddEvent(nav, 'click', 'li', ({target})=>{
     nav.querySelector('.selected').classList.remove('selected')
+    const li = target.closest('li');
     li.classList.add('selected');
-    if (!li.classList.contains('toon')) {
-        if(template)return;
-        template = section.innerHTML;
-        section.innerHTML= "<span>This is Dummy Page</span>";
-    } else {
+    if (li.classList.contains('toon')) {
         if(!template)return;
         section.innerHTML = template;
         template = "";
-    }
-})
+    } else {
+        if(template)return;
+        template = section.innerHTML;
+        section.innerHTML= "<span>This is Dummy Page</span>";
+}})
+
+
 const topBanner = section.querySelector('.TopBanner');
 
-topBanner.addEventListener('click', (e)=>{
-    const span = e.target.closest('span');
+
+AddEvent(topBanner, 'click', 'span', ({target})=>{
     topBanner.querySelector('.selected').classList.remove('selected');
+    const span = target.closest('span')
     span.classList.add('selected');
-    if(span.classList.contains('daily')){
-        renderDaily();
-    }
 })
-topBanner.querySelector('.home').addEventListener('click', (e)=>{
+AddEvent(topBanner, 'click', '.home', e=>{
     renderHome();
 })
+AddEvent(topBanner, 'click', '.daily', e=>{
+    renderDaily();
+})
+
 renderHeader();
 renderHome();
 
