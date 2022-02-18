@@ -2,8 +2,9 @@ import { $ } from "./utils.js";
 import { issueComponent } from "../component/issueComponent.js";
 import { advertiseComponent } from "../component/advertiseComponent.js";
 import { issueObj, rowListTitleObj } from "./constants.js";
-import { recommendationObj } from "./dummy.js";
+import { recommendationObj, dayofWeekObj } from "./dummy.js";
 import { rowListContainer } from "../container/rowListContainer.js";
+import { weekListContainer } from "../container/weekListContainer.js";
 
 export const main = {
     addAdvertiseComponent: function() {
@@ -31,5 +32,15 @@ export const main = {
         const recommendElement = $(".recommend");
         if(recommendElement === null) return;
         recommendElement.remove();
+    },
+    addWeeksComponent: function(menu) {
+        console.log(menu === "요일연재");
+        if(menu !== "요일연재") return;
+        return weekListContainer(menu, dayofWeekObj);
+    },
+    removeWeeksComponent: function() {
+        const weeksElement = $(".weeks");
+        if(weeksElement === null) return;
+        weeksElement.remove();
     }
 }
