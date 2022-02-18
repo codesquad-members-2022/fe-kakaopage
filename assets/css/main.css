@@ -78,6 +78,7 @@
     flex-wrap: wrap;
 }
 
+
 .item_list.flex.col-4 {
     justify-content: space-between;
 }
@@ -85,7 +86,6 @@
 .item_list.flex.col-4 .item {
     width: 155px;
 }
-
 .item_list.flex.col-5 .item {
     width: 120px;
     margin-right: 20px;
@@ -114,6 +114,7 @@
     font-weight: 500;
 }
 
+
 .item .img {
     position: relative;
 }
@@ -128,7 +129,6 @@
 .item .img .img_badge img {
     height: 100%;
 }
-
 .item img {
     display: block;
     max-width: 100%;
@@ -650,6 +650,7 @@
     width: 70%;
     margin: 0 auto;
 }
+
 /* //app_more */
 
 /* day filter */
