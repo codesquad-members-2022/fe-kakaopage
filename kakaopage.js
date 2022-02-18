@@ -82,8 +82,12 @@ const renderingDefault = () => {
   const dow = ["일", "월", "화", "수", "목", "금", "토"];
   const today = dow[new Date().getDay()];
   const dayElements = document.querySelectorAll(".dowTop__nav__btn");
+  const mainNavElements = document.querySelectorAll(".page-main__nav__btn");
   dayElements.forEach((e) => {
     if (e.innerText === today) renderingNav("dowTop", e);
+  });
+  mainNavElements.forEach((e) => {
+    if (e.innerText === "홈") renderingNav("page-main", e);
   });
   renderingWebtoon(today);
 };
