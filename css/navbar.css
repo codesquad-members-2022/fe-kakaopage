@@ -87,6 +87,13 @@ li {
   padding-top: 7px;
 }
 
+.navbar-week-1 {
+  cursor: pointer;
+  color: rgb(187, 187, 187);
+  font-weight: 350;
+  line-height: 1.15;
+}
+
 /* 여기부터 전체 웹툰 웹툰 navbar */
 
 .navbar-webtoon {

@@ -36,8 +36,12 @@ function showCurrentList() {
   function ChangeHtmlCss(e) {
     listArr.forEach((el) => {
       el.firstChild.classList.remove('makeBold');
+      el.classList.remove('makeBackgroundImg');
     });
     if(e.target.tagName === "A") {
+      e.target.classList.add('makeBold');
+    } else if (e.target.tagName === "DIV") {  //태그이름 대문자로 써야함
+      e.target.parentElement.classList.add('makeBackgroundImg');
       e.target.classList.add('makeBold');
     }
   } 

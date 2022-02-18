@@ -8,7 +8,14 @@
 
 .makeBold {
   text-decoration: none;
-  color: rgb(51, 51, 51);
+  color: #333333;
   font-weight: 500;
   line-height: 1.15;
+}
+
+.makeBackgroundImg {
+  background-image: url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 44px;
 }
