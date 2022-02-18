@@ -89,4 +89,4 @@ function renderSection(num) {
 // }
 // button도 list들어가면 이름 자동으로 될 수 있게 변경할 예정
 
-export { renderHome_base, renderArticle, renderHome_ArticelNav, renderArticleHeader, renderArticleSections }
+export { renderHome_base }

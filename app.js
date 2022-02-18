@@ -1,12 +1,13 @@
-const bodyEl = document.querySelector('body');
-bodyEl.innerHTML += renderBase();
 
+function renderBody() {
+    const bodyEl = document.querySelector('body');
+    bodyEl.innerHTML += renderBase();
+}
 
+renderBody();
 const navListsEl = document.querySelectorAll('.nav__list');
 const main = document.querySelector('main');
 
-console.log(bodyEl);
-console.log(navListsEl)
 navListsEl.forEach((navList) => {
     navList.addEventListener(('click'), (e) => {
         if(!e.target.classList.contains('active')) {
@@ -52,6 +53,6 @@ function append(parentNodeClassName, child) {
 //     .then(res => res.json())
 //     .then(res => console.log(res))
 
-import { renderBase } from './common.js'
-import { renderHome_base, renderArticle, renderHome_ArticelNav, renderArticleHeader, renderArticleSections } from './home.js';
+import { renderBase, renderArticle, renderArticleHeader, renderArticleSections } from './common.js'
+import { renderHome_base } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';

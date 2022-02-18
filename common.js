@@ -108,4 +108,48 @@ function renderBase() {
     return renderHeader() + renderNav() + renderBanner() + renderMain() + renderFooter();
 }
 
-export { renderBase };
+
+function renderArticle(className) {
+    return `<article class="${className}">
+    </article>`
+}
+
+function renderArticleHeader() {
+    return `    <header class="article__header">
+    <div class="article__header-wrapper">
+        <div class="article__header-text-wrapper">
+            <h2>요일 연재 TOP</h2>
+            <span>(1,622)</span>
+        </div>
+        <button class="article__header-button">더보기 ></button>
+    </div>
+    </header>`
+}
+
+function renderArticleSections(num) {
+    const sections = renderSection(num);
+    return `<div class="section__book-wrapper">${sections}
+    </div>`
+}
+
+function renderSection(num) {
+    let sections = '';
+    for(let i = 0; i < num; i++) {
+        sections += `               <section class="section__book">
+        <div class="section__book-image-wrapper">
+            <img src="./useimages/학사재생.png" alt="images">
+            <div class="section__book-image-infor">
+                <span>1위</span>
+                <i class="fas fa-solid fa-clock"></i>
+            </div>
+        </div>
+        <div class="section__book-text-wrapper">
+            <span class="section__book-text">어쩌고 저쩌고</span>
+            <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+        </div>
+    </section>`
+    }
+    return sections;
+}
+
+export { renderBase, renderArticle, renderArticleHeader, renderArticleSections };
