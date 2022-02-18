@@ -12,7 +12,7 @@ const CardInfoRow = (ranking, webtoon) => {
             : "<span>웹툰</span>"
         }
         <img
-          src="${webtoon.imageVerticalUrl}"
+          src="${webtoon.imagePosterUrl}"
           alt="${webtoon.title}"
         />
       </div>
