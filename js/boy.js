@@ -6,7 +6,7 @@ import { makeRanking } from './contents.js';
 import { makeClockImage } from './contents.js';
 
 export default function addHTML() {
-  document.querySelector('.clear').innerHTML = `
+  document.querySelector('.changed').innerHTML = `
   ${makeImageSection(
     'https://dn-img-page.kakao.com/download/resource?kid=sU3Ip/hzhOd1K291/NlK8pODmELGCbJ8rJdF3v1',
     'BJ 대마도사',
@@ -26,8 +26,9 @@ export default function addHTML() {
     '1',
     'https://dn-img-page.kakao.com/download/resource?kid=imfCM/hzmU0W1V6o/0q5JUn4tQIXrhPV98ng4n0&filename=th2',
     '8클래스 마법사의 회귀',
+    'New',
     '81.5',
-
+    '소년',
     '테스,류송',
     '월'
   )}
@@ -35,7 +36,9 @@ export default function addHTML() {
     '2',
     'https://dn-img-page.kakao.com/download/resource?kid=NFDyw/hzb7v7UXak/sIRlf04F2kfYD9FnlKPry0&filename=th2',
     '도굴왕',
+    '',
     '200.9',
+    '소년',
     '윤쓰(REDICE STUDIO)',
     '화, 금'
   )}
@@ -43,7 +46,9 @@ export default function addHTML() {
     '3',
     'https://dn-img-page.kakao.com/download/resource?kid=b7NjCA/hySXG7oUua/N0VgMZrZg7M9AMDxZshZdk&filename=th2',
     '던전 리셋',
+    '',
     '71.3',
+    '소년',
     '엔트스튜디오',
     '화'
   )}
