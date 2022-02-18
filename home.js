@@ -62,7 +62,7 @@ function renderSection(num) {
     for(let i = 0; i < num; i++) {
         sections += `               <section class="section__book">
         <div class="section__book-image-wrapper">
-            <img src="/useimages/환골탈태.png" alt="images">
+            <img src="./useimages/학사재생.png" alt="images">
             <div class="section__book-image-infor">
                 <span>1위</span>
                 <i class="fas fa-solid fa-clock"></i>
@@ -78,5 +78,15 @@ function renderSection(num) {
 }
 // section 관련은 모든 페이지에서 똑같이 사용한다 -> 이함수들로 그대로 재사용할 수 있다.
 
+// function renderHome_midButton(num, list) {
+//     let buttons = ``;
+//     for(let i = 0; i < num; i++) {
+//         buttons +=  `<button class="mid-button">오늘 UP</button>`
+//     }
+//     return `<div class="mid-button__wrapper">
+//     ${buttons}
+//     </div>`
+// }
+// button도 list들어가면 이름 자동으로 될 수 있게 변경할 예정
 
 export { renderHome_base, renderArticle, renderHome_ArticelNav, renderArticleHeader, renderArticleSections }

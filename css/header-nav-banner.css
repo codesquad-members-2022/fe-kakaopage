@@ -19,7 +19,6 @@
 .header__button-wrapper {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 .header__search-wrapper {
@@ -31,7 +30,7 @@
     left: 155px;
     top: 7px;
     font-size: 18px;
-    color: grey;
+    color:  6482B9;
 }
 
 .header__search {
@@ -51,7 +50,7 @@
     border: none;
     margin: 3px;
     font-size: 15px;
-    color: grey;
+    color: 6482B9;
 }
 
 .header__nav-lists {
@@ -103,7 +102,6 @@
 .aside__banner i{
     position: absolute;
     font-size: 40px;
-    /* z-index: 1; */
     color: white;
     background-color: none;
 }
