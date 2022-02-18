@@ -1,5 +1,5 @@
 import { renderGenreContents } from "./core.js";
-import { updateSelectedNode, getJson } from "./utils.js";
+import { updateSelectedNode } from "./utils.js";
 import genres from "../genres.js";
 import webtoonData from "../data/webtoonData.js";
 

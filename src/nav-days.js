@@ -1,5 +1,5 @@
 import { renderDaysContents } from "./core.js";
-import { updateSelectedNode, getJson } from "./utils.js";
+import { updateSelectedNode } from "./utils.js";
 import DaysList from "../screens/Components/DaysList.js";
 import webtoonData from "../data/webtoonData.js";
 

@@ -1,5 +1,4 @@
 import genres from "../../genres.js";
-import { getJson } from "../../src/utils.js";
 import { renderGenreContents } from "../../src/core.js";
 import webtoonData from "../../data/webtoonData.js";
 
