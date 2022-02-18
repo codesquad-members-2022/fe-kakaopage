@@ -1,102 +1,107 @@
 # fe-kakaopage
 
+# 다른 사람 pr 엿보기
+
+- [ ] calc
+- [ ] stacking context
+- [ ] 구분하는 주석 표시도 좋네요.
+- [ ] 자주 쓰는 애들 class 묶기: flex center, box-sizing,
+- [ ] vw가 %단위 대비 상대적으로 가진 장점
+- [ ] rem vs em 차이
+- [ ] vsc - live sass compiler
+- [ ] 웹폰트?
+- [ ] css is 함수
+
 # 목표
 
-- 미션을 수행하기 위해 필요한 git 관련 지식 정리
-- 브라우저 동작원리 정리( + 웹 접근성)
-- 기획서도 고려해서 미션1을 설계하기
-- 용도에 맞는 tag 사용하기
-- flexbox, grid 사용법 정리
-- css 캐스캐이딩, 상속, selector 정리
-- 객체지향을 생각해서 viewer와 js부분을 구분해보기
-- DOM, Event, Templating 이 무엇인지, 동작방법, 동적기능 이해
+- spa 방식으로 해보기
+- template, logic 분리
+- scss 사용 -> [참고](https://ossam5.tistory.com/90)
 
-# git 사용법 정리
+# 진행 순서
 
-✅ Done
+## 큰 흐름
 
-- 간단한 명렁어들
-  - git config
-  - git init
-- commit 작성법 및 약속 정리
-- repository 관련 정리:
-  - clone vs fork
-  - fetch vs pull
-  - upstream / downstream
+- `클래스를 사용하지 말라는 요구사항을 못보고 클래스를 사용하다가 리팩토링`
+- spa로 헤더의 탭을 누르면 하위 콘텐츠및 타이틀이 변경되게 하기
 
-❗️ Not yet
+## 구체적인 흐름 설계
 
-- branch -> 미션1PR 이후 정리할 예정
-  - rebase vs merge
-
-# css convention 정리
-
-BEM 방식 사용
-
-- Block, element, modifier
-- c- (Component): 독립형 구성 요소에 대한 외관 포함
-- l- (Layout): 외관 없이 구성 요소를 배치하고 레이아웃을 구성하는 데 사용
-- 구성 요소에 여러 수준의 하위 요소가 있는 경우 클래스 이름에 각 수준을 나타내지 않기(구조의 깊이를 전달하지 않는다.)
-
-# Mission - 카카오페이지 클론
-
-## 목표
-
-- 코드쓰기 전에 어떻게 묶을지 색깔로 표시하기
-- css 적용할 거 생각해서 html tag 묶기
-- 정적 html, css화면만 구성
+- layout은 html에 태그로 남겨두고 안에 콘텐츠만 js로 렌더링
 
 # 고민
 
-❓ [x] 이 상태에서는 dori내의 브랜치 못보나? local에만 브랜치가 나눠저 있는건가? 아닌데, push할 때 새로 판 branch로 push했는데...
+> ✅ : 해결
+> ❗️ : 아직 고민 중
 
-![스크린샷 2022-02-14 오후 11 34 12](https://user-images.githubusercontent.com/71386219/153883813-ac766d7b-ef76-43c2-a275-efaaaadceca2.png)
+✅ spa처럼 만들려다가 주소를 `a href="/" -> a href="/path"` 이런식으로 하면 html이 하나여서 빈화면으로 넘어감.
 
-❓ [x] 커밋 메세지를 얼마나 세분화해야하는지
+- 어떤 path이던지 index.html을 다시 랜더링하면 될려나? -> 안 됨. 다시 렌더링할 때 path에 맞는 화면을 불러올 수 있는데 path설정 자체가 안 됨. html은 하나여서.
+- 서버가 있다면 app.get("/\*" (\_, res) => res.sendfile(<root file path>, "index.html"))로 계속 html파일을 렌더링해야할듯.
+- 서버 없이도 parameter를 활용해 페이지 리프레쉬돼도 빈 화면으로 안넘어가게 만듦.
 
-- 아무리 작아도 주제가 구분되면 구분해서 커밋해야하나? 예를 들어, 미션목표정하기 -> html 구조짜기
-- ✅ commit convention에 따라 커밋
+  ```
+    기존방법: / -> /webtoons
+    고친방법: / -> /?categoryUid=0
+  ```
 
-❓ [x] css convetion
+✅ 하위 컨텐츠 렌더링
 
-- ✅ naming -> convention 정리
-- naming: `main__carousel__button` vs `main__carousel > button`
-- BEM 규칙을 적용하여 하위 요소는 클래스 이름에 포함하지 않도록 한다.
-- 깊이가 깊은 하위 요소를 표현하기에 BEM이 불편하다. 다른 방법론도 공부해봐야겠다. ->✅ 공통되는 요소는 묶어서 이름지어 따로 관리
+- 홈, 웹툰, 웹소설 등의 main카테고리 마다 하위 컨텐츠의 레이아웃은 동일하다.
+- 레이아웃은 고정시키고 레이아웃 내부의 컨텐츠만 변경할 수 있도록 만들기
+- 대략적인 구조
 
-```css
-/* 기존 */
-main__carousel__img-container__text-container
-/* 수정 */
-carousel__img-container
-carousel__text-container
+```html
+<header>
+  <nav>
+    <a data-category="0" href="/?categoryUid=0">홈</a>
+    <a data-category="1" href="/?categoryUid=1">웹툰</a>
+    <a data-category="2" href="/?categoryUid=2">웹소설</a>
+    <a data-category="3" href="/?categoryUid=3">영화</a>
+    <a data-category="4" href="/?categoryUid=4">방송</a>
+    <a data-category="5" href="/?categoryUid=5">책</a>
+  </nav>
+</header>
+<main class="l-main" id="main-layout">
+  <article class="l-main__child" id="sub-category"></article>
+  <article class="l-main__child" id="carousel"></article>
+  <article class="l-main__child" id="event-box"></article>
+  <article class="l-main__child" id="event-carousel"></article>
+  <article class="l-main__child" id="main-content"></article>
+</main>
 ```
 
-❓ [ ] flexbox 남용?
+```js
+export const routes = [
+  { categoryUid: 0, getContent: Main },
+  { categoryUid: 1, getContent: Webtoon },
+  { categoryUid: 2, getContent: Novel },
+];
+```
 
-- flexbox가 중복되는 부분이 많은데 어떻게 줄일 수 있을까? 팀원들이랑 고민을 공유했는데 궁금증이 해결되지 않았음.
+✅ nav > ul > li > span 이런 구조에서 어디에 addEventListener("click", fn)을 줄까
 
-❓ [ ] css, html은 리팩토링 어떻게하지
+- a태그에 준 데이터 속성을 활용해, nav의 어디를 누르든 `[data-category]`가 있을 때만 특정 기능이 작동하도록 만듦
 
-- 그냥 중복코드만 줄이면 될려나
+❗️ 카테고리마다 레이아웃안의 컨텐츠가 다른데 어떻게 렌더링할까?
 
-❓ [x] internal, external css 장단점
+- htmltag를 관리하는 폴더를 만들어서 관리할까?
 
-- 선택자 우선순위, 적용 우선순위 공부하기
+```js
+async getHtml () {
+  return `<h1>이런식으로</h1>`
+}
+```
 
-- reset.css를 external로 하는게 좋을까 internal로 하는게 좋을까?
-- 다운로드해야할 소스가 많아진다면 애초에 html에 삽입하는게 좋을까?
-- ✅ 일단 reset.css로 분리하여 external로 관리
+- 아니면 json 파일을 만들어서 받아올까? 이런식으로 하면 태그 안에 값들을 어떻게 동적으로 변경하지? 잘모르겠으니까 위의 방식으로 결정
 
-# html 구조짜기 및 간단한 네이밍
+```json
+id: "main-layout",
+content: "<h1>세부컨텐츠</h1>
+```
 
-![이미지-1](https://user-images.githubusercontent.com/71386219/153881920-aa848f63-bb26-48c7-b39c-a000ceac688d.jpg)
+❗️ 디버깅 툴
 
-# Refactoring
+- vscode extention을 사용해서 디버깅하는 방법 알아보기
 
-- [x] readme 작성
-- [ ] class 이름 중복되는거 줄이기
-- 디테일한 부분 수정하기
-  - [x] 노란 점 위치
-  - [x] 이벤트 grid의 노란 숫자 표시
-  - [x] 헤더 고정
+[참고자료](https://velog.io/@takeknowledge/로컬에서-CORS-policy-관련-에러가-발생하는-이유-3gk4gyhreu)

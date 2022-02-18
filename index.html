@@ -37,46 +37,52 @@
             </div>
           </div>
         </div>
-        <nav class="l-category l-header-child">
+        <nav class="l-category l-header-child" id="main-nav">
           <ul class="c-category">
-            <li class="header__index c-category__index">
-              <div class="c-category__content">홈</div>
-            </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>웹툰∙<i class="fas fa-clock"></i></span>
+                <a data-category="0" href="/?categoryUid=0">홈</a>
+              </div>
+            </li>
+            <li class="header__index c-category__index" data-link>
+              <div class="c-category__content">
+                <a data-category="1" href="/?categoryUid=1"
+                  >웹툰∙<i class="fas fa-clock"></i
+                ></a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>웹소설∙<i class="fas fa-clock"></i></span>
+                <a data-category="2" href="/?categoryUid=2"
+                  >웹소설∙<i class="fas fa-clock"></i
+                ></a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>영화</span>
+                <a data-category="3" href="/?categoryUid=3">영화</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>방송</span>
+                <a data-category="4" href="/?categoryUid=4">방송</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
-            <li class="header__index c-category__index">
+            <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <span>책</span>
+                <a data-category="5" href="/?categoryUid=5">책</a>
                 <div class="c-category__alaram"></div>
               </div>
             </li>
           </ul>
         </nav>
       </header>
-      <main class="l-main">
-        <article class="c-main__category l-main__child">
+      <main class="l-main" id="main-layout">
+        <article class="c-main__category l-main__child" id="sub-category">
           <ul class="c-category">
             <li class="main__index c-category__index"><span>홈</span></li>
             <li class="main__index c-category__index"><span>요일연재</span></li>
@@ -89,7 +95,7 @@
             <li class="main__index c-category__index"><span>BL</span></li>
           </ul>
         </article>
-        <article class="l-carousel l-main__child">
+        <article class="l-carousel l-main__child" id="carousel">
           <div class="c-carousel">
             <img
               class="c-carousel__img"
@@ -127,7 +133,7 @@
             네 안의 늑대를 개로 만들지 마라!
           </div>
         </article>
-        <article class="c-grid l-main__child">
+        <article class="c-grid l-main__child" id="event-box">
           <div class="c-grid__component">
             <span class="c-grid__name">오늘 UP</span>
             <div class="c-grid__number">206</div>
@@ -153,7 +159,7 @@
             <div class="c-grid__number">1위</div>
           </div>
         </article>
-        <article class="c-event l-main__child">
+        <article class="c-event l-main__child" id="event-carousel">
           <button type="button" class="c-event__button move-button">
             <i class="fas fa-angle-left"></i>
           </button>
@@ -168,7 +174,7 @@
             <i class="fas fa-angle-right"></i>
           </button>
         </article>
-        <article class="c-webtoons l-main__child">
+        <article class="c-webtoons l-main__child" id="main-content">
           <div class="l-webtoons__header">
             <div class="c-webtoons__header">
               <h2>요일 연재 TOP</h2>
@@ -469,5 +475,6 @@
         </article>
       </main>
     </div>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
