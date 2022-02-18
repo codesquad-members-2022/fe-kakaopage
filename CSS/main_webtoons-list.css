@@ -8,6 +8,7 @@
 
 .webtoons__item {
   margin-bottom: 20px;
+  width: 120px;
   cursor: pointer;
 }
 
@@ -17,7 +18,9 @@
 
 .item__img img {
   display: block;
+  width: 100%;
   border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
 .item__rating {
@@ -39,6 +42,10 @@
 .item__title {
   margin-bottom: 8px;
   font-weight: 500;
+  width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .item__rating .fa-star {

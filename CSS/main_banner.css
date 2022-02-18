@@ -1,12 +1,3 @@
-/* JS 구현전이라서 임시로 다른 li를 안보이게 설정 */
-.banner__item {
-  display: none;
-}
-
-.banner__item--focused {
-  display: block;
-}
-
 /* ======== main__banner와 expect-new__top이 공통적으로 가지는 style ======== */
 .banner {
   position: relative;
@@ -49,6 +40,19 @@
 }
 
 /* ======== main_banner ======== */
+.main__banner {
+  overflow: hidden;
+}
+
+.main__banner .banner__img {
+  width: 720px;
+}
+
+.main__banner .banner__list {
+  width: 100%;
+  justify-content: flex-start;
+}
+
 .main__banner .banner__title {
   margin-left: 24px;
   font-size: 28px;
@@ -85,6 +89,8 @@
 /* ======== expect-new-top ======== */
 .expect-new__top img {
   border-radius: 8px;
+  width: 335px;
+  height: 223px;
 }
 
 .expect-new__top .banner__list {

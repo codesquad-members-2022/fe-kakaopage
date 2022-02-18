@@ -142,6 +142,11 @@
   font-weight: 600;
 }
 
+.ranking__item .item__img {
+  width: 85px;
+  height: 115px;
+}
+
 .ranking__item .item__info {
   padding: 20px;
 }
@@ -162,6 +167,11 @@
 /* ======== event ======== */
 .event__img {
   padding: 20px;
+}
+
+.event__img img {
+  width: 680px;
+  height: 340px;
 }
 
 /* ======== move-app======== */
