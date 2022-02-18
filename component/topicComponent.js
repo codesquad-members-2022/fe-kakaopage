@@ -14,5 +14,5 @@ export const topicComponent = (title) => {
     topicWrapper.appendChild(titleElement);
     topicWrapper.appendChild(seeSpan);
 
-    return topicWrapper.outerHTML;
+    return topicWrapper;
 }
