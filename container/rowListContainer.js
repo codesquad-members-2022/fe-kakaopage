@@ -4,8 +4,15 @@ import { ImagePosterComponent } from "../component/ImagePosterComponent.js";
 
 export const rowListContainer = (obj, contents) => {
     const wrapper = createEl("div");
+    const innerWrapper = createEl("div");
     wrapper.classList.add("rowList", obj.name);
-    wrapper.insertAdjacentHTML('afterbegin', topicComponent(obj.title));
-    wrapper.insertAdjacentHTML('beforeend', ImagePosterComponent(contents));
+    innerWrapper.classList.add("rowList__inner");
+
+    wrapper.appendChild(topicComponent(obj.title));
+
+    for(let i = 0; i < contents.length; i++) {
+        innerWrapper.appendChild(ImagePosterComponent(contents[i]));
+    }
+    wrapper.appendChild(innerWrapper);
     return wrapper.outerHTML;
 }
