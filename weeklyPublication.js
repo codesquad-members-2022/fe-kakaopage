@@ -35,6 +35,8 @@ function createWebtoonTypeCategoryNav() {
   webtoonTypeCategoryNav.classList.add("category_align");
   const webtoonTypeFilterDiv = createWebtoonTypeFilterDiv();
   const webtoonGenreFilterUl = createWebtoonGenreFilterUl();
+  webtoonTypeCategoryNav.append(webtoonTypeFilterDiv, webtoonGenreFilterUl);
+  return webtoonTypeCategoryNav;
 }
 
 function createWebtoonTypeFilterDiv() {
