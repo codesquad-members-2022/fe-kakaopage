@@ -1,0 +1,40 @@
+.footer {
+  --footer-text-color: #bdbdbd;
+  --copyright-text-color: #cdcdcd;
+  --ok-text-color: #a8a8a8;
+}
+
+.footer {
+  padding: 30px 0;
+  color: var(--footer-text-color);
+  font-size: var(--font-14px);
+  line-height: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.copyright {
+  color: var(--copyright-text-color);
+}
+
+.footer-list a, .company-info a {
+  color: var(--footer-text-color);
+}
+
+.ok {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.ok-text-color {
+  color: var(--ok-text-color);
+}
+
+.toggle:after {
+  content: '▾';
+  margin-left: 5px;
+}

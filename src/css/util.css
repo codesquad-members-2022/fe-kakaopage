@@ -6,6 +6,10 @@
   position: absolute;
 }
 
+.l-row-center {
+  margin: 0 auto;
+}
+
 .l-fixed {
   position: fixed;
 }
