@@ -1,0 +1,34 @@
+ul.menuNav>li.menu{
+    flex: 1 1 auto;
+    padding: 30px 0 15px;
+    list-style: none;
+    position: relative;
+    border-bottom-color: transparent;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    transition: all 0.3s linear;
+}
+ul.menuNav>li.selected{
+    border-bottom-color: #ffd200;
+}
+li.menu>a{
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+li.menu>a>img{
+    max-width: 100%;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+}
+li.menu>div.dot{
+    position:absolute;
+    width:7px;
+    height:7px;
+    top:23px;
+    right:30px;
+    border-radius:50%;
+    background-color:#ffd200;
+}

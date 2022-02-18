@@ -1,5 +1,5 @@
-export const HomeHeader = ()=>{
-    return `
+export const HomeHeader = (target, position)=>{
+    const template = `
     <div class="HomeHeader">
         <div class="ifYouWait">
             <span>요일 연재 TOP</span>
@@ -33,4 +33,5 @@ export const HomeHeader = ()=>{
             <div>완결</div>
         </li>
     </ul>`
+    target.insertAdjacentHTML(position, template)
 }

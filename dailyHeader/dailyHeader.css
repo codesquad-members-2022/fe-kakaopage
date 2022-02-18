@@ -26,11 +26,37 @@
 .dailyCategory>ul{
     display: flex;
     align-items: center;
+
 }
 .dailyCategory>ul>li{
     padding:20px 10px;
     cursor:pointer;
-    color: #333333;
     font-size: 20px;
     text-align: center;
+    color: rgb(187, 187, 187);
+    transition:color 1s linear;
+    display: flex;
+    align-items: center;
+}
+.dailyCategory>ul>li.selected {
+    color: rgb(51, 51, 51);
+}
+.dailyCategory>ul>div{
+    vertical-align: middle;
+    margin: 0px 5px 1px;
+    min-width: 1px;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(217, 217, 217);
+}
+.dailyCategory>.total{
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+    padding: 26px 13px 10px;
+    display:flex;
+    align-items: center;
+}
+.dailyCategory>.total>img{
+    width:10px;
+    height:7px;
 }

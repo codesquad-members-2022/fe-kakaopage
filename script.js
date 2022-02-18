@@ -5,19 +5,26 @@ import {infographic} from "./infographic.js";
 import {images} from "./images.js";
 import {AdBanner} from "./AdBanner/AdBanner.js";
 import {GrayCube} from "./GrayCube/GrayCube.js";
+import {AddEvent} from "./utils.js";
+import {menuNav} from "./menuNav/menuNav.js";
+import {BannerBox} from "./BannerBox/BannerBox.js";
 
 const main = document.querySelector('main.mainContent');
 const nav = main.firstElementChild;
 const section = nav.nextElementSibling;
-
+const bannerBox = section.querySelector('.BannerBox');
+const content = section.querySelector('.freeComics');
 const renderGrid = ()=>{
     const gridBox =document.querySelector('.comicsGrid');
     for(let i=0; i<20; i++){
-        gridBox.insertAdjacentHTML('afterbegin', comicItem(images, infographic));
+       comicItem(images.thumbnails, infographic, gridBox);
     }
 }
-
+menuNav(nav, 'afterbegin');
+BannerBox(bannerBox, 'afterbegin', images, infographic);
+dailyHeader(infographic, content, 'beforebegin');
 let template=''
+
 nav.addEventListener('click', (e) => {
     const li =e.target.closest('li');
     nav.querySelector('.selected').classList.remove('selected')
@@ -51,7 +58,8 @@ topBanner.addEventListener('click', (e)=>{
             parentPrev.parentNode.removeChild(parentPrev);
             parentPrev = grid.parentElement.previousElementSibling;
         }
-        grid.parentElement.insertAdjacentHTML('beforebegin',dailyHeader());
+        dailyHeader(infographic, grid.parentElement, 'beforebegin');
+        grid.style.paddingTop='';
         grid.innerHTML= '';
         renderGrid();
     }
@@ -65,10 +73,11 @@ topBanner.querySelector('.home').addEventListener('click', (e)=>{
         prev.parentNode.removeChild(prev);
         prev= comicsBox.previousElementSibling;
     }
-    comicsBox.insertAdjacentHTML('afterbegin', HomeHeader());
-    comicsBox.insertAdjacentHTML('beforebegin', GrayCube());
-    comicsBox.insertAdjacentHTML('beforebegin', AdBanner());
+    HomeHeader(comicsBox, 'afterbegin');
+    GrayCube(comicsBox, 'beforebegin')
+    AdBanner(comicsBox, 'beforebegin');
     grid.innerHTML ='';
+    grid.style.paddingTop = '20px';
     renderGrid();
 })
 renderGrid();

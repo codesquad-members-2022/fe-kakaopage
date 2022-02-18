@@ -5,3 +5,11 @@ export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
 
 export const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
 export const shuffled = (array, n)=> array.sort(() => 0.5 - Math.random()).slice(0,n);
+export const AddEvent = (target, eventType, selector, callback)=>{
+    const children = [...target.querySelectorAll(selector)]
+    const ok = (eventTarget)=>children.includes(eventTarget) || eventTarget.closest(selector)
+    target.addEventListener(eventType, event=>{
+        if(!ok(event.target))return false;
+        callback();
+    })
+}

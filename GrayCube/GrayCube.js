@@ -1,4 +1,6 @@
-export const GrayCube = ()=>`
+export const GrayCube = (target, position)=> {
+
+    const template = `
          <div class="listContentBox  Cube">
             <div class="grayBox">
                 <a href="">
@@ -24,3 +26,5 @@ export const GrayCube = ()=>`
             </div>
         </div>
 `
+    target.insertAdjacentHTML(position, template);
+}

@@ -1,14 +1,11 @@
 import {randomGen, shuffled} from "../utils.js";
 
-export const comicItem = ({thumbnails}, {
-    clock,
-    Up,
+export const comicItem = (thumbnails,
+    {clock,
     Person,
-    Separator,
-    rating,
-}) => {
+    rating}, target) => {
     const arr = shuffled(rating,2);
-    return `
+    const template =  `
     <a class="wrapper">
         <div class="thumbnail">
             <img src=${randomGen(thumbnails)} />
@@ -27,6 +24,7 @@ export const comicItem = ({thumbnails}, {
             <img src=${Person}/>
             <div>29.2만명</div>
         </div>
-
     </a>
-`}
+`;
+    target.insertAdjacentHTML('afterbegin',template);
+}
