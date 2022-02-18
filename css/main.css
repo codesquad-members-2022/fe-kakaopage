@@ -11,9 +11,34 @@
   margin-top: 10px;
   position: relative;
 }
-.main-content__content__nav__circle {
+
+.main-content__content__nav__circile-mon {
+  position: absolute;
+  left: 48px;
+}
+.main-content__content__nav__circile-tue {
+  position: absolute;
+  left: 145px;
+}
+.main-content__content__nav__circile-wed {
   position: absolute;
   left: 242px;
+}
+.main-content__content__nav__circile-thu {
+  position: absolute;
+  left: 340px;
+}
+.main-content__content__nav__circile-fri {
+  position: absolute;
+  left: 436px;
+}
+.main-content__content__nav__circile-sat {
+  position: absolute;
+  left: 535px;
+}
+.main-content__content__nav__circile-sun {
+  position: absolute;
+  left: 632px;
 }
 .main-content__content__menu {
   display: flex;
