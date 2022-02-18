@@ -1,7 +1,6 @@
 import { webtoons } from "./webtoons.js";
 
 const dow = ["일", "월", "화", "수", "목", "금", "토"];
-const webtoons = webtoon_data;
 let j = 0;
 
 webtoons.forEach((e, i) => {
