@@ -597,3 +597,40 @@ footer {
     margin: 60px auto;
     background-color: var(--color-gray-background);
 }
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.footer__left * {
+    font-size: 14px;
+    color: var(--color-gray-font);
+    margin-bottom: 5px;
+}
+
+.company__info--item:before {
+    content: " \2022 ";
+    align-items: center;
+}
+
+.company__info--item:first-child::before{
+    content:"";
+}
+
+.company__owner {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.company__owner > .separator {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.copyright__mark {
+    width: 55px;
+    height: 55px;
+}
