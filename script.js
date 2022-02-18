@@ -46,7 +46,6 @@ const renderHome = ()=>{
         prev.parentNode.removeChild(prev);
         prev= comicsBox.previousElementSibling;
     }
-
     HomeHeader(comicsBox, 'afterbegin');
     GrayCube(comicsBox, 'beforebegin')
     AdBanner(comicsBox, 'beforebegin');
