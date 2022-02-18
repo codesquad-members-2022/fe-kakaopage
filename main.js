@@ -1,59 +1,71 @@
 window.onload = function () {
-  function setThumbnail(root, src, alt) {
-    const $thumbnail = $webtoon_copy.querySelector(root)
+  function setThumbnail(doc, root, src, alt) {
+    const thumbnail = doc.querySelector(root)
 
-    $thumbnail.src = src
-    $thumbnail.alt = alt
+    thumbnail.src = src
+    thumbnail.alt = alt
   }
 
-  function setTitle(root, text) {
-    const $title = $webtoon_copy.querySelector(root)
+  function setTitle(doc, root, text) {
+    const title = doc.querySelector(root)
 
-    $title.textContent = text
+    title.textContent = text
   }
 
-  function addNewIcon(icon, src, alt) {
+  function setIcon(doc, root, src, alt) {
+    const icon = doc.querySelector(root)
+
     icon.insertAdjacentHTML(
       'afterbegin',
       `<img src=${src} alt=${alt} width="13px"></img>`
     )
   }
 
-  function setIcon(root, src, alt) {
-    const $icons = $webtoon_copy.querySelector(root)
+  function setUserCnt(doc, root, text) {
+    const userCnt = doc.querySelector(root)
 
-    addNewIcon($icons, src, alt)
+    userCnt.textContent = text
   }
 
-  function setUserCnt(root, text) {
-    const $userCnt = $webtoon_copy.querySelector(root)
+  function setDay(doc, root, text) {
+    const day = doc.querySelector(root)
 
-    $userCnt.textContent = text
+    day.textContent = text
   }
 
-  function setDay(root, text) {
-    const $day = $webtoon_copy.querySelector(root)
+  const serial = document.querySelector('.serial')
+  const webtoon = document.querySelector('.serial__webtoons')
 
-    $day.textContent = text
+  function webtoonList() {
+    const days = ['tue', 'wen', 'thu', 'fri', 'sat', 'sun', 'end']
+    for (let i = 0; i < days.length; i++) {
+      // 월요일 웹툰 목록 HTML구조를 복사한것을 나머지 탭 웹툰 목록으로 사용
+      const wentoonCopy = webtoon.cloneNode(true)
+      wentoonCopy.classList.replace('display__flex', 'display__none')
+      wentoonCopy.setAttribute('data-day', days[i])
+      serial.appendChild(wentoonCopy)
+      setThumbnail(
+        wentoonCopy,
+        data[i].thumbnail__class,
+        data[i].thumbnail__src,
+        data[i].thumbnail__alt
+      )
+      setTitle(wentoonCopy, data[i].title__class, data[i].title__text)
+      // 아이콘이 추가되는 요일
+      if (i === 0 || i === 3 || i === 6)
+        setIcon(
+          wentoonCopy,
+          data[i].icon__class,
+          data[i].icon__src,
+          data[i].icon__alt
+        )
+      setUserCnt(wentoonCopy, data[i].user__class, data[i].user__text)
+      setDay(wentoonCopy, data[i].day__class, data[i].day__text)
+    }
   }
 
-  const $serial = document.querySelector('.serial')
-  const $webtoon = document.querySelector('.serial__webtoons')
-  // 월요일 웹툰 목록 HTML구조를 복사한것을 화요일 웹툰 목록으로 사용
-  const $webtoon_copy = $webtoon.cloneNode(true)
-  $webtoon_copy.classList.replace('display__flex', 'display__none')
-  $webtoon_copy.setAttribute('data-day', 'tue')
-  $serial.appendChild($webtoon_copy)
+  webtoonList()
 
-  setThumbnail(
-    '.serial__thumbnail--img',
-    './images/resource_4.png',
-    '병약한? 남편의 계약 아내'
-  )
-  setTitle('.serial-webtoon__title', '병약한? 남편의 계약 아내')
-  setIcon('.serial-webtoon__user--icon', './images/icon_new.svg', '새작품')
-  setUserCnt('.serial-webtoon__user--cnt', '26.6만명')
-  setDay('.serial__more--desc', '화요 연재 더보기')
   const dayTab = document.querySelector('.serial__list')
   const dayTabList = dayTab.querySelectorAll('.serial__item')
 
@@ -73,18 +85,17 @@ window.onload = function () {
     }
   }
 
-  const $webtoons = document.querySelectorAll('.serial__webtoons')
+  const webtoonTabList = document.querySelectorAll('.serial__webtoons')
 
   function toggleActiveWebtoonTab() {
     const tabItem = this
-    // 1. 웹툰 목록을 전부 display none 시킴
-    $webtoons.forEach((e) => {
+    // 1. 웹툰 목록을 전부 display: none 처리
+    webtoonTabList.forEach((e) => {
       e.classList.add('display__none')
     })
-
-    $webtoons.forEach((e) => {
+    webtoonTabList.forEach((e) => {
       // 2. 클릭한 요소에 data-day를 가져옴
-      // 3. 가져온 값에 맞는 웹툰 목록을 display-flex
+      // 3. 가져온 값에 맞는 웹툰 목록을 display: flex 처리
       if (tabItem.getAttribute('data-day') === e.getAttribute('data-day'))
         e.classList.replace('display__none', 'display__flex')
     })
