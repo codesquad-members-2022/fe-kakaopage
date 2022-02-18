@@ -131,6 +131,59 @@ main {
   width: 80%;
 }
 
+/*========== 웹툰 컴포넌트 ==========*/
+.webtoon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.webtoon-img {
+  width: 100%;
+}
+
+.webtoon-img-bar {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  padding: 6px 5px 4px 5px;
+  margin-top: -4px;
+}
+
+.star-img {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.webtoon-img-bar span {
+  color: #fcc419;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: -1px;
+}
+
+.watch-img {
+  width: 18px;
+  margin-right: 3px;
+}
+
+.webtoon-details {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.webtoon-state-img {
+  width: 20px;
+  margin-right: 3px;
+}
+
+.people-img {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+
 /*========== 추천 이벤트 ==========*/
 
 .event-img {

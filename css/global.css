@@ -62,6 +62,11 @@ a {
   grid-gap: 12px;
 }
 
+.grid-5col {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .text-color--black {
   color: #000;
 }
