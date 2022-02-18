@@ -3,6 +3,7 @@
   margin: auto;
 }
 
+/* 메인 배너의 네비의 홈 탭에 디폴트로 줘야함 */
 .underline--yellow {
   border-bottom: 3px solid #ffd200;
 }
