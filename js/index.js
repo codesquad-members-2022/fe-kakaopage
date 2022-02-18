@@ -1,8 +1,11 @@
 import { Main, NotFound, Novel, Webtoon } from './category.js';
+import { ERROR } from './constants/message.js';
+import { ELEMENT_CLASS, ELEMENT_ID } from './constants/variable.js';
 import { $get } from './utils.js';
-import { ERR_MSG } from './constant.js';
 
-const { NOT_FOUND } = ERR_MSG;
+const { NOT_FOUND } = ERROR;
+const { MAIN_CATEGORY, MAIN_LAYOUT } = ELEMENT_ID;
+const { MAIN_LAYOUT_CHILDREN } = ELEMENT_CLASS;
 
 const navigateTo = (url, categoryUid) => {
   history.pushState(null, null, url);
@@ -21,14 +24,15 @@ async function render(categoryUid) {
     $mainLayout.innerHTML = await view();
   } catch (error) {
     if (error.message === NOT_FOUND) {
-      // history.pushState(null, null, '/');
+      history.pushState(null, null, '/');
       location.reload();
     }
   }
 }
 
-const $nav = $get('main__nav');
-const $mainLayout = $get('main-layout');
+const $nav = $get(MAIN_CATEGORY);
+const $mainLayout = $get(MAIN_LAYOUT);
+const $mainChildLayout = $mainLayout.querySelectorAll(MAIN_LAYOUT_CHILDREN);
 
 $nav.addEventListener('click', (event) => {
   event.preventDefault();
