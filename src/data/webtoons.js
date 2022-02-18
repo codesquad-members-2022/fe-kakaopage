@@ -92,6 +92,21 @@ const Webtoons = [
     rating: '10.0',
     image: 'https://dn-img-page.kakao.com/download/resource?kid=WKyz9/hzhOe60YLf/FeyNU55oWxHnFLOuQtvYN1&filename=th2',
   },
+  {
+    title: '8클래스 마법사의 회귀',
+    writer: {
+      writing: '테스',
+      drawing: '류송',
+    },
+    readers: '81.5만명',
+    genre: '소년',
+    waitFree: true,
+    ageLimit: 'All',
+    serialDate: ['월'],
+    shortDesc: '"내가 원했던 참회란, 모든 것을 되돌려놓는 것."',
+    rating: '10.0',
+    image: 'https://dn-img-page.kakao.com/download/resource?kid=bhe9o7/hzmU3zpvL3/DWRcsmPxJAlrjDw7MkGWwK&filename=th2',
+  }
 ];
 
 export default Webtoons;
