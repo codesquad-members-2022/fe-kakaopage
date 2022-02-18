@@ -1,0 +1,21 @@
+{
+  "name": "fe-kakaopage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cheerio": "^1.0.0-rc.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiminKim-dev/fe-kakaopage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
