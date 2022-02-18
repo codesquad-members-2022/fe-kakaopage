@@ -20,6 +20,7 @@ const onHighLight = (element) => {
   element.classList.toggle('color-black');
 };
 
+/* preview ~ tagList까지 (일부 메인 카테고리 탭 제외하고는 공통) */
 pageMainCategory.forEach((li, idx, list) => {
   li.addEventListener('click', (event) => {
     if (curIdx === idx) return;
