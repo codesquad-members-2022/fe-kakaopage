@@ -53,3 +53,12 @@ a:hover, a:active {
     text-decoration: none;
     color: #bdbdbd;
 }
+img {
+	display: block;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
