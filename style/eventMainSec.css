@@ -1,0 +1,29 @@
+.ev__main--toggle--sort {
+  display: none;
+  width: auto;
+}
+
+.ev__main__cartoonZone__cell {
+  flex-direction: row;
+}
+
+.ev__main__cartoonZone--image {
+  width: 125%;
+}
+
+.ev__main__cartoonZone--imgTag {
+  display: none;
+}
+
+.ev__main__cartoonZone--info {
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ev__main__cartoonZone--info > span {
+  padding: 25px 10px;
+}
+
+.ev__main__cartoonZone {
+  flex-direction: column;
+}

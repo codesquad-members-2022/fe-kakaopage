@@ -1,0 +1,69 @@
+:root {
+  --contents-width: 1000px;
+  --nav-fontSize: 18px;
+  --basic-fontColor: dimgrey;
+}
+
+body {
+  background-color: #d9d9d9;
+  color: var(--basic-fontColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  list-style: none;
+}
+.header {
+  background-color: white;
+  display: flex;
+}
+
+.header--display {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.header__top {
+  flex-direction: row;
+}
+
+.header__top--logo {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #3e320b;
+  padding: 25px;
+}
+
+.header__top--toggle {
+  position: absolute;
+  padding-right: 15px;
+  top: 25%;
+  right: 0%;
+}
+
+.login__text {
+  padding: 0px 5px;
+  border-right: 1px solid dimgrey;
+}
+
+.input__search {
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.header__nav {
+  font-size: var(--nav-fontSize);
+}
+
+.header__nav--ul {
+  justify-content: space-around;
+  width: var(--contents-width);
+  padding-bottom: 5px;
+}
