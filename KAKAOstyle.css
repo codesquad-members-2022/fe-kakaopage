@@ -228,3 +228,40 @@ ul li {
   margin: 4px;
   font-size: 14px;
 }
+
+.content__info img {
+  height: 120px;
+  width: 120px;
+}
+
+.tab_list {
+  display: inline-block;
+  width: 33.3334%;
+  height: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  border-right: 0;
+  box-sizing: border-box;
+}
+.tab_list.tab_active a {
+  color: black;
+}
+.tab_list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: gray;
+}
+.tab_content {
+  display: none;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  /* background: #eee; */
+  box-sizing: border-box;
+}
+.tab_content:first-child {
+  display: block;
+}
