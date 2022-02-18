@@ -20,9 +20,11 @@ const drawDummyPage = (curIdx) => {
   dummyPage.classList.remove('display-none');
 };
 
-const moveYellowBorder = (from, to) => {
-  from.classList.toggle('yellow-border');
-  to.classList.toggle('yellow-border');
+const offHighLight = (element) => {
+  element.classList.toggle('yellow-border');
+};
+const onHighLight = (element) => {
+  element.classList.toggle('yellow-border');
 };
 
 pageHeaderCategoryList.forEach((node, idx, list) => {
@@ -32,7 +34,9 @@ pageHeaderCategoryList.forEach((node, idx, list) => {
     const prevTarget = list[curIdx];
     const curTarget = event.target.closest('li');
     setCurIdx(idx);
-    moveYellowBorder(prevTarget, curTarget);
+
+    offHighLight(prevTarget);
+    onHighLight(curTarget);
     drawDummyPage(curIdx);
   });
 });
