@@ -198,8 +198,8 @@ header {
 }
 
 .recommendation {
-    height: 160px;
     margin-top: 10px;
+    padding: 15px 0;
 
     background-color: white;
 
@@ -219,19 +219,6 @@ header {
     font-size: 18px;
     font-weight: 600;
     margin: 2px 2px;
-}
-
-.rec-btn:nth-child(1){
-    border-radius: 8px 0 0 0;
-}
-.rec-btn:nth-child(3){
-    border-radius: 0 8px 0 0;
-}
-.rec-btn:nth-child(4){
-    border-radius: 0 0 0 8px;
-}
-.rec-btn:nth-child(6){
-    border-radius: 0 0 8px 0;
 }
 
 .slide-event {
@@ -298,6 +285,32 @@ header {
     justify-content: flex-end;
     
     color:rgb(150, 137, 137);
+}
+
+.category-nav{
+    padding: 5px 5px 15px 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: 1.05rem;
+    color: lightgray;
+    font-weight: 550;
+}
+
+.category-nav-items {
+    flex:1;
+    display: flex;
+}
+
+.category-nav-items > div {
+    margin-right: 10px;
+}
+
+.category-nav-sum {
+    font-size: 0.9rem;
+    font-weight: 550;
 }
 
 .nav-day{
@@ -367,6 +380,7 @@ header {
 }
 
 .content-name{
+    font-size: 0.9rem;
     font-weight: 550;
     color:rgb(77, 74, 74);
 
@@ -404,7 +418,6 @@ header {
 
 .menu-form-ranking {
     width: 720px;
-    height: 440px;
 
     display: flex;
     flex-direction: column;
@@ -413,6 +426,7 @@ header {
 .ranking-content {
     flex: 1;
     width: 100%;
+    padding-top: 20px;
     display: flex;
 
     align-items: center;
@@ -544,4 +558,51 @@ details {
 
 .details-line {
     display: flex;
+}
+
+.horizontal-img-wrap {
+    width: 142px;
+    height: 96px;
+
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin-right: 30px;
+}
+
+.horizontal-img {
+    width: 100%;
+    height: 100%;
+}
+
+.contents-flex-box-bigger {
+    height: 280px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-form-bigger {
+    width: 155px;
+    height: 280px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content-vertical-img-wrap {
+    width: 155px;
+    height: 222px;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content-vertical-img {
+    width: 100%;
+    height: 100%;
+}
+
+.selected {
+    color: red;
 }
