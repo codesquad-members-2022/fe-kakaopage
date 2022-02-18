@@ -12,9 +12,12 @@ const setCurIdx = (idx) => {
   curIdx = idx;
 };
 
-const moveBlackColor = (from, to) => {
-  from.classList.toggle('color-black');
-  to.classList.toggle('color-black');
+const offHighLight = (element) => {
+  element.classList.toggle('color-black');
+};
+
+const onHighLight = (element) => {
+  element.classList.toggle('color-black');
 };
 
 pageMainCategory.forEach((li, idx, list) => {
@@ -24,7 +27,9 @@ pageMainCategory.forEach((li, idx, list) => {
     const curTarget = event.target;
     const category = li.textContent;
     setCurIdx(idx);
-    moveBlackColor(prevTarget, curTarget);
+    offHighLight(prevTarget);
+    onHighLight(curTarget);
+
     setPreview(category);
 
     clearTagListEl();
