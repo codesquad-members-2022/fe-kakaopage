@@ -1,4 +1,4 @@
-import { $, getTag, addImg } from "./domLibrary-1.js";
+import { $, getStrTag, addImg } from "./domLibrary-1.js";
 const imagePath = "/image/main";
 
 class Main {

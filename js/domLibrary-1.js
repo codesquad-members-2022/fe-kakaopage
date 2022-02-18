@@ -2,7 +2,7 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
-function getTag(tagName, className) {
+function getStrTag(tagName, className) {
   return `<${tagName} class="${className || ""}"></${tagName}`;
 }
 
@@ -16,9 +16,20 @@ function getTag(tagName, className) {
 function addImg(selector, className, imagePath, position) {
   $(`.${selector}`).insertAdjacentHTML(
     position ? "afterbegin" : "beforeend",
-    getTag("img", className)
+    getStrTag("img", className)
   );
   $(`.${className}`).src = imagePath;
 }
 
-export { $, getTag, addImg };
+function addTag(selector, tagName, className, position) {
+  $(selector).insertAdjacentHTML(
+    position ? "afterbegin" : "beforeend",
+    getStrTag(tagName, className)
+  );
+}
+
+function setProperty(selector, property, value) {
+  $(selector).setAttribute(property, value);
+}
+
+export { $, getStrTag, addImg };
