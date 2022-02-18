@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <img
-          src="img/logo-kakaopage.svg"
-          alt="logo"
-          class="header__container__home"
-        />
-        <form>
-          <input />
-        </form>
-        <nav class="header__navigation__container">
+      <header class="content">
+        <div class="header__container">
+          <img
+            src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"
+            alt="logo"
+            class="header__container__home"
+          />
+
+          <!-- Todo : form을 ul 외부로 빼고 form과 ul을 div로 감싸기, 컴포넌트화할때 눌러서 페이지이동하는것이 li로 연속적으로 있게하고 검색은 연속적으로 렌더링할 필요없다고 생각함 -->
           <ul class="header__navigation__sub">
             <li>
-              <img src="img/pc-logo-stage.svg" alt="logo_stage" />
+              <form>
+                <input />
+              </form>
+            </li>
+            <li>
+              <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="logo stage" />
             </li>
             <li>
               <button class="header__navigation__btn">캐시충전</button>
@@ -31,64 +34,38 @@
               <button>로그인</button>
             </li>
           </ul>
+        </div>
+
+        <nav class="header__navigation">
+          <ul class="header__navigation__menu">
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31" alt="menu home" />
+            </li>
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="menu toon" />
+            </li>
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55" alt="menu novel" />
+            </li>
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f" alt="menu vod" />
+            </li>
+
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18" alt="menu broadcast" />
+            </li>
+            <li>
+              <img src="https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504" alt="menu book" />
+            </li>
+          </ul>
         </nav>
-      </div>
-
-      <nav>
-        <ul class="header__navigation__menu">
-          <li>
-            <img src="img/menu_home.svg" alt="menu_home" />
-          </li>
-          <li>
-            <img src="img/menu_toon.svg" alt="menu_toon" />
-          </li>
-          <li>
-            <img src="img/menu_novel.svg" alt="menu_novel" />
-          </li>
-          <li>
-            <img src="img/menu_vod.svg" alt="menu_vod" />
-          </li>
-
-          <li>
-            <img src="img/menu_broadcast.svg" alt="menu_broadcast" />
-          </li>
-          <li>
-            <img src="img/menu_book.svg" alt="menu_book" />
-          </li>
-        </ul>
-      </nav>
-    </header>
+      </header>
+    </div>
 
     <main>
       <nav>
-        <ul class="main__navigation__menu">
-          <li>
-            <a>홈</a>
-          </li>
-          <li>
-            <a>요일연재</a>
-          </li>
-          <li>
-            <a>웹툰</a>
-          </li>
-          <li>
-            <a>소년</a>
-          </li>
-          <li>
-            <a>드라마</a>
-          </li>
-          <li>
-            <a>로맨스</a>
-          </li>
-          <li>
-            <a>로판</a>
-          </li>
-          <li>
-            <a>액션무협</a>
-          </li>
-          <li>
-            <a>BL</a>
-          </li>
+        <ul class="main__navigation__menu main__navigation__margin">
+          <script src="/topics.js" type=""module></script>
         </ul>
       </nav>
 
@@ -97,70 +74,36 @@
           <img
             class="banner__content"
             src="img/banner.png"
-            alt="webtoon-slide-content"
+            alt="webtoon slide content"
           />
         </div>
-        <h1>지옥에서 독식</h1>
-        <span>UP</span>
-        <span>clock</span>
+        <h1 class="banner">지옥에서 독식</h1>
+        <img src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2" />
+        <img src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"/>
         <span>웹툰</span>
-        <span>|</span>
-        <span>person</span>
+        <img src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea"/>
+        <img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e" />
         <span>17.3만명</span>
+        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56"/>
+        <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" />
         <button>난이도: 지옥 종말의 별에 진입합니다.</button>
       </section>
 
       <section>
-        <div>오늘 UP</div>
-        <div>오늘 신작</div>
-        <div>오리지널</div>
-        <div>완결까지 정주행</div>
-        <div>독립운동가 웹툰</div>
-        <div>오늘 랭킹</div>
-      </section>
-
-      <section>
-        <button>이전</button>
-        <img alt="event-slide" />
-        <button>다음</button>
-      </section>
-
-      <section>
         <nav>
-          <ul>
-            <li>
-              <button>월</button>
-            </li>
-            <li>
-              <button>화</button>
-            </li>
-            <li>
-              <button>수</button>
-            </li>
-            <li>
-              <button>목</button>
-            </li>
-            <li>
-              <button>금</button>
-            </li>
-            <li>
-              <button>토</button>
-            </li>
-            <li>
-              <button>일</button>
-            </li>
-            <li>
-              <button>완료</button>
-            </li>
+          <ul class="main__navigation__menu main__week__menu">
+            <script src="/weekNavigation.js" type="module"></script>
           </ul>
         </nav>
 
-        <section>
-          <button>전체</button>
-          <span>|</span>
-          <button>웹툰</button>
-          <span>|</span>
-          <button><span>clock</span>웹툰</button>
+        <section class="header__container main__toon__category">
+          <div>
+            <button>전체</button>
+            <span>|</span>
+            <button>웹툰</button>
+            <span>|</span>
+            <button><span>clock</span>웹툰</button>
+          </div>
 
           <div>
             <span>전체 (180)</span>
@@ -168,22 +111,108 @@
           </div>
         </section>
 
-        <article>
+        <div class="main__toon__category toon__grid toons__box">
           <div>
-            <img />
-            <span>star</span>
-            <span>9.3</span>
-            <span>clock</span>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
           </div>
-          <h2 class="title">제목</h2>
-          <span>UP아이콘</span>
-          <span>person아이콘</span>
-          <span>11.5만명</span>
-        </article>
+
+          <div>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="toon__box">
+                <img class="toon" src="https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2" alt="toon"/>
+              </div>
+              <img src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"/>
+              <span>9.3</span>
+              <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"/>
+            </div>
+            <h2 class="title">나 혼자만 레벨업</h2>
+            <div header__container>
+              <img class="read__icon" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="read count"/>
+              <span>11.5만명</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <button>카카오페이지 앱으로 보기</button>
+      <img class="main__navigation__margin" src="https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b" alt="app download"/>
     </main>
     <footer></footer>
+    <script src="/main.js" type="module"></script>
   </body>
 </html>

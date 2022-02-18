@@ -1,39 +1,53 @@
 body {
-  margin: 30px 400px 55px 400px;
-  background-color: #eeeeee;
+  background-color: #eee;
+  padding-top: 142px;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  background-color: #fff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 720px;
-}
-
-header .header__navigation__menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 80px;
 }
 
-header
-  .header__container
-  .header__navigation__container
-  .header__navigation__sub {
-  display: flex;
-}
-
-header .header__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-}
-
-header .header__container .header__container__home {
+.header__container .header__container__home {
   width: 130px;
 }
 
-header .header__container .header__navigation__container {
-  width: 590px;
+.header__navigation__sub {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__navigation__sub > li {
+  margin-left: 10px;
+}
+
+.header__navigation__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 720px;
+  padding: 20px 0;
+}
+
+button {
+  border: none;
+}
+
+main {
+  margin: 0 auto;
+  width: 720px;
 }
 
 .main__navigation__menu {
@@ -45,11 +59,59 @@ header .header__container .header__navigation__container {
   height: 65px;
 }
 
-/*
-  Todo : 이미지를 div크기에 맞게 확장하기
-*/
+.main__navigation__margin {
+  margin: 20px 0 15px;
+}
+
 .banner__box {
+  position: relative;
+  width: 720px;
+  height: 480px;
 }
 
 .banner__box .banner__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main__toon__category {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 25px 15px;
+}
+
+.toon__box {
+  display: flex;
+  width: 120px;
+  height: 150px;
+}
+.toon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.toon__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.read__icon {
+  width: 10px;
+  height: 10px;
+}
+
+.toon__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
 }
