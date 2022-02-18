@@ -6,6 +6,5 @@ export const CL = {
   SELECTED: 'selected',
   WHOLE: 'whole',
   DAY_NAME: '.day__name',
-  NAV_CIRCLE: 'nav__circle',
   NAV_SUBJECT: 'nav__subject',
 };

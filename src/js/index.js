@@ -5,17 +5,13 @@ const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
 const $navHeader = $('.header__navbar');
 const $navMain = $('.main__navbar');
-const $mainSlider = $('.main__slider');
+const $mainBanner = $('.main__banner');
 
 async function loadData(param) {
   const response = await fetch(DATA_URL);
   const json = await response.json();
   const data = await json[param];
   return data;
-
-  // return fetch(DATA_URL)
-  //   .then(response => response.json())
-  //   .then(json => json.webtoon);
 }
 
 function displayWebtoon(data, node) {
@@ -54,7 +50,6 @@ function filterWebtoonsByDay(e, wt) {
 }
 
 function activateTab({ target }, parentNode) {
-  if (target === parentNode) return;
   // If the clock is clicked, change the target as LI
   if (target.parentNode.tagName === 'LI') target = target.parentNode;
   [...parentNode.children].forEach(child => {
@@ -62,18 +57,17 @@ function activateTab({ target }, parentNode) {
   });
 }
 
-function removeCircle(e) {
-  if (!e.target.matches('.nav__subject')) return;
-  const circle = [...e.target.children].find(
-    v => v.className === CL.NAV_CIRCLE
-  );
-  if (!circle) return;
-  e.target.removeChild(circle);
+function removeAlarm({ target }) {
+  if (target.parentNode.classList.contains('nav__subject')) {
+    target = target.parentNode;
+  }
+  target.classList.remove('alarm');
 }
 
 function filterContentsBySub(e, banner) {
   // If e.target is clock or circle, then I need to bring parent's id
   // If I should make slider(carousel), I should use filter instead of find
+
   const subject = e.target.classList.contains('nav__subject')
     ? e.target.id
     : e.target.parentNode.id;
@@ -81,17 +75,18 @@ function filterContentsBySub(e, banner) {
 }
 
 function displayBanner(url) {
-  $mainSlider.innerHTML = createBannerImg(url);
+  $mainBanner.innerHTML = createBannerImg(url);
 }
 
 function createBannerImg(url) {
-  return `<img src=${url} class="slider__img" alt="webtoon-image"/>`;
+  return `<img src=${url} class="banner__img" alt="webtoon-image"/>`;
 }
 
 function setEventListenrToNavHeader(banner) {
   $navHeader.addEventListener('click', e => {
+    if (e.target.matches('.header__navbar')) return;
+    removeAlarm(e);
     filterContentsBySub(e, banner);
-    removeCircle(e);
     activateTab(e, $navHeader);
   });
 }
@@ -100,7 +95,10 @@ $navMain.addEventListener('click', e => {
   activateTab(e, $navMain);
 });
 
-loadData('banner').then(banner => setEventListenrToNavHeader(banner));
+loadData('banner').then(banner => {
+  displayBanner(banner.find(b => b.subject === 'home')['url']);
+  setEventListenrToNavHeader(banner);
+});
 
 loadData('webtoon')
   .then(wt => {

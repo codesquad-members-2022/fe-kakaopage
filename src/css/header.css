@@ -85,7 +85,8 @@
   cursor: pointer;
 }
 
-.nav__circle {
+.alarm::after {
+  content: '';
   width: 7px;
   height: 7px;
   background-color: var(--color-yellow);
@@ -93,10 +94,6 @@
   position: absolute;
   right: 5px;
   top: 5px;
-}
-
-.nav__name {
-  cursor: pointer;
 }
 
 .nav__subject.selected {
