@@ -27,8 +27,8 @@ navListsEl.forEach((navList) => {
             } else if(e.target.textContent === "홈") {
                 main.innerHTML += renderHomeLayout();
                 append('article__weekdays-top', renderNav('article__nav', homeData['articleNav']));
-                append('article__weekdays-top', renderArticleSections(10));
-                append('article__books5', renderArticleSections(5));
+                append('article__weekdays-top', renderSection(10));
+                append('article__books5', renderSection(5));
                 append('article__ranking3', addArticleRankingLists());
             }
         }
@@ -99,6 +99,6 @@ fetch('https://korea-webtoon-api.herokuapp.com/kakao-page/week')
     .then(res => console.log(res[0]))
 
 
-import { renderBase, renderNav, renderArticle, renderArticleSections, renderMidButton } from './common.js'
+import { renderBase, renderNav, renderArticle, renderSection, renderMidButton } from './common.js'
 import { renderHomeLayout, homeData } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';

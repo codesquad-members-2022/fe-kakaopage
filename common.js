@@ -127,12 +127,12 @@ function renderArticle(className, headerTittle, headerSubText = '') {
 // } 
 // 위 함수로 합쳐진 부분.
 
-function renderArticleSections(num) {
-    const sections = renderSection(num);
-    return `
-    <div class="section__book-wrapper">${sections}
-    </div>`
-}
+// function renderArticleSections(num) {
+//     const sections = renderSection(num);
+//     return `
+//     <div class="section__book-wrapper">${sections}
+//     </div>`
+// }
 
 function renderSection(num) {
     let sections = '';
@@ -152,7 +152,8 @@ function renderSection(num) {
         </div>
     </section>`
     }
-    return sections;
+    return `<div class="section__book-wrapper">${sections}
+    </div>`
 }
 
 function renderMidButton(listNames) {
@@ -166,4 +167,4 @@ function renderMidButton(listNames) {
     </div>`
 }
 
-export { renderBase, renderNav , renderArticle, renderArticleSections, renderMidButton};
+export { renderBase, renderNav , renderArticle, renderSection, renderMidButton};
