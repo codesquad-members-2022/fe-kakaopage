@@ -8,6 +8,8 @@
 # 구현결과
 1. 페이지 로드 시, 오늘 요일의 탭이 활성화
 2. 탭 클릭 시, 클릭한 탭에 맞는 content가 렌더
+
+[데모 페이지](https://jindonyy.github.io/fe-kakaopage/webtoon.html)  
 ![dayTopTab](https://user-images.githubusercontent.com/17706346/154622871-9c76c544-6c4e-4e6a-8121-07cfc4381746.gif)
 
 # 고민
