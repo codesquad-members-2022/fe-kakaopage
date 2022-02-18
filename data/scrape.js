@@ -71,7 +71,7 @@ const parsingDailyRanking = async () => {
       title: $(node).find('.css-6mi0ws > span').text(),
       viewer: $(node).find('.css-1c1ahuy').text(),
       author: $(node).find('.css-ifcwub > .css-1pysja1').text(),
-      img_url: $(node).find('.css-gvuv0v > img').attr('data-src'),
+      img_url: 'https:' + $(node).find('.css-gvuv0v > img').attr('data-src'),
       img_alt: $(node).find('.css-gvuv0v > img').attr('alt'),
       genre: $(node).find('.css-ifcwub > .css-vurnku').text(),
       day: $(node).find('.css-wdpbmy').text(),
@@ -100,7 +100,7 @@ const parsingHomeTop = async () => {
       title: $(node).find('div.css-6mi0ws > span').text(),
       review: $(node).find('div.css-nfxgqr').text(),
       viewer: $(node).find('div.css-1c1ahuy').text(),
-      img_url: $(node).find('img').attr('data-src'),
+      img_url: 'https:' + $(node).find('img').attr('data-src'),
       img_alt: $(node).find('img').attr('alt')
     })
   });
