@@ -8,8 +8,10 @@
       "genre": ["액션무협", "드라마"],
       "days": ["목"],
       "rank": "9.9",
-      "isHomeMain": true,
-      "isDaysMain": false,
+      "isMain": {
+        "home": true,
+        "days": false
+      },
       "adult": true,
       "waitForFree": false,
       "event": "이벤트",
@@ -28,8 +30,10 @@
       "genre": ["로판"],
       "days": ["화"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -48,8 +52,10 @@
       "genre": ["로판"],
       "days": ["월"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -68,8 +74,10 @@
       "genre": ["로판"],
       "days": ["수"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": true,
       "waitForFree": true,
       "event": "",
@@ -88,8 +96,10 @@
       "genre": ["소년"],
       "days": ["목"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -108,8 +118,10 @@
       "genre": ["소년"],
       "days": ["화", "금"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -128,8 +140,10 @@
       "genre": ["로판"],
       "days": ["토"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -148,8 +162,10 @@
       "genre": ["드라마"],
       "days": ["월", "일"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -168,8 +184,10 @@
       "genre": ["로판"],
       "days": ["완결"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": true,
       "waitForFree": true,
       "event": "",
@@ -188,8 +206,10 @@
       "genre": ["액션무협"],
       "days": ["토"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": false,
+      "isMain": {
+        "home": false,
+        "days": false
+      },
       "adult": false,
       "waitForFree": true,
       "event": "",
@@ -208,8 +228,10 @@
       "genre": ["드라마"],
       "days": ["금"],
       "rank": "9.9",
-      "isHomeMain": false,
-      "isDaysMain": true,
+      "isMain": {
+        "home": false,
+        "days": true
+      },
       "adult": false,
       "waitForFree": true,
       "event": "이벤트",

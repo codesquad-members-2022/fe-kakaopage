@@ -5,7 +5,7 @@ const DaysGenre = (webtoons) => {
   const today = new Date().getDay() - 1;
 
   return `
-    ${MainBanner(webtoons.filter((wt) => wt.isDaysMain))}
+    ${MainBanner(webtoons.filter((wt) => wt.isMain.days))}
     ${DaysTop(today, webtoons)}
 `;
 };

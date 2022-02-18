@@ -12,7 +12,7 @@ const HomeGenre = (webtoons) => {
   const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
 
   return `
-    ${MainBanner(webtoons.filter((wt) => wt.isHomeMain))}
+    ${MainBanner(webtoons.filter((wt) => wt.isMain.home))}
     ${NavDetail()}
     ${SubBanner()}
     ${DaysTop(today, webtoons)}
