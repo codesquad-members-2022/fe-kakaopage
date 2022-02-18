@@ -2,7 +2,7 @@
 
 ## 데모
 
-https://ubeom.github.io/fe-kakaopage/
+[데모 사이트](https://ubeom.github.io/fe-kakaopage/)
 
 ## 한 것
 
