@@ -1,95 +1,126 @@
-.webtoon-components {
+/* 웹툰컴포넌트 */
+
+.webtoon-component-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
 .webtoon-component {
   width: 120px;
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
   margin-bottom: 20px;
 }
 
-.webtoon-img {
-  height: 120px;
-}
-
-.webtoon-img img {
-  width: 120px;
-  height: 120px;
-  border-radius: 8px 8px 0 0;
-}
-
-.webtoon-rating {
-  width: 120px;
-  height: 30px;
-  border-radius: 0 0 8px 8px;
-  background-color: rgb(36, 37, 38);
-  font-size: 16px;
-  color: var(--yellow);
+.horizontal-component {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
+  width: 100%;
+  padding-top: 10px;
 }
 
-.webtoon-score {
-  display: flex;
+.big-component {
+  width: 155px;
 }
 
-.webtoon-score__img {
-  margin-right: 5px;
-  position: relative;
-  bottom: -1px;
+.big-component .webtoon-cover {
+  width: 155px;
+  height: 220px;
+}
+
+.webtoon-cover {
+  width: 120px;
+  height: 150px;
+  background: url('../../img/resource.png');
+  background-size: cover;
+  border-radius: 6px;
+}
+
+.webtoon-state {
+  height: 14px;
+  margin-right: 2px;
 }
 
 .webtoon-badge {
+  height: 25px;
+  border-top-left-radius: 6px;
+}
+
+.webtoon-label {
+  width: 120px;
+  height: 30px;
+  background-color: #242526;
+  border-radius: 0 0 6px 6px;
+  position: absolute;
+  bottom: 0;
+  color: var(--yellow);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.webtoon-label-row {
   display: flex;
   align-items: center;
 }
 
-.webtoon-badge__waitfree-badge {
+.webtoon-score-img {
+  margin-right: 4px;
   width: 16px;
 }
 
-.webtoon-badge__free-badge {
-  width: 30px;
-}
-
 .webtoon-info {
-  width: 120px;
+  margin-top: 10px;
 }
 
 .webtoon-title {
-  height: 20px;
-  margin-top: 9px;
-  margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.webtoon-detail {
-  display: flex;
-  height: 18px;
+.webtoon-etc {
   font-size: 14px;
-  font-weight: bold;
+  margin-top: 10px;
   color: #9c9c9c;
 }
 
-.webtoon-detail__state,
-.webtoon-subscriber {
-  display: flex;
-  align-items: center;
-}
-
-.webtoon-detail__state,
-.webtoon-subscriber img {
-  margin-right: 4px;
-}
-
-.webtoon-detail__state img,
-.webtoon-subscriber img {
-  width: 13px;
+.webtoon-etc img {
   height: 13px;
+}
+
+.webtoon-summary {
+  margin-top: 10px;
+  color: #9c9c9c;
+}
+
+.small-cover {
+  width: 84px;
+  height: 114px;
+  margin-right: 20px;
+}
+
+.small-cover ~ .webtoon-info .webtoon-day {
+  margin-top: 20px;
+  color: #9c9c9c;
+}
+
+.small-cover ~ .webtoon-info,
+.wide-cover ~ .webtoon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.wide-cover {
+  width: 142px;
+  height: 96px;
+  margin-right: 20px;
+}
+
+.webtoon-ranking-number {
+  display: flex;
+  height: 114px;
+  font-size: 22px;
+  align-items: center;
+  margin-right: 20px;
 }

@@ -42,11 +42,11 @@
 }
 
 .preview-state img {
-  width: 35px;
+  height: 22px;
 }
 
 .preview-state,
-.preview-type,
+.preview-class,
 .preview-subscribers {
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
   margin-right: 10px;
 }
 
-.preview-type img,
+.preview-class img,
 .preview-subscribers img {
   margin-right: 4px;
 }
@@ -73,7 +73,7 @@
 .preview .prev-btn,
 .preview .next-btn {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   top: 45%;
   cursor: pointer;
 }

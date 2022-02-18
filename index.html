@@ -14,14 +14,14 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header-container">
-        <div class="page-header-content">
+      <div class="page-header__container">
+        <div class="page-header__content">
           <a href="#" class="page-header__home-btn">
             <h1 class="page-header__title">kakaopage</h1>
           </a>
         </div>
 
-        <div class="page-header-content">
+        <div class="page-header__content">
           <div class="search-bar-container">
             <form class="search-bar" action="#">
               <input class="search-bar__input" type="text" />
@@ -52,49 +52,49 @@
         </div>
       </div>
 
-      <div class="page-header-container">
+      <div class="page-header__container">
         <nav class="page-header-category">
-          <ul>
+          <ul class="page-header-category__container">
             <li>
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31"
-                  alt=""
+                  alt="홈"
               /></a>
             </li>
-            <li>
+            <li class="yellow-border">
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8"
-                  alt=""
+                  alt="웹툰"
               /></a>
             </li>
             <li>
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55"
-                  alt=""
+                  alt="웹소설"
               /></a>
             </li>
             <li>
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f"
-                  alt=""
+                  alt="영화"
               /></a>
             </li>
             <li>
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18"
-                  alt=""
+                  alt="방송"
               /></a>
             </li>
             <li>
               <a href="#"
                 ><img
                   src="https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504"
-                  alt=""
+                  alt="책"
               /></a>
             </li>
           </ul>
@@ -103,23 +103,23 @@
     </header>
 
     <main class="page-main">
-      <div class="page-main-container">
+      <div class="page-main__container">
         <nav class="page-main-category">
-          <ul>
-            <li><a href="#">홈</a></li>
-            <li><a href="#">요일연재</a></li>
-            <li><a href="#">웹툰</a></li>
-            <li><a href="#">소년</a></li>
-            <li><a href="#">드라마</a></li>
-            <li><a href="#">로맨스</a></li>
-            <li><a href="#">로판</a></li>
-            <li><a href="#">액션무협</a></li>
-            <li><a href="#">BL</a></li>
+          <ul class="page-main-category__container">
+            <li class="color-gray">홈</li>
+            <li class="color-black">요일연재</li>
+            <li class="color-gray">웹툰</li>
+            <li class="color-gray">소년</li>
+            <li class="color-gray">드라마</li>
+            <li class="color-gray">로맨스</li>
+            <li class="color-gray">로판</li>
+            <li class="color-gray">액션무협</li>
+            <li class="color-gray">BL</li>
           </ul>
         </nav>
       </div>
 
-      <div class="page-main-container">
+      <div class="page-main__container">
         <div class="preview">
           <div class="preview-cover">
             <img src="./img/지옥에서독식(업).jpg" alt="지옥에서독식" />
@@ -133,12 +133,12 @@
 
               <div class="preview-detail">
                 <span class="preview-state">
-                  <img src="./svg/badge-bigthum-up.svg" alt="업데이트" />
+                  <img src="./data/state/update.svg" alt="업데이트" />
                 </span>
 
-                <div class="preview-type">
+                <div class="preview-class">
                   <img
-                    src="./svg/ico-bigthum-wait.svg"
+                    src="./data/state/waitfree.svg"
                     alt="기다리면 무료 이미지"
                   />
                   <span>웹툰</span>
@@ -173,136 +173,345 @@
         </div>
       </div>
 
-      <div class="page-main-container">
-        <div class="webtoon-filters">
-          <ul class="day-filter">
-            <li>월</li>
-            <li>화</li>
-            <li>수</li>
-            <li>목</li>
-            <li>금</li>
-            <li>토</li>
-            <li>일</li>
-            <li>완결</li>
-          </ul>
+      <div class="page-main__container">
+        <div class="banner">
+          <a href="#">
+            <img src="./img/appDownload.png" alt="앱으로보기" />
+          </a>
+        </div>
+      </div>
 
-          <div class="filter-container">
-            <div class="main-filter">
-              <ul>
-                <li>전체</li>
-                <li class="seperator"><img src="img/Seperator.png" /></li>
-                <li>웹툰</li>
-                <li class="seperator"><img src="img/Seperator.png" /></li>
-                <li>
-                  <img
-                    src="./svg/ico_wait-off.svg"
-                    alt="기다리면무료웹툰"
-                  />웹툰
-                </li>
-              </ul>
-            </div>
-
-            <div class="sub-filter">
-              <button class="sub-filter__dropdown-btn">전체 (169)</button>
-              <div class="sub-filter__dropdown-icon">
-                <img src="./svg/ico_sorting_arrow.svg" alt="드롭다운아이콘" />
-              </div>
+      <div class="page-main__container">
+        <div class="contents-container">
+          <div class="contents-header">
+            <div class="contents-title big-font">요일 연재 TOP</div>
+            <a href="#" class="contents-more">
+              더보기 <img src="./data/contents/more.svg" />
+            </a>
+          </div>
+          <div class="contents-filter"></div>
+          <div class="contents-main">
+            <div class="webtoon-component-container">
+              <article class="webtoon-component">
+                <div class="webtoon-cover relative">
+                  <div class="webtoon-label">
+                    <div class="webtoon-label-row">
+                      <div class="webtoon-ranking">1위</div>
+                      <img
+                        class="webtoon-score-img"
+                        src="./svg/star.svg"
+                        alt=""
+                      />
+                      <div class="webtoon-score">9.7</div>
+                    </div>
+                    <div class="webtoon-label-row">
+                      <img src="./data/state/waitfree.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">도굴왕아아아아아</div>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="webtoon-components">
-          <article class="webtoon-component">
-            <a href="#">
-              <div>
-                <div class="webtoon-img">
-                  <img src="./img/componentImg.png" alt="웹툰이미지" />
+      <div class="page-main__container">
+        <div class="contents-container">
+          <div class="contents-header">
+            <div class="contents-title big-font">일간 랭킹 TOP</div>
+            <a href="#" class="contents-more">
+              더보기 <img src="./data/contents/more.svg" />
+            </a>
+          </div>
+          <div class="contents-filter"></div>
+          <div class="contents-main">
+            <div class="webtoon-component-container">
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-cover small-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/waitfree-badge.png"
+                    alt=""
+                  />
                 </div>
-                <div class="webtoon-rating">
-                  <div class="webtoon-ranking">
-                    <span>1위</span>
-                  </div>
-                  <!-- <div class="webtoon-score">
-                    <img src="./svg/star.svg" />
-                    <span class="webtoon-score__score">9.7</span>
-                  </div> -->
-                  <div class="webtoon-badge">
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
                     <img
-                      class="webtoon-badge__waitfree-badge"
-                      src="./svg/waitfreeBadge.svg"
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
                       alt=""
                     />
+                    <span class="webtoon-subs-count">131만명</span>
+                    <span class="webtoon-tag">기다무웹툰</span>
+                    <span class="webtoon-tag">로맨스</span>
+                    <span class="webtoon-tag">아현,유한려</span>
                   </div>
+                  <div class="webtoon-day">수 연재</div>
                 </div>
-              </div>
-
-              <div class="webtoon-info">
-                <div class="webtoon-title">흑막을 버리는</div>
-                <div class="webtoon-detail">
-                  <span class="webtoon-detail__state">
-                    <img src="./svg/new.svg" alt="새로운만화" />
-                  </span>
-
-                  <div class="webtoon-subscriber">
-                    <img src="./svg/subscriber.png" alt="구독자" /><span
-                      class="webtoon-subscriber__count"
-                      >17.3만명</span
-                    >
-                  </div>
+              </article>
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-cover small-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/waitfree-badge.png"
+                    alt=""
+                  />
                 </div>
-              </div>
-            </a>
-          </article>
-
-          <article class="webtoon-component">
-            <a href="#">
-              <div>
-                <div class="webtoon-img">
-                  <img src="./img/componentImg.png" alt="웹툰이미지" />
-                </div>
-                <div class="webtoon-rating">
-                  <!-- <div class="webtoon-ranking">
-                    <span>1위</span>
-                  </div> -->
-                  <div class="webtoon-score">
-                    <img class="webtoon-score__img" src="./svg/star.svg" />
-                    <span class="webtoon-score__score">9.7</span>
-                  </div>
-                  <div class="webtoon-badge">
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
                     <img
-                      class="webtoon-badge__free-badge"
-                      src="./svg/freeBadge.svg"
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
                       alt=""
                     />
+                    <span class="webtoon-subs-count">131만명</span>
+                    <span class="webtoon-tag">기다무웹툰</span>
+                    <span class="webtoon-tag">로맨스</span>
+                    <span class="webtoon-tag">아현,유한려</span>
                   </div>
+                  <div class="webtoon-day">수 연재</div>
                 </div>
-              </div>
-
-              <div class="webtoon-info">
-                <div class="webtoon-title">흑막을 버리는</div>
-                <div class="webtoon-detail">
-                  <span class="webtoon-detail__state">
-                    <img src="./svg/new.svg" alt="새로운만화" />
-                  </span>
-
-                  <div class="webtoon-subscriber">
-                    <img src="./svg/subscriber.png" alt="구독자" /><span
-                      class="webtoon-subscriber__count"
-                      >17.3만명</span
-                    >
-                  </div>
-                </div>
-              </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-main__container">
+        <div class="contents-container">
+          <div class="contents-header">
+            <div class="contents-title big-font">오피스 로맨스</div>
+            <a href="#" class="contents-more">
+              더보기 <img src="./data/contents/more.svg" />
             </a>
-          </article>
+          </div>
+          <div class="contents-filter"></div>
+          <div class="contents-main">
+            <div class="webtoon-component-container">
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-cover wide-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/free-badge.png"
+                    alt=""
+                  />
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+                  <div class="webtoon-summary small-font">
+                    여기도 '그 자식'이 다 털어갔냐?
+                  </div>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                    <span class="webtoon-tag">기다무웹툰</span>
+                    <span class="webtoon-tag">로맨스</span>
+                    <span class="webtoon-tag">아현,유한려</span>
+                  </div>
+                </div>
+              </article>
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-cover wide-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/waitfree-badge.png"
+                    alt=""
+                  />
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+                  <div class="webtoon-summary small-font">
+                    여기도 '그 자식'이 다 털어갔냐?
+                  </div>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                    <span class="webtoon-tag">기다무웹툰</span>
+                    <span class="webtoon-tag">로맨스</span>
+                    <span class="webtoon-tag">아현,유한려</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-main__container">
+        <div class="contents-container">
+          <div class="contents-header">
+            <div class="contents-title big-font">오늘의 추천</div>
+            <a href="#" class="contents-more">
+              더보기 <img src="./data/contents/more.svg" />
+            </a>
+          </div>
+          <div class="contents-filter"></div>
+          <div class="contents-main">
+            <div class="webtoon-component-container">
+              <article class="webtoon-component big-component">
+                <div class="webtoon-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/free-badge.png"
+                    alt=""
+                  />
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
 
-          <article class="webtoon-component"></article>
-          <article class="webtoon-component"></article>
-          <article class="webtoon-component"></article>
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-main__container">
+        <div class="contents-container">
+          <div class="contents-header">
+            <div class="contents-title big-font">일간 소년 TOP</div>
+            <a href="#" class="contents-more">
+              더보기 <img src="./data/contents/more.svg" />
+            </a>
+          </div>
+          <div class="contents-filter"></div>
+          <div class="contents-main">
+            <div class="webtoon-component-container">
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-ranking-number">1</div>
+                <div class="webtoon-cover small-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/waitfree-badge.png"
+                    alt=""
+                  />
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                  </div>
+                  <div class="webtoon-day">수 연재</div>
+                </div>
+              </article>
+              <article class="webtoon-component horizontal-component">
+                <div class="webtoon-ranking-number">2</div>
+                <div class="webtoon-cover small-cover">
+                  <img
+                    class="webtoon-badge"
+                    src="./data/contents/waitfree-badge.png"
+                    alt=""
+                  />
+                </div>
+                <div class="webtoon-info">
+                  <div class="webtoon-title">
+                    <img
+                      class="webtoon-state"
+                      src="./data/contents/update.svg"
+                      alt=""
+                    />도굴왕아아아아아
+                  </div>
+
+                  <div class="webtoon-etc">
+                    <img
+                      class="webtoon-subs"
+                      src="./data/contents/subscriber.png"
+                      alt=""
+                    />
+                    <span class="webtoon-subs-count">131만명</span>
+                  </div>
+                  <div class="webtoon-day">수 연재</div>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
+    <div
+      class="dummy page-main__container display-none"
+      style="margin-top: 170px; height: 150vh"
+    >
+      <img src="./img/dummyImage.gif" style="width: 720px" />
+    </div>
+
     <footer></footer>
+    <script src="./js/pageHeaderSearchBar.js" type="module"></script>
+    <script src="./js/pageHeaderCategory.js" type="module"></script>
+    <script src="./js/pageMainCategory.js" type="module"></script>
   </body>
 </html>

@@ -7,17 +7,57 @@
 @import url('./css/pageMain/preview.css');
 @import url('./css/pageMain/webtoonFilter.css');
 @import url('./css/pageMain/webtoonComponent.css');
+@import url('./css/pageMain/banner.css');
+@import url('./css/pageMain/taglist.css');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
+  /* height: 200vh; */
 }
 
 header {
   position: fixed;
   top: 0;
   z-index: 1;
+}
+
+li {
+  color: #bbb;
+}
+
+.padding-sides {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.display-none {
+  display: none;
+}
+
+.color-gray {
+  color: #bbb;
+}
+
+.color-black {
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.big-font {
+  font-size: 20px;
+}
+
+.small-font {
+  font-size: 14px;
+}
+
+.relative {
+  position: relative;
 }

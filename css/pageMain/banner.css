@@ -1,0 +1,9 @@
+.banner {
+  background-color: #fecc2e;
+  text-align: center;
+}
+
+.banner img {
+  width: 504px;
+  height: 100%;
+}
