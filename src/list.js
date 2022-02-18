@@ -1,12 +1,11 @@
 import { $, $$ } from './utility.js';
-// import dayTopData from './data/dayTop.js';
+import dayTopData from './data/dayTop.js';
 
 // const loadData = async function() {
 //     let response = await fetch('./data/dayTop.json');
 //     return await response.json();
 // }
 // const dayTopData = loadData();
-fetch('./data.json').then(res=>res.json()).then(json=>console.log(json))
 
 const getGradeRowTemp = (props) => {
     return (
