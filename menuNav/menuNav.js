@@ -1,10 +1,10 @@
 export const menuNav = (target,position)=>{
     const template =  `
     <ul class="menuNav">
-               <li class="menu">
+               <li class="menu selected">
                 <a><img src="https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31"/></a>
             </li>
-            <li class="menu toon selected">
+            <li class="menu toon">
                 <div class="dot"></div>
                 <a><img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8"/></a>
             </li>

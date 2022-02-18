@@ -13,18 +13,43 @@ const main = document.querySelector('main.mainContent');
 const nav = main.firstElementChild;
 const section = nav.nextElementSibling;
 const bannerBox = section.querySelector('.BannerBox');
-const content = section.querySelector('.freeComics');
+const comicsBox = document.querySelector('.freeComics');
+const grid =comicsBox.querySelector('.comicsGrid')
+
 const renderGrid = ()=>{
-    const gridBox =document.querySelector('.comicsGrid');
+    const grid=document.querySelector('.comicsGrid');
     for(let i=0; i<20; i++){
-       comicItem(images.thumbnails, infographic, gridBox);
+       comicItem(images.thumbnails, infographic, grid);
     }
 }
-menuNav(nav, 'afterbegin');
-BannerBox(bannerBox, 'afterbegin', images, infographic);
-dailyHeader(infographic, content, 'beforebegin');
-let template=''
+const renderDaily = ()=> {
+    menuNav(nav, 'afterbegin');
+    BannerBox(bannerBox, 'afterbegin', images, infographic);
+    dailyHeader(infographic, comicsBox, 'beforebegin');
+    grid.style.paddingTop='';
+    grid.innerHTML= '';
+    renderGrid();
+}
 
+const renderHome = ()=>{
+    menuNav(nav, 'afterbegin');
+    BannerBox(bannerBox, 'afterbegin', images, infographic);
+    HomeHeader(comicsBox, 'afterbegin');
+    GrayCube(comicsBox, 'beforebegin')
+    AdBanner(comicsBox, 'beforebegin');
+    grid.innerHTML ='';
+    grid.style.paddingTop = '20px';
+    renderGrid();
+}
+
+AddEvent(nav, 'click', 'li', e=>{
+    const {target} = e
+    nav.querySelector('.selected').classList.remove('selected')
+    target.classList.add('selected');
+    if(target.classList.contains('toon')){}
+})
+
+let template=''
 nav.addEventListener('click', (e) => {
     const li =e.target.closest('li');
     nav.querySelector('.selected').classList.remove('selected')
@@ -58,10 +83,7 @@ topBanner.addEventListener('click', (e)=>{
             parentPrev.parentNode.removeChild(parentPrev);
             parentPrev = grid.parentElement.previousElementSibling;
         }
-        dailyHeader(infographic, grid.parentElement, 'beforebegin');
-        grid.style.paddingTop='';
-        grid.innerHTML= '';
-        renderGrid();
+        renderDaily();
     }
 
 })
@@ -73,13 +95,8 @@ topBanner.querySelector('.home').addEventListener('click', (e)=>{
         prev.parentNode.removeChild(prev);
         prev= comicsBox.previousElementSibling;
     }
-    HomeHeader(comicsBox, 'afterbegin');
-    GrayCube(comicsBox, 'beforebegin')
-    AdBanner(comicsBox, 'beforebegin');
-    grid.innerHTML ='';
-    grid.style.paddingTop = '20px';
-    renderGrid();
+    renderHome();
 })
-renderGrid();
+renderHome();
 
 
