@@ -8,7 +8,6 @@ body {
   background-color: #e9ecef;
 }
 
-/*========== 일반 ==========*/
 .center {
   width: 700px;
   margin: 0 auto;
@@ -16,6 +15,12 @@ body {
 
 li {
   list-style: none;
+}
+
+nav li {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
 }
 
 .nav-item-sort {
@@ -62,7 +67,7 @@ a {
 }
 
 .contents-container .header-container {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .text-color--gray {
@@ -87,11 +92,6 @@ a {
   font-weight: 500;
 }
 
-.arrow-with-text {
-  width: 18px;
-  height: 18px;
-}
-
 /*========== arrow ==========*/
 
 .arrow-icon {
@@ -112,6 +112,11 @@ a {
   position: absolute;
   top: 45%;
   right: 3%;
+}
+
+.arrow-with-text {
+  width: 18px;
+  height: 18px;
 }
 
 .arrow--white {
