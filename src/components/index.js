@@ -7,6 +7,9 @@ import SmallImgContainer from './contentsList/SmallImgContainer.js';
 import ContentsListItem from './contentsList/ContentsListItem.js';
 import ContentsList from './contentsList/ContentsList.js';
 import DailySeriesRanking from './section/DailySeriesRanking.js';
+import BannerListItem from './banner/BannerListItem.js';
+import MainBannerList from './banner/MainBannerList.js';
+import MainBanner from './section/MainBanner.js';
 
 export {
   Nav,
@@ -18,4 +21,7 @@ export {
   ContentsListItem,
   ContentsList,
   DailySeriesRanking,
+  BannerListItem,
+  MainBannerList,
+  MainBanner,
 };

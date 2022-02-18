@@ -1,6 +1,6 @@
-import { Webtoons } from './index';
+import { Webtoons } from './index.js';
 
-const MainBanner = [
+const MainBanners = [
   {
     webtoonInfo: Webtoons.find((webtoon) => webtoon.title === '8클래스 마법사의 회귀'),
     bannerImage: 'src/img/mainBanner/main-banner.png',
@@ -17,4 +17,4 @@ const MainBanner = [
   },
 ];
 
-export default MainBanner;
+export default MainBanners;
