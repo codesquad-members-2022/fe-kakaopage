@@ -1,4 +1,4 @@
-
+const headerNav = ['홈', '웹툰', '웹소설', '영화', '방송', '책'];
 function renderHeader() {
     return `<header class="header">
     <div class="header__tittle-wrapper">
@@ -13,41 +13,26 @@ function renderHeader() {
             <button class="header__button">로그인</button>
         </div>
     </div>
-    <nav class="header__nav">
-        <ul class="header__nav-lists">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">웹툰 ・
-                <i class="fas fa-solid fa-clock"></i>
-            </a></li>
-            <li><a href="#">웹소설 ・
-                <i class="fas fa-solid fa-clock"></i>
-            </a></li>
-            <li><a href="#">영화</a></li>
-            <li><a href="#">방송</a></li>
-            <li><a href="#">책</a></li>
-        </ul>
-    </nav>
+    ${renderNav('header__nav', headerNav)}
 </header>`
 }
 
 
-function renderNav() {
-    
-    return `
-    <nav class="nav">
-    <ul class="nav__ul">
-        <li class="nav__list active">홈</li>
-        <li class="nav__list">요일</li>
-        <li class="nav__list">웹툰</li>
-        <li class="nav__list">소년</li>
-        <li class="nav__list">드라마</li>
-        <li class="nav__list">로맨스</li>
-        <li class="nav__list">로판</li>
-        <li class="nav__list">액션</li>
-        <li class="nav__list">BL</li>
+const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스', '로판','액션무협', 'BL'];
+const weeddaysData = ['월', '화', '수', '목', '금', '토', '일', '완결'];
+
+function renderNav(className, textLists) {
+    let lists = '';
+    textLists.forEach((textList) => {
+        lists += `<li class="${className}-list">${textList}</li>`
+    })
+    return `<nav class="${className}">
+    <ul class="${className}-lists">
+        ${lists}
     </ul>
 </nav>`
 }
+
 // 수정할필요가 없고, 재사용할 필요가 없는 부분.
 
 
@@ -108,9 +93,8 @@ function renderFooter() {
 }
 
 function renderBase() {
-    return renderHeader() + renderNav() + renderBanner() + renderMain() + renderFooter();
+    return renderHeader() + renderNav('nav', clasfyData) + renderBanner() + renderMain() + renderFooter();
 }
-
 
 function renderArticle(className, headerTittle, headerSubText = '') {
     return `
@@ -181,4 +165,4 @@ function renderMidButton(listNames) {
     </div>`
 }
 
-export { renderBase, renderArticle, renderArticleSections, renderMidButton };
+export { renderBase, renderNav , renderArticle, renderArticleSections, renderMidButton};

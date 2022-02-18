@@ -2,66 +2,23 @@
 //  - 특정 페이지에서 작동할 것 render + 페이지 + 정보
 //  - 공통으로 사용하는 것 render + 컴포넌트 이름 
 
-function renderHome_base() {
-    return renderHome_midButton()
-}
 
-function renderHome_midButton() {
-    return `<div class="mid-button__wrapper">
-    <button class="mid-button">오늘 UP</button>
-    <button class="mid-button">오늘 신작</button>
-    <button class="mid-button">오리지널</button>
-    <button class="mid-button">완결까지 정주행</button>
-    <button class="mid-button">독립운동가 웹툰</button>
-    <button class="mid-button">오늘 랭킹</button>
-    </div>`
-}
+const weeddaysData = ['월', '화', '수', '목', '금', '토', '일', '완결'];
 
-function renderHome_ArticelNav() {
-    return `        <nav class="article__nav">
-    <ul class="article__nav-lists">
-        <li><a href="#">월</a></li>
-        <li><a href="#">화</a></li>
-        <li><a href="#">수</a></li>
-        <li><a href="#">목</a></li>
-        <li><a href="#">금</a></li>
-        <li><a href="#">토</a></li>
-        <li><a href="#">일</a></li>
-        <li><a href="#">완결</a></li>
+function renderNav(className, textLists) {
+    let lists = '';
+    textLists.forEach((textList) => {
+        lists += `<li class="${className}-list">${textList}</li>`
+    })
+    return `<nav class="${className}">
+    <ul class="${className}-lists">
+        ${lists}
     </ul>
 </nav>`
 }
 
+
 // 공통적으로 사용되는 부분
 
-function renderArticle(className) {
-    return `<article class="${className}">
-    </article>`
-}
 
-function renderArticleHeader() {
-    return `    <header class="article__header">
-    <div class="article__header-wrapper">
-        <div class="article__header-text-wrapper">
-            <h2>요일 연재 TOP</h2>
-            <span>(1,622)</span>
-        </div>
-        <button class="article__header-button">더보기 ></button>
-    </div>
-    </header>`
-}
-
-// section 관련은 모든 페이지에서 똑같이 사용한다 -> 이함수들로 그대로 재사용할 수 있다.
-
-// function renderHome_midButton(num, list) {
-//     let buttons = ``;
-//     for(let i = 0; i < num; i++) {
-//         buttons +=  `<button class="mid-button">오늘 UP</button>`
-//     }
-//     return `<div class="mid-button__wrapper">
-//     ${buttons}
-//     </div>`
-// }
-// button도 list들어가면 이름 자동으로 될 수 있게 변경할 예정
-
-export { renderHome_base }
+export {  }

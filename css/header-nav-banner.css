@@ -72,7 +72,7 @@
     margin: 10px 0;
 }
 
-.nav__ul {
+.nav-lists {
     display: flex;
     justify-content: space-around;
     padding: 0;
@@ -80,7 +80,7 @@
     list-style: none;
 }
 
-.nav__list.active {
+.nav-list.active {
     font-weight: 800;
 }
 
