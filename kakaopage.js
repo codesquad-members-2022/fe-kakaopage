@@ -92,6 +92,4 @@ const renderingDefault = () => {
   renderingWebtoon(today);
 };
 
-export { renderingWebtoon, renderingDefault };
-
 renderingDefault();
