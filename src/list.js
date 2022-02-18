@@ -1,18 +1,13 @@
 import { $, $$ } from './utility.js';
-import dayTopData from './data/dayTop.js';
+// import dayTopData from './data/dayTop.js';
 
 // const loadData = async function() {
 //     let response = await fetch('./data/dayTop.json');
-//     if (response.ok) {
-//       let json = await response.json();
-//     } else {
-//     //   alert("HTTP-Error: " + response.status);
-//     }
+//     return await response.json();
 // }
-// loadData();
+// const dayTopData = loadData();
+fetch('./data.json').then(res=>res.json()).then(json=>console.log(json))
 
-
-// section__rank-area
 const getGradeRowTemp = (props) => {
     return (
         `<li class="row">
@@ -22,7 +17,7 @@ const getGradeRowTemp = (props) => {
                     <div class="work__rank bg-black-bar">${props.rank || props.grade}</div>
                 </div>
                 <h4 class="work__title">${props.title}</h4>
-                <span class="work__reader">${props.readerNum}만명</span>
+                <span class="work__reader">${props.readerNum}</span>
             </a>
         </li>`
     );
