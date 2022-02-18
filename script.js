@@ -23,8 +23,17 @@ const renderGrid = ()=>{
     }
 }
 const renderDaily = ()=> {
-    menuNav(nav, 'afterbegin');
-    BannerBox(bannerBox, 'afterbegin', images, infographic);
+    let prev = grid.previousElementSibling;
+    while(prev){ //grid 이전의 노드를 삭제
+        grid.parentNode.removeChild(prev);
+        prev = grid.previousElementSibling;
+    }
+    let parentPrev =grid.parentElement.previousElementSibling;
+    while(parentPrev.className!=='catchphrase'){
+        parentPrev.parentNode.removeChild(parentPrev);
+        parentPrev = grid.parentElement.previousElementSibling;
+    }
+
     dailyHeader(infographic, comicsBox, 'beforebegin');
     grid.style.paddingTop='';
     grid.innerHTML= '';
@@ -32,8 +41,12 @@ const renderDaily = ()=> {
 }
 
 const renderHome = ()=>{
-    menuNav(nav, 'afterbegin');
-    BannerBox(bannerBox, 'afterbegin', images, infographic);
+    let prev = comicsBox.previousElementSibling;
+    while(prev.className !== 'catchphrase') {
+        prev.parentNode.removeChild(prev);
+        prev= comicsBox.previousElementSibling;
+    }
+
     HomeHeader(comicsBox, 'afterbegin');
     GrayCube(comicsBox, 'beforebegin')
     AdBanner(comicsBox, 'beforebegin');
@@ -71,32 +84,14 @@ topBanner.addEventListener('click', (e)=>{
     topBanner.querySelector('.selected').classList.remove('selected');
     span.classList.add('selected');
     if(span.classList.contains('daily')){
-        const dailyTab = topBanner.querySelector('.daily');
-        const grid = document.querySelector('.comicsGrid');
-        let prev = grid.previousElementSibling;
-        while(prev){ //grid 이전의 노드를 삭제
-            grid.parentNode.removeChild(prev);
-            prev = grid.previousElementSibling;
-        }
-        let parentPrev = grid.parentElement.previousElementSibling
-        while(parentPrev.className!=='catchphrase'){
-            parentPrev.parentNode.removeChild(parentPrev);
-            parentPrev = grid.parentElement.previousElementSibling;
-        }
         renderDaily();
     }
-
 })
 topBanner.querySelector('.home').addEventListener('click', (e)=>{
-    const comicsBox = document.querySelector('.freeComics');
-    const grid =comicsBox.querySelector('.comicsGrid')
-    let prev = comicsBox.previousElementSibling;
-    while(prev.className !== 'catchphrase') {
-        prev.parentNode.removeChild(prev);
-        prev= comicsBox.previousElementSibling;
-    }
     renderHome();
 })
+menuNav(nav, 'afterbegin');
+BannerBox(bannerBox, 'afterbegin', images, infographic);
 renderHome();
 
 
