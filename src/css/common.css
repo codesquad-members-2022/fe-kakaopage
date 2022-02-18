@@ -43,3 +43,7 @@
 .third-text-color {
   color: var(--third-text-color);
 }
+
+.width-half {
+  width: calc((var(--page-width) - 50px) / 2);
+}

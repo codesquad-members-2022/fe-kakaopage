@@ -26,7 +26,8 @@
   margin-right: 20px;
 }
 
-.banner-sub-text, .banner-number {
+.banner-sub-text,
+.banner-number {
   margin-top: 10px;
   color: var(--slide-main-color);
   font-size: var(--font-20px);
@@ -55,4 +56,21 @@
   padding: 0 15px 0;
   top: 45%;
   width: 100%;
+}
+
+.new .banner-sub-text {
+  font-size: var(--font-14px);
+}
+
+.new .banner-title {
+  font-size: var(--font-18px);
+}
+
+.new .bar {
+  height: 12px;
+}
+
+.new .banner-comment {
+  height: 24px;
+  font-size: var(--font-12px);
 }
