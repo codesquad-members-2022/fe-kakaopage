@@ -80,5 +80,37 @@
       "url": "https://dn-img-page.kakao.com/download/resource?kid=bgozrm/hzacc9w4du/IPiCrWsGU7P6buvUwydcGk&filename=th2",
       "promotion": false
     }
+  ],
+  "banner": [
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bH1dTU/hzmU3e8xWG/I52O9I5Y2IpErVAge6ouC1",
+      "subject": "home",
+      "title": ""
+    },
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=USDUu/hzhOdHv1uC/KkuPALgpAw6EE8H76mUoxK",
+      "subject": "webtoon",
+      "title": ""
+    },
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bHG7gZ/hzmU3fbCeL/SAfNilKJsxhLb3cBJ2bpgk",
+      "subject": "novel",
+      "title": ""
+    },
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bXD3a1/hzhOesUH0V/MVnRHqVrYohKCSZdrQMX41",
+      "subject": "movie",
+      "title": ""
+    },
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bHG7gZ/hzmU3fbCeL/SAfNilKJsxhLb3cBJ2bpgk",
+      "subject": "broad",
+      "title": ""
+    },
+    {
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=USDUu/hzhOdHv1uC/KkuPALgpAw6EE8H76mUoxK",
+      "subject": "book",
+      "title": ""
+    }
   ]
 }

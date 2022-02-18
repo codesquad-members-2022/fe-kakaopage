@@ -9,7 +9,6 @@
 .mainbox.main__slider {
   height: 478px;
   padding: 0;
-  margin-bottom: 0;
 }
 
 .main-contents,
@@ -73,6 +72,11 @@
 .mini-slider {
   display: flex;
   justify-content: space-between;
+}
+
+.mini-slider__img {
+  width: 550px;
+  height: 110px;
 }
 
 .mini-slider__btn {
