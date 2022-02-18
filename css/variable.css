@@ -2,6 +2,8 @@
     --header-height: 80px;
     --main-width: 720px;
     --nav-height: 70px;
+    --banner-description-ratio: calc(100% / 12);
+
 
     --color-black: #000;
     --color-white: #fff;

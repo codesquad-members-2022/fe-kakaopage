@@ -19,21 +19,28 @@
 }
 
 .divider {
-    background-color: var(--color-gray);
+    background-color: var(--color-light-gray);
     width: 1px;
     height: 15px;
     margin: 0px 10px;
 }
 
+.divider--thick {
+    width: 2px;
+}
+
 .contents {
     margin-top: calc(var(--header-height) + var(--nav-height) + 20px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .contents > *{
     width: var(--main-width);
     background-color: var(--color-white);
+    margin-bottom: 15px;
 }
 
 .tab__container {
@@ -48,7 +55,61 @@
     border-bottom: solid 2px var(--color-yellow);
 }
 
+.slides {
+    position:relative;
+}
+
+.slide__content--prev, .slide__content--next {
+    display:none;
+}
+
+.slide__btns {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide__btn {
+    margin: 0px 20px;
+}
+
+.slide__page-nums {
+    color: var(--color-light-gray);
+}
+
+.banner__img {
+    width: 100%;
+}
+
+.banner__description {
+    position: absolute;
+    height: var(--banner-description-ratio);
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-yellow);
+}
+
+.banner__information {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner__tags {
+    justify-content: space-between;
+}
+
+.banner__tags img {
+    max-height: 70%;
+}
+
+
 /* header */
+
 header {
     position: fixed;
     top: 0;
@@ -114,6 +175,7 @@ header {
     position: absolute;
     bottom: -20px;
     width: max-content;
+    max-width: none;
 }
 
 .header__user-services {
@@ -122,6 +184,7 @@ header {
     padding-top: 10px;
     color: var(--color-gray);
 }
+
 
 /* gnb */
 
@@ -165,4 +228,47 @@ header {
     font-weight: 600;
 }
 
+
 /* main-banner */
+
+.main-banner {
+    height: 480px;
+}
+
+.main-banner__page-nums {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.main-banner__information {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    height: 75px;
+}
+
+.main-banner__title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-banner__tags {
+    height: 30px;
+    font-size: 1.25rem;
+    font-weight: 500;;
+}
+
+.main-banner__tags img {
+    margin-right: 5px;
+}
+
+.main-banner__description {
+    font-size: 1.25rem;
+}
+
+
+
+
