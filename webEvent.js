@@ -3,6 +3,19 @@ document.querySelector(".prev").addEventListener("click", onclickPrev);
 let pageCount = 0;
 let contentsChecker = "";
 
+cloneAndDsiplay(
+  document.querySelector(".main__cartoonZone"),
+  document.querySelector(".main__cartoonZone__cell"),
+  9
+);
+
+function cloneAndDsiplay(parent, contents, loop) {
+  for (let i = 0; i < loop; i++) {
+    const $cloneEl = contents.cloneNode(true);
+    parent.appendChild($cloneEl);
+  }
+}
+
 function onclickPrev(target) {
   const maxPage =
     document.querySelector(".recommand__image--wrapper").childElementCount - 1;
