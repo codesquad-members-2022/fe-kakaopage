@@ -59,6 +59,11 @@
   padding: 0px 30px;
 }
 
+.dowTop__title,
+.dowTop__more {
+  margin-bottom: 0;
+}
+
 .dailyTop__rank {
   padding: 20px;
   display: flex;
