@@ -1,30 +1,5 @@
-/* 
-    header: width 100%
-    main-content: 720px?, align-center
-*/
-
-/* global */
-* {
-  font-family: NotoSans;
-  line-height: 1.4;
-  font-size: 16px;
-  text-align: center;
-}
-
-body {
-  background-color: #eee;
-}
-
-button {
-  cursor: pointer;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* header */
 header {
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   top: 0;
@@ -32,12 +7,13 @@ header {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  z-index: 1;
 }
 
 nav {
   width: 720px;
 }
-nav.menu-top {
+.menu-top {
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -49,16 +25,16 @@ nav > div {
   display: flex;
   flex-direction: row;
 }
-nav.menu-list ul {
+.menu-list ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
-nav.menu-list ul li {
-  position: relative;
+.menu-list ul li {
   box-sizing: border-box;
-  min-width: none;
+
   flex: 1 1 auto;
   padding: 30px 0 15px;
 }
@@ -73,7 +49,7 @@ nav.menu-list ul li {
   display: flex;
   width: 180px;
   line-height: 23px;
-  height: 28px;
+  height: 34px;
   padding: 2px;
   border: 1px solid #cfcfcf;
   background: #fff;
@@ -92,23 +68,20 @@ nav.menu-list ul li {
   border: 0;
   margin-left: 10px;
   text-align: left;
-  background: #ffffff;
+  background: #fff;
 }
 
 .css-searchBtn {
   display: block;
-  margin: 0;
   min-width: 0;
   padding-right: 0px;
-  margin-top: 5px;
+  margin-top: 4px;
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 
-div.menu-stage {
-  box-sizing: border-box;
-  margin: 0;
+.menu-stage {
   min-width: 0;
   position: relative;
   border: 0;
@@ -116,7 +89,7 @@ div.menu-stage {
   background-color: transparent;
 }
 
-img.css-stage {
+.css-stage {
   min-width: 0;
   max-width: 100%;
   height: auto;
@@ -132,8 +105,7 @@ img.css-stage {
   margin-top: 30px;
   border: 0;
   outline: 0;
-  font-weight: 800;
-  color: #999;
+  font-weight: 600;
   min-width: 0;
   max-width: 100%;
   height: auto;
@@ -148,7 +120,7 @@ img.css-stage {
   position: relative;
 }
 
-img.css-stage-tooltip {
+.css-stage-tooltip {
   position: absolute;
   top: 59px;
   left: 170px;
@@ -157,7 +129,7 @@ img.css-stage-tooltip {
   max-width: none;
 }
 
-nav.menu-list li a img {
+.menu-list li a img {
   display: block;
   min-width: 0;
   max-width: 100%;

@@ -1,14 +1,14 @@
-import { $ } from "./util.js";
-const imagePath = "/image/header";
+import { $ } from "./domLibrary-1.js";
+const imagePath = "./image/header";
 
 class Header {
   constructor() {
-    this.kakaopage();
-    this.kakaopage_menu();
-    this.category();
+    this.setKakaopage();
+    this.setKakaopage_menu();
+    this.setCategory();
   }
 
-  kakaopage() {
+  setKakaopage() {
     $("h1.kakaopage").insertAdjacentHTML(
       "beforeend",
       this.getTag("img", "css-kakaopage")
@@ -16,7 +16,7 @@ class Header {
     $("img.css-kakaopage").src = `${imagePath}/logo-kakaopage.svg`;
   }
 
-  kakaopage_menu() {
+  setKakaopage_menu() {
     $("div.search-wrap").insertAdjacentHTML(
       "beforeend",
       this.getTag("img", "css-searchBtn")
@@ -36,7 +36,7 @@ class Header {
     $("img.css-stage-tooltip").src = `${imagePath}/stage-tooltip.svg`;
   }
 
-  category() {
+  setCategory() {
     const menu = ["home", "toon", "novel", "vod", "broadcast", "book"];
     menu.forEach((v, i) => {
       $(`nav.menu-list li:nth-child(${i + 1}) a`).insertAdjacentHTML(
