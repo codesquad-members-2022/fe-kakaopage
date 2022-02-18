@@ -86,6 +86,50 @@ main {
   width: 100%;
 }
 
+.banner-detail-container {
+  position: absolute;
+  bottom: 13%;
+  left: 3%;
+}
+
+.banner-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.banner-detail-text-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.banner-detail-img {
+  height: 22px;
+}
+
+.banner-detail-text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-detail-icon {
+  height: 19px;
+  margin-right: 4px;
+}
+
+.banner-count-container {
+  position: absolute;
+  right: 2%;
+  bottom: 13%;
+}
+
+.banner-count {
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
 .banner-bottom-text {
   position: absolute;
   bottom: 0px;
