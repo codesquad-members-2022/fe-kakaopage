@@ -450,6 +450,32 @@ img {
   padding-bottom: 10px;
 }
 
+.info_recommend > div:nth-child(1) {
+  width: 24%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+.info_recommend > div:nth-child(2) {
+  width: 24%;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.wait_contents .info_recommend span {
+  color: red;
+  position: absolute;
+  top: 205px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
 .today_top,
 .drama_section,
 .boy_section,

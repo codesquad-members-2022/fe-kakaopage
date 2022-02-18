@@ -2,6 +2,7 @@ import { makeImageSection } from './contents.js';
 import { makeThreeMenu } from './contents.js';
 import { makeAdvert } from './contents.js';
 import { makeTitle } from './contents.js';
+import { makeTodayRecommend } from './contents.js';
 import { makeRanking } from './contents.js';
 import { makeClockImage } from './contents.js';
 
@@ -19,6 +20,16 @@ export default function addHTML() {
     'https://dn-img-page.kakao.com/download/resource?kid=FDCfL/hzp2jS2BJL/R4hKEhngW4V6MtJXwj67Yk',
     '왕실교사 하이네 '
   )}
+
+  <section class="today_top">
+  ${makeTitle('오늘의 추천', '더보기👉')}
+    ${makeTodayRecommend(
+      'https://dn-img-page.kakao.com/download/resource?kid=bZGDFx/hzmU3eOgUo/nXYKhtUVKR36YUKsrQoxG0&filename=th3',
+      '이차원 용병',
+      'UP',
+      '103'
+    )}
+  </section>
 
   <section class="ranking_section">
   ${makeTitle('일간 소년 TOP', '더보기👉')}
