@@ -9,14 +9,21 @@ import SubBanner from "../../Components/SubBanner.js";
 
 const HomeGenre = (webtoons) => {
   const today = new Date().getDay();
+
   return `
     ${MainBanner(webtoons.filter((wt) => wt.isMain))}
     ${NavDetail()}
     ${SubBanner()}
     ${DaysTop(today, webtoons)}
     ${BigCardList("기대 신작 TOP")}
-    ${GenreTop("로맨스")}
-    ${GenreTop("드라마")}
+    ${GenreTop(
+      "로판",
+      webtoons.filter((wt) => [...wt.genre].includes("로판"))
+    )}
+    ${GenreTop(
+      "드라마",
+      webtoons.filter((wt) => [...wt.genre].includes("드라마"))
+    )}
     ${DateTop()}
     ${RecommendEvent()}
 `;
