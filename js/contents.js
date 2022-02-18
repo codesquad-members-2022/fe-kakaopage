@@ -118,6 +118,36 @@ export function genreTop(url, title, grade, people) {
     </div>`;
 }
 
+export function makeRanking(
+  rankingNum,
+  url,
+  title,
+  icon,
+  people,
+  genre,
+  writer,
+  date
+) {
+  return `
+  <div class="ranking_1st">
+    <div class="ranking_num">${rankingNum}</div>
+    <img src="${url}" / alt="${title} 이미지"
+    width="95" height="130">
+    <span class="time_icon">🕔</span>
+    <div class="info_ranking">
+      <div><span class="new_icon">${icon}</span>${title}</div>
+      <div>👤${people}만명 |기다무 웹툰 | ${genre} | ${writer}</div>
+      <div>${date} 연재</div>
+    </div>
+</div>`;
+}
+
+export function makeEvent(url) {
+  return `
+  <img src="${url}" / alt="이벤트 이미지"
+  width="615" height="330">`;
+}
+
 export function makeTodayRanking(url, span1, title, people) {
   return `
   <div class="today_ranking">
@@ -200,19 +230,4 @@ export function makeThreeMenu(liInfo1, liInfo2, liInfo3) {
       </li>
     </ul>
   </section>`;
-}
-
-export function makeRanking(rankingNum, url, title, people, writer, date) {
-  return `
-  <div class="ranking_1st">
-    <div class="ranking_num">${rankingNum}</div>
-    <img src="${url}" / alt="${title} 이미지"
-    width="95" height="130">
-    <span class="time_icon">🕔</span>
-    <div class="info_ranking">
-      <div>${title}</div>
-      <div>👤${people}만명 |기다무 웹툰 | 소년 | ${writer}</div>
-      <div>${date} 연재</div>
-    </div>
-</div>`;
 }
