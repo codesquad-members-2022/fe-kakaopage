@@ -6,26 +6,7 @@ function renderContainer(selector, title, num, options) {
   const newContainer = makeContainer(selector, title);
 
   main.appendChild(newContainer);
-
-  // 함수 분리 필요
-  if (options === 'cardLayout') {
-    if (selector === 'daily__top') {
-      const newDailyList = makeSelectDayListHome();
-      newContainer.appendChild(newDailyList);
-    }
-    const newList = makeWebtoonList(num);
-    newContainer.appendChild(newList);
-  } 
-  
-  if (options === 'ranking') {
-    const newList = makeRankingList();
-    newContainer.appendChild(newList);
-  }
-
-  if (options === 'event') {
-    const newList = makeEventSection(selector);
-    newContainer.appendChild(newList);
-  }
+  return makeLayout(selector, num, options, newContainer)
 }
 
 function renderMoveApp(selector) {
@@ -57,16 +38,37 @@ function makeContainerTitle(title) {
 }
 
 // ==================== layout ====================
+function makeLayout(selector, num, options, container) {
+  let newList = null;
+  switch (options) {
+    case 'cardLayout':
+      if (selector === 'daily__top') {
+        const newDailyList = makeSelectDayListHome();
+        container.appendChild(newDailyList);
+      }
+      newList = makeWebtoonList(num);
+      break;
+    case 'ranking':
+      newList = makeRankingList();
+      break;
+    case 'event': 
+      newList = makeEventSection(selector);
+      break;
+  }
+
+  return container.appendChild(newList);
+}
+
 // ========== SelectDayHome (웹툰-홈 화면의 요일탭)==========
 function makeSelectDayListHome() {
   const newList = document.createElement("ul");
   newList.classList.add('select__day');
-  newList.innerHTML = makeSelectDayItem();
+  newList.innerHTML = makeSelectDayItems();
 
   return newList;
 }
 
-function makeSelectDayItem() {
+function makeSelectDayItems() {
   const day = ['월', '화', '수', '목', '금', '토', '일', '완결'];
   const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end']
   let items = '';
@@ -91,6 +93,7 @@ function makeWebtoonList(num) {
   return newList;
 }
 
+// ❗️전역변수(dailyTopData) 수정하기
 function makeWebtoonItems(num) {
   let result = '';
   const newData = dailyTopData;
@@ -125,12 +128,13 @@ function makeWebtoonItems(num) {
 function makeRankingList() {
   const newList = document.createElement("ol");
   newList.classList.add('ranking__list');
-  newList.innerHTML = makeRankingItem();
+  newList.innerHTML = makeRankingItems();
 
   return newList;
 }
 
-function makeRankingItem() {
+// ❗️전역변수(dailyRankingData) 수정하기
+function makeRankingItems() {
   let result = '';
   const newData = dailyRankingData;
   for (let i = 0; i < newData.length; i++) {
