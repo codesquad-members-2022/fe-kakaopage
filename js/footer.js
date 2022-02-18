@@ -1,6 +1,6 @@
 import { $ } from "./utils.js";
 
-const footer = {    
+export const footer = {    
     detailSlide: function() {
         const businessInfoEl = $(".footer__business_info");
         const businessDetails = $(".footer__details");
@@ -14,5 +14,3 @@ const footer = {
         });
     }
 }
-
-export { footer }

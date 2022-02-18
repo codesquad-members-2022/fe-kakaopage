@@ -5,7 +5,7 @@ import { issueObj, rowListTitleObj } from "./constants.js";
 import { recommendationObj } from "./dummy.js";
 import { rowListContainer } from "../container/rowListContainer.js";
 
-const main = {
+export const main = {
     addAdvertiseComponent: function() {
         this.removeAdvertiseComponent();
         return advertiseComponent();
@@ -34,5 +34,3 @@ const main = {
         recommendEl.remove();
     }
 }
-
-export { main }
