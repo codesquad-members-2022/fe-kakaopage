@@ -66,12 +66,12 @@ https://user-images.githubusercontent.com/58525009/154492255-c6fc51cf-94ff-49c7-
 
 ### 미션2
 
-https://user-images.githubusercontent.com/58525009/154536680-afa0ca50-92cd-4be4-989e-10d61b0c66df.mp4
+https://user-images.githubusercontent.com/58525009/154607701-f3e10833-b4df-4396-b12e-53c1d3712910.mp4
 
 ## 추후 할 일
 
 - [ ] 웹툰 컨텐츠를 grid가 아닌 flex로 구현해보기
-- [ ] 미션2를 진행하면서 웹툰 레이아웃이 깨져서 다시 수정하기
+- [x] 미션2를 진행하면서 웹툰 레이아웃이 깨져서 다시 수정하기
 
 ## git 연습
 
