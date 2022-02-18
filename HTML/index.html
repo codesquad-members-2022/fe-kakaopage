@@ -37,26 +37,25 @@
 
   <main>
     <section class="webtoon">
-      <section class="main_nav">
-        <nav>
-          <span class="selected">홈</span>
-          <span>요일연재</span>
-          <span>웹툰</span>
-          <span>소년</span>
-          <span>드라마</span>
-          <span>로맨스</span>
-          <span>로판</span>
-          <span>액션무협</span>
-          <span>BL</span>
-        </nav>
-      </section>
+      <nav class="main__nav">
+        <span class="selected">홈</span>
+        <span>요일연재</span>
+        <span>웹툰</span>
+        <span>소년</span>
+        <span>드라마</span>
+        <span>로맨스</span>
+        <span>로판</span>
+        <span>액션무협</span>
+        <span>BL</span>
+      </nav>
 
       <section class="ads">
-        <img src="../IMG/2.jpg" alt="ads image">
+        <img class="ads__image" src="../IMG/2.jpg" alt="ads image">
       </section>
 
       <section class="days">
-        <nav class="days_nav">
+
+        <nav class="days__nav">
           <span class="selected">월</span>
           <span>화</span>
           <span>수</span>
@@ -66,37 +65,39 @@
           <span>일</span>
           <span>완결</span>
         </nav>
-        <div class="days_menu">
-          <div class="days_menu_left">
+
+        <div class="days__menu">
+          <div class="days__menu--left">
             <span>전체</span>
             <span>웹툰</span>
             <i class="fas fa-clock"></i>
           </div>
-          <div class="days_menu_empty"></div>
-          <div class="days_menu_right">
+          <div class="days__menu--right">
             <span>모두 보기</span>
           </div>
         </div>
-        <div class="days-contents">
-          <div class="days_content">
-            <div class="days_image">
-              <div class="days_picture">
+
+        <div class="column-contents">
+          <div class="column-contents__content">
+            <div class="column-contents__content--image">
+              <div class="column-contents__content--picture">
                 <img src="../IMG/flower.png" alt="content image">
               </div>
-              <div class="rank">
-                <div class="number">100위</div>
-                <div class="clock">
+              <div class="column-contents__content--info">
+                <div class="column-contents__content--rank">100위</div>
+                <div class="column-contents__content--clock">
                   <i class="fas fa-history"></i>
                 </div>
               </div>
             </div>
-            <div class="name">무늬</div>
-            <div class="views">
+            <div class="column-contents__content--name">무늬</div>
+            <div class="column-contents__content--views">
               <i class="fas fa-user-circle"></i>
               <span>150.0만명</span>
             </div>
           </div>
         </div>
+        
       </section>
     </section>
 
