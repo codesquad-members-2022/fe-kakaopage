@@ -88,7 +88,6 @@ function renderFooter() {
     <button class="footer__toApp-button">
         카카오페이지 앱으로 보기 >
     </button>
-
     <div class="footer__infor-wrapper">
         <div class="footer__infor-text-wrapper">
             <div class="footer__infor-text">
@@ -113,24 +112,35 @@ function renderBase() {
 }
 
 
-function renderArticle(className) {
+function renderArticle(className, headerTittle, headerSubText = '') {
     return `
     <article class="${className}">
+        <header class="article__header">
+        <div class="article__header-wrapper">
+            <div class="article__header-text-wrapper">
+                <h2 class="article__header-tittle">${headerTittle}</h2>
+                <span class="article__header-sub-text">${headerSubText}</span>
+            </div>
+            <button class="article__header-button">더보기 ></button>
+        </div>
+        </header>
     </article>`
 }
+// 모든 article에는 header가 들어가므로, 하나로 합쳐도 될 것 같음.
 
-function renderArticleHeader() {
-    return `    
-    <header class="article__header">
-    <div class="article__header-wrapper">
-        <div class="article__header-text-wrapper">
-            <h2>요일 연재 TOP</h2>
-            <span>(1,622)</span>
-        </div>
-        <button class="article__header-button">더보기 ></button>
-    </div>
-    </header>`
-}
+// function renderArticleHeader() {
+//     return `    
+//     <header class="article__header">
+//     <div class="article__header-wrapper">
+//         <div class="article__header-text-wrapper">
+//             <h2 class="article__header-tittle">요일 연재 TOP</h2>
+//             <span class="article__header-sub-text">(1,622)</span>
+//         </div>
+//         <button class="article__header-button">더보기 ></button>
+//     </div>
+//     </header>`
+// } 
+// 위 함수로 합쳐진 부분.
 
 function renderArticleSections(num) {
     const sections = renderSection(num);
@@ -171,4 +181,4 @@ function renderMidButton(listNames) {
     </div>`
 }
 
-export { renderBase, renderArticle, renderArticleHeader, renderArticleSections, renderMidButton };
+export { renderBase, renderArticle, renderArticleSections, renderMidButton };

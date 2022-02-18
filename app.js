@@ -26,7 +26,7 @@ navListsEl.forEach((navList) => {
                 main.innerHTML += renderMidButton(listNmaesForHome);
                 // console.log(renderMidButton(listNmaesForHome));
                 // list에 들어가는 만큼, button을 출력함.
-                main.innerHTML += renderArticle('article__weekdays-top')
+                main.innerHTML += renderArticle('article__weekdays-top', '요일연재 TOP')
 
                 append('article__weekdays-top', renderHome_ArticelNav());
                 append('article__weekdays-top', renderArticleHeader());
@@ -58,6 +58,6 @@ function append(parentNodeClassName, child) {
 //     .then(res => res.json())
 //     .then(res => console.log(res))
 
-import { renderBase, renderArticle, renderArticleHeader, renderArticleSections, renderMidButton } from './common.js'
+import { renderBase, renderArticle, renderArticleSections, renderMidButton } from './common.js'
 import { renderHome_base } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';
