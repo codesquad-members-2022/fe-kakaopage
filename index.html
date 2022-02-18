@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <script type="module" src="/js/index.js"></script>
     <title>카카오페이지</title>
   </head>
   <body>
@@ -53,42 +55,8 @@
     </nav>
     <!-- 하위 컨텐츠 -->
     <div class="contents gray">
-      <!-- 배너 -->
-      <div class="banner">
-        <ul class="slide">
-          <li>
-            <div class="picture-large picture1"></div>
-            <div></div>
-            <div></div>
-          </li>
-          <div class="btn btn-move btn-prev"></div>
-          <div class="btn btn-move btn-next"></div>
-          <div class="banner-info col">
-            <div class="banner-title">성좌들이 나만 좋아해</div>
-            <div class="banner-category row">
-              <div class="banner__info-container row">
-                <div class="banner__icon"></div>
-                <div class="banner__icon2"></div>
-                <div class="banner__category">웹툰</div>
-                <div class="banner__block-icon"></div>
-                <div class="banner__views-icon"></div>
-                <div class="banner__views">115.3만명</div>
-              </div>
-              <div class="banner__progress">9 / 13</div>
-            </div>
-          </div>
-        </ul>
-        <div class="banner__ad">
-          <div class="banner__ad-text">런칭 기념 이용권+캐시 이벤트!</div>
-        </div>
-      </div>
-      <div class="btn-container white row">
-        <button class="btn box-small gray box-first">오늘 신작</button>
-        <button class="btn box-small gray box-mid">달콤한 선물❤️</button>
-        <button class="btn box-small gray box-end">앗뜨거!!</button>
-      </div>
-      <!-- 기다리면 무료 웹툰 -->
-      <div class="items-container">
+      <!-- 
+      <ul class="items-container">
         <div class="items-title-container row">
           <div class="row">
             <div class="items__title">기다리면 무료 웹툰</div>
@@ -96,7 +64,7 @@
           </div>
           <div class="items__more">더보기></div>
         </div>
-        <div class="items__item row">
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -117,8 +85,8 @@
               <div class="items__author">| 와플푸,수수</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -135,8 +103,8 @@
               <div class="items__author">| 탱커,뿡빠,공든탑</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -153,8 +121,8 @@
               <div class="items__author">| 지은설,연홍,세리안</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -171,10 +139,10 @@
               <div class="items__author">| 연서,김공작</div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- 인기 웹툰 -->
-      <div class="items-container">
+        </li>
+      </ul>
+      인기 웹툰
+      <ul class="items-container">
         <div class="items-title-container row">
           <div class="row">
             <div class="items__title">인기 웹툰</div>
@@ -182,7 +150,7 @@
           </div>
           <div class="items__more">더보기></div>
         </div>
-        <div class="items__item row">
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -203,8 +171,8 @@
               <div class="items__author">한혜연</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -221,8 +189,8 @@
               <div class="items__author">전재훈</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -241,8 +209,8 @@
               <div class="items__author">TB</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__thumbnail-icon"></div>
@@ -259,10 +227,10 @@
               <div class="items__author">팀 천둥게</div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- 기다리면 무료 소설 -->
-      <div class="items-container">
+        </li>
+      </ul>
+      기다리면 무료 소설
+      <ul class="items-container">
         <div class="items-title-container row">
           <div class="row">
             <div class="items__title">기다리면 무료 소설</div>
@@ -270,7 +238,7 @@
           </div>
           <div class="items__more">더보기></div>
         </div>
-        <div class="items__item row">
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__time-icon"></div>
@@ -291,8 +259,8 @@
               <div class="items__author">| 와플푸,수수</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__time-icon"></div>
@@ -309,8 +277,8 @@
               <div class="items__author">| 탱커,뿡빠,공든탑</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__time-icon"></div>
@@ -327,8 +295,8 @@
               <div class="items__author">| 지은설,연홍,세리안</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__time-icon"></div>
@@ -345,10 +313,10 @@
               <div class="items__author">| 연서,김공작</div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- 인기 웹소설 -->
-      <div class="items-container">
+        </li>
+      </ul>
+      인기 웹소설
+      <ul class="items-container">
         <div class="items-title-container row">
           <div class="row">
             <div class="items__title">인기 웹소설</div>
@@ -356,7 +324,7 @@
           </div>
           <div class="items__more">더보기></div>
         </div>
-        <div class="items__item row">
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__fictuon-icon"></div>
@@ -377,8 +345,8 @@
               <div class="items__author">| 와플푸,수수</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__fictuon-icon"></div>
@@ -395,8 +363,8 @@
               <div class="items__author">| 탱커,뿡빠,공든탑</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__fictuon-icon"></div>
@@ -413,8 +381,8 @@
               <div class="items__author">| 지은설,연홍,세리안</div>
             </div>
           </div>
-        </div>
-        <div class="items__item row">
+        </li>
+        <li class="items__item row">
           <div class="items__image-container row">
             <img class="items__thumbnail" src="" alt="" />
             <div class="items__fictuon-icon"></div>
@@ -431,26 +399,18 @@
               <div class="items__author">| 연서,김공작</div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- 슬라이드 광고 -->
-      <div class="ad-slide">
-        <div class="ad-slide__container row">
-          <div class="ad-slider__prev-btn"></div>
-          <div class="ad-slider__content"></div>
-          <div class="ad-slider__next-btn"></div>
-        </div>
-      </div>
-      <!-- 실시간 랭킹 -->
+        </li>
+      </ul>
+      실시간 랭킹
       <div class="ranking">
         <div class="ranking__container">
           <div class="ranking__header row">
             <div class="ranking__head">실시간 랭킹</div>
             <div class="ranking__more-btn">더보기></div>
           </div>
-          <div class="ranking__contents col">
-            <!-- 1등 -->
-            <div class="ranking__content row">
+          <ul class="ranking__contents col">
+            1등
+            <li class="ranking__content row">
               <div class="ranking__rank">1</div>
               <div class="ranking__thumbnail"></div>
               <div class="ranking__time-icon"></div>
@@ -480,9 +440,9 @@
                 </div>
               </div>
               <div class="ranking__change">-</div>
-            </div>
-            <!-- 2등 -->
-            <div class="ranking__content row">
+            </li>
+            2등
+            <li class="ranking__content row">
               <div class="ranking__rank">2</div>
               <div class="ranking__thumbnail"></div>
               <div class="ranking__time-icon"></div>
@@ -512,9 +472,9 @@
                 </div>
               </div>
               <div class="ranking__change">-</div>
-            </div>
-            <!-- 3등 -->
-            <div class="ranking__content row">
+            </li>
+            3등
+            <li class="ranking__content row">
               <div class="ranking__rank">3</div>
               <div class="ranking__thumbnail"></div>
               <div class="ranking__time-icon"></div>
@@ -544,10 +504,20 @@
                 </div>
               </div>
               <div class="ranking__change">-</div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
+       광고 -->
+      <!-- <div class="ad row">
+        <img
+          class="ad__contents"
+          src="https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0"
+          alt="[광고]피도 눈물도 없는 맹수를 조련하자\n이벤트 소설 | 악당을 조련하는 아기님"
+        />
+      </div> -->
+      <!-- 요일 연재 TOP -->
+      <!-- <div class=""></div> -->
     </div>
   </body>
 </html>

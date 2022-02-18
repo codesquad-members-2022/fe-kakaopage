@@ -45,3 +45,33 @@
 
 - [ ] HTML 시멘틱 태그에 대해서 알아본다.
 - [ ] 웹접근성이 무엇인지 알아본다.
+
+## 고민
+
+- style을 컴포넌트 함수 내에 Internal 방식으로 삽입
+  - 컴포넌트를 재사용 할때마다 sytle 태그가 추가적으로 중복되어 생성됨.
+  - 파라미터로 style을 변경해주고 싶은데 방법이 떠오르지 않음.
+  - CSS 클래스의 이름을 무작위로 설정해주면 되지 않나?
+
+## TODO
+
+- [ ] before, after 활용
+- [x] 함수로 HTML 생성
+- [x] 생성한 HTML 조합
+- [x] CSS 컴포넌트 내에서 적용
+- [ ] CSS 네이밍 리팩토링
+- [ ] 컴포넌트 생성
+  - [ ] header
+  - [ ] navigation
+  - [x] adSlide
+  - [x] banner
+  - [x] box
+  - [x] category
+  - [x] dayTOP
+  - [x] recommend
+  - [x] workSmall
+  - [ ] 기대신작 TOP
+  - [ ] 각 장르 TOP
+  - [ ] 일간 랭킹 TOP
+  - [ ] 추천 이벤트
+  - [ ] footer
