@@ -9,6 +9,7 @@
 @import 'rowList.css';
 @import 'topic.css';
 @import 'imagePoster.css';
+@import 'week.css';
 
 * {
     box-sizing: border-box;

@@ -83,63 +83,6 @@
     margin-right: 5px;  
 }
 
-.main__content {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    background-color: var(--color-white);
-}
-
-.content__link {
-    margin: 20px 12px;
-}
-
-.content__title {
-    margin: 10px 0;
-    color: var(--color-gray);
-    font-size: var(--font-16);
-}
-
-.content__item {
-    width: 120px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.item__inner {
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 8px;
-    background-color: var(--color-dark-gray);
-} 
-
-.item__inner .item__inner_rank {
-    color: var(--color-yellow);
-}
-
-.item__inner_wait_img {
-    width: 16px;
-    height: 16px;
-}
-
-.content__item_img {
-    width: 120px;
-    height: 120px;
-    margin: 0;
-    vertical-align: top;
-}
-
-.content__detail .content__detail_img {
-    height: 13px;
-}
-
-.content__detail .content__detail_text {
-    color: var(--color-pale-gray);
-    font-size: var(--font-14);
-}
-
 .main__app {
     width: var(--max-width);
     height: var(--gnb-height);
