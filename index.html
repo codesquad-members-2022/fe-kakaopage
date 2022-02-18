@@ -53,15 +53,17 @@
     </header>
     <main class="main-content">
       <nav class="nav-box">
-        <span class="nav-box__text">홈</span>
-        <span class="nav-box__text selected-text">요일연재</span>
-        <span class="nav-box__text">웹툰</span>
-        <span class="nav-box__text">소년</span>
-        <span class="nav-box__text">드라마</span>
-        <span class="nav-box__text">로맨스</span>
-        <span class="nav-box__text">로판</span>
-        <span class="nav-box__text">액션무협</span>
-        <span class="nav-box__text">BL</span>
+        <ul class="nav-box__list">
+          <li class="nav-box__text">홈</li>
+          <li class="nav-box__text selected-text">요일연재</li>
+          <li class="nav-box__text">웹툰</li>
+          <li class="nav-box__text">소년</li>
+          <li class="nav-box__text">드라마</li>
+          <li class="nav-box__text">로맨스</li>
+          <li class="nav-box__text">로판</li>
+          <li class="nav-box__text">액션무협</li>
+          <li class="nav-box__text">BL</li>
+        </ul>
       </nav>
       <div class="image-box main-content__image-box">
         <img
@@ -73,14 +75,16 @@
         <div class="image-box__name">신수제일검</div>
         <div class="image-box__event">
           <img src="./image/badge-bigthum-up.svg" alt="" />
-          <div>
+          <div class="image-box__event__comment-box">
             <img src="./image/bmbadge_waitfree.svg" alt="" />
-            <span>웹툰</span>
+            <span class="image-box__event__comment-box__comment">웹툰</span>
           </div>
-          <div>|</div>
-          <div>
+          <div class="image-box__event__comment-box">|</div>
+          <div class="image-box__event__comment-box">
             <img src="./image/icon_read_count.png" alt="" />
-            <span>21만명</span>
+            <span class="image-box__event__comment-box__comment subscriber"
+              >21만명</span
+            >
           </div>
         </div>
         <div class="image-box__leftbutton">
@@ -94,35 +98,41 @@
 
       <div class="main-content__content">
         <nav class="nav-box main-content__content__nav">
-          <span class="nav-box__text">월</span>
-          <span class="nav-box__text">화</span>
-          <span class="nav-box__text selected-text"> 수 </span>
-          <div class="circle"></div>
-          <span class="nav-box__text">목</span>
-          <span class="nav-box__text">금</span>
-          <span class="nav-box__text">토</span>
-          <span class="nav-box__text">일</span>
+          <ul class="nav-box__list">
+            <li class="nav-box__text weekly-nav">월</li>
+            <li class="nav-box__text weekly-nav">화</li>
+            <li class="nav-box__text weekly-nav selected-text">수</li>
+            <div class="circle main-content__content__nav__circile-wed"></div>
+            <li class="nav-box__text weekly-nav">목</li>
+            <li class="nav-box__text weekly-nav">금</li>
+            <li class="nav-box__text weekly-nav">토</li>
+            <li class="nav-box__text weekly-nav">일</li>
+          </ul>
         </nav>
-        <div class="nav-box main-content__content__menu">
-          <div class="main-content__content__menu__left">
-            <span class="main-content__content__menu__text selected-text"
-              >전체</span
-            >
-            <span class="main-content__content__menu__text">|</span>
-            <span class="main-content__content__menu__text">웹툰</span>
-            <span class="main-content__content__menu__text">|</span>
-            <div class="main-content__content__menu__webtoonbox">
-              <img src="./image/bmbadge_waitfree.svg" alt="" />
+        <div class="nav-box">
+          <div class="nav-box__list main-content__content__menu">
+            <div class="main-content__content__menu__left">
+              <span class="main-content__content__menu__text selected-text"
+                >전체</span
+              >
+              <span class="main-content__content__menu__text">|</span>
               <span class="main-content__content__menu__text">웹툰</span>
+              <span class="main-content__content__menu__text">|</span>
+              <div class="main-content__content__menu__webtoonbox">
+                <img src="./image/bmbadge_waitfree.svg" alt="" />
+                <span class="main-content__content__menu__text">웹툰</span>
+              </div>
             </div>
-          </div>
-          <div class="main-content__content__menu__right">
-            <div class="main-content__content__menu__sortingbox">
-              <span class="main-content__content__menu__text"> 전체 (169)</span>
-              <img
-                src="./image/ico_sorting_arrow.svg"
-                alt="ico_sorting_arrow"
-              />
+            <div class="main-content__content__menu__right">
+              <div class="main-content__content__menu__sortingbox">
+                <span class="main-content__content__menu__text">
+                  전체 (169)</span
+                >
+                <img
+                  src="./image/ico_sorting_arrow.svg"
+                  alt="ico_sorting_arrow"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -143,10 +153,29 @@
                 흑막을 버리는 데 실패했다
               </div>
               <div class="image-card__comment__info">
-                <img src="./image/new_icon.svg" alt="" />
-                <img src="./image/15years.png" alt="" />
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>28.6만명</span>
+                <img
+                  class="image-card__comment__info-new"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update hidden"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >28.6만명</span
+                >
               </div>
             </div>
           </div>
@@ -167,9 +196,29 @@
                 황제의 아이를 숨기는 방법
               </div>
               <div class="image-card__comment__info">
-                <img src="./image/update.svg" alt="" />
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>47.5만명</span>
+                <img
+                  class="image-card__comment__info-new hidden"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years hidden"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >47.5만명</span
+                >
               </div>
             </div>
           </div>
@@ -194,9 +243,29 @@
                 시한부라서 흑막의 며느리가 되었는데
               </div>
               <div class="image-card__comment__info">
-                <img src="./image/update.svg" alt="" />
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>55.9만명</span>
+                <img
+                  class="image-card__comment__info-new hidden"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years hidden"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >55.9만명</span
+                >
               </div>
             </div>
           </div>
@@ -215,9 +284,29 @@
             <div class="image-card__comment">
               <div class="image-card__comment__comment">인소의 법칙</div>
               <div class="image-card__comment__info">
-                <img src="./image/update.svg" alt="" />
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>141.2만명</span>
+                <img
+                  class="image-card__comment__info-new hidden"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years hidden"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >141.2만명</span
+                >
               </div>
             </div>
           </div>
@@ -236,9 +325,29 @@
             <div class="image-card__comment">
               <div class="image-card__comment__comment">악역도 귀찮아서</div>
               <div class="image-card__comment__info">
-                <img src="./image/update.svg" alt="" />
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>31.2만명</span>
+                <img
+                  class="image-card__comment__info-new hidden"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years hidden"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >31.2만명</span
+                >
               </div>
             </div>
           </div>
@@ -260,8 +369,29 @@
             <div class="image-card__comment">
               <div class="image-card__comment__comment">닥터 최태수</div>
               <div class="image-card__comment__info">
-                <img src="./image/icon_read_count.png" alt="" />
-                <span>271.3만명</span>
+                <img
+                  class="image-card__comment__info-new hidden"
+                  src="./image/new_icon.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-update hidden"
+                  src="./image/update.svg"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-years hidden"
+                  src="./image/15years.png"
+                  alt=""
+                />
+                <img
+                  class="image-card__comment__info-icon"
+                  src="./image/icon_read_count.png"
+                  alt=""
+                />
+                <span class="image-card__comment__info-subscriber"
+                  >271.3만명</span
+                >
               </div>
             </div>
           </div>
@@ -288,5 +418,6 @@
         <div>저작권 OK</div>
       </div>
     </footer>
+    <script type="module" src="handler.js"></script>
   </body>
 </html>

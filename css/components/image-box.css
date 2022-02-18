@@ -17,8 +17,8 @@
 }
 
 .image-box__name {
-  font-size: 30px;
-  color: white;
+  font-size: 1.875rem;
+  color: #ffffff;
   position: absolute;
   top: 350px;
   left: 30px;
@@ -28,20 +28,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffffff;
   position: absolute;
   top: 400px;
   left: 20px;
 }
-.image-box__event div {
+.image-box__event__comment-box {
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.image-box__event div span {
+.image-box__event__comment-box__comment {
   margin-left: 5px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .image-box__leftbutton {
@@ -56,8 +56,8 @@
   left: 650px;
 }
 .image-box__page-info {
-  font-size: 25px;
-  color: white;
+  font-size: 1.56rem;
+  color: #ffffff;
   position: absolute;
   top: 410px;
   left: 660px;

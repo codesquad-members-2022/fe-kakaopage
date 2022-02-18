@@ -18,16 +18,21 @@ body {
 }
 
 .selected-text {
-  color: black;
+  color: #000000;
   position: relative;
   z-index: 1;
 }
 
 .circle {
-  position: absolute;
   width: 40px;
   height: 40px;
   background-color: #fecc2f;
-  left: 237px;
   border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+.weekly-nav {
+  cursor: pointer;
 }
