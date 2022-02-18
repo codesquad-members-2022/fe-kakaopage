@@ -18,7 +18,7 @@ const HomeGenre = (webtoons) => {
     ${DaysTop(today, webtoons)}
     ${BigCardList(
       "기대 신작 TOP",
-      webtoons.filter((wt) => wt.status === "N")
+      webtoons.filter((wt) => wt.status === "N" && wt.imageHorizontalUrl)
     )}
     ${GenreTop(
       "로판",

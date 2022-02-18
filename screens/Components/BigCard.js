@@ -2,29 +2,37 @@
  * use in MainBanner, BigCardList
  */
 
-const BigCard = ({ title }) => {
+import { formatUserCount } from "../../src/utils.js";
+
+const BigCard = ({
+  title,
+  userCount,
+  waitForFree,
+  mainDesc,
+  imageHorizontalUrl,
+}) => {
   return `            <li class="bigCard">
     <div class="main__mainBanner">
       <div class="banner__imgBox">
-        <img src="./images/contents/캐슬.jpeg" alt=${title} />
+        <img src="${imageHorizontalUrl}" alt=${title} />
         <div class="imgBox__info">
           <div class="infoTitle">
             <span>${title}</span>
           </div>
           <div class="infoBody">
-            <span class="info-event">UP</span>
+            <span class="info-event">NEW</span>
             <span class="info-category">
-              <i class="fas fa-clock"></i> 웹툰
+              ${waitForFree ? '<i class="fas fa-clock"></i>' : ""} 웹툰
             </span>
             <span class="span-bar"> | </span>
             <span class="info-users">
-              <i class="fas fa-user"></i> 124.5만명
+              <i class="fas fa-user"></i> ${formatUserCount(userCount)}
             </span>
           </div>
         </div>
       </div>
       <div class="banner__message">
-        <span>복수의 칼을 갈아온 킬러</span>
+        <span>${mainDesc}</span>
       </div>
     </div>
   </li>`;
