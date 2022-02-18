@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-light-grey);
+}
+
+.footer-contents {
+  width: var(--main-width);
+}
+
+.app-button {
+  background-color: var(--color-yellow);
+  width: var(--main-width);
+  height: 60px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-contents {
+  font-size: 0.8rem;
+  color: var(--color-grey);
+  margin: 40px 0 40px 0;
+}

@@ -59,88 +59,70 @@
       </nav>
     </header>
     <main class="main">
-      <div class="main-contents">
-        <nav class="mainbox main__navbar">
-          <ul class="nav nav--main">
-            <li class="nav__category selected">홈</li>
-            <li class="nav__category">요일연재</li>
-            <li class="nav__category">웹툰</li>
-            <li class="nav__category">소년</li>
-            <li class="nav__category">드라마</li>
-            <li class="nav__category">로맨스</li>
-            <li class="nav__category">로판</li>
-            <li class="nav__category">액션무협</li>
-            <li class="nav__category">BL</li>
-          </ul>
-        </nav>
+      <ul class="mainbox main__navbar">
+        <li class="nav__category selected">홈</li>
+        <li class="nav__category">요일연재</li>
+        <li class="nav__category">웹툰</li>
+        <li class="nav__category">소년</li>
+        <li class="nav__category">드라마</li>
+        <li class="nav__category">로맨스</li>
+        <li class="nav__category">로판</li>
+        <li class="nav__category">액션무협</li>
+        <li class="nav__category">BL</li>
+      </ul>
 
-        <div class="mainbox main__slider">
-          <img
-            src="./img/webtoon1.png"
-            class="slider__img"
-            alt="webtoon-image"
-          />
-        </div>
+      <div class="mainbox main__slider">
+        <img class="slider__img" src="./img/webtoon1.png" alt="webtoon-image" />
+      </div>
 
-        <div class="mainbox main__days">
-          <ul class="days">
-            <li class="day__name selected" id="mon">월</li>
-            <li class="day__name" id="tue">화</li>
-            <li class="day__name" id="wed">수</li>
-            <li class="day__name" id="thu">목</li>
-            <li class="day__name" id="fri">금</li>
-            <li class="day__name" id="sat">토</li>
-            <li class="day__name" id="sun">일</li>
-            <li class="day__name whole" id="whole">전체</li>
-          </ul>
-        </div>
+      <ul class="mainbox main__days">
+        <li class="day__name selected" id="mon">월</li>
+        <li class="day__name" id="tue">화</li>
+        <li class="day__name" id="wed">수</li>
+        <li class="day__name" id="thu">목</li>
+        <li class="day__name" id="fri">금</li>
+        <li class="day__name" id="sat">토</li>
+        <li class="day__name" id="sun">일</li>
+        <li class="day__name whole" id="whole">전체</li>
+      </ul>
 
-        <div class="mainbox main__webtoons">
-          <ul class="webtoons"></ul>
-        </div>
+      <div class="mainbox main__webtoons">
+        <ul class="webtoons"></ul>
+      </div>
 
-        <div class="mainbox main__webtoons promotion">
-          <div class="promotion__title">
-            <h3 class="title">🔥HOT 최근 프로모션 진행작</h3>
-            <p class="more">더보기 ></p>
-          </div>
-          <ul class="webtoons webtoons--promotion"></ul>
+      <div class="mainbox main__webtoons promotion">
+        <div class="promotion__header">
+          <h3 class="promotion__title">🔥HOT 최근 프로모션 진행작</h3>
+          <button class="promotion__more">더보기 ></button>
         </div>
+        <ul class="webtoons webtoons--promotion"></ul>
+      </div>
 
-        <div class="mainbox main__themes">
-          <ul class="themes">
-            <li class="theme__name">
-              오늘 UP<span class="theme__info">204</span>
-            </li>
-            <li class="theme__name">
-              오늘 신작<span class="theme__info">4</span>
-            </li>
-            <li class="theme__name">
-              오리지널<span class="theme__info">2,330</span>
-            </li>
-            <li class="theme__name">완결까지 정주행</li>
-            <li class="theme__name">독립운동가 웹툰</li>
-            <li class="theme__name">
-              오늘 랭킹<span class="theme__info">1위</span>
-            </li>
-          </ul>
-        </div>
+      <ul class="mainbox main__themes">
+        <li class="theme__name">오늘 UP<span class="theme__info">204</span></li>
+        <li class="theme__name">오늘 신작<span class="theme__info">4</span></li>
+        <li class="theme__name">
+          오리지널<span class="theme__info">2,330</span>
+        </li>
+        <li class="theme__name">완결까지 정주행</li>
+        <li class="theme__name">독립운동가 웹툰</li>
+        <li class="theme__name">
+          오늘 랭킹<span class="theme__info">1위</span>
+        </li>
+      </ul>
 
-        <div class="mainbox main__mini-slider">
-          <div class="mini-slider">
-            <button type="button" class="mini-slider__btn">
-              <i class="fas fa-chevron-circle-left"></i>
-            </button>
-            <img
-              src="https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0"
-              class="mini-slider__img"
-              alt="webtoon image"
-            />
-            <button type="button" class="mini-slider__btn">
-              <i class="fas fa-chevron-circle-right"></i>
-            </button>
-          </div>
-        </div>
+      <div class="mainbox main__mini-slider">
+        <button type="button" class="mini-slider__btn">
+          <i class="fas fa-chevron-circle-left"></i>
+        </button>
+        <img
+          class="mini-slider__img"
+          src="https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0"
+          alt="webtoon image"
+        />
+        <button type="button" class="mini-slider__btn">
+          <i class="fas fa-chevron-circle-right"></i>
+        </button>
       </div>
     </main>
     <footer class="footer">

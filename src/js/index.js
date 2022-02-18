@@ -1,10 +1,10 @@
 import { DATA_URL, $, CL } from './util.js';
 
-const $days = $('.days');
+const $days = $('.main__days');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
 const $navHeader = $('.nav--header');
-const $navMain = $('.nav--main');
+const $navMain = $('.main__navbar');
 const $mainSlider = $('.main__slider');
 
 async function loadData(param) {
@@ -37,7 +37,7 @@ function createWebtoonList(wt) {
 
 function filterWebtoons(wt) {
   $days.addEventListener('click', e => {
-    if (!e.target.matches('.days > .day__name')) return;
+    if (!e.target.matches('.day__name')) return;
     activateTab(e, $days);
     filterWebtoonsByDay(e, wt);
   });
