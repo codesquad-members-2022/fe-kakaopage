@@ -32,7 +32,8 @@ function renderHeader() {
 
 
 function renderNav() {
-    return `    <nav class="nav">
+    return `
+    <nav class="nav">
     <ul class="nav__ul">
         <li class="nav__list active">홈</li>
         <li class="nav__list">요일</li>
@@ -50,7 +51,8 @@ function renderNav() {
 
 
 function renderBanner() {
-    return `    <div class="aside__banner-wrapper">
+    return `    
+    <div class="aside__banner-wrapper">
     <aside class="aside__banner">
         <i class="fas fa-chevron-circle-left" id="left-icon"></i>
         <i class="fas fa-chevron-circle-right" id="right-icon"></i>
@@ -80,7 +82,8 @@ function renderMain() {
 // main에 내용 변화를 주려고 하므로 필요한 부분.
 
 function renderFooter() {
-    return `    <footer class="footer">
+    return `    
+    <footer class="footer">
     <button class="footer__toApp-button">
         카카오페이지 앱으로 보기 >
     </button>
@@ -110,12 +113,14 @@ function renderBase() {
 
 
 function renderArticle(className) {
-    return `<article class="${className}">
+    return `
+    <article class="${className}">
     </article>`
 }
 
 function renderArticleHeader() {
-    return `    <header class="article__header">
+    return `    
+    <header class="article__header">
     <div class="article__header-wrapper">
         <div class="article__header-text-wrapper">
             <h2>요일 연재 TOP</h2>
@@ -128,14 +133,16 @@ function renderArticleHeader() {
 
 function renderArticleSections(num) {
     const sections = renderSection(num);
-    return `<div class="section__book-wrapper">${sections}
+    return `
+    <div class="section__book-wrapper">${sections}
     </div>`
 }
 
 function renderSection(num) {
     let sections = '';
     for(let i = 0; i < num; i++) {
-        sections += `               <section class="section__book">
+        sections += `               
+        <section class="section__book">
         <div class="section__book-image-wrapper">
             <img src="./useimages/학사재생.png" alt="images">
             <div class="section__book-image-infor">

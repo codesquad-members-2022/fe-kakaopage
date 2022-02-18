@@ -51,31 +51,6 @@ function renderArticleHeader() {
     </header>`
 }
 
-function renderArticleSections(num) {
-    const sections = renderSection(num);
-    return `<div class="section__book-wrapper">${sections}
-    </div>`
-}
-
-function renderSection(num) {
-    let sections = '';
-    for(let i = 0; i < num; i++) {
-        sections += `               <section class="section__book">
-        <div class="section__book-image-wrapper">
-            <img src="./useimages/학사재생.png" alt="images">
-            <div class="section__book-image-infor">
-                <span>1위</span>
-                <i class="fas fa-solid fa-clock"></i>
-            </div>
-        </div>
-        <div class="section__book-text-wrapper">
-            <span class="section__book-text">어쩌고 저쩌고</span>
-            <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
-        </div>
-    </section>`
-    }
-    return sections;
-}
 // section 관련은 모든 페이지에서 똑같이 사용한다 -> 이함수들로 그대로 재사용할 수 있다.
 
 // function renderHome_midButton(num, list) {
