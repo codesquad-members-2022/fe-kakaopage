@@ -45,15 +45,45 @@
     고친방법: / -> /?categoryUid=0
   ```
 
-❗️ 하위 컨텐츠 렌더링
+✅ 하위 컨텐츠 렌더링
 
-- carousel, eventbox 및 컨텐츠 들은 겹치니까 해당 요소들을 감싸는 layout의 id를 고정으로 가져오고 안에 내용만 변경하기
+- 홈, 웹툰, 웹소설 등의 main카테고리 마다 하위 컨텐츠의 레이아웃은 동일하다.
+- 레이아웃은 고정시키고 레이아웃 내부의 컨텐츠만 변경할 수 있도록 만들기
+- 대략적인 구조
+
+```html
+<header>
+  <nav>
+    <a data-category="0" href="/?categoryUid=0">홈</a>
+    <a data-category="1" href="/?categoryUid=1">웹툰</a>
+    <a data-category="2" href="/?categoryUid=2">웹소설</a>
+    <a data-category="3" href="/?categoryUid=3">영화</a>
+    <a data-category="4" href="/?categoryUid=4">방송</a>
+    <a data-category="5" href="/?categoryUid=5">책</a>
+  </nav>
+</header>
+<main class="l-main" id="main-layout">
+  <article class="l-main__child" id="sub-category"></article>
+  <article class="l-main__child" id="carousel"></article>
+  <article class="l-main__child" id="event-box"></article>
+  <article class="l-main__child" id="event-carousel"></article>
+  <article class="l-main__child" id="main-content"></article>
+</main>
+```
+
+```js
+export const routes = [
+  { categoryUid: 0, getContent: Main },
+  { categoryUid: 1, getContent: Webtoon },
+  { categoryUid: 2, getContent: Novel },
+];
+```
 
 ✅ nav > ul > li > span 이런 구조에서 어디에 addEventListener("click", fn)을 줄까
 
 - a태그에 준 데이터 속성을 활용해, nav의 어디를 누르든 `[data-category]`가 있을 때만 특정 기능이 작동하도록 만듦
 
-✅ html태그들을 어떻게 가져올까?
+❗️ 카테고리마다 레이아웃안의 컨텐츠가 다른데 어떻게 렌더링할까?
 
 - htmltag를 관리하는 폴더를 만들어서 관리할까?
 
@@ -72,6 +102,6 @@ content: "<h1>세부컨텐츠</h1>
 
 ❗️ 디버깅 툴
 
-- ?
+- vscode extention을 사용해서 디버깅하는 방법 알아보기
 
 [참고자료](https://velog.io/@takeknowledge/로컬에서-CORS-policy-관련-에러가-발생하는-이유-3gk4gyhreu)
