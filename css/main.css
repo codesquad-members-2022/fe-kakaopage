@@ -13,9 +13,12 @@ main {
     justify-content: center;
     padding: 22px 0;
     flex: 1 1 auto;
+}
+.genre-nav__item button {
+    color: #BBB;
     font-size: 20px;
 }
-.genre-nav__item--selected a{
+.genre-nav__item--selected button{
     color: black;
     font-weight: 500;
 }
