@@ -1,10 +1,12 @@
 const headerNav = document.querySelector(".header_nav");
-const headerNavChildren = headerNav.querySelectorAll("span");
 const mainNav = document.querySelector(".main_nav");
-const mainNavChildren = mainNav.querySelectorAll("span");
+const daysNav = document.querySelector(".days_nav");
 const main = document.querySelector("main");
+const headerNavChildren = headerNav.querySelectorAll("span");
+const mainNavChildren = mainNav.querySelectorAll("span");
+const daysNavChildren = daysNav.querySelectorAll("span");
 
-const clickSelectedNavEvent = (event) => {
+const markSelectedNav = (event) => {
   event.preventDefault();
   const SELECTED = "selected";
   const { parentNode } = event.target;
@@ -13,10 +15,23 @@ const clickSelectedNavEvent = (event) => {
   event.target.classList.add(SELECTED);
 };
 
-const getSelectedNavEvent = (children) => {
+const showSelectedNav = (event) => {
+  event.preventDefault();
+  const type = event.target.classList[0];
+  main.querySelector("section").classList.add("hidden");
+  main.querySelector(`.${type}`).classList.remove("hidden");
+};
+
+const markSelectedNavEvent = (children) => {
   children.forEach((child) => {
-    child.addEventListener("click", clickSelectedNavEvent);
+    child.addEventListener("click", markSelectedNav);
   });
 };
-getSelectedNavEvent(headerNavChildren);
-getSelectedNavEvent(mainNavChildren);
+
+headerNavChildren.forEach((child) => {
+  child.addEventListener("click", showSelectedNav);
+});
+
+markSelectedNavEvent(headerNavChildren);
+markSelectedNavEvent(mainNavChildren);
+markSelectedNavEvent(daysNavChildren);

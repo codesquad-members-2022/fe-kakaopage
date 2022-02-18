@@ -23,6 +23,7 @@
       ) / var(--contents-column-count)
   );
   --contents-column-count: 5;
+  --days-contents-count: 8;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 8rem;
 }
 
 nav {
@@ -53,6 +55,10 @@ section {
   padding-right: var(--padding-main-left-right);
 }
 
+.hidden {
+  display: none;
+}
+
 /* HEADER ============================================================ */
 
 header {
@@ -62,6 +68,15 @@ header {
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header_contents {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .header_search {
@@ -95,8 +110,8 @@ header > nav {
 }
 
 header > nav > * {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 1rem; */
+  padding-bottom: 1rem;
   border-bottom: solid 0.2rem var(--color-white-main);
 }
 
@@ -112,7 +127,7 @@ main {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-main > section {
+main > section > section {
   background-color: snow;
   margin-top: 0.5rem;
   border-radius: 0.5rem;
@@ -126,6 +141,7 @@ main > section {
 .main_nav > nav {
   color: var(--color-grey-main);
 }
+
 .main_nav > nav > .selected {
   color: var(--color-black-main);
 }
@@ -140,19 +156,34 @@ main > section {
 }
 
 .days > * {
-  padding-top: var(--padding-main-top-bottom);
-  padding-bottom: var(--padding-main-top-bottom);
   border-bottom: solid 0.1rem var(--color-yellow-main);
 }
 
-.days > *:last-child {
-  border-bottom: none;
+.days > nav {
+  height: calc(var(--width-main) / 10);
+  color: var(--color-grey-main);
+}
+
+.days > nav > * {
+  margin: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days > nav > .selected {
+  color: var(--color-black-main);
+  border-radius: 100rem;
+  background-color: var(--color-yellow-main);
 }
 
 .days_menu {
-  display: flex;
+  height: calc(var(--width-main) / 10);
   padding-left: var(--padding-main-left-right);
   padding-right: var(--padding-main-left-right);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .days_menu_left > * {
@@ -166,9 +197,9 @@ main > section {
   margin-left: auto;
 }
 
-.days_contents {
-  padding-left: var(--padding-main-left-right);
-  padding-right: var(--padding-main-left-right);
+.days-contents {
+  border-bottom: 0;
+  padding: var(--padding-main-left-right);
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
@@ -182,7 +213,7 @@ main > section {
   padding-bottom: 0.8rem;
 }
 
-.days_content > .image > .picture {
+.days_content > .days_image > .days_picture {
   width: var(--width-content);
   border: solid 0.1rem var(--color-grey3);
   border-bottom: var(--color-grey-sub);
@@ -190,7 +221,7 @@ main > section {
   border-top-right-radius: var(--border-radius1);
 }
 
-.days_content > .image > .picture > img {
+.days_content > .days_image > .days_picture > img {
   width: var(--width-content);
   height: var(--width-content);
   border-bottom: var(--color-grey-sub);
@@ -198,7 +229,7 @@ main > section {
   border-top-right-radius: var(--border-radius1);
 }
 
-.days_content > .image > .rank {
+.days_content > .days_image > .rank {
   padding: 0.3rem;
   width: calc(var(--width-content) - 0.3rem * 2);
   background-color: var(--color-grey-sub);
@@ -209,12 +240,12 @@ main > section {
   border-bottom-right-radius: var(--border-radius1);
 }
 
-.days_content > .image > .rank > .number {
+.days_content > .days_image > .rank > .number {
   color: var(--color-yellow-main);
   font-size: 0.7rem;
 }
 
-.days_content > .image > .rank > .clock {
+.days_content > .days_image > .rank > .clock {
   margin-left: auto;
   color: var(--color-grey-main);
   font-size: 0.7rem;
@@ -231,9 +262,11 @@ main > section {
 /* FOOTER ============================================================ */
 
 footer {
-  color: var(--color-black-main);
-  width: 100%;
-  padding: 1rem;
+  color: var(--color-grey-main);
+  font-size: 0.5rem;
+  width: var(--width-main);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-top: auto;
   align-items: center;
   display: flex;
