@@ -1,5 +1,9 @@
 # fe-kakaopage
 
+## 실행 영상
+
+![실행영상](https://user-images.githubusercontent.com/93566353/154610070-c8e3f839-413a-4b43-81fe-9f84ba6332de.gif)
+
 ### check-list
 
 #### step1
