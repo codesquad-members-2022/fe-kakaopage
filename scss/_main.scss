@@ -13,23 +13,23 @@
 }
 
 .genre {
-  padding: 9px 7px;
   margin: 10px 0;
   background-color: $white;
 
   .genre-list {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .genre-list__item {
-    margin: 15px 5px;
+    padding: 25px 15px;
     color: $nav-gray;
     cursor: pointer;
   }
 
   .genre-list__item--focus {
+    font-weight: 600;
     color: $black;
   }
 }
@@ -57,20 +57,19 @@
 }
 
 .webtoon-slide__btn {
-  .webtoon-slide__btn--back {
+  .webtoon-slide__btn--common {
     position: absolute;
     top: 50%;
-    left: 20px;
     cursor: pointer;
     transform: translateY(-50%);
   }
 
+  .webtoon-slide__btn--back {
+    left: 20px;
+  }
+
   .webtoon-slide__btn--next {
-    position: absolute;
-    top: 50%;
     right: 20px;
-    cursor: pointer;
-    transform: translateY(-50%);
   }
 }
 
@@ -211,22 +210,22 @@
 .serial__list {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
   font-size: 18px;
   border-bottom: 1px solid $border-gray;
 }
 
 .serial__item {
+  padding: 20px 30px;
   color: $day-gray;
   cursor: pointer;
 
   &--focus {
     color: $black;
+    border-bottom: 2px solid $yellow;
   }
 }
 
 .serial__webtoons {
-  display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 20px;
