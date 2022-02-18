@@ -103,7 +103,7 @@ function createWeeklyPublicationTemplate() {
     <div class="webtoon">
       <div class="webtoon_preview">
         <img src="./image/1위.png" alt="1위웹툰" />
-        <div class="webtoon_score">
+        <div class="webtoon_score category_align">
           1위
           <img src="./image/wait_sign.svg" alt="wait_sign"/>
         </div>
@@ -121,7 +121,7 @@ function createWeeklyPublicationTemplate() {
     <div class="webtoon">
       <div class="webtoon_preview">
         <img src="./image/1위.png" alt="1위웹툰" />
-        <div class="webtoon_score">
+        <div class="webtoon_score category_align">
           1위
           <img src="./image/wait_sign.svg" alt="wait_sign"/>
         </div>
@@ -139,7 +139,7 @@ function createWeeklyPublicationTemplate() {
     <div class="webtoon">
       <div class="webtoon_preview">
         <img src="./image/1위.png" alt="1위웹툰" />
-        <div class="webtoon_score">
+        <div class="webtoon_score category_align">
           1위
           <img src="./image/wait_sign.svg" alt="wait_sign"/>
         </div>
@@ -157,7 +157,7 @@ function createWeeklyPublicationTemplate() {
     <div class="webtoon">
       <div class="webtoon_preview">
         <img src="./image/1위.png" alt="1위웹툰" />
-        <div class="webtoon_score">
+        <div class="webtoon_score category_align">
           1위
           <img src="./image/wait_sign.svg" alt="wait_sign"/>
         </div>

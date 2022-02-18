@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+:root {
+  --background-color-yellow: #FFD220;
+  --background-color-gray: #eee;
+}
+
 .category_align {
   display: flex;
   justify-content: space-between;
@@ -17,7 +22,8 @@
 }
 
 .grid_item {
-  height: 60px;
+  padding: 19px;
+  background-color: var(--background-color-gray);
 }
 
 .none {
@@ -53,7 +59,7 @@ input {
 
 .search_button {
   border: none;
-  background-color: #fff;
+  background-color: white;
   background-size: cover;
 }
 
@@ -118,7 +124,7 @@ input {
   align-items: center;
   width: 725px;
   height: 40px;
-  background-color: #FFD220;
+  background-color: var(--background-color-yellow);
 }
 
 .weekday_category_navigation {
@@ -159,7 +165,7 @@ input {
 }
 
 .webtoon_score {
-  color:#FFD220;
+  color: var(--background-color-yellow);
   background-color: black;
 }
 
@@ -177,8 +183,4 @@ input {
 
 .webtoon_details > .read_count {
   font-size: 13px
-}
-
-.today_category {
-  background-color: #f3f3f3;
 }
