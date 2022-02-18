@@ -1,6 +1,5 @@
+
 .navbar {
-  box-sizing: border-box;
-  margin: 0;
   border-bottom: 1px solid #dfdfdf;
   width: 100%;
   height: 68px;
@@ -9,7 +8,6 @@
 
 .content-list {
   padding: 0;
-  box-sizing: border-box;
   display: flex;
   margin: 0px auto;
   width: 720px;
@@ -19,11 +17,9 @@
 
 
 li {
-  margin: 0;
   list-style: none;
   flex: 1 1 auto;
   padding: 13px 0 15px;
-  box-sizing: border-box;
   border-bottom-width: 3px;
   text-align: center;
 }
@@ -37,7 +33,6 @@ li {
 }
 
 .navbar-second-1 {
-  box-sizing: border-box;
   background-color: white;
   width: 720px;
   padding: 0px;
@@ -46,21 +41,21 @@ li {
 }
 
 .navbar-second-content {
-  box-sizing: border-box;
-  margin: 0px;
   text-align: center;
   align-items: center;
   justify-content: center;
   flex: 1 1 auto;
   font-size: 20px;
   padding: 22px 0px;
-  font-weight: 500;
-  color: rgb(187, 187, 187);
-  text-decoration: none;
-  line-height: 1.15;
   background-color: transparent;
 }
 
+.navbar-second-content-link {
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  font-weight: 350;
+  line-height: 1.15;
+}
 
 .slide-img {
   position: relative;
@@ -80,8 +75,14 @@ li {
 }
 
 .navbar-week {
-  box-sizing: border-box;
   padding-top: 7px;
+}
+
+.navbar-week-1 {
+  cursor: pointer;
+  color: rgb(187, 187, 187);
+  font-weight: 350;
+  line-height: 1.15;
 }
 
 /* 여기부터 전체 웹툰 웹툰 navbar */
@@ -101,7 +102,6 @@ li {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0px;
   padding: 0px;
 }
 
@@ -110,16 +110,13 @@ li {
   padding-right: 0px;
   display: flex;
   align-items: center;
-  margin: 0px;
   color: rgb(187, 187, 187);
   font-size: 20px;
   text-align: center;
 }
 
 .navbar-webtoon-total-menu {
-  box-sizing: border-box;
   display: flex;
-  margin: 0px;
   padding: 26px 13px 10px;
 }
 
@@ -129,5 +126,93 @@ li {
   color: rgb(153, 153, 153);
   text-align: right;
   flex: 1 0 auto;
+}
+
+/* 여기부터 webtoon list */
+
+.webtoon-list {
+  background-color: rgb(255, 255, 255);
+  width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.webtoon-list-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.webtoon-content {
+  width: 120px;
+  margin: 0px 0px 21px;
+  text-decoration-line: none;
+}
+
+.webtoon-img-1 {
+  height: 120px;
+  overflow: hidden;
+  width: 120px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.webtoon-ranking-description {
+  background-color: #242526;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;   /*중심축에서 center이므로 수직선에서 가운데라고 생각하면됨*/
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ranking {
+  line-height: 1;
+  font-weight: 400;
+  color: #ffd200;
+  font-size: 16px;
+}
+
+.ranking-logo {
+  height: 16px;
+  margin-top: 2px;
+  align-items: center;
+  display: flex;
+}
+
+.webtoon-list-description {
+  color: #333333;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+
+
+.viewers-num {
+  display: flex;
+  font-size: 14px;
+  font-weight: 350;
+  color: #9c9c9c;
+  align-items: center;
+}
+
+.viewers-logo {
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
 }
 
