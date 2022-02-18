@@ -14,7 +14,7 @@
 .banner__summary {
   text-align: center;
   padding: 12px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: var(--main-point-color);
   color: var(--black-color);
 }
@@ -27,7 +27,7 @@
   border: 1px solid var(--white-color);
   border-radius: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--white-color);
 }
 
@@ -63,7 +63,7 @@
 
 .main__banner .banner__title {
   margin-left: 24px;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .main__banner .banner__viewer {
@@ -74,7 +74,7 @@
 
 .main__banner .banner__viewer p {
   padding: 0 8px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 /* ======== promotion banner ======== */
@@ -136,7 +136,7 @@
 
 .expect-new__top .banner__viewer p {
   padding: 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .expect-new__top .divider {
@@ -146,5 +146,5 @@
 .expect-new__top .banner__summary {
   padding: 8px;
   border-radius: 0 0 8px 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }

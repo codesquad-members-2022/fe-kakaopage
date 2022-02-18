@@ -30,7 +30,7 @@
   width: 100%;
   padding: 8px;
   border-radius: 0 0 8px 8px;
-  font-size: 95%;
+  font-size: 1rem;
   background-color: var(--black-color);
   color: var(--main-point-color);
 }
@@ -49,10 +49,10 @@
 }
 
 .item__rating .fa-star {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .item__viewer, .item__info i {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--non-focus-font-color);
 }

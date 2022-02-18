@@ -32,7 +32,7 @@
 
 .contents__cash, .contents__login {
   padding: 0 8px;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--non-focus-font-color);
 }
 
@@ -77,14 +77,14 @@
 }
 
 .nav .fa-clock {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .nav__item {
   text-align: center;
   width: 100%;
   padding: 16px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .nav__item--focused {
