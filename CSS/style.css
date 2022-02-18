@@ -7,7 +7,7 @@
 :root {
   --color-yellow-main: #fdd578;
   --color-black-main: #14110a;
-  --color-white-main: #f7f1e2;
+  --color-white-main: #f7f3eb;
   --color-grey-main: #818181;
   --color-grey-sub: #353535;
   --color-grey3: #d3d2d2;
@@ -15,7 +15,7 @@
   --border-main: solid 0.2rem;
   --padding-main-top-bottom: 1.2rem;
   --padding-main-left-right: 1rem;
-  --width-main: 550px;
+  --width-main: 530px;
   --width-content: calc(
     calc(
         var(--width-main) - var(--padding-main-left-right) *
@@ -57,7 +57,7 @@ section {
 
 header {
   width: 100%;
-  background-color: snow;
+  background-color: var(--color-white-main);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -90,10 +90,18 @@ header {
   margin-left: 10px;
 }
 
-header nav {
+header > nav {
   width: 500px;
+}
+
+header > nav > * {
   padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: solid 0.2rem var(--color-white-main);
+}
+
+header > nav > .selected {
+  border-bottom: solid 0.2rem var(--color-grey-main);
 }
 
 /* MAIN ============================================================ */
@@ -178,6 +186,7 @@ main section {
 .days_content > .image > .picture > img {
   width: var(--width-content);
   height: var(--width-content);
+  border-bottom: var(--color-grey-sub);
   border-top-left-radius: var(--border-radius1);
   border-top-right-radius: var(--border-radius1);
 }
@@ -188,7 +197,7 @@ main section {
   background-color: var(--color-grey-sub);
   display: flex;
   border: solid 0.1rem var(--color-grey-sub);
-  border-top: var(--color-grey3);
+  border-top: var(--color-grey-sub);
   border-bottom-left-radius: var(--border-radius1);
   border-bottom-right-radius: var(--border-radius1);
 }
