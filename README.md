@@ -30,3 +30,54 @@ json 형식으로 스크랩된 데이터를 fs_writeFile를 이용해서 새로�
 - `홈-요일연재-월화수목금토`탭의 작은 카드 레이아웃은 24개의 아이템만 스크랩이 된다.
   - 해당 탭은 기본적으로 24개의 아이템이 세팅되어있고 스크롤을 내릴수록 아이템이 추가되는데 스크랩으론 추가된 아이템을 가져올 수 없다.
 
+### 깃허브 페이지 오류 해결하기
+로컬에서는 문제가 없었지만 깃허브 페이지로 확인하니까 자바스크립트로 생성한 레이아웃과 html img 태그에 넣은 더미이미지가 뜨지 않았다...
+
+![에러메세지](https://user-images.githubusercontent.com/85747667/154628545-9f311dd6-eb69-4e86-b090-c3e4acfda8ce.png)
+
+콘솔창을 확인해보니 mixed content라는 알림과 net::ERR_ABOTED 404 라는 에러창이 보였다.
+
+#### mixed content
+> 참고한 글
+> - [No More Mixed Messages About HTTPS](https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html)
+> - [How to fix "insecure content was loaded over HTTPS, but requested an insecure resource"](https://stackoverflow.com/questions/35178135/how-to-fix-insecure-content-was-loaded-over-https-but-requested-an-insecure-re)
+
+HTTPS 페이지에 HTTP를 통해 리소스를 로드하라는 요청을 받을 때 발생하는 오류이다.
+
+html 내부에서 더미이미지를 사용하기 위해 이미지 경로에 `http://placeimg.com/사이즈크기`를 넣었는게 화근이였다.
+
+👉 나중에 이미지를 넣을거라 더미이미지 경로를 삭제하는 걸로 해결했다.
+
+#### net::ERR_ABOTED 404
+
+```html
+  <script type="module" src="/JS/main.js"></script>
+``` 
+
+```css
+.divider {
+  ...
+  background-image: url(/assets/divider.png);
+  ...
+}
+```
+파일 경로가 잘못되었기 때문에 발생한 오류였다.
+
+👉 파일 경로 변경으로 해결
+
+```html
+  <script type="module" src="JS/main.js"></script>
+``` 
+
+
+```css
+.divider {
+  ...
+  background-image: url(../assets/divider.png);
+  ...
+}
+```
+
+![](https://user-images.githubusercontent.com/85747667/154629085-4b81e3ed-858f-4449-89af-1fb7af814863.png)
+
+수정하니까 자바스크립트로 생성한 레이아웃이 깃허브 페이지에서도 잘 보였다!
