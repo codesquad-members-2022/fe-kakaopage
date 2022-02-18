@@ -1,38 +1,38 @@
-.slide {
+.banner {
   --slide-main-color: #fff;
   --slide-second-color: #222;
 }
 
-.slide-title {
+.banner-title {
   font-size: var(--font-28px);
   font-weight: var(--font-bold);
   color: var(--slide-main-color);
 }
 
-.slide-info {
+.banner-info {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.slide-sub-text {
+.banner-sub-text {
   display: flex;
   align-items: center;
   left: 20px;
 }
 
-.slide-number {
+.banner-number {
   opacity: 0.6;
   margin-right: 20px;
 }
 
-.slide-sub-text, .slide-number {
+.banner-sub-text, .banner-number {
   margin-top: 10px;
   color: var(--slide-main-color);
   font-size: var(--font-20px);
 }
 
-.slide .bar {
+.banner .bar {
   display: block;
   min-width: 1px;
   width: 1px;
@@ -41,7 +41,7 @@
   background-color: var(--slide-main-color);
 }
 
-.slide-comment {
+.banner-comment {
   padding: 15px;
   background-color: var(--identity-color);
   color: var(--slide-second-color);
@@ -49,7 +49,7 @@
   font-weight: var(--font-thin);
 }
 
-.slide-controller {
+.banner-controller {
   display: flex;
   justify-content: space-between;
   padding: 0 15px 0;
