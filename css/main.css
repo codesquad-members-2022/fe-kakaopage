@@ -167,6 +167,14 @@ main {
   margin-right: 3px;
 }
 
+.webtoon-title {
+  width: calc((700px - 30px) / 5 - 15px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
 .webtoon-details {
   display: flex;
   align-items: center;
