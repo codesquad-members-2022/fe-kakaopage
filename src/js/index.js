@@ -1,16 +1,17 @@
-import { DATA_URL, $ } from './util.js';
+import { DATA_URL, $, CL } from './util.js';
 
 const $days = $('.days');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
 const $navHeader = $('.nav--header');
+const $navMain = $('.nav--main');
+const $mainSlider = $('.main__slider');
 
-async function loadWebtoons() {
-  // Better way?
+async function loadData(param) {
   const response = await fetch(DATA_URL);
-  const wtJson = await response.json();
-  const webtoons = await wtJson.webtoon;
-  return webtoons;
+  const json = await response.json();
+  const data = await json[param];
+  return data;
 
   // return fetch(DATA_URL)
   //   .then(response => response.json())
@@ -37,14 +38,14 @@ function createWebtoonList(wt) {
 function filterWebtoons(wt) {
   $days.addEventListener('click', e => {
     if (!e.target.matches('.days > .day__name')) return;
-    activateDay(e);
+    activateTab(e, $days);
     filterWebtoonsByDay(e, wt);
   });
 }
 
 function filterWebtoonsByDay(e, wt) {
   const day = e.target.id;
-  day === 'whole'
+  day === CL.WHOLE
     ? displayWebtoon(wt, $webtoons)
     : displayWebtoon(
         wt.filter(v => v.day === day),
@@ -52,9 +53,10 @@ function filterWebtoonsByDay(e, wt) {
       );
 }
 
-function activateDay({ target }) {
-  [...$days.children].forEach(day => {
-    day.classList.toggle('selected-day', day === target);
+function activateTab({ target }, parentNode) {
+  if (target === parentNode) return;
+  [...parentNode.children].forEach(child => {
+    child.classList.toggle(CL.SELECTED, child === target);
   });
 }
 
@@ -67,9 +69,39 @@ function removeCircle(e) {
   e.target.removeChild(circle);
 }
 
-$navHeader.addEventListener('click', removeCircle);
+function filterContentsBySub(e, banner) {
+  // If e.target is clock or circle, then I need to bring parent's id
+  // If I should make slider(carousel), I should use filter instead of find
+  const subject = e.target.classList.contains('nav__subject')
+    ? e.target.id
+    : e.target.parentNode.id;
+  displayBanner(banner.find(v => v.subject === subject)['url']);
+}
 
-loadWebtoons()
+function displayBanner(url) {
+  $mainSlider.innerHTML = createBannerImg(url);
+}
+
+function createBannerImg(url) {
+  return `<img src=${url} class="slider__img" alt="webtoon-image"/>`;
+}
+
+function setEventListenrToNavHeader(banner) {
+  $navHeader.addEventListener('click', e => {
+    if (!e.target.matches('.nav--header > .nav__subject')) return;
+    removeCircle(e);
+    activateTab(e, $navHeader);
+    filterContentsBySub(e, banner);
+  });
+}
+
+$navMain.addEventListener('click', e => {
+  activateTab(e, $navMain);
+});
+
+loadData('banner').then(banner => setEventListenrToNavHeader(banner));
+
+loadData('webtoon')
   .then(wt => {
     displayWebtoon(
       wt.filter(v => v.day === 'mon'),
