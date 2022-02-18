@@ -25,7 +25,9 @@ const DateTop = (webtoons) => {
         </div>
         <div class="contents__body">
           <ul class="contents__date">
-            ${dateTopCards.map((card) => CardInfoRow(card)).join("")}
+            ${dateTopCards
+              .map((card, index) => CardInfoRow(index + 1, card))
+              .join("")}
           </ul>
         </div>
       </div>

@@ -8,7 +8,7 @@ import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 
 const HomeGenre = (webtoons) => {
-  const today = new Date().getDay();
+  const today = new Date().getDay() - 1;
   const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
 
   return `
