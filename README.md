@@ -1,8 +1,7 @@
 # fe-kakaopage
 
 #### 1. 구현
-
-구조 
+ 
 - header / main / footer 로 나누어 구현.
 
 - header
