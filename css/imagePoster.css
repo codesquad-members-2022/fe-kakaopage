@@ -1,16 +1,12 @@
 .image-poster__wrapper {
     display: flex;
     justify-content: space-between;
-}
-
-.image-poster {
-    display: flex;
-    flex-direction: column;
+    margin: 20px 12px;
 }
 
 .image-poster__img {
-    width: 155px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
     background-image: url("../images/sample_content_img.png");
     background-size: cover;
     background-position: center center;
