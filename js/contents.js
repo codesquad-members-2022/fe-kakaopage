@@ -160,7 +160,7 @@ export function makeTodayRanking(url, span1, title, people) {
   </div>`;
 }
 
-export function makeTodayRecommend(url, span1, span2, title, people) {
+export function makeTodayWebtoon(url, span1, span2, title, people) {
   return `
   <div class="today_recommend">
     <img src="${url}," / alt="${title} 이미지" width="110" height="110">
@@ -230,4 +230,18 @@ export function makeThreeMenu(liInfo1, liInfo2, liInfo3) {
       </li>
     </ul>
   </section>`;
+}
+
+export function makeTodayRecommend(url, title, icon, people) {
+  return `
+  <div class="wait_contents">
+  <img src="${url}" / alt="${title} 이미지"
+  width="140" height="200">
+  <div class="info_recommend">
+  <div>${title}</div>
+  <div><span>${icon}</span>👤${people}만명</div>
+  </div>
+    <div class = "plus_info"><img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a / alt="시계 이미지"
+  width="20" height="20"</div>
+</div>`;
 }

@@ -1,8 +1,7 @@
 import { makeImageSection } from './contents.js';
 import { makeDate } from './contents.js';
 import { makeTitle } from './contents.js';
-
-import { makeTodayRecommend } from './contents.js';
+import { makeTodayWebtoon } from './contents.js';
 import { makeTodayRanking } from './contents.js';
 
 export default function addHTML() {
@@ -48,35 +47,35 @@ export default function addHTML() {
     '딸 바보가 되었습니다',
     '55.2'
   )}
-  ${makeTodayRecommend(
+  ${makeTodayWebtoon(
     '	https://dn-img-page.kakao.com/download/resource?kid=b7H7Jx/hzmU3lmHWf/PYTUMe8KmuFYbvLETjjfOk&filename=th2',
     '★',
     '9.9',
     '재앙급 영웅님이 귀환하셨다',
     '57.2'
   )}
-  ${makeTodayRecommend(
+  ${makeTodayWebtoon(
     '	https://dn-img-page.kakao.com/download/resource?kid=6WrkN/hzhOi9Q3rx/K9EcOe49J8tPsqkcZY9KB1&filename=th2',
     '★',
     '9.8',
     '카니발 베이비',
     '17'
   )} 
-  ${makeTodayRecommend(
+  ${makeTodayWebtoon(
     '	https://dn-img-page.kakao.com/download/resource?kid=c7aN0E/hy41NmZFbx/XpuVPoG811XwKto4vKtxYK&filename=th2',
     '★',
     '9.9',
     '24분의 1 로멘스',
     '63.8'
   )} 
-  ${makeTodayRecommend(
+  ${makeTodayWebtoon(
     '	https://dn-img-page.kakao.com/download/resource?kid=S1kxU/hyEdlYjRrz/e1OeuUKOpw07xau22O8N6k&filename=th2',
     '★',
     '10.0',
     '악녀가 사랑할 때',
     '133'
   )}
-  ${makeTodayRecommend(
+  ${makeTodayWebtoon(
     '	https://dn-img-page.kakao.com/download/resource?kid=wIHwB/hzhOmRyx4s/c720DwZNXp99QzWbKrljIK&filename=th2',
     '★',
     '9.9',
