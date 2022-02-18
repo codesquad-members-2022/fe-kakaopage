@@ -2,7 +2,7 @@
 
 ## ToDo
 
-- [x] html ui 구현
+- [x] 카카오페이지 HTML, CSS 구현
 - [x] 탭 기능 구현
 - [x] flex 완벽 정리
 - [ ] css 겹치는 코드 리팩터
