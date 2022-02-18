@@ -1,5 +1,6 @@
 import Nav from './Nav.js';
+import { MainNavItems } from '../../data';
 
-const MainNav = (mainNavItems) => `<nav class="contents main-nav">${Nav(mainNavItems)}</nav>`;
+const MainNav = () => `<nav class="contents main-nav">${Nav(MainNavItems)}</nav>`;
 
 export default MainNav;

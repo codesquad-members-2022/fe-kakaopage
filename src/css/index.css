@@ -165,6 +165,15 @@ header {
 
 .main-banner {
 	position: relative;
+	overflow: hidden;
+}
+
+.main-banner .banner-container {
+	display: flex;
+}
+
+.main-banner .banner {
+	width: 720px;
 }
 
 .banner a {

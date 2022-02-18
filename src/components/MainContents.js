@@ -1,10 +1,10 @@
-import { MainNav, DailySeriesRanking } from './index.js';
-import { MainNavItems } from '../data';
+import { MainNav, DailySeriesRanking, MainBanner } from './index.js';
 
 const MainContents = () => {
 
   return `<div class="main-contents">
-            ${MainNav(MainNavItems)}
+            ${MainNav()}
+            ${MainBanner()}
             ${DailySeriesRanking()}
           </div>`;
 }
