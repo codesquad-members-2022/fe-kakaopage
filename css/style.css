@@ -1,5 +1,5 @@
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
   padding-top: 142px;
 }
 
@@ -9,7 +9,7 @@ header {
   width: 100%;
   z-index: 1;
 
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .header__container {
