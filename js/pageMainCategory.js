@@ -44,7 +44,6 @@ pageMainCategory.forEach((li, idx, list) => {
 });
 
 /* 웹툰 바로가기 컨텐츠 */
-
 // const indexOf = (li) => [].indexOf.call(pageMainCategoryContainer.children, li);
 pageMainCategoryContainer.addEventListener('click', (e) => {
   const prevWebtoonContentsList = document.querySelectorAll('.main-contents');
