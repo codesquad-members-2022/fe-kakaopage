@@ -6,7 +6,7 @@ const init = () => {
   renderSet.renderFooter();
   renderSet.renderGnb();
   addHandlerOnGnb();
-  loadGnbTab('웹툰');
+  loadGnbTab('홈');
 };
 
 init();
