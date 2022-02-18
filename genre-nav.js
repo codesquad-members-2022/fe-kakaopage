@@ -8,4 +8,5 @@ function createEventListnerGenreNav() {
         });
     });
 }
-createEventListnerGenreNav();
+
+export { createEventListnerGenreNav };
