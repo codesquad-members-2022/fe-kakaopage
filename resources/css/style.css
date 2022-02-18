@@ -453,6 +453,30 @@ main {
     margin-right: auto;
 }
 
+.mini-banner {
+    width: 680px;
+    height: 223px;
+    margin-top: 20px;
+}
+
+.banner__list {
+    width: 680px;
+    height: 223px;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.banner-item {
+    width: 335px;
+    position: relative;
+}
+
+.banner-item > img {
+    width: 335px;
+    position: relative;
+    z-index: 0;
+}
+
 footer {
     display: flex;
     width: 720px;
