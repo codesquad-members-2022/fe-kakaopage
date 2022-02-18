@@ -2,7 +2,7 @@ main {
   margin: 0 auto;
 }
 
-.category a{
+.category a {
   color: var(--second-text-color);
 }
 
@@ -30,7 +30,7 @@ main {
   margin-bottom: 10px;
 }
 
-.slide-info > div{
+.slide-info > div {
   display: flex;
   align-items: center;
 }
@@ -110,7 +110,7 @@ main {
   border-radius: 10px;
 }
 
-.ad-slide .ad a{
+.ad-slide .ad a {
   display: block;
   width: 100%;
   height: 100%;
@@ -202,7 +202,7 @@ main {
   margin-bottom: 6px;
 }
 
-.new .slide-info > div{
+.new .slide-info > div {
   display: flex;
   align-items: center;
 }
@@ -256,8 +256,8 @@ main {
 }
 
 .list-item .content-info > div:not(:first-child) {
-    font-size: 13px;
-    color: var(--second-text-color);
+  font-size: 13px;
+  color: var(--second-text-color);
 }
 
 .list-item .content-info img {

@@ -1,0 +1,16 @@
+.search-form {
+  padding: 4px 10px;
+  background-color: var(--second-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+}
+
+.search-input {
+  width: 136px;
+  line-height: 23px;
+  margin-right: 5px;
+}
+
+.search-btn {
+  width: 20px;
+}

@@ -1,0 +1,24 @@
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.content-item {
+  padding-top: 20px;
+  width: 120px;
+
+}
+
+.thumnail {
+  width: 120px;
+  height: 120px;
+}
+
+.content-item-bottom {
+  padding: 0 10px;
+  height: 30px;
+  background-color: #242526;
+  color: var(--identity-color);
+  font-size: var(--font-16px)
+}
