@@ -16,6 +16,13 @@ body {
   font-weight: 400;
 }
 
+.blue {
+  background-color: #2e86de;
+}
+.red {
+  background-color: #eb3b5a;
+}
+
 footer {
   width: 720px;
 }

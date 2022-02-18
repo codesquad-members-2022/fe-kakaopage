@@ -97,7 +97,7 @@
   justify-content: center;
   width: 120px;
 }
-.header__nav-item:nth-child(2) {
+.header__nav .selected {
   border-bottom: 3px solid #ffd200;
 }
 .yellow-dot {
