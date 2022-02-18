@@ -1,5 +1,5 @@
 import { renderAll } from './render.js';
-import { setContainerWidth } from './js/setContainerWidth.js';
+import { setContainerWidth } from './js';
 
 const init = () => {
   renderAll();

@@ -1,3 +1,4 @@
 import { navCallback } from './navEvent.js';
+import { setContainerWidth, mainBannerCallback } from './mainBannerEvent.js';
 
-export { navCallback };
+export { navCallback, setContainerWidth, mainBannerCallback };

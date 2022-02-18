@@ -170,6 +170,7 @@ header {
 
 .main-banner .banner-container {
 	display: flex;
+	transition: all 700ms;
 }
 
 .main-banner .banner {

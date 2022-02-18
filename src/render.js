@@ -1,7 +1,7 @@
 import { $, convertStringToHTML } from './utils.js';
 import { Nav, MainContents, DailySeriesRanking } from './components';
 import { ContentsNavItems, MainNavItems } from './data';
-import { navCallback } from './js';
+import { navCallback, mainBannerCallback } from './js';
 
 const renderMainNav = () => {
   $('.main-nav').innerHTML = Nav(MainNavItems);
@@ -20,6 +20,7 @@ const renderAll = () => {
   $('.main-contents-container').insertAdjacentHTML('afterbegin', MainContents());
   $('.main-nav').addEventListener('click', navCallback);
   $('.contents-nav').addEventListener('click', navCallback);
+  $('.main-banner').addEventListener('click', mainBannerCallback)
 };
 
 export { renderMainNav, renderContentsNav, renderDailySeriesRanking, renderAll };
