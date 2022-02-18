@@ -1,14 +1,8 @@
 import tagLists from '../json/tagLists.json' assert { type: 'json' };
-
+import createMainContainer from './createContainer/createMainContainer.js';
 // tagList object
 // "tag": "message"
 // "note": "message"
-
-const createMainContainer = () => {
-  const mainContainer = document.createElement('div');
-  mainContainer.className = 'page-main__container';
-  return mainContainer;
-};
 
 const createContainer = () => {
   const div = document.createElement('div');
