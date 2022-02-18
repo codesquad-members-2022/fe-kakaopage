@@ -87,21 +87,20 @@ function chageMainSecHome() {
 }
 
 function switchToggleText(textArray) {
-  const $toggleleftAll = document.querySelectorAll(".main--toggle--left");
+  const $toggleLeftAll = document.querySelectorAll(".main--toggle--left");
   const $toggleRightAll = document.querySelectorAll(".main--toggle--right");
 
-  $toggleRightAll.forEach((el) => (el.textContent = "더보기"));
-
-  $toggleleftAll.forEach((toggle, idx) => {
-    let toggleArr = toggle.children;
-    [...toggleArr].forEach((el, el_idx) => {
-      if (el_idx === 0) {
-        el.textContent = textArray[idx];
-      } else {
-        el.classList.add("ev__main--toggle--sort");
+  $toggleLeftAll.forEach((toggle, idx) => {
+    for (let i = 0; i < toggle.children.length; i++) {
+      if (i <= 0) {
+        toggle.children[0].textContent = textArray[i];
+      } else if (i > 0) {
+        toggle.children[i].classList.add("ev__main--toggle--sort");
       }
-    });
+    }
   });
+
+  $toggleRightAll.forEach((el) => (el.textContent = "더보기"));
 }
 
 // 메인컨텐츠(만화로)수직배치
