@@ -84,12 +84,35 @@ const loadSnbTabContents = (category) => {
   const categoryData = webtoonData[category];
   renderSet.renderMainBanner(categoryData.mainBanner);
 
-  if (!(category === '0')) {
-    categoryContentEl.innerHTML = `
-    <div style="text-align:center;padding:80px 0;font-size:1.25rem">준비 중입니다.</div>`;
-    return;
+  switch (category) {
+    case '0':
+      loadWebtoonHome(categoryData);
+      break;
+    case '1':
+      loadWebtoonDailySeries(categoryData);
+      break;
+    case '2':
+      loadWebtoonBoy(categoryData);
+      break;
+    case '3':
+      loadWebtoonDrama(categoryData);
+      break;
+    case '4':
+      loadWebtoonRomance(categoryData);
+      break;
+    case '5':
+      loadWebtoonRomanceFantasy(categoryData);
+      break;
+    case '6':
+      loadWebtoonAction(categoryData);
+      break;
+    case '7':
+      loadWebtoonBl(categoryData);
+      break;
   }
+};
 
+const loadWebtoonHome = (categoryData) => {
   renderSet.renderGridMenu(categoryData.gridMenu);
   renderSet.renderPromotionBanner(categoryData.promotionBanner);
   renderSet.renderSectionBasic('기대신작 TOP');
@@ -101,6 +124,32 @@ const loadSnbTabContents = (category) => {
   renderSet.renderSectionBasic('액션무협 TOP');
   renderSet.renderSectionBasic('일간 랭킹 TOP');
   renderSet.renderSectionBasic('추천 이벤트 TOP');
+};
+
+const loadWebtoonDailySeries = (categoryData) => {};
+
+const loadWebtoonBoy = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
+};
+
+const loadWebtoonDrama = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
+};
+
+const loadWebtoonRomance = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
+};
+
+const loadWebtoonRomanceFantasy = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
+};
+
+const loadWebtoonAction = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
+};
+
+const loadWebtoonBl = (categoryData) => {
+  renderSet.renderGridMenu(categoryData.gridMenu);
 };
 
 export { addHandlerOnGnb, loadGnbTab };
