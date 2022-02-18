@@ -1,4 +1,3 @@
-const preCategoryMenu = document.querySelectorAll(".main_category ul li")
 const mainCategoryMenu = document.querySelectorAll(".main_category ul li");
 const weekend = document.querySelectorAll(".underline ul li");
 
