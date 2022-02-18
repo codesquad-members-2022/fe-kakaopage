@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script type="module" src="./assets/js/main.js"></script>
     <title>홈 | 카카오페이지</title>
 </head>
 <body>
@@ -41,12 +42,12 @@
         <nav class="gnb">
             <div class="inner">
                 <ul>
-                    <li><button type="button"><img src="./assets/images/common/gnb_home.svg" alt="홈"></button></li>
-                    <li class="active"><button type="button"><img src="./assets/images/common/gnb_webtoon.svg" alt="웹툰"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_novel.svg" alt="웹소설"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_movie.svg" alt="영화"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_broadcast.svg" alt="방송"></button></li>
-                    <li><button type="button"><img src="./assets/images/common/gnb_book.svg" alt="책"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_home.svg" alt="홈"></button></li>
+                    <li class="active" data-gnb="webtoon"><button type="button"><img src="./assets/images/common/gnb_webtoon.svg" alt="웹툰"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_novel.svg" alt="웹소설"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_movie.svg" alt="영화"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_broadcast.svg" alt="방송"></button></li>
+                    <li data-gnb="dummy"><button type="button"><img src="./assets/images/common/gnb_book.svg" alt="책"></button></li>
                 </ul>
             </div>
         </nav>
@@ -56,20 +57,19 @@
             <div class="inner">
                 <nav class="lnb">
                     <ul>
-                        <li class="active"><button type="button">홈</button></li>
-                        <li><button type="button">요일연재</button></li>
-                        <li><button type="button">웹툰</button></li>
-                        <li><button type="button">소년</button></li>
-                        <li><button type="button">드라마</button></li>
-                        <li><button type="button">로맨스</button></li>
-                        <li><button type="button">로판</button></li>
-                        <li><button type="button">액션무협</button></li>
-                        <li><button type="button">BL</button></li>
+                        <li class="active" data-lnb="home"><button type="button">홈</button></li>
+                        <li data-lnb="day"><button type="button">요일연재</button></li>
+                        <li data-lnb="webtoon"><button type="button">웹툰</button></li>
+                        <li data-lnb="boy"><button type="button">소년</button></li>
+                        <li data-lnb="drama"><button type="button">드라마</button></li>
+                        <li data-lnb="romance"><button type="button">로맨스</button></li>
+                        <li data-lnb="romance_fantasy"><button type="button">로판</button></li>
+                        <li data-lnb="action"><button type="button">액션무협</button></li>
+                        <li data-lnb="BL"><button type="button">BL</button></li>
                     </ul>
                 </nav>
                 <section class="main_contents">
                     <section class="contents banner top_banner">
-                        
                         <div class="slider_items">
                             <div class="item item_type1">
                                 <div class="img">
@@ -97,12 +97,12 @@
                     <section class="contents sub_nav">
                         <nav>
                             <ul>
-                                <li><a href="#!"><span class="sub_nav_ttl">오늘 UP</span> <span class="num">205</span></a></li>
-                                <li><a href="#!"><span class="sub_nav_ttl">오늘 신작</span> <span class="num">4</span></a></li>
-                                <li><a href="#!"><span class="sub_nav_ttl">오리지널</span> <span class="num">2,328</span></a></li>
-                                <li><a href="#!"><span class="sub_nav_ttl">완결까지 정주행</span></a></li>
-                                <li><a href="#!"><span class="sub_nav_ttl">독립운동가 웹툰</span></a></li>
-                                <li><a href="#!"><span class="sub_nav_ttl">오늘 랭킹</span> <span class="num">1위</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">오늘 UP</span> <span class="num">205</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">오늘 신작</span> <span class="num">4</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">오리지널</span> <span class="num">2,328</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">완결까지 정주행</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">독립운동가 웹툰</span></a></li>
+                                <li><a href="#!"><span class="sub_nav_ttl text_ellipsis">오늘 랭킹</span> <span class="num">1위</span></a></li>
                             </ul>
                         </nav>
                     </section>
@@ -134,6 +134,37 @@
                                 <li><button type="button">완결</button></li>
                             </ul>
                         </nav>
+                        <!-- 필터 정렬 -->
+                        <!-- <div class="filter_box filter_type1">
+                            <ul class="cat">
+                                <li class="active"><button type="buton">전체</button></li>
+                                <li><button type="buton">웹툰</button></li>
+                                <li><button type="buton"><img src="./assets/images/ico/ico_wait-off.svg" alt="wait" class="ico_wait">웹툰</button></li>
+                            </ul>
+                            <div class="sort_box">
+                                <button type="button" class="result sort_btn">전체 (167)</button>
+                                <ul class="sort_list">
+                                    <li class="active">전체</li>
+                                    <li>소년</li>
+                                    <li>드라마</li>
+                                    <li>로맨스</li>
+                                    <li>로판</li>
+                                    <li>액션무협</li>
+                                    <li>BL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter_box filter_type2">
+                            <ul class="cat">
+                                <li><button type="buton">전체</button></li>
+                                <li><button type="buton">연재중,완결</button></li>
+                                <li><button type="buton">업데이트순</button></li>
+                                <li><button type="buton">테마키워드</button></li>
+                            </ul>
+                            <div class="result">
+                                <span>1,397 작품</span>
+                            </div>
+                        </div> -->
                         <ul class="item_list flex col-5">
                             <li class="item item_type2">
                                 <a href="#!">
@@ -144,7 +175,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -164,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -184,7 +215,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -204,7 +235,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -224,7 +255,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -245,7 +276,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -266,7 +297,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -287,7 +318,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -308,7 +339,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -329,7 +360,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">도굴왕</h4>
+                                        <h4 class="item_ttl text_ellipsis">도굴왕</h4>
                                         <div class="info">
                                             <div class="badge">
                                                 <img src="./assets/images/ico/badge_up_blue.svg" alt="업데이트">
@@ -384,7 +415,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">상사가 나를 덕질한다</h4>
+                                        <h4 class="item_ttl text_ellipsis">상사가 나를 덕질한다</h4>
                                         <div class="info">
                                             <span class="info_txt viewer">200.8만명</span>
                                         </div>
@@ -401,7 +432,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">상사가 나를 덕질한다</h4>
+                                        <h4 class="item_ttl text_ellipsis">상사가 나를 덕질한다</h4>
                                         <div class="info">
                                             <span class="info_txt viewer">200.8만명</span>
                                         </div>
@@ -418,7 +449,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">상사가 나를 덕질한다</h4>
+                                        <h4 class="item_ttl text_ellipsis">상사가 나를 덕질한다</h4>
                                         <div class="info">
                                             <span class="info_txt viewer">200.8만명</span>
                                         </div>
@@ -435,7 +466,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">상사가 나를 덕질한다</h4>
+                                        <h4 class="item_ttl text_ellipsis">상사가 나를 덕질한다</h4>
                                         <div class="info">
                                             <span class="info_txt viewer">200.8만명</span>
                                         </div>
@@ -452,7 +483,7 @@
                                         </div>
                                     </div>
                                     <div class="txt"> 
-                                        <h4 class="item_ttl">상사가 나를 덕질한다</h4>
+                                        <h4 class="item_ttl text_ellipsis">상사가 나를 덕질한다</h4>
                                         <div class="info">
                                             <span class="info_txt viewer">200.8만명</span>
                                         </div>
@@ -482,7 +513,7 @@
                                                 <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
                                                 <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
                                             </div>
-                                            <h4 class="item_ttl">흑막을 버리는 데 실패했다</h4>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
                                         </div>
                                         <div class="info">
                                             <span class="info_txt viewer">28.3만명</span>
@@ -509,7 +540,7 @@
                                                 <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
                                                 <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
                                             </div>
-                                            <h4 class="item_ttl">흑막을 버리는 데 실패했다</h4>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
                                         </div>
                                         <div class="info">
                                             <span class="info_txt viewer">28.3만명</span>
@@ -536,7 +567,7 @@
                                                 <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
                                                 <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
                                             </div>
-                                            <h4 class="item_ttl">흑막을 버리는 데 실패했다</h4>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
                                         </div>
                                         <div class="info">
                                             <span class="info_txt viewer">28.3만명</span>
@@ -567,6 +598,249 @@
                                 <button class="slider_controller next">다음</button>
                             </div>
                         </div>
+                    </section>
+                    <section class="contents">
+                        <!-- 웹툰-웹툰 -->
+                        <h3 class="hide">웹툰</h3>
+                        <ul class="item_list">
+                            <li class="item item_type3 flex horizontal">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type3 flex horizontal">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_up_blue.svg" alt="up">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type3 flex horizontal">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="contents">
+                        <div class="contents_ttl_box">
+                            <h3 class="contents_ttl">🔥HOT 최근 프로모션 진행작</h3>
+                            <a href="#!" class="more_btn">더보기</a>
+                        </div>
+                        <ul class="item_list">
+                            <li class="item item_type3 flex horizontal">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/badge_webtoon.png" alt="웹툰 뱃지">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type3 flex horizontal crown">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/badge_webtoon.png" alt="웹툰 뱃지">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type3 flex horizontal">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3_2.png" alt="세화, 가는 길">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/ico_wait.png" alt="웹툰 뱃지">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">세화, 가는 길</h4>
+                                        </div>
+                                        <p class="info_txt item_desc text_ellipsis">천천히 치유되는 그날의 상처</p>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                            <span class="info_txt">한혜연</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="contents">
+                        <div class="contents_ttl_box">
+                            <h3 class="contents_ttl">오늘의 추천</h3>
+                            <a href="#!" class="more_btn">더보기</a>
+                        </div>
+                        <ul class="item_list flex col-4">
+                            <li class="item item_type2 ">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3.jpg" alt="흑막을 버리는데 실패했다">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/ico_wait.png" alt="기다리면 무료">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
+                                        </div>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type2 ">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3.jpg" alt="흑막을 버리는데 실패했다">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/ico_wait.png" alt="기다리면 무료">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
+                                        </div>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type2 ">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3.jpg" alt="흑막을 버리는데 실패했다">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/ico_wait.png" alt="기다리면 무료">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
+                                        </div>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item item_type2 ">
+                                <a href="#!">
+                                    <div class="img">
+                                        <img src="./assets/images/data/item_type3.jpg" alt="흑막을 버리는데 실패했다">
+                                        <div class="img_badge">
+                                            <img src="./assets/images/ico/ico_wait.png" alt="기다리면 무료">
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="item_ttl_box">
+                                            <div class="badge">
+                                                <img src="./assets/images/ico/badge_new_red.svg" alt="새작품">
+                                                <img src="./assets/images/ico/badge_15.png" alt="15세 작품">
+                                            </div>
+                                            <h4 class="item_ttl text_ellipsis">흑막을 버리는 데 실패했다</h4>
+                                        </div>
+                                        <div class="info">
+                                            <span class="info_txt viewer">28.3만명</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </section>
                     <section class="app_more">
                             <a href="#!">
