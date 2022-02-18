@@ -38,3 +38,9 @@ a:visited {
 a:hover {
   color: black;
 }
+
+button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}

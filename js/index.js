@@ -12,7 +12,16 @@ function $(selector) {
 }
 
 const category = createCategory(CATEGORIES);
-const banner = createBanner({
+const banner1 = createBanner({
+  size: "large",
+  title: "내가 죽였다",
+  type: "웹툰",
+  views: 20.5,
+  progress: "1/4",
+  ad: "누가 아군이고, 누가 적인가.",
+});
+const banner2 = createBanner({
+  size: "small",
   title: "내가 죽였다",
   type: "웹툰",
   views: 20.5,
@@ -22,15 +31,10 @@ const banner = createBanner({
 const recommend = createRecommend(RECOMMEND_BUTTONS);
 const adSlide = createAdSlide();
 const dayTOP = createDayTOP();
-const workSmall = createWorkSmall({
-  str1: "1",
-  str2: "위",
-  title: "이번 생은 가주가 되겠습니다",
-  views: 112.7,
-});
 
 $(".contents").insertAdjacentHTML("beforeend", category);
-$(".contents").insertAdjacentHTML("beforeend", banner);
+$(".contents").insertAdjacentHTML("beforeend", banner1);
+$(".contents").insertAdjacentHTML("beforeend", banner2);
 $(".contents").insertAdjacentHTML("beforeend", recommend);
 $(".contents").insertAdjacentHTML("beforeend", adSlide);
 $(".contents").insertAdjacentHTML("beforeend", dayTOP);

@@ -9,6 +9,7 @@ const workSmall = createWorkSmall({
   str2: "위",
   title: "이번 생은 가주가 되겠습니다",
   views: 112.7,
+  status: "up",
 });
 
 export function createDayTOP() {

@@ -1,4 +1,4 @@
-export function createWorkSmall({ str1, str2, title, views }) {
+export function createWorkSmall({ str1, str2, title, views, status }) {
   return `
   <style>${style}</style>
   <div class="work-small col">
@@ -14,6 +14,7 @@ export function createWorkSmall({ str1, str2, title, views }) {
     </div>
     <div class="work-small__title">${title}</div>
     <div class="work-small__views-container row">
+      <div class="work-small__${status}-icon"></div>
       <div class="work-small__views-icon"></div>
       <div class="work-small__views">${views}</div>
       <div>만명</div>
@@ -85,5 +86,21 @@ const style = `
 .work-small__title,
 .work-small__views-container {
   margin-top: 6px;
+}
+
+.work-small__new-icon {
+  width: 13px;
+  height: 13px;
+  background-image: url('https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9');
+  background-size: cover;
+  margin: 3px;
+}
+
+.work-small__up-icon {
+  width: 19px;
+  height: 13px;
+  background-image: url('https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f');
+  background-size: cover;
+  margin: 3px;
 }
 `;
