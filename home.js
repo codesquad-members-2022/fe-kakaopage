@@ -62,7 +62,7 @@ function renderSection(num) {
     for(let i = 0; i < num; i++) {
         sections += `               <section class="section__book">
         <div class="section__book-image-wrapper">
-            <img src="./images/학사재생.png" alt="">
+            <img src="/useimages/환골탈태.png" alt="images">
             <div class="section__book-image-infor">
                 <span>1위</span>
                 <i class="fas fa-solid fa-clock"></i>
