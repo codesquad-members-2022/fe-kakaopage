@@ -288,9 +288,26 @@ main {
 }
 /*========== 추천 이벤트 ==========*/
 
+.event-img-container {
+  position: relative;
+}
+
 .event-img {
   object-fit: cover;
   width: 100%;
+}
+
+.event-count-container {
+  position: absolute;
+  left: 2.5%;
+  bottom: 7%;
+  display: flex;
+  align-items: center;
+}
+
+.event-count {
+  font-size: 18px;
+  letter-spacing: 3px;
 }
 
 /*========== 카카오페이지 앱으로 보기 버튼 ==========*/
