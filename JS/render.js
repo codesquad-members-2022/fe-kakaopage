@@ -8,6 +8,10 @@ function renderContainer(selector, title, num, options) {
   main.appendChild(newContainer);
 
   if (options === 'cardLayout') {
+    if (selector === 'daily__top') {
+      const newDailyList = makeSelectDayListHome();
+      newContainer.appendChild(newDailyList);
+    }
     const newList = makeWebtoonList(num);
     newContainer.appendChild(newList);
   } 
@@ -39,6 +43,31 @@ function makeContainerTitle(title) {
 }
 
 // ==================== layout ====================
+// ========== SelectDayHome (웹툰-홈 화면의 요일탭)==========
+function makeSelectDayListHome() {
+  const newList = document.createElement("ul");
+  newList.classList.add('select__day');
+  newList.innerHTML = makeSelectDayItem();
+
+  return newList;
+}
+
+function makeSelectDayItem() {
+  const weekend = ['월', '화', '수', '목', '금', '토', '일', '완결'];
+  const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end']
+  let items = '';
+  for (let i = 0; i < weekend.length; i++) {
+    if (i === 0) {
+      items += `<li class="day daily__top--focused" data-day="${dataSet[i]}"><button type="button">${weekend[i]}</button></li>`;
+    } else {
+      items += `
+      <li class="day" data-day="${dataSet[i]}"><button type="button">${weekend[i]}</button></li>
+      `
+    }
+  }
+  return items;
+}
+
 // ========== WebtoonList ==========
 function makeWebtoonList(num) {
   const newList = document.createElement("ul");

@@ -26,7 +26,7 @@ function setGenreFocus (event) {
 
 window.addEventListener('load', () => {
   clickGenresList();
-  renderContainer('.daily__top', '요일연재 TOP', 10, 'cardLayout');
-  renderContainer('.romance__top', '로맨스 TOP', 5, 'cardLayout');
-  renderContainer('.daily__ranking', '일간랭킹 TOP', 5, 'ranking');
+  renderContainer('daily__top', '요일 연재 TOP', 10, 'cardLayout');
+  renderContainer('romance__top', '로맨스 TOP', 5, 'cardLayout');
+  renderContainer('daily__ranking', '일간랭킹 TOP', 5, 'ranking');
 })
