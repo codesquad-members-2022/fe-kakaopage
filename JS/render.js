@@ -7,6 +7,7 @@ function renderContainer(selector, title, num, options) {
 
   main.appendChild(newContainer);
 
+  // 함수 분리 필요
   if (options === 'cardLayout') {
     if (selector === 'daily__top') {
       const newDailyList = makeSelectDayListHome();
@@ -20,6 +21,19 @@ function renderContainer(selector, title, num, options) {
     const newList = makeRankingList();
     newContainer.appendChild(newList);
   }
+
+  if (options === 'event') {
+    const newList = makeEventSection(selector);
+    newContainer.appendChild(newList);
+  }
+}
+
+function renderMoveApp(selector) {
+  const main = document.querySelector('.main');
+  const newList = makeMoveApp(selector);
+  main.appendChild(newList);
+
+  return newList;
 }
 
 // ========== Container ==========
@@ -142,4 +156,25 @@ function makeRankingItem() {
   return result;
 }
 
-export {renderContainer}
+// ========== event ==========
+function makeEventSection() {
+  const newList = document.createElement("div");
+  newList.classList.add('event__img');
+  newList.innerHTML = `<img src="https://dn-img-page.kakao.com/download/resource?kid=deu6dT/hzp2nVsO2d/FYkdB8uFGaSppYpxkP4Gck" alt="런칭 기념 이벤트">`
+
+  return newList;
+}
+
+// ========== makeMoveApp ==========
+function makeMoveApp(selector) {
+  const newList = document.createElement("div");
+  newList.classList.add(selector);
+  newList.innerHTML = `<a href="#">
+  <span><strong>코코아페이지</strong> 앱으로 보기</span>
+  <i class="fas fa-chevron-right"></i>
+</a>`;
+
+  return newList;
+}
+
+export {renderContainer, renderMoveApp}
