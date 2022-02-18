@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(/css/reset.css);
-@import url(/css/header.css);
-@import url(/css/toon-main.css);
+@import url(./reset.css);
+@import url(./header.css);
+@import url(./toon-main.css);
 
 /* 광역 */
 * {

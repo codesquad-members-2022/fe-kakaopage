@@ -1,5 +1,5 @@
 import { $ } from "./domLibrary-1.js";
-const imagePath = "/image/header";
+const imagePath = "./image/header";
 
 class Header {
   constructor() {
