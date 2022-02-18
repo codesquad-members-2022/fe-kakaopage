@@ -214,7 +214,6 @@ body{
 .underline{
     border-bottom: 1px solid var(--letter-color);
 }
-
 .all_web{
     display:flex;
     justify-content: space-between;
@@ -234,7 +233,7 @@ body{
     margin-right:10px;
 }
 
-.all_web-check{
+.all_web_check{
     font-weight:bold;
     color:#333;
 }
