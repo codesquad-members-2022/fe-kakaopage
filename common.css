@@ -62,7 +62,7 @@ li{
     text-align: center;
 }
 button{
-    background-color: pink;
+    background-color: var(--main-white);
     cursor: pointer;
     text-align: center;
     border: none;
