@@ -1,8 +1,10 @@
 const headerNav = document.querySelector(".header_nav");
 const headerNavChildren = headerNav.querySelectorAll("span");
+const mainNav = document.querySelector(".main_nav");
+const mainNavChildren = mainNav.querySelectorAll("span");
 const main = document.querySelector("main");
 
-const clickNavEvent = (event) => {
+const clickSelectedNavEvent = (event) => {
   event.preventDefault();
   const SELECTED = "selected";
   const { parentNode } = event.target;
@@ -11,6 +13,10 @@ const clickNavEvent = (event) => {
   event.target.classList.add(SELECTED);
 };
 
-headerNavChildren.forEach((child) =>
-  child.addEventListener("click", clickNavEvent)
-);
+const getSelectedNavEvent = (children) => {
+  children.forEach((child) => {
+    child.addEventListener("click", clickSelectedNavEvent);
+  });
+};
+getSelectedNavEvent(headerNavChildren);
+getSelectedNavEvent(mainNavChildren);
