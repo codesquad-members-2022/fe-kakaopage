@@ -32,6 +32,7 @@ function renderHeader() {
 
 
 function renderNav() {
+    
     return `
     <nav class="nav">
     <ul class="nav__ul">
@@ -159,4 +160,15 @@ function renderSection(num) {
     return sections;
 }
 
-export { renderBase, renderArticle, renderArticleHeader, renderArticleSections };
+function renderMidButton(listNames) {
+    let lists = '';
+    listNames.forEach((listName) => {
+        lists += `<button class="mid-button">${listName}</button>`
+    })
+
+    return `<div class="mid-button__wrapper">
+    ${lists}
+    </div>`
+}
+
+export { renderBase, renderArticle, renderArticleHeader, renderArticleSections, renderMidButton };

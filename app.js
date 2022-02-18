@@ -3,10 +3,11 @@ function renderBody() {
     const bodyEl = document.querySelector('body');
     bodyEl.innerHTML += renderBase();
 }
-
 renderBody();
 const navListsEl = document.querySelectorAll('.nav__list');
 const main = document.querySelector('main');
+
+const listNmaesForHome = ['오늘 UP', '오늘 신작', '오리지널', '완결까지 정주행', '독립운동가 웹툰', '오늘랭킹'];
 
 navListsEl.forEach((navList) => {
     navList.addEventListener(('click'), (e) => {
@@ -21,8 +22,12 @@ navListsEl.forEach((navList) => {
                 main.innerHTML += renderWeekdays_base();
                 addWeekdays_ArticleSection(10);
             } else if(e.target.textContent === "홈") {
-                main.innerHTML += renderHome_base();
+                // main.innerHTML += renderHome_base();
+                main.innerHTML += renderMidButton(listNmaesForHome);
+                // console.log(renderMidButton(listNmaesForHome));
+                // list에 들어가는 만큼, button을 출력함.
                 main.innerHTML += renderArticle('article__weekdays-top')
+
                 append('article__weekdays-top', renderHome_ArticelNav());
                 append('article__weekdays-top', renderArticleHeader());
                 append('article__weekdays-top', renderArticleSections(10))
@@ -53,6 +58,6 @@ function append(parentNodeClassName, child) {
 //     .then(res => res.json())
 //     .then(res => console.log(res))
 
-import { renderBase, renderArticle, renderArticleHeader, renderArticleSections } from './common.js'
+import { renderBase, renderArticle, renderArticleHeader, renderArticleSections, renderMidButton } from './common.js'
 import { renderHome_base } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';
