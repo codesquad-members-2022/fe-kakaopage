@@ -9,6 +9,22 @@
 .webtoon-component {
   width: 120px;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.horizontal-component {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.big-component {
+  width: 155px;
+}
+
+.big-component .webtoon-cover {
+  width: 155px;
+  height: 220px;
 }
 
 .webtoon-cover {
@@ -17,6 +33,16 @@
   background: url('../../img/resource.png');
   background-size: cover;
   border-radius: 6px;
+}
+
+.webtoon-state {
+  height: 14px;
+  margin-right: 2px;
+}
+
+.webtoon-badge {
+  height: 25px;
+  border-top-left-radius: 6px;
 }
 
 .webtoon-label {
@@ -60,4 +86,41 @@
 
 .webtoon-etc img {
   height: 13px;
+}
+
+.webtoon-summary {
+  margin-top: 10px;
+  color: #9c9c9c;
+}
+
+.small-cover {
+  width: 84px;
+  height: 114px;
+  margin-right: 20px;
+}
+
+.small-cover ~ .webtoon-info .webtoon-day {
+  margin-top: 20px;
+  color: #9c9c9c;
+}
+
+.small-cover ~ .webtoon-info,
+.wide-cover ~ .webtoon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.wide-cover {
+  width: 142px;
+  height: 96px;
+  margin-right: 20px;
+}
+
+.webtoon-ranking-number {
+  display: flex;
+  height: 114px;
+  font-size: 22px;
+  align-items: center;
+  margin-right: 20px;
 }
