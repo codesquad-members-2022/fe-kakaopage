@@ -37,6 +37,10 @@ nav li {
   margin-right: auto;
 }
 
+.ml--small {
+  margin-left: 3px;
+}
+
 .container {
   background-color: #fff;
   margin-bottom: 15px;
