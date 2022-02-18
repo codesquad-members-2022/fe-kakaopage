@@ -1,5 +1,4 @@
 import tagLists from '../json/tagLists.json' assert { type: 'json' };
-import createMainContainer from './createContainer/createMainContainer.js';
 // tagList object
 // "tag": "message"
 // "note": "message"
@@ -8,6 +7,12 @@ const createContainer = () => {
   const div = document.createElement('div');
   div.className = 'tag-list__container';
   return div;
+};
+
+const createMainContainer = () => {
+  const mainContainer = document.createElement('div');
+  mainContainer.className = 'page-main__container';
+  return mainContainer;
 };
 
 const createUl = () => {

@@ -2,6 +2,10 @@ import setPreview from './setPreview.js';
 import drawTagListEl from './drawTagListEl.js';
 import clearTagListEl from './clearTagListEl.js';
 
+const pageMainCategoryContainer = document.querySelector(
+  '.page-main-category__container'
+);
+
 const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
@@ -37,3 +41,8 @@ pageMainCategory.forEach((li, idx, list) => {
     drawTagListEl(category);
   });
 });
+
+/* 연재 */
+
+// const indexOf = (li) => [].indexOf.call(pageMainCategoryContainer.children, li);
+// pageMainCategoryContainer.addEventListener('click', (e) => {});
