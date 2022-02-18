@@ -1,0 +1,18 @@
+:root {
+    --max-width: 720px;
+    --gnb-height: 70px;
+    --color-white: #fff;
+    --color-white-smoke: #f1f1f1;
+    --color-yellow: #ffd300;
+    --color-pale-gray: #bdbdbd;
+    --color-gray: #222;
+    --color-dark-gray: #191a1c;
+    --color-transparent: transparent;
+    --font-12: 12px;
+    --font-14: 14px;
+    --font-16: 16px;
+    --font-18: 18px;
+    --font-20: 20px;
+    --font-28: 28px;
+    --font-w-500: 500;
+}

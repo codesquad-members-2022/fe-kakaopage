@@ -1,0 +1,33 @@
+.issue {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: var(--color-white);
+}
+
+.issue__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: var(--color-white-smoke);
+}
+
+.issue .issue__box {
+    width: 33.33%;
+    height: 60px;
+    padding: 0 10px;
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.issue__box .issue__box_text {
+    font-size: var(--font-18);
+    font-weight: var(--font-w-500);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

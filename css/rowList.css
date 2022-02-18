@@ -1,0 +1,11 @@
+.rowList {
+    height: 370px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+.rowList__inner {
+    /* flex 속성 따로 클래스 빼야 할 것 같다.. */
+    display: flex;
+}

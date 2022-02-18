@@ -1,0 +1,14 @@
+.topic {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.topic__title {
+    font-size: var(--font-20);
+
+}
+
+.topic__see {
+    /* 보류 */
+}

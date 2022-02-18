@@ -1,0 +1,25 @@
+@import 'variable.css';
+@import 'reset.css';
+@import 'header.css';
+@import 'carousel.css';
+@import 'main.css';
+@import 'footer.css';
+@import 'issue.css';
+@import 'advertise.css';
+@import 'rowList.css';
+@import 'topic.css';
+@import 'imagePoster.css';
+@import 'week.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-white-smoke);
+}
+
+ul {
+    list-style: none;
+}
