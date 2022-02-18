@@ -550,9 +550,37 @@ main {
     color: var(--color-gray-reader);
 }
 
+.event-banner {
+    width: 680px;
+    height: 340px;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.event-banner_image {
+    width: 680px;
+    height: 340px;
+    position: relative;
+}
+
+.event-banner_order {
+    width: 680px;
+    height: 340px;
+    margin-top: 580px;
+    margin-left: 50px;
+}
+
+.event-banner_order > span {
+    font-size: 18px;
+    opacity: 0.5;
+    padding-top: 2px;
+    color: var(--color-white);
+}
+
 footer {
     display: flex;
     width: 720px;
-    margin: 0 auto;
+    margin: 60px auto;
     background-color: var(--color-gray-background);
 }
