@@ -7,7 +7,6 @@ import { rowListContainer } from "../container/rowListContainer.js";
 
 export const main = {
     addAdvertiseComponent: function() {
-        this.removeAdvertiseComponent();
         return advertiseComponent();
     },
     removeAdvertiseComponent: function() {
@@ -16,7 +15,7 @@ export const main = {
         advertiseElement.remove();
     },
     addIssueComponent: function(menu) {
-        this.removeIssueComponent();
+        if(Array.isArray(issueObj[menu]) && issueObj[menu].length === 0) return;
         return issueComponent(issueObj[menu]);
     },
     removeIssueComponent: function() {
@@ -25,7 +24,7 @@ export const main = {
         issueElement.remove();
     },
     addRecommendationComponent: function(menu) {
-        this.removeRecommendationComponent();
+        if(Array.isArray(recommendationObj[menu]) && recommendationObj[menu].length === 0) return;
         return rowListContainer(rowListTitleObj.recommendation, recommendationObj[menu]);
     },
     removeRecommendationComponent: function() {
