@@ -212,7 +212,7 @@
       "isDaysMain": true,
       "adult": false,
       "waitForFree": true,
-      "event": "",
+      "event": "이벤트",
       "status": "N",
       "userCount": 51000,
       "write": "",
