@@ -6,7 +6,7 @@ import { makeTodayRecommend } from './contents.js';
 import { makeTodayRanking } from './contents.js';
 
 export default function addHTML() {
-  document.querySelector('.clear').innerHTML = `
+  document.querySelector('.changed').innerHTML = `
   ${makeImageSection(
     'https://dn-img-page.kakao.com/download/resource?kid=U75Fe/hyZ8vLJXBq/PnCbWdqXRPgdpppo0cUaDK',
 

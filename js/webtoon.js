@@ -6,7 +6,7 @@ import { makePromotion } from './contents.js';
 import { makeClockImage } from './contents.js';
 
 export default function addHTML() {
-  document.querySelector('.clear').innerHTML = `
+  document.querySelector('.changed').innerHTML = `
   ${makeImageSection(
     'https://dn-img-page.kakao.com/download/resource?kid=cl0NGc/hzacezTSJp/rNn75CBqttbKDY0Cgpierk',
     '내가 죽였다',
