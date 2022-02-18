@@ -39,19 +39,3 @@ const webtoonData = {
 };
 
 export { webtoonData };
-
-// const Item = {
-//   id: 'a0001', // id
-//   title: '플랜터스의 정원', // 제목
-//   caption: '저는 당신이 마음에 들었어요!', // 캡션
-//   type: '웹툰', // 콘텐츠 종류: 웹소설 or 웹툰
-//   category: '드라마', // 카테고리: 소년, 드라마, 로맨스, 로판, 액션무협, BL, 판타지, 현판, 무협, 판드, 단행본
-//   day: 5, // 연재 요일: 0, 1, 2, 3, 4, 5, 6
-//   author: '김현식', // 작가
-//   score: 7.5, // 별점: 0.0~10.0
-//   views: 3.5, // 조회수(만 명)
-//   age: 'all', // 연령: all, 15
-//   new: true, // 신규 여부: true, false
-//   up: true, // 업데이트 여부: true, false
-//   crown: true, // 왕관 여부: true, false
-// };
