@@ -1,15 +1,30 @@
-function handleNavFocusIn(e) {
-  const linkTag = e.target.parentElement;
-  const listTags = linkTag.parentElement.querySelectorAll("li");
+function handleBannerNavFocus(e) {
+  const listTag = e.target.parentElement;
+  const listTags = listTag.parentElement.querySelectorAll("li");
 
   listTags.forEach((el) => {
     el.classList.remove("underline--yellow");
   });
-  linkTag.classList.add("underline--yellow");
+  listTag.classList.add("underline--yellow");
 }
 
-const navLink = document.querySelectorAll(".main-banner__nav__link");
+function handleMainNavFocus(e) {
+  const listTag = e.target.parentElement;
+  const listTags = listTag.parentElement.querySelectorAll("span");
 
-navLink.forEach((el) => {
-  el.addEventListener("focusin", handleNavFocusIn);
+  listTags.forEach((el) => {
+    el.classList.remove("font--black");
+  });
+  listTag.querySelector("span").classList.add("font--black");
+}
+
+const bannerNavLink = document.querySelectorAll(".main-banner__nav__link");
+const mainNavLink = document.querySelectorAll(".main__nav__link");
+
+bannerNavLink.forEach((el) => {
+  el.addEventListener("focusin", handleBannerNavFocus);
+});
+
+mainNavLink.forEach((el) => {
+  el.addEventListener("focusin", handleMainNavFocus);
 });

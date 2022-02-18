@@ -7,3 +7,7 @@
 .underline--yellow {
   border-bottom: 3px solid #ffd200;
 }
+
+.font--black {
+  color: var(--main-font-color) !important;
+}
