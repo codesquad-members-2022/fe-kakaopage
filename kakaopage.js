@@ -1,4 +1,4 @@
-import { webtoons } from "./fixing-webtoons";
+import { webtoons } from "./fixing-webtoons.js";
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -87,5 +87,7 @@ const renderingDefault = () => {
   });
   renderingWebtoon(today);
 };
+
+export { renderingWebtoon, renderingDefault };
 
 renderingDefault();
