@@ -49,7 +49,22 @@
 ## TODO
 
 - [ ] before, after 활용
-- [ ] 함수로 HTML 생성
-- [ ] 생성한 HTML 조합
-- [ ] CSS 컴포넌트 내에서 적용
+- [x] 함수로 HTML 생성
+- [x] 생성한 HTML 조합
+- [x] CSS 컴포넌트 내에서 적용
 - [ ] CSS 네이밍 리팩토링
+- [ ] 컴포넌트 생성
+  - [ ] header
+  - [ ] navigation
+  - [x] adSlide
+  - [x] banner
+  - [x] box
+  - [x] category
+  - [x] dayTOP
+  - [x] recommend
+  - [x] workSmall
+  - [ ] 기대신작 TOP
+  - [ ] 각 장르 TOP
+  - [ ] 일간 랭킹 TOP
+  - [ ] 추천 이벤트
+  - [ ] footer
