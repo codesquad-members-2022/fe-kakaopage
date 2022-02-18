@@ -52,3 +52,20 @@
 ✅ nav > ul > li > span 이런 구조에서 어디에 addEventListener("click", fn)을 줄까
 
 - a태그에 준 데이터 속성을 활용해, nav의 어디를 누르든 `[data-category]`가 있을 때만 특정 기능이 작동하도록 만듦
+
+✅ html태그들을 어떻게 가져올까?
+
+- htmltag를 관리하는 폴더를 만들어서 관리할까?
+
+```js
+async getHtml () {
+  return `<h1>이런식으로</h1>`
+}
+```
+
+- 아니면 json 파일을 만들어서 받아올까? 이런식으로 하면 태그 안에 값들을 어떻게 동적으로 변경하지? 잘모르겠으니까 위의 방식으로 결정
+
+```json
+id: "main-layout",
+content: "<h1>세부컨텐츠</h1>
+```
