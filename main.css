@@ -111,7 +111,7 @@
 
 /*6. 기다리면 무료 */
 
-.wating__contents .wc{
+.waiting__contents .wc{
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;

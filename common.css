@@ -77,12 +77,17 @@ button{
     font-size: 1.5rem;
 }
 /* 제목 양식 */
-.wating__title,.daily__title{
+.waiting__title,.daily__title{
     display: flex;
     justify-content: space-between;
     padding: 1rem 1rem;
 }
 /* 콘텐츠 높이 */
-.wating,.daily{
+.waiting,.daily{
     height: 35rem;
+}
+
+/* display */
+.category,.waiting{
+    display: block;
 }
