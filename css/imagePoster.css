@@ -11,7 +11,7 @@
 .image-poster__img {
     width: 155px;
     height: 220px;
-    background-image: url("/images/sample_content_img.png");
+    background-image: url("../images/sample_content_img.png");
     background-size: cover;
     background-position: center center;
     margin-bottom: 15px;
