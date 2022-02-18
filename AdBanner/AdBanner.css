@@ -1,8 +1,7 @@
 div.AdBanner{
-
     position:relative;
     background-color: #FFFFFF;
-    margin-top:12px;
+    margin:12px 0;
     display:flex;
     padding: 10px 0;
 

@@ -1,0 +1,66 @@
+
+.dailyHeader{
+    margin-top:11px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    background-color: #FFFFFF;
+}
+.dailyHeader>li{
+    font-size:20px;
+    text-align: center;
+    color:rgb(187, 187, 187);
+    padding:  21px 0;
+    width:100%;
+    cursor:pointer;
+    transition: background-color 0.1s linear;
+}
+.dailyHeader>.selected{
+    background:url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b11…) 50% 50% / 44px no-repeat rgb(255, 255, 255);
+}
+.dailyCategory{
+    padding: 0 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(241, 241, 241);;
+}
+
+.dailyCategory>ul{
+    display: flex;
+    align-items: center;
+
+}
+.dailyCategory>ul>li{
+    padding:20px 10px;
+    cursor:pointer;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(187, 187, 187);
+    transition:color 1s linear;
+    display: flex;
+    align-items: center;
+}
+.dailyCategory>ul>li.selected {
+    color: rgb(51, 51, 51);
+}
+.dailyCategory>ul>div{
+    vertical-align: middle;
+    margin: 0px 5px 1px;
+    min-width: 1px;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(217, 217, 217);
+}
+.dailyCategory>.total{
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+    padding: 26px 13px 10px;
+    display:flex;
+    align-items: center;
+}
+.dailyCategory>.total>img{
+    width:10px;
+    height:7px;
+}
