@@ -11,26 +11,26 @@ export const main = {
         return advertiseComponent();
     },
     removeAdvertiseComponent: function() {
-        const advertiseEl = $(".advertise");
-        if(advertiseEl === null) return;
-        advertiseEl.remove();
+        const advertiseElement = $(".advertise");
+        if(advertiseElement === null) return;
+        advertiseElement.remove();
     },
     addIssueComponent: function(menu) {
         this.removeIssueComponent();
         return issueComponent(issueObj[menu]);
     },
     removeIssueComponent: function() {
-        const issueEl = $(".issue");
-        if(issueEl === null) return;
-        issueEl.remove();
+        const issueElement = $(".issue");
+        if(issueElement === null) return;
+        issueElement.remove();
     },
     addRecommendationComponent: function(menu) {
         this.removeRecommendationComponent();
         return rowListContainer(rowListTitleObj.recommendation, recommendationObj[menu]);
     },
     removeRecommendationComponent: function() {
-        const recommendEl = $(".recommend");
-        if(recommendEl === null) return;
-        recommendEl.remove();
+        const recommendElement = $(".recommend");
+        if(recommendElement === null) return;
+        recommendElement.remove();
     }
 }
