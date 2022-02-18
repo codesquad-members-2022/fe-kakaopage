@@ -92,6 +92,18 @@ a {
   font-weight: 500;
 }
 
+.underline-thick {
+  border-bottom: 3px solid;
+}
+
+.underline-thin {
+  border-bottom: 2px solid;
+}
+
+.current-tab {
+  border-bottom-color: #fcc419;
+}
+
 /*========== arrow ==========*/
 
 .arrow-icon {
