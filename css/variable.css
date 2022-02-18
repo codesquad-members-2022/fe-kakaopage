@@ -10,5 +10,6 @@
     --color-yellow: #ffd200;
     --color-gray: #999;
     --color-light-gray: #BBB;
+    --color-transparent-gray: rgba(0,0,0, 0.3);
     --color-body: #eee;
 }
