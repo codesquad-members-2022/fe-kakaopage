@@ -77,3 +77,15 @@ $(".page-main__nav").addEventListener("click", (e) => {
   if (e.target.nodeName !== "LI") return;
   renderingNav("page-main", e.target);
 });
+
+const renderingDefault = () => {
+  const dow = ["일", "월", "화", "수", "목", "금", "토"];
+  const today = dow[new Date().getDay()];
+  const dayElements = document.querySelectorAll(".dowTop__nav__btn");
+  dayElements.forEach((e) => {
+    if (e.innerText === today) renderingNav("dowTop", e);
+  });
+  renderingWebtoon(today);
+};
+
+renderingDefault();
