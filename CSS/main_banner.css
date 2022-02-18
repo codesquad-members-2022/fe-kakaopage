@@ -94,11 +94,9 @@
   color: var(--non-focus-font-color);
 }
 
-.promotion__banner .promotion__item {
-    /* 이미지 삽입시 삭제할 영역 */
+.promotion__banner img {
   width: 550px;
   height: 100px;
-  background-color: coral;
 }
 
 /* ======== expect-new-top ======== */
