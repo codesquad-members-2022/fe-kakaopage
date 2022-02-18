@@ -445,3 +445,24 @@ header {
     overflow: hidden;
 }
 
+.brandnew-banner__description {
+    font-size: .875rem;
+    padding: 5px 0px;
+}
+
+.brandnew-banner__information {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.brandnew-banner__title {
+    font-size: 1.125rem;
+}
+
+.brandnew-banner__tags {
+    height: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
