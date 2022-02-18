@@ -1,0 +1,358 @@
+/*========== main header ==========*/
+
+.main-header {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.main-header-form {
+  position: relative;
+}
+
+.main-header-input {
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  height: 30px;
+  width: 180px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin-right: 15px;
+}
+
+.main-header-input:focus {
+  outline: none;
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+  color: #495057;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+
+.main-header-item {
+  margin-right: 15px;
+}
+
+#stage {
+  color: #000;
+  font-weight: 600;
+  background-color: #fab005;
+  padding: 2px 4px;
+}
+
+.nav-days {
+  font-size: 18px;
+  font-weight: 500;
+
+  border-bottom: 1px solid #e9ecef;
+}
+
+/*========= main header nav ==========*/
+.main-header-nav {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/*========== 웹툰 카테고리 탭 ==========*/
+main {
+  margin-top: 15px;
+}
+
+.webtoon-category {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/*========== banner ==========*/
+
+.banner-container {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner-detail-container {
+  position: absolute;
+  bottom: 13%;
+  left: 3%;
+}
+
+.banner-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.banner-detail-text-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.banner-detail-img {
+  height: 22px;
+}
+
+.banner-detail-text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-detail-icon {
+  height: 19px;
+  margin-right: 4px;
+}
+
+.banner-count-container {
+  position: absolute;
+  right: 2%;
+  bottom: 13%;
+}
+
+.banner-count {
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.banner-bottom-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background-color: #fcc419;
+}
+
+.banner-bottom-text--small {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 5px;
+}
+
+/*========== category button  ==========*/
+.category-buttons-container {
+  padding: 20px;
+}
+
+.category-button {
+  background-color: #f1f3f5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*========== promotion part ==========*/
+.promotion-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion-container img {
+  width: 80%;
+}
+
+/*========== 웹툰 컴포넌트 ==========*/
+.webtoon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.webtoon-img {
+  width: 100%;
+}
+
+.webtoon-img-bar {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  padding: 6px 5px 4px 5px;
+  margin-top: -4px;
+}
+
+.star-img {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.webtoon-img-bar span {
+  color: #fcc419;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: -1px;
+}
+
+.watch-img {
+  width: 18px;
+  margin-right: 3px;
+}
+
+.webtoon-title {
+  width: calc((700px - 30px) / 5 - 15px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.webtoon-details {
+  display: flex;
+  align-items: center;
+}
+
+.webtoon-details-text {
+  font-size: 14px;
+}
+
+.webtoon-state-img {
+  width: 20px;
+  margin-right: 3px;
+}
+
+.people-img {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+
+/*========== 일간 랭킹 ==========*/
+.daily-rank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.daily-rank-item {
+  display: flex;
+  align-items: center;
+}
+
+.daily-ranking {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0px 30px 0px 15px;
+}
+
+.daily-rank-img-container {
+  position: relative;
+  width: 80px;
+  margin-right: 20px;
+}
+
+.daily-rank-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.daily-rank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.daily-rank-title {
+  margin-bottom: 5px;
+}
+
+.clock-img--yellow {
+  position: absolute;
+  width: 25px;
+  top: 0px;
+  left: 0px;
+}
+/*========== 추천 이벤트 ==========*/
+
+.event-img-container {
+  position: relative;
+}
+
+.event-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-count-container {
+  position: absolute;
+  left: 2.5%;
+  bottom: 7%;
+  display: flex;
+  align-items: center;
+}
+
+.event-count {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+/*========== 카카오페이지 앱으로 보기 버튼 ==========*/
+.app-button {
+  background-color: #fcc419;
+  width: 100%;
+  padding: 18px;
+  font-size: 17px;
+  letter-spacing: -1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*========== footer ==========*/
+.footer {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-sort {
+  display: flex;
+  align-items: center;
+}
+
+.footer-list:nth-child(1) {
+  margin-bottom: 6px;
+}
+
+.footer-list:nth-child(2) {
+  margin-bottom: 9px;
+}
+
+.footer-item {
+  margin-right: 4px;
+}
+
+#copyright-img {
+  width: 60px;
+}
+
+#copyright-text {
+  font-size: 13px;
+  font-weight: 600;
+}

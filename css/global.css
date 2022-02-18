@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ecef;
+}
+
+.center {
+  width: 700px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+nav li {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.nav-item-sort {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.mr--auto {
+  margin-right: auto;
+}
+
+.ml--small {
+  margin-left: 3px;
+}
+
+.container {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12px;
+}
+
+.grid-5col {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.text-color--white {
+  color: #fff;
+}
+
+.text-color--transparent-white {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.text-color--black {
+  color: #000;
+}
+
+.contents-container .header-container {
+  margin-bottom: 18px;
+}
+
+.text-color--gray {
+  color: #868e96;
+}
+
+.text-color--light-gray {
+  color: #adb5bd;
+}
+
+.round-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contents-container {
+  padding: 20px 15px;
+}
+
+.contents-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.underline-thick {
+  border-bottom: 3px solid;
+}
+
+.underline-thin {
+  border-bottom: 2px solid;
+}
+
+.current-tab {
+  border-bottom-color: #fcc419;
+}
+
+/*========== arrow ==========*/
+
+.arrow-icon {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+
+.arrow--round-border {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 45%;
+  left: 3%;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 45%;
+  right: 3%;
+}
+
+.arrow-with-text {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow--white {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow--gray {
+  color: #adb5bd;
+  border-color: #dee2e6;
+}
+
+.arrow--black {
+  color: #000;
+}
+
+.arrow--light-gray {
+  color: #dee2e6;
+}
