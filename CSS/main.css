@@ -158,6 +158,11 @@
   color: var(--non-focus-font-color);
 }
 
+.ranking__item .item__title {
+  overflow: visible;
+  text-overflow: clip;
+}
+
 .ranking__info .item__text {
   padding: 4px;
   color: var(--non-focus-font-color);
