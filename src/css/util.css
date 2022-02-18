@@ -42,6 +42,14 @@
   width: 100%;
 }
 
+.width-16 {
+  width: 16px;
+}
+
+.width-11 {
+  width: 11px;
+}
+
 .mg-left-5 {
   margin-left: 5px;
 }
@@ -58,8 +66,16 @@
   margin-right: 20px;
 }
 
+.mg-top-10 {
+  margin-top: 10px;
+}
+
 .mg-bottom-20 {
   margin-bottom: 20px;
+}
+
+.pd-top-2 {
+  padding-top: 2px;
 }
 
 .display-none {
@@ -70,7 +86,17 @@
   color: transparent;
 }
 
+.lineh-1_5 {
+  line-height: 1.5rem;
+}
+
 .hide {
   position: absolute;
   left: -1500px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

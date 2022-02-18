@@ -27,3 +27,19 @@
   border-radius: var(--border-radius);
   overflow: hidden;
 }
+
+.font-16 {
+  font-size: var(--font-16px);
+}
+
+.font-14 {
+  font-size: var(--font-14px);
+}
+
+.main-text-color {
+  color: var(--main-text-color);
+}
+
+.third-text-color {
+  color: var(--third-text-color);
+}

@@ -4,7 +4,10 @@
 }
 
 .sub-category {
+  margin-top: 15px;
+  padding: 15px;
   font-size: var(--font-20px);
+  border-bottom: 1px solid var(--border-color)
 }
 
 .sub-category-link {
