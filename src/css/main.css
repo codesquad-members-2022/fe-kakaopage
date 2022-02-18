@@ -134,7 +134,7 @@ img { width: 100%; }
 
 .grid-menu__badge { margin: 0 0 0 6px; padding: 3px 8px 1px; font-size: 1rem; font-weight: 400; border-radius: 20px; background: #ffd200; }
 
-.main-banner { width: 720px; height: 480px; overflow: hidden; position: relative; }
+.main-banner { width: 720px; height: 480px; overflow: hidden; position: relative; background: #ced4da; }
 
 .main-banner__item { width: 720px; height: 480px; position: relative; }
 
