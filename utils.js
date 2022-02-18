@@ -10,6 +10,6 @@ export const AddEvent = (target, eventType, selector, callback)=>{
     const ok = (eventTarget)=>children.includes(eventTarget) || eventTarget.closest(selector)
     target.addEventListener(eventType, event=>{
         if(!ok(event.target))return false;
-        callback();
+        callback(event);
     })
 }

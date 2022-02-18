@@ -54,13 +54,11 @@ const renderHome = ()=>{
     grid.style.paddingTop = '20px';
     renderGrid();
 }
+const renderHeader = ()=>{
+    menuNav(nav, 'afterbegin');
+    BannerBox(bannerBox, 'afterbegin', images, infographic);
+}
 
-AddEvent(nav, 'click', 'li', e=>{
-    const {target} = e
-    nav.querySelector('.selected').classList.remove('selected')
-    target.classList.add('selected');
-    if(target.classList.contains('toon')){}
-})
 
 let template=''
 nav.addEventListener('click', (e) => {
@@ -69,8 +67,8 @@ nav.addEventListener('click', (e) => {
     li.classList.add('selected');
     if (!li.classList.contains('toon')) {
         if(template)return;
-       template = section.innerHTML;
-       section.innerHTML= "<span>This is Dummy Page</span>";
+        template = section.innerHTML;
+        section.innerHTML= "<span>This is Dummy Page</span>";
     } else {
         if(!template)return;
         section.innerHTML = template;
@@ -90,8 +88,7 @@ topBanner.addEventListener('click', (e)=>{
 topBanner.querySelector('.home').addEventListener('click', (e)=>{
     renderHome();
 })
-menuNav(nav, 'afterbegin');
-BannerBox(bannerBox, 'afterbegin', images, infographic);
+renderHeader();
 renderHome();
 
 
