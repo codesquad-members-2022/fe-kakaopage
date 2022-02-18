@@ -3,6 +3,31 @@
   margin: 0;
 }
 
+.category_align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+  width: 725px;
+  text-align: center;
+}
+
+.grid_item {
+  height: 60px;
+}
+
+.none {
+  display: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -37,11 +62,6 @@ input {
   width: 20px;
 }
 
-.category_align {
-  display: flex;
-  justify-content: space-between;
-}
-
 .search-box {
   display: flex;
   box-sizing: border-box;
@@ -65,18 +85,18 @@ input {
   height: 25px;
 }
 
-.main_category_container {
+.main_category_navigation {
   align-items: center;
   width: 725px;
   height: 70px;
 }
 
-.main_category_container > .main_category {
+.main_category_navigation > .main_category {
   text-align: center;
   font-weight: 500;
 }
 
-.sub_category_container {
+.sub_category_navigation {
   align-items: center;
   width: 725px;
   height: 67px;
@@ -101,28 +121,24 @@ input {
   background-color: #FFD220;
 }
 
-.weekday_category {
+.weekday_category_navigation {
   flex: 1;
   align-items: center;
   width: 725px;
   height: 67px;
 }
 
-.weekday_type_filter {
+.webtoon_type_filter {
   display: flex;
   width: fit-content;
 }
 
-.weekday_type_filter > .weekday_type {
+.webtoon_type_filter > .webtoon_type {
   margin-right: 1em;
 }
 
-.weekday_genre_filter {
+.webtoon_genre_filter {
   list-style: none;
-}
-
-.weekday_genre_filter > .weekday_genre {
-  display: none;
 }
 
 .webtoon_board {
@@ -161,4 +177,8 @@ input {
 
 .webtoon_details > .read_count {
   font-size: 13px
+}
+
+.today_category {
+  background-color: #f3f3f3;
 }
