@@ -1,3 +1,5 @@
+import {AddEvent} from "../utils.js";
+
 export const HomeHeader = (target, position)=>{
     const template = `
     <div class="HomeHeader">
@@ -34,4 +36,10 @@ export const HomeHeader = (target, position)=>{
         </li>
     </ul>`
     target.insertAdjacentHTML(position, template)
+    const myself = document.querySelector('.weekdays')
+    AddEvent(myself, 'click', 'li', ({target:eventTarget})=>{
+        myself.querySelector('.selected').classList.remove('selected');
+        const li = eventTarget.closest('li');
+        li.classList.add('selected');
+    })
 }

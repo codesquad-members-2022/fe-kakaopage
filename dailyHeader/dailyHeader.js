@@ -1,3 +1,4 @@
+import {AddEvent} from "../utils.js";
 
 export const dailyHeader =  ({clock,down}, target, position)=>{
     const template = `
@@ -6,7 +7,7 @@ export const dailyHeader =  ({clock,down}, target, position)=>{
         <li>화</li>
         <li>수</li>
         <li>목</li>
-        <li>금</li>
+        <li class="selected">금</li>
         <li>토</li>
         <li>일</li>
         <li>완결</li>
@@ -22,5 +23,10 @@ export const dailyHeader =  ({clock,down}, target, position)=>{
             <div class="total">전체(181) <img src=${down}/></div>
         </div>
     `;
-    target.insertAdjacentHTML(position, template)
+    target.insertAdjacentHTML(position, template);
+    const myself = document.querySelector('.dailyHeader');
+    AddEvent(myself, 'click', 'li', ({target:eventTarget})=>{
+        myself.querySelector('.selected').classList.remove('selected');
+        eventTarget.classList.add('selected');
+    })
 }
