@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <img
-          src="img/logo-kakaopage.svg"
-          alt="logo"
-          class="header__container__home"
-        />
-        <form>
-          <input />
-        </form>
-        <nav class="header__navigation__container">
+    <div class="header">
+      <header>
+        <div class="header__container">
+          <img
+            src="img/logo-kakaopage.svg"
+            alt="logo"
+            class="header__container__home"
+          />
+
+          <!-- Todo : form을 ul 외부로 빼고 form과 ul을 div로 감싸기, 컴포넌트화할때 눌러서 페이지이동하는것이 li로 연속적으로 있게하고 검색은 연속적으로 렌더링할 필요없다고 생각함 -->
           <ul class="header__navigation__sub">
+            <li>
+              <form>
+                <input />
+              </form>
+            </li>
             <li>
               <img src="img/pc-logo-stage.svg" alt="logo_stage" />
             </li>
@@ -31,33 +35,33 @@
               <button>로그인</button>
             </li>
           </ul>
+        </div>
+
+        <nav>
+          <ul class="header__navigation__menu">
+            <li>
+              <img src="img/menu_home.svg" alt="menu_home" />
+            </li>
+            <li>
+              <img src="img/menu_toon.svg" alt="menu_toon" />
+            </li>
+            <li>
+              <img src="img/menu_novel.svg" alt="menu_novel" />
+            </li>
+            <li>
+              <img src="img/menu_vod.svg" alt="menu_vod" />
+            </li>
+
+            <li>
+              <img src="img/menu_broadcast.svg" alt="menu_broadcast" />
+            </li>
+            <li>
+              <img src="img/menu_book.svg" alt="menu_book" />
+            </li>
+          </ul>
         </nav>
-      </div>
-
-      <nav>
-        <ul class="header__navigation__menu">
-          <li>
-            <img src="img/menu_home.svg" alt="menu_home" />
-          </li>
-          <li>
-            <img src="img/menu_toon.svg" alt="menu_toon" />
-          </li>
-          <li>
-            <img src="img/menu_novel.svg" alt="menu_novel" />
-          </li>
-          <li>
-            <img src="img/menu_vod.svg" alt="menu_vod" />
-          </li>
-
-          <li>
-            <img src="img/menu_broadcast.svg" alt="menu_broadcast" />
-          </li>
-          <li>
-            <img src="img/menu_book.svg" alt="menu_book" />
-          </li>
-        </ul>
-      </nav>
-    </header>
+      </header>
+    </div>
 
     <main>
       <nav>

@@ -6,6 +6,7 @@
 
 - [x] html 구조 작성
 - [ ] 헤더의 상단 레이아웃
+  - [x] 헤더와 main이하가 css로 보았을때 분리되도록 작업
 - [ ] 헤더의 상단 서브 네비게이션 버튼 css
 - [ ] 헤더의 하단 네비게이션 레이아웃 및 css
   - [x] 헤더의 하단 네비게이션 각 요소 이미지 삽입
@@ -32,7 +33,7 @@
 
 ## 진행상황
 
-![image](https://user-images.githubusercontent.com/58525009/154187464-e1d938d1-3354-4b36-aa72-12a801f3d270.png)
+![image](https://user-images.githubusercontent.com/58525009/154412251-d683a3cf-7622-4dd8-bffd-dfd99e8cc229.png)
 
 ![image](https://user-images.githubusercontent.com/58525009/154187491-7cd9fa4a-572f-49ea-b4e8-414b69b52f8f.png)
 
