@@ -98,6 +98,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0;
 }
 .navWrap > * {
   width: calc(100% / 6);
@@ -138,6 +139,7 @@ nav {
   font-size: 20px;
   color: #999;
   font-weight: bold;
+  cursor: pointer;
 }
 .genreHome {
   width: 52.8px;

@@ -39,47 +39,52 @@
 
         <nav>
             <div Id="navWrap" class="navWrap">
-                <div class="homeWrap" onclick="changeBorderColor(this), changeSectionContents(this)">홈
-                    <img src="/FE/FE01-html/images/홈.svg" class="home">
+                <div class="homeWrap" onclick="changeBorderColor(this)">
+                    <image src="/FE/FE01-html/images/홈.svg" class="home"></image>
                 </div>
-                <div class="webtoonWrap" onclick="changeBorderColor(this, changeSectionContents(this))">웹툰
+                <div class="webtoonWrap" onclick="changeBorderColor(this)">
                     <img src="/FE/FE01-html/images/웹툰_만화.svg" alt="" class="webtoonNav">
                 </div>
-                <div class="webNovelWrap" onclick="changeBorderColor(this), changeSectionContents(this)">웹소설
+                <div class="webNovelWrap" onclick="changeBorderColor(this)">
                     <img src="/FE/FE01-html/images//웹소설_장르.svg" alt="" class="webNovelNav">
                 </div>
-                <div class="movieWrap" onclick="changeBorderColor(this), changeSectionContents(this)">영화
+                <div class="movieWrap" onclick="changeBorderColor(this)">
                     <img src="/FE/FE01-html/images/영화.svg" alt="" class="movieNav">
                 </div>
-                <div class="broadcastWrap" onclick="changeBorderColor(this), changeSectionContents(this)">방송
+                <div class="broadcastWrap" onclick="changeBorderColor(this)">
                     <img src="/FE/FE01-html/images/예능_드라마.svg" alt="" class="broadcastNav">
                 </div>
-                <div class="bookWrap" onclick="changeBorderColor(this), changeSectionContents(this)">책
+                <div class="bookWrap" onclick="changeBorderColor(this)">
                     <img src="/FE/FE01-html/images/책.svg" alt="" class="bookNav">
                 </div>
             </div>
         </nav>
 
     </div>
-    <div class="section" id="sectionId">
+    <div class="section">
+        <div id="showChange"></div>
         <div class="webtoonGenreBar">
             <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
             </div>
             <div class="weekday" onclick="changeTabsColor(this),  changeEventSlideContents(this)">요일연재
             </div>
-            <div class="webtoon" onclick="changeTabsColor(this),  changeEventSlideContents(this)">웹툰
+            <div class="webtoon" onclick="changeTabsColor(this),  changeEventSlideContents(this)">웹소설
             </div>
-            <div class="boy" onclick="changeTabsColor(this),  changeEventSlideContents(this)">소년
+            <div class="boy" onclick="changeTabsColor(this),  changeEventSlideContents(this)">판타지
             </div>
-            <div class="drama" onclick="changeTabsColor(this),  changeEventSlideContents(this)">드라마
+            <div class="drama" onclick="changeTabsColor(this),  changeEventSlideContents(this)">현판
             </div>
             <div class="romance" onclick="changeTabsColor(this),  changeEventSlideContents(this)">로맨스
             </div>
             <div class="romanticFantasy" onclick="changeTabsColor(this),  changeEventSlideContents(this)">로판
             </div>
-            <div class="action" onclick="changeTabsColor(this),  changeEventSlideContents(this)">액션무협
+            <div class="action" onclick="changeTabsColor(this),  changeEventSlideContents(this)">무협
+            </div>
+            <div class="fantasyDrama" onclick="changeTabsColor(this),  changeEventSlideContents(this)">판드
             </div>
             <div class="bl" onclick="changeTabsColor(this),  changeEventSlideContents(this)">BL
+            </div>
+            <div class="paperback" onclick="changeTabsColor(this),  changeEventSlideContents(this)">단행본
             </div>
 
         </div>
