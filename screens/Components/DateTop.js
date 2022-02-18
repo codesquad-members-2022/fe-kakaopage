@@ -6,12 +6,12 @@
 
 import CardInfoRow from "./CardInfoRow.js";
 
-const DateTop = () => {
-  const dateTopCards = [
-    { title: "흑막을 버리는 데 실패했다" },
-    { title: "이번 생은 가주가 되겠습니다" },
-    { title: "남주를 주웠더니 남편이 생겨버렸다" },
-  ];
+const DateTop = (webtoons) => {
+  const dateTopCards = webtoons
+    .sort((wt1, wt2) => {
+      return wt2.rank - wt1.rank;
+    })
+    .slice(0, 3);
   return `
     <li class="mainBox main__contents">
       <div class="contents">

@@ -9,6 +9,7 @@ import SubBanner from "../../Components/SubBanner.js";
 
 const HomeGenre = (webtoons) => {
   const today = new Date().getDay();
+  const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
 
   return `
     ${MainBanner(webtoons.filter((wt) => wt.isMain))}
@@ -18,13 +19,13 @@ const HomeGenre = (webtoons) => {
     ${BigCardList("기대 신작 TOP")}
     ${GenreTop(
       "로판",
-      webtoons.filter((wt) => [...wt.genre].includes("로판"))
+      webtoons.filter((wt) => wt.genre.includes("로판"))
     )}
     ${GenreTop(
       "드라마",
-      webtoons.filter((wt) => [...wt.genre].includes("드라마"))
+      webtoons.filter((wt) => wt.genre.includes("드라마"))
     )}
-    ${DateTop()}
+    ${DateTop(webtoons.filter((wt) => wt.days.includes(days[today])))}
     ${RecommendEvent()}
 `;
 };
