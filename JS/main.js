@@ -25,8 +25,11 @@ function setGenreFocus (event) {
 }
 
 window.addEventListener('load', () => {
+  const WEEKEND_ITEMS = 10;
+  const TOP_ITEMS = 5;
+
   clickGenresList();
-  renderContainer('daily__top', '요일 연재 TOP', 10, 'cardLayout');
-  renderContainer('romance__top', '로맨스 TOP', 5, 'cardLayout');
-  renderContainer('daily__ranking', '일간랭킹 TOP', 5, 'ranking');
+  renderContainer('daily__top', '요일 연재 TOP', WEEKEND_ITEMS, 'cardLayout');
+  renderContainer('romance__top', '로맨스 TOP', TOP_ITEMS, 'cardLayout');
+  renderContainer('daily__ranking', '일간랭킹 TOP', TOP_ITEMS, 'ranking');
 })
