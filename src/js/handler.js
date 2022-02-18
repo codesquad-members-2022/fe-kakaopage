@@ -82,6 +82,7 @@ const loadSnbTabContents = (category) => {
   categoryContentEl.innerHTML = '';
 
   const categoryData = webtoonData[category];
+  renderSet.renderMainBanner(categoryData.mainBanner);
 
   if (!(category === '0')) {
     categoryContentEl.innerHTML = `
@@ -89,7 +90,6 @@ const loadSnbTabContents = (category) => {
     return;
   }
 
-  renderSet.renderMainBanner(categoryData.mainBanner);
   renderSet.renderGridMenu(categoryData.gridMenu);
   renderSet.renderPromotionBanner(categoryData.promotionBanner);
   renderSet.renderSectionBasic('기대신작 TOP');
