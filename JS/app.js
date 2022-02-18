@@ -1,4 +1,4 @@
-const headerNav = document.querySelector(".header_nav");
+const headerNav = document.querySelector(".header__nav");
 const mainNav = document.querySelector(".main_nav");
 const daysNav = document.querySelector(".days_nav");
 const main = document.querySelector("main");
@@ -35,3 +35,5 @@ headerNavChildren.forEach((child) => {
 markSelectedNavEvent(headerNavChildren);
 markSelectedNavEvent(mainNavChildren);
 markSelectedNavEvent(daysNavChildren);
+
+// TEST
