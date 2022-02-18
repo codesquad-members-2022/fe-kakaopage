@@ -56,7 +56,6 @@ h1 {
 .nav-days {
   font-size: 18px;
   font-weight: 500;
-  color: #adb5bd;
 
   border-bottom: 1px solid #e9ecef;
 }
@@ -75,7 +74,6 @@ main {
 .webtoon-category {
   font-size: 17px;
   font-weight: 600;
-  color: #adb5bd;
 }
 
 /*========== banner ==========*/
