@@ -38,12 +38,8 @@ const createNote = () => {
   return note;
 };
 
-const createTagList = (category) => {
-  if (!tagLists.hasOwnProperty(category)) return;
-  const tagList = tagLists[category];
-  const container = createContainer();
+const createTagListEl = (tagList) => {
   const ul = createUl();
-
   for (let i = 0; i < tagList.length; i++) {
     const li = createLi();
     const tag = createTag();
@@ -57,14 +53,24 @@ const createTagList = (category) => {
     }
     ul.appendChild(li);
   }
-  container.appendChild(ul);
-
-  const mainContainer = createMainContainer();
-  mainContainer.appendChild(container);
-
-  document
-    .querySelector('.preview')
-    .parentElement.insertAdjacentElement('afterend', mainContainer);
+  return ul;
 };
 
-export default createTagList;
+const createTagListElContainer = (category) => {
+  const tagList = tagLists[category];
+  const tagListElContainer = createContainer();
+  const tagListEl = createTagListEl(tagList);
+  tagListElContainer.appendChild(tagListEl);
+  return tagListElContainer;
+};
+
+const drawTagListEl = (category) => {
+  if (!tagLists.hasOwnProperty(category)) return;
+  const tagListElContainer = createTagListElContainer(category);
+  const mainContainer = createMainContainer();
+  mainContainer.appendChild(tagListElContainer);
+  const previewEl = document.querySelector('.preview');
+  previewEl.parentElement.insertAdjacentElement('afterend', mainContainer);
+};
+
+export default drawTagListEl;
