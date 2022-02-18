@@ -125,7 +125,7 @@ const clearMainContents = () => {
     $(".contents-wrap").innerHTML = "";
 };
 
-const bindSubMenuEvents = () => {
+const bindSubMenuEvent = () => {
     // TODO: 콜백함수 따로 빼기
     // TODO: 서브메뉴 외 다른 메뉴에도 적용되도록
     $(".sub-menu").addEventListener("click", (e) => {
@@ -143,8 +143,10 @@ const bindSubMenuEvents = () => {
             "afterbegin",
             getElements(targetPage)
         );
-        //TODO: 추가한 노드들에 자식노드 추가
+        // TODO: 새로 추가되는 아이템이 있을때마다 bindEvent를 그 아이템들에도 해줘야함
+        bindEventListener();
 
+        //TODO: 추가한 노드들에 자식노드 추가
         // FIXME: 로맨스TOP만 추가 테스트
         // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
         // mutationObserver(.genre-best가 추가되었는지 감지하기 위함)를 사용했었으나, 사용없이도 createGenreItems()를 통해 문제없이 추가되므로 일단 제거
@@ -155,8 +157,19 @@ const bindSubMenuEvents = () => {
     });
 };
 
+const bindWeekDayMenuEvent = () => {
+    if (!$(".week-day-menu")) return;
+
+    $(".week-day-menu").addEventListener("click", (e) => {
+        e.preventDefault();
+        const curEl = e.target.parentNode;
+        toggleClass(curEl, "active");
+    });
+};
+
 const bindEventListener = () => {
-    bindSubMenuEvents();
+    bindSubMenuEvent();
+    bindWeekDayMenuEvent();
 };
 
 const init = () => {
