@@ -9,7 +9,8 @@
 .article__header {
     display: flex;
     flex-direction: column;
-    height: 125px;
+    height: 60px;
+    /* 이부분하고 변동가능성 있는 부분. */
 }
 
 .article__header-wrapper {
