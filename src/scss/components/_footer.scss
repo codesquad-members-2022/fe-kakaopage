@@ -33,6 +33,10 @@
     display: flex;
   }
 
+  &__company-info-wrap {
+    display: inline-block;
+  }
+
   &__company-info-summary {
     cursor: pointer;
     a {

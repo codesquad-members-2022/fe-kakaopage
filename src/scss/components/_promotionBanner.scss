@@ -1,0 +1,30 @@
+.promotion-banner {
+  padding: 20px;
+  background: $gray-0;
+  position: relative;
+
+  &__list {
+    margin: 0 auto;
+    width: 560px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  &__item {
+    height: 100px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__btn-prev {
+    left: 20px;
+  }
+  &__btn-next {
+    right: 20px;
+  }
+}

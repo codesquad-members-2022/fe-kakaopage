@@ -1,4 +1,4 @@
-const footer = () => {
+const createFooter = () => {
   return `
   <div class="footer__inner">
     <div class="footer__download-app-link"><a href="#"><strong>카카오페이지</strong> 앱으로 보기</a></div>
@@ -27,4 +27,4 @@ const footer = () => {
   `;
 };
 
-export { footer };
+export { createFooter };

@@ -13,3 +13,14 @@ body {
 img {
   width: 100%;
 }
+
+.main {
+  margin: 0 auto;
+  width: 720px;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

@@ -1,0 +1,21 @@
+.snb {
+  margin: 20px 0 12px;
+  background: $gray-0;
+
+  &__list {
+    padding: 20px 0 16px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    font-size: 1.25rem;
+    color: $gray-5;
+    cursor: pointer;
+  }
+
+  &__item--active {
+    color: $gray-9;
+    font-weight: 500;
+  }
+}

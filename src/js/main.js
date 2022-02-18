@@ -1,15 +1,12 @@
 import { renderSet } from './view.js';
-
-import { header } from './components/header.js';
-import { footer } from './components/footer.js';
-import { globalNavigation } from './components/globalNavigation.js';
-import { addTabHandlerOnGnb } from './handler.js';
+import { addHandlerOnGnb, loadGnbTab } from './handler.js';
 
 const init = () => {
-  renderSet.renderHeader(header());
-  renderSet.renderFooter(footer());
-  renderSet.renderGlobalNavigation(globalNavigation());
-  addTabHandlerOnGnb();
+  renderSet.renderHeader();
+  renderSet.renderFooter();
+  renderSet.renderGnb();
+  addHandlerOnGnb();
+  loadGnbTab('홈');
 };
 
 init();
