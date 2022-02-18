@@ -143,7 +143,7 @@ const bindSubMenuEvents = () => {
         );
         //TODO: 추가한 노드들에 자식노드 추가
         // FIXME:테스트중: .genre-best가 만들어지면, createGenreItems()를 실행 (mutationObserver사용)
-        waitCreateEl(".genre-best", createGenreItems);
+        waitCreateEl(".genre-best").then(() => createGenreItems());
 
         // 새로 생긴 노드에도 preventDefaults()적용
         preventDefaults();
