@@ -53,15 +53,15 @@ function makeSelectDayListHome() {
 }
 
 function makeSelectDayItem() {
-  const weekend = ['월', '화', '수', '목', '금', '토', '일', '완결'];
+  const day = ['월', '화', '수', '목', '금', '토', '일', '완결'];
   const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end']
   let items = '';
-  for (let i = 0; i < weekend.length; i++) {
+  for (let i = 0; i < day.length; i++) {
     if (i === 0) {
-      items += `<li class="day daily__top--focused" data-day="${dataSet[i]}"><button type="button">${weekend[i]}</button></li>`;
+      items += `<li class="day daily__top--focused" data-day="${dataSet[i]}"><button type="button">${day[i]}</button></li>`;
     } else {
       items += `
-      <li class="day" data-day="${dataSet[i]}"><button type="button">${weekend[i]}</button></li>
+      <li class="day" data-day="${dataSet[i]}"><button type="button">${day[i]}</button></li>
       `
     }
   }
