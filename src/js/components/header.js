@@ -1,7 +1,7 @@
 const createHeader = () => {
   return `
   <div class="header__inner">
-    <h1 class="header__logo"><a href="#"><img src="static/icon/logo-kakaopage.svg" alt="카카오페이지 로고" /></a></h1>
+    <h1 class="header__logo"><a href="/fe-kakaopage/"><img src="static/icon/logo-kakaopage.svg" alt="카카오페이지 로고" /></a></h1>
 
     <form class="header__search-form">
       <input class="header__search-input" type="text" required />
