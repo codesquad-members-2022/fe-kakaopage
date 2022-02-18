@@ -5,8 +5,8 @@
 - header / main / footer 로 나누어 구현.
 
 - header
-    -[x] title : h1 tag 사용
-    -[x] menus
+    - [x] title : h1 tag 사용
+    - [x] menus
         - [x] 검색 : input, button 사용
             - 타원 모양 input 만들기가 어려웠음.
             - border-radius 50%
@@ -14,45 +14,45 @@
         - [x] users 
             - 캐시충전, 로그인
             - li 사이에 span 추가하여 '|' 구현
-    -[x] headNav
+    - [x] headNav
         - ul, li 사용하여 tab menu 구현
         - li 내부에 a 태그로 선택 가능하도록 구현 => li가 필요한가?
         - 선택 표시 밑줄은 under class 추가
-    -[x] 상단바 고정
+    - [x] 상단바 고정
         - headerFix class 추가 
         - position fixed 로 구현
         - header 높이 만큼 main 에 padding top 을 줘야함.
         - 이미지 겹치는 현상 => z-index 를 부여하여 해결.        
 - main
     - nav, contents, category, daily 로 구성
-    -[x] mainNav
+    - [x] mainNav
         - ul li 사용, 내부 a 태그는 적용하지 않았다. => js 내부 렌더링하는 경우에는 a 태그가 필요한가?
         - 선택 표시 on class 추가
     
-    -[x] contents
+    - [x] contents
         - img, img 위 요소, sentence 로 구성
         - img 는 display : block 을 해줘야 빈틈 없이 들어감.
         - img 위 button, text 는 상위 태그 position relative 후 absolute 사용하여 구현.
         - button 은 button tag 에 background 로 버튼이미지를 넣어 구현.
         
-    -[x] category
+    - [x] category
         - ul li 사용
         - 원본 페이지의 홈 탭 부분이라 잘못 만들었으나 그냥 냅둠.
     
-    -[x] daily 
+    - [x] daily 
         - nav, contents 로 구성
-        -[x] nav
+        - [x] nav
             - ul, li 사용. li 내부에 button 사용.
             - 선택요일 on class 추가
-        -[x] contents
+        - [x] contents
             - 여러 content div 를 가지고 있어 flex wrap 사용, 한 줄에 5개가 표현되도록 적절한 width 부여
-            -[x] content
+            - [x] content
                 - inner, title, views 로 구성
-                -[x] inner 
+                - [x] inner 
                     - 이미지와 bar 로 구성되며 overflow hidden 과 border-radius 로 모양 구현
-                -[x] title
+                - [x] title
                     - width 초과하는 부분 ... 표시 구현 (white-space, overflow, text-overflow)     
-                -[x] views
+                - [x] views
 - footer
     - [x] footer menus
         - 각 menu 는 a 태그로 구현
