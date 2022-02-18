@@ -3,10 +3,37 @@
 # step2 미션관련 목표 체크리스트
 
 - [ ] css 리팩토링
+- [ ] js 리팩토링
 - [x] 이미지 슬라이드 (무한 루프 실패)
 - [x] 홈 화면 클릭시 하단 구성 배치 변경
 - [ ] 요일 연재 클릭시 기존 화면으로 재배치
 - [x] 깃로그 스타일 변경해보기
+
+# 이벤트 발생 부분
+
+1. 이미지 슬라이더는 좌우 클릭시 넘어가게 구현하였습니다.
+
+   - 무한으로 좌우 변경은 고민을 더 해야할것 같습니다.
+
+2. 요일연재 클릭시 하단부 컨텐츠 레이아웃 변경을 구현하였습니다.
+
+  <img src = "./mdImage/recNav.jpg" >
+
+요일연재 클릭시
+
+<img src = "./mdImage/myMainDow.jpg" width=60%>
+
+이화면이 세로로 변경, 배치변경, 네브 폰트,  
+그리고 4개의 웹툰 컨텐츠만 담는 컴포넌트 복사붙이기로 구현하였습니다.
+
+<img src = "./mdImage/myMainHome.jpg" width=60%>
+<img src = "./mdImage/myMainHomevertical.jpg" width=24% >
+
+아래 그림은 카카오 페이지 입니다.
+
+<img src = "./mdImage/kakaoMainDoW.jpg" width=60%>
+
+<img src = "./mdImage/kakaoMainHome.jpg" width=60%>
 
 ## 미션 1 - 카카오페이지 클론-HTML,CSS개발
 
