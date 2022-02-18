@@ -54,7 +54,8 @@ const Mon_imageCardInfo = [
 
 const mon = {
   box:Mon_imageBoxInfo,
-  card:Mon_imageCardInfo
+  card:Mon_imageCardInfo,
+  dayOfTheWeek:"mon"
 }
 
 const tue_imageBoxInfo = {
@@ -111,7 +112,8 @@ const tue_imageCardInfo = [
 
 const tue = {
   box:tue_imageBoxInfo,
-  card:tue_imageCardInfo
+  card:tue_imageCardInfo,
+  dayOfTheWeek:"tue"
 }
 
 
@@ -172,7 +174,8 @@ const wed_imageCardInfo = [
 
 const wed = {
   box:wed_imageBoxInfo,
-  card:wed_imageCardInfo
+  card:wed_imageCardInfo,
+  dayOfTheWeek:"wed"
 }
 
 
@@ -232,7 +235,8 @@ const thu_imageCardInfo = [
 
 const thu = {
   box:thu_imageBoxInfo,
-  card:thu_imageCardInfo
+  card:thu_imageCardInfo,
+  dayOfTheWeek:"thu"
 }
 
 const fri_imageBoxInfo ={
@@ -289,9 +293,78 @@ const fri_imageCardInfo = [
 
 const fri = {
   box:fri_imageBoxInfo,
-  card:fri_imageCardInfo
+  card:fri_imageCardInfo,
+  dayOfTheWeek:"fri"
 }
 
 
-const weeklyDataInfo = [mon,tue,wed,thu,fri,tue,thu];
+
+const sat_imageBoxInfo ={
+  url : "https://dn-img-page.kakao.com/download/resource?kid=vY9EO/hzhOm4DsAe/ooN3xLPLUZPU6Uid2Matlk",
+  title : "지옥에서 돌아온 성좌님",
+  comment : "인간 최초의 성좌가 되는 길 !",
+  subscriber : "46.7만명"
+}
+
+const sat_imageCardInfo = [
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=rOfMN/hyEdeEtJFz/63XlMqYRjhokso828Ki6k0&filename=th2",
+    rank : "1위",
+    title : "나 혼자만 레벨업",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update hidden","image-card__comment__info-years hidden","image-card__comment__info-icon"],
+    subscriber : "417.4만명"
+  },
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=biG4Nt/hzb7sXLBzm/Spy2JkLBLu3zUwNl9TaznK&filename=th2",
+    rank : "2위",
+    title : "궁귀 검신",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update hidden","image-card__comment__info-years","image-card__comment__info-icon"],
+    subscriber : "51.3만명"
+  },
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=kFPM3/hyATqBz2Kr/QT3iI8g7kR0R4YSdv0WWtK&filename=th2",
+    rank : "3위",
+    title : "샬롯에게는 다섯 명의 제자가 있다",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update","image-card__comment__info-years hidden","image-card__comment__info-icon"],
+    subscriber : "108.5만명"
+  },
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=bcSC27/hyCRfdqzwh/7zTlZUHyj50iUEd4kqJfyK&filename=th2",
+    rank : "4위",
+    title : "루시아",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update","image-card__comment__info-years hidden","image-card__comment__info-icon"],
+    subscriber : "85.4만명"
+  },
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=JKbkM/hzhOksSPjb/Zk4kiHai3IGS77dRy1iO1K&filename=th2",
+    rank : "5위",
+    title : "악당의 아빠를 꼬셔라",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update","image-card__comment__info-years hidden","image-card__comment__info-icon"],
+    subscriber : "33.4만명"
+  },
+  {
+    url: "https://dn-img-page.kakao.com/download/resource?kid=b7H7Jx/hzmU3lmHWf/PYTUMe8KmuFYbvLETjjfOk&filename=th2",
+    rank : ' <img src="./image/badge-thumbnail-star.svg" alt="" /> 9.7',
+    title : "재앙급 영웅님이 귀환하셨다",
+    info : ["image-card__comment__info-new hidden","image-card__comment__info-update","image-card__comment__info-years hidden","image-card__comment__info-icon"],
+    subscriber : "17.4만명"
+  }
+]
+
+const sat = {
+  box:sat_imageBoxInfo,
+  card:sat_imageCardInfo,
+  dayOfTheWeek:"sat"
+}
+
+const sun = {
+  box:tue_imageBoxInfo,
+  card:tue_imageCardInfo,
+  dayOfTheWeek:"sun"
+}
+
+
+
+
+const weeklyDataInfo = [mon,tue,wed,thu,fri,sat,sun];
 export {weeklyDataInfo};
