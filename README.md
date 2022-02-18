@@ -11,3 +11,42 @@ __How TO__
 
 # 해야할 것
 - mdn 사이트에 들어가서 querySelector랑 addEventlistener 관련해서 한번 읽고 정리해두기.
+- kakaopage 최대한 간단한 형태로 메뉴 클릭하면 안의 이미지 바뀌는 형태...까지 해보기.
+- (옵션)JSON 사용해서 데이터 바꾸는거 시도해보기.
+
+## HTML Tag
+-----------------
+- adress
+- article
+- aside
+- footer
+- header
+- h1 ~ h6
+- main
+- nav
+- section
+
+### header
+> The <header> element represents a container for introductory content or a set of navigational links.
+    A <header> element typically contains:
+    - one or more heading elements
+    - logo or icon
+    - authorship information
+
+```html
+<!--A header for an <article>-->
+<article>
+  <header>
+    <h1>A heading here</h1>
+    <p>Posted by John Doe</p>
+    <p>Some additional information here</p>
+  </header>
+  <p>Lorem Ipsum dolor set amet....</p>
+</article>
+```
+
+### main
+> The <main> HTML element represents the dominant content of the <body> of a document.
+
+### footer
+> The <footer> HTML element represents a footer for its nearest sectioning content or sectioning root element.

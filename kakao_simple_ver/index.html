@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="full-box">
+    <header>
+      <span class="header-kakaopage" >Kakaopage</span>
+      <span class="header-menu">
+          <input class="header-input" type="text">
+          <button class="header-stage">Stage</button>
+          <button class="header-mini-menu">
+            <span class = "header-charge">캐시충전</span>
+            <span class = "header-login">로그인</span>
+      </span>
+    </header>
+
+   <main>
+     <nav class="main-nav main-position">
+        <ul class="main-ul">
+          <li class="main-li" onclick="openPage('Mon', this)" id="defaultOpen">Mon</li>
+          <li class="main-li" onclick="openPage('Tue', this)">Tue</li>
+          <li class="main-li" onclick="openPage('Wed', this)">Wed</li>
+          <li class="main-li" onclick="openPage('Thur', this)">Thur</li>
+          <li class="main-li" onclick="openPage('Fri', this)">Fri</li>
+          <li class="main-li" onclick="openPage('Sat', this)">Sat</li>
+        </ul>
+      </nav>
+
+       <div class="main-contents">
+        <div id="Mon" class="tabcontent">
+        <h3>Home</h3>
+        <p>Mon</p>
+        </div>
+        <div id="Tue" class="tabcontent">
+        <h3>Tue</h3>
+        <p>Tue</p> 
+        </div>
+        <div id="Wed" class="tabcontent">
+        <h3>Page2</h3>
+        <p>Wed</p>
+        </div>
+        <div id="Thur" class="tabcontent">
+        <h3>Page3</h3>
+        <p>Tur</p>
+        </div>
+        <div id="Fri" class="tabcontent">
+        <h3>Page3</h3>
+        <p>Fri</p>
+        </div>
+        <div id="Sat" class="tabcontent">
+        <h3>Page3</h3>
+        <p>Sat</p>
+        </div>
+      </div><!---main-contents-->
+   </main>
+  <footer>
+
+  </footer>
+   </div><!--full-box-->  
+</body>
+</html> 

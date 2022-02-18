@@ -1,0 +1,67 @@
+nav {
+    display: block;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  .main-nav {
+    background-color: var(--white);
+    margin: 0;
+    min-width: 0;
+    /* top: 80px; */
+    border: 1px solid #f1f1f1;
+    /* width: 100%; */
+  }
+  .main-position {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+
+    display: flex;
+    align-content: center;
+  }
+  .main-ul {
+    box-sizing: border-box;
+    min-width: 0px;
+    visibility: visible;
+    padding: 0px;
+    margin: 0px auto;
+    width: 720px;
+    display: flex;
+  }
+  /* Style tab links */
+  .main-li {
+    list-style-type: none;
+    background-color: var(--white);
+    color: var(--font-dark);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 16%;
+  }
+  main-li:hover {
+    background-color: var(--hover-yellow);
+  }
+  .main-li::after {
+    background-color: var(--yellow);
+  }
+
+  .main-contents {
+   width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    background-color: var(--white);
+    color: var(--font-dark);
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+  
