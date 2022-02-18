@@ -8,9 +8,11 @@ import { makeTodayRanking } from './contents.js';
 import { makeTodayRecommend } from './contents.js';
 import { makeNewThings } from './contents.js';
 import { genreTop } from './contents.js';
+import { makeRanking } from './contents.js';
+import { makeEvent } from './contents.js';
 
 export default function addHTML() {
-  document.querySelector('.clear').innerHTML = `
+  document.querySelector('.changed').innerHTML = `
   ${makeImageSection(
     'https://dn-img-page.kakao.com/download/resource?kid=bqyJkx/hzp2fwmJDP/qx8LbXn8n6DHxfK0B4sMkk',
     '톱스타, 그 자체',
@@ -191,5 +193,46 @@ export default function addHTML() {
   )}
   </section>
 
+  <section class="ranking_section">
+  ${makeTitle('일간 랭킹 TOP', '더보기👉')}
+  ${makeRanking(
+    '1',
+    'https://dn-img-page.kakao.com/download/resource?kid=tiNdF/hzp2kKX00t/KlYYVXjccU6Crr6NCxTKvK&filename=th2',
+    '남편님, 다시 결혼해 주세요!',
+    'New',
+    '30.9',
+    '로판',
+    '미우, 파라구',
+    '금'
+  )}
+  ${makeRanking(
+    '2',
+    'https://dn-img-page.kakao.com/download/resource?kid=tiNdF/hzp2kKX00t/KlYYVXjccU6Crr6NCxTKvK&filename=th2',
+    '남편님, 다시 결혼해 주세요!',
+    '',
+    '30.9',
+    '로판',
+    '미우, 파라구',
+    '금'
+  )}
+  ${makeRanking(
+    '3',
+    'https://dn-img-page.kakao.com/download/resource?kid=tiNdF/hzp2kKX00t/KlYYVXjccU6Crr6NCxTKvK&filename=th2',
+    '남편님, 다시 결혼해 주세요!',
+    'New',
+    '30.9',
+    '로판',
+    '미우, 파라구',
+    '금'
+  )}
+  </section>
+
+  <section class="event">
+  ${makeTitle('추천 이벤트', '더보기👉')}
+  ${makeEvent(
+    'https://dn-img-page.kakao.com/download/resource?kid=bnJszq/hzp2nnDXAM/raGUe2y54VTgPi6k8JHXoK'
+  )}
+
+  </section>
   `;
 }
