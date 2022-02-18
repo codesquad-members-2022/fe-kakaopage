@@ -69,3 +69,9 @@ async getHtml () {
 id: "main-layout",
 content: "<h1>세부컨텐츠</h1>
 ```
+
+❗️ 디버깅 툴
+
+- ?
+
+[참고자료](https://velog.io/@takeknowledge/로컬에서-CORS-policy-관련-에러가-발생하는-이유-3gk4gyhreu)

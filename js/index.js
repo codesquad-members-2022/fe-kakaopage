@@ -1,4 +1,4 @@
-import { Main, NotFound, Novel, Webtoon } from './category.js';
+import { routes } from './constants/router.js';
 import { ERROR } from './constants/message.js';
 import { ELEMENT_CLASS, ELEMENT_ID } from './constants/variable.js';
 import { $get } from './utils.js';
@@ -12,16 +12,16 @@ const navigateTo = (url, categoryUid) => {
   render(Number(categoryUid));
 };
 
-const routes = [
-  { categoryUid: 0, view: Main },
-  { categoryUid: 1, view: Webtoon },
-  { categoryUid: 2, view: Novel },
-];
-
 async function render(categoryUid) {
   try {
-    const { view } = routes.find((route) => route.categoryUid === categoryUid);
-    $mainLayout.innerHTML = await view();
+    const match = routes.find((route) => route.categoryUid === categoryUid);
+    if (!match) {
+      throw new Error(NOT_FOUND);
+    }
+    const contentObj = await match.getContent();
+    $mainChildLayout.forEach(($child) => {
+      $child.innerHTML = contentObj[$child.id];
+    });
   } catch (error) {
     if (error.message === NOT_FOUND) {
       history.pushState(null, null, '/');
