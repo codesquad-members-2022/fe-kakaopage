@@ -1,5 +1,6 @@
-const headerNav = ['홈', '웹툰', '웹소설', '영화', '방송', '책'];
+
 function renderHeader() {
+    const headerNav = ['홈', '웹툰', '웹소설', '영화', '방송', '책'];
     return `<header class="header">
     <div class="header__tittle-wrapper">
         <h1>Kakaopage</h1>

@@ -22,26 +22,65 @@ navListsEl.forEach((navList) => {
             e.target.classList.add('active');
 
             if(e.target.textContent === "요일") {
-                main.innerHTML += renderWeekdays_base();
-                addWeekdays_ArticleSection(10);
+                // main.innerHTML += renderWeekdays_base();
+                // addWeekdays_ArticleSection(10);
             } else if(e.target.textContent === "홈") {
-                // main.innerHTML += renderHome_base();
-                main.innerHTML += renderMidButton(listNmaesForHome);
-                // console.log(renderMidButton(listNmaesForHome));
-                // list에 들어가는 만큼, button을 출력함.
-                main.innerHTML += renderArticle('article__weekdays-top', '요일연재 TOP')
-                append('article__weekdays-top', renderNav('article__nav', weeddaysData))
-                append('article__weekdays-top', renderArticleSections(10))
-                
-                main.innerHTML += renderArticle('article__books5', '로맨스 TOP')
+                main.innerHTML += renderHomeLayout();
+                append('article__weekdays-top', renderNav('article__nav', homeData['articleNav']));
+                append('article__weekdays-top', renderArticleSections(10));
                 append('article__books5', renderArticleSections(5));
-                // 로맨스 top 부분
+                append('article__ranking3', addArticleRankingLists());
             }
         }
     })
 })
 
-
+function addArticleRankingLists() {
+    return `<ol class="article__ranking3-lists">
+    <li class="article__ranking3-list" value="1">
+        <span class="article__ranking3-num">1</span>
+        <img src="./useimages/ranking3.jpg" alt="image">
+        <div class="article__ranking-list-text-wrapper">
+            <h3>이번 생은 가주가 되겠습니다</h3>
+            <div class="article--raking-list-mid-text-wrapper">
+                <span class="article__ranking-list-text"><i class="fas fa-user-alt"></i>122.7만명</span>
+                <span class="article__ranking-list-text">기다무 웹툰</span>
+                <span class="article__ranking-list-text">로판</span>
+                <span class="article__ranking-list-text">앤트스튜디오, 김로아</span>
+            </div>
+            <span class="article__ranking-list-text">월연재</span>
+        </div>
+    </li>
+    <li class="article__ranking3-list" value="2">
+        <span class="article__ranking3-num">2</span>
+        <img src="./useimages/ranking3.jpg" alt="image">
+        <div class="article__ranking-list-text-wrapper">
+            <h3>이번 생은 가주가 되겠습니다</h3>
+            <div class="article--raking-list-mid-text-wrapper">
+                <span class="article__ranking-list-text"><i class="fas fa-user-alt"></i>122.7만명</span>
+                <span class="article__ranking-list-text">기다무 웹툰</span>
+                <span class="article__ranking-list-text">로판</span>
+                <span class="article__ranking-list-text">앤트스튜디오, 김로아</span>
+            </div>
+            <span class="article__ranking-list-text">월연재</span>
+        </div>
+    </li>
+    <li class="article__ranking3-list" value="3">
+        <span class="article__ranking3-num">3</span>
+        <img src="./useimages/ranking3.jpg" alt="image">
+        <div class="article__ranking-list-text-wrapper">
+            <h3>이번 생은 가주가 되겠습니다</h3>
+            <div class="article--raking-list-mid-text-wrapper">
+                <span class="article__ranking-list-text"><i class="fas fa-user-alt"></i>122.7만명</span>
+                <span class="article__ranking-list-text">기다무 웹툰</span>
+                <span class="article__ranking-list-text">로판</span>
+                <span class="article__ranking-list-text">앤트스튜디오, 김로아</span>
+            </div>
+            <span class="article__ranking-list-text">월연재</span>
+        </div>
+    </li>
+</ol>`
+}
 
 function textConvertor(nodeClassname, newText) {
     const node = document.querySelector(`.${nodeClassname}`);
@@ -59,6 +98,7 @@ fetch('https://korea-webtoon-api.herokuapp.com/kakao-page/week')
     .then(res => res.json())
     .then(res => console.log(res[0]))
 
+
 import { renderBase, renderNav, renderArticle, renderArticleSections, renderMidButton } from './common.js'
-import {  } from './home.js';
+import { renderHomeLayout, homeData } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';
