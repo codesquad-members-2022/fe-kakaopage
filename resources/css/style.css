@@ -578,6 +578,19 @@ main {
     color: var(--color-white);
 }
 
+.btn__app {
+    width: 720px;
+    height: 70px;
+    border: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    background-color: var(--color-yellow-kakao);
+}
+
+.btn__app > img {
+    height: 70px;
+}
+
 footer {
     display: flex;
     width: 720px;
