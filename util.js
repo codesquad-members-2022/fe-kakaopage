@@ -160,8 +160,8 @@ export function createContentFormsBigger(num){
     return res
 }
 
-export function addClickEventToElement(id, func){
-    const getElement = document.getElementById(id);
+export function addClickEventToElement(elementName, func){
+    const element = document.querySelector(elementName);
 
-    getElement.addEventListener("click", func)
+    element.addEventListener("click", func)
 }
