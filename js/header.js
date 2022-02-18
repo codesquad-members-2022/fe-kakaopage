@@ -1,4 +1,4 @@
-import { $ } from "./domLibrary1.js";
+import { $ } from "./domLibrary-1.js";
 const imagePath = "/image/header";
 
 class Header {
