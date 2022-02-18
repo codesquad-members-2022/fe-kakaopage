@@ -1,0 +1,45 @@
+.main__menu {
+  margin: 11px auto;
+  margin-bottom: 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  width: 720px;
+}
+
+.menu {
+  margin: 0px;
+  flex-wrap: wrap;
+  background-color: rgb(243, 243, 243);
+  border-radius: 8px;
+}
+
+.menu-content {
+  cursor: pointer;
+  width: 33.3333%;
+  height: 60px;
+  border-right: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+  font-weight: 500;
+
+}
+
+.menu-content__text {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 0px 1px;
+}
+
+.menu-content_num {
+  margin-left: 10px;
+  background-color: rgb(255, 210, 0);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 16px;
+}

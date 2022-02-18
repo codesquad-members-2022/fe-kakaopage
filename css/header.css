@@ -1,10 +1,15 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 main {
   background: #eee;
 }
 
-* {
+
+body {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+* {
   line-height: 1.4;
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +27,6 @@ main {
   height: 29px;
   margin-top: 30px;
   margin-bottom: 22px;
-  /* display: block; */
 }
 
 .rest-of-header {
