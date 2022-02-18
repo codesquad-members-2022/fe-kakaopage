@@ -35,28 +35,51 @@ const parsingMainHome = async () => {
 }
 
 // parsingMainHome()
+
 const parsingMainBanner = async () => {
-  const url = 'https://page.kakao.com/main?categoryUid=10&subCategoryUid=1002';
-  const html = await getHTML(url);
+  const url = [
+    'https://page.kakao.com/main',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=10000',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=1000',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=115',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=116',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=121',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=69',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=112',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=119'
+  ]
 
-  const $ = cheerio.load(html.data);
-  const $mainBanner = $('div.topBannerWrap')
-
+  // 임의로 생성한 요일과 장르
+  const day = ['home', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'];
+  const genre = ['홈', '요일연재', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL'];
   let mainBanner = [];
-  $mainBanner.each((idx, node) => {
-    mainBanner.push({
-      title: $(node).find('div.css-1tqt666').text(),
-      viewer: $(node).find('div.css-13yoxln').text(),
-      img: 'https:' + $(node).find('img').attr('data-src'),
-      genre: $(node).find('div.css-10tchww').text(),
-      desc: $(node).find('div.css-11164fm > span').text(),
-    })
-  });
 
-  console.log(mainBanner);
+  for (let i = 0; i < url.length; i++) {
+    const html = await getHTML(url[i]);
+    const $ = cheerio.load(html.data);
+
+    const $mainBanner = $('div.topBannerWrap');
+    $mainBanner.each((idx, node) => {
+      mainBanner.push({
+        title: $(node).find('div.css-1tqt666').text(),
+        viewer: $(node).find('div.css-13yoxln').text(),
+        img: 'https:' + $(node).find('img').attr('data-src'),
+        genre: $(node).find('div.css-10tchww').text(),
+        desc: $(node).find('div.css-11164fm > span').text(),
+        day: day[i],
+        genre: genre[i]
+      })
+    });
+  }
+
+  return mainBanner
 }
 
-// parsingMainBanner();
+parsingMainBanner()
+.then((value) => {
+  fs_writeFile('mainBannerData.js', `export const mainBannerData = 
+  ${JSON.stringify(value)}`)
+});
 
 const parsingDailyRanking = async () => {
   const url = 'https://page.kakao.com/main?categoryUid=10&subCategoryUid=10000';
