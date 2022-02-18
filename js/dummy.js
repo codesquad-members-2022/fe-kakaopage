@@ -1,64 +1,6 @@
 export const recommendationObj = {
-  홈: [
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-  ],
-  요일연재: [
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-    {
-      title: "아빠가 너무 강함",
-      img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
-      subscriptions: "48.5만명",
-      status:
-        "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
-    },
-  ],
+  홈: [],
+  요일연재: [],
   웹툰: [
     {
       title: "아빠가 너무 강함",
