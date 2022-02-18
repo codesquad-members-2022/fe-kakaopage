@@ -1,7 +1,6 @@
 import { $ } from "./dom.js";
 import { nodes } from "./nodes.js";
 import { romanceTop } from "./genreItems.js";
-import { waitCreateEl } from "./mutationObserver.js";
 
 // FIXME:파일분리
 const webtoonMenu = {
@@ -55,6 +54,9 @@ const coverImg = {
 
 // FIXME:테스트중: 홈 클릭시(로 가정하고), 로맨스TOP 정보를 genreItems.js에서 가져와서 화면에 표시
 const createGenreItems = () => {
+    // FIXME: 홈(.genre-best 존재)에서만 적용하기 위한 라인
+    if (!$(".genre-best")) return;
+
     const parentNode = $(".genre-best").querySelector("ol.webtoon-card-wrap");
     let romanceTopChildren = "";
     romanceTop.forEach((curItem) => {
@@ -142,8 +144,11 @@ const bindSubMenuEvents = () => {
             getElements(targetPage)
         );
         //TODO: 추가한 노드들에 자식노드 추가
-        // FIXME:테스트중: .genre-best가 만들어지면, createGenreItems()를 실행 (mutationObserver사용)
-        waitCreateEl(".genre-best").then(() => createGenreItems());
+
+        // FIXME: 로맨스TOP만 추가 테스트
+        // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
+        // mutationObserver(.genre-best가 추가되었는지 감지하기 위함)를 사용했었으나, 사용없이도 createGenreItems()를 통해 문제없이 추가되므로 일단 제거
+        createGenreItems();
 
         // 새로 생긴 노드에도 preventDefaults()적용
         preventDefaults();
