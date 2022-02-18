@@ -198,3 +198,69 @@ export const recommendationObj = {
     },
   ],
 };
+
+export const dayofWeekObj = [
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    title: "정령왕의 딸",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+]
