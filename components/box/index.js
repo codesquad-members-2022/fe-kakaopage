@@ -20,7 +20,7 @@ const style = `
   min-height: 100px;
   height: fit-content;
   background-color: var(--white);
-  padding: 22px 0 22px 0;
+  padding: 22px 0 10px 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
