@@ -16,7 +16,10 @@ const HomeGenre = (webtoons) => {
     ${NavDetail()}
     ${SubBanner()}
     ${DaysTop(today, webtoons)}
-    ${BigCardList("기대 신작 TOP")}
+    ${BigCardList(
+      "기대 신작 TOP",
+      webtoons.filter((wt) => wt.status === "N")
+    )}
     ${GenreTop(
       "로판",
       webtoons.filter((wt) => wt.genre.includes("로판"))

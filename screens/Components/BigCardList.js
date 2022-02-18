@@ -4,8 +4,8 @@
 
 import BigCard from "./BigCard.js";
 
-const BigCardList = (title) => {
-  const bigCardList = [{ title: "화산전생" }, { title: "캐슬" }];
+const BigCardList = (title, cards) => {
+  const bigCards = cards.sort((c1, c2) => c2.rank - c1.rank).slice(0, 2);
   return `<li class="mainBox main__contents">
       <div class="contents">
         <div class="contents__header">
@@ -18,7 +18,7 @@ const BigCardList = (title) => {
         </div>
         <div class="contents__body">
           <ul class="contentsBigCard">
-            ${bigCardList.map((bigCard) => BigCard(bigCard)).join("")}
+            ${bigCards.map((bigCard) => BigCard(bigCard)).join("")}
           </ul>
         </div>
       </div>
