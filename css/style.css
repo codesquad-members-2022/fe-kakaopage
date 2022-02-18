@@ -1,10 +1,13 @@
 :root {
   /* font size */
+  --small: 14px;
   --medium: 20px;
   /* color */
   --white: #fff;
   --gray: #eee;
   --gray2: rgb(153, 153, 153);
+  --black: #242526;
+  --yellow: #ffd200;
 }
 
 .header-container {
@@ -368,7 +371,7 @@
   margin-right: 3px;
 }
 
-.items__views-icon {
+.icon-views {
   width: 11px;
   height: 11px;
   background-image: url("https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871");
@@ -585,32 +588,3 @@
   height: 98px;
   margin: auto auto;
 }
-/* 
-.box {
-  width: 720px;
-  min-height: 100px;
-  height: fit-content;
-  background-color: var(--white);
-  padding: 22px 19px 22px 19px;
-}
-
-.box__header {
-  justify-content: space-between;
-}
-
-.box__title {
-  font-size: var(--medium);
-}
-
-.box__more-text {
-  color: var(--gray2);
-}
-
-.box__more-icon {
-  width: 8px;
-  height: 14px;
-  background-image: url("https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e");
-  background-size: cover;
-  margin-top: 4px;
-  margin-left: 3px;
-} */

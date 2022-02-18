@@ -20,17 +20,22 @@ const style = `
   min-height: 100px;
   height: fit-content;
   background-color: var(--white);
-  padding: 22px 19px 22px 19px;
+  padding: 22px 0 22px 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
 .box__header {
   justify-content: space-between;
+  padding: 0 19px; 0 19px;
 }
 
 .box__title {
   font-size: var(--medium);
+}
+
+.box__more {
+  cursor: pointer;
 }
 
 .box__more-text {
