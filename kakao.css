@@ -256,12 +256,10 @@ body{
     background:var(--primary-color);
     text-align:center;
     border-radius: 50%;
-}
-
-.weekend_check span{
     color:#000;
     line-height: 40px;
 }
+
 /* ===============webtoon-list=============== */
 .webtoon_list ul{
     display:flex;

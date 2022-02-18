@@ -1,5 +1,6 @@
 const preCategoryMenu = document.querySelector(".main_category ul li:nth-child(2)")
 const mainCategoryMenu = document.querySelector(".main_category ul li:nth-child(3)");
+const weekend = document.querySelector(".underline ul li:nth-child(2)");
 
 const webtoonTitle = document.querySelector(".webtoon_title");
 const slideShow = document.querySelector(".slideshow_slide");
