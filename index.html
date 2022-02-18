@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="shortcut icon"
+      href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kakaopage clone</title>
+    <title>Millie | kakaopage</title>
     <script
       src="https://kit.fontawesome.com/8d0a3fd827.js"
       crossorigin="anonymous"
@@ -14,49 +19,56 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="header__top">
         <h1 class="logo">kakaopage</h1>
         <div class="search-buttons">
-          <form class="search">
+          <form class="search-form">
             <input class="search__input" type="text" />
             <button type="submit" class="search__button">
-              <i class="fas fa-search"></i>
+              <img
+                class="search__img"
+                src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a"
+                alt="search button"
+              />
             </button>
           </form>
-          <div class="buttons">
-            <button type="button" class="btn--highlighted">stage</button>
+          <div class="header__menu">
+            <button type="button" class="btn">
+              <img
+                src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
+                alt="stage button"
+              />
+            </button>
             <button type="button" class="btn">캐시충전</button>
-            <span class="buttons__divider"> | </span>
-            <button class="btn">로그인</button>
+            <div class="divider"></div>
+            <button type="button" class="btn">로그인</button>
           </div>
         </div>
       </div>
 
-      <nav class="navbar">
-        <ul class="nav nav--header">
-          <li class="nav__subject selected" id="home">홈</li>
-          <li class="nav__subject" id="webtoon">
-            웹툰 • <i class="fas fa-clock"></i>
-            <div class="nav__circle"></div>
-          </li>
-          <li class="nav__subject" id="novel">
-            웹소설 • <i class="fas fa-clock"></i>
-            <div class="nav__circle"></div>
-          </li>
-          <li class="nav__subject" id="movie">
-            영화
-            <div class="nav__circle"></div>
-          </li>
-          <li class="nav__subject" id="broad">
-            방송
-            <div class="nav__circle"></div>
-          </li>
-          <li class="nav__subject" id="book">
-            책
-            <div class="nav__circle"></div>
-          </li>
-        </ul>
-      </nav>
+      <ul class="header__navbar">
+        <li class="nav__subject selected" id="home">홈</li>
+        <li class="nav__subject" id="webtoon">
+          웹툰 • <i class="fas fa-clock"></i>
+          <div class="nav__circle"></div>
+        </li>
+        <li class="nav__subject" id="novel">
+          웹소설 • <i class="fas fa-clock"></i>
+          <div class="nav__circle"></div>
+        </li>
+        <li class="nav__subject" id="movie">
+          영화
+          <div class="nav__circle"></div>
+        </li>
+        <li class="nav__subject" id="broad">
+          방송
+          <div class="nav__circle"></div>
+        </li>
+        <li class="nav__subject" id="book">
+          책
+          <div class="nav__circle"></div>
+        </li>
+      </ul>
     </header>
     <main class="main">
       <ul class="mainbox main__navbar">

@@ -3,7 +3,7 @@ import { DATA_URL, $, CL } from './util.js';
 const $days = $('.main__days');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
-const $navHeader = $('.nav--header');
+const $navHeader = $('.header__navbar');
 const $navMain = $('.main__navbar');
 const $mainSlider = $('.main__slider');
 
@@ -37,7 +37,7 @@ function createWebtoonList(wt) {
 
 function filterWebtoons(wt) {
   $days.addEventListener('click', e => {
-    if (!e.target.matches('.day__name')) return;
+    if (!e.target.matches(CL.DAY_NAME)) return;
     activateTab(e, $days);
     filterWebtoonsByDay(e, wt);
   });
@@ -55,15 +55,17 @@ function filterWebtoonsByDay(e, wt) {
 
 function activateTab({ target }, parentNode) {
   if (target === parentNode) return;
+  // If the clock is clicked, change the target as LI
+  if (target.parentNode.tagName === 'LI') target = target.parentNode;
   [...parentNode.children].forEach(child => {
     child.classList.toggle(CL.SELECTED, child === target);
   });
 }
 
 function removeCircle(e) {
-  if (!e.target.matches('.nav--header > .nav__subject')) return;
+  if (!e.target.matches('.nav__subject')) return;
   const circle = [...e.target.children].find(
-    v => v.className === 'nav__circle'
+    v => v.className === CL.NAV_CIRCLE
   );
   if (!circle) return;
   e.target.removeChild(circle);
@@ -88,10 +90,9 @@ function createBannerImg(url) {
 
 function setEventListenrToNavHeader(banner) {
   $navHeader.addEventListener('click', e => {
-    if (!e.target.matches('.nav--header > .nav__subject')) return;
+    filterContentsBySub(e, banner);
     removeCircle(e);
     activateTab(e, $navHeader);
-    filterContentsBySub(e, banner);
   });
 }
 
