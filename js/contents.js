@@ -1,69 +1,62 @@
-export function makeImageSection(url, title, status, people, message) {
+export function makeImageSection(list) {
+  console.log(list);
+
   return `
   <section class="image_section">
-    <img src="${url}" / alt="${title}" 이미지">
+    <img src="${list.url}" / alt="${list.title}" 이미지">
     <div class="image_text">
-      <h2 class="image_title">${title}</h2>
-      <span class="image_event">${status}</span>
+      <h2 class="image_title">${list.title}</h2>
+      <span class="image_event">${list.status}</span>
       <span class="image_span">🕔웹툰 |</span>
-      <span class="image_span">👤${people}만명</span>
+      <span class="image_span">👤${list.people}만명</span>
     </div>
-    <div class="image_footer">${message}</div>
-  </section>`;
+    <div class="image_footer">${list.message}</div>
+  </section>
+  `;
 }
 
-export function makeMenu(
-  info1,
-  info1_1,
-  info2,
-  info2_1,
-  info3,
-  info3_1,
-  info4,
-  info5,
-  info6,
-  info6_1
-) {
+export function makeMenu(list) {
   return `
   <section class="menu_section">
     <ul>
       <li class="menu_top_left">
-        <span>${info1} </span>
-        <div>${info1_1}</div>
+        <span>${list.firstInfo} </span>
+        <div>${list.firstSubInfo}</div>
       </li>
       <li>
-        <span>${info2} </span>
-        <div>${info2_1}</div>
+        <span>${list.secondInfo} </span>
+        <div>${list.secondSubInfo}</div>
       </li>
       <li class="menu_top_right">
-        <span>${info3} </span>
-        <div>${info3_1}</div>
+        <span>${list.thirdInfo} </span>
+        <div>${list.thirdSubInfo}</div>
       </li>
       <li class="menu_bottom_left">
-        <span>${info4} </span>
+        <span>${list.fourthInfo} </span>
       </li>
       <li>
-        <span>${info5}</span>
+        <span>${list.fifthInfo}</span>
       </li>
       <li class="menu_bottom_right">
-        <span>${info6} </span>
-        <div>${info6_1}</div>
+        <span>${list.sixthInfo} </span>
+        <div>${list.sixthSunInfo}</div>
       </li>
     </ul>
   </section>`;
 }
 
-export function makeAdvert(url, title) {
+export function makeAdvert(list) {
   return `
   <section class="advert">
-    <img src="${url}" / alt="${title} 광고 이미지"
+    <img src="${list.url}" / alt="${list.title} 광고 이미지"
     width="550" height="100">
     <div class="back">🔙</div>
     <div class="soon">🔜</div>
-</section>`;
+</section>
+`;
 }
 
-export function makeDate(notes) {
+export function makeDate(list) {
   return `
           <nav class="date">
             <ul>
@@ -74,102 +67,98 @@ export function makeDate(notes) {
               <li>금</li>
               <li>토</li>
               <li>일</li>
-              <li>${notes}</li>
+              <li>${list.adtnlInfo}</li>
             </ul>
-          </nav>`;
+          </nav>
+  `;
 }
 
-export function makeTitle(title, content) {
+export function makeTitle(list) {
   return `
-  <span class="section_title">${title}</span>
-  <span class="more_content">${content}</span>`;
+  <span class="section_title">${list.title}</span>
+  <span class="more_content">${list.contents}</span>
+  `;
 }
 
-export function addTag(tagName, content, className) {
-  const tag = document.createElement(`${tagName}`);
-  tag.innerText = `${content}`;
-  document.querySelector(`.${className}`).append(tag);
+export function addTag(list) {
+  const tag = document.createElement(`${list.tagName}`);
+  tag.innerText = `${list.content}`;
+  document.querySelector(`.${list.className}`).append(tag);
   return '';
 }
 
-export function makeNewThings(url, className, title, people, message) {
+export function makeNewThings(list) {
   return `
-    <div class="${className}">
-      <img src="${url}" / alt="${title} 이미지" width="310"
+    <div class="${list.className}">
+      <img src="${list.url}" / alt="${list.title} 이미지" width="310"
       height="220">
       <div class="new_things_text">
-        <h3 class="new_things_title">${title}</h3>
+        <h3 class="new_things_title">${list.title}</h3>
         <span class="new_things_new">New</span>
-        <span>웹툰 | 👤${people}</span>
+        <span>웹툰 | 👤${list.people}</span>
       </div>
-      <div class="new_things_footer">${message}</div>
-    </div>`;
+      <div class="new_things_footer">${list.message}</div>
+    </div>
+    `;
 }
 
-export function genreTop(url, title, grade, people) {
+export function genreTop(list) {
   return `
     <div class="drama_top">
-      <img src="${url}" / alt="${title} 이미지" width="90" height="110">
-      <span>★</span><span>${grade}</span><span>🕔</span>
+      <img src="${list.url}" / alt="${list.title} 이미지" width="90" height="110">
+      <span>★</span><span>${list.grade}</span><span>🕔</span>
       <div class="info_top">
-      <div>${title}</div>
-        <div><span>UP</span>👤${people}만명</div>
+      <div>${list.title}</div>
+        <div><span>UP</span>👤${list.people}만명</div>
       </div>
     </div>`;
 }
 
-export function makeRanking(
-  rankingNum,
-  url,
-  title,
-  icon,
-  people,
-  genre,
-  writer,
-  date
-) {
+export function makeRanking(list) {
   return `
   <div class="ranking_1st">
-    <div class="ranking_num">${rankingNum}</div>
-    <img src="${url}" / alt="${title} 이미지"
+    <div class="ranking_num">${list.rankingNum}</div>
+    <img src="${list.url}" / alt="${list.title} 이미지"
     width="95" height="130">
     <span class="time_icon">🕔</span>
     <div class="info_ranking">
-      <div><span class="new_icon">${icon}</span>${title}</div>
-      <div>👤${people}만명 |기다무 웹툰 | ${genre} | ${writer}</div>
-      <div>${date} 연재</div>
+      <div><span class="new_icon">${list.icon}</span>${list.title}</div>
+      <div>👤${list.people}만명 |기다무 웹툰 | ${list.genre} | ${list.writer}</div>
+      <div>${list.date} 연재</div>
     </div>
 </div>`;
 }
 
-export function makeEvent(url) {
+export function makeEvent(list) {
   return `
-  <img src="${url}" / alt="이벤트 이미지"
+  <img src="${list.url}" / alt="이벤트 이미지"
   width="615" height="330">`;
 }
 
-export function makeTodayRanking(url, span1, title, people) {
+export function makeTodayRanking(list) {
   return `
   <div class="today_ranking">
-    <img src="${url}," / alt="${title} 이미지" width="110" height="110">
-    <span>${span1}</span><span>🕔</span>
+    <img src="${list.url}," / alt="${list.title} 이미지" width="110" height="110">
+    <span>${list.rankNum}</span><span>🕔</span>
     <div class="info_top">
-      <div>${title}</div>
-      <div><span>UP</span>👤${people}만명</div>
+      <div>${list.title}</div>
+      <div><span>UP</span>👤${list.people}만명</div>
     </div>
-  </div>`;
+  </div>
+  `;
 }
 
-export function makeTodayWebtoon(url, span1, span2, title, people) {
+export function makeTodayWebtoon(list) {
   return `
   <div class="today_recommend">
-    <img src="${url}," / alt="${title} 이미지" width="110" height="110">
-    <span>${span1}</span><span>${span2}</span><span>🕔</span>
+    <img src="${list.url}," / alt="${list.title} 이미지" width="110" height="110">
+    <span>${list.star}</span><span>${list.grade}</span><span>🕔</span>
     <div class="info_top">
-      <div>${title}</div>
-      <div><span>UP</span>👤${people}만명</div>
+      <div>${list.title}</div>
+      <div><span>UP</span>👤${list.people}만명</div>
     </div>
-  </div>`;
+  </div>
+  `;
 }
 
 export function makeWebtoonInfo(url, title, explain, people, writer) {
