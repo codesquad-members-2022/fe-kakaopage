@@ -1,4 +1,4 @@
-document.querySelector(".prev").addEventListener("click", onclickPrev);
+document.querySelector(".prev").addEventListener("click", () => {});
 
 let pageCount = 0;
 let contentsChecker = "";
