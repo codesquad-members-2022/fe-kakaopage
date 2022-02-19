@@ -230,7 +230,7 @@ gnb
     z-index: 100;
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid var(--color-light-gray-border);
     box-sizing: border-box;
 }
 .gnb__inner {
@@ -494,7 +494,7 @@ section-title
     width: 1px;
     height: 10px;
     margin-right: 5px;
-    background: #dfdfdf;
+    background: var(--color-light-gray-border);
 }
 
 /**
@@ -522,4 +522,56 @@ app으로 보기 버튼
 }
 .app-button__bold-text {
     font-weight: var(--font-weight-M);
+}
+
+/**
+footer
+**/
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 0;
+    font-size: var(--font-size-S);
+    line-height: 2;
+    color: var(--color-light-gray);
+}
+.footer__nav {
+    display: flex;
+}
+.footer__nav-item:not(:first-child):before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: var(--color-light-gray);
+    vertical-align: middle;
+}
+.footer__address-toggle-button {
+    padding-right: 15px;
+    font-size: inherit;
+    color: inherit;
+    background: url('../images/common/ico-trace_off.png') no-repeat right center / auto 7px;
+}
+.footer__address-link {
+    text-decoration: underline;
+}
+.address__section:nth-child(2n) {
+    display: inline-block;
+}
+.footer__address-link:before, .address__section:nth-child(2n):before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 7px;
+    background: var(--color-light-gray);
+}
+.footer__copyright-mark {
+    width: 55px;
+    font-size: 12px;
+    text-align: center;
 }

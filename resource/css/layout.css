@@ -49,15 +49,15 @@ webtoon
     background-image: url('../images/common/slide-next-button_light.svg');
 }
 
-.section__day-tabs {
+.section__day-top-tabs {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
-.section__day-tab {
+.section__day-top-tab {
     flex: 1;
 }
-.day-tab__button {
+.day-top-tab__button {
     width: 100%;
     font-size: var(--font-size-XL);
     line-height: 57px;
@@ -65,7 +65,7 @@ webtoon
     text-align: center;
     border-bottom: 1px solid #f1f1f1;
 }
-.day-tab__button.on{
+.day-top-tab__button.on{
     color: var(--color-black);
     line-height: 56px;
     border-bottom: 2px solid var(--color-yellow);
