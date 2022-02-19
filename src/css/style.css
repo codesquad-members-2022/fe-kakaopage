@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
-@import "variables.css";
 @import "reset.css";
+@import "variables.css";
+@import "utils.css";
+@import "screens/main-banner-header.css";
+@import "screens/main-banner-nav.css";
+@import "screens/main-nav.css";
 
 body {
   background-color: var(--main-color);
   font-family: "Open Sans", sans-serif;
+  height: 500vh;
 }
 
 header {
-  border: 0.5px solid gray;
+  position: fixed;
+  width: 100%;
+  top: 0px;
 }

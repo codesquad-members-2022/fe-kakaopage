@@ -1,4 +1,6 @@
 :root {
-  --main-color: #eeeeee;
+  --main-color: #eee;
   --point-color: #ffd200;
+  --main-font-color: #333;
+  --main-width: 720px;
 }

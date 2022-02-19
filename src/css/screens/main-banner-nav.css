@@ -1,0 +1,19 @@
+.main-banner__nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-banner__nav__list li {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main-banner__nav__list span {
+  font-size: 20px;
+}
+
+.main-banner__nav__list i {
+  color: var(--main-font-color);
+}

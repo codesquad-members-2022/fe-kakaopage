@@ -1,0 +1,15 @@
+.main__nav {
+  margin-top: 150px;
+  background-color: #fff;
+}
+
+.main__nav__list {
+  display: flex;
+  justify-content: space-around;
+  padding: 23px 0px;
+}
+
+.main__nav__list span {
+  font-size: 20px;
+  color: #bbb;
+}
