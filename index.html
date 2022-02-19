@@ -4,474 +4,470 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/work-container.css">
-    <link rel="stylesheet" href="./css/new_work.css">
-    <link rel="stylesheet" href="./css/banner.css">
-    <link rel="stylesheet" href="./css/category_tab.css">
-    <link rel="stylesheet" href="./css/ranking_section.css">
-    <link rel="stylesheet" href="./css/webtoon.css">
-    <link rel="stylesheet" href="./css/daily-ranked-webtoon.css">
-    <link rel="stylesheet" href="./css/event.css">
-    <link rel="stylesheet" href="./css/app-link.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Alan | Kakaopage-clone</title>
 </head>
 <body>
-    <header>
+    <header class="top">
         <div class="header__container">
-            <h1 class="header__title">Kakaopage</h1>
-            <div class="header__elements">
+            <h1 class="header__logo"><a href="#"><img src="img/kakaopage logo.svg" alt="카카오페이지 메인 로고" /></a></h1>
+            <div class="header__utils">
                 <form class="header__search-form">
-                    <input class="header__search-input" />
-                    <img class="header__search-icon" src='./img/icon/btn_search.png'>
+                    <input type="text" class="header__search-input" />
+                    <button type="submit" class="header__search-btn"><img src="img/검색 버튼.png" alt="검색"/></button>
                 </form>
-                <button class="header__stage-btn">Stage</button>
-                <button class="header__charge-btn">캐시충전</button>
-                <button class="header__login-btn">로그인</button>
+                <div class="header__stage">
+                    <a href="#" class="header__stage-logo"><img src="img/스테이지.svg" alt="스테이지 로고"></a>
+                    <img class="header__stage-tooltip" src="img/stage-tooltip.svg" alt="스테이지 툴팁">
+                </div>
+                <div class="header__user-services">
+                    <div class="header__user-service"><a href="#">캐시충전</a></div>
+                    <div class="divider"></div>
+                    <div class="header__user-service"><a href="#">로그인</a></div>
+                </div>
             </div>
         </div>
     </header>
-    <nav class="main-tab tab">
-        <ul class="main-tab__container tab__container">
-            <li>홈</li>
-            <li>웹툰</li>
-            <li>웹소설</li>
-            <li>영화</li>
-            <li>방송</li>
-            <li>책</li>
+    <nav class="gnb top">
+        <ul class="gnb__container tab__container">
+            <li class="gnb__item center"><a href="#"><img src="img/홈.svg" alt="홈"/></a></li>
+            <li class="gnb__item center tab__item--selected "><a href="#"><img src="img/웹툰_만화.svg" alt="웹툰"/></a></li>
+            <li class="gnb__item center"><a href="#"><img src="img/웹소설_장르.svg" alt="웹소설"/></a></li>
+            <li class="gnb__item center"><a href="#"><img src="img/영화.svg" alt="영화"/></a></li>
+            <li class="gnb__item center"><a href="#"><img src="img/예능_드라마.svg" alt="방송"/></a></li>
+            <li class="gnb__item center"><a href="#"><img src="img/책.svg" alt="책"/></a></li>
         </ul>
     </nav>
     <div class="contents">
-        <div class="genre-tab tab">
-            <ul class="genre-tab__container tab__container">
-                <li>홈</li>
-                <li>요일연재</li>
-                <li>웹툰</li>
-                <li>소년</li>
-                <li>드라마</li>
-                <li>로맨스</li>
-                <li>로판</li>
-                <li>액션무협</li>
-                <li>BL</li>
+        <div class="genre-tab">
+            <ul class="tab__container vertical-center">
+                <li class="genre-tab__item center genre-tab__item--selected"><a href="#">홈</a></li>
+                <li class="genre-tab__item center"><a href="#">요일연재</a></li>
+                <li class="genre-tab__item center"><a href="#">웹툰</a></li>
+                <li class="genre-tab__item center"><a href="#">소년</a></li>
+                <li class="genre-tab__item center"><a href="#">드라마</a></li>
+                <li class="genre-tab__item center"><a href="#">로맨스</a></li>
+                <li class="genre-tab__item center"><a href="#">로판</a></li>
+                <li class="genre-tab__item center"><a href="#">액션무협</a></li>
+                <li class="genre-tab__item center"><a href="#">BL</a></li>
             </ul>
         </div>
-        <div class="top-banner">
-            <div class="top-banner__container work-container">
-                <img class="top-banner__img work__img" src="./img/top_img_1.png">
-                <div class="right-btn next-btn">
-                    <img src="./img/icon/right_btn.svg">
-                </div>
-                <div class="left-btn next-btn">
-                    <img src="./img/icon/left_btn.svg">
-                </div>
-                <div class="top-banner__text-box work__text-box">
-                    <div class="top-banner__information work__information">
-                        <div class="top-banner__title">
-                            <span>에스티오</span>
-                        </div>
-                        <div class="top-banner__status work__status">
-                            <div class="top-banner__status-upload work__status-upload">UP</div>
-                            <div class="top-banner__status-type">
-                                <img src="./img/icon/clock.svg">
-                                <span>웹툰</span>
-                            </div>
-                            <div class="top-banner__status-views work__status-views">
-                                <img src="./img/icon/person.svg">
-                                <span>30.5만명</span>
+        <div class="main-banner slides">
+            <ul class="main-banner__contents slide__container">
+                <li class="main-banner__content banner__content slide--prev">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
+                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
+                        <div class="banner__information">
+                            <p class="banner__title">화산전쟁</p>
+                            <div class="banner__tags">
+                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
+                                <div class="banner__genre"><img src="img/ico-bigthum-wait.svg">웹툰</div>
+                                <div class="banner__views"><img src="img/ico-bigthum-person.svg"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="top-banner__page-number">
-                        <span class="top-banner__curr-page">1</span>
-                        <span>/</span>
-                        <span class="top-banner__total-page">3</span>
-                    </div>
-                </div>
-                <div class="top-banner__description work__description">
-                    <span>날 부른게 당신인가여?? 배고파</span>
-                </div>
+                    </a>
+                </li>
+                <li class="main-banner__content banner__content slide--curr">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
+                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
+                        <div class="main-banner__information banner__information">
+                            <p class="main-banner__title banner__title">화산전쟁</p>
+                            <div class="main-banner__tags banner__tags vertical-center">
+                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
+                                <div class="banner__genre vertical-center"><img src="img/ico-bigthum-wait.svg"><span>웹툰</span></div>
+                                <div class="divider divider--thick"></div>
+                                <div class="banner__views vertical-center"><img src="img/ico-bigthum-person.svg"><span>183.2만명</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="main-banner__content banner__content slide--next">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
+                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
+                        <div class="banner__information">
+                            <p class="banner__title">화산전쟁</p>
+                            <div class="banner__tags">
+                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
+                                <div class="banner__genre"><img src="img/ico-bigthum-wait.svg">웹툰</div>
+                                <div class="banner__views"><img src="img/ico-bigthum-person.svg"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slide__btns">
+                <button class="slide__btn slide__btn--prev"><img src="img/previous button.svg" alt="이전 슬라이드 버튼"></button>
+                <button class="slide__btn slide__btn--next"><img src="img/next button.svg" alt="다음 슬라이드 버튼"/></button>
+            </div>
+            <div class="main-banner__page-nums slide__page-nums">
+                <span class="main-banner__page-num--curr">1</span>
+                <span>/</span>
+                <span class="main-banner__page-num--total">3</span>
             </div>
         </div>
-        <section class="category-tab">
-            <div class="category-tab__container">
-                <a class="category-tab__element-box">
-                    <span class="title">오늘 UP</span>
-                    <span class="alarm">203</span>
-                </a>
-                <a class="category-tab__element-box">
-                    <span class="title">오늘 신작</span>
-                    <span class="alarm">4</span>
-                </a>
-                <a class="category-tab__element-box">
-                    <span class="title">오리지널</span>
-                    <span class="alarm">2,328</span>
-                </a>
-                <a class="category-tab__element-box">
-                    <span class="title">완결까지 정주행</span>
-                    <span class="alarm blind"></span>
-                </a>
-                <a class="category-tab__element-box">
-                    <span class="title">독립운동가 웹툰</span>
-                    <span class="alarm blind"></span>
-                </a>
-                <a class="category-tab__element-box">
-                    <span class="title">오늘 랭킹</span>
-                    <span class="alarm">1위</span>
-                </a>
+        <div class="category-grid center">
+            <ul class="category-grid__container">
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">오늘 UP</span>
+                        <span class="category-grid__alarm">203</span>
+                    </a>
+                </li>
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">오늘 신작</span>
+                        <span class="category-grid__alarm">1</span>
+                    </a>
+                </li>
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">오리지널</span>
+                        <span class="category-grid__alarm">2,336</span>
+                    </a>
+                </li>
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">완결까지 정주행</span>
+                    </a>
+                </li>
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">독립운동가 웹툰</span>
+                    </a>
+                </li>
+                <li class="category-grid__item">
+                    <a class="category-grid__link center" href="#">
+                        <span class="category-grid__title">오늘 랭킹</span>
+                        <span class="category-grid__alarm">1위</span>
+                    </a>
+                </li>
+        </div>
+        <div class="event-banner slides center">
+            <ul class="event-banner__contents slide__container">
+                <li class="event-banner__content slide--prev">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/event/PiNax6pBEB3DRSAjQOQgL0.png"/></div>
+                    </a>
+                </li>
+                <li class="event-banner__content slide--curr">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/event/Uaazi3SdTkHxHYHNpwSg6K.png"/></div>
+                    </a>
+                </li>
+                <li class="event-banner__content slide--next">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/event/yYF5HvMjOvL2oIp36hNPiK.png"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slide__btns">
+                <button class="slide__btn slide__btn--prev"><img src="img/ic-paging-back-nor.svg" alt="이전 슬라이드 버튼"></button>
+                <button class="slide__btn slide__btn--next"><img src="img/ic-paging-next-nor.svg" alt="다음 슬라이드 버튼"/></button>
             </div>
-        </section> 
-        <section class="event-banner">
-            <div class="event-content">
-                <img src="./img/event_img_1.png">
-            </div>
-            <div class="right-btn next-btn event-banner-btn">
-                <img src="./img/icon/right_btn.svg">
-            </div>
-            <div class="left-btn next-btn event-banner-btn">
-                <img src="./img/icon/left_btn.svg">
-            </div>
-        </section>
-        <section class="day-ranking ranking-section">
-            <div class="ranking-section__header">
-                <div class="ranking__title-box">
-                    <span class="ranking__title">요일 연재 TOP</span>
-                    <span class="ranking__title-num">(1,622)</span>
+        </div>
+        <section class="day-rank-section">
+            <div class="section__header">
+                <div class="section__title-box">
+                    <span class="section__title">요일 연재 TOP</span>
+                    <span class="section__title-num">(1,622)</span>
                 </div>
-                <div class="more-btn">
+                <div class="section__more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/ic-more-gray.svg" />
                 </div>
             </div>
             <ul class="day-tab__container tab__container">
-                <li>월</li>
-                <li>화</li>
-                <li>수</li>
-                <li>목</li>
-                <li>금</li>
-                <li>토</li>
-                <li>일</li>
-                <li>완결</li>
+                <li class="day-tab__item center ">월</li>
+                <li class="day-tab__item center ">화</li>
+                <li class="day-tab__item center ">수</li>
+                <li class="day-tab__item center ">목</li>
+                <li class="day-tab__item center day-tab__item--selected tab__item--selected">금</li>
+                <li class="day-tab__item center ">토</li>
+                <li class="day-tab__item center ">일</li>
+                <li class="day-tab__item center ">완결</li>
             </ul>
-            <div class="webtoon-container">
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/1.png'/>
-                        <div class="ranking-box">
-                            <span>1위</span>
-                            <img src="./img/icon/grey-clock.svg">
-                        </div>
+            <ul class="work-container">
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/BJ대마도사.png'/></div>
+                        <div class="work__ranking"><span>1위</span><img src="img/bmbadge_waitfree.svg"></div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">이번 생은 가주가 되겠습니다</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
                             <span>122.6만명</span>
                         </div>
                     </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/2.png'/>
-                        <div class="ranking-box">
-                            <span>2위</span>
-                            <img src="./img/icon/grey-clock.svg">
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/SSS급 죽어야 사는 헌터.png'/></div>
+                        <div class="work__ranking"><span>2위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">남주를 주웠더니 남편이 생겨버렸다</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>50.9만명</span>
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/그녀가 악녀로 사는 이유.png'/></div>
+                        <div class="work__ranking"><span>3위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/3.png'/>
-                        <div class="ranking-box">
-                            <span>3위</span>
-                            <img src="./img/icon/grey-clock.svg">
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/나쁜 색기 [개정판].png'/></div>
+                        <div class="work__ranking"><span>4위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">8클래스 마법사의 회귀</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>81.3만명</span>
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/남편님_ 다시 결혼해 주세요_.png'/></div>
+                        <div class="work__ranking"><span>5위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/4.png'/>
-                        <div class="ranking-box">
-                            <span>4위</span>
-                            <img src="./img/icon/grey-clock.svg">
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/씨름의 희열.png'/></div>
+                        <div class="work__ranking"><span>6위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">나는 이 집 아이</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>211.9만명</span>
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/절대갑 길들이기.png'/></div>
+                        <div class="work__ranking"><span>7위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/5.png'/>
-                        <div class="ranking-box">
-                            <span>5위</span>
-                            <img src="./img/icon/grey-clock.svg">
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/프로야구생존기.png'/></div>
+                        <div class="work__ranking"><span>8위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">뒤끝작렬</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>57.4만명</span>
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/톱스타_ 그 자체.png'/></div>
+                        <div class="work__ranking"><span>9위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/6.png'/>
-                        <div class="ranking-box">
-                            <span>6위</span>
-                            <img src="./img/icon/grey-clock.svg">
+                </li>
+                <li class="work">
+                    <div class="work__thumbnail-box">
+                        <div class="work__img-wrapper"><img src='img/thumnail/호위무사.png'/></div>
+                        <div class="work__ranking"><span>10위</span><img src="img/bmbadge_waitfree.svg"></div>
+                    </div>
+                    <div class="work__info ">
+                        <div class="work__title">이번 생은 가주가 되겠습니다</div>
+                        <div class="work__details">
+                            <img class="small-icon" src="img/업데이트.svg"/>
+                            <img class="small-icon" src='img/icon_read_count.png'>
+                            <span>122.6만명</span>
                         </div>
                     </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">악당과 계약 가족이 되어버렸다</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>49.5만명</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/7.png'/>
-                        <div class="ranking-box">
-                            <span>7위</span>
-                            <img src="./img/icon/grey-clock.svg">
-                        </div>
-                    </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">사장님의 특별지시</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>40.7만명</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/8.png'/>
-                        <div class="ranking-box">
-                            <span>8위</span>
-                            <img src="./img/icon/grey-clock.svg">
-                        </div>
-                    </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">묵향 다크레이디</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>132만명</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/9.png'/>
-                        <div class="ranking-box">
-                            <span>9위</span>
-                            <img src="./img/icon/grey-clock.svg">
-                        </div>
-                    </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">레벨업 못하는 플레이어</div>
-                        <div class="webtoon-info__views">
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>71.2만명</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="webtoon-info">
-                    <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/10.png'/>
-                        <div class="ranking-box">
-                            <span>10위</span>
-                            <img src="./img/icon/grey-clock.svg">
-                        </div>
-                    </div>
-                    <div class="webtoon-info__detail">
-                        <div class="webtoon-info__title">황녀, 반역자를 각인시키다</div>
-                        <div class="webtoon-info__views">
-                            <img src='./img/icon/fifteen.png'>
-                            <img class="inverted" src='./img/icon/person.svg'>
-                            <span>63.2만명</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+                </li>
+            </ul>
         </section>
-        <section class="new-work ranking-section">
-            <div class="ranking-section__header">
-                <div class="new-work__title-box ranking__title-box">
-                    <span class="new-work__title ranking__title">기대신작 TOP</span>
+        <section class="brandnew-section">
+            <div class="section__header">
+                <div class="section__title-box">
+                    <span class="section__title">기대신작 TOP</span>
                 </div>
-                <div class="more-btn">
+                <div class="section__more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/ic-more-gray.svg" />
                 </div>
             </div>
-            <div class="new-works__box">
-                <div class="new-work__container work-container">
-                    <img class="new-work__img work__img" src="./img/new-work/new_img_1">
-                    <div class="new-work__text-box work__text-box">
-                        <div class="new-work__information work__information">
-                            <div class="new-work__title">
-                                <span>세화, 가는 길</span>
-                            </div>
-                            <div class="new-work__status work__status">
-                                <div class="new-work__status-upload work__status-upload">NEW</div>
-                                <div class="new-work__status-type">
-                                    <span>웹툰</span>
-                                </div>
-                                <div class="new-work__status-views work__status-views">
-                                    <img src="./img/icon/person.svg">
-                                    <span>1,392명</span>
-                                </div>
+            <div class="brandnew__contents">
+                <div class="brandnew__content banner__content">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
+                        <p class="brandnew-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
+                        <div class="brandnew-banner__information banner__information">
+                            <p class="brandnew-banner__title banner__title">화산전쟁</p>
+                            <div class="brandnew-banner__tags banner__tags vertical-center">
+                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
+                                <div class="banner__genre vertical-center"><img src="img/ico-bigthum-wait.svg"><span>웹툰</span></div>
+                                <div class="divider divider--thick"></div>
+                                <div class="banner__views vertical-center"><img src="img/ico-bigthum-person.svg"><span>183.2만명</span></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="new-work__description work__description">
-                        <span>천천히 치유되는 그날의 상처</span>
-                    </div>
+                    </a>
                 </div>
-                <div class="new-work__container work-container">
-                    <img class="new-work__img work__img" src="./img/new-work/new_img_2">
-                    <div class="new-work__text-box work__text-box">
-                        <div class="new-work__information work__information">
-                            <div class="new-work__title">
-                                <span>묵검향</span>
-                                <span>용호상박 컬렉션</span>
-                            </div>
-                            <div class="new-work__status work__status">
-                                <div class="new-work__status-upload work__status-upload">NEW</div>
-                                <div class="new-work__status-type">
-                                    <img src="./img/icon/clock.svg">
-                                    <span>웹툰</span>
-                                </div>
-                                <div class="new-work__status-views work__status-views">
-                                    <img src="./img/icon/person.svg">
-                                    <span>2.8만명</span>
-                                </div>
+                <div class="brandnew__content banner__content">
+                    <a href="#">
+                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
+                        <p class="brandnew-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
+                        <div class="brandnew-banner__information banner__information">
+                            <p class="brandnew-banner__title banner__title">화산전쟁</p>
+                            <div class="brandnew-banner__tags banner__tags vertical-center">
+                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
+                                <div class="banner__genre vertical-center"><img src="img/ico-bigthum-wait.svg"><span>웹툰</span></div>
+                                <div class="divider divider--thick"></div>
+                                <div class="banner__views vertical-center"><img src="img/ico-bigthum-person.svg"><span>183.2만명</span></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="new-work__description work__description">
-                        <span>용호상박으로 돌아온 묵검향!</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="romance-ranking ranking-section">
+        <!-- <section class="romance-ranking ranking-section">
             <div class="ranking-section__header">
                 <div class="ranking__title-box">
                     <span class="ranking__title">로맨스 TOP</span>
                 </div>
                 <div class="more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/icon/right_arrow.svg" />
                 </div>
             </div>
             <div class="webtoon-container">
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/1.png'/>
+                        <img src='img/day-ranking/mon/1.png'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">태양의 주인</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img src="./img/icon/fifteen.png">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img src="img/icon/fifteen.png">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>61.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/2.png'/>
+                        <img src='img/day-ranking/mon/2.png'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">내일의 으뜸</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>23.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/3.png'/>
+                        <img src='img/day-ranking/mon/3.png'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">인소의 법칙</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>141.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/4.png'/>
+                        <img src='img/day-ranking/mon/4.png'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">흑룡의 취향</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>28.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/day-ranking/mon/5.png'/>
+                        <img src='img/day-ranking/mon/5.png'/>
                         <div class="ranking-box">
                             <span>9.8</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">신들의 연애사정</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>24.2만명</span>
                         </div>
                     </div>
@@ -485,92 +481,92 @@
                 </div>
                 <div class="more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/icon/right_arrow.svg" />
                 </div>
             </div>
             <div class="webtoon-container">
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/pikachu-dummy.png'/>
+                        <img src='img/pikachu-dummy.png'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">피카츄는</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img src="./img/icon/fifteen.png">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img src="img/icon/fifteen.png">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>61.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/pikachu-dummy.png'/>
+                        <img src='img/pikachu-dummy.png'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">너무 너무 귀여워</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>23.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/pikachu-dummy.png'/>
+                        <img src='img/pikachu-dummy.png'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">그렇지만 역시</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>141.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/pikachu-dummy.png'/>
+                        <img src='img/pikachu-dummy.png'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">더 귀여운건</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>28.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/pikachu-dummy.png'/>
+                        <img src='img/pikachu-dummy.png'/>
                         <div class="ranking-box">
                             <span>9.8</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">바로바로</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>24.2만명</span>
                         </div>
                     </div>
@@ -584,92 +580,92 @@
                 </div>
                 <div class="more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/icon/right_arrow.svg" />
                 </div>
             </div>
             <div class="webtoon-container">
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/bingsoo.jpeg'/>
+                        <img src='img/bingsoo.jpeg'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">우리 강아지</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img src="./img/icon/fifteen.png">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img src="img/icon/fifteen.png">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>61.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/bingsoo.jpeg'/>
+                        <img src='img/bingsoo.jpeg'/>
                         <div class="ranking-box">
                             <span>9.9</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">빙수라네~~!</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>23.4만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/bingsoo.jpeg'/>
+                        <img src='img/bingsoo.jpeg'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">하지만 빙수는</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>141.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/bingsoo.jpeg'/>
+                        <img src='img/bingsoo.jpeg'/>
                         <div class="ranking-box">
                             <span>10.0</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">고집이 많아</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>28.2만명</span>
                         </div>
                     </div>
                 </div>
                 <div class="webtoon-info">
                     <div class="webtoon-info__thumbnail">
-                        <img src='./img/bingsoo.jpeg'/>
+                        <img src='img/bingsoo.jpeg'/>
                         <div class="ranking-box">
                             <span>9.8</span>
-                            <img src="./img/icon/grey-clock.svg">
+                            <img src="img/icon/grey-clock.svg">
                         </div>
                     </div>
                     <div class="webtoon-info__detail">
                         <div class="webtoon-info__title">미운 녀석이라네</div>
                         <div class="webtoon-info__views">
-                            <img src="./img/icon/up.svg">
-                            <img class="inverted" src='./img/icon/person.svg'>
+                            <img src="img/icon/up.svg">
+                            <img class="inverted" src='img/icon/person.svg'>
                             <span>24.2만명</span>
                         </div>
                     </div>
@@ -683,7 +679,7 @@
                 </div>
                 <div class="more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/icon/right_arrow.svg" />
                 </div>
             </div>
             <div class="daily-ranking__container">
@@ -691,7 +687,7 @@
                     <div class="daily-ranked__ranking">1</div>
                     <div class="daily-ranked__thumbnail">
                         <div class="daily-ranked__thumbnail-icon">
-                            <img src="./img/icon/yellow-clock.png">
+                            <img src="img/icon/yellow-clock.png">
                         </div>
                         <div class="daily-ranked__thumbnail-img">
                             <img src="img/daily-ranked/1.jpeg">
@@ -699,12 +695,12 @@
                     </div>
                     <div class="daily-ranked__info">
                         <div class="daily-ranked__info-title">
-                            <img src="./img/icon/red-n.svg">
-                            <img src="./img/icon/fifteen.png">
+                            <img src="img/icon/red-n.svg">
+                            <img src="img/icon/fifteen.png">
                             <span>흑막을 버리는 데 실패했다</span>
                         </div>
                         <div class="daily-ranked__info-detail">
-                            <span><img class="inverted" src="./img/icon/person.svg">29만명</span>
+                            <span><img class="inverted" src="img/icon/person.svg">29만명</span>
                             <span>기다무웹툰</span>
                             <span>로판</span>
                             <span>ASSAM,쓩늉,자은향</span>
@@ -716,7 +712,7 @@
                     <div class="daily-ranked__ranking">2</div>
                     <div class="daily-ranked__thumbnail">
                         <div class="daily-ranked__thumbnail-icon">
-                            <img src="./img/icon/yellow-clock.png">
+                            <img src="img/icon/yellow-clock.png">
                         </div>
                         <div class="daily-ranked__thumbnail-img">
                             <img src="img/daily-ranked/2.jpeg">
@@ -724,12 +720,12 @@
                     </div>
                     <div class="daily-ranked__info">
                         <div class="daily-ranked__info-title">
-                            <img src="./img/icon/red-n.svg">
-                            <img src="./img/icon/fifteen.png">
+                            <img src="img/icon/red-n.svg">
+                            <img src="img/icon/fifteen.png">
                             <span>이번 생은 가주가 되겠습니다</span>
                         </div>
                         <div class="daily-ranked__info-detail">
-                            <span><img class="inverted" src="./img/icon/person.svg">122.6만명</span>
+                            <span><img class="inverted" src="img/icon/person.svg">122.6만명</span>
                             <span>기다무웹툰</span>
                             <span>로판</span>
                             <span>앤트스튜디오,몬,앤트스튜디오,김로아</span>
@@ -741,7 +737,7 @@
                     <div class="daily-ranked__ranking">3</div>
                     <div class="daily-ranked__thumbnail">
                         <div class="daily-ranked__thumbnail-icon">
-                            <img src="./img/icon/yellow-clock.png">
+                            <img src="img/icon/yellow-clock.png">
                         </div>
                         <div class="daily-ranked__thumbnail-img">
                             <img src="img/daily-ranked/3.jpeg">
@@ -749,12 +745,12 @@
                     </div>
                     <div class="daily-ranked__info">
                         <div class="daily-ranked__info-title">
-                            <img src="./img/icon/red-n.svg">
-                            <img src="./img/icon/fifteen.png">
+                            <img src="img/icon/red-n.svg">
+                            <img src="img/icon/fifteen.png">
                             <span>남주를 주웠더니 남편이 생겨버렸다</span>
                         </div>
                         <div class="daily-ranked__info-detail">
-                            <span><img class="inverted" src="./img/icon/person.svg">51만명</span>
+                            <span><img class="inverted" src="img/icon/person.svg">51만명</span>
                             <span>기다무웹툰</span>
                             <span>로판</span>
                             <span>마리씨,서촌,초암</span>
@@ -771,14 +767,14 @@
                 </div>
                 <div class="more-btn">
                     <span>더보기</span>
-                    <img src="./img/icon/right_arrow.svg" />
+                    <img src="img/icon/right_arrow.svg" />
                 </div>
             </div>
             <div class="recommand-event__banner">
-                <img src="./img/recommend-event/1.png">
+                <img src="img/recommend-event/1.png">
                 <div class="recommand-event__controller">
                     <div class="recommand-event-btn">
-                        <img src="./img/icon/left_arrow.png">
+                        <img src="img/icon/left_arrow.png">
                     </div>
                     <div class="event__banner-number">
                         <span class="event__banner-curr-page">1</span>
@@ -786,15 +782,15 @@
                         <span class="event__banner-total-page">3</span>
                     </div>
                     <div class="recommand-event-btn">
-                        <img src="./img/icon/right_arrow.svg">
+                        <img src="img/icon/right_arrow.svg">
                     </div>
                 </div>
             </div>
         </section>
         <a class="page-app-link">
             <span>카카오페이지 앱으로 보기</span>
-            <img class="inverted" src="./img/icon/right_arrow.svg">
-        </a>
+            <img class="inverted" src="img/icon/right_arrow.svg">
+        </a> -->
     </div>
 </body>
 </html>

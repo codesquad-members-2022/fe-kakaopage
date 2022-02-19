@@ -1,0 +1,15 @@
+:root {
+    --header-height: 80px;
+    --main-width: 720px;
+    --nav-height: 70px;
+    --banner-description-ratio: calc(100% / 12);
+
+
+    --color-black: #000;
+    --color-white: #fff;
+    --color-yellow: #ffd200;
+    --color-gray: #999;
+    --color-light-gray: #BBB;
+    --color-transparent-gray: rgba(0,0,0, 0.3);
+    --color-body: #eee;
+}
