@@ -1,0 +1,27 @@
+body {
+  font-size: 0.9rem;
+  font-family: "gothic";
+  background-color: var(--color-yellow-main);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+}
+
+nav > * {
+  flex: 1 1 0;
+}
+
+section {
+  width: var(--width-main);
+}
+
+.hidden {
+  display: none;
+}

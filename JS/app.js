@@ -1,25 +1,38 @@
-const headerNav = document.querySelector(".header__nav");
-const mainNav = document.querySelector(".main_nav");
-const daysNav = document.querySelector(".days_nav");
 const main = document.querySelector("main");
+const ads = document.querySelector(".ads");
+const days = document.querySelector(".days");
+const headerNav = document.querySelector(".header__nav");
+const mainNav = document.querySelector(".main__nav");
+const daysNav = document.querySelector(".days__nav");
 const headerNavChildren = headerNav.querySelectorAll("span");
 const mainNavChildren = mainNav.querySelectorAll("span");
 const daysNavChildren = daysNav.querySelectorAll("span");
 
 const markSelectedNav = (event) => {
   event.preventDefault();
-  const SELECTED = "selected";
   const { parentNode } = event.target;
-  const previousSelectedTarget = parentNode.querySelector(`.${SELECTED}`);
-  if (previousSelectedTarget) previousSelectedTarget.classList.remove(SELECTED);
-  event.target.classList.add(SELECTED);
+  const previousSelectedTarget = parentNode.querySelector(".selected");
+  if (previousSelectedTarget)
+    previousSelectedTarget.classList.remove("selected");
+  event.target.classList.add("selected");
 };
 
 const showSelectedNav = (event) => {
-  event.preventDefault();
-  const type = event.target.classList[0];
-  main.querySelector("section").classList.add("hidden");
-  main.querySelector(`.${type}`).classList.remove("hidden");
+  let type = "";
+  if (typeof event === "string") {
+    type = event;
+  } else {
+    event.preventDefault();
+    main.innerHTML = "";
+    type = event.target.innerHTML;
+  }
+  const appendedParts = {
+    홈: [ads],
+    웹툰: [mainNav, ads, days],
+  };
+  appendedParts[type].forEach((part) => {
+    return main.append(part);
+  });
 };
 
 const markSelectedNavEvent = (children) => {
@@ -35,5 +48,4 @@ headerNavChildren.forEach((child) => {
 markSelectedNavEvent(headerNavChildren);
 markSelectedNavEvent(mainNavChildren);
 markSelectedNavEvent(daysNavChildren);
-
-// TEST
+showSelectedNav("홈");
