@@ -1,7 +1,11 @@
 @import "./reset.css";
 @import "./header_nav.css";
-@import "./main_banner.css";
 @import "./main.css";
+@import "./main_banner.css";
+/* 재사용이 가능한 style */
+@import "./main_container.css";
+@import "./main_webtoons-list.css";
+/* ========================= */
 @import "./footer.css";
 
 :root {
@@ -47,6 +51,6 @@ button {
 .divider {
   width: 1px;
   height: 16px;
-  background-image: url(/assets/divider.png);
+  background-image: url(../assets/divider.png);
   background-color: lightgray;
 }

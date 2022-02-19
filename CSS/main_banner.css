@@ -1,21 +1,22 @@
-/* ======== banner ======== */
+/* ======== main__banner와 expect-new__top이 공통적으로 가지는 style ======== */
 .banner {
   position: relative;
   margin-top: 12px;
 }
 
-.banner__list {
-  width: 720px;
-  height: 480px;
+.banner__info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: var(--white-color);
 }
 
-/* JS 구현전이라서 임시로 다른 li를 안보이게 설정 */
-.banner__item {
-  display: none;
-}
-
-.banner__item--focused {
-  display: block;
+.banner__summary {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.25rem;
+  background-color: var(--main-point-color);
+  color: var(--black-color);
 }
 
 /* 배너 화살표 */
@@ -26,7 +27,7 @@
   border: 1px solid var(--white-color);
   border-radius: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--white-color);
 }
 
@@ -38,34 +39,110 @@
   right: 20px;
 }
 
-/* 작품 정보 관련 */
-.banner__info {
-  position: absolute;
+/* ======== main_banner ======== */
+.main__banner {
+  width: 720px;
+  overflow: hidden;
+}
+
+.main__banner .banner__item {
+    /* 이미지 삽입시 삭제할 영역 */
+  width: 720px;
+  height: 480px;
+  background-color: coral;
+}
+
+.main__banner .banner__img {
+  width: 720px;
+}
+
+.main__banner .banner__list {
   width: 100%;
-  bottom: 0;
-  color: var(--white-color);
+  justify-content: flex-start;
 }
 
-.banner__title {
+.main__banner .banner__title {
   margin-left: 24px;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
-.banner__viewer {
+.main__banner .banner__viewer {
   display: flex;
   align-items: baseline;
   margin: 16px;
 }
 
-.banner__viewer p {
+.main__banner .banner__viewer p {
   padding: 0 8px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
-.banner__summary {
-  text-align: center;
-  padding: 12px 0;
-  font-size: 20px;
-  background-color: var(--main-point-color);
-  color: var(--black-color);
+/* ======== promotion banner ======== */
+.promotion__banner {
+  position: relative;
+  margin-top: 12px;
+  background-color: var(--white-color);
+  padding: 20px;
+}
+
+.promotion__banner .banner__prev, 
+.promotion__banner .banner__next {
+  position: absolute;
+  top: 50%;
+  padding: 8px 14px;
+  border: 1px solid lightgrey;
+  color: var(--non-focus-font-color);
+}
+
+.promotion__banner img {
+  width: 550px;
+  height: 100px;
+}
+
+/* ======== expect-new-top ======== */
+.expect-new__top .banner__list {
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.expect-new__top .banner__item {
+  position: relative;
+  display: block;
+
+  /* 이미지 삽입시 삭제할 영역 */
+  width: 335px;
+  height: 223px;
+  background-color: coral;
+  border-radius: 0 0 8px 8px;
+}
+
+.expect-new__top img {
+  border-radius: 8px;
+  width: 335px;
+  height: 223px;
+}
+
+.expect-new__top .banner__title {
+  margin-left: 12px;
+}
+
+.expect-new__top .banner__viewer {
+  display: flex;
+  align-items: baseline;
+}
+
+.expect-new__top .banner__viewer p {
+  padding: 12px;
+  font-size: 0.875rem;
+}
+
+.expect-new__top .divider {
+  height: 10px;
+}
+
+.expect-new__top .banner__summary {
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.875rem;
 }

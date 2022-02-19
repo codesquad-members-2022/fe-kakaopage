@@ -3,58 +3,115 @@
 .genres__list {
   margin-top: 20px;
   padding: 24px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: var(--white-color);
 }
 
-.genres__list li a {
+.genres__item {
   color: var(--non-focus-font-color);
 }
 
-.genres__list .genres--focused {
+.genres--focused {
   color: var(--black-color);
 }
 
-/* ======== select__day ======== */
-.select__day {
+/* ======== theme ======== */
+.theme {
+  margin-top: 12px;
+  padding: 20px;
+  background-color: var(--white-color);
+}
+
+.theme__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 4px;
+  column-gap: 4px;
+  text-align: center;
+}
+
+.theme__item {
+  padding: 24px;
+  background-color: var(--main-bg-color);
+}
+
+.item__text {
+  font-size: 1.125rem;
+  color: var(--black-color);
+}
+
+.item__highlight {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 14px;
+  background-color: var(--main-point-color);
+}
+
+/* ======== daily__top ======== */
+.daily__top .select__day {
+  padding: 16px 28px 0;
+}
+
+.daily__top .day {
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+
+.daily__top .select__day .day button {
+  font-size: 1.25rem;
+  color: var(--non-focus-font-color);
+}
+
+.daily__top .select__day .daily__top--focused {
+  border-bottom: 2px solid var(--main-point-color);
+}
+
+.daily__top .select__day .daily__top--focused button {
+  color: var(--black-color);
+}
+
+/* ======== daily__select__day ======== */
+.daily__select__day {
   margin-top: 12px;
   padding: 8px 0;
   border-bottom: 1px solid var(--main-bg-color);
   background-color: var(--white-color);
 }
 
-.select__day li button {
+.daily__select__day li button {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--non-focus-font-color);
 }
 
-.select__day .day--focused {
+.daily__select__day .day--focused {
   background-color: var(--main-point-color);
   color: var(--black-color);
 }
 
-/* ======== select__options ======== */
-.select__options {
+/* ======== daily__select__options ======== */
+.daily__select__options {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 16px;
   border-bottom: 1px solid var(--main-bg-color);
-  font-size: 16px;
+  font-size: 1rem;
   background-color: var(--white-color);
   color: var(--non-focus-font-color);
 }
 
-.select__options .options--focused {
+.daily__select__options .options--focused {
   color: var(--black-color);
 } 
 
 .options__btn li button {
   padding: 0 16px;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--non-focus-font-color);
 }
 
@@ -63,61 +120,69 @@
 }
 
 .options__genre .options__genre-btn {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--non-focus-font-color);
 }
 
-/* ======== daily__webtoons ======== */
-.daily__webtoons {  
-  padding: 20px 20px 0 20px;
-  background-color: var(--white-color);
+/* ======== daily__ranking ======== */
+.ranking__list {
+  flex-direction: column;
+  padding: 20px 0;
 }
 
-.webtoons__list {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.webtoons__item {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.item__privew {
-  margin-bottom: 12px;
-}
-
-.item__img img {
-  display: block;
-  border-radius: 8px 8px 0 0;
-}
-
-.item__rating {
+.ranking__item {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
-  padding: 8px;
-  border-radius: 0 0 8px 8px;
-  font-size: 95%;
-  background-color: var(--black-color);
-  color: var(--main-point-color);
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.item__rating .fa-clock {
+.item__ranking {
+  padding: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ranking__item .item__img {
+  width: 85px;
+  height: 115px;
+}
+
+.ranking__item .item__info {
+  padding: 20px;
+}
+
+.ranking__item .item__info p {
+  display: inline-block;
+  padding: 16px 0;
+  font-size: 0.875rem;
   color: var(--non-focus-font-color);
 }
 
-.item__title {
-  margin-bottom: 8px;
-  font-weight: 500;
+.ranking__item .item__title {
+  overflow: visible;
+  text-overflow: clip;
 }
 
-.item__rating .fa-star {
-  font-size: 95%;
-}
-
-.item__viewer, .item__info i {
-  font-size: 85%;
+.ranking__info .item__text {
+  padding: 4px;
   color: var(--non-focus-font-color);
+  font-size: 0.875rem;
+}
+
+/* ======== event ======== */
+.event__img {
+  padding: 20px;
+}
+
+.event__img img {
+  width: 680px;
+  height: 340px;
+}
+
+/* ======== move-app======== */
+.move-app {
+  margin-top: 12px;
+  padding: 24px;
+  text-align: center;
+  background-color: var(--main-point-color);
 }

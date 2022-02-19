@@ -1,0 +1,24 @@
+/* ======== container__title ======== */
+.container {
+  margin-top: 12px;
+  background-color: var(--white-color);
+}
+
+.container__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px 20px 0 24px;
+}
+
+.container__title > h3 {
+  font-weight: 500;
+}
+
+.container__title__more {
+  color: var(--non-focus-font-color);
+}
+
+.container__title__more i {
+  color: lightgrey;
+}
