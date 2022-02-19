@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>홈 | 카카오페이지</title>
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/index.css" />
 </head>
 <body>
   <header>
     <div class="header-wrapper">
       <div class="header-top">
-        <a href="#" class="logo"><img src="./img/logo-kakaopage.svg" alt="카카오페이지" /></a>
+        <a href="#" class="logo"><img src="src/img/logo-kakaopage.svg" alt="카카오페이지" /></a>
         <form action="#" class="search-form">
           <input type="text" />
           <button type="submit" class="search-btn pseudo-img">검색</button>
@@ -37,42 +37,6 @@
   </header>
   <main class="main-contents-container">
     <div class="main-contents">
-      <nav class="contents main-nav">
-        <ul>
-          <li class="selected">홈</li>
-          <li>요일연재</li>
-          <li>웹툰</li>
-          <li>소년</li>
-          <li>드라마</li>
-          <li>로맨스</li>
-          <li>로판</li>
-          <li>액션무협</li>
-          <li>BL</li>
-        </ul>
-      </nav>
-      <section class="contents main-banner">
-        <ul class="banner-container">
-          <li class="banner">
-            <a href="#">
-              <img src="./img/main-banner.png" alt="페이지 배너" />
-              <div class="banner-info">
-                <h2>8클래스 마법사의 회귀</h2>
-                <div>
-                  <span class="badge">이벤트</span>
-                  <span class="genre pseudo-img">웹툰</span>
-                  <span class="reader pseudo-img">80.5만명</span>
-                </div>
-              </div>
-              <p class="banner-text">시즌2 런칭 기념, 경품 이벤트!</p>
-            </a>
-          </li>
-        </ul>
-        <span class="banner-count">1 / 3</span>
-        <div class="banner-btn-group">
-          <button type="button" class="back pseudo-img">이전 배너</button>
-          <button type="button" class="next pseudo-img">이후 배너</button>
-        </div>
-      </section>
       <section class="contents category-menu">
         <div class="categories">
           <a href="#">오늘 UP <span class="badge">163</span></a>
@@ -86,163 +50,13 @@
       <section class="contents sub-banner">
         <div class="banner-container">
           <a href="#">
-            <img src="./img/sub-banner.png" alt="배너 이미지" />
+            <img src="src/img/sub-banner.png" alt="배너 이미지" />
           </a>
         </div>
         <div class="banner-btn-group">
           <button type="button" class="back pseudo-img">이전 배너</button>
           <button type="button" class="next pseudo-img">이후 배너</button>
         </div>
-      </section>
-      <section class="contents daily-series-ranking">
-        <div class="contents-header">
-          <h3 class="contents-title">요일 연재 TOP <span>(1,620)</span></h3>
-          <a href="#" class="pseudo-img">더보기</a>
-        </div>
-        <div class="contents-nav">
-          <ul>
-            <li>월</li>
-            <li class="selected">화</li>
-            <li>수</li>
-            <li>목</li>
-            <li>금</li>
-            <li>토</li>
-            <li>일</li>
-            <li>완결</li>
-          </ul>
-        </div>
-        <ol class="contents-list small">
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rank">1위</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rank">2위</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rank">3위</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rank">4위</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rank">5위</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-          <li class="list-item">
-            <a href="#">
-              <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
-                <div class="ranking-info">
-                  <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
-                </div>
-              </div>
-              <h4 class="title">이번 생은 가주가 되겠습니다</h4>
-              <span class="reader pseudo-img">122.6만명</span>
-            </a>
-          </li>
-        </ol>
       </section>
       <section class="contents anticipated-work">
         <div class="contents-header">
@@ -252,7 +66,7 @@
         <ul class="contents-list large">
           <li class="list-item banner">
             <a href="#">
-              <img src="./img/webtoon-image-2.png" alt="화타가 된 외과 의사" />
+              <img src="src/img/webtoon-image-2.png" alt="화타가 된 외과 의사" />
               <div class="banner-info">
                 <h2>화타가 된 외과 의사</h2>
                 <div>
@@ -266,7 +80,7 @@
           </li>
           <li class="list-item banner">
             <a href="#">
-              <img src="./img/webtoon-image-2.png" alt="화타가 된 외과 의사" />
+              <img src="src/img/webtoon-image-2.png" alt="화타가 된 외과 의사" />
               <div class="banner-info">
                 <h2>화타가 된 외과 의사</h2>
                 <div>
@@ -289,10 +103,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -302,10 +116,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -315,10 +129,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -328,10 +142,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -341,10 +155,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -362,10 +176,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -375,10 +189,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -388,10 +202,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -401,10 +215,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -414,10 +228,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -435,10 +249,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -448,10 +262,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -461,10 +275,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -474,10 +288,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -487,10 +301,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -508,10 +322,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -521,10 +335,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -534,10 +348,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -547,10 +361,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -560,10 +374,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -581,10 +395,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -594,10 +408,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -607,10 +421,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -620,10 +434,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -633,10 +447,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -654,10 +468,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -667,10 +481,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -680,10 +494,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -693,10 +507,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">9.9</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -706,10 +520,10 @@
           <li class="list-item">
             <a href="#">
               <div class="img-container">
-                <img src="./img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
+                <img src="src/img/webtoon-image.png" alt="이번 생은 가주가 되겠습니다" />
                 <div class="ranking-info">
                   <span class="rating pseudo-img">10.0</span>
-                  <img src="./img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
+                  <img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />
                 </div>
               </div>
               <h4 class="title">이번 생은 가주가 되겠습니다</h4>
@@ -728,8 +542,8 @@
             <a href="#">
               <span class="rank">1</span>
               <div class="img-container">
-                <img src="./img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
-                <img src="./img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
+                <img src="src/img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
+                <img src="src/img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
               </div>
               <div class="info-container">
                 <h4>
@@ -751,8 +565,8 @@
             <a href="#">
               <span class="rank">2</span>
               <div class="img-container">
-                <img src="./img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
-                <img src="./img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
+                <img src="src/img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
+                <img src="src/img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
               </div>
               <div class="info-container">
                 <h4>
@@ -774,8 +588,8 @@
             <a href="#">
               <span class="rank">3</span>
               <div class="img-container">
-                <img src="./img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
-                <img src="./img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
+                <img src="src/img/webtoon-image-3.jpeg" alt="이번 생은 가주가 되겠습니다" class="thumbnail" />
+                <img src="src/img/icons/badge_time.png" alt="기다리면 무료" class="badge" />
               </div>
               <div class="info-container">
                 <h4>
@@ -804,7 +618,7 @@
           <ul>
             <li>
               <a href="#">
-                <img src="./img/event-banner.png" alt="배너 이미지" />
+                <img src="src/img/event-banner.png" alt="배너 이미지" />
               </a>
             </li>
           </ul>
@@ -840,9 +654,10 @@
     </div>
     <p>ⓒ Kakao Entertainment Corp.</p>
     <div class="footer-image-container">
-      <img class="footer-image" src="./img/footer-image.png" alt="저작권 인증" />
+      <img class="footer-image" src="src/img/footer-image.png" alt="저작권 인증" />
       <p>저작권 ok</p>
     </div>
   </footer>
+  <script src="src/index.js" type="module"></script>
 </body>
 </html>
