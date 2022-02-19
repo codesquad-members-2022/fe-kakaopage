@@ -1,0 +1,17 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-black-font: #222;
+    --color-gray-border: #cfcfcf;
+    --color-gray-background: #e2e2e2;
+    --color-darkgray-font: #999;
+    --color-gray-font: #bbb;
+    --color-yellow: #ffd200;
+    --color-yellow-kakao: #fecc2e;
+    --color-black-contents-menu: #3a3a3a;
+    --color-contents-background: #f3f3f3;
+    --color-black-thumb: #242526;
+    --color-gray-reader: #9c9c9c;
+    --color-gray-week-border: #f1f1f1;
+    --color-gray-week-font: #bbb;
+}

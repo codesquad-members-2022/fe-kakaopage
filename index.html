@@ -8,19 +8,19 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header flex__center">
         <div class="header__top">
-            <img class="header__log" src="resources/images/logo-kakaopage.svg" alt="kakaopage">
-            <div class="header__sub">
-                <div class="search">
+            <img class="header__log" src="resources/images/icon/logo-kakaopage.svg" alt="kakaopage">
+            <div class="header__sub flex__center">
+                <div class="search flex__center border__ellipse">
                     <form class="search__form">
                         <input type="text" class="search__input">
                     </form>
-                    <img src="resources/images/btn_search.png" alt="검색버튼" class="search__button">
+                    <img src="resources/images/icon/btn_search.png" alt="검색버튼" class="search__button">
                 </div>
-                <img src="resources/images/pc-logo-stage.svg" alt="스테이지" class="header__stage">
+                <img src="resources/images/icon/pc-logo-stage.svg" alt="스테이지" class="header__stage">
                 <div class="header__menu">
-                    <div class="menu">
+                    <div class="menu flex__center">
                         <button class="menu__button">캐시충전</button>
                         <div class="menu__separator"></div>
                         <button class="menu__button">로그인</button>
@@ -28,8 +28,8 @@
                 </div>
             </div>
         </div>
-        <nav class="header-nav">
-            <ul class="header-nav__list">
+        <nav class="header-nav flex__center">
+            <ul class="header-nav__list flex__center">
                 <li class="header-nav__item">
                     <a href="#">홈</a>
                     <div class="header-nav__badge">
@@ -38,14 +38,14 @@
                 </li>
                 <li class="header-nav__item header-nav__item--selected">
                     <a href="#">웹툰</a>
-                    <img src="resources/images/icon_clock.png" alt="연재아이콘">
+                    <img src="resources/images/icon/icon_clock.png" alt="연재아이콘">
                     <div class="header-nav__badge">
                         <div class="header-nav__badge--icon"></div>
                     </div>
                 </li>
                 <li class="header-nav__item">
                     <a href="#">웹소설</a>
-                    <img src="resources/images/icon_clock.png" alt="연재아이콘">
+                    <img src="resources/images/icon/icon_clock.png" alt="연재아이콘">
                     <div class="header-nav__badge">
                         <div class="header-nav__badge--icon"></div>
                     </div>
@@ -72,8 +72,8 @@
         </nav>
     </header>
     <main class="main">
-        <nav class="main-nav">
-            <ul class="main-nav__list">
+        <nav class="main-nav flex__center">
+            <ul class="main-nav__list flex__center">
                 <li class="main-nav__item main-nav__item--selected">
                     <a href="#">홈</a>
                 </li>
@@ -103,9 +103,914 @@
                 </li>
             </ul>
         </nav>
+        <section class="main-banner section">
+            <div class="banner">
+                <img src="resources/images/thumbnail/main_banner" alt="메인배너 이미지" class="banner__image">
+                <div class="banner__paging z-index_1">
+                    <img src="resources/images/icon/ic-banner-paging-back-nor.svg" alt="메인배너 이전버튼"
+                        class="banner__paging--icon">
+                    <img src="resources/images/icon/ic-banner-paging-next-nor.svg" alt="메인배너 다음버튼"
+                        class="banner__paging--icon">
+                </div>
+                <div class="banner__dimmed z-index_1"></div>
+                <div class="banner__contents z-index_1 ">
+                    <div class="banner__info">
+                        <div class="banner__info--title">
+                            <p>남편님,</p>
+                            <p>다시 결혼해 주세요!</p>
+                        </div>
+                        <div class="banner__info--detail flex__center">
+                            <img src="resources/images/icon/badge-bigthum-new.svg" alt="신작 아이콘" class="banner__icon--badge">
+                            <div>
+                                <img src="resources/images/icon/ico-bigthum-wait.svg" alt="연재 아이콘">
+                                <span>웹툰</span>
+                            </div>
+                            <img src="resources/images/icon/line_top_banner.png" alt="구분선" class="banner__info--separator">
+                            <div>
+                                <img src="resources/images/icon/ico-bigthum-person.svg" alt="사람 아이콘">
+                                <span>22.7만명</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="banner__bottom">나의 반려는 오직 당신뿐이에요</span>
+                </div>
+                <div class="banner__order z-index_1">
+                    <span>4 / 4</span>
+                </div>
+            </div>
+        </section>
+        <section class="contents_menu section">
+            <div class="contents_menu__container flex__center">
+                <a href="#" class="contents_menu__item contents_menu__item--up flex__center">
+                    <span class="contents_menu__title">오늘 UP</span>
+                    <div class="count_badge">
+                        <span class="count_badge__text border__ellipse">229</span>
+                    </div>
+                </a>
+                <a href="#" class="contents_menu__item contents_menu__item--new flex__center">
+                    <span class="contents_menu__title">오늘 신작</span>
+                    <div class="count_badge">
+                        <span class="count_badge__text border__ellipse">1</span>
+                    </div>
+                    <a href="#" class="contents_menu__item contents_menu__item--origin flex__center">
+                        <span class="contents_menu__title">오리지널</span>
+                        <div class="count_badge">
+                            <span class="count_badge__text border__ellipse">2,336</span>
+                        </div>
+                    </a>
+                    <a href="#" class="contents_menu__item contents_menu__item--end flex__center">
+                        <span class="contents_menu__title">완결까지 정주행</span>
+                    </a>
+                    <a href="#" class="contents_menu__item contents_menu__item--event flex__center">
+                        <span class="contents_menu__title">독립운동가 웹툰</span>
+                    </a>
+                    <a href="#" class="contents_menu__item contents_menu__item--ranking flex__center">
+                        <span class="contents_menu__title">오늘 랭킹</span>
+                        <div class="count_badge">
+                            <span class="count_badge__text border__ellipse">1위</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+        <section class="sub-banner section">
+            <div class="banner flex__center">
+                <img src="resources/images/thumbnail/sub_banner.png" alt="서브배너 이미지" class="sub-banner__image">
+                <div class="banner__paging z-index_1">
+                    <img src="resources/images/icon/ic-paging-back-nor.svg" alt="메인배너 이전버튼" class="banner__paging--icon">
+                    <img src="resources/images/icon/ic-paging-next-nor.svg" alt="메인배너 다음버튼" class="banner__paging--icon">
+                </div>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">요일연재 TOP</span>
+                <span class="contents-container__comic-count">(1,626)</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <nav class="week-nav">
+                <ul class="week-nav__list flex__center">
+                    <li class="week-nav__item mon">월</li>
+                    <li class="week-nav__item tue">화</li>
+                    <li class="week-nav__item wed">수</li>
+                    <li class="week-nav__item thu">목</li>
+                    <li class="week-nav__item fri week-nav__item-selected">금</li>
+                    <li class="week-nav__item sat">토</li>
+                    <li class="week-nav__item sun">일</li>
+                    <li class="week-nav__item end">완결</li>
+                </ul>
+            </nav>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/resource_thum.png" alt="도굴왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">도굴왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">200.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">기대신작 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="mini-banner">
+                <ul class="banner-list flex__center">
+                    <li class="banner-item">
+                        <img src="resources/images/thumbnail/expect_new_1" alt="메인배너 이미지">
+                    </li>
+                    <li class="banner-item">
+                        <img src="resources/images/thumbnail/expect_new_1" alt="메인배너 이미지">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">로맨스 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_1.png" alt="비뢰도" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">비뢰도</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">104.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_2.png" alt="생사결:여래의 복수" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">생사결: 여래의 복수</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">58.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_3.png" alt="호위무사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.7</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">호위무사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">23.5만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_4.png" alt="천년방사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">천년방사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">21.7만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_5.png" alt="전왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.4</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">전왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">9.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">로판 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_1.png" alt="비뢰도" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">비뢰도</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">104.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_2.png" alt="생사결:여래의 복수" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">생사결: 여래의 복수</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">58.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_3.png" alt="호위무사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.7</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">호위무사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">23.5만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_4.png" alt="천년방사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">천년방사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">21.7만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_5.png" alt="전왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.4</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">전왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">9.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">드라마 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_1.png" alt="비뢰도" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">비뢰도</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">104.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_2.png" alt="생사결:여래의 복수" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">생사결: 여래의 복수</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">58.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_3.png" alt="호위무사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.7</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">호위무사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">23.5만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_4.png" alt="천년방사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">천년방사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">21.7만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_5.png" alt="전왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.4</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">전왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">9.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">BL/GL TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_1.png" alt="비뢰도" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">비뢰도</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">104.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_2.png" alt="생사결:여래의 복수" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">생사결: 여래의 복수</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">58.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_3.png" alt="호위무사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.7</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">호위무사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">23.5만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_4.png" alt="천년방사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">천년방사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">21.7만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_5.png" alt="전왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.4</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">전왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">9.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">소년 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="comic-list flex__center">
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_1.png" alt="비뢰도" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">비뢰도</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">104.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_2.png" alt="생사결:여래의 복수" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">생사결: 여래의 복수</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">58.1만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_3.png" alt="호위무사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.7</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">호위무사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">23.5만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_4.png" alt="천년방사" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.8</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">천년방사</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">21.7만명</span>
+                        </div>
+                    </li>
+                    <li class="comic-list__item flex__center">
+                        <div class="comic-thumb flex__center">
+                            <img src="resources/images/thumbnail/action_5.png" alt="전왕" class="comic-thumb__image">
+                            <div class="comic-thumb__bottom flex__center">
+                                <div>
+                                    <img src="resources/images/icon/badge-thumbnail-star.svg" alt="별 아이콘" class="comic-thumb__star">
+                                    <span class="comic-thumb__rating">9.4</span>
+                                </div>
+                                <img src="resources/images/icon/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘" class="comic-thumb__wait">
+                            </div>
+                        </div>
+                        <span class="comic-list__title">전왕</span>
+                        <div class="comic-list__info">
+                            <img src="resources/images/icon/icon_up.svg" alt="업데이트 아이콘" class="icon-up">
+                            <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                            <span class="comic-list__info--reader">9.9만명</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">일간 랭킹 TOP</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main">
+                <ul class="rank__list flex__center">
+                    <il class="rank__item flex__center">
+                        <span class="rank__item--ranking">1</span>
+                        <div class="rank__item--image">
+                            <img src="resources/images/thumbnail/resource_today_2.jpeg" alt="일간 랭킹 1위">
+                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
+                        </div>
+                        <div class="rank__item--info">
+                            <span class="rank__item--title">남편님, 다시 결혼해주세요!</span>
+                            <div class="rank__item--detail flex__center">
+                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                                <span class="comic-list__info--reader">31만명</span>
+                                <div class="separator"></div>
+                                <span>기다무웹툰</span>
+                                <div class="separator"></div>
+                                <span>로판</span>
+                                <div class="separator"></div>
+                                <span>지은설,연홍,세리안</span>
+                            </div>
+                            <span class="rank__item--week">화 연재</span>
+                        </div>
+                    </il>
+                    <il class="rank__item flex__center">
+                        <span class="rank__item--ranking">2</span>
+                        <div class="rank__item--image">
+                            <img src="resources/images/thumbnail/resource_today_1.jpeg" alt="일간 랭킹 2위">
+                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
+                        </div>
+                        <div class="rank__item--info">
+                            <span class="rank__item--title">이번 생은 가주가 되겠습니다</span>
+                            <div class="rank__item--detail flex__center">
+                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                                <span class="comic-list__info--reader">122.7만명</span>
+                                <div class="separator"></div>
+                                <span>기다무웹툰</span>
+                                <div class="separator"></div>
+                                <span>로판</span>
+                                <div class="separator"></div>
+                                <span>앤트스튜디오,몬,김로아</span>
+                            </div>
+                            <span class="rank__item--week">월 연재</span>
+                        </div>
+                    </il>
+                    <il class="rank__item flex__center">
+                        <span class="rank__item--ranking">3</span>
+                        <div class="rank__item--image">
+                            <img src="resources/images/thumbnail/resource_today_3.jpeg" alt="일간 랭킹 3위">
+                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
+                        </div>
+                        <div class="rank__item--info">
+                            <span class="rank__item--title">남주를 주웠더니 남편이 생겨버렸다</span>
+                            <div class="rank__item--detail flex__center">
+                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
+                                <span class="comic-list__info--reader">51.2만명</span>
+                                <div class="separator"></div>
+                                <span>기다무웹툰</span>
+                                <div class="separator"></div>
+                                <span>로판</span>
+                                <div class="separator"></div>
+                                <span>마리씨,서촌,초암</span>
+                            </div>
+                            <span class="rank__item--week">원 연재</span>
+                        </div>
+                    </il>
+                </ul>
+            </div>
+        </section>
+        <section class="contents-container section flex__center">
+            <div class="contents-container__header flex__center">
+                <span class="contents-container__title">추천 이벤트</span>
+                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+            </div>
+            <div class="contents-container__main flex__center">
+                <div class="event-banner flex__center">
+                    <img src="resources/images/thumbnail/resource_event_banner.png" alt="이벤트 배너"class="event-banner_image">
+                    <div class="event-banner_order z-index_1">
+                        <span>◁ 4 / 8 ▷</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="btn__app">
+                <img src="resources/images/thumbnail/appDownload.png" alt="카카오페이지 앱 다운로드 버튼">
+        </button>
     </main>
     <footer class="footer">
+        <div class="footer__left">
+            <div class="company__info">
+                <ul class="company__info--list flex__center">
+                    <li class="company__info--item"><a>회사소개</a></li>
+                    <li class="company__info--item"><a>이용약관</a></li>
+                    <li class="company__info--item"><a>개인정보처리방침</a></li>
+                    <li class="company__info--item"><a>청소년보호정책</a></li>
+                    <li class="company__info--item"><a>공지사항</a></li>
+                </ul>
+            </div>
+            <div class="company__owner">
+                <span>(주)카카오엔터테인먼트 사업자 정보▾</span>
+                <div class="separator"></div>
+                <span><u>사업자 정보 확인</u></span>
+            </div>
+            <div class="company__info--eng">
+                <span>ⓒ Kakao Entertainment Corp.</span>
+            </div>
+        </div>
     </footer>
 </body>
-
 </html>
