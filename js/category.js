@@ -2,7 +2,7 @@ import { $ } from "./utils.js";
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 
 export const category = {
-    menuClick: function() {
+    menuClick() {
         const categoryElement = $(".main__nav-ul");
         categoryElement.addEventListener("click", (e) => {
             if(e.target.tagName === 'A') {
@@ -13,7 +13,7 @@ export const category = {
             }
         });
     },
-    removeLinkColor: function(elements) {
+    removeLinkColor(elements) {
         for(const element of elements) {
             element.firstChild.classList.remove('main__nav_link_active')
         }
