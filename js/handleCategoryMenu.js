@@ -1,15 +1,15 @@
 import { $ } from "./utils.js";
-import { main } from "./main.js";
+import { ContentListInfos } from "./ContentListInfos.js";
 
 export const handleCategoryMenu = (menu) => {
     const carousel = $(".carousel");
-    main.removeAdvertiseComponent();
-    main.removeRecommendationComponent();
-    main.removeIssueComponent();
-    main.removeWeeksComponent();
+    ContentListInfos.removeAdvertiseComponent();
+    ContentListInfos.removeRecommendationComponent();
+    ContentListInfos.removeIssueComponent();
+    ContentListInfos.removeWeeksComponent();
 
-    carousel.insertAdjacentHTML("afterend", main.addAdvertiseComponent(menu) ? main.addAdvertiseComponent(menu) : "");
-    carousel.insertAdjacentHTML("afterend", main.addRecommendationComponent(menu) ? main.addRecommendationComponent(menu) : "");
-    carousel.insertAdjacentHTML("afterend", main.addIssueComponent(menu) ? main.addIssueComponent(menu) : "");
-    carousel.insertAdjacentHTML("afterend", main.addWeeksComponent(menu) ? main.addWeeksComponent(menu) : "");
+    carousel.insertAdjacentHTML("afterend", ContentListInfos.addAdvertiseComponent(menu) ? ContentListInfos.addAdvertiseComponent(menu) : "");
+    carousel.insertAdjacentHTML("afterend", ContentListInfos.addRecommendationComponent(menu) ? ContentListInfos.addRecommendationComponent(menu) : "");
+    carousel.insertAdjacentHTML("afterend", ContentListInfos.addIssueComponent(menu) ? ContentListInfos.addIssueComponent(menu) : "");
+    carousel.insertAdjacentHTML("afterend", ContentListInfos.addWeeksComponent(menu) ? ContentListInfos.addWeeksComponent(menu) : "");
 }
