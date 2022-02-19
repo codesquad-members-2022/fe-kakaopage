@@ -19,46 +19,58 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <h1 class="logo">kakaopage</h1>
-        <div class="search-buttons">
-          <form class="search-form">
-            <input class="search__input" type="text" />
-            <button type="submit" class="search__button">
-              <img
-                class="search__img"
-                src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a"
-                alt="search button"
-              />
-            </button>
-          </form>
-          <div class="header__menu">
-            <button type="button" class="btn">
-              <img
-                src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
-                alt="stage button"
-              />
-            </button>
-            <button type="button" class="btn">캐시충전</button>
-            <div class="divider"></div>
-            <button type="button" class="btn">로그인</button>
-          </div>
+      <div class="header__wrap">
+        <h1 class="header__logo">
+          <a href="#">
+            <img
+              src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"
+              alt="kakaopage logo"
+            />
+          </a>
+        </h1>
+
+        <form class="header__search-form">
+          <input class="search__input" type="text" />
+          <button class="search__button" type="submit">
+            <img
+              class="search__img"
+              src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a"
+              alt="search button"
+            />
+          </button>
+        </form>
+
+        <div class="header__menuBox">
+          <a href="#" class="header__menu">
+            <img
+              src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
+              alt="stage button"
+            />
+          </a>
+          <a href="#" class="header__menu">캐시충전</a>
+          <div class="header__menu-separator"></div>
+          <a href="#" class="header__menu">로그인</a>
         </div>
       </div>
-
-      <ul class="header__navbar">
-        <li class="nav__subject selected" id="home">홈</li>
-        <li class="nav__subject alarm" id="webtoon">
-          웹툰 • <i class="fas fa-clock"></i>
-        </li>
-        <li class="nav__subject alarm" id="novel">
-          웹소설 • <i class="fas fa-clock"></i>
-        </li>
-        <li class="nav__subject alarm" id="movie">영화</li>
-        <li class="nav__subject alarm" id="broad">방송</li>
-        <li class="nav__subject alarm" id="book">책</li>
-      </ul>
     </header>
+
+    <nav class="gnb">
+      <ul class="gnb__list">
+        <li class="gnb__category selected" id="home">
+          <a href="#">홈</a>
+        </li>
+        <li class="gnb__category alarm" id="webtoon">
+          <a href="#">웹툰 • <i class="fas fa-clock"></i></a>
+        </li>
+        <li class="gnb__category alarm" id="novel">
+          <a href="#">웹소설 • <i class="fas fa-clock"></i></a>
+        </li>
+        <li class="gnb__category alarm" id="movie"><a href="#">영화</a></li>
+        <li class="gnb__category alarm" id="broad"><a href="#">방송</a></li>
+        <li class="gnb__category alarm" id="book"><a href="#">책</a></li>
+      </ul>
+    </nav>
+
     <main class="main">
       <ul class="mainbox main__navbar">
         <li class="nav__category selected">홈</li>
