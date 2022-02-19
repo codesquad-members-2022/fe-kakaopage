@@ -4,75 +4,92 @@
 /*    border: black solid 1px;*/
 /*}*/
 
-header {
-    background-color: var(--main-white);
+/*
+common
+ */
+
+.l-center {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.l-inline {
+    display: flex;
+    flex-flow: row;
+}
+
+.margin-center {
     margin: 0 auto;
     width: 50%
 }
 
+/*
+header
+ */
+.headerFix {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 130px;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+
 .head {
-    display: flex;
-    flex-flow: row;
     justify-content: space-between;
-    align-items: center;
     height: 80px;
     width: 100%
 }
 
-.head__h1 {
-    font-size: 30px;
+.head__title {
+    font-size: 34px;
 }
-.head__item {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: center;
+.head__menus {
+    justify-content: space-between;
     height: 30px;
 }
 
-.head__form {
-    border-color: var(--main-gray);
-    border: 1px solid;
-    border-radius: 5px;
-    margin-right: 5px;
+.head__search {
+    border: 1px solid var(--main-gray);
+    border-radius: 17px;
+    width: 150px;
     height: 30px;
-    display: flex;
-    flex-flow: row;
-    align-items: stretch;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
-.head__form__input {
+.head__search__input {
     width: 100px;
     border: 0;
     outline: 0;
+    line-height: 20px;
 }
 
-.head__form__img {
+.head__search__button {
     width: 20px;
+    height: 20px;
+    border: 0;
+    background: url('../images/ico-btn-search.png') no-repeat center / 100% auto;
 }
 
-.head__ul {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    height: 95%;
+.head__stage {
+    margin: 0 10px;
 }
 
-.head__ul__li {
-    width: 80px;
-    line-height: 100%;
-    font-size: 20px;
+.head__users {
+    width: 130px;
+    justify-content: space-between;
+}
+
+.head__user {
+    font-size: 19px;
     text-align: center;
     color: lightgray;
-}
-
-.head__ul__img {
-    position: relative;
-    top: 2px;
-}
-
-.head__ul__div {
-    width: 5px;
 }
 
 .headNav {
@@ -81,12 +98,23 @@ header {
     height: 30px;
 }
 
-.headNav__ul {
-    display: flex;
-    flex-flow: row;
-    flex-basis: 100%;
+.headNav__menus {
     justify-content: space-evenly;
     height: 100%
+}
+
+.headNav__menu {
+    height: 100%;
+    width: 15%;
+    justify-content: center;
+}
+
+.headNav__link {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-black);
+    text-align: center;
+    text-decoration: none;
 }
 
 .headNav__under {

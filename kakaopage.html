@@ -6,78 +6,182 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
-    <header>
-        <div class="head">
-           <h1 class="head__h1">kakaopage</h1>
-           <div class="head__item">
-               <form class="head__form">
-                   <input class="head__form__input" type="text">
-                   <img class="head__form__img" src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색버튼">
-               </form>
-                <ul class="head__ul">
-                    <li class="head__ul__li head__ul__img"><img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="stage버튼"></li>
-                    <li class="head__ul__li">캐시충전</li>
-                    <div class="head__ul__div">|</div>
-                    <li class="head__ul__li">로그인</li>
-                </ul>
+    <div class="headerFix">
+        <header class="margin-center">
+            <div class="l-center head">
+               <h1 class="head__title">kakaopage</h1>
+               <div class="l-center head__menus">
+                   <form class="l-center head__search">
+                       <input class="head__search__input" type="text">
+                       <button type="button" class="head__search__button"></button>
+                   </form>
+                   <a href="" class="l-center head__stage"><img src="./images/ico-stage.svg" alt="stage버튼"></a>
+                   <ul class="l-center head__users">
+                        <li class="head__user">캐시충전</li>
+                        <span class="head__user">|</span>
+                        <li class="head__user">로그인</li>
+                   </ul>
+               </div>
             </div>
-        </div>
-        <nav class="headNav">
-            <ul class="headNav__ul">
-                <li><a href="">홈</a></li>
-                <li class="headNav__under"><a href=""><img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰버튼"></a></li>
-                <li><a href="">웹소설</a></li>
-                <li><a href="">영화</a></li>
-                <li><a href="">방송</a></li>
-                <li><a href="">책</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+            <nav class="headNav">
+                <ul class="l-center headNav__menus">
+                    <li class="l-center headNav__menu"><a href="" class="headNav__link">홈</a></li>
+                    <li class="l-center headNav__menu headNav__under"><a href="" class="headNav__link">웹툰</a></li>
+                    <li class="l-center headNav__menu"><a href="" class="headNav__link">웹소설</a></li>
+                    <li class="l-center headNav__menu"><a href="" class="headNav__link">영화</a></li>
+                    <li class="l-center headNav__menu"><a href="" class="headNav__link">방송</a></li>
+                    <li class="l-center headNav__menu"><a href="" class="headNav__link">책</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main class="main">
         <nav class="mainNav">
-            <ul class="mainNav__ul">
-                <li>홈</li>
-                <li>요일연재</li>
-                <li>웹툰</li>
-                <li>소년</li>
-                <li>드라마</li>
-                <li>로맨스</li>
-                <li>로판</li>
-                <li>액션무협</li>
-                <li>BL</li>
+            <ul class="l-inline mainNav__menus">
+                <li class="mainNav__menu">홈</li>
+                <li class="mainNav__menu">요일연재</li>
+                <li class="mainNav__menu menu-on">웹툰</li>
+                <li class="mainNav__menu">소년</li>
+                <li class="mainNav__menu">드라마</li>
+                <li class="mainNav__menu">로맨스</li>
+                <li class="mainNav__menu">로판</li>
+                <li class="mainNav__menu">액션무협</li>
+                <li class="mainNav__menu">BL</li>
             </ul>
         </nav>
-        <div class="contents">
-            <div class="contents__view">
-                <img class="contents__img" src="//dn-img-page.kakao.com/download/resource?kid=c1vLFi/hzp2j6zsZO/WwKSt7QwX7ty8gYM1fh9qk" alt="정령왕의딸">
-                <div class="contents__text">
-                    <div class="contents_text__name">정령왕의 딸</div>
-                    <div class="contents_text__info">
-                        <div class="contents_text__event">이벤트</div>
-                        <span>웹툰</span>
-                        <span>|</span>
-                        <span>72.6만</span>
-                    </div>
+        <div class="margin-center contents">
+            <img class="contents__img" src="./images/img-정령왕의딸.png" alt="정령왕의딸">
+            <button type="button" class="contents__prevButton"></button>
+            <button type="button" class="contents__nextButton"></button>
+            <div class="contents__text">
+                <div class="text__name">정령왕의 딸</div>
+                <div class="text__info">
+                    <div class="text__event">이벤트</div>
+                    <span class="text__info-style">웹툰</span>
+                    <span class="text__info-style">|</span>
+                    <span class="text__info-style">72.6만</span>
                 </div>
-                <div class="contents__sentence">
-                    우리 아빠가 정령왕의 딸이라구?!
-                </div>
+            </div>
+            <div class="contents__sentence">
+                우리 아빠가 정령왕의 딸이라구?!
             </div>
         </div>
         <div class="category">
-            <ul class="category__ul">
-                <li>오늘 UP</li>
-                <li>오늘 신작</li>
-                <li>오리지널</li>
-                <li>완결까지 정주행</li>
-                <li>독립운동가 웹툰</li>
-                <li>오늘 랭킹</li>
+            <ul class="l-center category__menus">
+                <li class="category__menu">오늘 UP</li>
+                <li class="category__menu">오늘 신작</li>
+                <li class="category__menu">오리지널</li>
+                <li class="category__menu">완결까지 정주행</li>
+                <li class="category__menu">독립운동가 웹툰</li>
+                <li class="category__menu">오늘 랭킹</li>
             </ul>
+        </div>
+        <div class="margin-center daily">
+            <ul class="l-center daily__nav">
+                <li><button type="button" class="daily__button daily__button-on">월</button></li>
+                <li><button type="button" class="daily__button">화</button></li>
+                <li><button type="button" class="daily__button">수</button></li>
+                <li><button type="button" class="daily__button">목</button></li>
+                <li><button type="button" class="daily__button">금</button></li>
+                <li><button type="button" class="daily__button">토</button></li>
+                <li><button type="button" class="daily__button">일</button></li>
+                <li><button type="button" class="daily__button">전체</button></li>
+            </ul>
+            <div class="l-inline daily__contents">
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img1.png" alt="악당의 아빠를 꼬셔라">
+                        <div class="daily__bar">1위</div>
+                    </div>
+                    <div class="daily__title">악당의 아빠를 꼬셔라</div>
+                    <div class="daily__views">159.3만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img2.png" alt="나 혼자만 레벨업">
+                        <div class="daily__bar">2위</div>
+                    </div>
+                    <div class="daily__title">나 혼자만 레벨업</div>
+                    <div class="daily__views">417.4만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img3.png" alt="이번 생은 가주가 되겠습니다">
+                        <div class="daily__bar">3위</div>
+                    </div>
+                    <div class="daily__title">이번 생은 가주가 되겠습니다</div>
+                    <div class="daily__views">122.7만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img1.png" alt="악당의 아빠를 꼬셔라">
+                        <div class="daily__bar">1위</div>
+                    </div>
+                    <div class="daily__title">악당의 아빠를 꼬셔라</div>
+                    <div class="daily__views">159.3만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img2.png" alt="나 혼자만 레벨업">
+                        <div class="daily__bar">2위</div>
+                    </div>
+                    <div class="daily__title">나 혼자만 레벨업</div>
+                    <div class="daily__views">417.4만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img3.png" alt="이번 생은 가주가 되겠습니다">
+                        <div class="daily__bar">3위</div>
+                    </div>
+                    <div class="daily__title">이번 생은 가주가 되겠습니다</div>
+                    <div class="daily__views">122.7만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img1.png" alt="악당의 아빠를 꼬셔라">
+                        <div class="daily__bar">1위</div>
+                    </div>
+                    <div class="daily__title">악당의 아빠를 꼬셔라</div>
+                    <div class="daily__views">159.3만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img2.png" alt="나 혼자만 레벨업">
+                        <div class="daily__bar">2위</div>
+                    </div>
+                    <div class="daily__title">나 혼자만 레벨업</div>
+                    <div class="daily__views">417.4만명</div>
+                </div>
+                <div class="daily__content">
+                    <div class="content__inner">
+                        <img class="daily__img" src="./images/daily-img3.png" alt="이번 생은 가주가 되겠습니다">
+                        <div class="daily__bar">3위</div>
+                    </div>
+                    <div class="daily__title">이번 생은 가주가 되겠습니다</div>
+                    <div class="daily__views">122.7만명</div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <footer>footer</footer>
+    <footer class="footer">
+        <div class="margin-center footerWrap">
+            <nav class="footer__menus">
+                <a class="footer__menu" href="">회사소개</a>
+                <span class="footer__menu">&#183</span>
+                <a class="footer__menu" href="">이용약관</a>
+                <span class="footer__menu">&#183</span>
+                <a class="footer__menu" href="">회사소개</a>
+            </nav>
+            <br>
+            <p>
+                <a class="footer__menu footer__kakao" href="">© Kakao Entertainment Corp.</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
