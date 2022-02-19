@@ -62,6 +62,7 @@ let template = '';
 const map = new Map()
 AddEvent(nav, 'click', 'li', ({target})=>{
     nav.querySelector('.selected').classList.remove('selected')
+    target.classList.toggle('selected')
     const li = target.closest('li');
     li.classList.add('selected');
     if (li.classList.contains('toon')) {
@@ -92,5 +93,10 @@ AddEvent(topBanner, 'click', '.daily', e=>{
 
 renderHeader();
 renderHome();
+
+let data;
+fetch('./data.json').then(res=>res.json()).then(json=>data=json)
+console.log
+
 
 

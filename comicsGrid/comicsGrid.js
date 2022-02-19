@@ -1,9 +1,7 @@
 import {randomGen, shuffled} from "../utils.js";
 
 export const comicItem = (thumbnails,
-    {clock,
-    Person,
-    rating}, target) => {
+    {clock, Person, rating}, target) => {
     const arr = shuffled(rating,2);
     const template =  `
     <a class="wrapper">
