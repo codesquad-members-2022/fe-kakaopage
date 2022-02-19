@@ -14,10 +14,10 @@
   margin: 0;
 }
 
-.page-main__nav > ul > li {
+.nav__list > li {
   color: #c5c5c5;
 }
 
-.page-main__nav > ul > li:first-child {
+#selected {
   color: black;
 }
