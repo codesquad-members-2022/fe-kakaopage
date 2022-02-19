@@ -4,6 +4,11 @@ const days = document.querySelector(".days");
 const headerNav = document.querySelector(".header__nav");
 const mainNav = document.querySelector(".main__nav");
 const daysNav = document.querySelector(".days__nav");
+const navs = [headerNav, mainNav, daysNav];
+const assembly = {
+  홈: [ads],
+  웹툰: [mainNav, ads, days],
+};
 
 const showSelectedNav = (event) => {
   let type = "";
@@ -14,11 +19,7 @@ const showSelectedNav = (event) => {
     main.innerHTML = "";
     type = event.target.innerHTML;
   }
-  const appendedParts = {
-    홈: [ads],
-    웹툰: [mainNav, ads, days],
-  };
-  appendedParts[type].forEach((part) => {
+  assembly[type].forEach((part) => {
     return main.append(part);
   });
 };
@@ -39,11 +40,12 @@ const markSelectedNavEvent = (nav) => {
   });
 };
 
-headerNav.querySelectorAll("span").forEach((child) => {
-  child.addEventListener("click", showSelectedNav);
-});
+const init = (main) => {
+  headerNav.querySelectorAll("span").forEach((child) => {
+    child.addEventListener("click", showSelectedNav);
+  });
+  navs.forEach((nav) => markSelectedNavEvent(nav));
+  showSelectedNav(main);
+};
 
-markSelectedNavEvent(headerNav);
-markSelectedNavEvent(mainNav);
-markSelectedNavEvent(daysNav);
-showSelectedNav("홈");
+init("홈");
