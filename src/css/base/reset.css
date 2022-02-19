@@ -3,20 +3,20 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--color-light-grey);
   margin: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: sans-serif;
+  background-color: var(--color-light-grey);
 }
 
-ul {
-  padding: 0;
-}
-
+ul,
 li {
+  padding: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -33,7 +33,23 @@ input {
   outline: inherit;
 }
 
+h1,
+h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:visited,
+a:link {
+  text-decoration: none;
 }
