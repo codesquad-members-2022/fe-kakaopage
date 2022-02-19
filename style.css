@@ -6,6 +6,8 @@
 :root {
   --background-color-yellow: #FFD220;
   --background-color-gray: #eee;
+  --font-color-light-gray: #bbb;
+  --font-color-dark-gray: #999;
 }
 
 .category_align {
@@ -27,7 +29,7 @@
 }
 
 .none {
-  display: none;
+  display: hidden;
 }
 
 .bold {
@@ -68,7 +70,7 @@ input {
   width: 20px;
 }
 
-.search-box {
+.search_box {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
@@ -108,17 +110,17 @@ input {
   height: 67px;
 }
 
-.promotion_banner {
+.promotion_webtoon {
   width: 725px;
   height: 500px;
 }
 
-.promotion_banner > img {
+.promotion_webtoon > img {
   width: 725px;
   height: 450px;
 }
 
-.promotion_phrase {
+.promotion_webtoon_phrase {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,6 +147,10 @@ input {
 
 .webtoon_genre_filter {
   list-style: none;
+}
+
+.webtoon_genre_filter > .webtoon_genre {
+  display: none;
 }
 
 .webtoon_board {
@@ -179,8 +185,9 @@ input {
 
 .webtoon_details > img {
   max-height: 13px;
+  margin-right: 4px;
 }
 
 .webtoon_details > .read_count {
-  font-size: 13px
+  font-size: 13px;
 }
