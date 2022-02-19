@@ -1,18 +1,11 @@
-import { createEl } from "../js/utils.js";
-import { topicComponent } from "../component/topicComponent.js";
+import { TopicComponent } from "../component/TopicComponent.js";
 import { ImagePosterComponent } from "../component/ImagePosterComponent.js";
 
-export const rowListContainer = (obj, contents) => {
-    const wrapper = createEl("div");
-    const innerWrapper = createEl("div");
-    wrapper.classList.add("rowList", obj.name);
-    innerWrapper.classList.add("rowList__inner");
-
-    wrapper.appendChild(topicComponent(obj.title));
-
-    for(let i = 0; i < contents.length; i++) {
-        innerWrapper.appendChild(ImagePosterComponent(contents[i]));
-    }
-    wrapper.appendChild(innerWrapper);
-    return wrapper.outerHTML;
+export const RowListContainer = (obj, contents) => {
+    return `<div class="rowList ${obj.name}">
+                ${TopicComponent(obj.title)}
+                <div class="rowList__inner">
+                    ${contents.length ? contents.reduce((prev, cur) => prev += ImagePosterComponent(cur), '') : ''}
+                </div>
+            </div>`;
 }
