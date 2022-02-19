@@ -10,6 +10,7 @@ main > * {
   border-radius: 0.5rem;
 }
 
+/* mian__nav ======================================================= */
 .main__nav {
   padding-top: var(--padding-main-top-bottom);
   padding-bottom: var(--padding-main-top-bottom);
@@ -23,6 +24,7 @@ main > * {
   color: var(--color-black-main);
 }
 
+/* ads ======================================================= */
 .ads {
   background-color: var(--color-yellow-main);
 }
@@ -32,6 +34,7 @@ main > * {
   border-radius: var(--border-radius1);
 }
 
+/* days ======================================================= */
 .days > * {
   border-bottom: solid 0.1rem var(--color-yellow-main);
 }
@@ -74,6 +77,7 @@ main > * {
   margin-left: auto;
 }
 
+/* column-contents ======================================================= */
 .column-contents {
   border-bottom: 0;
   padding: var(--padding-main-left-right);
@@ -134,4 +138,29 @@ main > * {
 
 .column-contents__content--views {
   font-size: 0.7rem;
+}
+
+/* new-things ======================================================= */
+.new-things {
+  display: flex;
+}
+
+.new-things > * {
+  padding: 1rem;
+  margin: 1rem 0.1rem;
+  background-color: var(--color-grey3);
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.new-things > *:first-child {
+  margin-left: 1rem;
+  border-top-left-radius: var(--border-radius1);
+  border-bottom-left-radius: var(--border-radius1);
+}
+
+.new-things > *:last-child {
+  margin-right: 1rem;
+  border-top-right-radius: var(--border-radius1);
+  border-bottom-right-radius: var(--border-radius1);
 }
