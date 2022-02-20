@@ -576,4 +576,22 @@ header {
     color: var(--color-gray);
 }
 
+/* event */
+.recommend-event__banner {
+    width: 95%;
+    position: relative;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.recommend-event__controller {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
 
