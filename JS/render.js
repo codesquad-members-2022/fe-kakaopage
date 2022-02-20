@@ -1,8 +1,9 @@
 import {dailyTopData} from './data/scrape/dailyTop.js'
 import {dailyRankingData} from './data/scrape/dailyRanking.js'
+import {$, $all} from './utility.js'
 
 function renderContainer(selector, title, num, options) {
-  const main = document.querySelector('.main');
+  const main = $('.main');
   const newContainer = makeContainer(selector, title);
 
   main.appendChild(newContainer);
@@ -10,7 +11,7 @@ function renderContainer(selector, title, num, options) {
 }
 
 function renderMoveApp(selector) {
-  const main = document.querySelector('.main');
+  const main = $('.main');
   const newList = makeMoveApp(selector);
   main.appendChild(newList);
 
