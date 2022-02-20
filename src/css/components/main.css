@@ -87,18 +87,3 @@
   color: var(--color-dark-grey);
   font-size: 0.9rem;
 }
-
-/* main mini slider */
-.main__mini-slider {
-  justify-content: space-between;
-}
-
-.mini-slider__img {
-  width: 550px;
-  height: 110px;
-}
-
-.mini-slider__btn {
-  font-size: 1.8rem;
-  color: var(--color-grey);
-}

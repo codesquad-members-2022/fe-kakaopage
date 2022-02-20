@@ -1,0 +1,8 @@
+.scroll-banner {
+  justify-content: space-between;
+}
+
+.scroll-banner__img {
+  width: 550px;
+  height: 110px;
+}
