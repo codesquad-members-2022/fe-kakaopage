@@ -1,6 +1,6 @@
 import { DATA_URL, $, CL } from './util.js';
 
-const $days = $('.main__days');
+const $days = $('.day__list');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
 const $navHeader = $('.gnb__list');

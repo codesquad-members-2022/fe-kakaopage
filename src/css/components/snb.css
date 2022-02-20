@@ -1,3 +1,7 @@
+.snb {
+  margin-bottom: 10px;
+}
+
 .snb__list {
   display: flex;
   height: 64px;
