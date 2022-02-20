@@ -18,9 +18,8 @@ function renderHeader() {
 </header>`
 }
 
-
 const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스', '로판','액션무협', 'BL'];
-const weeddaysData = ['월', '화', '수', '목', '금', '토', '일', '완결'];
+
 
 function renderNav(className, textLists) {
     let lists = '';
@@ -97,9 +96,9 @@ function renderBase() {
     return renderHeader() + renderNav('nav', clasfyData) + renderBanner() + renderMain() + renderFooter();
 }
 
-function renderArticle(className, headerTittle, headerSubText = '') {
+function renderArticle(className, id ='', headerTittle, headerSubText = '') {
     return `
-    <article class="${className}">
+    <article class="${className}" id="${id}">
         <header class="article__header">
         <div class="article__header-wrapper">
             <div class="article__header-text-wrapper">
@@ -123,26 +122,5 @@ function renderMidButton(listNames) {
     </div>`
 }
 
-    // function renderSection(num) {
-    //     let sections = '';
-    //     for(let i = 0; i < num; i++) {
-    //         sections += `               
-    //         <section class="section__book">
-    //         <div class="section__book-image-wrapper">
-    //             <img src="./useimages/학사재생.png" alt="images">
-    //             <div class="section__book-image-infor">
-    //                 <span>1위</span>
-    //                 <i class="fas fa-solid fa-clock"></i>
-    //             </div>
-    //         </div>
-    //         <div class="section__book-text-wrapper">
-    //             <span class="section__book-text">어쩌고 저쩌고</span>
-    //             <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
-    //         </div>
-    //     </section>`
-    //     }
-    //     return `<div class="section__book-wrapper">${sections}
-    //     </div>`
-    // }
 
 export { renderBase, renderNav , renderArticle,  renderMidButton};
