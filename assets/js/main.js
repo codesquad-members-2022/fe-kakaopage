@@ -30,13 +30,13 @@ function toActivateNav(target, nav) {
 
 function changeTopBanner(targetLnb) {
     const banner = document.querySelector('.top_banner');
-    
     const targetBannerData = topBanner[targetLnb];
-    let itemHtml = '';
+    const itemHtml = targetBannerData.map(data => creatTopBannerHtml(data));
+    banner.querySelector('.slider_items').innerHTML = itemHtml.join();
+}
 
-    targetBannerData.forEach(data => {
-        
-        itemHtml += `
+function creatTopBannerHtml(data) {
+    return `
         <div class="item item_type1">
             <div class="img">
                 <img src="${data.image}" alt="${data.title}">
@@ -55,10 +55,6 @@ function changeTopBanner(targetLnb) {
                 <p class="desc">${data.description}</p>
             </div>
         </div>`;
-    });
-
-
-    banner.querySelector('.slider_items').innerHTML = itemHtml;
 }
 
 (function() {
