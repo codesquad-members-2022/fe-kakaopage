@@ -1,0 +1,98 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--light-gray-border);
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    overflow: hidden;
+}
+#header__logo {
+    width: 130px;
+}
+.header__service-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.search {
+    width: 186px;
+    height: 34px;
+    padding: 6px 11px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 17px;
+    overflow: hidden;
+}
+.search__input {
+    width: calc(100% - 20px);
+    padding-right: 7px;
+    line-height: 20px;
+}
+.search__button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/common/ico-btn-search.png') no-repeat center / 100% auto;
+}
+.header__user-services {
+    font-size: var(--fs-L);
+    color: var(--gray);
+}
+.header__user-service:not(:first-child) {
+    position: relative;
+    margin-left: 12px;
+    padding-left: 13px;
+}
+.header__user-service:not(:first-child):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 60%;
+    background: #e2e2e2;
+    transform: translateY(-50%);
+}
+
+/**
+gnb
+**/
+.gnb__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.gnb__item {
+    flex: 1 1 auto;
+}
+.gnb__link {
+    display: block;
+    padding-top: 10px;
+    font-weight: var(--fw-M);
+    font-size: var(--fs-L);
+    line-height: 58px;
+    text-align: center;
+}
+.gnb__link.on {
+    line-height: 55px;
+    border-bottom: 3px solid var(--yellow);
+}
+.gnb__link.clock-icon {
+    position: relative;
+}
+.gnb__link.clock-icon:after {
+    content: '・';
+    display: inline-block;
+    width: 35px;
+    font-size: var(--fs-S);
+    text-align: left;
+    background: url('../images/common/ico-clock-black.png') no-repeat right top 22px / auto 20px;
+}

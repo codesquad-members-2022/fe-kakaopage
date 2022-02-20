@@ -11,34 +11,42 @@
 <body>
   <header id="header">
     <div class="header__inner">
-      <h1 id="header__logo"><a href="#"><img src="./resource/images/common/logo-kakaopage.svg" alt="kakaopage 로고"></a></h1>
+      <h1 id="header__logo">
+        <a href="#">
+          <img src="./resource/images/common/logo-kakaopage.svg" alt="kakaopage 로고">
+        </a>
+      </h1>
       <div class="header__service-area">
         <div class="search">
-          <form class="search__form">
+          <form class="search__form l_flex-h--center">
             <input type="text" name="search" class="search__input">
-            <button type="button" class="search__button"><span class="hidden-text">검색하기 버튼</span></button>
+            <button type="button" class="search__button">
+              <span class="hidden-text">검색하기 버튼</span>
+            </button>
           </form>
         </div>
-        <a href="#" class="header__stage-logo"><img src="./resource/images/common/logo-stage.svg" alt="stage 로고"></a>
-        <div class="header__user-services">
+        <a href="#" class="header__stage-logo">
+          <img src="./resource/images/common/logo-stage.svg" alt="stage 로고">
+        </a>
+        <div class="header__user-services l_flex--between">
           <a href="#" class="header__user-service">캐시충전</a>
           <a href="#" class="header__user-service">로그인</a>
         </div>
       </div>
     </div>
+    <nav class="gnb">
+      <ul class="gnb__inner l_flex--between">
+        <li class="gnb__item"><a href="#" class="gnb__link">홈</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link clock-icon on">웹툰</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link clock-icon">웹소설</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link">영화</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link">방송</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link">책</a></li>
+      </ul>
+    </nav>
   </header>
   <main id="container">
     <div class="contents">
-      <nav class="gnb">
-        <ul class="gnb__inner">
-          <li class="gnb__item"><a href="#" class="gnb__link">홈</a></li>
-          <li class="gnb__item"><a href="#" class="gnb__link on">웹툰<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
-          <li class="gnb__item"><a href="#" class="gnb__link">웹소설<i class="clock-icon hidden-text">시계 아이콘</i></a></li>
-          <li class="gnb__item"><a href="#" class="gnb__link">영화</a></li>
-          <li class="gnb__item"><a href="#" class="gnb__link">방송</a></li>
-          <li class="gnb__item"><a href="#" class="gnb__link">책</a></li>
-        </ul>
-      </nav>
       <ul class="categories">
         <li class="category"><a href="#" class="category__link on">홈</a></li>
         <li class="category"><a href="#" class="category__link">요일연재</a></li>
