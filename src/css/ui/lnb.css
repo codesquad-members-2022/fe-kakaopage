@@ -11,6 +11,12 @@
 
 .lnb__link {
   color: var(--lnb-text-color);
+  font-weight: var(--thin);
+}
+
+.lnb__item__selected {
+  font-weight: var(--bold);
+  color : var(--main-text-color)
 }
 
 /*lnb가 section안에 있을 경우 적용*/
