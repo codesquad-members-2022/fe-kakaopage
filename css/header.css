@@ -117,6 +117,17 @@ header
     text-decoration: none;
 }
 
+.headNav__menu:nth-child(n+3):after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-gold);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 32px;
+    margin-left: 6px
+}
+
 .headNav__under {
     border-bottom: var(--main-yellow);
     border-bottom-width: 3px;
