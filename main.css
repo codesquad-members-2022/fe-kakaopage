@@ -97,7 +97,7 @@ input:focus {
   text-align: center;
 }
 
-.gnb__ul li {
+.gnb__li {
   padding: 0.7rem 1rem;
   font-size: 1.2rem;
   flex-grow: 1;
