@@ -2,9 +2,7 @@ import {dailyTopData} from './data/dailyTop.js'
 import {dailyRankingData} from './data/dailyRanking.js'
 import {containerInfo} from './data/containerInfoData.js'
 import {renderContainer, renderMoveApp} from './render.js'
-
-const $ = (select) => document.querySelector(select);
-const $all = (select) => document.querySelectorAll(select);
+import {$, $all} from './utility.js'
 
 const clickGenresList = () => {
   const genresItem = $all('.genres__item');
