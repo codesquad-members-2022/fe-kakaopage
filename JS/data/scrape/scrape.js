@@ -64,7 +64,6 @@ const parsingMainBanner = async () => {
         title: $(node).find('div.css-1tqt666').text(),
         viewer: $(node).find('div.css-13yoxln').text(),
         img: 'https:' + $(node).find('img').attr('data-src'),
-        genre: $(node).find('div.css-10tchww').text(),
         desc: $(node).find('div.css-11164fm > span').text(),
         day: day[i],
         genre: genre[i]
@@ -78,6 +77,44 @@ const parsingMainBanner = async () => {
 parsingMainBanner()
 .then((value) => {
   fs_writeFile('mainBannerData.js', `export const mainBannerData = 
+  ${JSON.stringify(value)}`)
+});
+
+const parsingPromotionBanner = async () => {
+  const url = [
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=10000',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=115',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=116',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=121',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=69',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=112',
+    'https://page.kakao.com/main?categoryUid=10&subCategoryUid=119'
+  ]
+
+  const genre = ['홈', '소년', '드라마', '로맨스', '무협', '액션무협', 'BL'];
+
+  let promotionBanner = [];
+
+  for (let i = 0; i < url.length; i++) {
+    const html = await getHTML(url[i]);
+    const $ = cheerio.load(html.data);
+
+    const $promotionBanner = $('div.jsx-1785673090');
+    $promotionBanner.each((idx, node) => {
+      promotionBanner.push({
+        img_url: 'https:' + $(node).find('img').attr('data-src'),
+        img_alt: `${genre[i]} 프로모션`,
+        genre: genre[i]
+      })
+    });
+  }
+
+  return promotionBanner;
+}
+
+parsingPromotionBanner()
+.then((value) => {
+  fs_writeFile('promotionBannerData.js', `export const promotionBannerData = 
   ${JSON.stringify(value)}`)
 });
 
