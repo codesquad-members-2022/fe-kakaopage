@@ -3,9 +3,9 @@ import { DATA_URL, $, CL } from './util.js';
 const $days = $('.main__days');
 const $webtoons = $('.webtoons');
 const $webtoonsPromotion = $('.webtoons--promotion');
-const $navHeader = $('.header__navbar');
-const $navMain = $('.main__navbar');
-const $mainBanner = $('.main__banner');
+const $navHeader = $('.gnb__list');
+const $navMain = $('.snb__list');
+const $mainBanner = $('.main-banner');
 
 async function loadData(param) {
   const response = await fetch(DATA_URL);
@@ -58,7 +58,7 @@ function activateTab({ target }, parentNode) {
 }
 
 function removeAlarm({ target }) {
-  if (target.parentNode.classList.contains('nav__subject')) {
+  if (target.parentNode.classList.contains('gnb__item')) {
     target = target.parentNode;
   }
   target.classList.remove('alarm');
@@ -68,7 +68,7 @@ function filterContentsBySub(e, banner) {
   // If e.target is clock or circle, then I need to bring parent's id
   // If I should make slider(carousel), I should use filter instead of find
 
-  const subject = e.target.classList.contains('nav__subject')
+  const subject = e.target.classList.contains('gnb__item')
     ? e.target.id
     : e.target.parentNode.id;
   displayBanner(banner.find(v => v.subject === subject)['url']);
@@ -78,13 +78,13 @@ function displayBanner(url) {
   $mainBanner.innerHTML = createBannerImg(url);
 }
 
-function createBannerImg(url) {
-  return `<img src=${url} class="banner__img" alt="webtoon-image"/>`;
-}
+// function createBannerImg(url) {
+//   return `<img src=${url} class="banner__img" alt="webtoon-image"/>`;
+// }
 
 function setEventListenrToNavHeader(banner) {
   $navHeader.addEventListener('click', e => {
-    if (e.target.matches('.header__navbar')) return;
+    if (e.target.matches('.gnb__list')) return;
     removeAlarm(e);
     filterContentsBySub(e, banner);
     activateTab(e, $navHeader);

@@ -12,24 +12,6 @@
   margin: 10px 0 10px 0;
 }
 
-/* main navbar */
-.main__navbar {
-  height: 64px;
-  padding: 0;
-  cursor: pointer;
-  color: var(--color-grey);
-  background-color: var(--color-white);
-  align-items: center;
-  justify-content: space-around;
-  margin: 19px 0 0 0;
-  font-size: 1.1rem;
-}
-
-.nav__category.selected {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
 /* main days */
 .main__days {
   justify-content: space-around;

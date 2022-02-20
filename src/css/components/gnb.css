@@ -16,12 +16,13 @@
   font-weight: 600;
 }
 
-.gnb__category {
+.gnb__item {
   padding: 10px 30px 10px 30px;
   position: relative;
   cursor: pointer;
 }
-.gnb__category a {
+
+.gnb__item a {
   color: var(--color-black);
 }
 
@@ -36,6 +37,6 @@
   top: 5px;
 }
 
-.gnb__category.selected {
+.gnb__item.selected {
   border-bottom: 3px solid var(--color-yellow);
 }
