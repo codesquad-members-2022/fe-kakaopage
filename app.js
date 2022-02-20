@@ -25,11 +25,7 @@ navListsEl.forEach((navList) => {
                 // main.innerHTML += renderWeekdays_base();
                 // addWeekdays_ArticleSection(10);
             } else if(target.textContent === "홈") {
-                main.innerHTML += renderHomeLayout();
-                append('article__weekdays-top', renderNav('article__nav', homeData['articleNav']));
-                append('article__weekdays-top', renderSection(10));
-                append('article__books5', renderSection(5));
-                append('article__ranking3', addArticleRankingLists());
+                renderLayout();
             }
         }
     })
@@ -83,10 +79,6 @@ function addArticleRankingLists() {
 </ol>`
 }
 
-function textConvertor(nodeClassname, newText) {
-    const node = document.querySelector(`.${nodeClassname}`);
-    node.textContent = newText;
-}
 
 function append(parentNodeClassName, child) {
     const parent = document.querySelector(`.${parentNodeClassName}`);
@@ -94,12 +86,73 @@ function append(parentNodeClassName, child) {
     return parent;
 }
 
+async function renderLayout() {
+    document.querySelector('main').innerHTML += renderHomeLayout();
+}
 
-// fetch('https://korea-webtoon-api.herokuapp.com/kakao-page/week')
-//     .then(res => res.json())
-//     .then(res => console.log(res[0]))
+renderLayout()
+    .then(() => {
+        displayWeekRanking(1, 10);
+    })
+
+function displayWeekRanking(month, sectionNums) {
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao/week?day=${month}`)
+    .then(res => res.json())
+    .then(json => {
+        let html ='';
+        for(let i=0; i<sectionNums; i++) {
+            html += renderSections(json[i].title, json[i].img)
+        }
+    console.log(json);
+    document.querySelector('.article__weekdays-top').innerHTML += renderSectionWrapper(html);
+});
+}
 
 
-import { renderBase, renderNav, renderArticle, renderSection, renderMidButton } from './common.js'
+
+function renderSections(_id, img) {
+    return  `<section class="section__book">
+    <div class="section__book-image-wrapper">
+        <img src="${img}" alt="images">
+        <div class="section__book-image-infor">
+            <span>1위</span>
+            <i class="fas fa-solid fa-clock"></i>
+        </div>
+    </div>
+    <div class="section__book-text-wrapper">
+        <span class="section__book-text">${_id}</span>
+        <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+    </div>
+</section>`
+}
+
+function renderSectionWrapper(sections) {
+    return `<div class="section__book-wrapper">${sections}
+    </div>`
+}
+
+// function renderSection(num) {
+//     let sections = '';
+//     for(let i = 0; i < num; i++) {
+//         sections += `               
+//         <section class="section__book">
+//         <div class="section__book-image-wrapper">
+//             <img src="./useimages/학사재생.png" alt="images">
+//             <div class="section__book-image-infor">
+//                 <span>1위</span>
+//                 <i class="fas fa-solid fa-clock"></i>
+//             </div>
+//         </div>
+//         <div class="section__book-text-wrapper">
+//             <span class="section__book-text">어쩌고 저쩌고</span>
+//             <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+//         </div>
+//     </section>`
+//     }
+//     return `<div class="section__book-wrapper">${sections}
+//     </div>`
+// }
+
+import { renderBase, renderNav, renderArticle,  renderMidButton } from './common.js'
 import { renderHomeLayout, homeData } from './home.js';
 import { renderWeekdays_base, addWeekdays_ArticleSection } from './weekdays.js';
