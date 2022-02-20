@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>홈 - 웹툰 | 카카오페이지</title>
-    <link rel="stylesheet" type="text/css" href="./css/global.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
@@ -28,11 +27,23 @@
             />
           </svg>
         </form>
-        <span class="main-header-item"><a id="stage" href="#">STAGE</a></span>
-        <span class="main-header-item text-color--gray"
-          ><a class="text-color--gray" href="#">캐시충전</a> |
-          <a class="text-color--gray" href="#">로그인</a></span
-        >
+        <ul class="layout-center">
+          <li>
+            <a href="#" class="main-header-item layout-center"
+              ><div id="stage-container">
+                <img
+                  id="stage-img"
+                  src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
+                  alt="스테이지"
+                /></div
+            ></a>
+          </li>
+          <li>
+            <a class="text-color--gray main-header-item" href="#">캐시충전</a>
+          </li>
+          <li class="text-color--gray main-header-item">|</li>
+          <li><a class="text-color--gray" href="#">로그인</a></li>
+        </ul>
       </div>
       <nav class="main-header-nav center">
         <ul class="nav-item-sort">
@@ -65,6 +76,7 @@
         <img
           class="banner-img"
           src="https://dn-img-page.kakao.com/download/resource?kid=boPfot/hzacdN1xHr/Erv1JHofHUV7eK46ofjynk"
+          alt="도사강호"
         />
         <svg
           class="arrow-icon arrow--round-border arrow-left arrow--white"
@@ -98,19 +110,19 @@
         </svg>
         <div class="banner-detail-container text-color--white">
           <h3 class="banner-title">도사강호</h3>
-          <div class="banner-detail-text-container">
+          <div class="layout-center banner-detail-text-container">
             <img
               class="banner-detail-img"
               src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
             />
-            <span class="banner-detail-text"
+            <span class="layout-center banner-detail-text"
               ><img
                 class="banner-detail-icon"
                 src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
               />웹툰</span
             >
             <span>|</span>
-            <span class="banner-detail-text">
+            <span class="layout-center banner-detail-text">
               <img
                 class="banner-detail-icon"
                 src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
@@ -211,8 +223,9 @@
               <img
                 class="webtoon-img"
                 src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
+                alt="남편님, 다시 결혼해주세요!"
               />
-              <div class="webtoon-img-bar">
+              <div class="layout-center webtoon-img-bar">
                 <span class="mr--auto ml--small">1위</span>
                 <img
                   class="watch-img"
@@ -221,10 +234,11 @@
               </div>
             </div>
             <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
-            <div class="webtoon-details">
+            <div class="layout-center">
               <img
                 class="webtoon-state-img"
                 src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                alt="업데이트"
               />
               <img
                 class="people-img"
@@ -240,8 +254,9 @@
               <img
                 class="webtoon-img"
                 src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
+                alt="남편님, 다시 결혼해주세요!"
               />
-              <div class="webtoon-img-bar">
+              <div class="layout-center webtoon-img-bar">
                 <span class="mr--auto ml--small">2위</span>
                 <img
                   class="watch-img"
@@ -249,11 +264,12 @@
                 />
               </div>
             </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
+            <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
+            <div class="layout-center">
               <img
                 class="webtoon-state-img"
                 src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                alt="업데이트"
               />
               <img
                 class="people-img"
@@ -269,8 +285,9 @@
               <img
                 class="webtoon-img"
                 src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
+                alt="남편님, 다시 결혼해주세요!"
               />
-              <div class="webtoon-img-bar">
+              <div class="layout-center webtoon-img-bar">
                 <span class="mr--auto ml--small">3위</span>
                 <img
                   class="watch-img"
@@ -278,135 +295,12 @@
                 />
               </div>
             </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
+            <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
+            <div class="layout-center">
               <img
                 class="webtoon-state-img"
                 src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-              />
-              <img
-                class="people-img"
-                src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-              />
-              <span class="text-color--gray webtoon-details-text"
-                >46.1만명</span
-              >
-            </div>
-          </div>
-          <div class="webtoon-container">
-            <div class="webtoon-img-container round-container">
-              <img
-                class="webtoon-img"
-                src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-              />
-              <div class="webtoon-img-bar">
-                <span class="mr--auto ml--small">4위</span>
-                <img
-                  class="watch-img"
-                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-                />
-              </div>
-            </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
-              <img
-                class="webtoon-state-img"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-              />
-              <img
-                class="people-img"
-                src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-              />
-              <span class="text-color--gray webtoon-details-text"
-                >46.1만명</span
-              >
-            </div>
-          </div>
-          <div class="webtoon-container">
-            <div class="webtoon-img-container round-container">
-              <img
-                class="webtoon-img"
-                src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-              />
-              <div class="webtoon-img-bar">
-                <span class="mr--auto ml--small">5위</span>
-                <img
-                  class="watch-img"
-                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-                />
-              </div>
-            </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
-              <img
-                class="webtoon-state-img"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-              />
-              <img
-                class="people-img"
-                src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-              />
-              <span class="text-color--gray webtoon-details-text"
-                >46.1만명</span
-              >
-            </div>
-          </div>
-          <div class="webtoon-container">
-            <div class="webtoon-img-container round-container">
-              <img
-                class="webtoon-img"
-                src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-              />
-              <div class="webtoon-img-bar">
-                <img
-                  class="star-img"
-                  src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
-                />
-                <span class="mr--auto">10.0</span>
-                <img
-                  class="watch-img"
-                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-                />
-              </div>
-            </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
-              <img
-                class="webtoon-state-img"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-              />
-              <img
-                class="people-img"
-                src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-              />
-              <span class="text-color--gray webtoon-details-text"
-                >46.1만명</span
-              >
-            </div>
-          </div>
-          <div class="webtoon-container">
-            <div class="webtoon-img-container round-container">
-              <img
-                class="webtoon-img"
-                src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-              />
-              <div class="webtoon-img-bar">
-                <img
-                  class="star-img"
-                  src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
-                />
-                <span class="mr--auto">10.0</span>
-                <img
-                  class="watch-img"
-                  src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-                />
-              </div>
-            </div>
-            <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
-              <img
-                class="webtoon-state-img"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                alt="업데이트"
               />
               <img
                 class="people-img"
@@ -446,16 +340,33 @@
             <img
               class="banner-img"
               src="https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak"
+              alt="내가 죽였다"
             />
-            <p class="banner-bottom-text banner-bottom-text--small">
-              누가 아군이고, 누가 적인가.
-            </p>
-          </div>
-          <div class="banner-container round-container">
-            <img
-              class="banner-img"
-              src="https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak"
-            />
+            <div class="banner-detail-container--small text-color--white">
+              <h3 class="banner-title--small">내가 죽였다</h3>
+              <div class="layout-center banner-detail-text-container">
+                <img
+                  class="banner-detail-img--small"
+                  src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
+                />
+                <span
+                  class="layout-center banner-detail-text banner-detail-text--small"
+                  ><img
+                    class="banner-detail-icon banner-detail-icon--small"
+                    src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
+                  />웹툰</span
+                >
+                <span class="banner-detail-text--small">|</span>
+                <span
+                  class="layout-center banner-detail-text banner-detail-text--small"
+                >
+                  <img
+                    class="banner-detail-icon banner-detail-icon--small"
+                    src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
+                  />22.1만명</span
+                >
+              </div>
+            </div>
             <p class="banner-bottom-text banner-bottom-text--small">
               누가 아군이고, 누가 적인가.
             </p>
@@ -538,8 +449,9 @@
               <img
                 class="webtoon-img"
                 src="https://dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2"
+                alt="은동은동+옹동스"
               />
-              <div class="webtoon-img-bar">
+              <div class="layout-center webtoon-img-bar">
                 <img
                   class="star-img"
                   src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
@@ -552,10 +464,11 @@
               </div>
             </div>
             <h3 class="webtoon-title">은동은동+옹동스</h3>
-            <div class="webtoon-details">
+            <div class="layout-center">
               <img
                 class="webtoon-state-img"
                 src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                alt="업데이트"
               />
               <img
                 class="people-img"
@@ -664,12 +577,13 @@
         </header>
         <div>
           <ol class="daily-rank-list">
-            <li class="daily-rank-item">
+            <li class="layout-center">
               <p class="daily-ranking">1</p>
               <div class="daily-rank-img-container round-container">
                 <img
                   class="daily-rank-img"
                   src="https://dn-img-page.kakao.com/download/resource?kid=bxZgfW/hzhOjAWIkc/W6ngPs1TUSSfuOQ1MzpH70&filename=th2"
+                  alt="막내 황녀님"
                 />
                 <img
                   class="clock-img--yellow"
@@ -719,8 +633,11 @@
           <img
             class="event-img round-container"
             src="https://dn-img-page.kakao.com/download/resource?kid=FIep1/hzmU3sGhNi/ltEgI1VyEMT2RwQZYdXhqk"
+            alt="왕실교사 하이네 기다무 런칭 기념, 경품 이벤트!"
           />
-          <div class="event-count-container text-color--transparent-white">
+          <div
+            class="layout-center event-count-container text-color--transparent-white"
+          >
             <svg
               class="arrow-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -781,7 +698,7 @@
 
     <footer class="center footer">
       <div>
-        <ul class="footer-sort footer-list">
+        <ul class="layout-center footer-list">
           <li class="footer-item">
             <a class="text-color--light-gray" href="#">회사소개</a>
           </li>
@@ -800,7 +717,7 @@
           <li class="footer-item text-color--light-gray">•</li>
           <li><a class="text-color--light-gray" href="#">공지사항</a></li>
         </ul>
-        <ul class="footer-sort footer-list">
+        <ul class="layout-center footer-list">
           <li class="footer-item text-color--light-gray">
             (주)카카오엔터테인먼트 사업자 정보
           </li>
@@ -815,6 +732,7 @@
         <img
           id="copyright-img"
           src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af"
+          alt="ok mark"
         />
         <p id="copyright-text" class="text-color--gray">저작권 ok</p>
       </div>
