@@ -102,63 +102,97 @@ input:focus {
   font-size: 1.2rem;
   flex-grow: 1;
 }
+/* main body */
 
-.contents {
+.main {
   padding-top: 162px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   background: rgb(230, 230, 230);
 }
 
-.nav-category {
+.main__inner {
   width: 720px;
+  background-color: white;
 }
 
-.nav-category > ul {
+.main__lnb {
+  border-bottom: 10px solid rgb(230, 230, 230);
+}
+
+.lnb__ul {
   display: flex;
 }
 
-.nav-category > ul > li {
+.lnb__ul > li {
   padding: 1.5rem 1rem;
   font-size: 1.3rem;
   flex-grow: 1;
   background-color: white;
-  color: #bbbbbb;
 }
 
-.slide {
-  flex-direction: column;
-  display: flex;
+.lnb__link {
+  color: #bbb;
+}
+
+.main__carousel {
+  position: relative;
   border-bottom: #eee solid 12px;
 }
 
-.toon-script {
+.carousel__img {
+  width: 100%;
+}
+
+.carousel__title {
+  position: absolute;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+  bottom: 100px;
+  left: 20px;
+}
+
+.carousel__infoBox {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  left: 15px;
+}
+
+.carousel__info {
+  color: white;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.carousel__script {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
   background-color: #ffd200;
-  padding: 0.4rem;
   text-align: center;
 }
 
-.nav-type-container {
-  width: 720px;
-  background-color: white;
+.main__category {
   padding: 1rem;
-  box-sizing: border-box;
   border-bottom: 8px rgb(230, 230, 230) solid;
 }
 
-.nav-type {
+.categories {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
 }
 
-.nav-type > a {
+.categories > a {
   flex-grow: 1;
   box-sizing: border-box;
-  width: 226px;
+  width: 33%;
   padding: 1rem 1.3rem;
   background-color: rgb(230, 230, 230);
   border: white 1px solid;
@@ -167,11 +201,10 @@ input:focus {
   font-weight: 600;
 }
 
-.event-box-container {
+.main__event {
   width: 720px;
   box-sizing: border-box;
   background-color: white;
-  padding: 1rem;
   display: flex;
   vertical-align: center;
   align-items: center;
@@ -179,101 +212,111 @@ input:focus {
   border-bottom: 8px rgb(230, 230, 230) solid;
 }
 
-.event-box {
-  display: flex;
-  vertical-align: center;
-  align-items: center;
+.arrowImg {
+  padding: 0 1rem;
 }
 
-.event-banner {
-  padding: 1rem;
+.event__banner {
+  padding: 1rem 0;
   width: 550px;
 }
 
-.top-container {
+.main__top {
   width: 720px;
   box-sizing: border-box;
   background-color: white;
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-bottom: #eee 12px solid;
 }
 
-.top-box {
+.top__inner {
   display: flex;
   flex-direction: column;
   align-content: space-around;
   padding-bottom: 20px;
 }
 
-.top-header {
+.top__header {
   width: 100%;
   display: flex;
 }
 
-.top-header > div {
+.top__title {
   font-size: 20px;
 }
 
-.top-header > div > span {
+.dailyTop__number {
   font-size: 14px;
+  color: #999;
 }
 
-.week-nav {
+.dailyTop__tabs {
   width: 100%;
   display: flex;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-.week-nav > a {
+.dailyTop__tab {
   font-size: 20px;
   padding: 1rem;
   color: #bbbbbb;
   text-align: center;
   flex-grow: 1;
+  border-bottom: 3px #f1f1f1 solid;
+  cursor: pointer;
 }
 
-.day-rank {
+.week-nav-click {
+  font-size: 20px;
+  padding: 1rem;
+  color: #bbbbbb;
+  text-align: center;
+  flex-grow: 1;
+  border-bottom: 3px #ffd200 solid;
+}
+
+.items {
   display: flex;
   flex-wrap: wrap;
 }
 
-.day-rank > a {
+.itemBox {
   padding: 0.5rem;
 }
 
-.ranking-box {
+.item {
   width: 120px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.expected-box {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  width: 335px;
-  overflow: hidden;
+.itemImg {
+  width: 100%;
 }
 
-.rank {
+.daily__rankingBox,
+.ratingBox {
   box-sizing: border-box;
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.4rem 0.6rem;
   display: flex;
   background-color: #242526;
-  vertical-align: center;
-  align-content: center;
 }
 
-.rank > img {
+.daily__rankingBox > img {
   padding: 0 0.2rem;
 }
 
-.title {
+.daily__ranking,
+.rating {
+  font-size: 16px;
+  color: #ffd200;
+}
+
+.item__title {
   width: 120px;
   padding: 10px 0;
   text-overflow: ellipsis;
@@ -281,32 +324,77 @@ input:focus {
   white-space: nowrap;
 }
 
-.views {
+.item__views {
   font-size: 14px;
   color: #9c9c9c;
-  vertical-align: text-top;
 }
 
-.views > img {
+.item__views > img {
   padding-right: 4px;
 }
 
-.day-ranking-top {
+.expectedNew__top {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 335px;
+  overflow: hidden;
+}
+
+.dailyRankingTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.dailyRankingTop__li {
+  padding: 0.5rem 0;
+}
+
+.dailyRankingTop__link {
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.day-ranking-top-img {
+.dailyRanking {
+  font-weight: 700;
+  padding: 10px;
+  padding-right: 26px;
+  font-size: 22px;
+  width: 0.6rem;
+}
+
+.dailyRankingImgBox {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.day-ranking-top-description {
+.dailyRankingImg {
+  position: absolute;
+}
+
+.dailyRankingDescription {
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.dailyRankingTitle {
+  padding: 4px 0;
+}
+
+.dailyRankingInfo {
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+.recommand__event {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
 .by-application {
@@ -315,7 +403,6 @@ input:focus {
   background-color: #fecc2e;
   border-bottom: rgb(230, 230, 230) 70px solid;
 }
-
 footer {
   background-color: rgb(230, 230, 230);
   display: flex;
