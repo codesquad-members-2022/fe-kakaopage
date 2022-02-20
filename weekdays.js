@@ -1,12 +1,36 @@
 
 
-function renderWeekdays_base() {
-    return renderWeekdays_nav() + renderWeekdays_clasifyNav() + renderWeekdays_Article()
+async function renderWeekdays_base() {
+    const mainEL = document.querySelector('main');
+    mainEL.innerHTML += renderWeekdays_nav()  + renderWeekdays_clasifyNav() + renderWeekdaysArticle();
+    await displayWeekLists(0, 15);
+
+    const weekdaysListsEL = document.querySelector('.nav__weekdays-lists');
+    weekdaysListsEL.addEventListener(('click'), ({target}) => {
+        if(!target.classList.contains('active') ) {
+            [...weekdaysListsEL.children].forEach((weekdaysList) => {
+                weekdaysList.classList.remove('active');
+            })
+            // children은 HTMLCOLLECTION이라서, 배열 메서드를 사용할 수 없었음.
+            target.classList.add('active');
+            document.querySelector('.article__weekdays').innerHTML = '';
+        }
+
+        // console.log(target.textContent);
+        if(target.textContent === '월') displayWeekLists(0, 15);
+        if(target.textContent === '화') displayWeekLists(1, 15);
+        if(target.textContent === '수') displayWeekLists(2, 15);
+        if(target.textContent === '목') displayWeekLists(3, 15);
+        if(target.textContent === '금') displayWeekLists(4, 15);
+        if(target.textContent === '토') displayWeekLists(5, 15);
+        if(target.textContent === '일') displayWeekLists(6, 15);
+    })
+
 }
 
 function renderWeekdays_nav() {
     return `    <nav class="nav__weekdays">
-    <ul class="nav__weekdays-ul">
+    <ul class="nav__weekdays-lists">
         <li class="nav__weekdays-list active">월</li>
         <li class="nav__weekdays-list">화</li>
         <li class="nav__weekdays-list">수</li>
@@ -19,7 +43,7 @@ function renderWeekdays_nav() {
 </nav>`
 }
 
-function renderWeekdays_clasifyNav() {
+function renderWeekdays_clasifyNav(total = 0) {
     return `<nav class="nav__clasify">
     <div class="nav__clasify-buttons-wrapper">
         <button class="nav__clasify-button">
@@ -36,43 +60,31 @@ function renderWeekdays_clasifyNav() {
 
     <div class="nav__clasfify-toggle-wrapper">
         <button class="nav__clasify-toggle">
-            전체 (138)
+            전체 (${(total)})
             <i class="fas fa-solid fa-arrow-down"></i>
         </button>
     </div>
 </nav>`
 }
 
-function renderWeekdays_Article() {
+function renderWeekdaysArticle() {
     return `<article class="article__weekdays">
-    <div class="section__book-wrapper">
-    </div>
 </article>`
 }
 
-function addWeekdays_ArticleSection(num) {
-    const sectionBookWrapperEl = document.querySelector('.section__book-wrapper');
-
-    for(let i = 0; i < num; i++) {
-        sectionBookWrapperEl.innerHTML += renderWeekdays_ArticleSection();
-    }
+function displayWeekLists(day, sectionNums) {
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao/week?day=${day}`)
+    .then(res => res.json())
+    .then(json => {
+        let html ='';
+        for(let i=0; i<sectionNums; i++) {
+            html += renderSections(json[i].title, json[i].img, json[i].url, i+1)
+        }
+    document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
+    document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
+    });
 }
 
-function renderWeekdays_ArticleSection() {
-    return `  <section class="section__book">
-    <div class="section__book-image-wrapper">
-        <img src="/useimages/환골탈태.png" alt="">
-        <div class="section__book-image-infor">
-            <span>1위</span>
-            <i class="fas fa-solid fa-clock"></i>
-        </div>
-    </div>
-    <div class="section__book-text-wrapper">
-        <h4>어쩌고 저쩌고</h4>
-        <span><i class="fas fa-user-alt"></i> 28.5만명</span>
-    </div>
-</section>`
-}
-// 나중에 무한스크롤해서 section 추가되는거 구현하면 필요한 부분
-
-export {renderWeekdays_base, addWeekdays_ArticleSection}
+export {renderWeekdays_base}
+import { renderMidButton, renderNav , renderArticle } from './common.js'
+import { renderSections, renderSectionWrapper, renderPromotionBanner, renderRecommandBanner } from './use.js'

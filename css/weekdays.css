@@ -6,7 +6,7 @@
     background-color: #fff;
 }
 
-.nav__weekdays-ul {
+.nav__weekdays-lists {
     display: flex;
     align-items: center;
     justify-content: space-between;
