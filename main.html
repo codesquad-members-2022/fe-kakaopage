@@ -783,6 +783,10 @@
         </div>
       </div>
     </footer>
-    <script src="main.js"></script>
+    <script type="module" src="main.js">
+      document.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
