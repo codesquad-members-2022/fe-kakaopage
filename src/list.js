@@ -1,11 +1,6 @@
 import { $, $$ } from './utility.js';
-import dayTopData from './data/dayTop.js';
 
-// const loadData = async function() {
-//     let response = await fetch('./data/dayTop.json');
-//     return await response.json();
-// }
-// const dayTopData = loadData();
+const dayTopData = await (await fetch('/src/data/dayTop.json')).json();
 
 const getGradeRowTemp = (props) => {
     return (
@@ -22,32 +17,30 @@ const getGradeRowTemp = (props) => {
     );
 }
 
-const getGradeListTemp = (props) => {
+const getGradeListTemp = (props, length) => {
     let row5 = '';
-    for(let i = 0; i < 5; i++) {
+    for(let i = 0; i < length; i++) {
         row5 += `${getGradeRowTemp(props[i])}\n`
     }
     return (
-    `<ul class="row-5">
+    `<ul class="row-${length}">
         ${row5}
     </ul>`
     );
 }
 
-let dayTopActiveTab;
 const renderDayTopContent = (dayIdx) => {
     const dayArr = ["mon", "tue", "wed", "thu", "fri", "sat", "sun", "end"];
     const day = dayArr[dayIdx];
     const rankRowData = dayTopData['rankRow'][day];
-    const rankList = getGradeListTemp(rankRowData);
+    const rankList = getGradeListTemp(rankRowData, 5);
     const gradeRowData = dayTopData['gradeRow'][day];
-    const gradeList = getGradeListTemp(gradeRowData);
+    const gradeList = getGradeListTemp(gradeRowData, 5);
     $$('.day-top-tab__button')[dayIdx].classList.add('on');
     $('.day-top-conntent').innerHTML = `<div class="works">
         ${rankList}
         ${gradeList}
     </div>`
-    dayTopActiveTab = $$('.day-top-tab__button')[dayIdx];
 }
 
 const addDayTopTabEvent = () => {
@@ -55,9 +48,7 @@ const addDayTopTabEvent = () => {
         (function() {
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
-                const target = e.target;
-                dayTopActiveTab.classList.remove('on');
-                dayTopActiveTab = target;
+                $('.day-top-tab__button.on').classList.remove('on');
                 renderDayTopContent(idx);
             });
         })(idx);

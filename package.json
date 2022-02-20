@@ -2,6 +2,6 @@
   "name": "kakao-page",
   "type": "module",
   "description": "kakao page clone",
-  "main": "./src/list.js",
+  "main": "./src/app.js",
   "author": "dony"
 }
