@@ -42,7 +42,17 @@ function renderWeekdays_nav() {
     </ul>
 </nav>`
 }
-
+// function renderNav(className, textLists) {
+//     let lists = '';
+//     textLists.forEach((textList) => {
+//         lists += `<li class="${className}-list">${textList}</li>`
+//     })
+//     return `<nav class="${className}">
+//     <ul class="${className}-lists">
+//         ${lists}
+//     </ul>
+// </nav>`
+// }
 function renderWeekdays_clasifyNav(total = 0) {
     return `<nav class="nav__clasify">
     <div class="nav__clasify-buttons-wrapper">
@@ -86,4 +96,4 @@ function displayWeekLists(day, sectionNums) {
 }
 
 export { renderWeekdays }
-import { renderSections, renderSectionWrapper, renderPromotionBanner, renderRecommandBanner } from './use.js'
+import { renderSections, renderSectionWrapper } from './component/section.js';

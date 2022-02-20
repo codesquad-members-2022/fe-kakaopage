@@ -1,3 +1,4 @@
+// 모든 페이지에 공통적으로 사용되며, 변화가 미미한 부분
 
 function renderHeader() {
     const headerNav = ['홈', '웹툰', '웹소설', '영화', '방송', '책'];
@@ -20,7 +21,6 @@ function renderHeader() {
 
 const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스', '로판','액션무협', 'BL'];
 
-
 function renderNav(className, textLists) {
     let lists = '';
     textLists.forEach((textList) => {
@@ -34,8 +34,6 @@ function renderNav(className, textLists) {
 }
 
 // 수정할필요가 없고, 재사용할 필요가 없는 부분.
-
-
 function renderBanner() {
     return `    
     <div class="aside__banner-wrapper">
@@ -59,14 +57,12 @@ function renderBanner() {
 }
 
 // 배너는 추후에 수정이 필요할 수 있음..
-
 function renderMain() {
     return `<main>
     </main>`
 }
 
 // main에 내용 변화를 주려고 하므로 필요한 부분.
-
 function renderFooter() {
     return `    
     <footer class="footer">
@@ -96,31 +92,4 @@ function renderBase() {
     return renderHeader() + renderNav('nav', clasfyData) + renderBanner() + renderMain() + renderFooter();
 }
 
-function renderArticle(className, id ='', headerTittle, headerSubText = '') {
-    return `
-    <article class="${className}" id="${id}">
-        <header class="article__header">
-        <div class="article__header-wrapper">
-            <div class="article__header-text-wrapper">
-                <h2 class="article__header-tittle">${headerTittle}</h2>
-                <span class="article__header-sub-text">${headerSubText}</span>
-            </div>
-            <button class="article__header-button">더보기 ></button>
-        </div>
-        </header>
-    </article>`
-}
-
-function renderMidButton(listNames) {
-    let lists = '';
-    listNames.forEach((listName) => {
-        lists += `<button class="mid-button">${listName}</button>`
-    })
-
-    return `<div class="mid-button__wrapper">
-    ${lists}
-    </div>`
-}
-
-
-export { renderBase, renderNav , renderArticle,  renderMidButton};
+export { renderBase }

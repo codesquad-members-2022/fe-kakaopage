@@ -81,5 +81,8 @@ function displayBooks5(tittle, type, id, sectionNums) {
 }
 
 export { renderHome };
-import { renderMidButton, renderNav , renderArticle } from './common.js'
-import { renderSections, renderSectionWrapper, renderPromotionBanner, renderRecommandBanner } from './use.js'
+import { renderMidButton } from './component/midButton.js';
+import { renderNav } from './component/nav.js';
+import { renderArticle } from './component/article.js';
+import { renderPromotionBanner, renderRecommandBanner } from './component/Banner.js';
+import { renderSections, renderSectionWrapper } from './component/section.js';
