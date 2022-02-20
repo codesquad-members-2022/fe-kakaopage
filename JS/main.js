@@ -1,5 +1,5 @@
-import {dailyTopData} from './data/dailyTop.js'
-import {dailyRankingData} from './data/dailyRanking.js'
+import {dailyTopData} from './data/scrape/dailyTop.js'
+import {dailyRankingData} from './data/scrape/dailyRanking.js'
 import {containerInfo} from './data/containerInfoData.js'
 import {renderContainer, renderMoveApp} from './render.js'
 import {$, $all} from './utility.js'
