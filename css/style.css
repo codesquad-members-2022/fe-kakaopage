@@ -126,7 +126,7 @@
 }
 
 .banner__tags img {
-    max-height: 70%;
+    height: 70%;
 }
 
 /* common-section */
@@ -194,6 +194,29 @@
     margin: 10px 0px 10px 0px;
     color: var(--color-light-gray);
 }
+
+.work-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-tag {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.work-tag__icon {
+    height: 100%;
+}
+
+.work-tag__icon > img{
+    max-height: 80%;
+}
+
+
+
 
 
 
@@ -436,7 +459,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 .brandnew__content {
@@ -465,4 +488,92 @@ header {
     font-size: 0.75rem;
     font-weight: 500;
 }
+
+
+/* daily-tops */
+.daily-tops {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.daily-top__container {
+    display: flex;
+    align-items: center;
+    height:120px;
+    margin-bottom: 20px;
+}
+
+.daily-top__rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 10px;
+    width:40px;
+}
+
+.daily-top__thumbnail-box {
+    width: 90px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 25px;
+}
+
+.daily-top__thumbnail-sub {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 25px;
+}
+
+.daily-top__thumbnail-main {
+    width: 100%;
+}
+
+.daily-top__information {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.daily-top__information > div {
+    height: 20px;
+}
+
+.daily-top__title-box {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.daily-top__title-icons {
+    height: 100%;
+    margin-right: 5px;
+}
+
+.daily-top__title-icons > img{
+    height: 80%;
+}
+
+.daily-top__title {
+    font-size: 1rem;
+}
+
+.daily-top__tags {
+    font-size:  0.875rem;
+    color: var(--color-gray);
+    padding-bottom: 20px;
+}
+
+.daily-top__tags img {
+    margin-right: 5px;
+}
+
+.daily-ranked__info-update-day {
+    margin-bottom: 15px; 
+    font-size: 0.875rem;
+    color: var(--color-gray);
+}
+
 
