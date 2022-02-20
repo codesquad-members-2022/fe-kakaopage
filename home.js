@@ -35,5 +35,5 @@ function renderPtomotionBanner() {
 }
 
 export { renderHomeLayout, homeData };
-import {renderMidButton, renderNav , renderArticle, renderSection} from './common.js'
+import { renderMidButton, renderNav , renderArticle, renderSection} from './common.js'
 import {append} from './utils.js'

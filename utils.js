@@ -3,6 +3,8 @@ function textConvertor(nodeClassname, newText) {
     node.textContent = newText;
 }
 
+
+
 function append(parentNodeClassName, child) {
     const parent = document.querySelector(`.${parentNodeClassName}`);
     parent.innerHTML += child;

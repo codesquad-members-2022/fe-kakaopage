@@ -18,10 +18,6 @@ function renderHeader() {
 </header>`
 }
 
-
-const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스', '로판','액션무협', 'BL'];
-const weeddaysData = ['월', '화', '수', '목', '금', '토', '일', '완결'];
-
 function renderNav(className, textLists) {
     let lists = '';
     textLists.forEach((textList) => {
@@ -134,27 +130,27 @@ function renderArticle(className, headerTittle, headerSubText = '') {
 //     </div>`
 // }
 
-function renderSection(num) {
-    let sections = '';
-    for(let i = 0; i < num; i++) {
-        sections += `               
-        <section class="section__book">
-        <div class="section__book-image-wrapper">
-            <img src="./useimages/학사재생.png" alt="images">
-            <div class="section__book-image-infor">
-                <span>1위</span>
-                <i class="fas fa-solid fa-clock"></i>
-            </div>
-        </div>
-        <div class="section__book-text-wrapper">
-            <span class="section__book-text">어쩌고 저쩌고</span>
-            <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
-        </div>
-    </section>`
-    }
-    return `<div class="section__book-wrapper">${sections}
-    </div>`
-}
+// function renderSection(num) {
+//     let sections = '';
+//     for(let i = 0; i < num; i++) {
+//         sections += `               
+//         <section class="section__book">
+//         <div class="section__book-image-wrapper">
+//             <img src="./useimages/학사재생.png" alt="images">
+//             <div class="section__book-image-infor">
+//                 <span>1위</span>
+//                 <i class="fas fa-solid fa-clock"></i>
+//             </div>
+//         </div>
+//         <div class="section__book-text-wrapper">
+//             <span class="section__book-text">어쩌고 저쩌고</span>
+//             <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+//         </div>
+//     </section>`
+//     }
+//     return `<div class="section__book-wrapper">${sections}
+//     </div>`
+// }
 
 function renderMidButton(listNames) {
     let lists = '';
@@ -166,5 +162,74 @@ function renderMidButton(listNames) {
     ${lists}
     </div>`
 }
+
+// let arr = [];
+// fetch('https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=0')
+//     .then(res => res.json())
+//     .then(res => {
+//         for(let i = 0; i < 10; i++) {
+//             arr.push(res[i]._id);
+//             console.log(res[i].img)
+//         }
+//     })
+// console.log(arr);
+
+// function exprenderSection(num) {
+//     let section = '';
+//     fetch('https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=0')
+//     .then(res => res.json())
+//     .then(res => {
+//         for(let i = 0; i < 10; i++) {
+//             section += `<section class="section__book">
+//             <div class="section__book-image-wrapper">
+//                 <img src="${res[i].img}" alt="images">
+//                 <div class="section__book-image-infor">
+//                     <span>1위</span>
+//                     <i class="fas fa-solid fa-clock"></i>
+//                 </div>
+//             </div>
+//             <div class="section__book-text-wrapper">
+//                 <span class="section__book-text">${res[i]._id}</span>
+//                 <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+//             </div>
+//         </section>`
+//         }
+//         console.log(section);
+//         return section;
+//     })
+// }
+
+const URL = 'https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=0'
+const A = async () => {
+  const response = await fetch(URL);
+  const data = await response.json()
+  return data;
+}
+(async () => {
+  console.log(await A())
+})()
+
+// console.log(exprenderSection(10));
+    function renderSection(num) {
+        let sections = '';
+        for(let i = 0; i < num; i++) {
+            sections += `               
+            <section class="section__book">
+            <div class="section__book-image-wrapper">
+                <img src="./useimages/학사재생.png" alt="images">
+                <div class="section__book-image-infor">
+                    <span>1위</span>
+                    <i class="fas fa-solid fa-clock"></i>
+                </div>
+            </div>
+            <div class="section__book-text-wrapper">
+                <span class="section__book-text">어쩌고 저쩌고</span>
+                <span class="section__book-text"><i class="fas fa-user-alt"></i> 28.5만명</span>
+            </div>
+        </section>`
+        }
+        return `<div class="section__book-wrapper">${sections}
+        </div>`
+    }
 
 export { renderBase, renderNav , renderArticle, renderSection, renderMidButton};
