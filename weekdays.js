@@ -1,8 +1,10 @@
-
+const weekdaysData = {
+    nav: ['월', '화', '수', '목', '금', '토', '일', '완결'],
+}
 
 async function renderWeekdays() {
     const mainEL = document.querySelector('main');
-    mainEL.innerHTML += renderWeekdays_nav()  + renderWeekdays_clasifyNav() + renderWeekdaysArticle();
+    mainEL.innerHTML += renderWeekdaysBase();
     await displayWeekLists(0, 15);
 
     const weekdaysListsEL = document.querySelector('.nav__weekdays-lists');
@@ -28,32 +30,11 @@ async function renderWeekdays() {
 
 }
 
-function renderWeekdays_nav() {
-    return `    <nav class="nav__weekdays">
-    <ul class="nav__weekdays-lists">
-        <li class="nav__weekdays-list active">월</li>
-        <li class="nav__weekdays-list">화</li>
-        <li class="nav__weekdays-list">수</li>
-        <li class="nav__weekdays-list">목</li>
-        <li class="nav__weekdays-list">금</li>
-        <li class="nav__weekdays-list">토</li>
-        <li class="nav__weekdays-list">일</li>
-        <li class="nav__weekdays-list">완결</li>
-    </ul>
-</nav>`
+function renderWeekdaysBase() {
+    return renderNav('nav__weekdays', weekdaysData.nav)  + renderWeekdaysClasifyNav() + renderWeekdaysArticle();
 }
-// function renderNav(className, textLists) {
-//     let lists = '';
-//     textLists.forEach((textList) => {
-//         lists += `<li class="${className}-list">${textList}</li>`
-//     })
-//     return `<nav class="${className}">
-//     <ul class="${className}-lists">
-//         ${lists}
-//     </ul>
-// </nav>`
-// }
-function renderWeekdays_clasifyNav(total = 0) {
+
+function renderWeekdaysClasifyNav(total = 0) {
     return `<nav class="nav__clasify">
     <div class="nav__clasify-buttons-wrapper">
         <button class="nav__clasify-button">
@@ -96,4 +77,5 @@ function displayWeekLists(day, sectionNums) {
 }
 
 export { renderWeekdays }
+import { renderNav } from './component/nav.js'
 import { renderSections, renderSectionWrapper } from './component/section.js';
