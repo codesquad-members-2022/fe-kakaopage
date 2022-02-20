@@ -3,9 +3,10 @@
 @import url(./css/component/midButton.css);
 @import url(./css/component/banner.css);
 @import url(./css/component/section.css);
+
 @import url(./css/component/article.css);
 @import url(./css/weekdays.css);
-
+@import url(./css/webtoon.css);
 :root {
     --main-color: #eeeeee;
     --sub-color: #f9d201;

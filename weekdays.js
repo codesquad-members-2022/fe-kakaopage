@@ -5,6 +5,7 @@ const weekdaysData = {
 async function renderWeekdays() {
     const mainEL = document.querySelector('main');
     mainEL.innerHTML += renderWeekdaysBase();
+    document.querySelector('.nav__weekdays-list').classList.add('active');
     await displayWeekLists(0, 15);
 
     const weekdaysListsEL = document.querySelector('.nav__weekdays-lists');
@@ -27,7 +28,6 @@ async function renderWeekdays() {
         if(target.textContent === '토') displayWeekLists(5, 15);
         if(target.textContent === '일') displayWeekLists(6, 15);
     })
-
 }
 
 function renderWeekdaysBase() {
@@ -64,7 +64,7 @@ function renderWeekdaysArticle() {
 }
 
 function displayWeekLists(day, sectionNums) {
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao/week?day=${day}`)
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=${day}`)
     .then(res => res.json())
     .then(json => {
         let html ='';

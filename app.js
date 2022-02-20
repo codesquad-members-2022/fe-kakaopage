@@ -19,8 +19,13 @@ navListsEl.forEach((navList) => {
 
             if(target.textContent === "요일") {
                 renderWeekdays();
-            } else if(target.textContent === "홈") {
+            } 
+            if(target.textContent === "홈") {
                 renderHome();
+            }
+
+            if(target.textContent === "웹툰") {
+                renderWebtoon();
             }
         }
     })
@@ -30,3 +35,4 @@ navListsEl.forEach((navList) => {
 import { renderBase } from './component/base.js';
 import { renderHome } from './home.js';
 import { renderWeekdays } from './weekdays.js';
+import { renderWebtoon } from './webtoon.js';

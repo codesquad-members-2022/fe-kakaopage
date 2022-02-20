@@ -55,7 +55,7 @@ async function renderHome() {
 
 function displayWeekRanking(day, sectionNums) {
 
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao/week?day=${day}`)
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=${day}`)
     .then(res => res.json())
     .then(json => {
         let html ='';
