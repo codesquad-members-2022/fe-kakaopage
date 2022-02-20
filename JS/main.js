@@ -1,5 +1,6 @@
 import {dailyTopData} from './data/dailyTop.js'
 import {dailyRankingData} from './data/dailyRanking.js'
+import {containerInfo} from './data/containerInfoData.js'
 import {renderContainer, renderMoveApp} from './render.js'
 
 const $ = (select) => document.querySelector(select);
@@ -16,21 +17,16 @@ const clickGenresList = () => {
 
 function setGenreFocus (event) {
   const focused = $('.genres--focused');
-  if (focused) {
-    focused.classList.remove('genres--focused');
-  }
+  if (focused) focused.classList.remove('genres--focused');
   event.target.classList.add('genres--focused');
 }
 
 function renderMain() {
-  const DAILY_ITEMS = 10;
-  const TOP_ITEMS = 5;
-
   clickGenresList();
-  renderContainer('daily__top', '요일 연재 TOP', DAILY_ITEMS, 'cardLayout');
-  renderContainer('romance__top', '로맨스 TOP', TOP_ITEMS, 'cardLayout');
-  renderContainer('daily__ranking', '일간랭킹 TOP', TOP_ITEMS, 'ranking');
-  renderContainer('event', '추천 이벤트', null, 'event')
+
+  for (let i in containerInfo) {
+    renderContainer(containerInfo[i].class, containerInfo[i].title, containerInfo[i].items, containerInfo[i].layout);
+  }
   renderMoveApp('move-app');
 }
 
