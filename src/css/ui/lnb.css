@@ -21,6 +21,6 @@
 
 /*lnb가 section안에 있을 경우 적용*/
 .section__lnb {
-  padding: 15px;
+  padding: 20px;
   border-bottom: 1px solid var(--border-color);
 }
