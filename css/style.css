@@ -595,3 +595,15 @@ header {
     justify-content: space-between;    
 }
 
+/* app-link */
+
+.app-link {
+    height: 70px;
+    text-align: center;
+    background-color: var(--color-yellow);
+}
+
+.app-link__img {
+    height: 100%;
+}
+
