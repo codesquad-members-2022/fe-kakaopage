@@ -1,25 +1,26 @@
 import {topBanner} from "./data.js";
 
-const gnb = document.querySelector(".gnb ul");
-const lnb = document.querySelector(".lnb ul");
-const dayNav = document.querySelector(".day_nav ul");
+function clickMenu() {
+    const gnb = document.querySelector(".gnb ul");
+    const lnb = document.querySelector(".lnb ul");
+    const dayNav = document.querySelector(".day_nav ul");
+    
+    gnb.addEventListener("click", (e) => {
+        toActivateNav(e.target, gnb);
+    })
+    
+    lnb.addEventListener("click", (e) => {
+        toActivateNav(e.target, lnb);
+        const targetLnb = e.target.closest('li').getAttribute('data-lnb');
+        changeTopBanner(targetLnb);
+    })
+    
+    dayNav.addEventListener("click", (e) => {
+        toActivateNav(e.target, dayNav);
+    })
 
-gnb.addEventListener("click", (e) => {
-    const eventTarget = e.target;
-    toActivateNav(eventTarget, gnb);
-})
-
-lnb.addEventListener("click", (e) => {
-    const eventTarget = e.target;
-    const targetLnb = eventTarget.closest('li').getAttribute('data-lnb');
-    toActivateNav(eventTarget, lnb);
-    changeTopBanner(targetLnb);
-})
-
-dayNav.addEventListener("click", (e) => {
-    const eventTarget = e.target;
-    toActivateNav(eventTarget, dayNav);
-})
+    lnb.querySelector('li:first-child').click();
+}
 
 function toActivateNav(target, nav) {
     const clickTarget = target.closest('li');
@@ -58,5 +59,5 @@ function creatTopBannerHtml(data) {
 }
 
 (function() {
-    lnb.querySelector('li:first-child').click();
+    clickMenu();
 }())
