@@ -1,6 +1,6 @@
 
 
-async function renderWeekdays_base() {
+async function renderWeekdays() {
     const mainEL = document.querySelector('main');
     mainEL.innerHTML += renderWeekdays_nav()  + renderWeekdays_clasifyNav() + renderWeekdaysArticle();
     await displayWeekLists(0, 15);
@@ -85,6 +85,5 @@ function displayWeekLists(day, sectionNums) {
     });
 }
 
-export {renderWeekdays_base}
-import { renderMidButton, renderNav , renderArticle } from './common.js'
+export { renderWeekdays }
 import { renderSections, renderSectionWrapper, renderPromotionBanner, renderRecommandBanner } from './use.js'

@@ -18,7 +18,7 @@ navListsEl.forEach((navList) => {
             target.classList.add('active');
 
             if(target.textContent === "요일") {
-                renderWeekdays_base();
+                renderWeekdays();
             } else if(target.textContent === "홈") {
                 renderHome();
             }
@@ -27,6 +27,6 @@ navListsEl.forEach((navList) => {
 })
 
 
-import { renderBase, renderNav, renderArticle,  renderMidButton } from './common.js'
+import { renderBase } from './common.js'
 import { renderHome } from './home.js';
-import { renderWeekdays_base } from './weekdays.js';
+import { renderWeekdays } from './weekdays.js';
