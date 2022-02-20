@@ -84,5 +84,5 @@ export { renderHome };
 import { renderMidButton } from './component/midButton.js';
 import { renderNav } from './component/nav.js';
 import { renderArticle } from './component/article.js';
-import { renderPromotionBanner, renderRecommandBanner } from './component/Banner.js';
+import { renderPromotionBanner, renderRecommandBanner } from './component/banner.js';
 import { renderSections, renderSectionWrapper } from './component/section.js';

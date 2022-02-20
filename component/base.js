@@ -21,18 +21,6 @@ function renderHeader() {
 
 const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스', '로판','액션무협', 'BL'];
 
-function renderNav(className, textLists) {
-    let lists = '';
-    textLists.forEach((textList) => {
-        lists += `<li class="${className}-list">${textList}</li>`
-    })
-    return `<nav class="${className}">
-    <ul class="${className}-lists">
-        ${lists}
-    </ul>
-</nav>`
-}
-
 // 수정할필요가 없고, 재사용할 필요가 없는 부분.
 function renderBanner() {
     return `    
@@ -92,4 +80,5 @@ function renderBase() {
     return renderHeader() + renderNav('nav', clasfyData) + renderBanner() + renderMain() + renderFooter();
 }
 
+import { renderNav } from './nav.js'
 export { renderBase }
