@@ -3,37 +3,37 @@
   --slide-second-color: #222;
 }
 
-.banner-title {
-  font-size: var(--font-28px);
-  font-weight: var(--font-bold);
-  color: var(--slide-main-color);
-}
-
-.banner-info {
+.banner__info {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.banner-sub-text {
+.banner__info__title {
+  font-size: var(--28px);
+  font-weight: var(--bold);
+  color: var(--slide-main-color);
+}
+
+.banner__info__description {
   display: flex;
   align-items: center;
   left: 20px;
 }
 
-.banner-number {
+.banner__page {
   opacity: 0.6;
   margin-right: 20px;
 }
 
-.banner-sub-text,
-.banner-number {
+.banner__info__description,
+.banner__page {
   margin-top: 10px;
   color: var(--slide-main-color);
-  font-size: var(--font-20px);
+  font-size: var(--20px);
 }
 
-.banner .bar {
+.banner__bar {
   display: block;
   min-width: 1px;
   width: 1px;
@@ -42,15 +42,15 @@
   background-color: var(--slide-main-color);
 }
 
-.banner-comment {
+.banner__info__comment {
   padding: 15px;
   background-color: var(--identity-color);
   color: var(--slide-second-color);
-  font-size: var(--font-18px);
-  font-weight: var(--font-thin);
+  font-size: var(--18px);
+  font-weight: var(--thin);
 }
 
-.banner-controller {
+.banner__controller {
   display: flex;
   justify-content: space-between;
   padding: 0 15px 0;
@@ -58,19 +58,19 @@
   width: 100%;
 }
 
-.new .banner-sub-text {
-  font-size: var(--font-14px);
+.new .banner__info__description {
+  font-size: var(--14px);
 }
 
-.new .banner-title {
-  font-size: var(--font-18px);
+.new .banner__info__title {
+  font-size: var(--18px);
 }
 
-.new .bar {
+.new .banner__bar {
   height: 12px;
 }
 
-.new .banner-comment {
+.new .banner__info__comment {
   height: 24px;
-  font-size: var(--font-12px);
+  font-size: var(--12px);
 }

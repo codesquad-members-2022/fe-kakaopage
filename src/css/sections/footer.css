@@ -5,36 +5,44 @@
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 30px 0;
   color: var(--footer-text-color);
-  font-size: var(--font-14px);
+  font-size: var(--14px);
   line-height: 20px;
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.copyright {
+.footer__copyright {
   color: var(--copyright-text-color);
 }
 
-.footer-list a, .company-info a {
+.footer__link {
   color: var(--footer-text-color);
 }
 
-.ok {
+.fnb__item::before {
+  content: '∙';
+  margin: 0 2px;
+}
+
+.footer__ok {
   width: 50px;
   margin-bottom: 5px;
 }
 
-.ok-text-color {
+.footer__ok__text-color {
   color: var(--ok-text-color);
 }
 
-.toggle:after {
+.footer__btn__toggle:after {
   content: '▾';
   margin-left: 5px;
 }

@@ -1,0 +1,20 @@
+.lnb {
+  --lnb-text-color: #bbb;
+  --lnb-text-selected-color: var(--main-text-color);
+}
+
+.lnb {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--20px);
+}
+
+.lnb__link {
+  color: var(--lnb-text-color);
+}
+
+/*lnb가 section안에 있을 경우 적용*/
+.section__lnb {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
