@@ -1,0 +1,43 @@
+.webtoon-card--big {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+}
+
+.webtoon-card--big__info-bar {
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+}
+
+.webtoon-card--big__details {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.webtoon-card--big__details .clock-icon,
+.webtoon-card--big__details .user-icon {
+  margin-right: 5px;
+}
+
+.webtoon-card--big__details .separator {
+  margin: 0px 5px;
+}
+
+.webtoon-card--big__badge {
+  margin-right: 5px;
+}
+
+.webtoon-card--big__sub-title {
+  color: black;
+  background-color: var(--yellow);
+  padding: 10px;
+  margin-top: -43px;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
