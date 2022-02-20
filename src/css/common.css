@@ -47,3 +47,9 @@
 .width-half {
   width: calc((var(--page-width) - 50px) / 2);
 }
+
+.badge__yellow {
+  padding: 0.3em 0.4em 0.2em;
+  background-color: var(--identity-color);
+  border-radius: 50px;
+}

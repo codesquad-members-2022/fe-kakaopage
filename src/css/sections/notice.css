@@ -11,10 +11,3 @@
   font-weight: var(--bold);
   background-color: var(--main-bg-color);
 }
-
-.notice__badge {
-  display: inline-block;
-  padding: 6px 7px 2px 7px;
-  background-color: var(--identity-color);
-  border-radius: 50px;
-}
