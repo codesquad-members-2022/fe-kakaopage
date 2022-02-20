@@ -88,47 +88,6 @@
   font-size: 0.9rem;
 }
 
-/* main themes */
-.main__themes {
-  flex-wrap: wrap;
-  gap: 3px;
-  margin: 0 auto;
-}
-
-.theme__name {
-  width: 224px;
-  background-color: var(--color-light-grey);
-  padding: 15px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--color-dark-grey);
-}
-
-.theme__info {
-  background-color: var(--color-yellow);
-  padding: 0 5px 0 5px;
-  margin-left: 5px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-}
-
-.theme__name:nth-child(1) {
-  border-top-left-radius: 10px;
-}
-
-.theme__name:nth-child(3) {
-  border-top-right-radius: 10px;
-}
-
-.theme__name:nth-child(4) {
-  border-bottom-left-radius: 10px;
-}
-
-.theme__name:nth-child(6) {
-  border-bottom-right-radius: 10px;
-}
-
 /* main mini slider */
 .main__mini-slider {
   justify-content: space-between;

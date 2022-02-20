@@ -3,7 +3,8 @@
 
 @import url('./components/header.css');
 @import url('./components/gnb.css');
-@import url('./components/snb.css');
 @import url('./components/main.css');
 @import url('./components/mainBanner.css');
+@import url('./components/snb.css');
+@import url('./components/themeBox.css');
 @import url('./components/footer.css');
