@@ -1,5 +1,5 @@
-import {dailyTopData} from '../data/dailyTop.js'
-import {dailyRankingData} from '../data/dailyRanking.js'
+import {dailyTopData} from './data/dailyTop.js'
+import {dailyRankingData} from './data/dailyRanking.js'
 import {renderContainer, renderMoveApp} from './render.js'
 
 const $ = (select) => document.querySelector(select);

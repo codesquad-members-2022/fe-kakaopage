@@ -1,5 +1,5 @@
-import {dailyTopData} from '../data/dailyTop.js'
-import {dailyRankingData} from '../data/dailyRanking.js'
+import {dailyTopData} from './data/dailyTop.js'
+import {dailyRankingData} from './data/dailyRanking.js'
 
 function renderContainer(selector, title, num, options) {
   const main = document.querySelector('.main');
