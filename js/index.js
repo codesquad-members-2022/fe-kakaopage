@@ -116,9 +116,7 @@ const getElements = (targetPage) => {
 };
 
 const preventDefaults = () => {
-    document.querySelectorAll("a").forEach((anchor) => {
-        anchor.addEventListener("click", (e) => e.preventDefault());
-    });
+    $("body").addEventListener("click", (e) => e.preventDefault());
 };
 
 const clearMainContents = () => {
@@ -143,35 +141,26 @@ const bindSubMenuEvent = () => {
             "afterbegin",
             getElements(targetPage)
         );
-        // TODO: 새로 추가되는 아이템이 있을때마다 bindEvent를 그 아이템들에도 해줘야함
-        bindEventListener();
 
         //TODO: 추가한 노드들에 자식노드 추가
         // FIXME: 로맨스TOP만 추가 테스트
         // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
         // mutationObserver(.genre-best가 추가되었는지 감지하기 위함)를 사용했었으나, 사용없이도 createGenreItems()를 통해 문제없이 추가되므로 일단 제거
         createGenreItems();
-
-        // 새로 생긴 노드에도 preventDefaults()적용
-        preventDefaults();
     });
 };
 
-const toggleWeekDayMenu = (e) => {
-    const curEl = e.target.parentNode;
+const toggleWeekDayMenu = (target) => {
+    const curEl = target.parentNode;
     toggleClass(curEl, "active");
 };
 
 const bindEventListener = () => {
-    // TODO: bindEvent 하나로 합치기
-
     bindSubMenuEvent();
 
-    $(".contents-wrap").addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if ($(".week-day-menu")?.contains(e.target)) {
-            toggleWeekDayMenu(e);
+    $(".contents-wrap").addEventListener("click", ({ target }) => {
+        if ($(".week-day-menu")?.contains(target)) {
+            toggleWeekDayMenu(target);
         }
     });
 };
