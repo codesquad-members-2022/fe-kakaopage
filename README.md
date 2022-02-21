@@ -40,8 +40,9 @@
   - [x] dayTOP
   - [x] recommend
   - [x] workSmall
-  - [ ] 기대신작 TOP
-  - [ ] 각 장르 TOP
-  - [ ] 일간 랭킹 TOP
+  - [x] 기대신작 TOP
+  - [x] 각 장르 TOP
+  - [x] 일간 랭킹 TOP
+    - [ ] 일간 랭킹 TOP 컴포넌트 나누기
   - [ ] 추천 이벤트
   - [ ] footer
