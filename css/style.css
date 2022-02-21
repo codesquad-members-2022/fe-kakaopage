@@ -310,11 +310,13 @@ header {
 .gnb__container {
     width: var(--main-width);
     height: var(--nav-height);
-    padding-top: 30px;
+    
 }
 
 .gnb__item {
-    padding: 0px 30px;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    padding-bottom: 10px; 
 }
 
 /* contents */
