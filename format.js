@@ -1,5 +1,5 @@
 import { dummy } from "./sources.js"
-import { addToContents, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum, pickFromArr, randomView } from "./util.js"
+import { addSelectedTo, addToContents, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum, pickFromArr, randomView } from "./util.js"
 
 export const createFormat0 = () => {
     const format0 = `
@@ -78,6 +78,7 @@ export const createFormat3 = () => {
                         ${createContentForms(5)}
                     </div>
                 </div>`
+
     return format3
 }
 

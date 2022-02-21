@@ -1,7 +1,9 @@
 import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon } from "./createPage.js";
-import { addClickEventToElement, addToContents, pickFromArr, randomView } from "./util.js";
+import { addClickEventToElement, addSelectedTo, addToContents, pickFromArr, randomView } from "./util.js";
 
 const main = () => {
+    addSelectedTo('.genre-nav-li')
+    addSelectedTo('.head-nav-li')
     createPageHome();
     addClickEventToElement('#genre-home', createPageHome)
     addClickEventToElement('#genre-daily', createPageDaily)
@@ -16,23 +18,9 @@ const main = () => {
 
 main();
 
-// function selectedInit(className){
-//     var li = document.getElementsByClassName(className)
-//     for(let i = 0; i < li.length; i++){
-//         li[i].classList.remove('selected')
-//     }
+// function createInitPage () {
+//     addSelectedTo('.genre-nav-li')
+//     addSelectedTo('.head-nav-li')
+//     createPageHome();
 // }
 
-// var home = document.getElementById('genre-home')
-// console.log(home)
-
-// home.addEventListener('click', function(e){
-//     selectedInit('genre-nav-li')
-//     e.target.classList.add('selected')
-// })
-
-// var daily = document.getElementById('genre-daily')
-// daily.addEventListener('click', function(e){
-//     selectedInit('genre-nav-li')
-//     e.target.classList.add('selected')
-// })

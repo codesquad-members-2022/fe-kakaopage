@@ -190,4 +190,3 @@ export function combineFormats(arr){
 
     return res;
 }
-
