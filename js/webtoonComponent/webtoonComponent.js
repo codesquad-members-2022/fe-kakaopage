@@ -20,9 +20,8 @@ const webtoonComponent = (coverType, webtoonData) => {
   article.className = `webtoon-component ${getComponentType(coverType)}`;
   const HTML = getHTML(coverType, webtoonData);
   article.innerHTML = HTML;
-  article.querySelector(
-    '.webtoon-cover'
-  ).style.backgroundImage = `url(${webtoonData.coverSrc})`;
+  const cover = article.querySelector('.webtoon-cover');
+  if (cover) cover.style.backgroundImage = `url(${webtoonData.coverSrc})`;
 
   return article;
 };

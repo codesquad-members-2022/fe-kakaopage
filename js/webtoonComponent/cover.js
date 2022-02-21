@@ -5,10 +5,13 @@ export const wideCover = (webtoonData) => {
     (tag) => (tagElements += `<span class="webtoon-tag">${tag}</span>`)
   );
 
-  return `
-  <div class="webtoon-cover wide-cover">
-    <img class="webtoon-badge" src="./data/contents/${badge}.png" alt="" />
-  </div>
+  return `<div class="webtoon-cover wide-cover">
+  ${
+    !badge
+      ? ''
+      : `<img class="webtoon-badge" src="./data/contents/${badge}.png" alt="" />`
+  }</div>
+
   <div class="webtoon-info">
     <div class="webtoon-title">
       <img
