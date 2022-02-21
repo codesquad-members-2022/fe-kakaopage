@@ -1,22 +1,30 @@
 # fe-kakaopage
 
-- [x] 웹툰 말고도 웹소설, 영화 Category 도 사용한다고 했을 때 어떻게 Render 할 지 ?
+### 2주차
 
-  - Category 를 사용하고자 하니 Render 하는 방식이 복잡해져서.. 어떻게 처리할지 고민
-  - Category 아래에 GenreNav 가 존재하는 식이라서 Category 를 Render 해줄 때 GenreNav 도 새로 Render 하게 해야 selected 등의 값이 초기화되어서 해당 부분을 설정하는게 힘들었다..
+## 생각해본점
 
-- [x] Categoty 선택 시 class 명 selected 주기
-- [x] 다른 Category 선택 시 selected 클래스명 삭제하기
-- [x] Genre 도 동일하게 selected 클래스 생성+삭제하기
+### 이벤트 위임
 
-- [x] Days Nav (요일별 이동) 만들기
+- 기존에 이벤트를 등록하던 방식( render 할 때, 요소 하나하나에 이벤트를 등록)이 맘에 들지 않았었다.
+- 때마침 미션내용으로 `이벤트 위임` 이라는 키워드로 이 부분을 개선할 수 있겠다는 생각을 했다.
 
-- [x] Rank 의 순위 기준??
-  - 카카오페이지 : 누적 조회수, 댓글, ... 어떻게?
-  - 순위 있는거 -> 일단 rank는 평점(9.9)으로 통일
-  - 일단은 rank 순으로 정렬
+### Node 개발 환경 적용
 
-### MainBanner Component
+- front, back 을 나누어 볼까?
+  - back 은 api url 을 통해서 데이터를 받는 간단한 서버로만
 
-- [ ] 이미지 슬라이더?
-  - 일단 이미지 1개만 불러오는 태그로 작성
+## Task List
+
+### Node 개발 환경 적용
+
+- [x] 기존에 VSC Extension 의 `Live server` 를 사용하던 개발 방식에서 Node 환경으로 변경
+  - HTML을 로드하는 방법? (`fs.readfile` vs `response.sendFile`)
+- [ ] 기존에 사용하던 모듈화 방식 (브라우저 모듈) 을 그대로 사용하면 오류날 것 같은데 고치기
+
+### 동적 기능 개발 - 이벤트 위임
+
+### 추가로 적용해본 것
+
+- [x] front, back 나눠서 두 개의 서버 띄워서 사용해보기
+- [ ] back -> api 형태로만 사용, heroku 등을 사용해봐서 데모링크도 띄워보자.
