@@ -146,6 +146,18 @@ input:focus {
   width: 100%;
 }
 
+.carousel__left {
+  position: absolute;
+  top: 45%;
+  left: 1rem;
+}
+
+.carousel__right {
+  position: absolute;
+  top: 45%;
+  right: 1rem;
+}
+
 .carousel__title {
   position: absolute;
   color: white;
