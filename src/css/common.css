@@ -53,3 +53,14 @@
   background-color: var(--identity-color);
   border-radius: 50px;
 }
+
+.bar {
+  display: block;
+  min-width: 1px;
+  width: 1px;
+}
+
+.btn__toggle:after {
+  content: '▾';
+  margin-left: 5px;
+}

@@ -41,8 +41,3 @@
 .footer__ok__text-color {
   color: var(--ok-text-color);
 }
-
-.footer__btn__toggle:after {
-  content: '▾';
-  margin-left: 5px;
-}

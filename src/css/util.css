@@ -80,6 +80,10 @@
   margin-left: 20px;
 }
 
+.mg-r-5 {
+  margin-right: 5px;
+}
+
 .mg-r-20 {
   margin-right: 20px;
 }
@@ -109,6 +113,11 @@
   padding-bottom: 20px;
 }
 
+/* left/right */
+.r-20 {
+  right: 20px;
+}
+
 /*text */
 .txt-transparent {
   color: transparent;
@@ -129,4 +138,8 @@
 .hide-text {
   position: absolute;
   left: -1500px;
+}
+
+.pointer {
+  cursor: pointer;
 }

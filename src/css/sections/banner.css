@@ -1,6 +1,6 @@
 .banner {
-  --slide-main-color: #fff;
-  --slide-second-color: #222;
+  --banner-main-color: #fff;
+  --banner-second-color: #222;
 }
 
 .banner__info {
@@ -12,7 +12,7 @@
 .banner__info__title {
   font-size: var(--28px);
   font-weight: var(--bold);
-  color: var(--slide-main-color);
+  color: var(--banner-main-color);
 }
 
 .banner__info__description {
@@ -29,23 +29,20 @@
 .banner__info__description,
 .banner__page {
   margin-top: 10px;
-  color: var(--slide-main-color);
+  color: var(--banner-main-color);
   font-size: var(--20px);
 }
 
-.bar {
-  display: block;
-  min-width: 1px;
-  width: 1px;
+.banner .bar {
   margin: 0 8px;
   height: 16px;
-  background-color: var(--slide-main-color);
+  background-color: var(--banner-main-color);
 }
 
 .banner__info__comment {
   padding: 15px;
   background-color: var(--identity-color);
-  color: var(--slide-second-color);
+  color: var(--banner-second-color);
   font-size: var(--18px);
   font-weight: var(--thin);
 }

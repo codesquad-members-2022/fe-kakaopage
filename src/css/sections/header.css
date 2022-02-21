@@ -23,9 +23,6 @@
 }
 
 .header .bar {
-  display: block;
-  min-width: 1px;
-  width: 1px;
   margin: 0 10px;
   height: 12px;
   background-color: #e2e2e2;
