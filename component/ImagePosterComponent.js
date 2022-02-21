@@ -11,8 +11,9 @@ export const ImagePosterComponent = (obj, content) => {
                 </div>
                 ${obj.imageStatus === 'grade' ?
                 `<div class="item__inner">
-                    <span class="item__inner_rank">1위</span>
-                    <img class="item__inner_wait_img" src="images/bmbadge_waitfree.svg" alt="시계 이미지" />
+                    <img class="item__inner_star" src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac" />
+                    <span class="item__inner_rank">${content.rating}</span>
+                    <img class="item__inner_wait" src="images/bmbadge_waitfree.svg" alt="시계 이미지" />
                 </div>`
                 : ''}
             </div>

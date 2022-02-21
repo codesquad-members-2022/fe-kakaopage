@@ -11,7 +11,7 @@
 }
 
 .image-poster__large {
-    width: 150px;
+    width: 155px;
 }
 
 .image-poster__small-item,
@@ -19,14 +19,6 @@
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
-}
-
-.image-poster__small-item {
-    width: 120px;
-}
-
-.image-poster__large-item {
-    width: 150px;
 }
 
 .image-poster__small_img,
@@ -44,7 +36,7 @@
 }
 
 .image-poster__large_img {
-    width: 150px;
+    width: 155px;
     height: 200px;
 }
 
@@ -57,19 +49,21 @@
 .item__inner {
     height: 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 8px;
     background-color: var(--color-dark-gray);
 }
 
 .item__inner .item__inner_rank {
+    display: inline-block;
+    margin: 3px 0 0 4px;
     color: var(--color-yellow);
 }
 
-.item__inner_wait_img {
+.item__inner_wait {
     width: 16px;
     height: 16px;
+    margin-left: auto;
 }
 
 .image-poster__img {
