@@ -5,6 +5,6 @@ export const $ = selector => document.querySelector(selector);
 export const CL = {
   SELECTED: 'selected',
   WHOLE: 'whole',
-  DAY_NAME: '.day__name',
+  DAY_NAME: '.day__item',
   NAV_SUBJECT: 'nav__subject',
 };

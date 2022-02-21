@@ -1,0 +1,21 @@
+.snb {
+  margin-bottom: 10px;
+}
+
+.snb__list {
+  display: flex;
+  height: 64px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-around;
+  margin: 19px 0 0 0;
+  font-size: 1.1rem;
+  color: var(--color-grey);
+  background-color: var(--color-white);
+}
+
+.snb__item.selected {
+  color: var(--color-black);
+  font-weight: 600;
+}
