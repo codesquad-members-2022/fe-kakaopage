@@ -4,26 +4,32 @@ function clickMenu() {
     const gnb = document.querySelector(".gnb ul");
     const lnb = document.querySelector(".lnb ul");
     const dayNav = document.querySelector(".day_nav ul");
+    const topBannerDefault = "home";
+    const dayNavDefault = "mon";
+
     
     gnb.addEventListener("click", (e) => {
+        if(e.target.closest('li').classList.contains('active')) return
         toActivateNav(e.target, gnb);
     })
     
     lnb.addEventListener("click", (e) => {
+        if(e.target.closest('li').classList.contains('active')) return
         toActivateNav(e.target, lnb);
         const targetLnb = e.target.closest('li').getAttribute('data-lnb');
         changeTopBanner(targetLnb);
     })
     
     dayNav.addEventListener("click", (e) => {
+        if(e.target.closest('li').classList.contains('active')) return
         toActivateNav(e.target, dayNav);
         const targetDay = e.target.closest('li').getAttribute('data-day');
         createWebtoonDayContents(targetDay)
 
     })
 
-    lnb.querySelector('li:first-child').click();
-    dayNav.querySelector('li:first-child').click();
+    changeTopBanner(topBannerDefault);
+    createWebtoonDayContents(dayNavDefault)
 }
 
 function toActivateNav(target, nav) {
