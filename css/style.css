@@ -237,6 +237,8 @@
   background-size: cover;
   margin-top: 3px;
   margin-right: 3px;
+  position: relative;
+  top: 2px;
 }
 
 .icon-views {
@@ -332,7 +334,7 @@
 .ranking__container {
   width: 720px;
   height: 493px;
-  margin: 10px auto;
+  margin: auto;
   background-color: #fff;
 }
 
@@ -378,6 +380,10 @@
   background-size: cover;
   position: relative;
   right: 84px;
+}
+
+.ranking__day {
+  margin-right: 3px;
 }
 
 .ranking__day-container {

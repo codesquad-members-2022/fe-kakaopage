@@ -27,19 +27,9 @@ export const BANNER = {
 };
 
 export const GENRE_TOP = {
-  ROMANCE: {
-    title: "로맨스 Top",
-  },
-  DRAMA: {
-    title: "드라마 Top",
-  },
-  BLGL: {
-    title: "BL/GL Top",
-  },
-  BOY: {
-    title: "소년 Top",
-  },
-  ACTION: {
-    title: "액션무협 Top",
-  },
+  ROMANCE: { title: "로맨스 Top" },
+  DRAMA: { title: "드라마 Top" },
+  BLGL: { title: "BL/GL Top" },
+  BOY: { title: "소년 Top" },
+  ACTION: { title: "액션무협 Top" },
 };

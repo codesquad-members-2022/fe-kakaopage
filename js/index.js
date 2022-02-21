@@ -1,6 +1,7 @@
 import { createAdSlide } from "../components/adSlide/index.js";
 import { createBanner } from "../components/banner/index.js";
 import { createCategory } from "../components/category/index.js";
+import { createDayRankingTop } from "../components/dayRankingTop/index.js";
 import { createDayTop } from "../components/dayTop/index.js";
 import { createGenreTop } from "../components/genreTop/index.js";
 import { createNewTop } from "../components/newTop/index.js";
@@ -27,6 +28,7 @@ const dramaTop = createGenreTop(GENRE_TOP.DRAMA);
 const BLGLTop = createGenreTop(GENRE_TOP.BLGL);
 const boyTop = createGenreTop(GENRE_TOP.BOY);
 const actionTop = createGenreTop(GENRE_TOP.ACTION);
+const dayRankingTop = createDayRankingTop();
 
 $(".contents").insertAdjacentHTML("beforeend", category);
 $(".contents").insertAdjacentHTML("beforeend", largeBanner);
@@ -39,3 +41,4 @@ $(".contents").insertAdjacentHTML("beforeend", dramaTop);
 $(".contents").insertAdjacentHTML("beforeend", BLGLTop);
 $(".contents").insertAdjacentHTML("beforeend", boyTop);
 $(".contents").insertAdjacentHTML("beforeend", actionTop);
+$(".contents").insertAdjacentHTML("beforeend", dayRankingTop);
