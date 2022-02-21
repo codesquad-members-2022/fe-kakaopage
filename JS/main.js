@@ -20,6 +20,21 @@ function setGenreFocus (event) {
   event.target.classList.add('genres--focused');
 }
 
+function clickDailyTopList() {
+  const selectDay = $all('.day__btn');
+  selectDay.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      clickDailyTopFocus(event.target);
+    })
+  })
+}
+
+function clickDailyTopFocus(event) {
+  const focused = $('.daily__top--focused');
+  if (focused) focused.classList.remove('daily__top--focused');
+  event.parentNode.classList.add('daily__top--focused');
+}
+
 function clickBannerPrevBtn() {
   const focused = $('.focused');
   const prevItem = focused.previousElementSibling;
@@ -71,7 +86,9 @@ function renderMain() {
   for (let i in containerInfo) {
     renderContainer(containerInfo[i].class, containerInfo[i].title, containerInfo[i].items, containerInfo[i].layout);
   }
+  clickDailyTopList();
   renderMoveApp('move-app');
 }
 
 window.addEventListener('load', renderMain);
+
