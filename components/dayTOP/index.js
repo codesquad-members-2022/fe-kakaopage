@@ -12,7 +12,7 @@ const workSmall = createWorkSmall({
   status: "up",
 });
 
-export function createDayTOP() {
+export function createDayTop() {
   return createBox({ title: "요일 연재 TOP", contents: el });
 }
 

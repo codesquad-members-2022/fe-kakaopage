@@ -9,6 +9,6 @@ const banner = createBanner({
   ad: "지금까지 이런 용사는 없었다?!",
 });
 
-export function createNewTOP() {
+export function createNewTop() {
   return createBox({ title: "기대신작 TOP", contents: banner + banner });
 }

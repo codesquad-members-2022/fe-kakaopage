@@ -59,7 +59,7 @@ function getStyle(size) {
 
   return `
 .${banner} {
-  margin: 10px auto;
+  margin: auto;
   width: ${isSizeLarge ? "720px" : "335px"};
   height: ${isSizeLarge ? "480px" : "225px"};
   border-radius: ${isSizeLarge ? "0px" : "10px"};

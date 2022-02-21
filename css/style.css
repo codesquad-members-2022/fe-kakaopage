@@ -101,14 +101,16 @@
 }
 
 .contents {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   height: fit-content;
   overflow: hidden;
   margin-top: 146px;
 }
 
 .category {
-  margin-top: 20px;
+  margin-top: 18px;
   width: 100%;
 }
 
@@ -128,7 +130,7 @@
 .recommend {
   width: 720px;
   height: fit-content;
-  margin: 10px auto;
+  margin: auto;
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
@@ -285,7 +287,7 @@
 
 .ad-slide {
   width: 720px;
-  margin: 10px auto;
+  margin: auto;
 }
 
 .ad-slide__container {
