@@ -4,8 +4,9 @@ import {
   remove,
   replaceInner,
   resetDefault,
+  cloneAndDsiplay,
 } from "./eventJS/util.js";
-import { chageMainSecHome } from "./eventJS/recEvent.js";
+import { changeMainSecHome, changeMainSecWoD } from "./eventJS/recEvent.js";
 
 document.querySelector(".prev").addEventListener("click", () => {});
 
@@ -17,13 +18,6 @@ cloneAndDsiplay(
   document.querySelector(".main__cartoonZone__cell"),
   9
 );
-
-function cloneAndDsiplay(parent, contents, loop) {
-  for (let i = 0; i < loop; i++) {
-    const $cloneEl = contents.cloneNode(true);
-    parent.appendChild($cloneEl);
-  }
-}
 
 function onclickPrev(target) {
   const maxPage =
@@ -57,15 +51,15 @@ document
   .querySelector(".recommand__nav--ul")
   .addEventListener("click", function (event) {
     if (
-      event.target.textContent === "요일연재" &&
-      event.target.textContent !== contentsChecker
-    ) {
-      chageMainSecHome(contentsChecker);
-    } else if (
       event.target.textContent === "홈" &&
       event.target.textContent !== contentsChecker
     ) {
-      chageMainSecWoD();
+      changeMainSecHome(contentsChecker);
+    } else if (
+      event.target.textContent === "요일연재" &&
+      event.target.textContent !== contentsChecker
+    ) {
+      changeMainSecWoD(contentsChecker);
     }
   });
 

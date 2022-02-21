@@ -1,4 +1,5 @@
 import { createEl } from "../eventJS/util.js";
+import { data } from "./data.js";
 
 const createMainNav = (data) => {
   const nav = (createEl("nav").innerHTML = template).classList.add(
@@ -58,4 +59,18 @@ const createImgCard = (data) => {
   return imgCard;
 };
 
-export { createMainNav, createMaincontainer, createImgCard };
+const createlist = (data) => {
+  const listArr = data.toggleLeft.reduce((acc, toggleFont) => {
+    const list = createEl("li");
+    list.textContent = toggleFont;
+    acc.push(list);
+    return acc;
+  }, []);
+
+  return listArr;
+};
+
+const toonGenreChecker = (toonGenre) =>
+  data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
+
+export { createMainNav, createMaincontainer, createImgCard, toonGenreChecker };
