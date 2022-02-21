@@ -2,6 +2,12 @@ import setPreview from './setPreview.js';
 import drawTagListEl from './drawTagListEl.js';
 import clearTagListEl from './clearTagListEl.js';
 import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';
+import clearWebtoonContents from './webtoonComponent/clearWebtoonContents.js';
+import webtoonContentsArr from '../json/webtoonContents.json' assert { type: 'json' };
+console.dir(webtoonContentsArr);
+import drawDayFilter from './dayFilter/drawDayFilter.js';
+import clearDayFilter from './dayFilter/clearDayFilter.js';
+import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
 
 const pageMainCategoryContainer = document.querySelector(
   '.page-main-category__container'
@@ -25,7 +31,7 @@ const onHighLight = (element) => {
   element.classList.toggle('color-black');
 };
 
-/* preview ~ tagList까지 (일부 메인 카테고리 탭 제외하고는 공통) */
+initMainCategoryDay();
 pageMainCategory.forEach((li, idx, list) => {
   li.addEventListener('click', (event) => {
     if (curIdx === idx) return;
@@ -40,32 +46,13 @@ pageMainCategory.forEach((li, idx, list) => {
 
     clearTagListEl();
     drawTagListEl(category);
-  });
-});
 
-/* 웹툰 바로가기 컨텐츠 */
-// const indexOf = (li) => [].indexOf.call(pageMainCategoryContainer.children, li);
-pageMainCategoryContainer.addEventListener('click', (e) => {
-  const prevWebtoonContentsList = document.querySelectorAll('.main-contents');
-
-  if (prevWebtoonContentsList.length > 0) {
-    prevWebtoonContentsList.forEach((contents) => {
-      contents.parentElement.removeChild(contents);
+    clearWebtoonContents();
+    webtoonContentsArr[category].forEach((webtoonContents) => {
+      drawWebtoonContents(webtoonContents);
     });
-  }
 
-  drawWebtoonContents({
-    type: 'normal',
-    contentsTitle: '요일 연재 TOP',
-    webtoonArr: [
-      {
-        coverSrc: './data/cover/도굴왕.png',
-        webtoonRanking: '1',
-        webtoonScore: '9.7',
-        webtoonTitle: '도굴왕',
-        webtoonState: 'new',
-        subscriberCount: 1310800,
-      },
-    ],
+    clearDayFilter();
+    drawDayFilter(li);
   });
 });
