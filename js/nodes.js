@@ -7,8 +7,12 @@ export const nodes = {
             (prev, cur) =>
                 prev +
                 `<a href="" class="group-flex flex-center"
-        ><span>${cur}</span
-        ></a
+        ><span>${cur.title}</span
+        >${
+            cur.badge
+                ? `<span class="badge group-flex flex-center">${cur.badge}</span>`
+                : ``
+        }</a
     >`,
             ""
         );
