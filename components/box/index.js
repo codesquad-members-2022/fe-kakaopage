@@ -50,4 +50,9 @@ const style = `
   margin-top: 4px;
   margin-left: 3px;
 }
+
+.box__contents {
+  display: flex;
+  flex-wrap: wrap;
+}
 `;
