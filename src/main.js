@@ -1,6 +1,8 @@
-import { renderHeader } from "./components/header.js";
-import { renderGnb , setGnbEvent} from "./components/gnb.js";
+import { initRender } from "./render.js";
 
-renderHeader();
-renderGnb();
-setGnbEvent();
+const main = () => {
+    initRender();
+}
+
+
+main();
