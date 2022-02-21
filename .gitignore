@@ -1,3 +1,4 @@
 img/
 old-img/
 .DS_Store
+node_modules

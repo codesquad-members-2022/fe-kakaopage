@@ -1,0 +1,22 @@
+{
+  "name": "fe-kakaopage",
+  "version": "1.0.0",
+  "description": "alan's kakapage clone coding",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyGyu/fe-kakaopage.git"
+  },
+  "author": "alan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happyGyu/fe-kakaopage/issues"
+  },
+  "homepage": "https://github.com/happyGyu/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
