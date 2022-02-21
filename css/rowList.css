@@ -1,5 +1,5 @@
 .rowList {
-    height: 370px;
+    height: 300px;
     margin-bottom: 10px;
     padding: 20px;
     background-color: var(--color-white);
@@ -9,4 +9,8 @@
     /* flex 속성 따로 클래스 빼야 할 것 같다.. */
     display: flex;
     justify-content: space-between;
+}
+
+.recommend {
+    height: 350px;
 }
