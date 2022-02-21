@@ -6,6 +6,7 @@ import { createDayTop } from "../components/dayTop/index.js";
 import { createGenreTop } from "../components/genreTop/index.js";
 import { createNewTop } from "../components/newTop/index.js";
 import { createRecommend } from "../components/recommend/index.js";
+import { createRecommendEvent } from "../components/recommendEvent/index.js";
 import {
   BANNER,
   CATEGORIES,
@@ -29,6 +30,7 @@ const BLGLTop = createGenreTop(GENRE_TOP.BLGL);
 const boyTop = createGenreTop(GENRE_TOP.BOY);
 const actionTop = createGenreTop(GENRE_TOP.ACTION);
 const dayRankingTop = createDayRankingTop();
+const recommendEvent = createRecommendEvent();
 
 $(".contents").insertAdjacentHTML("beforeend", category);
 $(".contents").insertAdjacentHTML("beforeend", largeBanner);
@@ -42,3 +44,4 @@ $(".contents").insertAdjacentHTML("beforeend", BLGLTop);
 $(".contents").insertAdjacentHTML("beforeend", boyTop);
 $(".contents").insertAdjacentHTML("beforeend", actionTop);
 $(".contents").insertAdjacentHTML("beforeend", dayRankingTop);
+$(".contents").insertAdjacentHTML("beforeend", recommendEvent);
