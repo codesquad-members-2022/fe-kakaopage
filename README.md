@@ -77,3 +77,19 @@ render(targetCategoryUid);
 
 - 현재 카카오페이지는 메인카테고리와 서브카테고리로 구분된다. 메인카테고리에 따라 렌더링 되는 ui는 5가지 레이아웃으로 나눌 수 있는데, 레이아웃은 고정이고 안에 컨텐츠만 바뀐다. 따라서, index.html에는 5가지 레이아웃틀만 남겨두고 안에 카테고리 uid에 맞는 데이터를 불러와서 렌더링하기로 한다.
 - front에서 레이아웃을 렌더링하는 함수(render)를 실행하기 전에 post로 categoryUid에 맞는 데이터를 server에서 가져오는 함수(preRender)만들기
+
+## innerHtml vs remove-append
+
+뭐가 더 효율적일까?
+
+해당 문제를 해결하면서 생겨난 또 다른 문제들
+
+- html 태그에서 바로 onclick 비효율적인가?
+- innherHTml에 이벤트리스너 등록
+- dom요소를 지우고 계속 새로 만드는게 나을까 innerHtml로 요소만 바꾸는게 나을까
+
+1. innerHtml 방식
+
+원래 innerHtml로 html > body > main에 있는 5개의 article태그를 가져와, 안에 구성만 바꿔주는 방식이었음. 그런데 안에 구성 렌더링을 할 때 innerHtml로 하니까 이벤트리스너 등록하기가 까다로웠음.
+
+2. remove-append 방식

@@ -1,11 +1,11 @@
 import { renderMainChildDOM } from '../utils.js';
 
 export const Main = async () => {
-  const subCategory = `<h1>Main</h1>`;
-  const carousel = `<div>Main</div>`;
-  const eventBox = `<div>Main</div>`;
-  const evenCarouel = `<div>Main</div>`;
-  const mainContent = `<div>Main</div>`;
+  const subCategory = `Main`;
+  const carousel = `Main`;
+  const eventBox = `Main`;
+  const evenCarouel = `Main`;
+  const mainContent = `Main`;
   return renderMainChildDOM({
     subCategory,
     carousel,

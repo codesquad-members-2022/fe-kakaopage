@@ -15,10 +15,10 @@ const subCategoryIndexArr = [
 
 export const Webtoon = async () => {
   const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = `<div>Webtoon</div>`;
-  const eventBox = `<div>Webtoon</div>`;
-  const evenCarouel = `<div>Webtoon</div>`;
-  const mainContent = `<div>Webtoon</div>`;
+  const carousel = `Webtoon`;
+  const eventBox = `Webtoon`;
+  const evenCarouel = `Webtoon`;
+  const mainContent = `Webtoon`;
   return renderMainChildDOM({
     subCategory,
     carousel,

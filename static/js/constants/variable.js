@@ -9,5 +9,13 @@ export const ELEMENT_ID = {
 };
 
 export const ELEMENT_CLASS = {
-  MAIN_LAYOUT_CHILDREN: '.l-main__child',
+  MAIN_LAYOUT_CHILDREN: 'l-main__child',
 };
+
+export const MAIN_CHILD_NODE = [
+  { CLASS: 'c-main__category', ID: 'sub-category' },
+  { CLASS: 'l-carousel', ID: 'carousel' },
+  { CLASS: 'c-grid', ID: 'event-box' },
+  { CLASS: 'c-event', ID: 'event-carousel' },
+  { CLASS: 'c-webtoons', ID: 'main-content' },
+];

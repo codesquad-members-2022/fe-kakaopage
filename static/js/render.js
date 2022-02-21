@@ -1,7 +1,11 @@
 import { $get } from './utils.js';
 import { routes } from './router.js';
 import { ERROR } from './constants/message.js';
-import { ELEMENT_CLASS, ELEMENT_ID } from './constants/variable.js';
+import {
+  ELEMENT_CLASS,
+  ELEMENT_ID,
+  MAIN_CHILD_NODE,
+} from './constants/variable.js';
 
 const { NOT_FOUND } = ERROR;
 const { MAIN_LAYOUT } = ELEMENT_ID;
@@ -21,12 +25,8 @@ async function preRender(uid) {
 
 export async function render(uid) {
   const $mainLayout = $get(MAIN_LAYOUT);
-  const $mainChildLayout = $mainLayout.querySelectorAll(MAIN_LAYOUT_CHILDREN);
-
   const categoryUid = Number(uid);
-  const uidContent = await preRender(categoryUid);
-  // preRender함수 작동확인
-  console.log(uidContent);
+  // const uidContent = await preRender(categoryUid);
   try {
     const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid
@@ -34,9 +34,21 @@ export async function render(uid) {
     if (!selectedCategory) {
       throw new Error(NOT_FOUND);
     }
+    $mainLayout.innerHTML = ``;
     const contentObj = await selectedCategory.getContent();
-    $mainChildLayout.forEach(($child) => {
-      $child.innerHTML = contentObj[$child.id];
+    // Object.entries(MAIN_CHILD_NODE).forEach(([key, { CLASS, ID }]) => {
+    //   const $subLayout = document.createElement('article');
+    //   $subLayout.classList.add(CLASS, MAIN_LAYOUT_CHILDREN);
+    //   $subLayout.setAttribute('id', ID);
+    //   $subLayout.append(contentObj[ID]);
+    //   $mainLayout.append($subLayout);
+    // });
+    MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
+      const $subLayout = document.createElement('article');
+      $subLayout.classList.add(CLASS, MAIN_LAYOUT_CHILDREN);
+      $subLayout.setAttribute('id', ID);
+      $subLayout.append(contentObj[ID]);
+      $mainLayout.append($subLayout);
     });
   } catch (error) {
     console.log(error);

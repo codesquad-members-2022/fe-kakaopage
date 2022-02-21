@@ -17,10 +17,10 @@ const subCategoryIndexArr = [
 
 export const Novel = async () => {
   const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = `<div>Novel</div>`;
-  const eventBox = `<div>Novel</div>`;
-  const evenCarouel = `<div>Novel</div>`;
-  const mainContent = `<div>Novel</div>`;
+  const carousel = 'Novel';
+  const eventBox = 'Novel';
+  const evenCarouel = 'Novel';
+  const mainContent = 'Novel';
   return renderMainChildDOM({
     subCategory,
     carousel,
