@@ -53,7 +53,7 @@
 
 .webtoon__item {
   display: flex;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 .webtoon__image {
@@ -63,7 +63,7 @@
 }
 
 .webtoon__discription-box {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .webtoon__discription-box > * {
@@ -79,6 +79,23 @@
 .webtoon__info {
   font-size: 0.8rem;
   color: var(--color-dark-grey);
+}
+
+.webtoon__info {
+  display: flex;
+  align-items: center;
+}
+
+.webtoon__view-img {
+  width: 11px;
+  height: 11px;
+}
+
+.webtoon__separator {
+  width: 1px;
+  height: 12px;
+  background-color: var(--color-grey);
+  margin: 0 5px;
 }
 
 /* promotion */

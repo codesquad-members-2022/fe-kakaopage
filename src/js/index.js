@@ -25,7 +25,18 @@ function createWebtoonList(wt) {
     <div class="webtoon__discription-box">
       <p class="webtoon__title">${wt.title}</p>
       <p class="webtoon__summary">${wt.summary}</p>
-      <p class="webtoon__info">${wt.info}</p>
+      <div class="webtoon__info">
+        <div class="webtoon__view-box">
+          <img
+            class="webtoon__view-img"
+            src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+            alt="read icon"
+          />
+          <span class="webtoon__view">${wt.view}</span>
+        </div>
+        <div class="webtoon__separator"></div>
+        <span class="webtoon__author">${wt.author}</span>
+      </div>
     </div>
   </li>
   `;
