@@ -6,6 +6,7 @@
   --white: #fff;
   --gray: #eee;
   --gray2: rgb(153, 153, 153);
+  --gray3: #bdbdbd;
   --black: #242526;
   --yellow: #ffd200;
   --yellow2: #fecc2e;
@@ -462,4 +463,34 @@
   width: 504px;
   height: 98px;
   margin: auto auto;
+}
+
+.footer__container {
+  width: 720px;
+  padding: 84px 0 50px 0;
+  margin: auto;
+  justify-content: space-between;
+  color: var(--gray3);
+  font-size: 14px;
+}
+
+.footer__icon {
+  width: 55px;
+  height: 55px;
+}
+
+.footer__ul {
+  gap: 4px;
+}
+
+.footer__row1 {
+  gap: 6px;
+}
+
+.footer__address {
+  color: var(--gray3);
+}
+
+.footer__business-info-check-btn {
+  color: var(--gray3);
 }
