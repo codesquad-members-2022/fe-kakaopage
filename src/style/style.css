@@ -13,13 +13,6 @@ footer {
   width: 720px;
   margin: 0 auto; }
 
-.pseudo-img::before,
-.pseudo-img::after {
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; }
-
 /* Header */
 header {
   position: fixed;
@@ -52,10 +45,15 @@ header {
   font-size: 1.125rem;
   border: 1px solid #CFCFCF;
   border-radius: 50px;
-  padding: 15px 15px; }
+  padding: 15px; }
 
 .search-btn {
   font-size: 0; }
+  .search-btn::before, .search-btn::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
 
 .search-btn::after {
   position: absolute;
@@ -142,67 +140,13 @@ header {
 .main-banner .banner {
   width: 720px; }
 
-.banner a {
-  display: block;
-  height: 480px; }
-
-.banner img {
-  width: 100%;
-  object-fit: contain; }
-
-.banner-info {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  padding: 20px; }
-
-.banner-info * {
-  color: #FFF; }
-
-.banner-info h2 {
-  font-size: 1.875rem;
-  font-weight: 500;
-  margin-bottom: 8px; }
-
-.banner-info div {
-  display: flex;
-  align-items: center; }
-
-.banner-info span:not(:first-child) {
-  display: block;
-  font-size: 1.25rem; }
-
-.banner-info .badge {
-  position: relative;
-  top: 1px;
-  color: #FFD200;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.1;
-  border: 1px solid #FFD200;
-  border-radius: 4px;
-  background-color: #000;
-  padding: 0 4px 2px;
-  margin-right: 5px; }
-
-.banner-info span:not(:first-child)::before {
-  position: relative;
-  top: 3px;
-  display: inline-block;
-  width: 20px;
-  height: 20px; }
-
-.banner-info .genre::before {
-  background-image: url("../img/icons/ico-bigthum-wait.svg"); }
-
-.banner-info .reader::before {
-  background-image: url("../img/icons/ico-bigthum-person.svg"); }
-
 .banner-info .genre::after {
+  content: '';
   display: inline-block;
   width: 1px;
   height: 14px;
-  border-right: 2px solid #999;
+  border-right: 1px solid #999;
+  border-width: 2px;
   margin: 0 6px 0 8px; }
 
 .banner-text {
@@ -229,6 +173,11 @@ header {
   height: 40px;
   font-size: 0;
   transform: translateY(-50%); }
+  .banner-btn-group button::before, .banner-btn-group button::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
 
 .banner-btn-group .back {
   left: 15px;
@@ -241,6 +190,55 @@ header {
 /* Banner */
 .banner {
   position: relative; }
+  .banner a {
+    display: block; }
+  .banner img {
+    width: 100%;
+    object-fit: contain; }
+
+.banner-info {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  padding: 20px; }
+  .banner-info * {
+    color: #FFF; }
+  .banner-info div {
+    display: flex;
+    align-items: center; }
+  .banner-info span:not(:first-child) {
+    display: block;
+    font-size: 1.25rem; }
+    .banner-info span:not(:first-child)::before, .banner-info span:not(:first-child)::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+    .banner-info span:not(:first-child)::before {
+      position: relative;
+      top: 3px;
+      width: 20px;
+      height: 20px; }
+  .banner-info .title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 8px; }
+  .banner-info .badge {
+    position: relative;
+    top: 1px;
+    color: #FFD200;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.1;
+    border: 1px solid #FFD200;
+    border-radius: 4px;
+    background-color: #000;
+    padding: 0 4px 2px;
+    margin-right: 5px; }
+  .banner-info .genre::before {
+    background-image: url("../img/icons/ico-bigthum-wait.svg"); }
+  .banner-info .reader::before {
+    background-image: url("../img/icons/ico-bigthum-person.svg"); }
 
 /* Category Menu */
 .categories {
@@ -581,12 +579,12 @@ footer * {
 
 .company-info a::before {
   content: '';
-  position: relative;
-  top: 2px;
   display: inline-block;
   width: 1px;
   height: 14px;
   border-right: 1px solid #BDBDBD;
+  position: relative;
+  top: 2px;
   margin: 0 8px; }
 
 .footer-image-container {

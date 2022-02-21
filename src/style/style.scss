@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 @import './variable';
+@import './mixin';
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -14,14 +15,6 @@ body {
 footer {
   width: 720px;
   margin: 0 auto;
-}
-
-.pseudo-img::before,
-.pseudo-img::after {
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 /* Header */
@@ -63,10 +56,11 @@ header {
   font-size: 1.125rem;
   border: 1px solid $text-light-gray;
   border-radius: 50px;
-  padding: 15px 15px;
+  padding: 15px;
 }
 
 .search-btn {
+  @include pseudo-img();
   font-size: 0;
 }
 
@@ -90,11 +84,7 @@ header {
 }
 
 .link-area a:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 12px;
-  border-right: 1px solid $text-mid-gray;
+  @include text-separator(12px, $text-mid-gray);
   margin: 0 6px 0 8px;
 }
 
@@ -168,6 +158,7 @@ header {
 .main-banner {
   position: relative;
   overflow: hidden;
+
 }
 
 .main-banner .banner-container {
@@ -179,78 +170,9 @@ header {
   width: 720px;
 }
 
-.banner a {
-  display: block;
-  height: 480px;
-}
-
-.banner img {
-  width: 100%;
-  object-fit: contain;
-}
-
-.banner-info {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  padding: 20px;
-}
-
-.banner-info * {
-  color: $text-white;
-}
-
-.banner-info h2 {
-  font-size: 1.875rem;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.banner-info div {
-  display: flex;
-  align-items: center;
-}
-
-.banner-info span:not(:first-child) {
-  display: block;
-  font-size: 1.25rem;
-}
-
-.banner-info .badge {
-  position: relative;
-  top: 1px;
-  color: $text-yellow;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.1;
-  border: 1px solid $text-yellow;
-  border-radius: 4px;
-  background-color: $bg-black;
-  padding: 0 4px 2px;
-  margin-right: 5px;
-}
-
-.banner-info span:not(:first-child)::before {
-  position: relative;
-  top: 3px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-
-.banner-info .genre::before {
-  background-image: url('../img/icons/ico-bigthum-wait.svg');
-}
-
-.banner-info .reader::before {
-  background-image: url('../img/icons/ico-bigthum-person.svg');
-}
-
 .banner-info .genre::after {
-  display: inline-block;
-  width: 1px;
-  height: 14px;
-  border-right: 2px solid $text-mid-gray;
+  @include text-separator(14px, $text-mid-gray);
+  border-width: 2px;
   margin: 0 6px 0 8px;
 }
 
@@ -274,6 +196,7 @@ header {
 }
 
 .banner-btn-group button {
+  @include pseudo-img();
   position: absolute;
   top: 48%;
   width: 40px;
@@ -296,6 +219,72 @@ header {
 
 .banner {
   position: relative;
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.banner-info {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  padding: 20px;
+
+  * {
+    color: $text-white;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  span:not(:first-child) {
+    @include pseudo-img();
+    display: block;
+    font-size: 1.25rem;
+
+    &::before {
+      position: relative;
+      top: 3px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .badge {
+    position: relative;
+    top: 1px;
+    color: $text-yellow;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.1;
+    border: 1px solid $text-yellow;
+    border-radius: 4px;
+    background-color: $bg-black;
+    padding: 0 4px 2px;
+    margin-right: 5px;
+  }
+
+  .genre::before {
+    background-image: url('../img/icons/ico-bigthum-wait.svg');
+  }
+
+  .reader::before {
+    background-image: url('../img/icons/ico-bigthum-person.svg');
+  }
 }
 
 /* Category Menu */
@@ -609,11 +598,7 @@ header {
 }
 
 .info-area *:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 10px;
-  border-right: 1px solid $info-gray;
+  @include text-separator(10px, $info-gray);
   margin: 0 2px 0 4px;
 }
 
@@ -710,13 +695,9 @@ footer * {
 }
 
 .company-info a::before {
-  content: '';
+  @include text-separator(14px, $footer-gray);
   position: relative;
   top: 2px;
-  display: inline-block;
-  width: 1px;
-  height: 14px;
-  border-right: 1px solid $footer-gray;
   margin: 0 8px;
 }
 
