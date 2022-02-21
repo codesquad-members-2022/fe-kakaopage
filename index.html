@@ -1,114 +1,137 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer type="module" src="/src/main.js"></script>
     <title>Alan | Kakaopage-clone</title>
-</head>
-<body>
-    <header class="top">
-        <div class="header__container">
-            <h1 class="header__logo"><a href="#"><img src="img/kakaopage logo.svg" alt="카카오페이지 메인 로고" /></a></h1>
-            <div class="header__utils">
-                <form class="header__search-form">
-                    <input type="text" class="header__search-input" />
-                    <button type="submit" class="header__search-btn"><img src="img/검색 버튼.png" alt="검색"/></button>
-                </form>
-                <div class="header__stage">
-                    <a href="#" class="header__stage-logo"><img src="img/스테이지.svg" alt="스테이지 로고"></a>
-                    <img class="header__stage-tooltip" src="img/stage-tooltip.svg" alt="스테이지 툴팁">
-                </div>
-                <div class="header__user-services">
-                    <div class="header__user-service"><a href="#">캐시충전</a></div>
-                    <div class="divider"></div>
-                    <div class="header__user-service"><a href="#">로그인</a></div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="gnb top">
-        <ul class="gnb__container tab__container">
-            <li class="gnb__item center"><a href="#"><img src="img/홈.svg" alt="홈"/></a></li>
-            <li class="gnb__item center tab__item--selected "><a href="#"><img src="img/웹툰_만화.svg" alt="웹툰"/></a></li>
-            <li class="gnb__item center"><a href="#"><img src="img/웹소설_장르.svg" alt="웹소설"/></a></li>
-            <li class="gnb__item center"><a href="#"><img src="img/영화.svg" alt="영화"/></a></li>
-            <li class="gnb__item center"><a href="#"><img src="img/예능_드라마.svg" alt="방송"/></a></li>
-            <li class="gnb__item center"><a href="#"><img src="img/책.svg" alt="책"/></a></li>
-        </ul>
-    </nav>
+  </head>
+  <body>
+    <header class="top"></header>
+    <nav class="gnb top"></nav>
     <div class="contents">
-        <div class="genre-tab">
-            <ul class="tab__container vertical-center">
-                <li class="genre-tab__item center genre-tab__item--selected"><a href="#">홈</a></li>
-                <li class="genre-tab__item center"><a href="#">요일연재</a></li>
-                <li class="genre-tab__item center"><a href="#">웹툰</a></li>
-                <li class="genre-tab__item center"><a href="#">소년</a></li>
-                <li class="genre-tab__item center"><a href="#">드라마</a></li>
-                <li class="genre-tab__item center"><a href="#">로맨스</a></li>
-                <li class="genre-tab__item center"><a href="#">로판</a></li>
-                <li class="genre-tab__item center"><a href="#">액션무협</a></li>
-                <li class="genre-tab__item center"><a href="#">BL</a></li>
-            </ul>
+      <div class="genre-tab">
+        <ul class="tab__container vertical-center">
+          <li class="genre-tab__item center genre-tab__item--selected">
+            <a href="#">홈</a>
+          </li>
+          <li class="genre-tab__item center"><a href="#">요일연재</a></li>
+          <li class="genre-tab__item center"><a href="#">웹툰</a></li>
+          <li class="genre-tab__item center"><a href="#">소년</a></li>
+          <li class="genre-tab__item center"><a href="#">드라마</a></li>
+          <li class="genre-tab__item center"><a href="#">로맨스</a></li>
+          <li class="genre-tab__item center"><a href="#">로판</a></li>
+          <li class="genre-tab__item center"><a href="#">액션무협</a></li>
+          <li class="genre-tab__item center"><a href="#">BL</a></li>
+        </ul>
+      </div>
+      <div class="main-banner slides">
+        <ul class="main-banner__contents slide__container">
+          <li class="main-banner__content banner__content slide--prev">
+            <a href="#">
+              <div class="banner__img-wrapper">
+                <img
+                  class="banner__img"
+                  src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png"
+                  alt="웹툰-내가 죽였다 썸네일"
+                />
+              </div>
+              <p class="main-banner__description banner__description center">
+                나도 그들처럼 영웅이 되고 싶었다
+              </p>
+              <div class="banner__information">
+                <p class="banner__title">화산전쟁</p>
+                <div class="banner__tags">
+                  <span class="banner__status"
+                    ><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"
+                  /></span>
+                  <div class="banner__genre">
+                    <img src="img/ico-bigthum-wait.svg" />웹툰
+                  </div>
+                  <div class="banner__views">
+                    <img src="img/ico-bigthum-person.svg" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="main-banner__content banner__content slide--curr">
+            <a href="#">
+              <div class="banner__img-wrapper">
+                <img
+                  class="banner__img"
+                  src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png"
+                  alt="웹툰-내가 죽였다 썸네일"
+                />
+              </div>
+              <p class="main-banner__description banner__description center">
+                나도 그들처럼 영웅이 되고 싶었다
+              </p>
+              <div class="main-banner__information banner__information">
+                <p class="main-banner__title banner__title">화산전쟁</p>
+                <div class="main-banner__tags banner__tags vertical-center">
+                  <span class="banner__status"
+                    ><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"
+                  /></span>
+                  <div class="banner__genre vertical-center">
+                    <img src="img/ico-bigthum-wait.svg" /><span>웹툰</span>
+                  </div>
+                  <div class="divider divider--thick"></div>
+                  <div class="banner__views vertical-center">
+                    <img src="img/ico-bigthum-person.svg" /><span
+                      >183.2만명</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="main-banner__content banner__content slide--next">
+            <a href="#">
+              <div class="banner__img-wrapper">
+                <img
+                  class="banner__img"
+                  src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png"
+                  alt="웹툰-내가 죽였다 썸네일"
+                />
+              </div>
+              <p class="main-banner__description banner__description center">
+                나도 그들처럼 영웅이 되고 싶었다
+              </p>
+              <div class="banner__information">
+                <p class="banner__title">화산전쟁</p>
+                <div class="banner__tags">
+                  <span class="banner__status"
+                    ><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"
+                  /></span>
+                  <div class="banner__genre">
+                    <img src="img/ico-bigthum-wait.svg" />웹툰
+                  </div>
+                  <div class="banner__views">
+                    <img src="img/ico-bigthum-person.svg" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="slide__btns">
+          <button class="slide__btn slide__btn--prev">
+            <img src="img/previous button.svg" alt="이전 슬라이드 버튼" />
+          </button>
+          <button class="slide__btn slide__btn--next">
+            <img src="img/next button.svg" alt="다음 슬라이드 버튼" />
+          </button>
         </div>
-        <div class="main-banner slides">
-            <ul class="main-banner__contents slide__container">
-                <li class="main-banner__content banner__content slide--prev">
-                    <a href="#">
-                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
-                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
-                        <div class="banner__information">
-                            <p class="banner__title">화산전쟁</p>
-                            <div class="banner__tags">
-                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
-                                <div class="banner__genre"><img src="img/ico-bigthum-wait.svg">웹툰</div>
-                                <div class="banner__views"><img src="img/ico-bigthum-person.svg"></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="main-banner__content banner__content slide--curr">
-                    <a href="#">
-                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
-                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
-                        <div class="main-banner__information banner__information">
-                            <p class="main-banner__title banner__title">화산전쟁</p>
-                            <div class="main-banner__tags banner__tags vertical-center">
-                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
-                                <div class="banner__genre vertical-center"><img src="img/ico-bigthum-wait.svg"><span>웹툰</span></div>
-                                <div class="divider divider--thick"></div>
-                                <div class="banner__views vertical-center"><img src="img/ico-bigthum-person.svg"><span>183.2만명</span></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="main-banner__content banner__content slide--next">
-                    <a href="#">
-                        <div class="banner__img-wrapper"><img class="banner__img" src="img/banner/웹툰 _ 내가 죽였다 4타 _ 16-24.png" alt="웹툰-내가 죽였다 썸네일"/></div>
-                        <p class="main-banner__description banner__description center">나도 그들처럼 영웅이 되고 싶었다</p>
-                        <div class="banner__information">
-                            <p class="banner__title">화산전쟁</p>
-                            <div class="banner__tags">
-                                <span class="banner__status"><img src="img/badge-bigthum-event.svg" alt="이벤트 표시"></span>
-                                <div class="banner__genre"><img src="img/ico-bigthum-wait.svg">웹툰</div>
-                                <div class="banner__views"><img src="img/ico-bigthum-person.svg"></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <div class="slide__btns">
-                <button class="slide__btn slide__btn--prev"><img src="img/previous button.svg" alt="이전 슬라이드 버튼"></button>
-                <button class="slide__btn slide__btn--next"><img src="img/next button.svg" alt="다음 슬라이드 버튼"/></button>
-            </div>
-            <div class="main-banner__page-nums slide__page-nums">
-                <span class="main-banner__page-num--curr">1</span>
-                <span>/</span>
-                <span class="main-banner__page-num--total">3</span>
-            </div>
+        <div class="main-banner__page-nums slide__page-nums">
+          <span class="main-banner__page-num--curr">1</span>
+          <span>/</span>
+          <span class="main-banner__page-num--total">3</span>
         </div>
-        <div class="category-grid center">
+      </div>
+      <!-- <div class="category-grid center">
             <ul class="category-grid__container">
                 <li class="category-grid__item">
                     <a class="category-grid__link center" href="#">
@@ -547,10 +570,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <a class="app-link" href="#">
-            <img class="app-link__img" src="img/download link.png">
-        </a>
+        </section>-->
+      <a class="app-link" href="#">
+        <img class="app-link__img" src="img/download link.png" />
+      </a>
     </div>
-</body>
+  </body>
 </html>
