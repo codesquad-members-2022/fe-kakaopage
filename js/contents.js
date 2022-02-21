@@ -93,9 +93,9 @@ export function makeFiveWebtoon(list) {
   <div class="five_webtoon txt-l pos-rel">
     <img src="${list.url}," / alt="${list.title} 이미지" width="110" height="110">
     <span>${list.webtoonInfo}</span><span>🕔</span>
-    <div class="info_top">
+    <div class="five_info pos-rel">
       <div>${list.title}</div>
-      <div><span>UP</span>👤${list.people}만명</div>
+      <div><img src="${list.update}," / alt="웹툰 상태 이미지" width="16" height="14"><span>👤${list.people}만명</span></div>
     </div>
   </div>
   `;
