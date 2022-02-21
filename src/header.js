@@ -1,4 +1,4 @@
-// header의 홈 웹툰 웹소설 영화~~까지의 javascript
+// 이제 안 씀
 
 function showCurrentPage(e) {
   pageArr.forEach((el) => {

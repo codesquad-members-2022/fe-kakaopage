@@ -30,12 +30,14 @@ function makeTodayList(day) {
   return todayList;
 }
 
-function makeTodayEvent(dayIdx) {
+function makeTodayEvent(dayIdx, today) {
   const dayArr = ["mon", "tue", "wed", "thu", "fri", "sat", "sun", "end"];
   const day = dayArr[dayIdx];
   const toonList = document.querySelector(`.${day}`);
   const webtoons = document.querySelector(".webtoon-list-1");
   const toonListArr = document.querySelectorAll('.navbar-second-content');
+  webtoons.innerHTML = makeTodayList(day);
+  if(dayIdx === today) toonList.parentElement.classList.add("makeBold", "makeBackgroundImg");
   toonList.addEventListener('mousedown', function (el) {
     toonListArr.forEach((el, idx) => {
       el.classList.remove("makeBold", "makeBackgroundImg");
@@ -44,9 +46,6 @@ function makeTodayEvent(dayIdx) {
     webtoons.innerHTML = makeTodayList(day);
   });
 };
-
-
-
 
 
 export { makeTodayList, makeTodayEvent };
