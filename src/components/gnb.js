@@ -1,7 +1,7 @@
 import { gnbData } from "../data/gnbData.js"
+import { DEFAULT_PAGE } from "../constant.js";
 
 const gnb = document.querySelector('.gnb')
-const DEFAULT_TAB = 'webtoon';
 
 const renderGnb = () => {    
     gnb.innerHTML = getTemplate();
@@ -20,7 +20,7 @@ const getTemplate = () => {
 }
 
 const setDefault = () => {
-    const defaultClicked = document.querySelector(`.gnb__item[data-tab=${DEFAULT_TAB}]`);
+    const defaultClicked = document.querySelector(`.gnb__item[data-tab=${DEFAULT_PAGE}]`);
     defaultClicked.classList.add('tab__item--selected');
 }
 
