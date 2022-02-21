@@ -50,3 +50,15 @@ __How TO__
 
 ### footer
 > The <footer> HTML element represents a footer for its nearest sectioning content or sectioning root element.
+
+## Dom Elements
+-----------------------
+Document.createElement()
+```javascript
+let element = document.createElement(tagName[, options]);
+```
+__tagName__
+A string that specifies the type of element to be created. The nodeName of the created element is initialized with the value of tagName. Don't use qualified names (like "html:a") with this method. When called on an HTML document, createElement() converts tagName to lower case before creating the element. In Firefox, Opera, and Chrome, createElement(null) works like createElement("null").
+
+__options Optional__
+An optional ElementCreationOptions object, containing a single property named is, whose value is the tag name of a custom element previously defined via customElements.define(). See Web component example for more details.

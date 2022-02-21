@@ -1,0 +1,11 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+# FetchAPI
+The Fetch API provides an interface for getching resources (including across the network).
+
+Fetch provides a generic definition of Request and Response objects (and other things involved with network requests). 
+
+CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere..
+
+## the fetch() method
+The fetch() method takes one mandatory argument, the path to the resource you want to fetch. 

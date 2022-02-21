@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style/style.css">
-  <script src="main.js"></script>
+  <script src="./components/main.js"></script>
 </head>
 
 <body>
@@ -14,7 +13,7 @@
           <input class="header-input" type="text">
           <button class="header-stage">Stage</button>
           <button class="header-mini-menu">
-            <span class = "header-charge">캐시충전</span>
+            <span class = "header-charge">캐시충전 | </span>
             <span class = "header-login">로그인</span>
       </span>
     </header>
@@ -22,12 +21,12 @@
    <main>
      <nav class="main-nav main-position">
         <ul class="main-ul">
-          <li class="main-li" onclick="openPage('Mon', this)" id="defaultOpen">Mon</li>
-          <li class="main-li" onclick="openPage('Tue', this)">Tue</li>
-          <li class="main-li" onclick="openPage('Wed', this)">Wed</li>
-          <li class="main-li" onclick="openPage('Thur', this)">Thur</li>
-          <li class="main-li" onclick="openPage('Fri', this)">Fri</li>
-          <li class="main-li" onclick="openPage('Sat', this)">Sat</li>
+          <li class="main-li">홈</li>
+          <li class="main-li">웹툰</li>
+          <li class="main-li">웹소설</li>
+          <li class="main-li">영화</li>
+          <li class="main-li">방송</li>
+          <li class="main-li">책</li>
         </ul>
       </nav>
 
@@ -58,8 +57,15 @@
         </div>
       </div><!---main-contents-->
    </main>
-  <footer>
 
+   <footer>
+    <ul class="policy-ul">
+      <li class="policy-li">회사소개</li>
+      <li class="policy-li">이용약관</li>
+      <li class="policy-li">개인정보처리방침</li>
+      <li class="policy-li">청소년보호정책</li>
+      <li class="policy-li">공지사항</li>
+    </ul>
   </footer>
    </div><!--full-box-->  
 </body>

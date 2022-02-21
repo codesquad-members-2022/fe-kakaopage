@@ -1,0 +1,18 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+# Template literals(Template strings)
+
+Template literals are literals delimited with brackticks(`), allowing embedded expressions called substitutions.
+
+```
+// Untagged, these create strings:
+`string text`
+`string text line1 string text line 2`
+`string text ${expression} string text`
+
+// Re-usable template:
+const templateFn = expression => `string text ${expression} string text`;
+
+// Tagged, thi scalls the function "example" with the template as the first argument and substitution value as subsequent arguments:
+example `string text ${expression} string text`
+```

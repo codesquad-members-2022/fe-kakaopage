@@ -1,0 +1,18 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+
+# Document.querySelector()
+
+The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+
+```javascript
+element = document.querySelector(selectors);
+``` 
+
+
+
+=======================================
+If you need a list of all elements matching the specified selectors, you should use querySelectorAll() instead.
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+
+# Document.querySelectorAll()
+

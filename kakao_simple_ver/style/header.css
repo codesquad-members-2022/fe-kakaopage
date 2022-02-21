@@ -1,3 +1,9 @@
+:root {
+    --white:#ffffff;
+    --yellow-button: #fce51d;
+    --font-gray: #999;
+    --font-dark: black;
+}
 header {
     background-color: var(--white);
     /* position: fixed; */
@@ -22,5 +28,28 @@ header {
     height: 30px;
   }
   .header-input {
-
+    background: var(--white);
+    line-height: 23px;
+    padding: 2px;
+    border: 1px solid #cfcfcf;
+    border-radius: 20px;
+    margin-right: 15px;
+  }
+  .header-stage {
+      border: none;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--font-dark);
+      background-color: var(--yellow-button);
+      margin-right: 10px;
+  }
+  .header-mini-menu {
+      border: none;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--font-gray);
+      margin-right: 22px;
+      background-color: transparent;
   }

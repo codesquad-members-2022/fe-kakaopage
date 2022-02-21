@@ -1,0 +1,85 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+# Introduction to the DOM(Document Object Model)
+
+## DOM and JavaScript
+------------------------------
+- The DOM is not a programming language.
+- The DOM is not part of the JavaScript language, but is instead a Web API used to build websites.
+- The DOM was designed to be independent of any particular programming language, making the structural representationof the document available from a single, consistent API. (implementation of the DOM can be built for any language, as this Python example demonstrates)
+```Python
+import xml.dom.minidom as m
+doc = m.parse(r"C:\Projects\Py\chap1.xml")
+doc.nodeName # DOM property of document object
+p_list = doc.getElementsByTagName("para")
+```
+
+## Accessing the DOM
+------------------------------
+You use the API directly in JavaScript from within what is called a script, a program run by a browser.
+Your DOM programming may be sth as simple as the following example, which displays a message on the console by using the console.log() function.
+
+```html
+<body onload="console.log('Welcome to my home page!');">
+```
+
+**As it is generally not recommended to mix the structure of the page(written in HTML) and manipulation of the DOM(written in JavaScript), the JavaScript parts will be grouped together here, and separated from the HTML.** (아래 예시는 적어두지 않겠음.)
+
+## Fundamental data types
+- Document
+- Node
+- Element
+- NodeList
+- Attr
+- NamedNodeMap
+
+## Core interfaces in the DOM
+----------------------------------------
+This section lists some of the most commonly-used interfaces in the DOM.... not to describe what these APIs do here...
+The __document__ and __window__ objects are the objects whose interfaces you generally use most often in DOM programming. In simple terms, the __window__ object represents something like the browswer, and the document object is the root of the document itself. __Element__ inherits from the generic __Node__ interface...
+
+- document.querySelector(selector)
+- document.querySelectorAll(name)
+- document.createElement(name)
+- parentNode.appendChild(node)
+
+- element.innerHTML
+- element.style.left
+- element.setAttribute()
+- element.getAttribute()
+- element.addEventListener()
+
+- window.content
+- GlobalEventHandlers/onload
+- window.scrollTo()
+
++++++++++++++
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement
+# HTMLTableElement
+
++++++++++++++
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+# HTMLElement
+---------------------
+The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
+EventTarget <- Node <- Element <- HTMLElement
+
++++++++++++++
+https://developer.mozilla.org/en-US/docs/Web/API/Document
+# Document
+
++++++++++++++
+https://developer.mozilla.org/en-US/docs/Web/API/DocumentType
+# DocumentType
+The DocumentType interface represents a Node containing a doctype.
+EventTarget <- Node <- DocumentType
+
+++++++++++++
+https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
+# DOMTokenList
+The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList or HTMLLinkElement.relList. and many others..
+
+A DOMTokenList is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.
+
+
+

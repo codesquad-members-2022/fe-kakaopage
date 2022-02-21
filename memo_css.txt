@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/42134731/css-change-button-style-after-click
+
+Each link has five different states: link, hover, active, focus and visited.
+Link is the normal appearance, hover is when you mouse over, active is the state when it's clicked, focus follows active and visited is the state you end up when you unfocus the recently clicked link.
+
+I'm guessing you want to achieve a different style on either focus or visited, then you can add the following CSS:
+
+a { color: #00c; }
+a:visited { #ccc; }
+a:focus { #cc0; }
+
+-----------
