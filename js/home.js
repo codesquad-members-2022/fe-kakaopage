@@ -1,4 +1,4 @@
-import { homeData } from './data.js';
+import { homeData } from './data/home-data.js';
 import { makeImageSection } from './contents.js';
 import { makeMenu } from './contents.js';
 import { makeAdvert } from './contents.js';

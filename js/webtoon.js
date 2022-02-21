@@ -1,4 +1,4 @@
-import { webtoonData } from './data.js';
+import { webtoonData } from './data/webtoon-data.js';
 import { makeImageSection } from './contents.js';
 import { makeDate } from './contents.js';
 import { makeWebtoonInfo } from './contents.js';

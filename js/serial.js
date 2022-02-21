@@ -1,4 +1,4 @@
-import { serialData } from './data.js';
+import { serialData } from './data/serial-data.js';
 import { makeImageSection } from './contents.js';
 import { makeTitle } from './contents.js';
 import { makeDate } from './contents.js';
