@@ -33,8 +33,13 @@ export const bigCover = (webtoonData) => {
 
   return `
   <div class="webtoon-cover">
-    <img class="webtoon-badge" src="./data/contents/${badge}.png" />
+    ${
+      !badge
+        ? ''
+        : `<img class="webtoon-badge" src="./data/contents/${badge}.png" />`
+    }
   </div>
+  
   <div class="webtoon-info">
     <div class="webtoon-title">
       <img
