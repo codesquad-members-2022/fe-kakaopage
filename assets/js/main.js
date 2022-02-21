@@ -33,7 +33,7 @@ function changeTopBanner(targetLnb) {
     const banner = document.querySelector('.top_banner');
     const targetBannerData = topBanner[targetLnb];
     const itemHtml = targetBannerData.map(data => creatTopBannerHtml(data));
-    banner.querySelector('.slider_items').innerHTML = itemHtml.join();
+    banner.querySelector('.slider_items').innerHTML = itemHtml.join('');
 }
 
 function creatTopBannerHtml(data) {
