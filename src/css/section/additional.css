@@ -1,4 +1,32 @@
 @charset "utf-8";
+/* up, N 이미지 */
+.five_info div {
+  width: 110px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-XXS);
+  font-weight: var(--font-max-bold);
+}
+.five_info img {
+  position: absolute;
+  width: 18px;
+}
+.five_info > div:nth-child(2) {
+  padding-bottom: 20px;
+}
+.five_info span {
+  position: absolute;
+  left: 14%;
+}
+/* 3개 메뉴 */
+.menu_border_left {
+  border-radius: 10px 0px 0px 10px;
+}
+.menu_border_right {
+  border-radius: 0px 10px 10px 0px;
+}
 /* 웹툰 긴거 */
 .long_webtoon {
   width: calc(100% / 4);
