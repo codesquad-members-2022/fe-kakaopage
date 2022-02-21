@@ -21,11 +21,15 @@
 
 ## TODO
 
+### 할 말
+
+- 각 컴포넌트의 margin으로 간격 조정 ➡ 컨테이너의 wrap 속성으로 간격 조정
+
 - [ ] before, after 활용
 - [x] 함수로 HTML 생성
 - [x] 생성한 HTML 조합
 - [x] CSS 컴포넌트 내에서 적용
-- [ ] CSS 네이밍 리팩토링
+- [ ] CSS 네이밍 리팩토링(진행중)
 - [ ] 컴포넌트 생성
   - [ ] header
   - [ ] navigation
