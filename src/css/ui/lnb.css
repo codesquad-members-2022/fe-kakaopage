@@ -4,8 +4,6 @@
 }
 
 .lnb {
-  display: flex;
-  justify-content: space-between;
   font-size: var(--20px);
 }
 

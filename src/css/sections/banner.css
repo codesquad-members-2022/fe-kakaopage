@@ -33,7 +33,7 @@
   font-size: var(--20px);
 }
 
-.banner__bar {
+.bar {
   display: block;
   min-width: 1px;
   width: 1px;
@@ -66,7 +66,7 @@
   font-size: var(--18px);
 }
 
-.new .banner__bar {
+.new .bar {
   height: 12px;
 }
 
