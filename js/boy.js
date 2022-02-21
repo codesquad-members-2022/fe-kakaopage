@@ -1,4 +1,4 @@
-import { boyData } from './data.js';
+import { boyData } from './data/boy-data.js';
 import { makeImageSection } from './contents.js';
 import { makeThreeMenu } from './contents.js';
 import { makeAdvert } from './contents.js';
