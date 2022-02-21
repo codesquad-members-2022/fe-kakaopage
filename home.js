@@ -25,6 +25,7 @@ const homeData = {
             type : '소년'
         }
     ],
+    sectionNums: 10,
 }
 
 async function renderHome() {
@@ -42,7 +43,7 @@ async function renderHome() {
     // }) app.js:72 Uncaught SyntaxError: Unexpected reserved word 오류
     // forEach에서 fetch 안됨
 
-    await displayWeekRanking(1, 10);
+    await displayWeekRanking(1, homeData.sectionNums);
     // 앞의 숫자: 요일 숫자, 뒤에 숫자 : 출력할 작품 수
 
     for(let i=0; i<homeData['articleBooks5Lists'].length; i++) {

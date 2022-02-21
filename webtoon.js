@@ -1,13 +1,15 @@
 const webtoonData = {
     nav: ['월', '화', '수', '목', '금', '토', '일', '전체'],
+    parms: [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', ''],
+    sectionNums: 11,
 }
 
 async function renderWebtoon() {
     const mainEL = document.querySelector('main');
     mainEL.innerHTML += renderNav('nav__webtoon', webtoonData.nav) + renderArticleWebtoonRow();
     document.querySelector('.nav__webtoon-list').classList.add('active');
-    await renderRowArticle(0, 11);
-    navClickEventHandler('nav__webtoon-lists', webtoonData.nav, renderRowArticle, 11);
+    await renderRowArticle(0, webtoonData.sectionNums);
+    navClickEventHandler('nav__webtoon-lists', webtoonData.nav, renderRowArticle, webtoonData.sectionNums);
 }
 
 function renderArticleWebtoonRow() {
@@ -16,8 +18,7 @@ function renderArticleWebtoonRow() {
 }
 
 function renderRowArticle(index, sectionNums) {
-    const parms = [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', ''];
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${parms[index]}`)
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${webtoonData.parms[index]}`)
     .then(res => res.json())
     .then(json => {
         let html ='';
@@ -26,7 +27,6 @@ function renderRowArticle(index, sectionNums) {
         }
     document.querySelector('.article__webtoon-row').innerHTML = '';
     document.querySelector('.article__webtoon-row').innerHTML += renderRowListWrapper(html);
-    
     })
 }
 
