@@ -29,20 +29,17 @@
 
 .day__item {
   cursor: pointer;
-  padding: 12px;
-}
-
-.day__item#whole {
-  padding: 12px 5px 12px 5px;
+  text-align: center;
+  width: 45px;
+  line-height: 45px;
 }
 
 .day__item.selected {
-  width: 45px;
-  height: 45px;
   color: var(--color-black);
-  background-color: var(--color-light-yellow);
-  border-radius: 50%;
   font-weight: 600;
+  background: url('https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132');
+  background-repeat: no-repeat;
+  background-size: 45px;
 }
 
 /* main webtoons */
