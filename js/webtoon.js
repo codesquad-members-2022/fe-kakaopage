@@ -16,33 +16,36 @@ function createDailyNav() {
 // 이벤트 버블링 사용해보기.
 function listenEvent() {
     const $daily__nav = select('.daily__nav')
-    $daily__nav.addEventListener('click', (e) => (addOn(e)));
-    $daily__nav.addEventListener('click', (e) => (createDailyContent(e)));
+    $daily__nav.addEventListener('click', (e) => (handleClick(e)));
 }
 
-// 기존에 on 은 모두 삭제하고 클릭된 노드만 on
-function addOn(e) {
-    const $daily__button = e.target
-    removeOn(e)
+function handleClick(e) {
+    const $daily__button = e.target;
+    // button box 클릭 시에만 실행하도록 범위 지정.
     if($daily__button.className === 'daily__button') {
-        $daily__button.className += ' daily__button-on' // 한칸 띄고 넣어야함.
+        removeOn($daily__button)
+        addOn($daily__button)
+        createDailyContent($daily__button)
     }
 }
 
-function removeOn(e) {
-    const $daily__button = e.target;
-    const $$daily__button = document.querySelectorAll(`.${$daily__button.className}`)
+
+// 기존에 on 은 모두 삭제하고 클릭된 노드만 on
+function addOn(target) {
+    target.className += ' daily__button-on' // 한칸 띄고 넣어야함.
+}
+
+function removeOn(target) {
+    const $$daily__button = document.querySelectorAll(`.${target.className}`)
     $$daily__button.forEach((node) => node.classList.remove('daily__button-on'))
 }
 
-function createDailyContent(e) {
-    const clickedDay = e.target.innerText;
-    if(e.target.className === 'daily__button daily__button-on') {
-        let template = getDailyTemplate(clickedDay)
-        const $dailyContents = select('.daily__contents')
-        template = template.repeat(5)
-        $dailyContents.innerHTML = template
-    }
+function createDailyContent(target) {
+    const clickedDay = target.innerText;
+    let template = getDailyTemplate(clickedDay)
+    const $dailyContents = select('.daily__contents')
+    template = template.repeat(5)
+    $dailyContents.innerHTML = template
 }
 
 function getDailyTemplate(day) {
@@ -80,6 +83,23 @@ function getDailyTemplate(day) {
     return template;
 }
 
+function createTodayContent() {
+    const date = new Date();
+    const week = ['일', '월', '화', '수', '목', '금', '토']
+    const today = week[date.getDay()];
+    const $$daily__button = document.querySelectorAll('.daily__button')
+    $$daily__button.forEach((node) => {
+        if(node.innerText === today) {
+            addOn(node);
+            createDailyContent(node);
+        }
+    })
+}
 
-createDailyNav()
-listenEvent()
+function initWebtoon() {
+    createDailyNav()
+    createTodayContent()
+    listenEvent()
+}
+
+initWebtoon();
