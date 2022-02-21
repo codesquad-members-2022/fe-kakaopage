@@ -95,6 +95,7 @@ video {
 footer,
 header,
 main {
+  top: 0px;
   width: 660px;
   background-color: rgb(227, 241, 253);
   margin: 0px auto;
