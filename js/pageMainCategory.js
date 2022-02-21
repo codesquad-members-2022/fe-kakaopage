@@ -3,11 +3,13 @@ import drawTagListEl from './drawTagListEl.js';
 import clearTagListEl from './clearTagListEl.js';
 import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';
 import clearWebtoonContents from './webtoonComponent/clearWebtoonContents.js';
-import webtoonContentsArr from '../json/webtoonContents.json' assert { type: 'json' };
-console.dir(webtoonContentsArr);
+import webtoonContentsObj from '../json/webtoonContents.json' assert { type: 'json' };
+import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
 import drawDayFilter from './dayFilter/drawDayFilter.js';
 import clearDayFilter from './dayFilter/clearDayFilter.js';
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
+console.dir(webtoonContentsObj);
+console.dir(dayContentsObj);
 
 const pageMainCategoryContainer = document.querySelector(
   '.page-main-category__container'
@@ -31,10 +33,25 @@ const onHighLight = (element) => {
   element.classList.toggle('color-black');
 };
 
+const days = {
+  0: '일',
+  1: '월',
+  2: '화',
+  3: '수',
+  4: '목',
+  5: '금',
+  6: '토',
+  '-1': '전체',
+};
+
 initMainCategoryDay();
+
 pageMainCategory.forEach((li, idx, list) => {
   li.addEventListener('click', (event) => {
     if (curIdx === idx) return;
+    let selectedDay = days[li.dataset.curday];
+    const dayFilterExists = !!selectedDay;
+
     const prevTarget = list[curIdx];
     const curTarget = event.target;
     const category = li.textContent;
@@ -48,11 +65,18 @@ pageMainCategory.forEach((li, idx, list) => {
     drawTagListEl(category);
 
     clearWebtoonContents();
-    webtoonContentsArr[category].forEach((webtoonContents) => {
+    if (dayFilterExists) {
+      const dayContentsArr = dayContentsObj[category][selectedDay];
+      dayContentsArr.forEach((dayContents) => {
+        drawWebtoonContents(dayContents);
+      });
+    }
+
+    webtoonContentsObj[category].forEach((webtoonContents) => {
       drawWebtoonContents(webtoonContents);
     });
 
     clearDayFilter();
-    drawDayFilter(li);
+    drawDayFilter(li, dayContentsObj[category]);
   });
 });

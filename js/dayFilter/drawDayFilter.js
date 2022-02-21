@@ -13,7 +13,7 @@ const html = `
   </ul>
 `;
 
-const drawDayFilter = (categoryEl) => {
+const drawDayFilter = (categoryEl, dayContentsMap) => {
   let curday = categoryEl.dataset.curday;
   let category = categoryEl.textContent;
 
@@ -37,7 +37,7 @@ const drawDayFilter = (categoryEl) => {
   todayEl.classList.add('circle');
 
   // ---
-  addClickEvent(categoryEl);
+  addClickEvent(categoryEl, dayContentsMap);
 };
 
 export default drawDayFilter;
