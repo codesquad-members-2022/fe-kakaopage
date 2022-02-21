@@ -1,50 +1,57 @@
 .image-poster__wrapper {
 }
 
-.image-poster__default,
-.image-poster__recommend {
+.image-poster__small,
+.image-poster__large {
     margin-bottom: 20px;
 }
 
-.image-poster__default {
+.image-poster__small {
     width: 120px;
 }
 
-.image-poster__recommend {
+.image-poster__large {
     width: 150px;
 }
 
-.image-poster__default-item,
-.image-poster__recommend-item {
+.image-poster__small-item,
+.image-poster__large-item {
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.image-poster__default-item {
+.image-poster__small-item {
     width: 120px;
 }
 
-.image-poster__recommend-item {
+.image-poster__large-item {
     width: 150px;
 }
 
-.image-poster__default_img,
-.image-poster__recommend_img {
+.image-poster__small_img,
+.image-poster__mid_img,
+.image-poster__large_img {
     background-size: cover;
     background-position: center center;
     border-radius: 6px;
     vertical-align: top;
 }
 
-.image-poster__default_img {
+.image-poster__small_img {
     width: 120px;
     height: 120px;
 }
 
-.image-poster__recommend_img {
+.image-poster__large_img {
     width: 150px;
     height: 200px;
+}
+
+.image-poster_status {
+    height: 26px;
+    position: absolute;
+    border-top-left-radius: 8px;
 }
 
 .item__inner {
