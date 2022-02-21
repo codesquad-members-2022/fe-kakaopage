@@ -3,58 +3,25 @@ import {
   $,
   remove,
   replaceInner,
-  resetDefault,
   cloneAndDsiplay,
 } from "./eventJS/util.js";
-import { changeMainSecHome, changeMainSecWoD } from "./eventJS/recEvent.js";
+
+import { renderMainSecHome, renderMainSecWoD } from "./eventJS/recEvent.js";
+import { data } from "./component/data.js";
+import { renderToonbyDay } from "./eventJS/mainEvent.js";
 
 $(".prev").addEventListener("click", () => {});
 
-let pageCount = 0;
-let contentsChecker = "";
-
-cloneAndDsiplay($(".main__cartoonZone"), $(".main__cartoonZone__cell"), 9);
-
-function onclickPrev(target) {
-  const maxPage = $(".recommand__image--wrapper").childElementCount - 1;
-
-  if (maxPage > -pageCount) {
-    pageCount--;
-  }
-  const pixel = 1000 * pageCount;
-  $(".recommand__image--wrapper").style.transform = `translate(${pixel}px)`;
-
-  //이부분 수정하면 될것같은데
-  $(".recommand__image--pageCount").firstChildNode;
-}
-
-$(".next").addEventListener("click", onclicknext);
-
-function onclicknext() {
-  if (0 > pageCount) {
-    pageCount++;
-  }
-  const pixel = pageCount * 1000;
-  document.querySelector(
-    ".recommand__image--wrapper"
-  ).style.transform = `translate(${pixel}px)`;
-}
+renderMainSecHome();
 
 $(".recommand__nav--ul").addEventListener("click", function (event) {
-  if (
-    event.target.textContent === "홈" &&
-    event.target.textContent !== contentsChecker
-  ) {
-    changeMainSecHome(contentsChecker);
-  } else if (
-    event.target.textContent === "요일연재" &&
-    event.target.textContent !== contentsChecker
-  ) {
-    changeMainSecWoD(contentsChecker);
+  const clickedNav = event.target.textContent;
+  if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
+    renderMainSecHome(clickedNav);
+  } else if (clickedNav === "요일연재" && clickedNav !== data.contentsChecker) {
+    renderMainSecWoD(clickedNav);
   }
 });
-
-$(".main__nav__dow--ul").addEventListener("click", function (event) {});
 
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {

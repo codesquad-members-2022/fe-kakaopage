@@ -6,14 +6,9 @@ const createMainNav = (data) => {
   nav.classList.add("main__nav__dow");
   nav.innerHTML = `
       <ul class="main__nav__dow--ul">
+      ${data.week.map((day) => `<li>${day}</li>`).join("")}
       </ul>
   `;
-
-  data.week.forEach((day) => {
-    const list = createEl("li");
-    list.textContent = day;
-    nav.querySelector(".main__nav__dow--ul").appendChild(list);
-  });
 
   return nav;
 };
@@ -83,6 +78,7 @@ export {
   createMainNav,
   createMaincontainer,
   createImgCard,
+  createlist,
   toonGenreChecker,
   multiAppend,
 };

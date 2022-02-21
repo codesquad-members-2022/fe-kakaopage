@@ -1,4 +1,6 @@
 const data = {
+  contentsChecker: "",
+  pageCount: 0,
   leftNavToggleFont: [
     "기다리면 무료웹툰",
     "인기웹툰",
@@ -82,6 +84,7 @@ const data = {
       title: "드라마 5",
       info: "인포 테스트",
       genre: "드라마",
+      day: "화",
     },
 
     {
@@ -89,30 +92,35 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",
+      day: "토",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",
+      day: "토",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",
+      day: "일",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",
+      day: "일",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",
+      day: "일",
     },
 
     {
@@ -151,30 +159,35 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
+      day: "일",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
+      day: "일",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
+      day: "완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
+      day: "완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
+      day: "완결",
     },
 
     {
@@ -182,30 +195,35 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
+      day: "완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
+      day: "완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
+      day: "월",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
+      day: "수",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
+      day: "금",
     },
   ],
 };

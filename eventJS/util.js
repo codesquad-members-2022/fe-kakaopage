@@ -1,4 +1,3 @@
-import { defaultDisplay } from "../component/defaultComponent.js";
 const createEl = (el) => document.createElement(el);
 const $ = (className) => document.querySelector(className);
 const $All = (className) => document.querySelectorAll(className);
@@ -11,10 +10,6 @@ const remove = (dom) => {
 
 const replaceInner = (el, HTMLtem) => {
   el.innerHTML = HTMLtem;
-};
-
-const resetDefault = () => {
-  $(".containEvery").innerHTML = defaultDisplay;
 };
 
 const cloneAndDsiplay = (parent, contents, loop) => {
@@ -30,12 +25,4 @@ const removeAllChild = (el, classname) => {
   }
 };
 
-export {
-  createEl,
-  $,
-  remove,
-  removeAllChild,
-  replaceInner,
-  resetDefault,
-  cloneAndDsiplay,
-};
+export { createEl, $, remove, removeAllChild, replaceInner, cloneAndDsiplay };
