@@ -6221,14 +6221,15 @@ const sectionContents = [
   `,
   ],
 ];
-function changeTabsColor(e) {
-  const Tabs = e.parentNode.childNodes;
+
+function changeTabsColor(target) {
+  const Tabs = target.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {
     const tab = Tabs[i];
     tab.style.borderBottom = "none";
     tab.style.color = "#999";
   }
-  e.style.color = `black`;
+  target.style.color = `black`;
 }
 function removeContents(tag) {
   while (tag.hasChildNodes()) {
@@ -6254,13 +6255,8 @@ function changeDayAndContents(target) {
     }
   });
 }
-const days = document.querySelectorAll(".day");
-const daysWrap = document.querySelector("#daysWrap");
-daysWrap.addEventListener("click", function (e) {
-  changeDayAndContents(e.target);
-});
-function changeEventSlideContents(e) {
-  const genre = e.target.textContent;
+function changeEventSlideContents(target) {
+  const genre = target.textContent;
   const slide = document.querySelector("#eventSlideId");
   eventContents.map((content) => {
     if (genre === content[0]) {
@@ -6269,20 +6265,43 @@ function changeEventSlideContents(e) {
     }
   });
 }
-
-function changeSectionContents(e) {
-  const navGenre = e.textContent;
+function changeSectionContents(target) {
+  let navGenre;
+  if (target.childElementCount === 0) {
+    // 자식요소 갯수 카운팅 해서 클릭한 테그클릭별 navGenre 정의 다르게 할 수 있었음.
+    navGenre = target.parentNode.textContent;
+  } else {
+    navGenre = target.textContent;
+  }
+  console.log(navGenre, navGenre.length);
   const sections = document.querySelector("#sectionId");
   removeContents(sections);
   let temp;
-  console.log(navGenre);
   sectionContents.map((section) => {
-    if (navGenre === section[0]) {
+    if (navGenre.trim() === section[0]) {
       console.log(navGenre, section[0]);
       temp = section[1];
     }
   });
   sections.insertAdjacentHTML("afterbegin", temp);
-  const change = document.querySelector("#showChange");
-  change.textContent = `${navGenre}로 내용 바뀜`;
 }
+
+const daysWrap = document.querySelector("#daysWrap");
+daysWrap.addEventListener("click", function (e) {
+  changeDayAndContents(e.target);
+});
+const webtoonGenresWrap = document.querySelector("#webtoonGenresWrap");
+webtoonGenresWrap.addEventListener("click", function (e) {
+  changeTabsColor(e.target);
+  changeEventSlideContents(e.target);
+});
+const navWrap = document.querySelector("#navWrap");
+navWrap.addEventListener("click", function (e) {
+  changeSectionContents(e.target);
+});
+const navTabs = document.querySelectorAll(".navTab");
+navTabs.forEach((tab) => {
+  tab.addEventListener("click", function (e) {
+    changeBorderColor(e.currentTarget);
+  });
+});
