@@ -9,20 +9,24 @@ const { MAIN_LAYOUT_CHILDREN } = ELEMENT_CLASS;
 
 const navigateTo = (url, categoryUid) => {
   history.pushState(null, null, url);
-  render(Number(categoryUid));
+  render(categoryUid);
 };
 
-async function render(categoryUid) {
+async function render(uid) {
+  const categoryUid = Number(uid);
   try {
-    const match = routes.find((route) => route.categoryUid === categoryUid);
-    if (!match) {
+    const selectedCategory = routes.find(
+      (route) => route.categoryUid === categoryUid
+    );
+    if (!selectedCategory) {
       throw new Error(NOT_FOUND);
     }
-    const contentObj = await match.getContent();
+    const contentObj = await selectedCategory.getContent();
     $mainChildLayout.forEach(($child) => {
       $child.innerHTML = contentObj[$child.id];
     });
   } catch (error) {
+    console.log(error);
     if (error.message === NOT_FOUND) {
       history.pushState(null, null, '/');
       location.reload();
@@ -33,6 +37,13 @@ async function render(categoryUid) {
 const $nav = $get(MAIN_CATEGORY);
 const $mainLayout = $get(MAIN_LAYOUT);
 const $mainChildLayout = $mainLayout.querySelectorAll(MAIN_LAYOUT_CHILDREN);
+
+const urlParams = window.location.search;
+const params = new URLSearchParams(urlParams);
+const targetCategoryUid = params.get('categoryUid');
+if (targetCategoryUid) {
+  render(targetCategoryUid);
+}
 
 $nav.addEventListener('click', (event) => {
   event.preventDefault();
