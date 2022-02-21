@@ -54,3 +54,11 @@ button {
   background-image: url(../assets/divider.png);
   background-color: lightgray;
 }
+
+.none {
+  display: none;
+}
+
+.focused {
+  display: block;
+}
