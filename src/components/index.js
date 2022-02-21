@@ -7,12 +7,14 @@ import SmallImgContainer from './contentsList/SmallImgContainer.js';
 import ContentsListItem from './contentsList/ContentsListItem.js';
 import ContentsList from './contentsList/ContentsList.js';
 import DailySeriesRanking from './section/DailySeriesRanking.js';
-import BannerListItem from './banner/BannerListItem.js';
-import MainBannerList from './banner/MainBannerList.js';
+import MainBannerItem from './banner/MainBannerItem.js';
+import BannerList from './banner/BannerList.js';
 import MainBanner from './section/MainBanner.js';
 import MenuListItem from './categoryMenu/MenuListItem.js';
 import CategoryMenuList from './categoryMenu/CategoryMenuList.js';
 import CategoryMenu from './section/CategoryMenu.js';
+import SubBannerItem from './banner/SubBannerItem.js';
+import SubBanner from './section/SubBanner.js';
 
 export {
   Nav,
@@ -24,10 +26,12 @@ export {
   ContentsListItem,
   ContentsList,
   DailySeriesRanking,
-  BannerListItem,
-  MainBannerList,
+  MainBannerItem,
+  BannerList,
   MainBanner,
   MenuListItem,
   CategoryMenuList,
   CategoryMenu,
+  SubBannerItem,
+  SubBanner
 };

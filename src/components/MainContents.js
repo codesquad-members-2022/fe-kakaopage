@@ -1,4 +1,4 @@
-import { MainNav, DailySeriesRanking, MainBanner, CategoryMenu } from './index.js';
+import { MainNav, DailySeriesRanking, MainBanner, CategoryMenu, SubBanner } from './index.js';
 import { Categories } from '../data';
 
 const MainContents = () => {
@@ -7,6 +7,7 @@ const MainContents = () => {
             ${MainNav()}
             ${MainBanner()}
             ${CategoryMenu(Categories.home)}
+            ${SubBanner()}
             ${DailySeriesRanking()}
           </div>`;
 };
