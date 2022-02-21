@@ -6235,27 +6235,32 @@ function removeContents(tag) {
     tag.removeChild(tag.firstChild);
   }
 }
-function changeBorderColor(e) {
-  changeTabsColor(e);
-  e.style.borderBottom = "3px solid #ffd200";
+function changeBorderColor(target) {
+  changeTabsColor(target);
+  target.style.borderBottom = "3px solid #ffd200";
 }
-function changeDayAndContents(e) {
-  changeBorderColor(e);
-  const dayInfo = e.innerText;
-  const weekdayContentWrap = document.querySelector("#weekdayContentWrapId");
-  removeContents(weekdayContentWrap);
-  weekdayContents.map((day) => {
-    if (dayInfo === day[0]) {
-      let temp = "";
-      for (let i = 0; i < 10; i++) {
-        temp += `${day[1]}`;
+
+const days = document.querySelectorAll(".day");
+days.forEach((day) => {
+  console.log("foreach 도는중");
+  day.addEventListener("click", function changeDayAndContents(e) {
+    changeBorderColor(e.target);
+    const dayInfo = e.target.textContent;
+    const weekdayContentWrap = document.querySelector("#weekdayContentWrapId");
+    removeContents(weekdayContentWrap);
+    weekdayContents.map((day) => {
+      if (dayInfo === day[0]) {
+        let temp = "";
+        for (let i = 0; i < 10; i++) {
+          temp += `${day[1]}`;
+        }
+        weekdayContentWrap.insertAdjacentHTML("afterbegin", temp);
       }
-      weekdayContentWrap.insertAdjacentHTML("afterbegin", temp);
-    }
+    });
   });
-}
+});
 function changeEventSlideContents(e) {
-  const genre = e.innerText;
+  const genre = e.target.innerText;
   const slide = document.querySelector("#eventSlideId");
   eventContents.map((content) => {
     if (genre === content[0]) {
