@@ -17,7 +17,10 @@ function createEventListenerMenu(){
     menuItems.forEach(item => {
         const itemButton = item.querySelector('button');
         itemButton.addEventListener('click', () => {
-            menu.querySelector('.menu-nav__item--selected').classList.remove('menu-nav__item--selected');
+            const itemSelected = menu.querySelector('.menu-nav__item--selected');
+            if (itemSelected !== null) {
+                itemSelected.classList.remove('menu-nav__item--selected');
+            }
             item.classList.add('menu-nav__item--selected');
             mainHTMLs[itemButton.value]();
         });

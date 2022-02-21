@@ -3,7 +3,10 @@ function createEventListnerGenreNav() {
     genreNav.querySelectorAll('.genre-nav__item').forEach(item => {
         const itemButton = item.querySelector('button');
         itemButton.addEventListener('click', () => {
-            genreNav.querySelector('.genre-nav__item--selected').classList.remove('genre-nav__item--selected');
+            const itemSelected = genreNav.querySelector('.genre-nav__item--selected');
+            if (itemSelected !== null) {
+                itemSelected.classList.remove('genre-nav__item--selected');
+            }
             item.classList.add('genre-nav__item--selected');
         });
     });
