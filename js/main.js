@@ -2,6 +2,8 @@ import home from './home.js';
 import serial from './serial.js';
 import webtoon from './webtoon.js';
 import boy from './boy.js';
+import drama from './drama.js';
+import romance from './romance.js';
 
 (function init() {
   document.querySelector('.menubar_tag').addEventListener('click', changeUI);
@@ -9,6 +11,7 @@ import boy from './boy.js';
 
 function changeUI(e) {
   const title = e.target.innerText;
+
   switch (title) {
     case '홈':
       home();
@@ -23,8 +26,10 @@ function changeUI(e) {
       boy();
       break;
     case '드라마':
+      drama();
       break;
     case '로멘스':
+      romance();
       break;
     case '로판':
       break;
