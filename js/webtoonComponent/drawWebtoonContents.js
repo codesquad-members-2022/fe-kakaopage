@@ -8,9 +8,13 @@ const createMainContainer = () => {
 
 const createContentsContainer = (title) => {
   const templete = `
-  <div class="contents-header">
+  ${
+    title
+      ? `<div class="contents-header">
     <div class="contents-title big-font">${title}</div>
-    <a href="#" class="contents-more">더보기 <img src="./data/contents/more.svg"></a>
+    <a href="#" class="contents-more">더보기 <img src="./data/contents/more.svg"></a>`
+      : ''
+  }
   </div>
   <div class="contents-main">
     <div class="webtoon-component-container"></div>
@@ -23,7 +27,7 @@ const createContentsContainer = (title) => {
 };
 
 // type = "normalCover", "bigCover", "smallCover", "wideCover"
-const drawWebtoonContents = ({ type, webtoonArr, contentsTitle }) => {
+const drawWebtoonContents = (type, { webtoonArr, contentsTitle }) => {
   const container = createContentsContainer(contentsTitle);
   const webtoonComponentContainer = container.querySelector(
     '.webtoon-component-container'
@@ -35,8 +39,10 @@ const drawWebtoonContents = ({ type, webtoonArr, contentsTitle }) => {
   const mainContainer = createMainContainer();
   mainContainer.appendChild(container);
 
-  const main = document.querySelector('.page-main');
-  main.appendChild(mainContainer);
+  const banner = document.querySelector('.banner');
+  banner
+    .closest('.page-main__container')
+    .insertAdjacentElement('beforebegin', mainContainer);
 };
 
 export default drawWebtoonContents;
