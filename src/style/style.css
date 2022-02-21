@@ -271,23 +271,22 @@ header {
 .sub-banner {
   position: relative;
   padding: 20px; }
-
-.sub-banner .banner-container {
-  width: 80%;
-  height: 100%;
-  margin: 0 auto; }
-
-.banner-container > a img {
-  width: 100%;
-  border-radius: 5px; }
-
-.sub-banner .back {
-  left: 22px;
-  background-image: url("../img/icons/ic-paging-back-nor.svg"); }
-
-.sub-banner .next {
-  right: 22px;
-  background-image: url("../img/icons/ic-paging-next-nor.svg"); }
+  .sub-banner .sub-banner-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden; }
+  .sub-banner .banner-container {
+    display: flex;
+    transition: all 700ms; }
+    .sub-banner .banner-container img {
+      width: 100%;
+      border-radius: 5px; }
+  .sub-banner .back {
+    left: 22px;
+    background-image: url("../img/icons/ic-paging-back-nor.svg"); }
+  .sub-banner .next {
+    right: 22px;
+    background-image: url("../img/icons/ic-paging-next-nor.svg"); }
 
 /* Contents */
 .contents-header {
