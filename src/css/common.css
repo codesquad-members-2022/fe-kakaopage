@@ -59,8 +59,3 @@
   min-width: 1px;
   width: 1px;
 }
-
-.btn__toggle:after {
-  content: '▾';
-  margin-left: 5px;
-}
