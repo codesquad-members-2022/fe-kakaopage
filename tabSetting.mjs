@@ -2,15 +2,6 @@ import { weekMap } from "./variable.mjs";
 import { info } from "./info.js";
 import { changeContent } from "./changeContent.mjs";
 
-const todayTapSet = (className) => {
-  const today = new Date();
-  const $tab = [...document.querySelectorAll(className)];
-  $tab[(today.getDay() + 6) % 7].classList.add(
-    "selected-color",
-    "selected-box"
-  );
-};
-
 const tabMoving = (className) => {
   const $tab = [...document.querySelectorAll(className)];
   $tab.forEach((elem) => {
@@ -26,4 +17,4 @@ const tabMoving = (className) => {
   });
 };
 
-export { todayTapSet, tabMoving };
+export { tabMoving };

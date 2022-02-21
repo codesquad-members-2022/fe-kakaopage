@@ -1,8 +1,8 @@
-import { todayTapSet, tabMoving } from "./tabSetting.mjs";
+import { tabMoving } from "./tabSetting.mjs";
+import { init } from "./init.mjs";
 
 document.addEventListener("click", (e) => {
   e.preventDefault();
 });
-
-todayTapSet(".dailyTop__tab");
+init(".dailyTop__tab");
 tabMoving(".dailyTop__tab");
