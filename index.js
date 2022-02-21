@@ -281,6 +281,20 @@ const createDaysBlock = () => {
   </div>
 </div>`;
   insertIntoMain(daysBlock);
+
+  $(".nav-days").addEventListener("click", (e) => {
+    const days = e.target.closest("ul").childNodes;
+    days.forEach((node) => {
+      if (node.nodeType === 1) {
+        node.classList.remove("current-tab");
+        node.classList.remove("underline-thin");
+        node.classList.remove("text-color--black");
+      }
+    });
+    e.target.classList.add("current-tab");
+    e.target.classList.add("underline-thin");
+    e.target.classList.add("text-color--black");
+  });
 };
 
 const createSmallBannerBlock = () => {
