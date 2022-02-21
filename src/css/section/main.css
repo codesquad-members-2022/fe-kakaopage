@@ -9,7 +9,10 @@
   height: 30px;
   margin: 10px 5px 10px 5px;
   padding: 3px;
-  background-color: var(--yellow-color);
+  background-color: var(--main-color);
+  border-radius: 0px;
+  border: 0;
+  outline: 0;
 }
 .image_text {
   top: 310px;
@@ -43,6 +46,7 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
+  padding-top: 5px;
 }
 .menu_ul li {
   width: calc(99% / 3);
@@ -98,7 +102,7 @@
 .section {
   flex-flow: row wrap;
   background-color: var(--main-color);
-  padding: 10px 15px 0px 15px;
+  padding: 10px 15px 15px 15px;
 }
 /* 소제목 및 더보기 */
 .section_title,
@@ -161,7 +165,6 @@
 .new_thing {
   width: calc(96% / 2);
   margin-left: 12px;
-  padding-bottom: 15px;
 }
 .new_things_text {
   top: 60%;
@@ -232,7 +235,7 @@
   margin-bottom: 3px;
   margin-top: 20px;
 }
-.info_ranking span {
+.info_ranking span:nth-child(1) {
   color: var(--blue-color);
 }
 /* 카카오페이지 바로가기 */
