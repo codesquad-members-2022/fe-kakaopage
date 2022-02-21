@@ -1,4 +1,4 @@
-import {topBanner} from "./data.js";
+import {topBanner, webtoonData} from "./data.js";
 
 function clickMenu() {
     const gnb = document.querySelector(".gnb ul");
@@ -17,9 +17,13 @@ function clickMenu() {
     
     dayNav.addEventListener("click", (e) => {
         toActivateNav(e.target, dayNav);
+        const targetDay = e.target.closest('li').getAttribute('data-day');
+        createWebtoonDayContents(targetDay)
+
     })
 
     lnb.querySelector('li:first-child').click();
+    dayNav.querySelector('li:first-child').click();
 }
 
 function toActivateNav(target, nav) {
@@ -56,6 +60,59 @@ function creatTopBannerHtml(data) {
                 <p class="desc">${data.description}</p>
             </div>
         </div>`;
+}
+
+function getBadge(data) {
+    let badge = '';
+    for(let key in data.badge) {
+        if(data.badge[key]) {
+            switch (key) {
+                case 'up' :
+                    badge += '<img src="./assets/images/ico/badge_up_blue.svg" alt="up">'
+                    break;
+                case 'new' :
+                    badge += '<img src="./assets/images/ico/badge_new_red.svg" alt="새작품"></img>'
+                    break;
+                case 'age15' :
+                    badge += '<img src="./assets/images/ico/badge_15.png" alt="15세 작품">'
+                    break;
+            }
+        }
+    }
+    return badge
+}
+
+function createItemType3Horizontal(data) {
+    const webtoonBadge = getBadge(data)
+    return `<li class="item item_type3 flex horizontal ${data.class || ''}">
+        <a href="#!">
+            <div class="img">
+                <img src="${data.image}" alt="${data.title}">
+            </div>
+            <div class="txt">
+                <div class="item_ttl_box">
+                    <div class="badge">
+                        ${webtoonBadge}
+                    </div>
+                    <h4 class="item_ttl text_ellipsis">${data.title}</h4>
+                </div>
+                <p class="info_txt item_desc text_ellipsis">${data.description}</p>
+                <div class="info">
+                    <span class="info_txt viewer">${data.viewer}</span>
+                    <span class="info_txt text_ellipsis">${data.writer}</span>
+                </div>
+            </div>
+        </a>
+    </li>`
+}
+
+function createWebtoonDayContents(targetDay) {
+    const items = webtoonData.map(data => {
+        if(data.week === targetDay || targetDay === "all") {
+            return createItemType3Horizontal(data);
+        }
+    })
+    document.querySelector('.day_contents .item_list').innerHTML = items.join('');
 }
 
 (function() {
