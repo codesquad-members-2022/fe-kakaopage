@@ -23,6 +23,7 @@ export function initPage(){
     contents.innerHTML = '';
 }
 
+// 반복되는 컴포넌트들을 생성하는 함수들
 export function createContentForms(num) {
     let res = '';
 
@@ -159,6 +160,7 @@ export function createContentFormsBigger(num){
 
     return res
 }
+//
 
 export function addClickEventToElement(elementName, func){
     const element = document.querySelector(elementName);
@@ -175,11 +177,13 @@ export function selectedInit(target){
 export function addSelectedTo(element){
     const elements = document.querySelector(element)
 
-    elements.addEventListener('click', e=> {
+    elements.addEventListener('click', e => {
         selectedInit(e.target)
-        e.target.classList.add('selected')
+        if(e.target.tagName === "LI"){
+            e.target.classList.add('selected')
+            resetFlexbox();
+        }
     })
-
 }
 
 export function combineFormats(arr){
@@ -194,4 +198,11 @@ export function addSelectedToday(){
     const today = new Date().getDay()-1;
 
     days[today].classList.add('selected')
+}
+
+export function resetFlexbox(){
+    const flexBox = document.getElementById('flex-box')
+
+    flexBox.innerHTML = '';
+    flexBox.innerHTML += `${createContentForms(10)}`;
 }

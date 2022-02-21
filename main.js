@@ -8,11 +8,3 @@ const main = () => {
 
 main();
 
-// function createInitPage () {
-//     addSelectedTo('.genre-nav-li')
-//     addSelectedTo('.head-nav-li')
-//     createPageHome();
-// }
-
-// console.log(document.getElementById('genre-home'))
-    // document.getElementById('#genre-home').classList.add('selected')
