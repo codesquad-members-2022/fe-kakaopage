@@ -10,6 +10,9 @@ import DailySeriesRanking from './section/DailySeriesRanking.js';
 import BannerListItem from './banner/BannerListItem.js';
 import MainBannerList from './banner/MainBannerList.js';
 import MainBanner from './section/MainBanner.js';
+import MenuListItem from './categoryMenu/MenuListItem.js';
+import CategoryMenuList from './categoryMenu/CategoryMenuList.js';
+import CategoryMenu from './section/CategoryMenu.js';
 
 export {
   Nav,
@@ -24,4 +27,7 @@ export {
   BannerListItem,
   MainBannerList,
   MainBanner,
+  MenuListItem,
+  CategoryMenuList,
+  CategoryMenu,
 };
