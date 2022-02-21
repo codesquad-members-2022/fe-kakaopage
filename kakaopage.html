@@ -2,21 +2,17 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap"
-    />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="./src/css/common.css" />
     <title>kakaopage</title>
   </head>
   <body>
-    <header>
-      <div class="first_header">
+    <header class="pos-fixed left-50">
+      <div class="first_header dp-flex mg-b-10">
         <h1>kakaopage</h1>
 
         <form>
-          <input type="text" class="search_text" placeholder="검색" />
-          <input type="submit" class="search_submit" value="Enter" />
+          <input type="text" class="search_text pos-rel" placeholder="검색" />
+          <input type="submit" class="search_submit pos-rel" value="Enter" />
         </form>
 
         <div>
@@ -27,7 +23,7 @@
       </div>
 
       <div>
-        <div class="header_menu_button">
+        <div class="header_menu_button dp-flex">
           <button>홈</button>
           <button>웹툰</button>
           <button>웹소설</button>
@@ -40,7 +36,7 @@
 
     <main>
       <section>
-        <div class="menubar_tag">
+        <div class="menubar_tag dp-flex">
           <button>홈</button>
           <button>요일연재</button>
           <button>웹툰</button>
@@ -54,19 +50,21 @@
       </section>
 
       <div class="changed">
-        <section class="image_section">
-          <img src="image/화산전생2.png" / alt="화산전생 이미지">
-          <div class="image_text">
-            <h2 class="image_title">화산전생</h2>
-            <span class="image_event">이벤트</span>
+        <section class="image_section mg-t-20 pos-rel">
+          <img src="./src/image/화산전생2.png" / alt="화산전생 이미지">
+          <div class="image_text pos-abs">
+            <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">화산전생</h2>
+            <span class="image_event pd-5">이벤트</span>
             <span class="image_span">웹툰 |</span>
             <span class="image_span">👤183.2만명</span>
           </div>
-          <div class="image_footer">나도 그들처럼 영웅이 되고 싶었다</div>
+          <div class="image_footer pos-abs pd-10">
+            나도 그들처럼 영웅이 되고 싶었다
+          </div>
         </section>
 
-        <section class="menu_section">
-          <ul>
+        <section class="section dp-flex mg-t-20">
+          <ul class="menu_ul pd-10">
             <li class="menu_top_left">
               <span>오늘 UP </span>
               <div>206</div>
@@ -88,19 +86,21 @@
           </ul>
         </section>
 
-        <section class="advert">
-          <img src="image/웹툰_화타 광고.png" / alt="화타 광고 이미지"
+        <section class="advert dp-flex pos-rel mg-t-20 pd-20">
+          <img src="./src/image/웹툰_화타 광고.png" / alt="화타 광고 이미지"
           width="550" height="100">
-          <div class="back">🔙</div>
-          <div class="soon">🔜</div>
+          <div class="back pos-abs">🔙</div>
+          <div class="soon pos-abs">🔜</div>
         </section>
 
-        <section class="today_top">
-          <span class="section_title">요일연재TOP<span>(3,495)</span></span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >요일연재TOP<span>(3,495)</span></span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
           <nav class="date">
-            <ul>
+            <ul class="dp-flex mg-b-10">
               <li>월</li>
               <li>화</li>
               <li>수</li>
@@ -111,8 +111,8 @@
             </ul>
           </nav>
 
-          <div class="today_ranking">
-            <img src="image/나 혼자만 레벨업.png" / alt="나 혼자만 레벨업
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/나 혼자만 레벨업.png" / alt="나 혼자만 레벨업
             이미지" width="110" height="110">
             <span>1위</span><span>🕔</span>
             <div class="info_top">
@@ -121,9 +121,9 @@
             </div>
           </div>
 
-          <div class="today_ranking">
-            <img src="image/궁귀검신.png" / alt="궁귀검신 이미지" width="110"
-            height="110">
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/궁귀검신.png" / alt="궁귀검신 이미지"
+            width="110" height="110">
             <span>2위</span><span>🕔</span>
             <div class="info_top">
               <div>궁귀검신</div>
@@ -131,9 +131,9 @@
             </div>
           </div>
 
-          <div class="today_ranking">
-            <img src="image/악당의 아빠를 꼬셔라.png" / alt="악당의 아빠 이미지"
-            width="110" height="110">
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/악당의 아빠를 꼬셔라.png" / alt="악당의 아빠
+            이미지" width="110" height="110">
             <span>3위</span><span>🕔</span>
             <div class="info_top">
               <div>악당의 아빠를 꼬셔라</div>
@@ -141,8 +141,8 @@
             </div>
           </div>
 
-          <div class="today_ranking">
-            <img src="image/악녀가 사랑할 때.png" / alt="악녀가 사랑할 때"
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/악녀가 사랑할 때.png" / alt="악녀가 사랑할 때"
             width="110" height="110">
             <span>4위</span><span>🕔</span>
             <div class="info_top">
@@ -151,9 +151,9 @@
             </div>
           </div>
 
-          <div class="today_ranking">
-            <img src="image/아빠_ 나 이 결혼 안 할래요_.png" / alt="아빠_ 나 이
-            결혼 안 할래요 이미지" width="110" height="110">
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/아빠_ 나 이 결혼 안 할래요_.png" / alt="아빠_
+            나 이 결혼 안 할래요 이미지" width="110" height="110">
             <span>5위</span><span>🕔</span>
             <div class="info_top">
               <div>나 이 결혼 안 할래요</div>
@@ -161,50 +161,50 @@
             </div>
           </div>
 
-          <div class="today_recommend">
-            <img src="image/딸 바보가 되었습니다.png" / alt="딸 바보가
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/딸 바보가 되었습니다.png" / alt="딸 바보가
             되었습니다 이미지" width="110" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>딸 바보가 되었습니다</div>
               <div><span>UP</span>👤55만명</div>
             </div>
           </div>
 
-          <div class="today_recommend">
-            <img src="image/카니발 베이비.png" / alt="카니발 베이비 이미지"
-            width="110" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/카니발 베이비.png" / alt="카니발 베이비
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>카니발 베이비</div>
               <div><span>UP</span>👤16.5만명</div>
             </div>
           </div>
 
-          <div class="today_recommend">
-            <img src="image/24분의 1 로맨스.png" / alt="24분의 1 로맨스 이미지"
-            width="110" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/24분의 1 로맨스.png" / alt="24분의 1 로맨스
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>24분의 1 로멘스</div>
               <div><span>UP</span>👤63.7만명</div>
             </div>
           </div>
 
-          <div class="today_recommend">
-            <img src="image/따봉으로 레벨업.png" / alt="따봉으로 레벨업 이미지"
-            width="110" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/따봉으로 레벨업.png" / alt="따봉으로 레벨업
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>따봉으로 레벨업</div>
               <div><span>UP</span>👤14.5만명</div>
             </div>
           </div>
 
-          <div class="today_recommend">
-            <img src="image/대놓고 사내연애.png" / alt="대놓고 사내연애 이미지"
-            width="110" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/대놓고 사내연애.png" / alt="대놓고 사내연애
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>대놓고 사내연애</div>
               <div><span>UP</span>👤34.9만명</div>
@@ -212,82 +212,89 @@
           </div>
         </section>
 
-        <section class="new_things">
-          <span class="section_title">기대신작 TOP</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >기대신작 TOP</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="first_new_thing">
-            <img src="image/웹툰 세화.jpg" / alt="세화 이미지" width="310"
+          <div class="new_thing pos-rel">
+            <img src="./src/image/웹툰 세화.jpg" / alt="세화 이미지" width="310"
             height="220">
-            <div class="new_things_text">
-              <h3 class="new_things_title">세화, 가는길</h3>
-              <span class="new_things_new">New</span>
+            <div class="new_things_text pos-abs">
+              <h3 class="new_things_title txt-l">세화, 가는길</h3>
+              <span class="new_things_new txt-l mg-l-10">New</span>
               <span>웹툰 | 👤6056명</span>
             </div>
-            <div class="new_things_footer">천천히 치유되는 그날의 상처</div>
+            <div class="new_things_footer pos-abs">
+              천천히 치유되는 그날의 상처
+            </div>
           </div>
 
-          <div class="second_new_thing">
-            <img src="image/웹툰_목검향.jpg" / alt="묵검향 이미지" width="310"
-            height="220">
-            <div class="new_things_text">
-              <h4 class="new_things_title">묵검향</h4>
-              <h4 class="new_things_title">용호상박 컬렉션</h4>
-              <span class="new_things_new">New_</span>
-              <span>웹툰 | 👤2.8만명</span>
+          <div class="new_thing pos-rel">
+            <img src="./src/image/이 용사 실화냐.jpg" / alt="이 용사 실화냐
+            이미지" width="310" height="220">
+            <div class="new_things_text pos-abs txt-l">
+              <h3 class="new_things_title txt-l">이 용사 실화냐</h3>
+              <span class="new_things_new txt-l mg-l-10">New</span>
+              <span>웹툰 | 👤14.1만명</span>
             </div>
-            <div class="new_things_footer">용호상박으로 돌아온 묵검향</div>
+            <div class="new_things_footer pos-abs">
+              지금까지 이런 용사는 없었다
+            </div>
           </div>
         </section>
 
-        <section class="drama_section">
-          <span class="section_title">드라마 TOP</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >드라마 TOP</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="drama_top">
-            <img src="image/궁에 숨은 꽃.jpg" / alt="궁에 숨은 꽃 이미지"
-            width="90" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/궁에 숨은 꽃.jpg" / alt="궁에 숨은 꽃 이미지"
+            width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>궁에 숨은 꽃</div>
               <div><span>UP</span>👤21만명</div>
             </div>
           </div>
 
-          <div class="drama_top">
-            <img src="image/나 혼자 천재 DNA.png" / alt="나 혼자 천재 DNA
-            이미지" width="90" height="110">
-            <span>★</span><span>9.6</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/나 혼자 천재 DNA.png" / alt="나 혼자 천재 DNA
+            이미지" width="110" height="110">
+            <span>★9.6</span><span>🕔</span>
             <div class="info_top">
               <div>나 혼자 천재 DNA</div>
               <div><span>UP</span>👤58.8만명</div>
             </div>
           </div>
 
-          <div class="drama_top">
-            <img src="image/닥터 최태수.png" / alt="닥터 최태수 이미지"
-            width="90" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/닥터 최태수.png" / alt="닥터 최태수 이미지"
+            width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>닥터 최태수</div>
               <div><span>UP</span>👤271.3만명</div>
             </div>
           </div>
 
-          <div class="drama_top">
-            <img src="image/정령왕의 딸.png" / alt="정령왕의 딸 이미지"
-            width="90" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/정령왕의 딸.png" / alt="정령왕의 딸 이미지"
+            width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>정령의 딸</div>
               <div><span>UP</span>👤72.5만명</div>
             </div>
           </div>
 
-          <div class="drama_top">
-            <img src="image/내 딸은 음악천재.png" / alt="내 딸은 음악천재
-            이미지" width="90" height="110">
-            <span>★</span><span>10.0</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/내 딸은 음악천재.png" / alt="내 딸은 음악천재
+            이미지" width="110" height="110">
+            <span>★10.0</span><span>🕔</span>
             <div class="info_top">
               <div>내 딸은 음악천재</div>
               <div><span>UP</span>👤27.3만명</div>
@@ -295,54 +302,56 @@
           </div>
         </section>
 
-        <section class="boy_section">
-          <span class="section_title">소년 TOP</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >소년 TOP</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="boy_top">
-            <img src="image/재능 삼킨 마법사.png" / alt="재능 삼킨 마법사
-            이미지" width="90" height="110">
-            <span>★</span><span>9.8</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/재능 삼킨 마법사.png" / alt="재능 삼킨 마법사
+            이미지" width="110" height="110">
+            <span>★9.8</span><span>🕔</span>
             <div class="info_top">
               <div>재능 삼킨 마법사</div>
               <div><span>UP</span>👤44.8만명</div>
             </div>
           </div>
 
-          <div class="boy_top">
-            <img src="image/신과 함께 레벨업.png" / alt="신과 함께 레벨업
-            이미지" width="90" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/신과 함께 레벨업.png" / alt="신과 함께 레벨업
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>신과 함께 레벨업</div>
               <div><span>UP</span>👤53.8만명</div>
             </div>
           </div>
 
-          <div class="boy_top">
-            <img src="image/독고3.jpg" / alt="독고3 이미지" width="90"
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/독고3.jpg" / alt="독고3 이미지" width="90"
             height="110">
-            <span>★</span><span>9.7</span><span>🕔</span>
+            <span>★9.7</span><span>🕔</span>
             <div class="info_top">
               <div>독고3 [완결판]</div>
               <div><span>UP</span>👤104.1만명</div>
             </div>
           </div>
 
-          <div class="boy_top">
-            <img src="image/1레벨 플레이어.png" / alt="1레벨 플레이어 이미지"
-            width="90" height="110">
-            <span>★</span><span>8.3</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/1레벨 플레이어.png" / alt="1레벨 플레이어
+            이미지" width="110" height="110">
+            <span>★8.3</span><span>🕔</span>
             <div class="info_top">
               <div>1레벨 플레이어</div>
               <div><span>UP</span>👤19.5만명</div>
             </div>
           </div>
 
-          <div class="boy_top">
-            <img src="image/나는 될놈이다.png" / alt="나는 될놈이다 이미지"
-            width="90" height="110">
-            <span>★</span><span>9.9</span><span>🕔</span>
+          <div class="five_webtoon txt-l pos-rel">
+            <img src="./src/image/나는 될놈이다.png" / alt="나는 될놈이다
+            이미지" width="110" height="110">
+            <span>★9.9</span><span>🕔</span>
             <div class="info_top">
               <div>나는 될놈이다</div>
               <div><span>UP</span>👤65.7만명</div>
@@ -350,171 +359,236 @@
           </div>
         </section>
 
-        <section class="wait_webtoon_section">
-          <span class="section_title">기다리면 무료 웹툰 (7777)</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >기다리면 무료 웹툰 (7777)</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="wait_contents">
-            <img src="image/김비서.png" / alt="김비서는 왜 그럴까 이미지"
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/김비서.png" / alt="김비서는 왜 그럴까 이미지"
             width="130" height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>김 비서가 왜 그럴까</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>김 비서가 왜 그럴까</div>
               <div>김 비서가 대체 왜 그러는걸까?</div>
               <div>👤630.1만명 | 로멘스 | 김명미</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/나 혼자만 레벨업.png" / alt="나 혼자만 레벨업
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/나 혼자만 레벨업.png" / alt="나 혼자만 레벨업
             이미지" width="130" height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>나 혼자만 레벨업</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>나 혼자만 레벨업</div>
               <div>최약체 헌터에서 최강 헌터로!</div>
               <div>👤417.3만명 | 소년 | 현군</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/닥터 최태수.png" / alt="닥터 최태수 이미지"
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/닥터 최태수.png" / alt="닥터 최태수 이미지"
             width="130" height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>닥터 최태수</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>닥터 최태수</div>
               <div>진정한 의사는 포기하지 않는다</div>
               <div>👤271.3만명 | 드라마 | 조석호</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/화산전생.png" / alt="화산전생 이미지" width="130"
-            height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>화산전생</div>
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/화산전생.png" / alt="화산전생 이미지"
+            width="130" height="100">
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>화산전생</div>
               <div>나도 영웅이 되고 싶었다</div>
               <div>👤183.1만명 | 액션무협 | 토마씨</div>
             </div>
           </div>
         </section>
 
-        <section class="wait_novel_section">
-          <span class="section_title">기다리면 무료 소설 (5555)</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >기다리면 무료 소설 (5555)</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="wait_contents">
-            <img src="image/템빨.png" / alt="템빨 이미지" width="130"
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/템빨.png" / alt="템빨 이미지" width="130"
             height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>템빨</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>템빨</div>
               <div>물약도 스킬도 필요없다</div>
               <div>👤286.2만명 | 판타지 | 박새날</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/마존현세강림기.png" / alt="마존현세강림기 이미지"
-            width="130" height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>마존현세강림기</div>
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/마존현세강림기.png" / alt="마존현세강림기
+            이미지" width="130" height="100">
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>마존현세강림기</div>
               <div>먼저 건드린 건 너희들이다!</div>
               <div>👤149.5만명 | 현판 | 월백</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/아기는 악당을 키운다.png" / alt="아기는 악당을
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/아기는 악당을 키운다.png" / alt="아기는 악당을
             키운다 이미지" width="130" height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>아기는 악당을 키운다</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>아기는 악당을 키운다</div>
               <div>4회차 인생, 망한 것 같아요</div>
               <div>👤124.7만명 | 로판 | 리샤</div>
             </div>
           </div>
 
-          <div class="wait_contents">
-            <img src="image/무당기협.png" / alt="무당기협 이미지" width="130"
-            height="100">
-            <span>🕔</span>
-            <div class="info_contents">
-              <div><span>UP</span>무당기협</div>
+          <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+            <img src="./src/image/무당기협.png" / alt="무당기협 이미지"
+            width="130" height="100">
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_contents pos-abs">
+              <div><span>UP </span>무당기협</div>
               <div>왜 하필 무당이야?!</div>
               <div>👤114.5만명 | 무협 | 은열</div>
             </div>
           </div>
         </section>
 
-        <section class="ranking_section">
-          <span class="section_title">일간 랭킹 TOP</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >일간 랭킹 TOP</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <div class="ranking_1st">
-            <div class="ranking_num">1</div>
-            <img src="image/막내 황녀님.jpg" / alt="막내 황녀님 이미지"
+          <div class="ranking width-100 pos-rel mg-b-10">
+            <div class="ranking_num pos-abs mg-r-20">1</div>
+            <img src="./src/image/막내 황녀님.jpg" / alt="막내 황녀님 이미지"
             width="95" height="130">
-            <span class="time_icon">🕔</span>
-            <div class="info_ranking">
-              <div><span class="new_icon">New</span>막네 황녀님</div>
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_ranking pos-abs">
+              <div><span>New </span>막네 황녀님</div>
               <div>👤286.2만명 | 판타지 | 박새날</div>
               <div>화 연재</div>
-              <span class="change_ranking">-</span>
             </div>
           </div>
 
-          <div class="ranking_2st">
-            <div class="ranking_num">2</div>
-            <img src="image/검술명가 막내아들.png" / alt="검술명가 막내아들
-            이미지" width="95" height="130">
-            <span class="time_icon">🕔</span>
-            <div class="info_ranking">
-              <div><span class="new_icon">New</span>검술명가 막내아들</div>
+          <div class="ranking width-100 pos-rel mg-b-10">
+            <div class="ranking_num pos-abs mg-r-20">2</div>
+            <img src="./src/image/검술명가 막내아들.png" / alt="검술명가
+            막내아들 이미지" width="95" height="130">
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_ranking pos-abs">
+              <div><span>New </span>검술명가 막내아들</div>
               <div>👤168.9만명 | 판타지 | 황제펭귄</div>
               <div>수, 목, 토, 일 연재</div>
-              <span class="change_ranking">1⬇</span>
             </div>
           </div>
 
-          <div class="ranking_3st">
-            <div class="ranking_num">3</div>
-            <img src="image/두 번 사는 랭커.jpg" / alt="두 번 사는랭커 이미지"
-            width="95" height="130">
-            <span class="time_icon">🕔</span>
-            <div class="info_ranking">
-              <div><span class="new_icon">New</span>두번 사는 랭커</div>
+          <div class="ranking width-100 pos-rel mg-b-10">
+            <div class="ranking_num pos-abs mg-r-20">3</div>
+            <img src="./src/image/두 번 사는 랭커.jpg" / alt="두 번 사는랭커
+            이미지" width="95" height="130">
+            <img
+              src="./src/image/기다리면 무료.png"
+              alt="시계 이미지"
+              width="25"
+              height="25"
+            />
+            <div class="info_ranking pos-abs">
+              <div><span>New </span>두번 사는 랭커</div>
               <div>👤157.만명 | 판타지 | 사도연</div>
               <div>완결</div>
-              <span class="change_ranking">1⬆</span>
             </div>
           </div>
         </section>
 
-        <section class="event">
-          <span class="section_title">추천 이벤트</span>
-          <span class="more_content">더보기👉</span>
+        <section class="section dp-flex mg-t-20">
+          <span class="section_title txt-l mg-b-10 pd-10 width-50"
+            >추천 이벤트</span
+          >
+          <span class="more_content pd-10 txt-r width-50">더보기👉</span>
 
-          <img src="image/프로파일러 런칭기념 경품.png" / alt="이벤트 이미지"
-          width="615" height="330">
+          <img src="./src/image/프로파일러 런칭기념 경품.png" / alt="이벤트
+          이미지" width="630" height="330" class="mg-b-10">
         </section>
       </div>
 
       <section class="app_section">
-        <img src="image/카카오페이지 앱.png" alt="" width="540" height="70" />
+        <img
+          src="./src/image/카카오페이지 앱.png"
+          alt=""
+          width="540"
+          height="70"
+        />
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer_info">
+    <footer class="footer dp-flex pos-rel">
+      <div class="footer_info txt-l mg-b-10">
         <p>회사소개·이용약관·개인정보처리방침·청소년보호정책·공지사항</p>
         <p>(주)카카오엔터테인먼트 사업자 정보 ▼ | 사업자 정보 확인</p>
         <p>㈜copy Kakao Entertainment Corp.</p>
       </div>
-      <div class="footer_mark">
+      <div class="footer_mark pos-abs">
         <img
-          src="./image/ok mark.png"
+          src="./src\image\ok mark.png"
           alt="저작권 오케이 마크"
           width="70"
           height="70"
