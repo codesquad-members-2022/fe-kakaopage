@@ -7,17 +7,35 @@ async function renderWebtoon() {
     mainEL.innerHTML += renderNav('nav__webtoon', webtoonData.nav) + renderArticleWebtoonRow();
     document.querySelector('.nav__webtoon-list').classList.add('active');
     await renderRowArticle(0, 11);
-    const navWebtoonListsEL = document.querySelector('.nav__webtoon-lists');
-    navWebtoonListsEL.addEventListener(('click'), ({target}) => {
+    // const navWebtoonListsEL = document.querySelector('.nav__webtoon-lists');
+    // navWebtoonListsEL.addEventListener(('click'), ({target}) => {
+    //     if(!target.classList.contains('active')) {
+    //         [...navWebtoonListsEL.children].forEach((weekdaysList) => {
+    //             weekdaysList.classList.remove('active');
+    //         })
+    //         // children은 HTMLCOLLECTION이라서, 배열 메서드를 사용할 수 없었음.
+    //         target.classList.add('active');
+    //     }
+    //     if(target.textContent === '월') renderRowArticle(0, 11);
+    //     if(target.textContent === '화') renderRowArticle(1, 11);
+    //     if(target.textContent === '수') renderRowArticle(2, 11);
+    //     if(target.textContent === '목') renderRowArticle(3, 11);
+    //     if(target.textContent === '금') renderRowArticle(4, 11);
+    //     if(target.textContent === '토') renderRowArticle(5, 11);
+    //     if(target.textContent === '일') renderRowArticle(6, 11);
+    // })
+    clickEventHandler('nav__webtoon-lists');
+}
+function clickEventHandler(className) {
+    const parentEL = document.querySelector(`.${className}`);
+    parentEL.addEventListener(('click'), ({target}) => {
         if(!target.classList.contains('active')) {
-            [...navWebtoonListsEL.children].forEach((weekdaysList) => {
-                weekdaysList.classList.remove('active');
+            [...parentEL.children].forEach((child) => {
+                child.classList.remove('active');
             })
             // children은 HTMLCOLLECTION이라서, 배열 메서드를 사용할 수 없었음.
             target.classList.add('active');
         }
-        document.querySelector('.article__webtoon-row').innerHTML = '';
-
         if(target.textContent === '월') renderRowArticle(0, 11);
         if(target.textContent === '화') renderRowArticle(1, 11);
         if(target.textContent === '수') renderRowArticle(2, 11);
@@ -27,6 +45,7 @@ async function renderWebtoon() {
         if(target.textContent === '일') renderRowArticle(6, 11);
     })
 }
+
 
 function renderArticleWebtoonRow() {
     return `<article class="article__webtoon-row">
@@ -41,6 +60,7 @@ function renderRowArticle(day, sectionNums) {
         for(let i=0; i<sectionNums; i++) {
             html += renderRowList(json[i].title, json[i].img, json[i].url)
         }
+    document.querySelector('.article__webtoon-row').innerHTML = '';
     document.querySelector('.article__webtoon-row').innerHTML += renderRowListWrapper(html);
     
     })

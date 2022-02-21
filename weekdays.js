@@ -7,27 +7,7 @@ async function renderWeekdays() {
     mainEL.innerHTML += renderWeekdaysBase();
     document.querySelector('.nav__weekdays-list').classList.add('active');
     await displayWeekLists(0, 15);
-
-    const weekdaysListsEL = document.querySelector('.nav__weekdays-lists');
-    weekdaysListsEL.addEventListener(('click'), ({target}) => {
-        if(!target.classList.contains('active') ) {
-            [...weekdaysListsEL.children].forEach((weekdaysList) => {
-                weekdaysList.classList.remove('active');
-            })
-            // children은 HTMLCOLLECTION이라서, 배열 메서드를 사용할 수 없었음.
-            target.classList.add('active');
-            document.querySelector('.article__weekdays').innerHTML = '';
-        }
-
-        // console.log(target.textContent);
-        if(target.textContent === '월') displayWeekLists(0, 15);
-        if(target.textContent === '화') displayWeekLists(1, 15);
-        if(target.textContent === '수') displayWeekLists(2, 15);
-        if(target.textContent === '목') displayWeekLists(3, 15);
-        if(target.textContent === '금') displayWeekLists(4, 15);
-        if(target.textContent === '토') displayWeekLists(5, 15);
-        if(target.textContent === '일') displayWeekLists(6, 15);
-    })
+    navClickEventHandler('nav__weekdays-lists', weekdaysData.nav, displayWeekLists, 15);
 }
 
 function renderWeekdaysBase() {
@@ -55,23 +35,25 @@ function renderWeekdaysClasifyNav(total = 0) {
             <i class="fas fa-solid fa-arrow-down"></i>
         </button>
     </div>
-</nav>`
+</nav>`;
 }
 
 function renderWeekdaysArticle() {
     return `<article class="article__weekdays">
-</article>`
+</article>`;
 }
 
-function displayWeekLists(day, sectionNums) {
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=${day}`)
+function displayWeekLists(index, sectionNums) {
+    const parms = [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', 'finished'];
+    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${parms[index]}`)
     .then(res => res.json())
     .then(json => {
         let html ='';
         for(let i=0; i<sectionNums; i++) {
-            html += renderSections(json[i].title, json[i].img, json[i].url, i+1)
+            html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
         }
     document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
+    document.querySelector('.article__weekdays').innerHTML = '';
     document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
     });
 }
@@ -79,3 +61,4 @@ function displayWeekLists(day, sectionNums) {
 export { renderWeekdays }
 import { renderNav } from './component/nav.js'
 import { renderSections, renderSectionWrapper } from './component/section.js';
+import { navClickEventHandler } from './utils.js'
