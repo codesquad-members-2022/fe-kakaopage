@@ -157,19 +157,23 @@ const bindSubMenuEvent = () => {
     });
 };
 
-const bindWeekDayMenuEvent = () => {
-    if (!$(".week-day-menu")) return;
-
-    $(".week-day-menu").addEventListener("click", (e) => {
-        e.preventDefault();
-        const curEl = e.target.parentNode;
-        toggleClass(curEl, "active");
-    });
+const toggleWeekDayMenu = (e) => {
+    const curEl = e.target.parentNode;
+    toggleClass(curEl, "active");
 };
 
 const bindEventListener = () => {
+    // TODO: bindEvent 하나로 합치기
+
     bindSubMenuEvent();
-    bindWeekDayMenuEvent();
+
+    $(".contents-wrap").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if ($(".week-day-menu")?.contains(e.target)) {
+            toggleWeekDayMenu(e);
+        }
+    });
 };
 
 const init = () => {
