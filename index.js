@@ -517,12 +517,18 @@ const createEventBlock = () => {
   insertIntoMain(eventBlock);
 };
 
-createCateNav();
-createBanner();
-createCateBtnBlock();
-createPromotionBlock();
-createDaysBlock();
-createSmallBannerBlock();
-createGenreBlock();
-createDailyRankBlock();
-createEventBlock();
+$(".main-header-nav").addEventListener("click", (e) => {
+  if (e.target.dataset.mainNav === "1") {
+    createCateNav();
+    createBanner();
+    createCateBtnBlock();
+    createPromotionBlock();
+    createDaysBlock();
+    createSmallBannerBlock();
+    createGenreBlock();
+    createDailyRankBlock();
+    createEventBlock();
+  } else {
+    $("main").innerHTML = "";
+  }
+});
