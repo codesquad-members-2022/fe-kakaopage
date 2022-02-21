@@ -94,9 +94,6 @@ AddEvent(topBanner, 'click', '.daily', e=>{
 renderHeader();
 renderHome();
 
-let data;
-fetch('./data.json').then(res=>res.json()).then(json=>data=json)
-console.log
 
 
 
