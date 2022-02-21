@@ -217,4 +217,203 @@ const topBanner = {
     ],
 }
 
-export {topBanner}
+const webtoonData = [
+    {
+        title : "학사재생",
+        description : "금수저를 물고 태어나 버렸다!",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=B9yif/hyoXEYHVNL/gMonAbOI5FKnlnRpgUvmR0&filename=th2",
+        badge : {
+            up : true,
+            new : false,
+            age15 : false
+        },
+        week : "mon",
+        viewer : "167.2만명",
+        class : "crown",
+        writer : "소유현, 윰짝짝"
+    },
+    {
+        title : "후궁계약",
+        description : "후궁으로 입궁해 다오. 그게 내 의뢰다.",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=coL2BT/hzb7AO2NDX/kUIOK8kQUGSR1jVL7R9Sx0&filename=th2",
+        badge : {
+            up : true,
+            new : false,
+            age15 : false
+        },
+        week : "mon",
+        viewer : "93.7만명",
+        writer : "소유현, 윰짝짝"
+    },
+    {
+        title : "그 책에 마음을 주지 마세요",
+        description : "우연히 주운 일기장이 미래를 예지한다.",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=4i2ND/hy41JLoVim/MEkdJfaKxe99QY1C20PExk&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "mon",
+        viewer : "35.6.7만명",
+        writer : "문시현, 임조조"
+    },
+    {
+        title : "프로야구생존기",
+        description : "노영웅의 프로야구생존기!",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=brEVr3/hzhOkF7eSj/xHW4lqdI3DERYTAhj85wa1&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "tue",
+        viewer : "17.8만명",
+        writer : "최훈"
+    },
+    {
+        title : "엔젤릭 레이디",
+        description : "나도 네가 불행해졌으면 좋겠어",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=0CvZg/hzb7rxGCIw/rHqCxVFTy4Pci0fwEIEzb0&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "tue",
+        viewer : "36.9만명",
+        writer : "와플푸, 수수"
+    },
+    {
+        title : "세화, 가는 길",
+        description : "천천히 치유되는 그날의 상처",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=Y1Pyq/hzhOmK0732/Zqtg8dgUDhppRa9vTIS3Ok&filename=th2",
+        badge : {
+            up : false,
+            new : true,
+            age15 : false
+        },
+        week : "wed",
+        viewer : "5.8만명",
+        writer : "한혜연"
+    },
+    {
+        title : "웽툰",
+        description : "바보짓은 웽 때문이야",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=bLZEi9/hyQ9LpEAXn/jsKKjvkGlDhyJZchR7J7z0&filename=th2",
+        badge : {
+            up : true,
+            new : false,
+            age15 : false
+        },
+        week : "wed",
+        viewer : "11.7만명",
+        writer : "황짠느"
+    },
+    {
+        title : "내가 죽였다",
+        description : "누가 아군이고, 누가 적인가.",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=bkuIu6/hzacc29lre/gLKe2nLI4LbBiNviHcwaZK&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : true
+        },
+        week : "thu",
+        viewer : "22.1만명",
+        writer : "정오빠,정동생,정해연"
+    },
+    {
+        title : "깨어나세요, 용사여",
+        description : "다섯 남자 중 당신의 취향은?!",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=bIghi4/hzhOiO0RK2/3nk1EZ4lk7oiBKgMUEAhr0&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : true
+        },
+        week : "thu",
+        viewer : "49.1만명",
+        writer : "건우건조,아나나스,다나안"
+    },
+    {
+        title : "유리의 벽",
+        description : "그를 만난 순간부터 시작이었다.",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=dmaZLT/hzb7rxhmlz/4UqTzrdzXkui9o6Lgs8CxK&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "fri",
+        viewer : "44.8만명",
+        writer : "조호"
+    },
+    {
+        title : "아기 황후님",
+        description : "사람들을 구하려면 결혼해야 된다고?",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=chUX1P/hyVkI3H0ff/oBYHB6BQ8ZZCwsdZEfsod0&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "fri",
+        viewer : "41.6만명",
+        writer : "유소이,마량"
+    },
+    {
+        title : "베이비 드래곤",
+        description : "여고생, 드래곤으로 환생하다!",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=xFknF/hzb7AHmG0T/1Ak5DEmCg4SGLDWauhOsU0&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "sat",
+        viewer : "33.3만명",
+        writer : "도파라,소홍,캣낫독"
+    },
+    {
+        title : "메모라이즈(MEMORIZE)",
+        description : "그들을, 살리시겠습니까?",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=k4XUx/hyoXzW9UAY/wbX7BSnWm3yF6jNFR7Ft4K&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : true
+        },
+        week : "sat",
+        viewer : "35.6만명",
+        writer : "정하,로유진"
+    },
+    {
+        title : "대마법사의 딸",
+        description : "진짜 아빠를 찾아 떠나다!",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=jrIdd/hyQ9TgH4QY/AvsnQkcz862RG6i4Kd6y40&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "sun",
+        viewer : "104.3만명",
+        writer : "문설아,새벽애"
+    },
+    {
+        title : "그 결혼 제가 할게요",
+        description : "언니, 비켜봐",
+        image : "https://dn-img-page.kakao.com/download/resource?kid=ba9hD3/hyCviayDSb/1YnbHY9pZbhuoPRhhsQTVk&filename=th2",
+        badge : {
+            up : false,
+            new : false,
+            age15 : false
+        },
+        week : "sun",
+        viewer : ".4만명",
+        writer : "갈72치구이,카루목"
+    },
+]
+
+export {topBanner, webtoonData}
