@@ -6,12 +6,12 @@ import { romanceTop } from "./genreItems.js";
 const webtoonMenu = {
     홈: [
         "category",
-        "slide-banner",
-        "weekday-serial-best",
-        "new-best",
-        "genre-best",
-        "daily-best",
-        "recommend-best",
+        // "slide-banner",
+        // "weekday-serial-best",
+        // "new-best",
+        // "genre-best",
+        // "daily-best",
+        // "recommend-best",
     ],
     요일연재: ["weekday-serial"],
     // FIXME:무의미한 임시 값, 수정필요
@@ -22,6 +22,17 @@ const webtoonMenu = {
     로판: 7,
     액션무협: 8,
     BL: 9,
+};
+
+const datas = {
+    category: [
+        "오늘 UP",
+        "오늘 신작",
+        "오리지널",
+        "완결까지 정주행",
+        "독립운동가 웹툰",
+        "오늘 랭킹",
+    ],
 };
 
 // FIXME:파일분리
@@ -109,9 +120,17 @@ const toggleClass = (curEl, className) => {
 const getElements = (targetPage) => {
     const nodeNames = webtoonMenu[targetPage];
     let tag = "";
+
+    for (let i = 0; i < nodeNames.length; i++) {
+        const curNodeName = nodeNames[i];
+        tag += nodes[curNodeName](datas[curNodeName]);
+    }
+    /* const nodeNames = webtoonMenu[targetPage];
+    let tag = "";
     for (let i = 0; i < nodeNames.length; i++) {
         tag += nodes[nodeNames[i]];
     }
+    return tag; */
     return tag;
 };
 
@@ -126,9 +145,9 @@ const clearMainContents = () => {
 const bindSubMenuEvent = () => {
     // TODO: 콜백함수 따로 빼기
     // TODO: 서브메뉴 외 다른 메뉴에도 적용되도록
-    $(".sub-menu").addEventListener("click", (e) => {
-        const curEl = e.target.parentNode;
-        const targetPage = e.target.innerText;
+    $(".sub-menu").addEventListener("click", ({ target }) => {
+        const curEl = target.parentNode;
+        const targetPage = target.innerText;
 
         // 서브메뉴 active 클래스 토글
         toggleClass(curEl, "active");
@@ -136,17 +155,21 @@ const bindSubMenuEvent = () => {
         changeCoverImg(targetPage);
         // 메인컨텐츠 비우기
         clearMainContents();
+
         // 필요한 노드들 추가하기(부모)
-        $(".contents-wrap").insertAdjacentHTML(
+        /* $(".contents-wrap").insertAdjacentHTML(
             "afterbegin",
             getElements(targetPage)
-        );
+        ); */
 
-        //TODO: 추가한 노드들에 자식노드 추가
-        // FIXME: 로맨스TOP만 추가 테스트
-        // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
-        // mutationObserver(.genre-best가 추가되었는지 감지하기 위함)를 사용했었으나, 사용없이도 createGenreItems()를 통해 문제없이 추가되므로 일단 제거
-        createGenreItems();
+        $(".contents-wrap").innerHTML = getElements(targetPage);
+
+        if (targetPage === "홈") {
+            //TODO: 추가한 노드들에 자식노드 추가
+            // FIXME: 로맨스TOP만 추가 테스트
+            // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
+            /* createGenreItems(); */
+        }
     });
 };
 

@@ -1,7 +1,21 @@
 export const nodes = {
-    category: `<div class="category bg-white margin-top-default padding-default">
-    <div class="category-links-wrap group-flex">
-    </div></div>`,
+    category: function (datas) {
+        let tag = `<div
+        class="category bg-white margin-top-default padding-default"
+    ><div class="category-links-wrap group-flex">`;
+        tag += datas.reduce(
+            (prev, cur) =>
+                prev +
+                `<a href="" class="group-flex flex-center"
+        ><span>${cur}</span
+        ></a
+    >`,
+            ""
+        );
+        tag += `</div>
+        </div>`;
+        return tag;
+    },
     "slide-banner": `<div
     class="slide-banner group-flex bg-white margin-top-default"
 >
