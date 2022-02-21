@@ -166,27 +166,32 @@ export function addClickEventToElement(elementName, func){
     element.addEventListener("click", func)
 }
 
-export function selectedInit(className){
-    const elements = document.querySelectorAll(className)
-
-    elements.forEach( el => {
-        el.classList.remove('selected')
+export function selectedInit(target){
+    target.parentNode.childNodes.forEach(v => {
+        if(v.tagName === "LI") v.classList.remove('selected')
     })
 }
 
-export function addSelectedTo(className){
-    const elements = document.querySelectorAll(className)
+export function addSelectedTo(element){
+    const elements = document.querySelector(element)
 
-    elements.forEach( el => {
-        el.addEventListener('click', e=> {
-            selectedInit(className)
-            e.target.classList.add('selected')
-        })
+    elements.addEventListener('click', e=> {
+        selectedInit(e.target)
+        e.target.classList.add('selected')
     })
+
 }
 
 export function combineFormats(arr){
     const res = arr.reduce( (pre, cur) => pre + cur )
 
     return res;
+}
+
+export function addSelectedToday(){
+    const days = document.querySelectorAll('.day')
+
+    const today = new Date().getDay()-1;
+
+    days[today].classList.add('selected')
 }

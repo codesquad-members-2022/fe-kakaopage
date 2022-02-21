@@ -22,7 +22,7 @@ export const createFormatInit = () => {
     <nav class="head-nav">
         <ul class="head-nav-ul">
             <li class="head-nav-li">홈</li>
-            <li class="head-nav-li">웹툰·⏱</li>
+            <li class="head-nav-li selected" >웹툰·⏱</li>
             <li class="head-nav-li">웹소설·⏱</li>
             <li class="head-nav-li">영화</li>
             <li class="head-nav-li">방송</li>

@@ -16,15 +16,10 @@ body{
 }
 
 header {
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
     position: fixed;
     z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
+    width: 100vw;
+    height: 5rem;
     background-color: white;
 
     display: flex;
@@ -32,38 +27,34 @@ header {
 
 .header-area {
     box-sizing: border-box;
-    min-width: 0;
     margin: 0 auto;
-    min-width: 720px;
+    min-width: 45rem;
 
     display: flex;
 }
 
 .logo {
-    display: flex;
     flex: 1;
-    justify-content: flex-start;
 }
 
 .header-group {
     display: flex;
     flex: 1;
-    justify-content: flex-end;
 }
 
 .header-input {
     display: block;
-    width: 180px;
-    line-height: 28px;;
+    width: 11.25rem;
+    line-height: 1.75rem;;
     border: 1px solid lightgray;
-    border-radius: 30px;
+    border-radius: 1.89em;
 
-    margin-top: 25px;
+    margin-top: 1.56rem;
 }
 
 .header-buttons {
     display: block;
-    margin: 22px 5px;
+    margin: 1.4rem 0.3rem;
 }
 
 #stage {
@@ -81,7 +72,7 @@ header {
     padding: 5px 3px;
     color: rgb(150, 137, 137);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .main-wrap {
@@ -91,14 +82,10 @@ header {
 }
 
 .head-nav {
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
     position: fixed;
     z-index: 99;
-    left: 0;
     top: 80px;
-    width: 100%;
+    width: 100vw;
     height: 70px;
 
     background-color: white;
@@ -107,10 +94,8 @@ header {
 }
 
 .head-nav-ul {
-    box-sizing: border-box;
     margin: 0px auto;
     padding: 0;
-    min-width: 0;
 
     width: 720px;
 
@@ -132,24 +117,19 @@ header {
 
 .head-nav-li.selected {
     color: inherit;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     border-bottom: 3px solid RGB(242,208,49);
 }
 
 .genre-nav {
-    box-sizing: border-box;
-    margin-top: 150px;
-
-    width: 100%;
+    width: 100vw;
     height: 70px;
-
 }
 
 .genre-nav-ul {
     box-sizing: border-box;
     margin: 0px auto;
     padding: 0;
-    min-width: 0;
 
     width: 720px;
     height: 70px;
@@ -165,7 +145,7 @@ header {
     flex-grow: 1;
 
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: bold;
     color: rgb(150, 137, 137);
 
     padding: 20px 0px;
@@ -203,7 +183,7 @@ header {
     line-height: 40px;
 
     font-size: 1.1rem;
-    font-weight: 550;
+    font-weight: bold;
     color:rgb(77, 74, 74);
 }
 
@@ -227,8 +207,8 @@ header {
     height: 60px;
 
     font-size: 18px;
-    font-weight: 600;
-    margin: 2px 2px;
+    font-weight: bold;
+    margin: 2px;
 }
 
 .slide-event {
@@ -256,8 +236,8 @@ header {
 }
 
 .slide-button {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block; */
+    /* vertical-align: middle; */
     width: 40px;
     height: 40px;
 
@@ -266,16 +246,15 @@ header {
     background-color: transparent;
 
     font-size: 1.2rem;
-    font-weight: 550;
+    font-weight: bold;
     color: rgb(179, 179, 179);
 }
 
 .menu-form {
     margin-top: 10px;
-    margin-bottom: 10px;;
     background-color: white;
 
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .menu-form-title {
@@ -285,16 +264,37 @@ header {
 
 .title-name {
     flex: 1;
-    justify-content: flex-start;
 
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .title-more {
-    justify-content: flex-end;
-    
     color:rgb(150, 137, 137);
+}
+
+.nav-day{
+    padding-top: 10px ;
+    padding-left: 0;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    display: flex;
+
+    cursor: pointer;
+}
+
+.day {
+    flex-grow:1;
+    padding-bottom: 10px;
+
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: lightgray;
+    text-align: center;
+}
+
+.day.selected {
+    border-bottom: 3px solid RGB(242,208,49);
 }
 
 .category-nav{
@@ -321,31 +321,6 @@ header {
 .category-nav-sum {
     font-size: 0.9rem;
     font-weight: 550;
-}
-
-.nav-day{
-    padding-top: 10px;
-    padding-left: 0;
-    border-bottom: 1px solid rgb(238, 238, 238);
-    display: flex;
-
-    cursor: pointer;
-}
-
-.day {
-    flex-grow:1;
-    padding-bottom: 10px;
-
-    list-style: none;
-    font-size: 1.2rem;
-    font-weight: 550;
-    color: lightgray;
-    text-align: center;
-}
-
-.day.selected {
-    /* padding-bottom: 10px; */
-    border-bottom: 3px solid RGB(242,208,49);
 }
 
 .contents-flex-box {
@@ -390,18 +365,13 @@ header {
 
 .content-score {
     flex: 1;
-    justify-content: flex-start;
     color: #fbbc17;
-    font-weight: 550;
-}
-
-.content-score-icon {
-    justify-content: flex-end;
+    font-weight: bold;
 }
 
 .content-name{
     font-size: 0.9rem;
-    font-weight: 550;
+    font-weight: bold;
     color:rgb(77, 74, 74);
 
     margin-top: 10px;
@@ -454,7 +424,7 @@ header {
 
 .ranking-num {
     font-size: 1.5rem;
-    font-weight: 550;
+    font-weight: bold;
 
     margin-right: 20px;
 }
@@ -475,7 +445,7 @@ header {
 }
 
 .ranking-desc-title {
-    font-weight: 550;
+    font-weight: bold;
 }
 
 .ranking-desc-info {

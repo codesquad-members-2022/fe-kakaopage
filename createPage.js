@@ -1,10 +1,21 @@
 import { createFormat0, createFormat10, createFormat11, createFormat12, createFormat1A, createFormat1B, createFormat2, createFormat3, createFormat4, createFormat5, createFormat6, createFormat7, createFormat8, createFormat9, createFormatInit } from "./format.js";
-import { addSelectedTo, addToContents, combineFormats, initPage } from "./util.js";
+import { addClickEventToElement, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
 
 export const createPageInit = () => {
-    document.body.innerHTML = createFormatInit()
-    addSelectedTo('.genre-nav-li')
-    addSelectedTo('.head-nav-li')
+    document.body.innerHTML += createFormatInit()
+    // addSelectedTo('.genre-nav-li')
+    // addSelectedTo('.head-nav-li')
+    addSelectedTo('body')
+    addClickEventToElement('#genre-home', createPageHome)
+    addClickEventToElement('#genre-daily', createPageDaily)
+    addClickEventToElement('#genre-webtoon', createPageWebtoon)
+    addClickEventToElement('#genre-teen', createPageTeen)
+    addClickEventToElement('#genre-drama', createPageDrama)
+    addClickEventToElement('#genre-romance', createPageRomance)
+    addClickEventToElement('#genre-rofan', createPageRofan)
+    addClickEventToElement('#genre-action', createPageAction)
+    addClickEventToElement('#genre-BL', createPageBL)
+    
     createPageHome();
 }
 
@@ -15,11 +26,13 @@ export const createPageHome = () => {
         createFormat5('BL/GL TOP'), createFormat5('소년 TOP'), createFormat5('액션무협 TOP'),
         createFormat6('일간 랭킹 TOP'), createFormat7()
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    addSelectedTo('.day')
+    addSelectedTo('.day');
+    addSelectedToday();
+    document.getElementById('genre-home').classList.add('selected');
 }
 
 export const createPageDaily = () => {
@@ -31,6 +44,7 @@ export const createPageDaily = () => {
     initPage();
     addToContents(contents);
     addSelectedTo('.day');
+    addSelectedToday();
 }
 
 export const createPageWebtoon = () => {
