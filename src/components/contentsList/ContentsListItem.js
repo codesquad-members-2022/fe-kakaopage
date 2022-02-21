@@ -5,7 +5,7 @@ const ContentsListItem = (content) => {
             <a href="#">
               ${SmallImgContainer(content)}
               <h4 class="title">${content.title}</h4>
-              <span class="reader pseudo-img">${content.readers}</span>
+              <span class="reader">${content.readers}</span>
             </a>
           </li>`;
 };

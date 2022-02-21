@@ -15,6 +15,7 @@ import CategoryMenuList from './categoryMenu/CategoryMenuList.js';
 import CategoryMenu from './section/CategoryMenu.js';
 import SubBannerItem from './banner/SubBannerItem.js';
 import SubBanner from './section/SubBanner.js';
+import GenreTop from './section/GenreTop.js';
 
 export {
   Nav,
@@ -33,5 +34,6 @@ export {
   CategoryMenuList,
   CategoryMenu,
   SubBannerItem,
-  SubBanner
+  SubBanner,
+  GenreTop,
 };
