@@ -11,7 +11,6 @@ const init = (className) => {
   );
   const dayInfo = info[(today.getDay() + 6) % 7];
   const items = document.querySelectorAll(".top__inner .itemBox");
-  // elem.classList.add("selected-color", "selected-box");
   changeContent(items, dayInfo);
 };
 

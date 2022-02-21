@@ -37,7 +37,7 @@ input:focus {
   width: 100%;
   background-color: white;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header__inner {
@@ -140,44 +140,67 @@ input:focus {
 .main__carousel {
   position: relative;
   border-bottom: #eee solid 12px;
+  overflow: hidden;
+}
+
+.carousel__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.carousel__card {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .carousel__img {
   width: 100%;
 }
 
+.carousel__items {
+  position: absolute;
+  width: 100%;
+  bottom: 4rem;
+  left: 1.5rem;
+}
+
 .carousel__left {
+  cursor: pointer;
   position: absolute;
   top: 45%;
   left: 1rem;
+  z-index: 1;
 }
 
 .carousel__right {
+  cursor: pointer;
   position: absolute;
   top: 45%;
   right: 1rem;
 }
 
-.carousel__title {
+.carousel__countBox {
   position: absolute;
+  color: #fff;
+  right: 24px;
+  bottom: 4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.carousel__title {
   color: white;
   font-size: 1.75rem;
   font-weight: 600;
-  bottom: 100px;
-  left: 20px;
-}
-
-.carousel__infoBox {
-  display: flex;
-  position: absolute;
-  bottom: 60px;
-  left: 15px;
+  padding-bottom: 1rem;
 }
 
 .carousel__info {
   color: white;
-  padding: 0.3rem;
-  font-size: 1.3rem;
 }
 
 .carousel__script {

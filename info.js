@@ -1,3 +1,23 @@
+const carouselInfo = [
+  {
+    img: "//dn-img-page.kakao.com/download/resource?kid=WOEgA/hzmU0Jxe7C/mbKCTR9na3asOM5IfnhJv1",
+    title: "사내 맞선",
+    user: "201.3만명",
+    script: "사장님과 맞선을? 들키면 해고다!",
+  },
+  {
+    img: "//dn-img-page.kakao.com/download/resource?kid=xQfci/hzp2lDl8mg/i7ukSZCV1OKMyxZ7RxnQAK",
+    title: "도굴왕",
+    user: "201.4만명",
+    script: "여기도 '그 자식'이 다 털어갔냐?",
+  },
+  {
+    img: "//dn-img-page.kakao.com/download/resource?kid=mNfwc/hzb7spege4/7ecXCccjHbpBOTc04piG10",
+    title: "막장드라마의 제왕",
+    user: "28.8만명",
+    script: "진정한 막장의 끝을 보여주겠다!",
+  },
+];
 const info = [
   [
     {
@@ -503,4 +523,4 @@ const info = [
   ],
 ];
 
-export { info };
+export { carouselInfo, info };
