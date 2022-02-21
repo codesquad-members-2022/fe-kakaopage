@@ -15,6 +15,7 @@ const data = {
       title: "소년 1",
       info: "인포 테스트",
       genre: "소년",
+      day: "월",
     },
     {
       imgUrl:
@@ -22,6 +23,7 @@ const data = {
       title: "소년 2",
       info: "인포 테스트",
       genre: "소년",
+      day: "화",
     },
     {
       imgUrl:
@@ -29,6 +31,7 @@ const data = {
       title: "소년 3",
       info: "인포 테스트",
       genre: "소년",
+      day: "월",
     },
     {
       imgUrl:
@@ -36,6 +39,7 @@ const data = {
       title: "소년 4",
       info: "인포 테스트",
       genre: "소년",
+      day: "수",
     },
     {
       imgUrl:
@@ -43,6 +47,7 @@ const data = {
       title: "소년 5",
       info: "인포 테스트",
       genre: "소년",
+      day: "목",
     },
 
     {
@@ -50,18 +55,21 @@ const data = {
       title: "드라마 1",
       info: "인포 테스트",
       genre: "드라마",
+      day: "금",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "드라마 2",
       info: "인포 테스트",
       genre: "드라마",
+      day: "금",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "드라마 3",
       info: "인포 테스트",
       genre: "드라마",
+      day: "목",
     },
     {
       imgUrl: "./pageImage/madothuki.png",

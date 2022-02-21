@@ -1,32 +1,32 @@
-import { createEl } from "../eventJS/util.js";
+import { $, createEl } from "../eventJS/util.js";
 import { data } from "./data.js";
 
 const createMainNav = (data) => {
-  const nav = (createEl("nav").innerHTML = template).classList.add(
-    "main__nav__dow"
-  );
-
+  const nav = createEl("nav");
+  nav.classList.add("main__nav__dow");
   nav.innerHTML = `
       <ul class="main__nav__dow--ul">
       </ul>
   `;
 
   data.week.forEach((day) => {
-    const list = (createEl("li").textContent = day);
-    nav.$("ul").appendChild(list);
+    const list = createEl("li");
+    list.textContent = day;
+    nav.querySelector(".main__nav__dow--ul").appendChild(list);
   });
+
   return nav;
 };
 
-const createMaincontainer = (toggleLeft, toggleRight) => {
+const createMaincontainer = (toggleinfo) => {
   const containter = createEl("section");
   containter.classList.add("main");
   containter.innerHTML = `
   <nav class="main__nav--toggle">
     <ul class="main--toggle--left">
-      <li>${toggleLeft}</li>
+      <li>${toggleinfo.left}</li>
     </ul>
-    <div class="main--toggle--right">${toggleRight}</div>
+    <div class="main--toggle--right">${toggleinfo.right}</div>
   </nav>
   <ul class="main__cartoonZone">
   </ul>
@@ -73,4 +73,16 @@ const createlist = (data) => {
 const toonGenreChecker = (toonGenre) =>
   data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
 
-export { createMainNav, createMaincontainer, createImgCard, toonGenreChecker };
+const multiAppend = (data, parent, className, creatingFunc) => {
+  data.forEach((el) => {
+    parent.querySelector(className).appendChild(creatingFunc(el));
+  });
+};
+
+export {
+  createMainNav,
+  createMaincontainer,
+  createImgCard,
+  toonGenreChecker,
+  multiAppend,
+};

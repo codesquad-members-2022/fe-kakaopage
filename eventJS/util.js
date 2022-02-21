@@ -24,4 +24,18 @@ const cloneAndDsiplay = (parent, contents, loop) => {
   }
 };
 
-export { createEl, $, remove, replaceInner, resetDefault, cloneAndDsiplay };
+const removeAllChild = (el, classname) => {
+  while (el.querySelector(classname).firstChildElement) {
+    el.removeChild(el.firstChild);
+  }
+};
+
+export {
+  createEl,
+  $,
+  remove,
+  removeAllChild,
+  replaceInner,
+  resetDefault,
+  cloneAndDsiplay,
+};

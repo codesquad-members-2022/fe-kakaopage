@@ -1,24 +1,34 @@
-import { createEl, $, remove, replaceInner, resetDefault } from "./util.js";
+import {
+  createEl,
+  $,
+  remove,
+  removeAllChild,
+  replaceInner,
+  resetDefault,
+} from "./util.js";
 import {
   createMainNav,
   createMaincontainer,
   createImgCard,
   toonGenreChecker,
+  multiAppend,
 } from "../component/mainComponent.js";
 import { data } from "../component/data.js";
 
 const changeMainSecHome = (contentsChecker) => {
   remove(".main");
 
-  data.genre.forEach((genre) => {
-    const container = createMaincontainer(genre, "더보기");
-    const toonData = toonGenreChecker(genre);
-    toonData.forEach((cardinfo) => {
-      container
-        .querySelector(".main__cartoonZone")
-        .appendChild(createImgCard(cardinfo));
-    });
+  const containers = data.genre.reduce((containersArr, genre) => {
+    containersArr.push(createMaincontainer({ left: genre, right: "더보기" }));
+    return containersArr;
+  }, []);
 
+  containers.forEach((container) => {
+    const getDataByGenre = toonGenreChecker(
+      container.querySelector(".main--toggle--left").firstElementChild
+        .textContent
+    );
+    multiAppend(getDataByGenre, container, ".main__cartoonZone", createImgCard);
     $(".containEvery").appendChild(container);
   });
 
@@ -27,12 +37,9 @@ const changeMainSecHome = (contentsChecker) => {
 
 const changeMainSecWoD = (contentsChecker) => {
   remove(".main");
-  const container = createMaincontainer("", "전체(test)");
+  const container = createMaincontainer({ left: "", right: "전체(test)" });
 
-  // 해당 요소의 자식을 삭제하는 함수 작성해보자
-  while (container.querySelector(".main--toggle--left").firstChildElement) {
-    container.removeChild(container.firstChild);
-  }
+  removeAllChild(container, ".main--toggle--left"); // 해당 요소의 자식을 삭제하는 함수 작성해보자
 
   data.toggleLeft.forEach((toggleinfo) => {
     const newToggleList = createEl("li");
@@ -40,11 +47,13 @@ const changeMainSecWoD = (contentsChecker) => {
     container.querySelector(".main--toggle--left").appendChild(newToggleList);
   });
 
-  data.toonData.forEach((tooninfo) => {
-    container
-      .querySelector(".main__cartoonZone")
-      .appendChild(createImgCard(tooninfo));
-  });
+  const weekendNav = createMainNav(data);
+  container.insertBefore(
+    weekendNav,
+    container.querySelector(".main__nav--toggle")
+  );
+
+  multiAppend(data.toonData, container, ".main__cartoonZone", createImgCard);
 
   $(".containEvery").appendChild(container);
   contentsChecker = "요일연재";

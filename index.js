@@ -8,34 +8,27 @@ import {
 } from "./eventJS/util.js";
 import { changeMainSecHome, changeMainSecWoD } from "./eventJS/recEvent.js";
 
-document.querySelector(".prev").addEventListener("click", () => {});
+$(".prev").addEventListener("click", () => {});
 
 let pageCount = 0;
 let contentsChecker = "";
 
-cloneAndDsiplay(
-  document.querySelector(".main__cartoonZone"),
-  document.querySelector(".main__cartoonZone__cell"),
-  9
-);
+cloneAndDsiplay($(".main__cartoonZone"), $(".main__cartoonZone__cell"), 9);
 
 function onclickPrev(target) {
-  const maxPage =
-    document.querySelector(".recommand__image--wrapper").childElementCount - 1;
+  const maxPage = $(".recommand__image--wrapper").childElementCount - 1;
 
   if (maxPage > -pageCount) {
     pageCount--;
   }
   const pixel = 1000 * pageCount;
-  document.querySelector(
-    ".recommand__image--wrapper"
-  ).style.transform = `translate(${pixel}px)`;
+  $(".recommand__image--wrapper").style.transform = `translate(${pixel}px)`;
 
   //이부분 수정하면 될것같은데
-  document.querySelector(".recommand__image--pageCount").firstChildNode;
+  $(".recommand__image--pageCount").firstChildNode;
 }
 
-document.querySelector(".next").addEventListener("click", onclicknext);
+$(".next").addEventListener("click", onclicknext);
 
 function onclicknext() {
   if (0 > pageCount) {
@@ -47,21 +40,21 @@ function onclicknext() {
   ).style.transform = `translate(${pixel}px)`;
 }
 
-document
-  .querySelector(".recommand__nav--ul")
-  .addEventListener("click", function (event) {
-    if (
-      event.target.textContent === "홈" &&
-      event.target.textContent !== contentsChecker
-    ) {
-      changeMainSecHome(contentsChecker);
-    } else if (
-      event.target.textContent === "요일연재" &&
-      event.target.textContent !== contentsChecker
-    ) {
-      changeMainSecWoD(contentsChecker);
-    }
-  });
+$(".recommand__nav--ul").addEventListener("click", function (event) {
+  if (
+    event.target.textContent === "홈" &&
+    event.target.textContent !== contentsChecker
+  ) {
+    changeMainSecHome(contentsChecker);
+  } else if (
+    event.target.textContent === "요일연재" &&
+    event.target.textContent !== contentsChecker
+  ) {
+    changeMainSecWoD(contentsChecker);
+  }
+});
+
+$(".main__nav__dow--ul").addEventListener("click", function (event) {});
 
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {
