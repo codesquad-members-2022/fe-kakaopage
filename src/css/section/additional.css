@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 웹툰 긴거 */
+.long_webtoon {
+  width: calc(100% / 4);
+}
+.long_webtoon > img:nth-child(2) {
+  position: absolute;
+  top: 0px;
+}
+.info_long div {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-M);
+  font-weight: var(--font-bold);
+}
+.info_long span {
+  color: var(--red-color);
+}
