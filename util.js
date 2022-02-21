@@ -165,3 +165,29 @@ export function addClickEventToElement(elementName, func){
 
     element.addEventListener("click", func)
 }
+
+export function selectedInit(className){
+    const elements = document.querySelectorAll(className)
+
+    elements.forEach( el => {
+        el.classList.remove('selected')
+    })
+}
+
+export function addSelectedTo(className){
+    const elements = document.querySelectorAll(className)
+
+    elements.forEach( el => {
+        el.addEventListener('click', e=> {
+            selectedInit(className)
+            e.target.classList.add('selected')
+        })
+    })
+}
+
+export function combineFormats(arr){
+    const res = arr.reduce( (pre, cur) => pre + cur )
+
+    return res;
+}
+
