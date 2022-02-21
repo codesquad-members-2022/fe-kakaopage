@@ -65,26 +65,32 @@ function makeLayout(selector, num, options, container) {
 function makeSelectDayListHome() {
   const newList = document.createElement("ul");
   newList.classList.add('select__day');
-  newList.innerHTML = makeSelectDayItems();
+  makeSelectDayItems(newList);
 
   return newList;
 }
 
-function makeSelectDayItems() {
+function makeSelectDayItems(list) {
   const day = ['월', '화', '수', '목', '금', '토', '일', '완결'];
-  const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end']
-  let items = '';
+  const arrDaySun = 6;
+  const defaultSun = 0;
+
+  const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'];
+  const today = new Date().getDay();
+
   day.forEach((el, index) => {
-    if (index === 0) {
-      items += `<li class="day daily__top--focused" data-day="${dataSet[index]}"><button type="button">${day[index]}</button></li>`;
-    } else {
-      items += `
-      <li class="day" data-day="${dataSet[index]}"><button type="button">${day[index]}</button></li>
-      `
-    }
-  })
-  
-  return items;
+    const item = document.createElement('li');
+    item.classList.add('day');
+    item.dataset.day = `${dataSet[index]}`;
+    item.dataset.dayIndex = `${index}`;
+    
+    item.innerHTML = `<button type="button" class="day__btn">${day[index]}</button></li>`;
+
+    if (index === arrDaySun && today === defaultSun) item.classList.add('daily__top--focused');
+    if (today === index + 1) item.classList.add('daily__top--focused');
+
+    list.appendChild(item);
+  });
 }
 
 // ========== WebtoonList ==========
@@ -257,4 +263,4 @@ function makePromotionItem(list, focus) {
   });
 }
 
-export {renderContainer, renderPromotionBanner, renderMoveApp}
+export {renderContainer, renderPromotionBanner, renderMoveApp, makeWebtoonList}
