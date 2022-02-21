@@ -312,3 +312,56 @@ const categoryEl = document.querySelector(".main__nav-ul");
 
 li 태그들에 이벤트를 달기 위하여 li를 관리하는 ul(부모태그)를 main__nav-ul 클래스이름으로 가져왔다.  
 해당 ul태그에 이벤트 리스너를 달게되면 아래 li > a에 모든 이벤트가 걸리게 된다!
+
+---
+
+### 카카오 웹툰 페이지 공통 컴포넌트 분리 작업  
+
+> 웹툰 페이지 전체를 살펴보면서 공통으로 뺄수 있는 컴포넌트가 어떤게 있을까 자세히 살펴보았다. 모든 영역들이 거의 비슷하게 사용하는걸 발견하여 어떻게 컴포넌트를 나누면 좋을지 나름 정리하였음
+
+1. IssueComponent
+
+![issueComponent](https://user-images.githubusercontent.com/45479309/154855213-5d14cec0-2bdf-4181-b88f-7c2d5f014376.png)  
+
+상단 영역에서 카테고리 메뉴 바로 아래에 위치하는 내용들인데 여러 url에서 저런형태로 안의 텍스트만 다르고 형태는 똑같아 저 형태를 담당하는 컴포넌트 하나를 만들어 주면 좋겠다 생각했다. 네이밍은 우선 이슈들을 담당한다고 생각하여 IssueComponent로 지었음..
+
+2. AdvertiseComponent  
+
+![advertiseComponent](https://user-images.githubusercontent.com/45479309/154855022-6b26e294-7148-4ef3-89d7-3738c257712c.png)
+
+위 컴포넌트 또한 많은 곳에서 사용되어져서 분리하였다. 이름은 광고를 의미하기 때문에 간단하게 AdvertiseComponent  
+
+3. ImagePoster Component
+
+![imagePoster](https://user-images.githubusercontent.com/45479309/154855020-5a484782-47db-4b6e-be67-58ba0d331192.png)
+
+정말 여러곳에서 사용되어지는 컴포넌트다! 이 컴포넌트를 어떤식으로 작게 나눌지 고민중이기도 하다! 지금 생각으론 2개의 컴포넌트로 나눌까 생각중이다. ( ImagePoster - 주황색 선을 기준으로 위쪽 이미지, 보라색 영역 / ImagePosterDetail - 노란색 영역)
+- 이미지 사이즈가 다르다  
+- 보라색 영역의 배치가 다르다 (이미지 위에 배치? 아래에 배치?)
+- 노란색 영역에 들어가는 내용이 다르다.
+
+4. Row 방향으로 흐르는 Container  
+
+![row1](https://user-images.githubusercontent.com/45479309/154855019-7aa62394-4047-4119-a3fa-02fcd19443b0.png)
+
+![row2](https://user-images.githubusercontent.com/45479309/154855021-44133f7b-457b-49c7-8cb1-bfa5b2a925be.png)
+
+빨간색 영역은 많은곳에서 사용하는 영역이라 이것도 TopicComponent로 분리하였고 그 아래(주황색, 노란색) 영역은 왼쪽에서 오른쪽 방향으로 배치되는 row flex 레이아웃 안에 ImagePoster 컴포넌트들이 배치되고 있다.  
+
+🤔 고민중..
+
+- 이미지 크기를 다르게 표현하기 위해 해당 영역을 의미하는 값을 파라미터로 받아 ImagePoster 컴포넌트에 전달?
+
+- 보라색 영역도 마찬가지로 파라미터로 imageStatus 라는 변수 값으로 제어할까 생각중이다.
+
+5. Column 방향으로 흐르는 Container
+
+![column1](https://user-images.githubusercontent.com/45479309/154855018-433326f8-5aa1-49e3-b592-38e35c39ea50.png)
+
+![column2](https://user-images.githubusercontent.com/45479309/154855017-549c7b9d-b1a1-4bf0-9ff4-913dce5dd00c.png)
+
+![column3](https://user-images.githubusercontent.com/45479309/154855016-88e78122-d669-432e-8c2b-037edf64a8be.png)
+
+![column4](https://user-images.githubusercontent.com/45479309/154855010-9e98a666-1f9f-47ff-9d3a-1e27ae67784f.png)
+
+상위 빨간색 영역 TopicComponent, 주황색, 노란색 영역들은 위에서 아래 방향으로 배치되는 column flex 레이아웃으로 row 방향으로 흐르는 컨테이너와 동일하게 똑같이 안에 ImagePoster 컴포넌트들을 배치하면 된다고 생각한다.
