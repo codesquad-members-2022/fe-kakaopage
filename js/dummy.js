@@ -1,7 +1,7 @@
 export const recommendationObj = {
-  홈: [],
-  요일연재: [],
-  웹툰: [
+  1: [],
+  2: [],
+  3: [
     {
       title: "아빠가 너무 강함",
       img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
@@ -31,7 +31,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  소년: [
+  4: [
     {
       title: "이차원 용병",
       img: "http://dn-img-page.kakao.com/download/resource?kid=qklnd/hyCvm4LfZf/xUw9OCkXIPkU5eNV5nuMb0&filename=th2",
@@ -61,7 +61,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  드라마: [
+  5: [
     {
       title: "어딜 봐요 매니저님",
       img: "http://dn-img-page.kakao.com/download/resource?kid=cqZA0V/hzacd84mNX/s3PtIZmocIWK7ABeG0ac31&filename=th2",
@@ -91,7 +91,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  로맨스: [
+  6: [
     {
       title: "옷소매 붉은 끝동",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bdXfpL/hzb7sQkGfQ/NT4fYxdUKZWbW7v9Sj4D81&filename=th2",
@@ -121,7 +121,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  로판: [
+  7: [
     {
       title: "오라버니가 너무 순해서 걱정이다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=9AhFq/hzb7v7qYBA/VfbltpT4NcWVRRvBSo7ySK&filename=th2",
@@ -151,7 +151,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  액션무협: [
+  8: [
     {
       title: "절대무신",
       img: "http://dn-img-page.kakao.com/download/resource?kid=d7xIJb/hy41GOLe3P/buSZKwUMyLBtvX0KxkWSik&filename=th2",
@@ -181,7 +181,7 @@ export const recommendationObj = {
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ],
-  BL: [
+  9: [
     {
       title: "나쁜 색기 [개정판]",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bhEjzw/hzhOfkJ4Le/Qk9yTzliowfFfy7i3lSYfK&filename=th2",
@@ -205,7 +205,7 @@ export const dayofWeekObj = [
     img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
     subscriptions: "75만명",
     status:
-      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+      "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
   },
   {
     title: "정령왕의 딸",
@@ -247,20 +247,27 @@ export const dayofWeekObj = [
     img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
     subscriptions: "75만명",
     status:
-      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+      "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
   },
   {
     title: "정령왕의 딸",
     img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
     subscriptions: "75만명",
     status:
-      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+      "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
+  },
+  {
+    title: "정령왕의 딸 테스트 22222",
+    img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
+    subscriptions: "75만명",
+    status:
+      "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
   },
   {
     title: "정령왕의 딸",
     img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
     subscriptions: "75만명",
     status:
-      "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+      "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
   },
 ]
