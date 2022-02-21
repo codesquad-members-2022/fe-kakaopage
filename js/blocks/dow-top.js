@@ -4,18 +4,20 @@ import { dowTopWebtoons } from "../fixing-webtoons.js";
 import { webtoonCard } from "../components/webtoon-card.js";
 
 const dow = ["일", "월", "화", "수", "목", "금", "토"];
-
+//dow[new Date().getDay()]
 const dowTopContents = (selectedValue) => {
+  console.log(selectedValue);
   const contents = dowTopWebtoons
-    .filter((e) => e.day === dow[new Date().getDay()])
-    .map((e) => webtoonCard(e))
-    .reduce((acc, cur) => acc + cur);
+    .filter((e) => e.day === selectedValue)
+    .reduce((acc, cur) => acc + webtoonCard(cur), "");
 
   return `<div class=dow-top__contents>${contents}</div>`;
 };
 
-export const dowTop = (selectedValue, frame) => {
+const dowTop = (selectedValue, frame) => {
   return (
     frameHeader(selectedValue, frame) + dowNav() + dowTopContents(selectedValue)
   );
 };
+
+export { dowTopContents, dowTop };

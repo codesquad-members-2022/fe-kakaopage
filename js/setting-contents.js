@@ -23,7 +23,11 @@ const mainNavContents = {
 
 const nav = [
   { name: "main__nav", contents: mainNavContents, rendering: "rendering" },
-  { name: "dow__nav", contents: webtoons, rendering: "dow-top__contents" },
+  {
+    name: "dow__nav",
+    contents: webtoons.dowTop,
+    rendering: "dow-top__contents",
+  },
 ];
 
 export const settingContents = (selectedNav, selectedValue) => {
