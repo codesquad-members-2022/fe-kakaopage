@@ -8,6 +8,13 @@ The Document method querySelector() returns the first Element within the documen
 element = document.querySelector(selectors);
 ``` 
 
+## Finding the first element matching a class
+In this example, the first element inthe document with the class "myclass" is returned:
+
+```javascript
+var el = document.querySelector(".myclass");
+```
+
 
 
 =======================================

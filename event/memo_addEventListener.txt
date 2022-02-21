@@ -1,0 +1,75 @@
+https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+# EventTarget.addEventListener()
+The addEventListener() method of the __EventTarget__ interface sets up a function that will be called whenever the specified event is delivered to the target.
+
+Targets
+- Element (and its children)
+- Document
+- Window
+
+## Syntax
+addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
+
+## Parameters
+- type : A case-sensitive string representing the event type to listen for.
+- listener : The object that receives a notification (an object that implements the Event interface) when an event of the specified type occurs. This must be an object implementing the EventListener interface, or a JavaScript function. See the event listener callback for details on the callback itself.
+
+
+### Example of options usage
+HTML
+```html
+<div class="outer">
+    outer, once & none-once
+        <div class="middle" target="_blank">
+            middle, capture & none-capture
+        </div>
+</div>
+```
+CSS
+```css
+.outer, .middle, .innter1, .inner2 {
+    display: block;
+    width: 520px;
+    padding: 15px;
+    margin: 15px;
+    text-decoration: none;
+}
+.inner1, .inner2 {
+    border: 1px solid purple;
+    color: purple;
+    width: 400px;
+}
+```
+JavaScript
+```javascript
+const outer = document.querySelector('outer');
+const middle = document.querySelector('.middle');
+const inner1 = document.querySelector('.inner1');
+const inner2 = document.querySelector('.inner2');
+
+const capture = {
+    capture : true
+};
+const noneCapture = {
+    capture : false
+};
+const once = {
+    once : true
+};
+const noneOnce = {
+    once : false
+};
+const passive = {
+    passive : true
+};
+const nonePassive = {
+    passive : false
+};
+
+outer.addEventListener('click', onceHandler, once);
+outer.addEventListener('click', noneOnceHandler, noneOnce);
+middle.addEventListener('click', captureHandler, capture);
+```

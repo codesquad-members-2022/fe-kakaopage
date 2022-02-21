@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./event.css">
+        <script src="./event.js"></script>
+    </head>
+    <body>
+        <div class="outer">
+            outer, once & none-once
+                <div class="middle" target="_blank">
+                    middle, capture & none-capture
+                    <a class="inner1" href="https://www.mozilla.org" target="_blank">
+                        inner1, passive & preventDefault(which is not allowed)
+                    </a>
+                    <a class="inner2" href="https://developer.mozilla.org/" target="_blank">
+                        inner2, none-passive & preventDefault(not open new page
+                        )
+                    </a>
+                </div>
+        </div>
+    </body>
+</html>
+

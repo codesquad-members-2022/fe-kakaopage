@@ -50,7 +50,7 @@ main {
   font-size: 17px;
   width: 16%;
 }
-.yellow-line {
+.main-li.yellow-line {
   border-bottom-color: var(--border-bottom-color);
 }
 
