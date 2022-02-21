@@ -518,6 +518,15 @@ const createEventBlock = () => {
 };
 
 $(".main-header-nav").addEventListener("click", (e) => {
+  const currentTab = $(".current-tab", ".underline-thick");
+  if (currentTab !== null) {
+    currentTab.classList.remove("current-tab");
+    currentTab.classList.remove("underline-thick");
+  }
+
+  e.target.classList.add("current-tab");
+  e.target.classList.add("underline-thick");
+
   if (e.target.dataset.mainNav === "1") {
     createCateNav();
     createBanner();
