@@ -17,7 +17,7 @@
 
 # 목표
 
-### [ ] 파리미터 라우팅으로 수정
+### [x] 파리미터 라우팅으로 수정
 
 현재상황
 
@@ -30,6 +30,21 @@
 고민
 
 - 서버없이 url과 url파리미터만 사용해서 렌더링할 수 있는지 고민해보기
+
+해결
+
+- url에서 파라미터만 가져와서 새로고침시 해당 파라미터로 렌더링
+- 첫 렌더링시 파라미터가 없을 때는 default를 0으로 하고 렌더링
+
+```js
+const urlParams = window.location.search;
+const params = new URLSearchParams(urlParams);
+let targetCategoryUid = params.get('categoryUid');
+if (targetCategoryUid) {
+  targetCategoryUid = 0;
+}
+render(targetCategoryUid);
+```
 
 ### [ ] 데이터를 json으로 분리하기
 

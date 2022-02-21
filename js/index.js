@@ -40,10 +40,11 @@ const $mainChildLayout = $mainLayout.querySelectorAll(MAIN_LAYOUT_CHILDREN);
 
 const urlParams = window.location.search;
 const params = new URLSearchParams(urlParams);
-const targetCategoryUid = params.get('categoryUid');
+let targetCategoryUid = params.get('categoryUid');
 if (targetCategoryUid) {
-  render(targetCategoryUid);
+  targetCategoryUid = 0;
 }
+render(targetCategoryUid);
 
 $nav.addEventListener('click', (event) => {
   event.preventDefault();
