@@ -1,0 +1,26 @@
+{
+  "name": "fe-kakaopage",
+  "version": "1.0.0",
+  "description": "# 다른 사람 pr 엿보기",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimyouknow/fe-kakaopage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimyouknow/fe-kakaopage/issues"
+  },
+  "homepage": "https://github.com/kimyouknow/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
