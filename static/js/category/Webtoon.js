@@ -1,7 +1,20 @@
+import { renderSubCategory } from '../articles/subCategory.js';
 import { renderMainChildDOM } from '../utils.js';
 
+const subCategoryIndexArr = [
+  '홈',
+  '요일연재',
+  '웹툰',
+  '소년',
+  '드라마',
+  '로맨스',
+  '로판',
+  '액션무협',
+  'BL',
+];
+
 export const Webtoon = async () => {
-  const subCategory = a;
+  const subCategory = renderSubCategory(subCategoryIndexArr);
   const carousel = `<div>Webtoon</div>`;
   const eventBox = `<div>Webtoon</div>`;
   const evenCarouel = `<div>Webtoon</div>`;
@@ -14,15 +27,3 @@ export const Webtoon = async () => {
     mainContent,
   });
 };
-
-const a = `<ul class="c-category">
-<li class="main__index c-category__index"><span>홈</span></li>
-<li class="main__index c-category__index"><span>요일연재</span></li>
-<li class="main__index c-category__index"><span>웹툰</span></li>
-<li class="main__index c-category__index"><span>소년</span></li>
-<li class="main__index c-category__index"><span>드라마</span></li>
-<li class="main__index c-category__index"><span>로맨스</span></li>
-<li class="main__index c-category__index"><span>로판</span></li>
-<li class="main__index c-category__index"><span>액션무협</span></li>
-<li class="main__index c-category__index"><span>BL</span></li>
-</ul>`;

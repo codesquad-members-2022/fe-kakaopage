@@ -1,4 +1,4 @@
-import { routes } from './constants/router.js';
+import { routes } from './router.js';
 import { ERROR } from './constants/message.js';
 import { ELEMENT_CLASS, ELEMENT_ID } from './constants/variable.js';
 import { $get } from './utils.js';
@@ -25,9 +25,10 @@ async function preRender(uid) {
 }
 
 async function render(uid) {
-  const uidContent = await preRender(uid);
-  console.log(uidContent);
   const categoryUid = Number(uid);
+  const uidContent = await preRender(categoryUid);
+  // preRender함수 작동확인
+  console.log(uidContent);
   try {
     const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid

@@ -1,6 +1,6 @@
-import { Main } from '../category/Main.js';
-import { Webtoon } from '../category/Webtoon.js';
-import { Novel } from '../category/Novel.js';
+import { Main } from './category/Main.js';
+import { Webtoon } from './category/Webtoon.js';
+import { Novel } from './category/Novel.js';
 
 export const routes = [
   { categoryUid: 0, getContent: Main },
