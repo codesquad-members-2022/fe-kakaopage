@@ -6239,28 +6239,28 @@ function changeBorderColor(target) {
   changeTabsColor(target);
   target.style.borderBottom = "3px solid #ffd200";
 }
-
-const days = document.querySelectorAll(".day");
-days.forEach((day) => {
-  console.log("foreach 도는중");
-  day.addEventListener("click", function changeDayAndContents(e) {
-    changeBorderColor(e.target);
-    const dayInfo = e.target.textContent;
-    const weekdayContentWrap = document.querySelector("#weekdayContentWrapId");
-    removeContents(weekdayContentWrap);
-    weekdayContents.map((day) => {
-      if (dayInfo === day[0]) {
-        let temp = "";
-        for (let i = 0; i < 10; i++) {
-          temp += `${day[1]}`;
-        }
-        weekdayContentWrap.insertAdjacentHTML("afterbegin", temp);
+function changeDayAndContents(target) {
+  changeBorderColor(target);
+  const dayInfo = target.textContent;
+  const weekdayContentWrap = document.querySelector("#weekdayContentWrapId");
+  removeContents(weekdayContentWrap);
+  weekdayContents.map((day) => {
+    if (dayInfo === day[0]) {
+      let temp = "";
+      for (let i = 0; i < 10; i++) {
+        temp += `${day[1]}`;
       }
-    });
+      weekdayContentWrap.insertAdjacentHTML("afterbegin", temp);
+    }
   });
+}
+const days = document.querySelectorAll(".day");
+const daysWrap = document.querySelector("#daysWrap");
+daysWrap.addEventListener("click", function (e) {
+  changeDayAndContents(e.target);
 });
 function changeEventSlideContents(e) {
-  const genre = e.target.innerText;
+  const genre = e.target.textContent;
   const slide = document.querySelector("#eventSlideId");
   eventContents.map((content) => {
     if (genre === content[0]) {
@@ -6271,7 +6271,7 @@ function changeEventSlideContents(e) {
 }
 
 function changeSectionContents(e) {
-  const navGenre = e.innerText;
+  const navGenre = e.textContent;
   const sections = document.querySelector("#sectionId");
   removeContents(sections);
   let temp;
@@ -6284,5 +6284,5 @@ function changeSectionContents(e) {
   });
   sections.insertAdjacentHTML("afterbegin", temp);
   const change = document.querySelector("#showChange");
-  change.innerText = `${navGenre}로 내용 바뀜`;
+  change.textContent = `${navGenre}로 내용 바뀜`;
 }
