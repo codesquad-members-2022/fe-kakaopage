@@ -59,7 +59,8 @@
   border-bottom: 1px solid var(--main-bg-color);
 }
 
-.daily__top .select__day .day button {
+.daily__top .day__btn  {
+  width: 100%;
   font-size: 1.25rem;
   color: var(--non-focus-font-color);
 }
@@ -80,7 +81,7 @@
   background-color: var(--white-color);
 }
 
-.daily__select__day li button {
+.daily__select__day .day__btn {
   width: 48px;
   height: 48px;
   border-radius: 50%;
