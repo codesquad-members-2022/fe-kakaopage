@@ -22,6 +22,16 @@ const createCateNav = () => {
 </nav>`;
 
   insertIntoMain(cateNav);
+
+  $(".webtoon-category").addEventListener("click", (e) => {
+    const cateList = e.target.closest("ul").childNodes;
+    cateList.forEach((node) => {
+      if (node.nodeType === 1) {
+        node.classList.remove("text-color--black");
+      }
+    });
+    e.target.classList.add("text-color--black");
+  });
 };
 
 const createBanner = () => {
