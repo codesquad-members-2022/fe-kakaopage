@@ -2,6 +2,8 @@ import { createContentsSection } from "../components/contents-section.js";
 import { createEventListnerDayNav } from "../day-nav.js";
 import { createEventListnerGenreNav } from "../genre-nav.js";
 import { webtoonMain } from "../index.js"
+import romanceTopData from "../data/webtoon/home/romance-top.js";
+import { createContentVerticalSmall } from "../components/content-vertical-small.js";
 
 function renderWebtoonMain() {
     const mainContainer = document.querySelector('main .container');
@@ -20,6 +22,12 @@ function renderWebtoonMain() {
     sectionDatas.forEach(sectionData => {
         mainContainer.insertAdjacentHTML('beforeend', createContentsSection(sectionData));
     });
+
+    // 로맨스 TOP
+    const romanceTopSection = mainContainer.querySelector('#romance-top-section .contents-wrapper');
+    romanceTopData.forEach(data => {
+        romanceTopSection.insertAdjacentHTML('beforeend', createContentVerticalSmall(data));
+    })
 
     createEventListnerGenreNav();
     createEventListnerDayNav();

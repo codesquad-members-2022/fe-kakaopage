@@ -1,15 +1,4 @@
-function createContentVerticalSmall() {
-    const contentData = {
-        thumbnail: {
-            img: "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
-            caption: "1위"
-        },
-        description: {
-            title: "카카오짱",
-            readers: "100만명"
-        }
-    };
-
+function createContentVerticalSmall(contentData) {
     return `
     <a class="content-wrapper content-vertical-small" href="">
         <div class="thumbnail">
@@ -17,7 +6,7 @@ function createContentVerticalSmall() {
             <div class="thumbnail-caption">
                 <div>${contentData.thumbnail.caption}</div>
                     <div class="thumbnail-waitfree">
-                        <img src="/images/bmbadge_waitfree.svg" alt="">
+                        <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="">
                     </div>
             </div>
             </div>
