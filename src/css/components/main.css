@@ -46,37 +46,37 @@
 }
 
 /* main webtoons */
-.main__webtoons {
+.webtoons {
   padding: 10px 20px 10px 20px;
   flex-direction: column;
 }
 
-.wt {
+.webtoon__item {
   display: flex;
   margin-bottom: 15px;
 }
 
-.wt__image {
+.webtoon__image {
   width: 142px;
   height: 96px;
   border-radius: 10px;
 }
 
-.wt__discription {
+.webtoon__discription-box {
   margin-left: 10px;
 }
 
-.wt__discription > * {
+.webtoon__discription-box > * {
   margin-bottom: 10px;
 }
 
-.wt__discription > .title {
+.webtoon__title {
   margin-top: 10px;
   font-weight: 600;
 }
 
-.wt__discription > .summary,
-.wt__discription > .info {
+.webtoon__summary,
+.webtoon__info {
   font-size: 0.8rem;
   color: var(--color-dark-grey);
 }

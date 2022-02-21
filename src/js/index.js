@@ -1,11 +1,11 @@
 import { DATA_URL, $, CL } from './util.js';
 
 const $days = $('.day__list');
-const $webtoons = $('.webtoons');
+const $webtoons = $('.webtoon__list');
 const $webtoonsPromotion = $('.webtoons--promotion');
 const $navHeader = $('.gnb__list');
 const $navMain = $('.snb__list');
-const $mainBanner = $('.main-banner');
+const $mainBanner = $('.main-banner__poster');
 
 async function loadData(param) {
   const response = await fetch(DATA_URL);
@@ -20,12 +20,12 @@ function displayWebtoon(data, node) {
 
 function createWebtoonList(wt) {
   return `
-  <li class="wt">
-    <img class="wt__image" src="${wt.url}" alt="webtoon-image"/>
-    <div class="wt__discription">
-      <p class="title">${wt.title}</p>
-      <p class="summary">${wt.summary}</p>
-      <p class="info">${wt.info}</p>
+  <li class="webtoon__item">
+    <img class="webtoon__image" src="${wt.url}" alt="${wt.title}"/>
+    <div class="webtoon__discription-box">
+      <p class="webtoon__title">${wt.title}</p>
+      <p class="webtoon__summary">${wt.summary}</p>
+      <p class="webtoon__info">${wt.info}</p>
     </div>
   </li>
   `;
@@ -78,9 +78,9 @@ function displayBanner(url) {
   $mainBanner.innerHTML = createBannerImg(url);
 }
 
-// function createBannerImg(url) {
-//   return `<img src=${url} class="banner__img" alt="webtoon-image"/>`;
-// }
+function createBannerImg(url) {
+  return `<img src=${url} alt="main banner poster"/>`;
+}
 
 function setEventListenrToNavHeader(banner) {
   $navHeader.addEventListener('click', e => {

@@ -4,6 +4,7 @@
   height: 480px;
   position: relative;
   z-index: -1;
+  margin-bottom: 0;
 }
 
 .main-banner__item {
