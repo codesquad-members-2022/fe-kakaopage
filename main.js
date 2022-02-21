@@ -1,10 +1,8 @@
-import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon } from "./createPage.js";
+import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageInit, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon } from "./createPage.js";
 import { addClickEventToElement, addSelectedTo, addToContents, pickFromArr, randomView } from "./util.js";
 
 const main = () => {
-    addSelectedTo('.genre-nav-li')
-    addSelectedTo('.head-nav-li')
-    createPageHome();
+    createPageInit()
     addClickEventToElement('#genre-home', createPageHome)
     addClickEventToElement('#genre-daily', createPageDaily)
     addClickEventToElement('#genre-webtoon', createPageWebtoon)

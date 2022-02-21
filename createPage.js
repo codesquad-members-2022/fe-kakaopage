@@ -1,5 +1,12 @@
-import { createFormat0, createFormat10, createFormat11, createFormat12, createFormat1A, createFormat1B, createFormat2, createFormat3, createFormat4, createFormat5, createFormat6, createFormat7, createFormat8, createFormat9 } from "./format.js";
+import { createFormat0, createFormat10, createFormat11, createFormat12, createFormat1A, createFormat1B, createFormat2, createFormat3, createFormat4, createFormat5, createFormat6, createFormat7, createFormat8, createFormat9, createFormatInit } from "./format.js";
 import { addSelectedTo, addToContents, combineFormats, initPage } from "./util.js";
+
+export const createPageInit = () => {
+    document.body.innerHTML = createFormatInit()
+    addSelectedTo('.genre-nav-li')
+    addSelectedTo('.head-nav-li')
+    createPageHome();
+}
 
 export const createPageHome = () => {
     const formats = [

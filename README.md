@@ -10,3 +10,6 @@
 - navigation 클릭 시 css 주는 부분을 navigation 마다 효과가 달라서 어떻게 주는게 최선일지 고민 중
 - 요일 클릭 이벤트 부분
 - css이름이나 형식에서 중복 제거 등 리팩토링
+
+웹툰 메뉴는 template literal로 구현했으니
+추가 메뉴들은 createElement를 사용하여 구현
