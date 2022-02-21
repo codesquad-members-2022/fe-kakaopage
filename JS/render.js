@@ -1,5 +1,6 @@
 import {dailyTopData} from './data/scrape/dailyTop.js'
 import {dailyRankingData} from './data/scrape/dailyRanking.js'
+import {promotionBannerData} from './data/scrape/promotionBannerData.js'
 import {$, $all} from './utility.js'
 
 function renderContainer(selector, title, num, options) {
@@ -183,4 +184,77 @@ function makeMoveApp(selector) {
   return newList;
 }
 
-export {renderContainer, renderMoveApp}
+// ==================== Banner ====================
+// ========== banner__btns ==========
+function makeBannerBtns() {
+  const btnInfo = {
+    prev: {
+      class: 'banner__prev',
+      iconClass: 'fas fa-chevron-left'
+    },
+    next: {
+      class: 'banner__next',
+      iconClass: 'fas fa-chevron-right'
+    }
+  }
+
+  const newDiv = document.createElement("div");
+  newDiv.classList.add('banner__btns');
+
+  let innerHTML = '';
+  for (let i in btnInfo) {
+    innerHTML += `<button type="button" class="${btnInfo[i].class}"><i class="${btnInfo[i].iconClass}"></i>`
+  }
+
+  newDiv.innerHTML = innerHTML;
+
+  return newDiv;
+}
+
+// ========== promotionBanner ==========
+function renderPromotionBanner(focus) {
+  const main = $('.main');
+  const newDiv = makePromotionLayout(focus);
+  main.appendChild(newDiv);
+}
+
+function makePromotionLayout(focus) {
+  const newDiv = document.createElement('div');
+  newDiv.classList.add('promotion__banner');
+
+  const btns = makeBannerBtns();
+  const newList = makePromotionList(focus);
+
+  newDiv.appendChild(btns);
+  newDiv.appendChild(newList);
+
+  return newDiv;
+}
+
+function makePromotionList(focus) {
+  const newList = document.createElement("ul");
+  newList.classList.add('promotion__list');
+  makePromotionItem(newList, focus);
+  return newList;
+}
+
+function makePromotionItem(list, focus) {
+  const promotionData = promotionBannerData;
+
+  promotionData.forEach((el, index) => {
+    const item = document.createElement('li');
+
+    item.classList.add('promotion__item');
+    promotionData[index].genre === focus
+    ? item.classList.add('focused')
+    : item.classList.add('none')
+
+    item.innerHTML = `<a href="#">
+    <img src="${promotionData[index].img_url}" alt="${promotionData[index].img_alt}">
+  </a>`
+
+  list.appendChild(item);
+  });
+}
+
+export {renderContainer, renderPromotionBanner, renderMoveApp}
