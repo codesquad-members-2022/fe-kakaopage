@@ -337,6 +337,7 @@ header {
     font-weight: 400;
     font-size: 1.25rem;
     color: var(--color-light-gray);
+    flex: 1 1 auto;
 }
 
 .genre-tab__item--selected {
