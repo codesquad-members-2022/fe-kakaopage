@@ -2,7 +2,7 @@
 /* 메뉴 버튼 */
 .menubar_tag {
   margin-top: 15px;
-  background-color: rgb(227, 241, 253);
+  background-color: var(--main-color);
 }
 .menubar_tag button {
   width: calc(100% / 10);
@@ -80,20 +80,24 @@
 .advert {
   justify-content: center;
   align-items: center;
-  background-color: rgb(227, 241, 253);
+  background-color: var(--main-color);
 }
 .back {
+  top: 50%;
   left: 2%;
   font-size: var(--font-size-XL);
+  background-color: var(--white-color);
 }
 .soon {
+  top: 50%;
   right: 2%;
   font-size: var(--font-size-XL);
+  background-color: var(--white-color);
 }
 /* 공통된 섹션 */
 .section {
   flex-flow: row wrap;
-  background-color: rgb(227, 241, 253);
+  background-color: var(--main-color);
   padding: 10px 15px 0px 15px;
 }
 /* 소제목 및 더보기 */
@@ -145,10 +149,10 @@
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-XXS);
-  font-weight: bolder;
+  font-weight: var(--font-max-bold);
 }
 .info_top span {
-  color: red;
+  color: var(--red-color);
 }
 .info_top > div:nth-child(2) {
   padding-bottom: 10px;
@@ -195,7 +199,7 @@
   text-align: left;
 }
 .info_contents span {
-  color: red;
+  color: var(--red-color);
 }
 /* 일간 랭킹 */
 .ranking {
@@ -229,11 +233,12 @@
   margin-top: 20px;
 }
 .info_ranking span {
-  color: blue;
+  color: var(--blue-color);
 }
+/* 카카오페이지 바로가기 */
 .app_section {
   margin-top: 20px;
-  background-color: #f1c164;
+  background-color: var(--yellow-color);
 }
 .app_section img {
   margin: 0px auto;
