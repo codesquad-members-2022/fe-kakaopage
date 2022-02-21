@@ -1,5 +1,7 @@
 import todayData from '../data/webtoonData.js';
 
-makeTodayList(day) {
+// makeTodayList(day) {
+//   todayData.day
+// }
 
-}
+console.log(todayData.mon)
