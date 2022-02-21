@@ -12,7 +12,21 @@ const navigateTo = (url, categoryUid) => {
   render(categoryUid);
 };
 
+async function preRender(uid) {
+  const body = { uid };
+  const data = await fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  }).then((response) => response.json());
+  return data;
+}
+
 async function render(uid) {
+  const uidContent = await preRender(uid);
+  console.log(uidContent);
   const categoryUid = Number(uid);
   try {
     const selectedCategory = routes.find(
