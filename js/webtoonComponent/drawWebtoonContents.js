@@ -27,13 +27,13 @@ const createContentsContainer = (title) => {
 };
 
 // type = "normalCover", "bigCover", "smallCover", "wideCover"
-const drawWebtoonContents = (type, { webtoonArr, contentsTitle }) => {
+const drawWebtoonContents = ({ webtoonArr, coverType, contentsTitle }) => {
   const container = createContentsContainer(contentsTitle);
   const webtoonComponentContainer = container.querySelector(
     '.webtoon-component-container'
   );
   for (let i = 0; i < webtoonArr.length; i++) {
-    const webtoonEl = webtoonComponent(webtoonArr[i]);
+    const webtoonEl = webtoonComponent(coverType, webtoonArr[i]);
     webtoonComponentContainer.appendChild(webtoonEl);
   }
   const mainContainer = createMainContainer();
