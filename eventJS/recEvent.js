@@ -30,15 +30,21 @@ const changeMainSecWoD = (contentsChecker) => {
   const container = createMaincontainer("", "전체(test)");
 
   // 해당 요소의 자식을 삭제하는 함수 작성해보자
-  while (container.querySelector(".main--toggle--left").firstChild) {
+  while (container.querySelector(".main--toggle--left").firstChildElement) {
     container.removeChild(container.firstChild);
   }
 
-  const newToggleList = createEl(data);
+  data.toggleLeft.forEach((toggleinfo) => {
+    const newToggleList = createEl("li");
+    newToggleList.textContent = toggleinfo;
+    container.querySelector(".main--toggle--left").appendChild(newToggleList);
+  });
 
-  newToggleList.forEach((li) =>
-    container.querySelector(".main--toggle--left").appendChild(li)
-  );
+  data.toonData.forEach((tooninfo) => {
+    container
+      .querySelector(".main__cartoonZone")
+      .appendChild(createImgCard(tooninfo));
+  });
 
   $(".containEvery").appendChild(container);
   contentsChecker = "요일연재";
