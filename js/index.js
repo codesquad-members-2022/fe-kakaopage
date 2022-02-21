@@ -1,5 +1,6 @@
 import { createAdSlide } from "../components/adSlide/index.js";
 import { createBanner } from "../components/banner/index.js";
+import { createButton } from "../components/Button/index.js";
 import { createCategory } from "../components/category/index.js";
 import { createDayRankingTop } from "../components/dayRankingTop/index.js";
 import { createDayTop } from "../components/dayTop/index.js";
@@ -31,6 +32,7 @@ const boyTop = createGenreTop(GENRE_TOP.BOY);
 const actionTop = createGenreTop(GENRE_TOP.ACTION);
 const dayRankingTop = createDayRankingTop();
 const recommendEvent = createRecommendEvent();
+const button = createButton();
 
 $(".contents").insertAdjacentHTML("beforeend", category);
 $(".contents").insertAdjacentHTML("beforeend", largeBanner);
@@ -45,3 +47,4 @@ $(".contents").insertAdjacentHTML("beforeend", boyTop);
 $(".contents").insertAdjacentHTML("beforeend", actionTop);
 $(".contents").insertAdjacentHTML("beforeend", dayRankingTop);
 $(".contents").insertAdjacentHTML("beforeend", recommendEvent);
+$(".contents").insertAdjacentHTML("beforeend", button);
