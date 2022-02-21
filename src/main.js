@@ -1,14 +1,16 @@
 import todayData from '../data/webtoonData.js';
 import createDom from './createDOM.js';
 function makeTodayList(day) {
-  const todayList =  todayData[`${day}`].forEach((contentData, idx) => {
+  let todayList = ''; 
+  todayData[`${day}`].forEach((contentData, idx) => {
+    todayList += 
     `<a href="${contentData["link"]}" class="webtoon-content">
       <div class="webtoon-img">
         <div class="webtoon-img-1">
-          <img src="${contentData["imgUrl"]}">
+          <img src="${contentData["imgUrl"]}" class="webtoon-img-1">
         </div>
         <div class="webtoon-ranking-description">
-          <div class="ranking">${contentData["rank"]}</div>
+          <div class="ranking">${contentData["rank"] || contentData["grade"]}</div>
           <div class="ranking-logo">
             <img src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" class="ranking-logo">
           </div>
@@ -42,5 +44,9 @@ function makeTodayEvent(dayIdx) {
     webtoons.innerHTML = makeTodayList(day);
   });
 };
+
+
+
+
 
 export { makeTodayList, makeTodayEvent };
