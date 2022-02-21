@@ -1,24 +1,24 @@
 export function makeImageSection(list) {
-  console.log(list);
-
   return `
-  <section class="image_section">
+  <section class="image_section mg-t-20 pos-rel">
     <img src="${list.url}" / alt="${list.title}" 이미지">
-    <div class="image_text">
-      <h2 class="image_title">${list.title}</h2>
-      <span class="image_event">${list.status}</span>
+    <div class="back pos-abs">🔙</div>
+    <div class="soon pos-abs">🔜</div>
+    <div class="image_text pos-abs">
+    <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">${list.title}</h2>
+    <span class="image_event pd-5">${list.status}</span>
       <span class="image_span">🕔웹툰 |</span>
       <span class="image_span">👤${list.people}만명</span>
     </div>
-    <div class="image_footer">${list.message}</div>
+    <div class="image_footer pos-abs pd-10">${list.message}</div>
   </section>
   `;
 }
 
 export function makeMenu(list) {
   return `
-  <section class="menu_section">
-    <ul>
+  <section class="section dp-flex mg-t-20">
+  <ul class="menu_ul pd-10">
       <li class="menu_top_left">
         <span>${list.firstInfo} </span>
         <div>${list.firstSubInfo}</div>
@@ -47,11 +47,11 @@ export function makeMenu(list) {
 
 export function makeAdvert(list) {
   return `
-  <section class="advert">
+  <section class="advert dp-flex pos-rel mg-t-20 pd-20">
     <img src="${list.url}" / alt="${list.title} 광고 이미지"
     width="550" height="100">
-    <div class="back">🔙</div>
-    <div class="soon">🔜</div>
+    <div class="back pos-abs">🔙</div>
+    <div class="soon pos-abs">🔜</div>
 </section>
 `;
 }
@@ -59,7 +59,7 @@ export function makeAdvert(list) {
 export function makeDate(list) {
   return `
           <nav class="date">
-            <ul>
+          <ul class="dp-flex mg-b-10">
               <li>월</li>
               <li>화</li>
               <li>수</li>
@@ -75,8 +75,9 @@ export function makeDate(list) {
 
 export function makeTitle(list) {
   return `
-  <span class="section_title">${list.title}</span>
-  <span class="more_content">${list.contents}</span>
+  <span class="section_title txt-l mg-b-10 pd-10 width-50"
+  >${list.title}</span>
+  <span class="more_content pd-10 txt-r width-50">${list.contents}</span>
   `;
 }
 
@@ -87,41 +88,47 @@ export function addTag(list) {
   return '';
 }
 
+export function makeFiveWebtoon(list) {
+  return `
+  <div class="five_webtoon txt-l pos-rel">
+    <img src="${list.url}," / alt="${list.title} 이미지" width="110" height="110">
+    <span>${list.webtoonInfo}</span><span>🕔</span>
+    <div class="info_top">
+      <div>${list.title}</div>
+      <div><span>UP</span>👤${list.people}만명</div>
+    </div>
+  </div>
+  `;
+}
+
 export function makeNewThings(list) {
   return `
-    <div class="${list.className}">
+  <div class="new_thing pos-rel">
       <img src="${list.url}" / alt="${list.title} 이미지" width="310"
       height="220">
-      <div class="new_things_text">
-        <h3 class="new_things_title">${list.title}</h3>
-        <span class="new_things_new">New</span>
+      <div class="new_things_text pos-abs">
+      <h3 class="new_things_title txt-l">${list.title}</h3>
+      <span class="new_things_new txt-l mg-l-10">New</span>
         <span>웹툰 | 👤${list.people}</span>
       </div>
-      <div class="new_things_footer">${list.message}</div>
+      <div class="new_things_footer pos-abs">${list.message}</div>
     </div>
     `;
 }
 
-export function genreTop(list) {
-  return `
-    <div class="drama_top">
-      <img src="${list.url}" / alt="${list.title} 이미지" width="90" height="110">
-      <span>★</span><span>${list.grade}</span><span>🕔</span>
-      <div class="info_top">
-      <div>${list.title}</div>
-        <div><span>UP</span>👤${list.people}만명</div>
-      </div>
-    </div>`;
-}
-
 export function makeRanking(list) {
   return `
-  <div class="ranking_1st">
-    <div class="ranking_num">${list.rankingNum}</div>
+  <div class="ranking width-100 pos-rel mg-b-10">
+  <div class="ranking_num pos-abs mg-r-20">${list.rankingNum}</div>
     <img src="${list.url}" / alt="${list.title} 이미지"
     width="95" height="130">
-    <span class="time_icon">🕔</span>
-    <div class="info_ranking">
+    <img
+  src="./src/image/기다리면 무료.png"
+  alt="시계 이미지"
+  width="25"
+  height="25"
+/>
+<div class="info_ranking pos-abs">
       <div><span class="new_icon">${list.icon}</span>${list.title}</div>
       <div>👤${list.people}만명 |기다무 웹툰 | ${list.genre} | ${list.writer}</div>
       <div>${list.date} 연재</div>
@@ -133,19 +140,6 @@ export function makeEvent(list) {
   return `
   <img src="${list.url}" / alt="이벤트 이미지"
   width="615" height="330">`;
-}
-
-export function makeTodayRanking(list) {
-  return `
-  <div class="today_ranking">
-    <img src="${list.url}," / alt="${list.title} 이미지" width="110" height="110">
-    <span>${list.rankNum}</span><span>🕔</span>
-    <div class="info_top">
-      <div>${list.title}</div>
-      <div><span>UP</span>👤${list.people}만명</div>
-    </div>
-  </div>
-  `;
 }
 
 export function makeTodayWebtoon(list) {
@@ -161,76 +155,67 @@ export function makeTodayWebtoon(list) {
   `;
 }
 
-export function makeWebtoonInfo(url, title, explain, people, writer) {
-  return `
-  <div class="wait_contents">
-    <img src="${url}" / alt="${title} 이미지"
-    width="130" height="100">
-    <div class="info_contents">
-      <div><span>UP</span>${title}</div>
-      <div>${explain}</div>
-      <div>👤${people}만명 | ${writer}</div>
-    </div>
-</div>
-`;
-}
-
-export function makePromotion(url, title, explain, people, writer, info) {
-  return `
-  <div class="wait_contents">
-    <img src="${url}" / alt="${title} 이미지"
-    width="130" height="100">
-    <div class="info_promotion">
-      <div>${title}</div>
-      <div>${explain}</div>
-      <div>👤${people}만명 | ${writer}</div>
+export function makeWebtoonInfo(list) {
+  if (list.subImage === undefined) {
+    return `
+    <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+      <img src="${list.url}" / alt="${list.title} 이미지"
+      width="130" height="100">
+      <div class="info_contents pos-abs">
+        <div><span>UP</span>${list.title}</div>
+        <div>${list.explain}</div>
+        <div>👤${list.people}만명 | ${list.writer}</div>
       </div>
-      <div class = "plus_info">${info}</div>
-  </div>`;
-}
-
-export function makeClockImage(url, title, explain, people, writer) {
-  return `
-  <div class="wait_contents">
-    <img src="${url}" / alt="${title} 이미지"
+  </div>
+  `;
+  } else {
+    return `
+    <div class="wait_contents txt-l pos-rel width-100 mg-b-10">
+    <img src="${list.url}" / alt="${list.title} 이미지"
     width="130" height="100">
-    <div class="info_promotion">
-      <div>${title}</div>
-      <div>${explain}</div>
-      <div>👤${people}만명 | ${writer}</div>
+    <img src="${list.subImage}" / alt="시계 이미지"
+    width="25" height="25"</div>
+    <div class="info_contents pos-abs">
+      <div><span>${list.status} </span>${list.title}</div>
+      <div>${list.explain}</div>
+      <div>👤${list.people}만명 | ${list.writer}</div>
       </div>
-      <div class = "plus_info"><img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a / alt="시계 이미지"
-    width="20" height="20"</div>
-  </div>`;
+      </div>
+      `;
+  }
 }
 
-export function makeThreeMenu(liInfo1, liInfo2, liInfo3) {
+export function makeThreeMenu(list) {
   return `
-  <section class="menu_section">
-    <ul>
-      <li class="menu_top_left", class="menu_top_right">
-        <span>${liInfo1} </span>
+  <section class="section dp-flex mg-t-20">
+    <ul class="menu_ul mg-b-10">
+      <li class=" menu_border_left ">
+        <span>${list.infoLt} </span>
       </li>
       <li>
-        <span>${liInfo2} </span>
+        <span>${list.infoCnt} </span>
       </li>
-      <li class="menu_bottom_left", class="menu_bottom_right">
-        <span>${liInfo3}</span>
+      <li class="class= menu_border_right">
+        <span>${list.infoRgh}</span>
       </li>
     </ul>
   </section>`;
 }
 
-export function makeTodayRecommend(url, title, icon, people) {
+export function makeLongImageWebtoon(list) {
   return `
-  <div class="wait_contents">
-  <img src="${url}" / alt="${title} 이미지"
+  <div class="long_webtoon txt-l pos-rel mg-b-10">
+  <img src="${list.url}" / alt="${list.title} 이미지"
   width="140" height="200">
-  <div class="info_recommend">
-  <div>${title}</div>
-  <div><span>${icon}</span>👤${people}만명</div>
+  <img
+  src="./src/image/기다리면 무료.png"
+  alt="시계 이미지"
+  width="25"
+  height="25"
+/>
+<div class="info_long">
+  <div><span>${list.icon}</span>${list.title}</div>
+  <div>👤${list.people}만명</div>
   </div>
-    <div class = "plus_info"><img src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a / alt="시계 이미지"
-  width="20" height="20"</div>
 </div>`;
 }
