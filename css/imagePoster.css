@@ -44,6 +44,7 @@
     height: 26px;
     position: absolute;
     border-top-left-radius: 8px;
+    content: url("https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a");
 }
 
 .item__inner {
@@ -64,6 +65,10 @@
     width: 16px;
     height: 16px;
     margin-left: auto;
+}
+
+.item__inner_star {
+    content: url("https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac");
 }
 
 .image-poster__img {
@@ -91,3 +96,10 @@
     color: var(--color-pale-gray);
 }
 
+.width-small {
+    width: 120px;
+}
+
+.width-large {
+    width: 155px;
+}
