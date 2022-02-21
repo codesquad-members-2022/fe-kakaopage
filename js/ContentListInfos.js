@@ -31,8 +31,8 @@ export const ContentListInfos = {
         removeElement(recommendElement);
     },
     addWeeksComponent(menu) {
-        if(menu !== "요일연재") return;
-        return WeekListContainer(menu, dayofWeekObj);
+        if(+menu !== 2) return;
+        return WeekListContainer(rowListTitleObj.weeks, dayofWeekObj);
     },
     removeWeeksComponent() {
         const weeksElement = $(".weeks");

@@ -5,7 +5,7 @@ export const RowListContainer = (menuObj, contents) => {
     return /* html */ `<div class="rowList ${menuObj.name}">
                 ${TopicComponent(menuObj.title)}
                 <div class="rowList__inner">
-                    ${contents.length ? contents.reduce((prev, cur) => prev += ImagePosterComponent(menuObj.name, cur), '') : ''}
+                    ${contents.length ? contents.reduce((prev, cur) => prev += ImagePosterComponent(menuObj, cur), '') : ''}
                 </div>
             </div>`;
 }

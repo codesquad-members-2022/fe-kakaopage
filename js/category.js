@@ -9,7 +9,7 @@ export const category = {
                 this.removeLinkColor(categoryElement.children);
                 e.target.classList.add('main__nav_link_active');
                 // 각 메뉴에 맞게 컴포넌트 핸들링?
-                handleCategoryMenu(e.target.textContent);
+                handleCategoryMenu(e.target.dataset.id);
             }
         });
     },
