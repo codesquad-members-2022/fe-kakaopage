@@ -4,23 +4,11 @@ import webtoon from './webtoon.js';
 import boy from './boy.js';
 
 (function init() {
-  const $ = (selector) =>
-    document.querySelector(selector).addEventListener('click', changeUI);
-
-  $('.menubar_tag > button:nth-child(1)');
-  $('.menubar_tag > button:nth-child(2)');
-  $('.menubar_tag > button:nth-child(3)');
-  $('.menubar_tag > button:nth-child(4)');
-  $('.menubar_tag > button:nth-child(5)');
-  $('.menubar_tag > button:nth-child(6)');
-  $('.menubar_tag > button:nth-child(7)');
-  $('.menubar_tag > button:nth-child(8)');
-  $('.menubar_tag > button:nth-child(9)');
+  document.querySelector('.menubar_tag').addEventListener('click', changeUI);
 })();
 
 function changeUI(e) {
   const title = e.target.innerText;
-
   switch (title) {
     case '홈':
       home();
