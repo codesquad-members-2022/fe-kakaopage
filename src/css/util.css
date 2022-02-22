@@ -55,6 +55,10 @@
   height: 100%;
 }
 
+.h-11 {
+  height: 11px;
+}
+
 .h-15 {
   height: 15px;
 }
@@ -78,6 +82,10 @@
 
 .mg-l-20 {
   margin-left: 20px;
+}
+
+.mg-r-2 {
+  margin-right: 2px;
 }
 
 .mg-r-5 {
