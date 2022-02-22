@@ -14,3 +14,7 @@ export const getRandomString = ({ length }) => {
       .join("")
   );
 };
+
+export function $(selector) {
+  return document.querySelector(selector);
+}
