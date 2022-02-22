@@ -104,20 +104,20 @@
                     alt="event badge"
                   />
                 </div>
-                <div class="description__category flex-box">
+                <div class="description__category-box flex-box">
                   <img
                     src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
                     alt="clock icon"
                   />
-                  <span>웹툰</span>
+                  <span class="description__category">웹툰</span>
                 </div>
                 <div class="description__separator"></div>
-                <div class="description__view flex-box">
+                <div class="description__view-box flex-box">
                   <img
                     src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
                     alt="person icon"
                   />
-                  <span>20.4만명</span>
+                  <span class="description__view">20.4만명</span>
                 </div>
               </div>
             </div>
@@ -154,13 +154,25 @@
         </ul>
       </nav>
 
-      <div class="mainbox webtoons">
+      <div class="mainbox webtoon-box">
         <ul class="webtoon__list">
           <li class="webtoon__item">
-            <img class="webtoon__image" src="" alt="" />
+            <img
+              class="webtoon__image"
+              src="https://dn-img-page.kakao.com/download/resource?kid=bH1dTU/hzmU3e8xWG/I52O9I5Y2IpErVAge6ouC1"
+              alt=""
+            />
             <div class="webtoon__discription-box">
-              <p class="webtoon__title"></p>
-              <p class="webtoon__summary"></p>
+              <div class="webtoon__title-box">
+                <span class="webtoon__updated-badge">
+                  <img
+                    src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                    alt="updated badge"
+                  />
+                </span>
+                <p class="webtoon__title">밀리의 카카오페이지</p>
+              </div>
+              <p class="webtoon__summary">코드스쿼드 프론트엔드 2주차</p>
               <div class="webtoon__info">
                 <div class="webtoon__view-box">
                   <img
@@ -168,22 +180,54 @@
                     src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
                     alt="read icon"
                   />
-                  <span class="webtoon__view"></span>
+                  <span class="webtoon__view">3.5만명</span>
                 </div>
                 <div class="webtoon__separator"></div>
-                <span class="webtoon__author"></span>
+                <span class="webtoon__author">Millie</span>
               </div>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="mainbox webtoons promotion">
-        <div class="promotion__header">
-          <h3 class="promotion__title">🔥HOT 최근 프로모션 진행작</h3>
-          <button class="promotion__more"><a href="#">더보기 ></a></button>
+      <div class="mainbox webtoon-box promotion">
+        <div class="webtoon-box__header">
+          <h3 class="webtoon-box__title">🔥HOT 최근 프로모션 진행작</h3>
+          <button class="webtoon-box__more"><a href="#">더보기 ></a></button>
         </div>
-        <ul class="webtoon__list webtoons--promotion"></ul>
+        <ul class="webtoon__list">
+          <li class="webtoon__item">
+            <img
+              class="webtoon__image"
+              src="https://dn-img-page.kakao.com/download/resource?kid=bHG7gZ/hzmU3fbCeL/SAfNilKJsxhLb3cBJ2bpgk"
+              alt=""
+            />
+            <div class="webtoon__discription-box">
+              <div class="webtoon__title-box">
+                <span class="webtoon__updated-badge">
+                  <img
+                    src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                    alt="updated badge"
+                  />
+                </span>
+                <p class="webtoon__title">밀리의 카카오페이지</p>
+              </div>
+              <p class="webtoon__summary">코드스쿼드 프론트엔드 2주차</p>
+              <div class="webtoon__info">
+                <div class="webtoon__view-box">
+                  <img
+                    class="webtoon__view-img"
+                    src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+                    alt="read icon"
+                  />
+                  <span class="webtoon__view">99만명</span>
+                </div>
+                <div class="webtoon__separator"></div>
+                <span class="webtoon__author">Millie</span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="mainbox main-theme-box">
