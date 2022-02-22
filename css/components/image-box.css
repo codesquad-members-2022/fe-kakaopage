@@ -5,7 +5,6 @@
 .image-box-container__box {
   display: flex;
   width: 720px;
-  transform: translateX(-100%);
 }
 .image-box {
   width: 100%;
