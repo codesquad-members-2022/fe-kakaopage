@@ -1,4 +1,4 @@
-import { $get } from './utils.js';
+import { $get, getParams } from './utils.js';
 import { routes } from './router.js';
 import { ERROR } from './constants/message.js';
 import {
@@ -24,14 +24,13 @@ async function preRender(uid) {
   return data;
 }
 
-export async function render(uid = 0, subUid = 0) {
+export async function render() {
+  const { categoryUid, subCategoryUid } = getParams();
   const $mainLayout = $get(MAIN_LAYOUT);
-  const categoryUid = Number(uid);
-  const subCategoryUid = Number(subUid);
   // 우선 서버 동작 없이 mock데이터로 구현
   // const uidContent = await preRender(categoryUid);
   try {
-    const selectedCategory = routes.find(
+    const { category: selectedCategory } = routes.find(
       (route) => route.categoryUid === categoryUid
     );
     if (!selectedCategory) {
@@ -39,7 +38,9 @@ export async function render(uid = 0, subUid = 0) {
     }
     // mainlayout의 node를 지우고 새로 랜더링
     $mainLayout.innerHTML = ``;
-    const contentObj = await selectedCategory.getContent();
+
+    const contentObj = await selectedCategory(subCategoryUid);
+
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
       const $subLayout = document.createElement('article');

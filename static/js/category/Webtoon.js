@@ -1,3 +1,4 @@
+import { renderCarousel } from '../articles/carousel.js';
 import { renderSubCategory } from '../articles/subCategory.js';
 import { renderMainChildDOM } from '../utils.js';
 
@@ -14,9 +15,9 @@ const subCategoryIndexArr = [
   'BL',
 ];
 
-export const Webtoon = async () => {
+export const Webtoon = async (subCategoryUid) => {
   const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = `Webtoon`;
+  const carousel = renderCarousel(subCategoryUid);
   const eventBox = `Webtoon`;
   const evenCarouel = `Webtoon`;
   const mainContent = `Webtoon`;

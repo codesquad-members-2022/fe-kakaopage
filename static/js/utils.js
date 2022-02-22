@@ -10,8 +10,8 @@ export function $get(id) {
 export function getParams() {
   const urlParams = window.location.search;
   const params = new URLSearchParams(urlParams);
-  const categoryUid = params.get('categoryUid');
-  const subCategoryUid = params.get('subCategoryUid');
+  const categoryUid = Number(params.get('categoryUid'));
+  const subCategoryUid = Number(params.get('subCategoryUid'));
   return { categoryUid, subCategoryUid };
 }
 

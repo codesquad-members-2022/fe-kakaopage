@@ -16,7 +16,8 @@ const subCategoryIndexArr = [
   '단행본',
 ];
 
-export const Novel = async () => {
+export const Novel = async (subCategoryUid) => {
+  console.log(subCategoryUid);
   const subCategory = renderSubCategory(subCategoryIndexArr);
   const carousel = 'Novel';
   const eventBox = 'Novel';

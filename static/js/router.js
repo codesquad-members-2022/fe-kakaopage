@@ -7,26 +7,22 @@ import { getParams } from './utils.js';
 
 // 나머지 카테고리는 반복이어서 생략
 export const routes = [
-  { categoryUid: 0, getContent: Main },
-  { categoryUid: 1, getContent: Webtoon },
-  { categoryUid: 2, getContent: Novel },
+  { categoryUid: 0, category: Main },
+  { categoryUid: 1, category: Webtoon },
+  { categoryUid: 2, category: Novel },
 ];
 
-export function navigateTo(url, categoryUid, subCategoryUid) {
+export function navigateTo(url) {
   history.pushState(null, null, url);
-  render(categoryUid, subCategoryUid);
+  render();
 }
 
 export function handleClickNavigation(event, dataAttr, isSub = false) {
   event.preventDefault();
-  const { categoryUid, subCategoryUid } = getParams();
   if (event.target.matches(`[data-${dataAttr}]`)) {
-    const {
-      href,
-      dataset: { category, subCategory },
-    } = event.target;
+    const { href } = event.target;
     const targetLi = event.target.closest('li');
     handleTabActive(targetLi, isSub);
-    navigateTo(href, category || categoryUid, subCategory || subCategoryUid);
+    navigateTo(href);
   }
 }
