@@ -1,4 +1,4 @@
-import { renderSet } from './view.js';
+import { renderer } from './view.js';
 import { webtoonData } from '../data/data.js';
 
 /* Gnb 관련 */
@@ -45,8 +45,8 @@ const loadGnbTabContents = (tabName) => {
 };
 
 const loadWebToon = (category) => {
-  renderSet.renderSnb(webtoonData.category);
-  renderSet.renderCategoryContentWrap();
+  renderer.snb(webtoonData.category);
+  renderer.categoryContentWrap();
   addHandlerOnSnb();
   toggleSnbTabStyle(category);
   loadSnbTabContents(category);
@@ -82,7 +82,7 @@ const loadSnbTabContents = (category) => {
   categoryContentEl.innerHTML = '';
 
   const categoryData = webtoonData[category];
-  renderSet.renderMainBanner(categoryData.mainBanner);
+  renderer.mainBanner(categoryData.mainBanner);
 
   switch (category) {
     case '0':
@@ -113,43 +113,43 @@ const loadSnbTabContents = (category) => {
 };
 
 const loadWebtoonHome = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
-  renderSet.renderPromotionBanner(categoryData.promotionBanner);
-  renderSet.renderSectionBasic('기대신작 TOP');
-  renderSet.renderSectionBasic('로맨스 TOP');
-  renderSet.renderSectionBasic('로판 TOP');
-  renderSet.renderSectionBasic('드라마 TOP');
-  renderSet.renderSectionBasic('BL TOP');
-  renderSet.renderSectionBasic('소년 TOP');
-  renderSet.renderSectionBasic('액션무협 TOP');
-  renderSet.renderSectionBasic('일간 랭킹 TOP');
-  renderSet.renderSectionBasic('추천 이벤트 TOP');
+  renderer.gridMenu(categoryData.gridMenu);
+  renderer.promotionBanner(categoryData.promotionBanner);
+  renderer.sectionBasic('기대신작 TOP');
+  renderer.sectionBasic('로맨스 TOP');
+  renderer.sectionBasic('로판 TOP');
+  renderer.sectionBasic('드라마 TOP');
+  renderer.sectionBasic('BL TOP');
+  renderer.sectionBasic('소년 TOP');
+  renderer.sectionBasic('액션무협 TOP');
+  renderer.sectionBasic('일간 랭킹 TOP');
+  renderer.sectionBasic('추천 이벤트 TOP');
 };
 
 const loadWebtoonDailySeries = (categoryData) => {};
 
 const loadWebtoonBoy = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 const loadWebtoonDrama = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 const loadWebtoonRomance = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 const loadWebtoonRomanceFantasy = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 const loadWebtoonAction = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 const loadWebtoonBl = (categoryData) => {
-  renderSet.renderGridMenu(categoryData.gridMenu);
+  renderer.gridMenu(categoryData.gridMenu);
 };
 
 export { addHandlerOnGnb, loadGnbTab };

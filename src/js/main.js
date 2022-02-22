@@ -1,10 +1,10 @@
-import { renderSet } from './view.js';
+import { renderer } from './view.js';
 import { addHandlerOnGnb, loadGnbTab } from './handler.js';
 
 const init = () => {
-  renderSet.renderHeader();
-  renderSet.renderFooter();
-  renderSet.renderGnb();
+  renderer.header();
+  renderer.footer();
+  renderer.gnb();
   addHandlerOnGnb();
   loadGnbTab('홈');
 };
