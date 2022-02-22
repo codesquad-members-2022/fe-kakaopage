@@ -12,18 +12,14 @@ function createEventListenerMenu(){
     };
 
     const menu = document.querySelector('.menu-nav');
-    const menuItems = menu.querySelectorAll('.menu-nav__item');
-
-    menuItems.forEach(item => {
-        const itemButton = item.querySelector('button');
-        itemButton.addEventListener('click', () => {
-            const itemSelected = menu.querySelector('.menu-nav__item--selected');
-            if (itemSelected !== null) {
-                itemSelected.classList.remove('menu-nav__item--selected');
-            }
-            item.classList.add('menu-nav__item--selected');
-            mainHTMLs[itemButton.value]();
-        });
+    menu.addEventListener('click', (e) => {
+        const menuItem = e.target.closest('li');
+        const itemSelected = menu.querySelector('.menu-nav__item--selected');
+        if (itemSelected !== null) {
+            itemSelected.classList.remove('menu-nav__item--selected');
+        }
+        menuItem.classList.add('menu-nav__item--selected');
+        mainHTMLs[menuItem.dataset.label]();
     });
 };
 

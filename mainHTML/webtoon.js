@@ -30,6 +30,7 @@ function renderWebtoonMain() {
         romanceTopWrapper.appendChild(createContentVerticalSmall(data));
     });
     createEventListnerGenreNav();
+    console.log('render webtoon');
 }
 
 export { renderWebtoonMain };
