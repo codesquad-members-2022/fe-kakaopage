@@ -6,4 +6,8 @@ const convertStringToHTML = (string) => {
   return div.firstElementChild;
 }
 
-export { $, convertStringToHTML };
+const convertReader = (reader) => {
+  return `${reader / 10000}만명`;
+}
+
+export { $, convertStringToHTML, convertReader };

@@ -1,3 +1,5 @@
+import { convertReader } from '../../utils.js';
+
 const BannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
   return `<li class="banner">
             <a href="${link}">
@@ -7,7 +9,7 @@ const BannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link })
                 <div>
                   <span class="badge">${bannerBadge}</span>
                   <span class="genre">웹툰</span>
-                  <span class="reader">${webtoonInfo.readers}</span>
+                  <span class="reader">${convertReader(webtoonInfo.readers)}</span>
                 </div>
               </div>
               <p class="banner-text">${bannerText}</p>
