@@ -1,9 +1,8 @@
-import { $ } from "../utils.js";
+import { $, getToday } from "../utils.js";
 import { frameHeader } from "../components/frame-header.js";
 import { dowNav } from "../components/dow-nav.js";
 import { dowTopWebtoons } from "../fixing-webtoons.js";
 import { webtoonCard } from "../components/webtoon-card.js";
-import { getToday } from "../getting-today.js";
 
 const dowTopContents = (selectedValue) => {
   const contents = dowTopWebtoons

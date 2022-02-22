@@ -1,4 +1,4 @@
-import { getToday } from "./getting-today.js";
+import { getToday } from "./utils.js";
 
 const renderingNav = (selectedNav, selectedElement) => {
   document.querySelectorAll(`.${selectedNav} li`).forEach((e) => {
