@@ -34,6 +34,14 @@ function showWebtoon(event){
     makeHtml(dayWebToonData);
 }
 
+function makeHtml(dayWebToonData){
+    
+    // const webtoonCardTemplate = dayWebToonData.map(e=>webtoonCard(e)).reduce((acc,cur)=>acc+cur,"");
+    const webtoonCardTemplate = dayWebToonData.reduce((acc,cur) => acc+webtoonCard(cur),"");
+    document.querySelector('.webtoon_list ul').innerHTML = webtoonCardTemplate;
+}
 
 mainCategory.addEventListener("click",mainContent);
 weekCategory.addEventListener("click",getDay);
+
+
