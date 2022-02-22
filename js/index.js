@@ -67,7 +67,7 @@ const bindSubMenuEvent = () => {
         // 서브메뉴 active 클래스 토글
         toggleClass(curEl, "active");
         // 커버이미지란 변경
-        changeCoverImg(targetPage);
+        // changeCoverImg(targetPage);
 
         if (targetPage === "홈") {
             renderHome();
