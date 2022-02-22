@@ -1,3 +1,18 @@
+const imgs = [
+  {
+    src: "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+    alt: "이벤트",
+  },
+  {
+    src: "https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858",
+    alt: "기다무",
+  },
+  {
+    src: "https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e",
+    alt: "조회수",
+  },
+];
+
 const carouselInfo = [
   {
     img: "//dn-img-page.kakao.com/download/resource?kid=WOEgA/hzmU0Jxe7C/mbKCTR9na3asOM5IfnhJv1",
@@ -523,4 +538,4 @@ const info = [
   ],
 ];
 
-export { carouselInfo, info };
+export { imgs, carouselInfo, info };
