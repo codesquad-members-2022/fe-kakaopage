@@ -5,7 +5,11 @@ import { DEFAULT_GENRE_INDEX } from "../constant.js";
 const genreTab = document.querySelector('.genre-tab');
 
 const renderGenreTab = (currPage) => {
-    if (currPage === 'home') genreTab.classList.add('earse');
+    if (currPage === 'home') {
+        genreTab.classList.add('erase');
+        return;
+    }
+    genreTab.classList.remove('erase');
     genreTab.innerHTML = getTemplate(currPage);
     setDefault(genreTab);
 }
