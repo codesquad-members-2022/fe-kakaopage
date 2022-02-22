@@ -2,3 +2,7 @@
   /* border-bottom: 4px solid var(--main-yellow); */
   box-shadow: inset 0px -4px 0px var(--main-yellow);
 }
+
+.sub-category-active {
+  color: var(--main-black);
+}

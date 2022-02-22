@@ -1,7 +1,7 @@
 @import './reset.css';
-@import './event.css';
 @import './header/layout.css';
 @import './main/layout.css';
+@import './event.css';
 
 :root {
   --main-black: #333333;
