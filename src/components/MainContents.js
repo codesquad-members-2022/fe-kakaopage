@@ -1,4 +1,4 @@
-import { MainNav, DailySeriesRanking, MainBanner, CategoryMenu, SubBanner, GenreTop } from './index.js';
+import { MainNav, DailySeriesRanking, MainBanner, CategoryMenu, SubBanner, GenreTop, AnticipatedWork } from './index.js';
 import { Categories } from '../data';
 
 const MainContents = () => {
@@ -9,6 +9,7 @@ const MainContents = () => {
             ${CategoryMenu(Categories.home)}
             ${SubBanner()}
             ${DailySeriesRanking()}
+            ${AnticipatedWork()}
             ${GenreTop('로맨스')}
             ${GenreTop('로판')}
             ${GenreTop('드라마')}

@@ -14,7 +14,7 @@ const GenreTop = (genre) => {
 
   return `<section class="contents" data-genre="${genre}">
             ${ContentsHeader(title)}
-            ${ContentsList(filteredWebtoon())}
+            ${ContentsList('small', filteredWebtoon())}
           </section>`;
 };
 
