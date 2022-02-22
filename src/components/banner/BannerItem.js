@@ -1,4 +1,4 @@
-const MainBannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
+const BannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
   return `<li class="banner">
             <a href="${link}">
               <img src="${bannerImage}" alt="${webtoonInfo.title}" />
@@ -15,4 +15,4 @@ const MainBannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, lin
           </li>`
 }
 
-export default MainBannerItem;
+export default BannerItem;

@@ -7,7 +7,7 @@ import SmallImgContainer from './contentsList/SmallImgContainer.js';
 import ContentsListItem from './contentsList/ContentsListItem.js';
 import ContentsList from './contentsList/ContentsList.js';
 import DailySeriesRanking from './section/DailySeriesRanking.js';
-import MainBannerItem from './banner/MainBannerItem.js';
+import BannerItem from './banner/BannerItem.js';
 import BannerList from './banner/BannerList.js';
 import MainBanner from './section/MainBanner.js';
 import MenuListItem from './categoryMenu/MenuListItem.js';
@@ -16,6 +16,7 @@ import CategoryMenu from './section/CategoryMenu.js';
 import SubBannerItem from './banner/SubBannerItem.js';
 import SubBanner from './section/SubBanner.js';
 import GenreTop from './section/GenreTop.js';
+import AnticipatedWork from './section/AnticipatedWork.js';
 
 export {
   Nav,
@@ -27,7 +28,7 @@ export {
   ContentsListItem,
   ContentsList,
   DailySeriesRanking,
-  MainBannerItem,
+  BannerItem,
   BannerList,
   MainBanner,
   MenuListItem,
@@ -36,4 +37,5 @@ export {
   SubBannerItem,
   SubBanner,
   GenreTop,
+  AnticipatedWork,
 };

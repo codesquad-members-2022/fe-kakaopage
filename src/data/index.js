@@ -3,6 +3,7 @@ import Webtoons from './webtoons.js';
 import MainBanners from './mainBanners.js';
 import Categories from './categories.js';
 import SubBanners from './subBanners.js';
+import AnticipatedWorks from './anticipatedWorks.js';
 
 export {
   MainNavItems,
@@ -11,4 +12,5 @@ export {
   MainBanners,
   Categories,
   SubBanners,
+  AnticipatedWorks,
 };
