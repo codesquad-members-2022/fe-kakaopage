@@ -1,5 +1,5 @@
 import {containerInfo} from './data/containerInfoData.js'
-import {renderMain, renderDaily} from './render.js'
+import {renderHome, renderDaily} from './render.js'
 import {$, $all} from './utility.js'
 
 function setFocus(target, className) {
@@ -33,8 +33,8 @@ function moveGenreNav(target) {
   switch (target.dataset.nav) {
     case 'home':
       resetMain();
-      renderMain('홈', containerInfo, 'reRender');
-      eventMain();
+      renderHome('홈', containerInfo, 'reRender');
+      eventHome();
       break;
     case 'daily':
       resetMain();
@@ -91,16 +91,16 @@ function clickPromotionBanner() {
   })
 }
 
-function eventMain() {
+function eventHome() {
   clickGenresList();
   clickPromotionBanner();
   clickDailyTopList();
 }
 
-function loadMain() {
-  renderMain('홈', containerInfo, 'firstRender');
-  eventMain()
+function loadHome() {
+  renderHome('홈', containerInfo, 'firstRender');
+  eventHome();
 }
 
-window.addEventListener('load', loadMain);
+window.addEventListener('load', loadHome);
 
