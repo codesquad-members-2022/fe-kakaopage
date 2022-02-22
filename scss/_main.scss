@@ -35,11 +35,13 @@
 }
 
 .webtoon-slide {
+  position: relative;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .webtoon-slide__img {
-  position: relative;
+  display: flex;
   cursor: pointer;
 
   .webtoon-slide__banner {
@@ -102,6 +104,7 @@
 .slide-desc__item--desc {
   margin-left: 5px;
 }
+
 .slide-desc__item {
   margin-right: 10px;
 }
