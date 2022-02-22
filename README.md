@@ -1,29 +1,4 @@
-#### Flexbox 사용법
-
-#### commit 로그를 작성하는 좋은 사례
-
-#### HTML 시멘틱 태그
-
-#### 웹접근성
-
-### 고민중...
-
-컴포넌트를 재사용 할때마다 style 태그가 추가적으로 중복되어 생성됩니다.
-파라미터를 통해서 컴포넌트의 style을 다르게 지정해주고 싶습니다.
-
-그래서,
-
-클래스의 이름을 **동일**하게 지정해주던 방법
-➡
-클래스의 이름을 **무작위**로 지정해주는 방법
-
-으로 수정하였습니다.
-
-## TODO
-
-### 할 말
-
-- 각 컴포넌트의 margin으로 간격 조정 ➡ 컨테이너의 wrap 속성으로 간격 조정
+### TODO
 
 - [ ] before, after 활용
 - [x] 함수로 HTML 생성
@@ -31,8 +6,6 @@
 - [x] CSS 컴포넌트 내에서 적용
 - [ ] CSS 네이밍 리팩토링(진행중)
 - [ ] 컴포넌트 생성
-  - [ ] header
-  - [ ] navigation
   - [x] adSlide
   - [x] banner
   - [x] box
@@ -44,5 +17,147 @@
   - [x] 각 장르 TOP
   - [x] 일간 랭킹 TOP
     - [ ] 일간 랭킹 TOP 컴포넌트 나누기
-  - [ ] 추천 이벤트
-  - [ ] footer
+  - [x] 추천 이벤트
+- [x] GNB 탭 이동
+- [ ] 웹툰 탭의 SNB 탭 이동
+- [ ] 배너 슬라이더 이동
+- [ ] 요일 연재 TOP 탭 이동
+
+### 폴더 구조
+
+```
+│  index.html
+│  README.md
+│
+├─components
+│  ├─adSlide
+│  │      index.js
+│  │
+│  ├─banner
+│  │      index.js
+│  │
+│  ├─box
+│  │      index.js
+│  │
+│  ├─Button
+│  │      index.js
+│  │
+│  ├─category
+│  │      index.js
+│  │
+│  ├─dayRankingTop
+│  │      index.js
+│  │
+│  ├─dayTop
+│  │      index.js
+│  │
+│  ├─footer
+│  │      index.js
+│  │
+│  ├─genreTop
+│  │      index.js
+│  │
+│  ├─newTop
+│  │      index.js
+│  │
+│  ├─recommend
+│  │      index.js
+│  │
+│  ├─recommendEvent
+│  │      index.js
+│  │
+│  └─workSmall
+│          index.js
+│
+├─css
+│      common.css
+│      style.css
+│
+└─js
+        constants.js
+        event.js
+        handler.js
+        index.js
+        render.js
+        utils.js
+```
+
+### 고민중...
+
+#### style 태그의 중복
+
+1. 컴포넌트를 재사용 할때마다 style 태그를 중복해서 생성합니다.
+1. 파라미터를 통해서 컴포넌트의 style을 다르게 지정해주고 싶습니다.
+
+그래서,
+
+클래스의 이름을 **동일**하게 지정해주던 방법
+➡
+클래스의 이름을 **무작위**로 지정해주는 방법
+
+으로 수정하였습니다.
+
+그러나, 동일한 스타일의 컴포넌트를 재사용할 경우에는,
+
+클래스 이름만 다르고 내부 코드는 동일한 **중복된** CSS 클래스를 생성합니다.
+
+```js
+export function createBanner({ size, title, status, type, views, ad }) {
+  return `
+  <style>${getStyle(size)}</style>
+  <div class="${banner}">
+    <div class="${list}">
+      <div class="${img}"></div>
+      <div class="banner-info col">
+        <div class="${bannerTitle}">${title}</div>
+        <div class="banner-category row">
+          <div class="${container} row">
+            <div class="${icon}"></div>
+            <div class="${icon2}"></div>
+            <div class="${category}">${type}</div>
+            <div class="${blockIcon}"></div>
+            <div class="${viewIcon}"></div>
+            <div class="${viewsNumber}">${views}만명</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="${description}">
+      <div class="${text}">${ad}</div>
+    </div>
+  </div>`;
+}
+```
+
+#### 탭 이동을 어떻게 구현할지
+
+- 추상화한 HTML
+
+```html
+<body>
+  <header></header>
+  <nav class="GNB">홈 웹툰 웹소설 영화 방송 책</nav>
+  <div class="contents">
+    <nav class="SNB">홈 요일연재 웹툰 소년 드라마 로맨스 로판 액션무협 BL</nav>
+    <!-- ... -->
+  </div>
+  <footer></footer>
+</body>
+```
+
+1. contents에 innerHTML 메소드를 활용하여 DOM 교체
+2. 모든 탭을 미리 그려놓고 display: none 으로 숨겨놓기
+   - 페이지의 매우 크다면 문제가 될 것 같기는 한데 그 적정선은 어디일까?
+
+- 위의 2가지 방법 이외에도 다른 방법이 있을까?
+- 지난 주 PR 훑어보고 공통적인 피드백 적용하기.
+
+### 학습 정리
+
+#### Flexbox 사용법
+
+#### commit 로그를 작성하는 좋은 사례
+
+#### HTML 시멘틱 태그
+
+#### 웹접근성
