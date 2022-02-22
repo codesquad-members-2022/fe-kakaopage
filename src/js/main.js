@@ -9,4 +9,4 @@ const init = () => {
   loadGnbTab('홈');
 };
 
-init();
+window.addEventListener('DOMContentLoaded', init);
