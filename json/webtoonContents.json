@@ -5,7 +5,7 @@
       "contentsTitle": "로맨스 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/유리의성.png",
+          "coverSrc": "./assets/data/cover/유리의성.png",
           "score": 9.7,
           "title": "유리의 성",
           "state": "new",
@@ -16,7 +16,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/유리의성.png",
+          "coverSrc": "./assets/data/cover/유리의성.png",
           "score": 9.8,
           "title": "유리의 성",
           "state": "new",
@@ -27,7 +27,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/유리의성.png",
+          "coverSrc": "./assets/data/cover/유리의성.png",
           "score": 9.9,
           "title": "유리의 성",
           "state": "new",
@@ -38,7 +38,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/유리의성.png",
+          "coverSrc": "./assets/data/cover/유리의성.png",
           "score": 9.6,
           "title": "유리의 성",
           "state": "update",
@@ -49,7 +49,7 @@
           "days": ["월"]
         },
         {
-          "coverSrc": "./data/cover/유리의성.png",
+          "coverSrc": "./assets/data/cover/유리의성.png",
           "score": 9.5,
           "title": "유리의 성",
           "state": "update",
@@ -67,7 +67,7 @@
       "coverType": "normal",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 1,
           "score": 9.7,
           "title": "뒤끝작렬",
@@ -79,7 +79,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 2,
           "score": 9.8,
           "title": "뒤끝작렬",
@@ -91,7 +91,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 3,
           "score": 9.9,
           "title": "뒤끝작렬",
@@ -103,7 +103,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 4,
           "score": 9.6,
           "title": "뒤끝작렬",
@@ -115,7 +115,7 @@
           "days": ["월"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 5,
           "score": 9.5,
           "title": "뒤끝작렬",
@@ -127,7 +127,7 @@
           "days": ["화"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 6,
           "score": 9.1,
           "title": "뒤끝작렬",
@@ -139,7 +139,7 @@
           "days": ["화"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 7,
           "score": 8.6,
           "title": "뒤끝작렬",
@@ -151,7 +151,7 @@
           "days": ["화"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 8,
           "score": 9.2,
           "title": "뒤끝작렬",
@@ -163,7 +163,7 @@
           "days": ["화"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 9,
           "score": 8.3,
           "title": "뒤끝작렬",
@@ -175,7 +175,7 @@
           "days": ["화"]
         },
         {
-          "coverSrc": "./data/cover/뒤끝작렬.png",
+          "coverSrc": "./assets/data/cover/뒤끝작렬.png",
           "ranking": 10,
           "score": 9.4,
           "title": "뒤끝작렬",
@@ -195,7 +195,7 @@
       "contentsTitle": "🔥HOT 최근 프로모션 진행작",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/나혼자만레벨업.png",
+          "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
           "score": 9.7,
           "title": "나 혼자만 레벨업",
           "state": "new",
@@ -206,7 +206,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/나혼자만레벨업.png",
+          "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
           "score": 9.8,
           "title": "나 혼자만 레벨업",
           "state": "update",
@@ -216,7 +216,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/나혼자만레벨업.png",
+          "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
           "score": 9.9,
           "title": "나 혼자만 레벨업",
           "state": "new",
@@ -235,7 +235,7 @@
       "contentsTitle": "오늘의 추천",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/8클래스마법사.png",
+          "coverSrc": "./assets/data/cover/8클래스마법사.png",
           "ranking": 1,
           "score": 9.7,
           "title": "8클래스 마법사",
@@ -246,7 +246,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/8클래스마법사.png",
+          "coverSrc": "./assets/data/cover/8클래스마법사.png",
           "ranking": 2,
           "score": 9.8,
           "title": "8클래스 마법사",
@@ -257,7 +257,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/8클래스마법사.png",
+          "coverSrc": "./assets/data/cover/8클래스마법사.png",
           "ranking": 3,
           "score": 9.9,
           "title": "8클래스 마법사",
@@ -269,7 +269,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/8클래스마법사.png",
+          "coverSrc": "./assets/data/cover/8클래스마법사.png",
           "ranking": 4,
           "score": 9.6,
           "title": "8클래스 마법사",
@@ -287,7 +287,7 @@
       "contentsTitle": "일간 소년 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/독고3.png",
+          "coverSrc": "./assets/data/cover/독고3.png",
           "score": 9.7,
           "ranking": 1,
           "title": "독고3 [완전판]",
@@ -299,7 +299,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/독고3.png",
+          "coverSrc": "./assets/data/cover/독고3.png",
           "score": 9.8,
           "ranking": 2,
           "title": "독고3 [완전판]",
@@ -310,7 +310,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/독고3.png",
+          "coverSrc": "./assets/data/cover/독고3.png",
           "score": 9.9,
           "ranking": 3,
           "title": "독고3 [완전판]",
@@ -330,7 +330,7 @@
       "contentsTitle": "오늘의 추천!",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/샤크.png",
+          "coverSrc": "./assets/data/cover/샤크.png",
           "ranking": 1,
           "score": 9.7,
           "title": "샤크",
@@ -341,7 +341,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/샤크.png",
+          "coverSrc": "./assets/data/cover/샤크.png",
           "ranking": 2,
           "score": 9.8,
           "title": "샤크",
@@ -352,7 +352,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/샤크.png",
+          "coverSrc": "./assets/data/cover/샤크.png",
           "ranking": 3,
           "score": 9.9,
           "title": "샤크",
@@ -364,7 +364,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/샤크.png",
+          "coverSrc": "./assets/data/cover/샤크.png",
           "ranking": 4,
           "score": 9.6,
           "title": "샤크",
@@ -382,7 +382,7 @@
       "contentsTitle": "일간 드라마 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/세화.png",
+          "coverSrc": "./assets/data/cover/세화.png",
           "score": 9.7,
           "ranking": 1,
           "title": "세화, 가는 길",
@@ -394,7 +394,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/세화.png",
+          "coverSrc": "./assets/data/cover/세화.png",
           "score": 9.8,
           "ranking": 2,
           "title": "세화, 가는 길",
@@ -405,7 +405,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/세화.png",
+          "coverSrc": "./assets/data/cover/세화.png",
           "score": 9.9,
           "ranking": 3,
           "title": "세화, 가는 길",
@@ -425,7 +425,7 @@
       "contentsTitle": "오늘의 추천!",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/환골탈태.png",
+          "coverSrc": "./assets/data/cover/환골탈태.png",
           "ranking": 1,
           "score": 9.7,
           "title": "환골탈태",
@@ -436,7 +436,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/환골탈태.png",
+          "coverSrc": "./assets/data/cover/환골탈태.png",
           "ranking": 2,
           "score": 9.8,
           "title": "환골탈태",
@@ -447,7 +447,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/환골탈태.png",
+          "coverSrc": "./assets/data/cover/환골탈태.png",
           "ranking": 3,
           "score": 9.9,
           "title": "환골탈태",
@@ -459,7 +459,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/환골탈태.png",
+          "coverSrc": "./assets/data/cover/환골탈태.png",
           "ranking": 4,
           "score": 9.6,
           "title": "환골탈태",
@@ -477,7 +477,7 @@
       "contentsTitle": "일간 드라마 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/사내맞선.png",
+          "coverSrc": "./assets/data/cover/사내맞선.png",
           "score": 9.7,
           "ranking": 1,
           "title": "사내 맞선",
@@ -489,7 +489,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/사내맞선.png",
+          "coverSrc": "./assets/data/cover/사내맞선.png",
           "score": 9.8,
           "ranking": 2,
           "title": "사내 맞선",
@@ -500,7 +500,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/사내맞선.png",
+          "coverSrc": "./assets/data/cover/사내맞선.png",
           "score": 9.9,
           "ranking": 3,
           "title": "사내 맞선",
@@ -520,7 +520,7 @@
       "contentsTitle": "오늘의 추천!!",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/롱리브더킹.png",
+          "coverSrc": "./assets/data/cover/롱리브더킹.png",
           "ranking": 1,
           "score": 9.7,
           "title": "롱리브더킹",
@@ -531,7 +531,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/롱리브더킹.png",
+          "coverSrc": "./assets/data/cover/롱리브더킹.png",
           "ranking": 2,
           "score": 9.8,
           "title": "롱리브더킹",
@@ -542,7 +542,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/롱리브더킹.png",
+          "coverSrc": "./assets/data/cover/롱리브더킹.png",
           "ranking": 3,
           "score": 9.9,
           "title": "롱리브더킹",
@@ -554,7 +554,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/롱리브더킹.png",
+          "coverSrc": "./assets/data/cover/롱리브더킹.png",
           "ranking": 4,
           "score": 9.6,
           "title": "롱리브더킹",
@@ -572,7 +572,7 @@
       "contentsTitle": "일간 액션/무협 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/압도적그대.png",
+          "coverSrc": "./assets/data/cover/압도적그대.png",
           "score": 9.7,
           "ranking": 1,
           "title": "압도적 그대",
@@ -584,7 +584,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/압도적그대.png",
+          "coverSrc": "./assets/data/cover/압도적그대.png",
           "score": 9.8,
           "ranking": 2,
           "title": "압도적 그대",
@@ -595,7 +595,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/압도적그대.png",
+          "coverSrc": "./assets/data/cover/압도적그대.png",
           "score": 9.9,
           "ranking": 3,
           "title": "압도적 그대",
@@ -615,7 +615,7 @@
       "contentsTitle": "오늘의 추천!!",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/니니툰즈.png",
+          "coverSrc": "./assets/data/cover/니니툰즈.png",
           "ranking": 1,
           "score": 9.7,
           "title": "니니툰즈",
@@ -626,7 +626,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/니니툰즈.png",
+          "coverSrc": "./assets/data/cover/니니툰즈.png",
           "ranking": 2,
           "score": 9.8,
           "title": "니니툰즈",
@@ -637,7 +637,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/니니툰즈.png",
+          "coverSrc": "./assets/data/cover/니니툰즈.png",
           "ranking": 3,
           "score": 9.9,
           "title": "니니툰즈",
@@ -649,7 +649,7 @@
           "days": ["화", "목"]
         },
         {
-          "coverSrc": "./data/cover/니니툰즈.png",
+          "coverSrc": "./assets/data/cover/니니툰즈.png",
           "ranking": 4,
           "score": 9.6,
           "title": "니니툰즈",
@@ -667,7 +667,7 @@
       "contentsTitle": "일간 액션/무협 TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/묵향.png",
+          "coverSrc": "./assets/data/cover/묵향.png",
           "score": 9.7,
           "ranking": 1,
           "title": "묵향 다크레이디",
@@ -679,7 +679,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/묵향.png",
+          "coverSrc": "./assets/data/cover/묵향.png",
           "score": 9.8,
           "ranking": 2,
           "title": "묵향 다크레이디",
@@ -690,7 +690,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/묵향.png",
+          "coverSrc": "./assets/data/cover/묵향.png",
           "score": 9.9,
           "ranking": 3,
           "title": "묵향 다크레이디",
@@ -710,7 +710,7 @@
       "contentsTitle": "오늘의 추천~",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/뽑기로강해진.png",
+          "coverSrc": "./assets/data/cover/뽑기로강해진.png",
           "ranking": 1,
           "score": 9.7,
           "title": "뽑기로 강해진 SSS급 헌터",
@@ -721,7 +721,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/뽑기로강해진.png",
+          "coverSrc": "./assets/data/cover/뽑기로강해진.png",
           "ranking": 2,
           "score": 9.8,
           "title": "뽑기로 강해진 SSS급 헌터",
@@ -738,7 +738,7 @@
       "contentsTitle": "일간 BL TOP",
       "webtoonArr": [
         {
-          "coverSrc": "./data/cover/죽음대신결혼.png",
+          "coverSrc": "./assets/data/cover/죽음대신결혼.png",
           "score": 9.7,
           "ranking": 1,
           "title": "죽음 대신 결혼",
@@ -750,7 +750,7 @@
           "days": ["수", "목"]
         },
         {
-          "coverSrc": "./data/cover/죽음대신결혼.png",
+          "coverSrc": "./assets/data/cover/죽음대신결혼.png",
           "score": 9.8,
           "ranking": 2,
           "title": "죽음 대신 결혼",
@@ -761,7 +761,7 @@
           "days": ["월", "목"]
         },
         {
-          "coverSrc": "./data/cover/죽음대신결혼.png",
+          "coverSrc": "./assets/data/cover/죽음대신결혼.png",
           "score": 9.9,
           "ranking": 3,
           "title": "죽음 대신 결혼",
