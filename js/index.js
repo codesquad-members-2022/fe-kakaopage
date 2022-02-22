@@ -43,8 +43,8 @@ const renderHome = () => {
     render(html);
 };
 
-const renderWeekday = () => {
-    const weekday = new Weekday(weekdayData);
+const renderWeekday = (today = "월") => {
+    const weekday = new Weekday(weekdayData, today);
 
     let html = "";
     html += weekday.getHtml();
@@ -91,7 +91,9 @@ const bindEventListener = () => {
 
     $("#app").addEventListener("click", ({ target }) => {
         if ($(".week-day-menu")?.contains(target)) {
+            const today = target.innerText;
             toggleWeekDayMenu(target);
+            renderWeekday(today);
         }
     });
 };

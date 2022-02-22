@@ -1,10 +1,10 @@
 import Page from "./Page.js";
 
 export default class extends Page {
-    constructor(params) {
+    constructor(params, today) {
         super();
         this.menu = params.menu;
-        this.today = params.today;
+        this.today = today;
         this.data = params.data;
     }
 
