@@ -1,9 +1,3 @@
-const headerNav = document.querySelector(".header__nav");
-import { renderCategoryContents } from "./core.js";
-import WebtoonCategory from "./screens/Webtoon/WebtoonCategory.js";
-import { handleNavCategory } from "./nav-category.js";
-
-import FullButton from "./screens/Components/FullButton.js";
 import CategoryList from "./screens/Components/CategoryList.js";
 import Category from "./screens/Components/Category.js";
 import { getJson } from "./utils.js";
@@ -25,7 +19,7 @@ const init = async () => {
       return category;
     }),
   });
-  console.log(categoryList);
+
   const category = categoryList.state.categories.find(
     ({ state: { selected } }) => selected
   ).state.category;
