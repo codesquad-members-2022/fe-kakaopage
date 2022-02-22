@@ -85,12 +85,12 @@
     background-color: none;
 }
 
-.aside__banner #left-icon {
+#banner-left-icon {
     left: 20px;
     top: 200px;
 }
 
-.aside__banner #right-icon {
+#banner-right-icon {
     left: 650px;
     top: 200px;
 }
