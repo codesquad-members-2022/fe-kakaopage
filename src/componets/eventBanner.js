@@ -1,4 +1,5 @@
-export { getSildeButton } from "./sildeButton.js";
+import { SLIDE_LENGTH } from "../constant.js";
+import { getSildeButton } from "./sildeButton.js";
 
 const getEventBannerTemp = (dataEl) => {
     return (
@@ -12,10 +13,10 @@ const getEventBannerTemp = (dataEl) => {
     );
   }
   
-  const getEventBannersTemp = (data, length) => {
+  const getEventBannersTemp = (data) => {
     let eventBannerList = '';
-    for (let i = 0; i < length; i++) {
-        eventBannerList += `${getEventBannerTemp(data[i])}\n`
+    for (let i = 0; i < SLIDE_LENGTH; i++) {
+        eventBannerList += `${getEventBannerTemp(data[i] || data[i - data.length])}`
     }
     return (
         `<div class="section section-event-banner">

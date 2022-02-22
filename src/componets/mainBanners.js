@@ -21,9 +21,9 @@ const getMainBannerTemp = (dataEl) => {
   );
 }
 
-const getMainBannersTemp = (data, length) => {
+const getMainBannersTemp = (data) => {
     let mainBannerList = '';
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < SLIDE_LENGTH; i++) {
         mainBannerList += `${getMainBannerTemp(data[i])}\n`
     }
     return (
