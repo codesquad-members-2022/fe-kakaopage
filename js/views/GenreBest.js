@@ -19,7 +19,7 @@ export default class extends Page {
             <div>
             <span>★</span><span>${score}</span>
             </div>
-            <img src="../images/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘">
+            <img src="./images/bmbadge_waitfree.svg" alt="기다리면 무료 아이콘">
             </div>
             </div>
             <p class="title">${title}</p>
