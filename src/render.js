@@ -1,7 +1,7 @@
 import { $, convertStringToHTML } from './utils.js';
 import { Nav, PageNav, DailySeriesRanking } from './components';
-import { ContentsNavItems, MainNavItems, PageNavItems, PageComponent } from './data';
-import { navCallback, mainBannerCallback, setContainerWidth } from './js';
+import { PageNavItems, PageComponent, ContentsComponent } from './data';
+import { setContainerWidth } from './js';
 
 const renderPageNav = () => {
   if ($('.page-nav') === null) $('.header-wrapper').insertAdjacentHTML('beforeend', PageNav());
@@ -9,17 +9,12 @@ const renderPageNav = () => {
 };
 
 const renderPage = (category = 'home') => {
-  const page = PageComponent[category]();
   $('.main-contents-container').innerHTML = PageComponent[category]();
   if (category === 'webtoon') setContainerWidth('main', 'sub', 'event');
 };
 
-const renderMainNav = () => {
-  $('.main-nav').innerHTML = Nav(MainNavItems);
-};
-
-const renderContentsNav = () => {
-  $('.contents-nav').innerHTML = Nav(ContentsNavItems);
+const renderContents = (category) => {
+  $('.main-contents-container').innerHTML = ContentsComponent[category]();
 };
 
 const renderDailySeriesRanking = () => {
@@ -31,4 +26,4 @@ const renderDailySeriesRanking = () => {
 //   $('.main-banner').addEventListener('click', mainBannerCallback);
 // };
 
-export { renderPageNav, renderPage, renderMainNav, renderContentsNav, renderDailySeriesRanking };
+export { renderPageNav, renderPage, renderDailySeriesRanking, renderContents };

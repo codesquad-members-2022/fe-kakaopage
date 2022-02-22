@@ -1,4 +1,20 @@
-import { HomePage, WebtoonPage, NovelPage, MoviePage, BroadcastPage, BookPage } from '../components';
+import {
+  HomePage,
+  WebtoonPage,
+  NovelPage,
+  MoviePage,
+  BroadcastPage,
+  BookPage,
+  HomeContents,
+  DailyContents,
+  WebtoonContents,
+  ShonenContents,
+  DramaContents,
+  RomanceContents,
+  RomanceFantasyContents,
+  ActionContents,
+  BLContents,
+} from '../components';
 
 const PageComponent = {
   home: () => HomePage(),
@@ -9,6 +25,19 @@ const PageComponent = {
   book: () => BookPage(),
 };
 
+const ContentsComponent = {
+  home: () => HomeContents(),
+  daily: () => DailyContents(),
+  webtoon: () => WebtoonContents(),
+  shonen: () => ShonenContents(),
+  drama: () => DramaContents(),
+  romance: () => RomanceContents(),
+  romanceFantasy: () => RomanceFantasyContents(),
+  action: () => ActionContents(),
+  bl: () => BLContents(),
+};
+
 export {
   PageComponent,
-}
+  ContentsComponent,
+};
