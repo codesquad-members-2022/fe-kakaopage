@@ -4,13 +4,13 @@ import { getSubCategoriesTemp } from '../componets/subCategorise.js';
 import { getEventBannersTemp } from '../componets/eventBanner.js';
 import { getDayTop } from '../componets/dayTop.js';
 
-const getWebFictionPage = (props) => {
+const getWebFictionPage = (props, today) => {
     return (
         getCategoriesTemp(props["categories"])
         + getMainBannersTemp(props["mainBanner"])
         + getSubCategoriesTemp(props["subCategories"])
         + getEventBannersTemp(props["eventBanner"])
-        + getDayTop(props["dayTop"])
+        + getDayTop(props["dayTop"], today)
     );
 }
 
