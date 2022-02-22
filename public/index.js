@@ -158,6 +158,7 @@ const createPromotionBlock = () => {
 };
 
 const createDaysBlock = () => {
+  const webtoon = createWebtoonWithRank();
   const daysBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">요일 연재 TOP</h2>
@@ -191,93 +192,7 @@ const createDaysBlock = () => {
     </ul>
   </nav>
   <div class="grid-5col">
-    <div class="webtoon-container">
-      <div class="webtoon-img-container round-container">
-        <img
-          class="webtoon-img"
-          src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-          alt="남편님, 다시 결혼해주세요!"
-        />
-        <div class="layout-center webtoon-img-bar">
-          <span class="mr--auto ml--small">1위</span>
-          <img
-            class="watch-img"
-            src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-          />
-        </div>
-      </div>
-      <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
-      <div class="layout-center">
-        <img
-          class="webtoon-state-img"
-          src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-          alt="업데이트"
-        />
-        <img
-          class="people-img"
-          src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-        />
-        <span class="text-color--gray webtoon-details-text">46.1만명</span>
-      </div>
-    </div>
-    <div class="webtoon-container">
-      <div class="webtoon-img-container round-container">
-        <img
-          class="webtoon-img"
-          src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-          alt="남편님, 다시 결혼해주세요!"
-        />
-        <div class="layout-center webtoon-img-bar">
-          <span class="mr--auto ml--small">2위</span>
-          <img
-            class="watch-img"
-            src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-          />
-        </div>
-      </div>
-      <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
-      <div class="layout-center">
-        <img
-          class="webtoon-state-img"
-          src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-          alt="업데이트"
-        />
-        <img
-          class="people-img"
-          src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-        />
-        <span class="text-color--gray webtoon-details-text">46.1만명</span>
-      </div>
-    </div>
-    <div class="webtoon-container">
-      <div class="webtoon-img-container round-container">
-        <img
-          class="webtoon-img"
-          src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-          alt="남편님, 다시 결혼해주세요!"
-        />
-        <div class="layout-center webtoon-img-bar">
-          <span class="mr--auto ml--small">3위</span>
-          <img
-            class="watch-img"
-            src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-          />
-        </div>
-      </div>
-      <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
-      <div class="layout-center">
-        <img
-          class="webtoon-state-img"
-          src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-          alt="업데이트"
-        />
-        <img
-          class="people-img"
-          src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-        />
-        <span class="text-color--gray webtoon-details-text">46.1만명</span>
-      </div>
-    </div>
+    ${webtoon}
   </div>
 </div>`;
   insertIntoMain(daysBlock);
@@ -359,7 +274,80 @@ const createSmallBannerBlock = () => {
   insertIntoMain(smallBannerBlock);
 };
 
+const createWebtoonWithGrade = () => {
+  const webtoon = `<div class="webtoon-container">
+  <div class="webtoon-img-container round-container">
+    <img
+      class="webtoon-img"
+      src="https://dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2"
+      alt="은동은동+옹동스"
+    />
+    <div class="layout-center webtoon-img-bar">
+      <img
+        class="star-img"
+        src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
+      />
+      <span class="mr--auto">10.0</span>
+      <img
+        class="watch-img"
+        src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+      />
+    </div>
+  </div>
+  <h3 class="webtoon-title">은동은동+옹동스</h3>
+  <div class="layout-center">
+    <img
+      class="webtoon-state-img"
+      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+      alt="업데이트"
+    />
+    <img
+      class="people-img"
+      src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+    />
+    <span class="text-color--gray webtoon-details-text">46.1만명</span>
+  </div>
+</div>`;
+
+  return webtoon;
+};
+
+const createWebtoonWithRank = () => {
+  const webtoon = `<div class="webtoon-container">
+  <div class="webtoon-img-container round-container">
+    <img
+      class="webtoon-img"
+      src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
+      alt="남편님, 다시 결혼해주세요!"
+    />
+    <div class="layout-center webtoon-img-bar">
+      <span class="mr--auto ml--small">2위</span>
+      <img
+        class="watch-img"
+        src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+      />
+    </div>
+  </div>
+  <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
+  <div class="layout-center">
+    <img
+      class="webtoon-state-img"
+      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+      alt="업데이트"
+    />
+    <img
+      class="people-img"
+      src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+    />
+    <span class="text-color--gray webtoon-details-text">46.1만명</span>
+  </div>
+</div>`;
+
+  return webtoon;
+};
+
 const createGenreBlock = () => {
+  const webtoons = createWebtoonWithGrade();
   const genreBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">드라마 TOP</h2>
@@ -381,41 +369,10 @@ const createGenreBlock = () => {
     </svg>
   </header>
   <div class="grid-5col">
-    <div class="webtoon-container">
-      <div class="webtoon-img-container round-container">
-        <img
-          class="webtoon-img"
-          src="https://dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2"
-          alt="은동은동+옹동스"
-        />
-        <div class="layout-center webtoon-img-bar">
-          <img
-            class="star-img"
-            src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
-          />
-          <span class="mr--auto">10.0</span>
-          <img
-            class="watch-img"
-            src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-          />
-        </div>
-      </div>
-      <h3 class="webtoon-title">은동은동+옹동스</h3>
-      <div class="layout-center">
-        <img
-          class="webtoon-state-img"
-          src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-          alt="업데이트"
-        />
-        <img
-          class="people-img"
-          src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-        />
-        <span class="text-color--gray webtoon-details-text">46.1만명</span>
-      </div>
-    </div>
+  ${webtoons}
   </div>
 </div>`;
+
   insertIntoMain(genreBlock);
 };
 
