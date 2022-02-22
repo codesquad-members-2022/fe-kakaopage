@@ -669,16 +669,16 @@ header {
     top: auto;
     bottom: 11%;
     transform: none;
-  }
 
-  .back {
-    left: 5%;
-    background-image: url('../img/icons/icon_topBanner_prev.png');
-  }
+    &.back {
+      left: 5%;
+      background-image: url('../img/icons/icon_topBanner_prev.png');
+    }
 
-  .next {
-    left: 15%;
-    background-image: url('../img/icons/icon_topBanner_next.png');
+    &.next {
+      left: 15%;
+      background-image: url('../img/icons/icon_topBanner_next.png');
+    }
   }
 }
 

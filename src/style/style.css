@@ -533,14 +533,12 @@ header {
   top: auto;
   bottom: 11%;
   transform: none; }
-
-.recommend-event .back {
-  left: 5%;
-  background-image: url("../img/icons/icon_topBanner_prev.png"); }
-
-.recommend-event .next {
-  left: 15%;
-  background-image: url("../img/icons/icon_topBanner_next.png"); }
+  .recommend-event .banner-btn-group button.back {
+    left: 5%;
+    background-image: url("../img/icons/icon_topBanner_prev.png"); }
+  .recommend-event .banner-btn-group button.next {
+    left: 15%;
+    background-image: url("../img/icons/icon_topBanner_next.png"); }
 
 /* App Download Link */
 .contents.app-download-link {
