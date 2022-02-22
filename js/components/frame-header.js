@@ -1,20 +1,20 @@
 const frameHeaderContents = {
   홈: [
     {
-      frameClass: "dow-top",
+      frame: "dow-top",
       frameTitle: "요일 연재 TOP",
       frameSubTitle: "(1,627)",
     },
-    { frameClass: "expected-top", frameTitle: "기대 신작 TOP" },
-    { frameClass: "romance-top", frameTitle: "로맨스 TOP" },
-    { frameClass: "daily-top", frameTitle: "일간 랭킹 TOP" },
-    { frameClass: "event-banner", frameTitle: "추천 이벤트" },
+    { frame: "expected-top", frameTitle: "기대 신작 TOP" },
+    { frame: "romance-top", frameTitle: "로맨스 TOP" },
+    { frame: "daily-top", frameTitle: "일간 랭킹 TOP" },
+    { frame: "event-banner", frameTitle: "추천 이벤트" },
   ],
 };
 
 export const frameHeader = (selectedValue, frame) => {
   const contents = frameHeaderContents[selectedValue].find(
-    (e) => e.frameClass === frame.class
+    (e) => e.frame === frame.block
   );
 
   if (contents === undefined) return;
