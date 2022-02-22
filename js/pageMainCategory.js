@@ -1,4 +1,4 @@
-import setPreview from './setPreview.js';
+import setPreview from './preview/setPreview.js';
 import drawTagListEl from './drawTagListEl.js';
 import clearTagListEl from './clearTagListEl.js';
 import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';

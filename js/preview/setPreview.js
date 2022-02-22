@@ -1,4 +1,4 @@
-import previews from '../json/preview.json' assert { type: 'json' };
+import previews from '../../json/preview.json' assert { type: 'json' };
 
 const setPreviewCover = (preview) => {
   const previewCover = document.querySelector('.preview-cover');
