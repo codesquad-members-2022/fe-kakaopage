@@ -12,15 +12,15 @@ const topBanner = {
             description : "누가 아군이고, 누가 적인가."
         },
         {
-            title : "미슐랭스타",
-            image : "https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak",
+            title : "로드 오브 머니",
+            image : "https://dn-img-page.kakao.com/download/resource?kid=dfYJhT/hyQ9QDRm4Z/czbknk8mnhG2k7X5MZI2s0",
             badge : {
-                name : "이벤트",
-                src : "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                name : "up",
+                src : "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
             },
             category : "웹툰",
-            viewer : "59만",
-            description : "최고의 쉐프가 되는건 나야!"
+            viewer : "49.5만",
+            description : "세상에 없던 꼴통 재벌이 되다!"
         }
     ],
     day : [
