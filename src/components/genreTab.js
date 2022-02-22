@@ -1,13 +1,11 @@
 import { genreTabData } from "../data/genreTabData.js";
 import { DEFAULT_GENRE_INDEX } from "../constant.js";
 
-const contents = document.querySelector('.contents');
-const genreTab = document.createElement('div');
+
+const genreTab = document.querySelector('.genre-tab');
 
 const renderGenreTab = (currPage) => {
-    if (currPage === 'home') return;
-    genreTab.className = 'genre-tab';
-    contents.appendChild(genreTab);
+    if (currPage === 'home') genreTab.classList.add('earse');
     genreTab.innerHTML = getTemplate(currPage);
     setDefault(genreTab);
 }
