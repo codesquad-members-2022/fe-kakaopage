@@ -464,8 +464,8 @@ header {
 
 .contents-list.vertical .img-container .badge {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
+  left: 1px;
   width: 25px;
   border-top-left-radius: 5px; }
 
