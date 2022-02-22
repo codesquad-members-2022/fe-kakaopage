@@ -9,30 +9,26 @@ const clickGenresList = () => {
   const genresItem = $all('.genres__item');
   genresItem.forEach(item => {
     item.addEventListener('click', (event) => {
-      setGenreFocus(event);
+      const focusedClass = 'genres--focused';
+      setFocus(event.target, focusedClass);
     })
   });
 }
 
-function setGenreFocus (event) {
-  const focused = $('.genres--focused');
-  if (focused) focused.classList.remove('genres--focused');
-  event.target.classList.add('genres--focused');
+function setFocus(target, className) {
+  const focused = $(`.${className}`);
+  if (focused) focused.classList.remove(className);
+  target.classList.add(className);
 }
 
 function clickDailyTopList() {
   const selectDay = $all('.day__btn');
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
-      clickDailyTopFocus(event.target);
+      const focusedClass = 'daily__top--focused';
+      setFocus(event.target.parentNode, focusedClass);
     })
   })
-}
-
-function clickDailyTopFocus(event) {
-  const focused = $('.daily__top--focused');
-  if (focused) focused.classList.remove('daily__top--focused');
-  event.parentNode.classList.add('daily__top--focused');
 }
 
 function clickBannerPrevBtn() {
