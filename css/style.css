@@ -65,6 +65,7 @@
 
 .user-container {
   padding: 10px;
+  gap: 5px;
 }
 
 .col {
@@ -74,12 +75,11 @@
 
 .btn-nav {
   font-size: 20px;
-  padding: 0 40px 0 40px;
+  padding: 25px 40px 0 40px;
 }
 
 .btn-gray {
   background-color: white;
-  font-weight: bold;
   color: gray;
 }
 
@@ -87,6 +87,10 @@
   background-color: white;
   font-weight: bold;
   color: black;
+}
+
+.btn-medium {
+  font-size: 18px;
 }
 
 .nav {

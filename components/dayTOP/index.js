@@ -18,11 +18,11 @@ export function createDayTop() {
 
 const style = `
 .day-top {
-  width: 682px;
+  width: 680px;
   height: fit-content;
   justify-content: space-around;
-  margin: auto auto;
   flex-wrap: wrap;
+  margin: auto auto;
 }
 `;
 

@@ -34,17 +34,23 @@ const dayRankingTop = createDayRankingTop();
 const recommendEvent = createRecommendEvent();
 const button = createButton();
 
-$(".contents").insertAdjacentHTML("beforeend", category);
-$(".contents").insertAdjacentHTML("beforeend", largeBanner);
-$(".contents").insertAdjacentHTML("beforeend", recommend);
-$(".contents").insertAdjacentHTML("beforeend", adSlide);
-$(".contents").insertAdjacentHTML("beforeend", dayTop);
-$(".contents").insertAdjacentHTML("beforeend", newTop);
-$(".contents").insertAdjacentHTML("beforeend", romanceTop);
-$(".contents").insertAdjacentHTML("beforeend", dramaTop);
-$(".contents").insertAdjacentHTML("beforeend", BLGLTop);
-$(".contents").insertAdjacentHTML("beforeend", boyTop);
-$(".contents").insertAdjacentHTML("beforeend", actionTop);
-$(".contents").insertAdjacentHTML("beforeend", dayRankingTop);
-$(".contents").insertAdjacentHTML("beforeend", recommendEvent);
-$(".contents").insertAdjacentHTML("beforeend", button);
+const nodes = [
+  category,
+  largeBanner,
+  recommend,
+  adSlide,
+  dayTop,
+  newTop,
+  romanceTop,
+  dramaTop,
+  BLGLTop,
+  boyTop,
+  actionTop,
+  dayRankingTop,
+  recommendEvent,
+  button,
+];
+
+const contentsEl = nodes.reduce((acc, node) => acc + node);
+
+$(".contents").innerHTML = contentsEl;

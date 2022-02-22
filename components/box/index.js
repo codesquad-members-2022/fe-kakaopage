@@ -52,10 +52,10 @@ const style = `
 }
 
 .box__contents {
-  width: 680px;
+  width: 720px;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px auto 0 auto;
+  
   justify-content: space-around;
 }
 `;
