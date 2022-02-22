@@ -89,20 +89,26 @@ const offTransition = (element) => {
 };
 
 const onPrevBtn = (event) => {
+  if (!flag) return;
+  flag = false;
   slide.moveToPrevPage();
   carouselImages.decreaseIdx();
-  console.log(carouselImages.images[carouselImages.curIdx]);
   slide.setSlideStateFirst();
+  console.log(carouselImages.images[carouselImages.getCurIdx()]);
 };
 
 const onNextBtn = (event) => {
+  if (!flag) return;
+  flag = false;
   slide.moveToNextPage();
   carouselImages.increaseIdx();
   slide.setSlideStateLast();
+  console.log(carouselImages.images[carouselImages.getCurIdx()]);
 };
 
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
+let flag = true;
 
 const myimages = ['여우신랑', '던전리셋', '에스티오'];
 // 시작 : [에스티오, 여우신랑, 던전리셋]
@@ -132,4 +138,5 @@ $slide.addEventListener('transitionend', (event) => {
   }
 
   slide.setPageMiddle();
+  flag = true;
 });
