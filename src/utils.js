@@ -25,4 +25,6 @@ const getDay = () => {
   return day[today];
 };
 
-export { $, convertStringToHTML, convertReader, getDay };
+const isNew = (serialDate) => serialDate.includes(getDay());
+
+export { $, convertStringToHTML, convertReader, getDay, isNew };

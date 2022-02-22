@@ -335,16 +335,21 @@ header {
     align-items: center;
     background-color: #242526;
     padding: 5px 8px; }
-    .contents-list.small .ranking-info span {
+    .contents-list.small .ranking-info .rating {
       position: relative;
       top: -1px;
       color: #FFD200; }
-      .contents-list.small .ranking-info span::before, .contents-list.small .ranking-info span::after {
+      .contents-list.small .ranking-info .rating::before, .contents-list.small .ranking-info .rating::after {
         content: '';
         display: inline-block;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain; }
+    .contents-list.small .ranking-info .type {
+      position: relative;
+      top: -1px;
+      font-size: 0.875rem;
+      color: #9C9C9C; }
     .contents-list.small .ranking-info img {
       width: 18px; }
   .contents-list.small .rating::before {

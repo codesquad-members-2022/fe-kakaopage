@@ -1,11 +1,10 @@
 import { VerticalImgContainer } from '../index.js';
-import { convertReader, getDay } from '../../utils.js';
+import { convertReader, isNew } from '../../utils.js';
 
 const VerticalContentsListItem = (rank, content) => {
 
   const writers = Object.values(content.writer).join(', ');
   const serialDates = content.serialDate.join(', ');
-  const isNew = (serialDate) => serialDate.includes(getDay());
 
   return `<li class="list-item">
             <a href="#">

@@ -418,11 +418,18 @@ header {
     background-color: $bg-dark-gray;
     padding: 5px 8px;
 
-    span {
+    .rating {
       @include pseudo-img();
       position: relative;
       top: -1px;
       color: $text-yellow;
+    }
+
+    .type {
+      position: relative;
+      top: -1px;
+      font-size: 0.875rem;
+      color: $info-gray;
     }
 
     img {
