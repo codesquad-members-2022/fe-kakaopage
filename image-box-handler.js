@@ -14,11 +14,15 @@ const nextImage = () =>{
     setTimeout(() => {
       containerBox.className = `image-box-container__box translateX-${TRANSLATE_RANGE}`;
     transformRange = 0;
-    },900)
+    },1000)
   }
   let nextImgCnt = transformRange/100 + 1;
   if (nextImgCnt >IMAGE_CNT) nextImgCnt = 1;
   imageBoxInfo.innerHTML = `${nextImgCnt} / ${IMAGE_CNT}`
+  clearInterval(bannerTimer);
+  bannerTimer = setInterval(()=>{
+    nextImage();
+  },3000);
 }
 
 const prevImage = () =>{
@@ -30,12 +34,21 @@ const prevImage = () =>{
     setTimeout(() => {
       transformRange = lastIdx-TRANSLATE_RANGE;
       containerBox.className = `image-box-container__box translateX-${transformRange}`;
-    },900);
+    },1000);
   }
   let prevImgCnt = transformRange/100 - 1;
   if (prevImgCnt === 0) prevImgCnt = IMAGE_CNT;
   imageBoxInfo.innerHTML = `${prevImgCnt} / ${IMAGE_CNT}`
+  clearInterval(bannerTimer);
+  bannerTimer = setInterval(()=>{
+    nextImage();
+  },3000);
 }
+
+
+let bannerTimer = setInterval(()=>{
+  nextImage();
+},3000);
 
 
 imageBoxContainer.addEventListener("click", (evt) => {
