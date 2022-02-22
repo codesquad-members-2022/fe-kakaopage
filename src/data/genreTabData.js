@@ -1,13 +1,13 @@
 const webtoonGenre = {
-    '홈': {'genre': 'webtoon-home', 'text': '홈'},
-    '요일연재': {'genre': 'webtoon-daily', 'text': '요일연재'},
-    '웹툰': {'genre': 'webtoon-webtoon', 'text': '웹툰'},
-    '소년': {'genre': 'webtoon-boy', 'text': '소년'},
-    '드라마': {'genre': 'webtoon-drama', 'text': '드라마'},
-    '로맨스': {'genre': 'webtoon-romance', 'text': '로맨스'},
-    '로판': {'genre': 'webtoon-rofan', 'text': '로판'},
-    '액션무협': {'genre': 'webtoon-action', 'text': '액션무협'},
-    'BL': {'genre': 'webtoon-BL', 'text': 'BL'},
+    '홈': {'genre': 'home', 'text': '홈'},
+    '요일연재': {'genre': 'daily', 'text': '요일연재'},
+    '웹툰': {'genre': 'webtoon', 'text': '웹툰'},
+    '소년': {'genre': 'boy', 'text': '소년'},
+    '드라마': {'genre': 'drama', 'text': '드라마'},
+    '로맨스': {'genre': 'romance', 'text': '로맨스'},
+    '로판': {'genre': 'rofan', 'text': '로판'},
+    '액션무협': {'genre': 'action', 'text': '액션무협'},
+    'BL': {'genre': 'BL', 'text': 'BL'},
 }
 
 const novelGenre = {
