@@ -81,7 +81,7 @@ gnb
     line-height: 58px;
     text-align: center;
 }
-.gnb__link.on {
+.gnb__link--active{
     line-height: 55px;
     border-bottom: 3px solid var(--yellow);
 }

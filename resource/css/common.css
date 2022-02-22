@@ -187,7 +187,7 @@ category
     color: rgb(187, 187, 187);
     line-height: 67px;
 }
-.category__link.on {
+.category__link--active {
     color: inherit;
 }
 
@@ -206,6 +206,9 @@ banner
 .main-banner__img-wrap {
     height: 440px;
     overflow: hidden;
+}
+.main-banner__img-wrap > img {
+    width: 100%;
 }
 .main-banner__title {
     font-size: 28px;
@@ -397,7 +400,7 @@ section-title
 /**
 추천 이벤트
 **/
-.section-recommand-event__img-wrap {
+.recommand-event__img-wrap {
     margin-top: 20px;
 }
 
