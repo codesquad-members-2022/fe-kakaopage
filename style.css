@@ -4,15 +4,17 @@
 }
 
 :root {
+  --background-color-white: #fff;
   --background-color-yellow: #FFD220;
   --background-color-gray: #eee;
   --font-color-light-gray: #bbb;
   --font-color-dark-gray: #999;
+  --font-color-deepdark-gray: #333;
 }
 
 .category_align {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .grid_container {
@@ -40,6 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-color-gray);
 }
 
 header {
@@ -47,9 +50,9 @@ header {
   top: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 725px;
-  height: 150px;
+  justify-content: center;
   z-index: 5;
+  background-color: var(--background-color-white);
 }
 
 input {
@@ -65,7 +68,7 @@ input {
 
 .search_button {
   border: none;
-  background-color: white;
+  background-color: var(--background-color-white);
   background-size: cover;
 }
 
@@ -95,6 +98,8 @@ input {
 
 .main_menu_container > .main_menu {
   height: 25px;
+  margin: 0 5px;
+  color: var(--font-color-dark-gray);
 }
 
 .main_category_navigation {
@@ -104,6 +109,7 @@ input {
 }
 
 .main_category_navigation > .main_category {
+  margin: 0 39px;
   text-align: center;
   font-weight: 500;
 }
@@ -112,6 +118,8 @@ input {
   align-items: center;
   width: 725px;
   height: 67px;
+  margin: 15px;
+  background-color: var(--background-color-white);
 }
 
 .promotion_webtoon_section {
@@ -138,19 +146,39 @@ input {
   align-items: center;
   width: 725px;
   height: 67px;
+  border-bottom: 1px solid var(--background-color-gray);
+  background-color: var(--background-color-white);
 }
 
+.weekday_category {
+  box-sizing: border-box;
+  width: 90px;
+  height: 70px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.webtoon_type_navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 725px;
+  height: 67px;
+  border-bottom: 1px solid var(--background-color-gray);
+  background-color: var(--background-color-white);
+}
 .webtoon_type_filter {
   display: flex;
   width: fit-content;
 }
 
 .webtoon_type_filter > .webtoon_type {
-  margin-right: 1em;
+  margin: 10px;
 }
 
 .webtoon_genre_filter {
   list-style: none;
+  margin: 10px;
 }
 
 .webtoon_genre_filter > .webtoon_genre {
@@ -159,13 +187,16 @@ input {
 
 .webtoon_board {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-white);
 }
 
 .webtoon {
   box-sizing: border-box;
   width: 120px;
-  height: 235px;
-  margin-right: 20px;
+  height: 215px;
+  margin: 10px;
 }
 
 .webtoon_preview > img {
