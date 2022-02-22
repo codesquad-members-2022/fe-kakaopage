@@ -17,9 +17,9 @@ renderMainSecHome();
 $(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
   if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
-    renderMainSecHome(clickedNav);
+    renderMainSecHome();
   } else if (clickedNav === "요일연재" && clickedNav !== data.contentsChecker) {
-    renderMainSecWoD(clickedNav);
+    renderMainSecWoD();
   }
 });
 

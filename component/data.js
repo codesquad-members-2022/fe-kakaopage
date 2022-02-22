@@ -128,30 +128,35 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로판",
+      day: "수",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로판",
+      day: "수",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로판",
+      day: "화",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로판",
+      day: "월",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로판",
+      day: "화",
     },
 
     {
@@ -173,21 +178,21 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
-      day: "완결",
+      day: "요일완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
-      day: "완결",
+      day: "요일완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "액션무협",
-      day: "완결",
+      day: "요일완결",
     },
 
     {
@@ -195,14 +200,14 @@ const data = {
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
-      day: "완결",
+      day: "요일완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "BL",
-      day: "완결",
+      day: "요일완결",
     },
     {
       imgUrl: "./pageImage/madothuki.png",

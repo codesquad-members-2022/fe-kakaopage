@@ -24,9 +24,7 @@ const createMaincontainer = (toggleinfo, imgInfo) => {
     <div class="main--toggle--right">${toggleinfo.right}</div>
   </nav>
   <ul class="main__cartoonZone">
-    <li class="main__cartoonZone__cell">${imgInfo
-      .map((imgData) => createImgCard(imgData))
-      .join("")}</li> 
+    ${imgInfo.map((imgData) => createImgCard(imgData)).join("")}
   </ul>
 `;
 

@@ -10,7 +10,7 @@ import {
 import { data } from "../component/data.js";
 import { renderToonbyDay } from "./mainEvent.js";
 
-const renderMainSecHome = (clickedNav) => {
+const renderMainSecHome = () => {
   remove(".main");
 
   const containers = data.genre.map((toonGen) => {
@@ -21,11 +21,9 @@ const renderMainSecHome = (clickedNav) => {
   containers.forEach((container) => {
     $(".containEvery").appendChild(container);
   });
-
-  data.contentsChecker = clickedNav;
 };
 
-const renderMainSecWoD = (clickedNav) => {
+const renderMainSecWoD = () => {
   remove(".main");
 
   const parentNav = ".main__nav--toggle";
@@ -48,8 +46,6 @@ const renderMainSecWoD = (clickedNav) => {
     .addEventListener("click", renderToonbyDay);
 
   container.insertBefore(weekendNav, container.querySelector(parentNav));
-
-  data.contentsChecker = clickedNav;
 };
 
 export { renderMainSecHome, renderMainSecWoD };

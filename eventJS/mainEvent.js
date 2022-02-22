@@ -6,17 +6,16 @@ import {
 import { data } from "../component/data.js";
 
 const renderToonbyDay = (event) => {
+  remove(".main__cartoonZone__cell");
   const clickedDay = event.target.textContent;
-  console.log($(".main__cartoonZone").firstElementChild);
-  removeAllChild($(".main"), ".main__cartoonZone");
-
   const getToonDataByDay = data.toonData.filter(
     (tooninfo) => tooninfo.day === clickedDay
   );
+  const imgCardHTML = getToonDataByDay
+    .map((tooninfo) => createImgCard(tooninfo))
+    .join("");
 
-  getToonDataByDay.forEach((tooninfo) =>
-    $(".main__cartoon__Zone").appendChild(createImgCard(tooninfo))
-  );
+  $(".main__cartoonZone").innerHTML = imgCardHTML;
 };
 
 export { renderToonbyDay };
