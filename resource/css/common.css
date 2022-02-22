@@ -133,23 +133,18 @@ layout
     background: #000;
     border: 1px solid var(--yellow);
 }
-.banner__category:before {
-    content: '';
-    display: inline-block;
+.banner__category {
     background: url('../images/common/ico-clock_white.svg') no-repeat left center;
-    vertical-align: middle;
-}
-.banner__category:after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    background: #b0aeae;
 }
 .banner__reader:before {
     content: '';
-    display: inline-block;
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #b0aeae;
+}
+.banner__reader {
     background: url('../images/common/ico-user.svg') no-repeat left center;
-    vertical-align: middle;
 }
 .banner__description {
     background: var(--yellow);
@@ -222,20 +217,18 @@ banner
     line-height: 20px;
     border-radius: 3px;
 }
-.main-banner__category:before {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+.main-banner__category, .main-banner__reader {
+    padding-left: 25px;
     background-size: auto 20px;
 }
-.main-banner__category:after {
-    height: 18px;
+.main-banner__reader {
+    position: relative;
     margin-left: 10px;
 }
 .main-banner__reader:before {
-    width: 20px;
-    height: 20px;
-    background-size: auto 20px;
+    position: absolute;
+    top: 0;
+    left: -10px;
 }
 .main-banners .slide-buttons {
     margin-top: -10px;
