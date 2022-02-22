@@ -24,8 +24,8 @@ const drawDayFilter = (categoryEl, dayContentsMap) => {
   filter.innerHTML = html;
 
   if (category === '웹툰') {
-    const preview = document.querySelector('.preview');
-    preview.insertAdjacentElement('afterend', filter);
+    const previewList = document.querySelector('.preview-list');
+    previewList.insertAdjacentElement('afterend', filter);
   } else {
     const firstMainContents = document.querySelector('.main-contents');
     firstMainContents.insertAdjacentElement('beforebegin', filter);

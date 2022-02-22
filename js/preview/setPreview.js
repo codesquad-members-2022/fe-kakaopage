@@ -1,4 +1,4 @@
-import previews from '../../json/preview.json' assert { type: 'json' };
+import previewsArr from '../../json/preview.json' assert { type: 'json' };
 
 const setPreviewCover = (preview) => {
   const previewCover = document.querySelector('.preview-cover');
@@ -31,9 +31,9 @@ const setPreviewInfo = (preview) => {
 };
 
 const setPreview = (category) => {
-  const preview = previews[category];
-  setPreviewCover(preview);
-  setPreviewInfo(preview);
+  const previews = previewsArr[category][0];
+  setPreviewCover(previews);
+  setPreviewInfo(previews);
 };
 
 export default setPreview;

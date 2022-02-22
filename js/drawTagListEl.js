@@ -68,8 +68,8 @@ const drawTagListEl = (category) => {
   const tagListElContainer = createTagListElContainer(category);
   const mainContainer = createMainContainer();
   mainContainer.appendChild(tagListElContainer);
-  const previewEl = document.querySelector('.preview');
-  previewEl.parentElement.insertAdjacentElement('afterend', mainContainer);
+  const previewListEl = document.querySelector('.preview-list');
+  previewListEl.parentElement.insertAdjacentElement('afterend', mainContainer);
 };
 
 export default drawTagListEl;
