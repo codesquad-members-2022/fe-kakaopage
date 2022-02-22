@@ -65,13 +65,13 @@
 }
 
 .description__separator {
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-white);
   width: 1px;
   height: 15px;
 }
 
-.description__category > span,
-.description__view > span {
+.description__category,
+.description__view {
   margin-left: 5px;
 }
 

@@ -12,38 +12,8 @@
   margin: 0 0 10px 0;
 }
 
-/* main days */
-.main-day {
-  padding: 0;
-}
-
-.day__list {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 65px;
-  padding: 10px;
-  margin: 0;
-  color: var(--color-grey);
-}
-
-.day__item {
-  cursor: pointer;
-  text-align: center;
-  width: 45px;
-  line-height: 45px;
-}
-
-.day__item.selected {
-  color: var(--color-black);
-  font-weight: 600;
-  background: url('https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132');
-  background-repeat: no-repeat;
-  background-size: 45px;
-}
-
 /* main webtoons */
-.webtoons {
+.webtoon-box {
   padding: 10px 20px 10px 20px;
   flex-direction: column;
 }
@@ -67,8 +37,22 @@
   margin-bottom: 10px;
 }
 
+.webtoon__updated-badge {
+  height: 16px;
+  margin-right: 5px;
+}
+
+.webtoon__updated-badge > img {
+  width: 23px;
+  height: 100%;
+}
+
+.webtoon__title-box {
+  display: flex;
+  align-items: center;
+}
+
 .webtoon__title {
-  margin-top: 10px;
   font-weight: 600;
 }
 
@@ -95,15 +79,14 @@
   margin: 0 5px;
 }
 
-/* promotion */
-.promotion__header {
+.webtoon-box__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0 10px 0;
 }
 
-.promotion__more {
+.webtoon-box__more {
   color: var(--color-dark-grey);
   font-size: 0.9rem;
 }
