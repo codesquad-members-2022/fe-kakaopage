@@ -5,6 +5,7 @@ import { romanceTop } from "./data/genreItems.js";
 
 import Category from "./views/Category.js";
 import SlideBanner from "./views/SlideBanner.js";
+import GenreBest from "./views/GenreBest.js";
 
 const changeCoverImg = (subMenu) => {
     const coverImgSection = $(".cover-image");
@@ -30,10 +31,12 @@ const render = (html) => {
 const renderHome = () => {
     const category = new Category({ categories: homeData.category });
     const slideBanner = new SlideBanner();
+    const genreBest = new GenreBest({ genre: "로맨스", genreItem: romanceTop });
 
     let html = "";
     html += category.getHtml();
     html += slideBanner.getHtml();
+    html += genreBest.getHtml();
 
     render(html);
 };

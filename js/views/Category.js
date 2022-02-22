@@ -7,7 +7,7 @@ export default class extends Page {
     }
 
     getCategoryLinks() {
-        const template = this.categories
+        return this.categories
             .map((el) => {
                 const badge = el.badge
                     ? `
@@ -16,6 +16,7 @@ export default class extends Page {
             </span>
             `
                     : "";
+
                 return `
             <a href="" class="group-flex flex-center" data-link="">
             <span>${el.title}</span>
@@ -24,7 +25,6 @@ export default class extends Page {
         `;
             })
             .join("");
-        return template;
     }
 
     getHtml() {
