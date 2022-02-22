@@ -1,14 +1,16 @@
-const startPage = "홈";
+import { ads, days, newThings, listContents, dummy, mainNav } from "./parts.js";
+
+const startPage = "웹툰";
 const main = document.querySelector("main");
-const ads = document.querySelector(".ads");
-const days = document.querySelector(".days");
-const newThings = document.querySelector(".new-things");
-const listContents = document.querySelector(".list-contents");
+// const ads = document.querySelector(".ads");
+// const days = document.querySelector(".days");
+// const newThings = document.querySelector(".new-things");
+// const listContents = document.querySelector(".list-contents");
+// const dummy = document.querySelector(".dummy");
+// const mainNav = document.querySelector(".main__nav");
+// const daysNav = document.querySelector(".days__nav");
 const headerNav = document.querySelector(".header__nav");
-const mainNav = document.querySelector(".main__nav");
-const daysNav = document.querySelector(".days__nav");
-const dummy = document.querySelector(".dummy");
-const navs = [headerNav, mainNav, daysNav];
+const navs = [headerNav, mainNav];
 const assembly = {
   홈: [ads, newThings, listContents],
   웹툰: [mainNav, ads, days],
@@ -20,6 +22,7 @@ const assembly = {
 
 const showSelectedNav = (event) => {
   let type = "";
+  let text = "";
   if (typeof event === "string") {
     type = event;
   } else {
@@ -28,8 +31,9 @@ const showSelectedNav = (event) => {
     type = event.target.innerHTML;
   }
   assembly[type].forEach((part) => {
-    return main.append(part);
+    return (text += part);
   });
+  main.innerHTML = text;
 };
 
 const markSelectedNav = (event) => {
@@ -50,11 +54,11 @@ const markSelectedNavEvent = (nav) => {
 
 const init = () => {
   main.innerHTML = "";
+  showSelectedNav(startPage);
   headerNav.querySelectorAll("span").forEach((child) => {
     child.addEventListener("click", showSelectedNav);
   });
   navs.forEach((nav) => markSelectedNavEvent(nav));
-  showSelectedNav(startPage);
 };
 
 init();
