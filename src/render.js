@@ -22,6 +22,7 @@ export const initRender = () => {
 
 const renderByGenre = (genre) => {
     const renderList = genreRenderList[genre];
+    document.querySelector('.tab-contents').innerHTML = '';
     renderList.forEach(component => render(component, genre));
 }
 
