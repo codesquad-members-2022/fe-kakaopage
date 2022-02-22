@@ -1,16 +1,6 @@
 import {containerInfo} from './data/containerInfoData.js'
-import {renderMain} from './render.js'
+import {renderMain, renderDaily} from './render.js'
 import {$, $all} from './utility.js'
-
-const clickGenresList = () => {
-  const genresItem = $all('.genres__item');
-  genresItem.forEach(item => {
-    item.addEventListener('click', (event) => {
-      const focusedClass = 'genres--focused';
-      setFocus(event.target, focusedClass);
-    })
-  });
-}
 
 function setFocus(target, className) {
   const focused = $(`.${className}`);
@@ -18,14 +8,48 @@ function setFocus(target, className) {
   target.classList.add(className);
 }
 
+function clickGenresList() {
+  const genresItem = $all('.genres__item');
+  genresItem.forEach(item => {
+    item.addEventListener('click', (event) => {
+      const focusedClass = 'genres--focused';
+      setFocus(event.target, focusedClass);
+      moveGenreNav(event.target)
+    })
+  });
+}
+
 function clickDailyTopList() {
   const selectDay = $all('.day__btn');
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
-      const focusedClass = 'daily__top--focused';
+      const focusedClass = 'day--focused';
       setFocus(event.target.parentNode, focusedClass);
     })
   })
+}
+
+function moveGenreNav(target) {
+  switch (target.dataset.nav) {
+    case 'home':
+      resetMain();
+      renderMain('홈', containerInfo, 'reRender');
+      eventMain();
+      break;
+    case 'daily':
+      resetMain();
+      renderDaily();
+      clickDailyTopList();
+      break;
+  }
+}
+
+function resetMain() {
+  const main = $('.main');
+  
+  while (main.children.length > 2) {
+    main.removeChild(main.lastChild);
+  }
 }
 
 function clickBannerPrevBtn() {
@@ -68,12 +92,15 @@ function clickPromotionBanner() {
 }
 
 function eventMain() {
-  renderMain('홈', containerInfo);
-
   clickGenresList();
   clickPromotionBanner();
   clickDailyTopList();
 }
 
-window.addEventListener('load', eventMain);
+function loadMain() {
+  renderMain('홈', containerInfo, 'firstRender');
+  eventMain()
+}
+
+window.addEventListener('load', loadMain);
 
