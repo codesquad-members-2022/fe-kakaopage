@@ -359,3 +359,20 @@ main {
     font-weight: 500;
     border-bottom: 2px solid var(--kakao-yellow);
 }
+
+.week-day-submenu {
+    color: var(--light-gray);
+    font-size: var(--middle-font-size);
+    justify-content: space-between;
+}
+
+.week-day-submenu .active {
+    color: var(--default);
+}
+
+.week-day-submenu li:nth-child(2n)::before,
+.week-day-submenu li:nth-child(2n)::after {
+    content: "";
+    margin: 0 10px 0;
+    border-left: 1px solid var(--light-gray);
+}
