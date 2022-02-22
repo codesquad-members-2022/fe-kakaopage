@@ -6,6 +6,13 @@ function CategoryList(target) {
   this.target = target;
   this.state = {};
 
+  // const renderCategoryContents = (categoryContents) => {
+  //   navGenre.innerHTML = categoryContents;
+  //   [...navGenre.children].forEach((genreNode) => {
+  //     genreNode.addEventListener("click", handleNavGenre);
+  //   });
+  // };
+
   this.setEvent = function () {
     this.addEvent("click", ".header__nav-item", ({ target }) => {
       const eventTarget = target.closest(".header__nav-item");
