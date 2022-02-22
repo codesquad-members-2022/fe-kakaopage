@@ -4,7 +4,7 @@ export const ImagePosterDetailComponent = (content) => {
     <div class="image-poster__detail">
         <img class="image-poster__detail_subscription" src="${content.status}" alt="UP 표시" />
         <img class="image-poster__detail_subscription" src="images/icon_read_count.png" alt="읽은 사람수 이미지" />
-        <span class="image-poster__detail_subscription">${content.subscriptions}</span>
+        <span class="image-poster__detail_subscription">${content.subscriptions}만명</span>
     </div>
     `
 }

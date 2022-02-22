@@ -1,5 +1,4 @@
 export const ImagePosterMoreDetailComponent = (content) => {
-    console.log(content);
     return /* html */ `
         <div class="detail-more__inner">
             <img class="image-poster__detail_subscription" src="${content.status}" alt="상태 표시" />
@@ -10,8 +9,7 @@ export const ImagePosterMoreDetailComponent = (content) => {
         </div>
         <div class="detail-more__inner">
             <img class="image-poster__detail_subscription" src="images/icon_read_count.png" alt="읽은 사람수 이미지" />
-            <div class="image-poster__detail_separator"></div>
-            <span class="image-poster__detail_subscription">${content.subscriptions}</span>
+            <span class="image-poster__detail_subscription">${content.subscriptions}만명</span>
             <div class="image-poster__detail_separator"></div>
             <span class="image-poster__detail_subscription">${content.author}</span>
         </div>
