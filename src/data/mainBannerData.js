@@ -1,5 +1,5 @@
 export const mainBaneerData = {
-    'webtoon-home': [
+    'home': [
         {   
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=czwYqy/hzmU0WFkAi/WDxkk2GmDErRxNJ399JojK',
@@ -29,7 +29,7 @@ export const mainBaneerData = {
             'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
         }
     ],
-    'webtoon-series': [
+    'daily': [
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=b8lhpM/hzp2jZTeQq/idpscnCSjQd93wOKxhvov1',
@@ -59,5 +59,215 @@ export const mainBaneerData = {
             'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
         }
     ],
+    'webtoon': [
+        {
+            'order': '1',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=luwjD/hyVkMjKYTy/ocIYcV1pYCo6MzPpEYj8tK',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'boy': [
+        {
+            'order': '1',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bPyki0/hzhOfLhfRJ/Hg2KsU5P8odGmpNDG74Rt1',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'drama': [
+        {
+            'order': '1',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'romance': [
+        {
+            'order': '1',
+            'src': '	https://dn-img-page.kakao.com/download/resource?kid=dAy72e/hzmU1BJ9rk/oq58nqY7JDjcUXEjVIpfs1',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'rofan': [
+        {
+            'order': '1',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=cWdaE/hzp2nVyWEE/RnGrsOQNnGo9EVqNNoeuk1',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'action': [
+        {
+            'order': '1',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=d99Egu/hzp2fiEdy2/pMPdXoXEcu1TzjHY7TTVm1',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ],
+    'BL': [
+        {
+            'order': '1',
+            'src': '	https://dn-img-page.kakao.com/download/resource?kid=bieQhm/hzp2mI9n4A/9aqnCcDnI3LGkjcXFC8n00',
+            'title': '당신의 밤을 나에게 주오',
+            'description': '"너도 괴물이구나?"',
+            'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
+        },
+        {   
+            'order': '2',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
+            'title': '엑스텐',
+            'description': '0.1cm의 오차도 허용하지 않아',
+            'tags': {'status': "recommend", 'type': '웹툰','views': '7.8만명'}    
+        },
+        {   
+            'order': '3',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1',
+            'title': '리플: 버서커',
+            'description': '세계 1위 게이머의 화려한 귀환',
+            'tags': {'status': "hot", 'type': '웹툰','views': '8.6만명'}    
+        },
+        {   
+            'order': '4',
+            'src': 'https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1',
+            'title': '파멸의 공주님',
+            'description': '나를 다시 현대로 돌려보내 줘!',
+            'tags': {'status': "hot", 'type': '웹툰','views': '38.7만명'}    
+        }
+    ]
 }
 

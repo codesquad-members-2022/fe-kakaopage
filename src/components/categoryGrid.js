@@ -1,6 +1,13 @@
-import { gridData } from "../data/categoryGrid.js";
+import { gridData } from "../data/categoryGridData.js";
 
-export const categoryGridTemplate = (genre) => {
+export const renderCategoryGrid = (genre) => {
+  const categoryGrid = document.createElement('div');
+  categoryGrid.classList.add('category-grid','center');
+  categoryGrid.innerHTML = categoryGridTemplate(genre);
+  document.querySelector('.tab-contents').appendChild(categoryGrid);
+}
+
+const categoryGridTemplate = (genre) => {
     const dataArr = gridData[genre];
     return `
     <ul class="category-grid__container">

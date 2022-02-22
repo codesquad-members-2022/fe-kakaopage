@@ -67,7 +67,7 @@ export const gridData = {
             'title': '기다무 플러스',
         }
     ],
-    "actoion": [
+    "action": [
         {
             'title': '독점 신작🔥'
         },
