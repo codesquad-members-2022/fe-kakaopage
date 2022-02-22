@@ -1,4 +1,5 @@
 import { ImagePosterDetailComponent } from "./ImagePosterDetailComponent.js";
+import { ImagePosterMoreDetailComponent } from "./ImagePosterMoreDetailComponent.js";
 
 export const ImagePosterComponent = (axis = 'col', obj, content) => {
     return /* html */`
@@ -6,7 +7,7 @@ export const ImagePosterComponent = (axis = 'col', obj, content) => {
     ${axis === 'col' ?
     `<div class="image-poster__${obj.imageSize} flex-${axis}">` :
     `<div class="image-poster flex-${axis}">`}
-            <div class="image-poster__${obj.imageSize}-item flex-${axis}_mr20">
+            <div class="image-poster__${obj.imageSize}-item">
                 <div class="${obj.imageSize}-item__inner-wrapper">
                     ${obj.imageStatus === 'clock' ? `<img class="image-poster_status" alt="상태 이미지" />` : ''}
                     <img src="${content.img}" class="image-poster__${obj.imageSize}_img" alt="이미지 포스터" />
@@ -19,9 +20,10 @@ export const ImagePosterComponent = (axis = 'col', obj, content) => {
                 </div>`
                 : ''}
             </div>
-            <div class="image-poster__detail-wrapper">
-                ${ImagePosterDetailComponent(content)}
-            </div>
+
+            ${axis === 'col' ?
+            `<div class="detail-wrapper">${ImagePosterDetailComponent(content)}</div>` :
+            `<div class="detail-more-wrapper">${ImagePosterMoreDetailComponent(content)}</div>`}
         </div>
     </a>`;
 }

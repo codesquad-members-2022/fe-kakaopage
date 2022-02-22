@@ -1,6 +1,3 @@
-.image-poster__wrapper {
-}
-
 .image-poster__small,
 .image-poster__large {
     margin-bottom: 20px;
@@ -71,13 +68,6 @@
     content: url("https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac");
 }
 
-.image-poster__img {
-    width: 120px;
-    height: 120px;
-    margin: 0;
-    vertical-align: top;
-}
-
 .image-poster__title {
     margin-bottom: 10px;
     text-overflow: ellipsis;
@@ -96,10 +86,22 @@
     color: var(--color-pale-gray);
 }
 
-.width-small {
-    width: 120px;
+.image-poster__detail_separator {
+    width: 1px;
+    height: 10px;
+    margin: 1px 5px 0 5px;
+    background-color: var(--color-pale-gray);
 }
 
-.width-large {
-    width: 155px;
+.detail-more-wrapper {
+    margin: 10px 0 10px 20px;
+}
+
+.detail-more__inner {
+    display: flex;
+    margin: 10px 0;
+}
+
+.detail-more__title {
+    margin-left: 5px;
 }
