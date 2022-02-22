@@ -1,6 +1,7 @@
-export function handleTabActive(liElement, isSub = false) {
+export function handleTabActive(element, isSub) {
+  debugger;
   const activeClass = isSub ? 'sub-category-active' : 'category-active';
-  const liElements = liElement.closest('ul').querySelectorAll('li');
-  liElements.forEach((li) => li.classList.remove(activeClass));
-  liElement.classList.add(activeClass);
+  const ulElement = element.closest('ul').querySelectorAll('li');
+  ulElement.forEach((li) => li.classList.remove(activeClass));
+  element.classList.add(activeClass);
 }

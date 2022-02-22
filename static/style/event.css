@@ -4,5 +4,5 @@
 }
 
 .sub-category-active {
-  color: var(--main-black);
+  background-color: red;
 }
