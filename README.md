@@ -1,6 +1,6 @@
 # README.md
 
-## [데모 페이지](https://youryu0212.github.io/clone-kakaopage/)
+## [데모 페이지](https://youryu0212.github.io/clone-kakaopage/) - 기능 : 월,화,수,목,금,토,일 탭 전환
 
 ## 카카오페이지 클론 - HTML,CSS,Javascript
 
@@ -24,5 +24,3 @@
 - [x] 이미지 카드 교체 함수
 - [x] 선택된 요일 글자 진하게 표시 (selected-text) position 이동 함수
 - [x] 이벤트 핸들링 함수
-
-- 기능 : 월,화,수,목,금,토,일 탭 전환
