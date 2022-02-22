@@ -406,6 +406,10 @@
     width: 100%;
 }
 
+.banner .slider_items.animate {
+    transition: .3s;
+}
+
 .banner .slider_items .item {
     width: 100%;
     flex-shrink: 0;
