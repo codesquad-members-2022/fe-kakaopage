@@ -135,7 +135,10 @@ const getElements = (targetPage) => {
 };
 
 const preventDefaults = () => {
-    $("body").addEventListener("click", (e) => e.preventDefault());
+    $("body").addEventListener("click", (e) => {
+        if (!e.target.matches("[data-link]")) return;
+        e.preventDefault();
+    });
 };
 
 const clearMainContents = () => {
