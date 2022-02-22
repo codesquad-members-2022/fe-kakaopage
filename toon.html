@@ -152,7 +152,7 @@
           </a>
         </div>
       </section>
-      <section class="container">
+      <section class="daily container">
         <div class="flex justify-between">
           <div class="flex items-center_justify-center">
             <h3 class="section__title">요일 연재 TOP</h3>
@@ -162,73 +162,17 @@
         </div>
         <nav>
           <ul class="lnb section__lnb flex justify-between">
-            <li>
-              <a class="lnb__link" href="#">월</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">화</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">수</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">목</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">금</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">토</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">일</a>
-            </li>
-            <li>
-              <a class="lnb__link" href="#">전체</a>
-            </li>
+            <li data-day="1" class="lnb__link pointer">월</li>
+            <li data-day="2" class="lnb__link pointer">화</li>
+            <li data-day="3" class="lnb__link pointer">수</li>
+            <li data-day="4" class="lnb__link pointer">목</li>
+            <li data-day="5" class="lnb__link pointer">금</li>
+            <li data-day="6" class="lnb__link pointer">토</li>
+            <li data-day="0" class="lnb__link pointer">일</li>
+            <li class="lnb__link pointer">완결</li>
           </ul>
         </nav>
-        <div class="grid">
-          <div class="grid__item">
-            <div class="border-round">
-              <div class="flex">
-                <img class="grid__thumnail" src="//dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2" alt="썸네일" />
-              </div>
-              <div class="grid__item__bottom">
-                <span>1위</span>
-                <img class="w-16" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="기다리면 무료" />
-              </div>
-            </div>
-            <div class="txt-lh-1_5 mg-t-10">
-              <div class="font-16 txt-ellipsis">도굴왕 도굴왕도굴왕</div>
-              <div class="flex items-center">
-                <img class="w-11" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="구독자" />
-                <span class="mg-l-5 pd-t-2 font-14 third-text-color">200.8만명</span>
-              </div>
-            </div>
-          </div>
-          <div class="grid__item">
-            <div class="border-round">
-              <div class="flex">
-                <img class="grid__thumnail" src="//dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2" alt="썸네일" />
-              </div>
-              <div class="grid__item__bottom">
-                <div class="flex items-center_justify-center">
-                  <img class="w-16" src="/fe-kakaopage/src/img/badge-thumbnail-star.svg" alt="별점" />
-                  <span class="mg-l-5 pd-t-2">9.9</span>
-                </div>
-                <img class="w-16" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="기다리면 무료" />
-              </div>
-            </div>
-            <div class="txt-lh-1_5 mg-t-10">
-              <div class="font-16 main-text-color txt-ellipsis">도굴왕 도굴왕도굴왕</div>
-              <div class="flex items-center">
-                <img class="w-11" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="구독자" />
-                <span class="mg-l-5 pd-t-2 font-14 third-text-color">200.8만명</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="grid"></div>
       </section>
       <section class="new container">
         <div class="flex justify-between">
@@ -349,5 +293,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="/fe-kakaopage/src/js/index.js"></script>
   </body>
 </html>
