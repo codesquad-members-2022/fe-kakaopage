@@ -43,5 +43,12 @@
     }, {
         "link": "/home?seriesId=53190884",
         "category": "주술회전"
+    }],
+    "eventBanner": [{
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=3r0mL/hzhOnC93T7/gg1DOA9440OcdD5OlkZGIk",
+        "imgDecription": "기다리면 무료 오픈 기념 1회 추가 무료"
+    }, {
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=3r0mL/hzhOnC93T7/gg1DOA9440OcdD5OlkZGIk",
+        "imgDecription": "기다리면 무료 오픈 기념 1회 추가 무료"
     }]
 }

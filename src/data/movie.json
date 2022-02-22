@@ -48,9 +48,11 @@
         "link": "/home?seriesId=53190884",
         "category": "19금 특별관"
     }], 
-    "eventBanner": [
-        "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK",
-        "ttps://dn-img-page.kakao.com/download/resource?kid=cLpNgw/hzp2moLmjN/dYhxv2zfFGIU9lDxuRkutK",
-        "https://dn-img-page.kakao.com/download/resource?kid=d6OBqA/hzp2jZSWXI/2jQb8ZNUuJRItOFTer6lh0"
-    ]
+    "eventBanner": [{
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cLpNgw/hzp2moLmjN/dYhxv2zfFGIU9lDxuRkutK",
+        "imgDecription": "도굴왕 포스터"
+    }, {
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=d6OBqA/hzp2jZSWXI/2jQb8ZNUuJRItOFTer6lh0",
+        "imgDecription": "화산전생 포스터"
+    }]
 }
