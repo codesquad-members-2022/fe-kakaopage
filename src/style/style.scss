@@ -380,7 +380,6 @@ header {
   &::after {
     position: relative;
     top: 1px;
-    display: inline-block;
     width: 14px;
     height: 14px;
     background-image: url('../img/icons/ic-more-gray.svg');
@@ -433,13 +432,13 @@ header {
 }
 
 .contents-list.small .ranking-info span {
+  @include pseudo-img();
   position: relative;
   top: -1px;
   color: $text-yellow;
 }
 
 .contents-list.small .rating::before {
-  display: inline-block;
   width: 12px;
   height: 12px;
   background-image: url('../img/icons/badge-thumbnail-star.svg');
@@ -459,12 +458,12 @@ header {
 }
 
 .contents-list.small .reader {
+  @include pseudo-img();
   color: $text-mid-gray;
   font-size: 0.875rem;
 }
 
 .contents-list.small .reader::before {
-  display: inline-block;
   width: 12px;
   height: 12px;
   background-image: url('../img/icons/icon_read_count.png');
@@ -598,24 +597,31 @@ header {
 
 .info-area {
   margin-bottom: 20px;
+
+  * {
+    color: $info-gray;
+    font-size: 0.875rem;
+
+    &:not(:last-child)::after {
+      @include text-separator(10px, $info-gray);
+      margin: 0 2px 0 4px;
+    }
+  }
+
+  .reader {
+    @include pseudo-img();
+  }
 }
 
-.info-area * {
-  color: $info-gray;
-  font-size: 0.875rem;
-}
+.info-area .reader {
+  @include pseudo-img();
 
-.info-area *:not(:last-child)::after {
-  @include text-separator(10px, $info-gray);
-  margin: 0 2px 0 4px;
-}
-
-.info-area .reader::before {
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  background-image: url('../img/icons/icon_read_count.png');
-  margin-right: 3px;
+  &::before {
+    width: 11px;
+    height: 11px;
+    background-image: url('../img/icons/icon_read_count.png');
+    margin-right: 3px;
+  }
 }
 
 /* Event Banner */
