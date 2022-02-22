@@ -1,3 +1,12 @@
+let data;
+const DATA_URL = "../data/data.json";
+
+// 1회성 json data 받기
+await (async function getJson() {
+  const res = await fetch(DATA_URL);
+  data = await res.json();
+})();
+
 function $(selector) {
   return document.querySelector(selector);
 }
@@ -33,4 +42,4 @@ function setProperty(selector, property, value) {
   $(selector).setAttribute(property, value);
 }
 
-export { $, getStrTag, addImg, addTag, setProperty };
+export { $, getStrTag, addImg, addTag, setProperty, data };
