@@ -2,8 +2,7 @@ import Component from "../Component.js";
 import { createExtendsRelation } from "../../utils.js";
 
 function Category(target) {
-  this.target = target;
-  this.state = {};
+  Component.call(this, target);
 
   this.template = function () {
     const { name, category, waitForFree, newAlert, selected } = this.state;

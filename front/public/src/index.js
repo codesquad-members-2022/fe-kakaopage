@@ -25,6 +25,7 @@ const init = async () => {
   ).state.category;
 
   genreList.setState({ genres: genres[category] });
+  categoryList.setState({ genreList });
 
   // Category 에 맞는 Contents 들 main 에 넣기
   // 1. 장르 Navigation

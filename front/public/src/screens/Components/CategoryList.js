@@ -1,11 +1,8 @@
 import Component from "../Component.js";
-import Category from "./Category.js";
 import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
 
 function CategoryList(target) {
-  this.target = target;
-  this.state = {};
-
+  Component.call(this, target);
   // const genreName = event.target.dataset.genre;
   // const genreContents = genres[category][genreName].screen(categoryResults);
   // renderGenreContents(genreContents);
@@ -22,6 +19,7 @@ function CategoryList(target) {
       const eventTarget = target.closest(".header__nav-item");
       updateNodeClasses(eventTarget, "selected");
       const category = eventTarget.dataset.category;
+      console.log("hihi");
     });
   };
 

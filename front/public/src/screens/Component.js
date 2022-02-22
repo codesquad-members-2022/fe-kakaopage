@@ -1,10 +1,12 @@
 function Component(target) {
   this.target = target;
   this.state = {};
+  this.eventTypes = [];
 }
 
 Component.prototype.render = function () {
   this.target.innerHTML = this.template();
+  this.removeEvent();
   this.setEvent();
 };
 
@@ -12,15 +14,23 @@ Component.prototype.template = function () {
   return ``;
 };
 
+Component.prototype.removeEvent = function () {
+  this.eventTypes.forEach(({ type, listener }) => {
+    this.target.removeEventListener(type, listener);
+  });
+};
+
 Component.prototype.addEvent = function (eventType, selector, callback) {
   const children = [...this.target.querySelectorAll(selector)];
-
   const isTarget = (target) =>
     children.includes(target) || target.closest(selector);
-  this.target.addEventListener(eventType, (event) => {
+
+  const handleEventListener = (event) => {
     if (!isTarget(event.target)) return false;
     callback(event);
-  });
+  };
+  this.eventTypes.push({ type: eventType, listener: handleEventListener });
+  this.target.addEventListener(eventType, handleEventListener);
 };
 
 Component.prototype.setEvent = function () {};

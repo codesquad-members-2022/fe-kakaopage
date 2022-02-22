@@ -4,7 +4,8 @@ import { getJson, createExtendsRelation } from "../../utils.js";
 import Component from "../Component.js";
 const { results: webtoonResults } = await getJson("webtoon");
 
-function WebtoonCategory(initGenre) {
+function WebtoonCategory(target) {
+  Component.call(this, target);
   // const webtoonGenre = genres.webtoon;
   // const initScreenGenre = webtoonGenre[initGenre].screen(webtoonResults);
   // renderGenreContents(initScreenGenre);
