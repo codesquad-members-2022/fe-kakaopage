@@ -145,7 +145,7 @@ header {
     cursor: pointer;
 }
 
-.genre-nav-li {
+.genre-item {
     list-style: none;
     flex-grow: 1;
 
@@ -335,7 +335,7 @@ header {
     flex-wrap: wrap;
 }
 
-.content-form {
+.content-wrap {
     width: 120px;
     height: 210px;
 
@@ -343,7 +343,7 @@ header {
     flex-direction: column;
 }
 
-.content-form-img-wrap {
+.content-wrap-img-wrap {
     width: 100%;
     height: 150px;
 
@@ -351,12 +351,12 @@ header {
     overflow: hidden;
 }
 
-.content-form-img {
+.content-wrap-img {
     display: block;
     height: 120px;
 }
 
-.content-form-img-info {
+.content-wrap-img-info {
     height: 30px;
     margin-top: 0;
     padding: 0 10px;
@@ -576,7 +576,7 @@ details {
     justify-content: space-between;
 }
 
-.content-form-bigger {
+.content-wrap-bigger {
     width: 155px;
     height: 280px;
 
