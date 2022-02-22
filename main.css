@@ -81,7 +81,6 @@ header {
     font-weight: bold;
 }
 
-
 /* 바디 영역 */
 .wrapper {
     width: 100vw;
@@ -132,7 +131,6 @@ header {
 }
 
 .head-nav-li.selected {
-    color: inherit;
     padding-bottom: 21px;
     border-bottom: 3px solid var(--kakao-yellow);
 }
@@ -173,18 +171,13 @@ header {
     margin: 10px auto;
 }
 
-.slide-banner {
+.banner-main {
     height: 480px;
     background-color: gray;
 }
 
 .img-with-line {
     position: relative;
-}
-
-.img-with {
-    width: 100%;
-    height: 100%;
 }
 
 .line-with {
@@ -202,7 +195,7 @@ header {
     color: var(--content-wrap-black); 
 }
 
-.recommendation {
+.summary {
     margin-top: 10px;
     padding: 15px 0;
 
@@ -214,7 +207,7 @@ header {
     flex-wrap: wrap;
 }
 
-.rec-btn {
+.summary-btn {
     background-color: var(--bg-color);
     border: none;
 
@@ -226,7 +219,7 @@ header {
     margin: 2px;
 }
 
-.slide-event {
+.banner-ad {
     height: 140px;
     margin-top: 10px;
     background-color: white;
@@ -236,21 +229,16 @@ header {
     align-items: center;
 }
 
-.slide-banner-wrap {
+.banner-ad-wrap {
     width: 550px;
     height: 100px;
 
     margin: 0 20px;
-}
-
-.slide-banner-img {
-    width: 100%;
-    height: 100%;
-
     border-radius: 8px;
+    overflow: hidden;
 }
 
-.slide-button {
+.banner-ad-button {
     width: 40px;
     height: 40px;
 
@@ -372,7 +360,6 @@ header {
     background-color: var(--content-wrap-black);
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -486,7 +473,6 @@ header {
     height: 11px;
     margin: 5px 5px 0 5px;
     background-color: var(--bg-color);
-    
 }
 
 .ranking-desc-day {
@@ -496,17 +482,12 @@ header {
     color: var(--font-color-gray);
 }
 
-.slide-banner-middle-wrap {
+.banner-sub-wrap {
     width: 680px;
     height: 340px;
 
     border-radius: 5px;
     overflow: hidden;
-}
-
-.slide-banner-middle {
-    width: 100%;
-    height: 100%;
 }
 
 .horizontal-img-wrap {

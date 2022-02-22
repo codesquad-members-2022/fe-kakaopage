@@ -4,7 +4,7 @@ import { createContentForms, createContentFormsBigger, createHorizontalContents,
 
 export const createFormatBannerMain = () => {
     const format0 = `
-<div class="slide-banner">
+<div class="banner-main">
     <div class="img-with-line">
         <img class="img-with" src=${pickFromArr(dummy.slideBannerMainImg)}>
         <div class="line-with">${pickFromArr(dummy.contentDesc)}</div>
@@ -16,13 +16,13 @@ export const createFormatBannerMain = () => {
 
 export const createFormatSummaryA = () => {
     const format1A = `
-<div class="recommendation">
-    <button class="rec-btn" style="border-radius: 8px 0 0 0">오늘 UP</button>
-    <button class="rec-btn">오늘 신작</button>
-    <button class="rec-btn" style="border-radius: 0 8px 0 0">오리지널</button>
-    <button class="rec-btn" style="border-radius: 0 0 0 8px">완결까지 정주행</button>
-    <button class="rec-btn">독립운동가 웹툰</button>
-    <button class="rec-btn" style="border-radius: 0 0 8px 0">오늘 랭킹</button>
+<div class="summary">
+    <button class="summary-btn" style="border-radius: 8px 0 0 0">오늘 UP</button>
+    <button class="summary-btn">오늘 신작</button>
+    <button class="summary-btn" style="border-radius: 0 8px 0 0">오리지널</button>
+    <button class="summary-btn" style="border-radius: 0 0 0 8px">완결까지 정주행</button>
+    <button class="summary-btn">독립운동가 웹툰</button>
+    <button class="summary-btn" style="border-radius: 0 0 8px 0">오늘 랭킹</button>
 </div>`
 
     return format1A
@@ -30,10 +30,10 @@ export const createFormatSummaryA = () => {
 
 export const createFormatSummaryB= (a, b, c) => {
     const format1B = `
-<div class="recommendation">
-    <button class="rec-btn" style="border-radius: 8px 0 0 8px">${a}</button>
-    <button class="rec-btn">${b}</button>
-    <button class="rec-btn" style="border-radius: 0 8px 8px 0">${c}</button>
+<div class="summary">
+    <button class="summary-btn" style="border-radius: 8px 0 0 8px">${a}</button>
+    <button class="summary-btn">${b}</button>
+    <button class="summary-btn" style="border-radius: 0 8px 8px 0">${c}</button>
 </div>`
 
     return format1B
@@ -41,12 +41,12 @@ export const createFormatSummaryB= (a, b, c) => {
 
 export const createFormatBannerAd = () => {
     const format2 = `
-<div class="slide-event">
-    <button class="slide-button"><</button>
-    <div class="slide-banner-wrap">
-        <img src=${pickFromArr(dummy.slideBannerEventImg)} class="slide-banner-img">
+<div class="banner-ad">
+    <button class="banner-ad-button"><</button>
+    <div class="banner-ad-wrap ">
+        <img src=${pickFromArr(dummy.slideBannerEventImg)} class="banner-ad-wrap-img">
     </div>
-    <button class="slide-button">></button>
+    <button class="banner-ad-button">></button>
 </div>`
 
     return format2
@@ -141,8 +141,8 @@ export const createFormatBannerSub = () => {
         <div class="title-more">더보기></div>
     </div>
 
-    <div class="slide-banner-middle-wrap">
-        <img src=${pickFromArr(dummy.slideBannerMiddleImg)} class="slide-banner-middle">
+    <div class="banner-sub-wrap">
+        <img src=${pickFromArr(dummy.slideBannerMiddleImg)} class="banner-sub">
     </div>
 </div>`
 

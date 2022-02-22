@@ -210,8 +210,8 @@ export function resetFlexbox(target){
     }
 }
 
-export function navEvent () {
-    const body = document.querySelector('body');
+export function addGenreNavEventTo (element) {
+    const body = document.querySelector(element);
 
     body.addEventListener("click", e => {
         const genre = e.target.dataset.genre;
