@@ -21,6 +21,17 @@ const topBanner = {
             category : "웹툰",
             viewer : "49.5만",
             description : "세상에 없던 꼴통 재벌이 되다!"
+        },
+        {
+            title : "지옥에서 돌아온 성좌님",
+            image : "https://dn-img-page.kakao.com/download/resource?kid=vY9EO/hzhOm4DsAe/ooN3xLPLUZPU6Uid2Matlk",
+            badge : {
+                name : "up",
+                src : "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
+            },
+            category : "웹툰",
+            viewer : "46.7만",
+            description : "인간 최초의 성좌가 되는 길!"
         }
     ],
     day : [
