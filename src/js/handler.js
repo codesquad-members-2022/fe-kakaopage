@@ -9,10 +9,18 @@ const addHandlerOnNav = (nav) => {
 const handleNav = (event) => {
   const navtype = event.target.parentNode.dataset.navtype;
   const category = event.target.dataset.category;
+
   if (!navtype || !category) return;
+
+  if (isAlreadyClicked(event.target)) {
+    window.scrollTo(0, 0);
+    return;
+  }
 
   loadContent(navtype, category);
 };
+
+const isAlreadyClicked = (eventTarget) => eventTarget.className.includes('--active');
 
 const changeNavStyle = (navtype, category) => {
   const classActive = `${navtype}__item--active`;
