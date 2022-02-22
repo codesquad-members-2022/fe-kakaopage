@@ -1,4 +1,5 @@
 import Component from "../Component.js";
+import { createExtendsRelation } from "../../utils.js";
 
 function Category(target) {
   this.target = target;
@@ -19,7 +20,6 @@ function Category(target) {
   this.render();
 }
 
-Category.prototype = Object.create(Component.prototype);
-Category.prototype.constructor = Category;
+createExtendsRelation(Category, Component);
 
 export default Category;

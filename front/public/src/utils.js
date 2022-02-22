@@ -1,5 +1,10 @@
 import { LOCAL_FETCH_URL, SERVER_FETCH_URL } from "./constants.js";
 
+const createExtendsRelation = (Child, Parent) => {
+  Child.prototype = Object.create(Parent.prototype);
+  Child.prototype.constructor = Child;
+};
+
 const updateNodeClasses = (nodeList, target, className) => {
   [...nodeList.children].forEach((node) => {
     node.classList.remove(className);
@@ -23,4 +28,4 @@ const getJson = (dataName) => {
   });
 };
 
-export { updateNodeClasses, getJson, formatUserCount };
+export { updateNodeClasses, getJson, formatUserCount, createExtendsRelation };

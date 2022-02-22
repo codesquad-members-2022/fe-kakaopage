@@ -1,5 +1,6 @@
 import Component from "../Component.js";
 import Category from "./Category.js";
+import { createExtendsRelation } from "../../utils.js";
 
 function CategoryList(target) {
   this.target = target;
@@ -63,7 +64,6 @@ function CategoryList(target) {
   this.appendHTML();
 }
 
-CategoryList.prototype = Object.create(Component.prototype);
-CategoryList.prototype.constructor = CategoryList;
+createExtendsRelation(CategoryList, Component);
 
 export default CategoryList;

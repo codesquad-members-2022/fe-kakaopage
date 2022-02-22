@@ -1,8 +1,7 @@
 import genres from "../../genres.js";
 import { renderGenreContents } from "../../core.js";
-import { getJson } from "../../utils.js";
+import { getJson, createExtendsRelation } from "../../utils.js";
 import Component from "../Component.js";
-
 const { results: webtoonResults } = await getJson("webtoon");
 
 function WebtoonCategory(initGenre) {
@@ -29,7 +28,6 @@ function WebtoonCategory(initGenre) {
   };
 }
 
-WebtoonCategory.prototype = Object.create(Component.prototype);
-WebtoonCategory.prototype.constructor = WebtoonCategory;
+createExtendsRelation(WebtoonCategory, Component);
 
 export default WebtoonCategory;
