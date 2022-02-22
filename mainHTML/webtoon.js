@@ -4,6 +4,7 @@ import { webtoonMain } from "../index.js"
 import romanceTopData from "../data/webtoon/home/romance-top.js";
 import { createContentVerticalSmall } from "../components/content-vertical-small.js";
 import { createHomeDayNav } from "../components/home-day-nav.js";
+import { createEventSlide } from "../components/event-slide.js";
 
 function renderWebtoonMain() {
     const mainContainer = document.querySelector('main .container');
@@ -21,7 +22,7 @@ function renderWebtoonMain() {
         { id: 'recommend-event-section', header: '추천 이벤트' },
     ];
     sectionDatas.forEach(sectionData => {
-        mainContainer.insertAdjacentHTML('beforeend', createContentsSection(sectionData));
+        mainContainer.appendChild(createContentsSection(sectionData));
     });
     mainContainer.querySelector('#day-top-section .contents-header').after(createHomeDayNav());
     // 로맨스 TOP
@@ -29,6 +30,8 @@ function renderWebtoonMain() {
     romanceTopData.forEach(data => {
         romanceTopWrapper.appendChild(createContentVerticalSmall(data));
     });
+
+    mainContainer.querySelector('#recommend-event-section .contents-wrapper').appendChild(createEventSlide());
     createEventListnerGenreNav();
 }
 
