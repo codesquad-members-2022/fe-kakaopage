@@ -1,8 +1,0 @@
-.blind {
-    display: none;
-}
-
-.inverted {
-    filter: invert(100%);
-    opacity: 30%;
-}
