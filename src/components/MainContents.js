@@ -10,6 +10,11 @@ const MainContents = () => {
             ${SubBanner()}
             ${DailySeriesRanking()}
             ${GenreTop('로맨스')}
+            ${GenreTop('로판')}
+            ${GenreTop('드라마')}
+            ${GenreTop('BL/GL')}
+            ${GenreTop('소년')}
+            ${GenreTop('액션무협')}
           </div>`;
 };
 

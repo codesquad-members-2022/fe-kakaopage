@@ -6,7 +6,7 @@ const GenreTop = (genre) => {
   const title = `${genre} TOP`;
 
   const filteredWebtoon = () => {
-    const filteredGenreArray = Webtoons.filter((webtoon) => webtoon.genre === genre);
+    const filteredGenreArray = Webtoons.filter((webtoon) => genre.includes(webtoon.genre));
     return filteredGenreArray.length > 5 ?
       filteredGenreArray.slice(0, 5) :
       filteredGenreArray;
