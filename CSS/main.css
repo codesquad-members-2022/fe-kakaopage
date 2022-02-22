@@ -65,11 +65,11 @@
   color: var(--non-focus-font-color);
 }
 
-.daily__top .select__day .daily__top--focused {
+.daily__top .select__day .day--focused {
   border-bottom: 2px solid var(--main-point-color);
 }
 
-.daily__top .select__day .daily__top--focused button {
+.daily__top .select__day .day--focused .day__btn {
   color: var(--black-color);
 }
 
@@ -81,6 +81,11 @@
   background-color: var(--white-color);
 }
 
+.daily__select__day .day--focused {
+  border-radius: 50%;
+  background-color: var(--main-point-color);
+}
+
 .daily__select__day .day__btn {
   width: 48px;
   height: 48px;
@@ -89,8 +94,7 @@
   color: var(--non-focus-font-color);
 }
 
-.daily__select__day .day--focused {
-  background-color: var(--main-point-color);
+.daily__select__day .day--focused .day__btn {
   color: var(--black-color);
 }
 
