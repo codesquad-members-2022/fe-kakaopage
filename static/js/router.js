@@ -3,6 +3,7 @@ import { Webtoon } from './category/Webtoon.js';
 import { Novel } from './category/Novel.js';
 import { render } from './render.js';
 
+// 나머지 카테고리는 반복이어서 생략
 export const routes = [
   { categoryUid: 0, getContent: Main },
   { categoryUid: 1, getContent: Webtoon },
