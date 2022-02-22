@@ -410,18 +410,19 @@ table {
   overflow: hidden;
 }
 
-.webtoon-slide__img {
+.webtoon-slide__imgs {
   display: flex;
   cursor: pointer;
+  transition: all 0.6s;
 }
-.webtoon-slide__img .webtoon-slide__banner {
+.webtoon-slide__imgs .webtoon-slide__banner {
   padding: 10px;
   font-size: 16px;
   text-align: center;
   background-color: #ffd200;
 }
 
-.webtoon-slide__imgs .webtoon-slide__imgs--first {
+.webtoon-slide__img .webtoon-slide__img--first {
   display: block;
 }
 

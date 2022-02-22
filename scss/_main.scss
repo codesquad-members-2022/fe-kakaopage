@@ -40,9 +40,10 @@
   overflow: hidden;
 }
 
-.webtoon-slide__img {
+.webtoon-slide__imgs {
   display: flex;
   cursor: pointer;
+  transition: all 0.6s;
 
   .webtoon-slide__banner {
     padding: 10px;
@@ -52,8 +53,8 @@
   }
 }
 
-.webtoon-slide__imgs {
-  .webtoon-slide__imgs--first {
+.webtoon-slide__img {
+  .webtoon-slide__img--first {
     display: block;
   }
 }

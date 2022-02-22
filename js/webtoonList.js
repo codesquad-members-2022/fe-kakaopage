@@ -1,8 +1,7 @@
 import dataParse from './dataParse.js'
 import data from './datas.js'
 
-const dayTab = container.querySelector('.serial__list')
-let currentActiveTab = dayTab.querySelector('.serial__item--focus')
+let currentActiveTab = document.querySelector('.serial__item--focus')
 
 function setWebtoonList() {
   const container = document.querySelector('#container')
@@ -58,8 +57,6 @@ function toggleActiveWebtoonTab(e) {
 }
 
 function toggleActiveTab(e) {
-  // 1. 현재 focus 메뉴 line: 6
-  // let currentActiveTab = dayTab.querySelector('.serial__item--focus')
   // 2. 현재 클릭한 메뉴
   const tabItem = e.target
   if (e.target.tagName !== this.tagName) {
@@ -78,5 +75,4 @@ export default {
   setWebtoonList,
   toggleActiveWebtoonTab,
   toggleActiveTab,
-  dayTab,
 }
