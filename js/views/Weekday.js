@@ -5,6 +5,7 @@ export default class extends Page {
         super();
         this.menu = params.menu;
         this.today = params.today;
+        this.data = params.data;
     }
 
     getMenus() {
@@ -14,6 +15,38 @@ export default class extends Page {
             <li class="${menuName === this.today ? "active" : ""}">
             <a href="" data-link="">${menuName}</a>
             </li>`;
+            })
+            .join("");
+    }
+
+    getItems() {
+        const selectedData = this.data[this.today];
+        return selectedData
+            .map((cur, idx) => {
+                return `
+                <li class="webtoon-card">
+                <div class="thumbnail-wrap">
+                <img
+                    src="${cur.img}"
+                    alt="${cur.title}"
+                    class="thumbnail"
+                />
+                <div class="group-flex rank-info">
+                    <div>
+                        <span>${idx + 1}위</span>
+                    </div>
+                    <img
+                        src="./images/bmbadge_waitfree.svg"
+                        alt="기다리면 무료 아이콘"
+                    />
+                </div>
+            </div>
+            <p class="title">${cur.title}</p>
+            <div class="reader-info">
+                <span>🙍‍♀️</span>
+                <span>${cur.subscriber}</span>
+            </div>
+        </li>`;
             })
             .join("");
     }
@@ -32,7 +65,9 @@ export default class extends Page {
         </ul>
         <div>전체(000)</div>
         </div>
-        <ol class="webtoon-card-wrap group-flex padding-default"></ol>
+        <ol class="webtoon-card-wrap group-flex padding-default">
+        ${this.getItems()}
+        </ol>
 
         </div>
         `;

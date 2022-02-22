@@ -226,6 +226,9 @@ main {
 .webtoon-card .title {
     color: #333;
     margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .webtoon-card .reader-info {
