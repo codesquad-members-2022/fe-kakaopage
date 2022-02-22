@@ -1,4 +1,4 @@
-import tagLists from '../json/tagLists.json' assert { type: 'json' };
+import tagLists from '../../json/tagLists.json' assert { type: 'json' };
 // tagList object
 // "tag": "message"
 // "note": "message"
