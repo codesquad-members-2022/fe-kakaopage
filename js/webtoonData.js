@@ -13,3 +13,9 @@ export const webtoonData = [
     {day: ['토', '일'], src:"./images/daily-img6.png", title:"다정한 개새끼의 목을 비틀겠습니다", rank:7, rating:4.5, views:20.4 },
 
 ];
+
+
+export const contentsData = [
+    {title: '정령왕의 딸', src:"./images/img-정령왕의딸.png", views:72.6, desc:"우리 아빠가 정령왕의 딸이라구?!"},
+    {title: '로드 오브 머니', src:"./images/img-로드오브머니.png", views:49.5, desc:"세상에 없던 꼴통 재벌이 되다!"}
+]

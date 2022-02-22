@@ -1,6 +1,7 @@
 
 import { select, addClass, removeClass } from "./util.js";
 import { webtoonData } from "./webtoonData.js"
+import { createContents } from "./webtoon_home.js";
 
 function createDailyDiv() {
     const dailyDiv = document.createElement('div');
@@ -14,6 +15,8 @@ function createDailyDiv() {
 }
 
 function createDailyNav() {
+    createDailyDiv();
+
     const days = ['월', '화', '수', '목', '금', '토', '일', '전체']
     const $daily__nav = select('.daily__nav')
     let template = ``;
@@ -101,10 +104,10 @@ function createTodayContent() {
 }
 
 export function initWebtoonDaily() {
-    createDailyDiv()
     createDailyNav()
     createTodayContent()
     listenEvent()
 }
+
 
 //initWebtoon();
