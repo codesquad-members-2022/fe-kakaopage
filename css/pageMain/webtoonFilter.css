@@ -20,7 +20,8 @@
 
 /* filter UI탭 클릭 */
 .day-filter li.circle {
-  background: url('../../data/filter/circle.png') 50% 50% / 40px no-repeat;
+  background: url('../../assets/data/filter/circle.png') 50% 50% / 40px
+    no-repeat;
   color: black;
   font-weight: bold;
 }

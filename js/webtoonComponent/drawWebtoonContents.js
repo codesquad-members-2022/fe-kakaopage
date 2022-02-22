@@ -12,7 +12,7 @@ const createContentsContainer = (title) => {
     title
       ? `<div class="contents-header">
     <div class="contents-title big-font">${title}</div>
-    <a href="#" class="contents-more">더보기 <img src="./data/contents/more.svg"></a>`
+    <a href="#" class="contents-more">더보기 <img src="./assets/data/contents/more.svg"></a>`
       : ''
   }
   </div>

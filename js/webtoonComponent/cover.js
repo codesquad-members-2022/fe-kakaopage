@@ -9,20 +9,20 @@ export const wideCover = (webtoonData) => {
   ${
     !badge
       ? ''
-      : `<img class="webtoon-badge" src="./data/contents/${badge}.png" alt="" />`
+      : `<img class="webtoon-badge" src="./assets/data/contents/${badge}.png" alt="" />`
   }</div>
 
   <div class="webtoon-info">
     <div class="webtoon-title">
       <img
         class="webtoon-state"
-        src="./data/contents/${state}.svg"
+        src="./assets/data/contents/${state}.svg"
         alt=""
       />${title}
     </div>
     <div class="webtoon-summary small-font">${summary}</div>
     <div class="webtoon-etc">
-      <img class="webtoon-subs" src="./data/contents/subscriber.png" alt="" />
+      <img class="webtoon-subs" src="./assets/data/contents/subscriber.png" alt="" />
       <span class="webtoon-subs-count"
         >${(subscriberCount / 10000).toFixed(0) + '만명'}</span
       >
@@ -39,7 +39,7 @@ export const bigCover = (webtoonData) => {
     ${
       !badge
         ? ''
-        : `<img class="webtoon-badge" src="./data/contents/${badge}.png" />`
+        : `<img class="webtoon-badge" src="./assets/data/contents/${badge}.png" />`
     }
   </div>
   
@@ -47,13 +47,13 @@ export const bigCover = (webtoonData) => {
     <div class="webtoon-title">
       <img
         class="webtoon-state"
-        src="./data/contents/${state}.svg"
+        src="./assets/data/contents/${state}.svg"
         alt=""
       />${title}
     </div>
 
     <div class="webtoon-etc">
-      <img class="webtoon-subs" src="./data/contents/subscriber.png" />
+      <img class="webtoon-subs" src="./assets/data/contents/subscriber.png" />
       <span class="webtoon-subs-count">${
         (subscriberCount / 10000).toFixed(0) + '만명'
       }</span>
@@ -71,21 +71,21 @@ export const normalCover = (webtoonData) => {
         ${
           under6th
             ? `<div class="webtoon-ranking">${ranking}위</div>`
-            : `<img class="webtoon-score-img" src="./svg/star.svg" alt="" />
+            : `<img class="webtoon-score-img" src="./assets/data/contents/star.svg" alt="" />
             <div class="webtoon-score">${score}</div>
             `
         }        
       </div>
       <div class="webtoon-label-row">
-        <img src="./data/state/waitfree.svg" />
+        <img src="./assets/data/state/waitfree.svg" />
       </div>
     </div>
   </div>
   <div class="webtoon-info">
     <div class="webtoon-title">${title}</div>
     <div class="webtoon-etc">
-      <img class="webtoon-state" src="./data/contents/${state}.svg" alt="" />
-      <img class="webtoon-subs" src="./data/contents/subscriber.png" alt="" />
+      <img class="webtoon-state" src="./assets/data/contents/${state}.svg" alt="" />
+      <img class="webtoon-subs" src="./assets/data/contents/subscriber.png" alt="" />
       <span class="webtoon-subs-count">${
         (subscriberCount / 10000).toFixed(0) + '만명'
       }</span>
@@ -104,7 +104,7 @@ export const smallCover = (webtoonData) => {
   <div class="webtoon-cover small-cover">
     <img
       class="webtoon-badge"
-      src="./data/contents/waitfree-badge.png"
+      src="./assets/data/contents/waitfree-badge.png"
       alt=""
     />
   </div>
@@ -112,12 +112,12 @@ export const smallCover = (webtoonData) => {
     <div class="webtoon-title">
       <img
         class="webtoon-state"
-        src="./data/contents/${state}.svg"
+        src="./assets/data/contents/${state}.svg"
         alt=""
       />${title}
     </div>
     <div class="webtoon-etc">
-      <img class="webtoon-subs" src="./data/contents/subscriber.png" alt="" />
+      <img class="webtoon-subs" src="./assets/data/contents/subscriber.png" alt="" />
       <span class="webtoon-subs-count">${
         (subscriberCount / 10000).toFixed(0) + '만명'
       }</span>

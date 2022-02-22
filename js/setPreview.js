@@ -10,19 +10,20 @@ const setPreviewInfo = (preview) => {
   previewTitle.innerHTML = `<h2>${preview.title}</h2>`;
 
   const previewState = document.querySelector('.preview-state');
-  previewState.innerHTML = `<img src="./data/state/${preview.state}.svg" alt="${preview.state}"/>`;
+  previewState.innerHTML = `<img src="./assets/data/state/${preview.state}.svg" alt="${preview.state}"/>`;
 
   const previewClass = document.querySelector('.preview-class');
   const isWaitFree = preview.waitfree;
   previewClass.innerHTML =
     `${
       isWaitFree
-        ? `<img src="./data/state/waitfree.svg" alt="waitfree.svg"/>`
+        ? `<img src="./assets/data/state/waitfree.svg" alt="waitfree.svg"/>`
         : ''
     }` + `<span>${preview.class}</span>`;
 
   const subscribers = document.querySelector('.preview-subscribers');
   subscribers.innerHTML = `
+  <img src="./assets/static/subscriber.svg" />
   <span>${(preview.subscriber / 10000).toFixed(1)}만명</span>`;
 
   const previewSummary = document.querySelector('.preview-summary');
