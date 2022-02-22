@@ -529,8 +529,12 @@ header {
   margin-right: 3px; }
 
 /* Event Banner */
+.recommend-event .event-banner-wrapper {
+  position: relative;
+  overflow: hidden; }
+
 .recommend-event .banner-container {
-  position: relative; }
+  display: flex; }
 
 .recommend-event .banner-container img {
   width: 100%;

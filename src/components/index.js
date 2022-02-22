@@ -21,6 +21,9 @@ import VerticalImgContainer from './contentsList/VerticalImgContainer.js';
 import VerticalContentsListItem from './contentsList/VerticalContentsListItem.js';
 import VerticalContentsList from './contentsList/VerticalContentsList.js';
 import DailyRanking from './section/DailyRanking.js';
+import EventBannerItem from './banner/EventBannerItem.js';
+import EventBannerList from './banner/EventBannerList.js';
+import RecommendEvent from './section/RecommendEvent.js';
 
 export {
   Nav,
@@ -46,4 +49,7 @@ export {
   VerticalContentsListItem,
   VerticalContentsList,
   DailyRanking,
+  EventBannerItem,
+  EventBannerList,
+  RecommendEvent,
 };

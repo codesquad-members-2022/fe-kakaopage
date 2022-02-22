@@ -1,4 +1,14 @@
-import { MainNav, DailySeriesRanking, MainBanner, CategoryMenu, SubBanner, GenreTop, AnticipatedWork, DailyRanking } from './index.js';
+import {
+  MainNav,
+  DailySeriesRanking,
+  MainBanner,
+  CategoryMenu,
+  SubBanner,
+  GenreTop,
+  AnticipatedWork,
+  DailyRanking,
+  RecommendEvent,
+} from './index.js';
 import { Categories } from '../data';
 
 const MainContents = () => {
@@ -17,6 +27,7 @@ const MainContents = () => {
             ${GenreTop('소년')}
             ${GenreTop('액션무협')}
             ${DailyRanking()}
+            ${RecommendEvent()}
           </div>`;
 };
 

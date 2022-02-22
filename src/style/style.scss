@@ -626,8 +626,13 @@ header {
 
 /* Event Banner */
 
-.recommend-event .banner-container {
+.recommend-event .event-banner-wrapper {
   position: relative;
+  overflow: hidden;
+}
+
+.recommend-event .banner-container {
+  display: flex;
 }
 
 .recommend-event .banner-container img {
