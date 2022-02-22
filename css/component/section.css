@@ -15,6 +15,7 @@
     height: 200px;
     /* background-color: red; */
     margin: 10px 10px 10px 10px;
+    /* transition: ease-in 1s;; */
 }
 
 .section__book-image-wrapper {

@@ -56,4 +56,5 @@
     width: 720px;
     margin-top: 5px;
     background-color: #fff;
+    transition: ease-in 1s;
 }
