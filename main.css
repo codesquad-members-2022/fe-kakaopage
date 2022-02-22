@@ -1,3 +1,11 @@
+:root {
+    --bg-color: rgb(238, 238, 238);
+    --font-color-gray: rgb(156, 154, 154);
+    --stage-yellow: rgb(251, 188, 23);
+    --kakao-yellow: rgb(242,208,49);
+    --content-wrap-black: rgb(24,25,27);
+}
+
 body{
     font-size: 16px;
     margin: 0;
@@ -12,7 +20,7 @@ body{
     min-height: 100vh;
 
     overflow: hidden;
-    background-color: rgb(238, 238, 238);
+    background-color: var(--bg-color);
 }
 
 img {
@@ -68,14 +76,14 @@ header {
     padding: 5px;
     color: black;
     font-size: 1rem;
-    background-color: #fbbc17;
+    background-color: var(--stage-yellow);
 }
 
 .header-button {
     border: none;
     background-color: transparent;
     padding: 5px 3px;
-    color: rgb(150, 137, 137);
+    color: var(--font-color-gray);
     font-size: 18px;
     font-weight: bold;
 }
@@ -123,7 +131,7 @@ header {
 .head-nav-li.selected {
     color: inherit;
     padding-bottom: 21px;
-    border-bottom: 3px solid RGB(242,208,49);
+    border-bottom: 3px solid var(--kakao-yellow);
 }
 
 .genre-nav {
@@ -151,7 +159,7 @@ header {
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(150, 137, 137);
+    color: var(--font-color-gray);
 
     padding: 20px 0px;
     text-align: center;
@@ -179,7 +187,7 @@ header {
 .line-with {
     width: 720px;
     height: 40px;
-    background-color: #ffd200;
+    background-color: var(--kakao-yellow);
 
     position: absolute;
     top: 440px;
@@ -187,8 +195,8 @@ header {
     line-height: 40px;
 
     font-size: 1.1rem;
-    font-weight: bold;
-    color:rgb(77, 74, 74);
+    font-weight: bold; 
+    color: var(--content-wrap-black); 
 }
 
 .recommendation {
@@ -204,7 +212,7 @@ header {
 }
 
 .rec-btn {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--bg-color);
     border: none;
 
     width: 220px;
@@ -240,8 +248,6 @@ header {
 }
 
 .slide-button {
-    /* display: inline-block; */
-    /* vertical-align: middle; */
     width: 40px;
     height: 40px;
 
@@ -251,7 +257,7 @@ header {
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(179, 179, 179);
+    color: var(--font-color-gray);
 }
 
 .menu-form {
@@ -274,13 +280,13 @@ header {
 }
 
 .title-more {
-    color:rgb(150, 137, 137);
+    color:var(--font-color-gray);
 }
 
 .nav-day{
     padding-top: 10px ;
     padding-left: 0;
-    border-bottom: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid var(--bg-color);
     display: flex;
 
     cursor: pointer;
@@ -298,13 +304,13 @@ header {
 }
 
 .day.selected {
-    border-bottom: 3px solid RGB(242,208,49);
+    border-bottom: 3px solid var(--kakao-yellow);
 }
 
 .category-nav{
     padding: 5px 5px 15px 5px;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid var(--bg-color);
     display: flex;
     justify-content: flex-start;
 
@@ -360,7 +366,7 @@ header {
     height: 30px;
     margin-top: 0;
     padding: 0 10px;
-    background-color: rgb(24,25,27);
+    background-color: var(--content-wrap-black);
 
     display: flex;
     justify-content: center;
@@ -369,14 +375,13 @@ header {
 
 .content-score {
     flex: 1;
-    color: #fbbc17;
+    color: var(--kakao-yellow);
     font-weight: bold;
 }
 
 .content-name{
-    font-size: 0.9rem;
     font-weight: bold;
-    color:rgb(77, 74, 74);
+    color:var(--content-wrap-black);
 
     margin-top: 10px;
     margin-bottom: 5px;
@@ -384,7 +389,7 @@ header {
 
 .content-status{
     font-size: 0.9rem;
-    color: rgb(156, 154, 154);
+    color: var(--font-color-gray);
 
     display: flex;
 }
@@ -468,8 +473,8 @@ header {
 
 .desc {
     font-size: 0.85rem;
-    color: rgb(156, 154, 154);
-    font-weight: 550;
+    color: var(--font-color-gray);
+    font-weight: bold;
 }
 
 .division {
@@ -477,7 +482,7 @@ header {
     width: 1px;
     height: 11px;
     margin: 5px 5px 0 5px;
-    background-color: #d9d9d9;
+    background-color: var(--bg-color);
     
 }
 
@@ -485,7 +490,7 @@ header {
     margin-top: 20px;
 
     font-size: 0.8rem;
-    color: rgb(156, 154, 154);
+    color: var(--font-color-gray);
 }
 
 .slide-banner-middle-wrap {
@@ -505,7 +510,7 @@ footer {
     width: 100vw;
     height: 260px;
 
-    background-color: rgb(238, 238, 238);
+    background-color: var(--bg-color);
 
     display: flex;
     flex-direction: column;
@@ -516,7 +521,7 @@ footer {
     width: 720px;
     height: 70px;
     line-height: 70px;
-    background-color: #fecc2f;
+    background-color: var(--kakao-yellow);
     
     text-align: center;
     font-weight: 550;
@@ -543,8 +548,8 @@ footer {
 
 details {
     font-size: 0.85rem;
-    color: rgb(156, 154, 154);
-    font-weight: 550;
+    color: var(--font-color-gray);
+    font-weight: bold;
 
     display: flex;
     flex-direction: column;
