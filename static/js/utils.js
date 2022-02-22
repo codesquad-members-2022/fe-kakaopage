@@ -7,6 +7,14 @@ export function $get(id) {
   return document.getElementById(id);
 }
 
+export function getParams() {
+  const urlParams = window.location.search;
+  const params = new URLSearchParams(urlParams);
+  const categoryUid = params.get('categoryUid');
+  const subCategoryUid = params.get('subCategoryUid');
+  return { categoryUid, subCategoryUid };
+}
+
 // 레이아웃은 그대로 두고 안에 내용만 article별로 변경
 export function renderMainChildDOM({
   subCategory,

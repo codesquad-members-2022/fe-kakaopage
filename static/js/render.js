@@ -24,9 +24,10 @@ async function preRender(uid) {
   return data;
 }
 
-export async function render(uid) {
+export async function render(uid = 0, subUid = 0) {
   const $mainLayout = $get(MAIN_LAYOUT);
   const categoryUid = Number(uid);
+  const subCategoryUid = Number(subUid);
   // 우선 서버 동작 없이 mock데이터로 구현
   // const uidContent = await preRender(categoryUid);
   try {

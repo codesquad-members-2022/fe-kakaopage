@@ -10,7 +10,7 @@ export const routes = [
   { categoryUid: 2, getContent: Novel },
 ];
 
-export function navigateTo(url, categoryUid) {
+export function navigateTo(url, categoryUid, subCategoryUid) {
   history.pushState(null, null, url);
-  render(categoryUid);
+  render(categoryUid, subCategoryUid);
 }
