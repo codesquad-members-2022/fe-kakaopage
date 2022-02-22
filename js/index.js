@@ -96,6 +96,17 @@ const bindEventListener = () => {
             renderWeekday(today);
         }
     });
+
+    $(".cover-image").addEventListener("click", ({ target }) => {
+        const classes = target.parentNode.classList;
+        if (!classes.contains("button")) return;
+        if (classes.contains("btn-left")) {
+            $(".carousel-item-wrap").classList.toggle("transform-left");
+        }
+        if (classes.contains("btn-right")) {
+            $(".carousel-item-wrap").classList.toggle("transform-right");
+        }
+    });
 };
 
 const init = () => {

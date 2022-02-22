@@ -84,6 +84,14 @@ main {
     color: #333;
 }
 
+.transform-left {
+    transform: translateX(-100%);
+}
+
+.transform-right {
+    transform: translateX(100%);
+}
+
 .cover-image {
     height: 480px;
     width: 700px;
@@ -112,9 +120,14 @@ main {
     margin-right: 20px;
 }
 
+.cover-image .carousel-item-wrap {
+    height: 100%;
+}
+
 .cover-image .carousel-item {
     width: 100%;
     flex-shrink: 0;
+    position: relative;
     /* transform: translateX(-100%); */
 }
 
