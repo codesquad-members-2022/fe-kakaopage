@@ -6,7 +6,7 @@ const weekdayContents = [
     <div class="toonContentTop">
         <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
     </div>
-    <div class="contentLank">
+    <div class="contentLank heightCenterSort ">
         <div class="contentLankInfo">1위</div>
         <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
     </div>
@@ -25,7 +25,7 @@ const weekdayContents = [
   <div class="toonContentTop">
     <img src="/FE/FE01-html/images/도굴왕.png" alt="" class="contentImage">
   </div>
-  <div class="contentLank">
+  <div class="contentLank heightCenterSort ">
       <div class="contentLankInfo">1위</div>
       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
   </div>
@@ -45,7 +45,7 @@ const weekdayContents = [
 <div class="toonContentTop">
     <img src="/FE/FE01-html/images/던전 리셋.png" alt="" class="contentImage">
 </div>
-<div class="contentLank">
+<div class="contentLank heightCenterSort ">
     <div class="contentLankInfo">1위</div>
     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
 </div>
@@ -65,7 +65,7 @@ const weekdayContents = [
     <div class="toonContentTop">
         <img src="/FE/FE01-html/images/용사의 전 여친입니다.png" alt="" class="contentImage">
     </div>
-    <div class="contentLank">
+    <div class="contentLank heightCenterSort ">
         <div class="contentLankInfo">1위</div>
         <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
     </div>
@@ -85,7 +85,7 @@ const weekdayContents = [
       <div class="toonContentTop">
           <img src="/FE/FE01-html/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
       </div>
-      <div class="contentLank">
+      <div class="contentLank heightCenterSort ">
           <div class="contentLankInfo">1위</div>
           <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
       </div>
@@ -105,7 +105,7 @@ const weekdayContents = [
       <div class="toonContentTop">
           <img src="/FE/FE01-html/images/다정한 그대를 지키는 방법.png" alt="" class="contentImage">
       </div>
-      <div class="contentLank">
+      <div class="contentLank heightCenterSort ">
           <div class="contentLankInfo">1위</div>
           <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
       </div>
@@ -125,7 +125,7 @@ const weekdayContents = [
   <div class="toonContentTop">
       <img src="/FE/FE01-html/images/흑막을 버리는 데 실패했다.png" alt="" class="contentImage">
   </div>
-  <div class="contentLank">
+  <div class="contentLank heightCenterSort ">
       <div class="contentLankInfo">1위</div>
       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
   </div>
@@ -137,6 +137,26 @@ const weekdayContents = [
   </div>
 </div>
   `,
+  ],
+  [
+    "완결",
+    `
+      <div class="toonContent">
+      <div class="toonContentTop">
+          <img src="/FE/FE01-html/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
+      </div>
+      <div class="contentLank heightCenterSort ">
+          <div class="contentLankInfo">1위</div>
+          <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
+      </div>
+      <div class="contentTitle">웹툰 제목</div>
+      <div class="contentInfo">
+          <img src="/FE/FE01-html/images/새 작품.svg" alt="" class="contentStatus">
+          <img src="/FE/FE01-html/images/icon_read_count.png" alt="" class="contentCount">
+          <span class="contentFollow">28.8만명</span>
+      </div>
+  </div>
+      `,
   ],
 ];
 const eventContents = [
@@ -424,7 +444,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -439,7 +459,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -454,7 +474,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -469,7 +489,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -484,7 +504,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -499,7 +519,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -514,7 +534,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -529,7 +549,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -544,7 +564,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -559,7 +579,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -641,7 +661,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -656,7 +676,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -671,7 +691,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -686,7 +706,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -701,7 +721,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -726,7 +746,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -741,7 +761,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -756,7 +776,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -771,7 +791,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -786,7 +806,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -811,7 +831,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -826,7 +846,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -841,7 +861,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -856,7 +876,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -871,7 +891,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -896,7 +916,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -911,7 +931,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -926,7 +946,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -941,7 +961,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -956,7 +976,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -981,7 +1001,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -996,7 +1016,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1011,7 +1031,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1026,7 +1046,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1041,7 +1061,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1066,7 +1086,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1081,7 +1101,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1096,7 +1116,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1111,7 +1131,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1126,7 +1146,7 @@ const sectionContents = [
             <div class="toonContentTop">
                 <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
             </div>
-            <div class="contentLank">
+            <div class="contentLank heightCenterSort ">
                 <div class="contentLankInfo">1위</div>
                 <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
             </div>
@@ -1347,7 +1367,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1362,7 +1382,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1377,7 +1397,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1392,7 +1412,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1407,7 +1427,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1422,7 +1442,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1437,7 +1457,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1452,7 +1472,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1467,7 +1487,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1482,7 +1502,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1564,7 +1584,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1579,7 +1599,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1594,7 +1614,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1609,7 +1629,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1624,7 +1644,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1649,7 +1669,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1664,7 +1684,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1679,7 +1699,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1694,7 +1714,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1709,7 +1729,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1734,7 +1754,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1749,7 +1769,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1764,7 +1784,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1779,7 +1799,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1794,7 +1814,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1819,7 +1839,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1834,7 +1854,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1849,7 +1869,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1864,7 +1884,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1879,7 +1899,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1904,7 +1924,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1919,7 +1939,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1934,7 +1954,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1949,7 +1969,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1964,7 +1984,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -1989,7 +2009,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -2004,7 +2024,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -2019,7 +2039,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -2034,7 +2054,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -2049,7 +2069,7 @@ const sectionContents = [
                 <div class="toonContentTop">
                     <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                 </div>
-                <div class="contentLank">
+                <div class="contentLank heightCenterSort ">
                     <div class="contentLankInfo">1위</div>
                     <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                 </div>
@@ -2363,7 +2383,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2378,7 +2398,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2393,7 +2413,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2408,7 +2428,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2423,7 +2443,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2438,7 +2458,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2453,7 +2473,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2468,7 +2488,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2483,7 +2503,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2498,7 +2518,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2580,7 +2600,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2595,7 +2615,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2610,7 +2630,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2625,7 +2645,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2640,7 +2660,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2665,7 +2685,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2680,7 +2700,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2695,7 +2715,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2710,7 +2730,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2725,7 +2745,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2750,7 +2770,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2765,7 +2785,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2780,7 +2800,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2795,7 +2815,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2810,7 +2830,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2835,7 +2855,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2850,7 +2870,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2865,7 +2885,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2880,7 +2900,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2895,7 +2915,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2920,7 +2940,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2935,7 +2955,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2950,7 +2970,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2965,7 +2985,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -2980,7 +3000,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3005,7 +3025,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3020,7 +3040,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3035,7 +3055,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3050,7 +3070,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3065,7 +3085,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -3380,7 +3400,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3395,7 +3415,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3410,7 +3430,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3425,7 +3445,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3440,7 +3460,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3455,7 +3475,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3470,7 +3490,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3485,7 +3505,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3500,7 +3520,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3515,7 +3535,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3597,7 +3617,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3612,7 +3632,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3627,7 +3647,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3642,7 +3662,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3657,7 +3677,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3682,7 +3702,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3697,7 +3717,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3712,7 +3732,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3727,7 +3747,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3742,7 +3762,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3767,7 +3787,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3782,7 +3802,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3797,7 +3817,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3812,7 +3832,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3827,7 +3847,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3852,7 +3872,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3867,7 +3887,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3882,7 +3902,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3897,7 +3917,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3912,7 +3932,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3937,7 +3957,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3952,7 +3972,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3967,7 +3987,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3982,7 +4002,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -3997,7 +4017,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4022,7 +4042,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4037,7 +4057,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4052,7 +4072,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4067,7 +4087,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4082,7 +4102,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -4397,7 +4417,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4412,7 +4432,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4427,7 +4447,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4442,7 +4462,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4457,7 +4477,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4472,7 +4492,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4487,7 +4507,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4502,7 +4522,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4517,7 +4537,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4532,7 +4552,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4614,7 +4634,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4629,7 +4649,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4644,7 +4664,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4659,7 +4679,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4674,7 +4694,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4699,7 +4719,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4714,7 +4734,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4729,7 +4749,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4744,7 +4764,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4759,7 +4779,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4784,7 +4804,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4799,7 +4819,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4814,7 +4834,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4829,7 +4849,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4844,7 +4864,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4869,7 +4889,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4884,7 +4904,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4899,7 +4919,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4914,7 +4934,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4929,7 +4949,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4954,7 +4974,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4969,7 +4989,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4984,7 +5004,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -4999,7 +5019,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5014,7 +5034,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5039,7 +5059,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5054,7 +5074,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5069,7 +5089,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5084,7 +5104,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5099,7 +5119,7 @@ const sectionContents = [
                   <div class="toonContentTop">
                       <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
                   </div>
-                  <div class="contentLank">
+                  <div class="contentLank heightCenterSort ">
                       <div class="contentLankInfo">1위</div>
                       <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
                   </div>
@@ -5414,7 +5434,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5429,7 +5449,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5444,7 +5464,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5459,7 +5479,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5474,7 +5494,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5489,7 +5509,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5504,7 +5524,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5519,7 +5539,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5534,7 +5554,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5549,7 +5569,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5631,7 +5651,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5646,7 +5666,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5661,7 +5681,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5676,7 +5696,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5691,7 +5711,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5716,7 +5736,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5731,7 +5751,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5746,7 +5766,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5761,7 +5781,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5776,7 +5796,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5801,7 +5821,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5816,7 +5836,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5831,7 +5851,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5846,7 +5866,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5861,7 +5881,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5886,7 +5906,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5901,7 +5921,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5916,7 +5936,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5931,7 +5951,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5946,7 +5966,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5971,7 +5991,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -5986,7 +6006,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6001,7 +6021,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6016,7 +6036,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6031,7 +6051,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6056,7 +6076,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6071,7 +6091,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6086,7 +6106,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6101,7 +6121,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6116,7 +6136,7 @@ const sectionContents = [
               <div class="toonContentTop">
                   <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
               </div>
-              <div class="contentLank">
+              <div class="contentLank heightCenterSort ">
                   <div class="contentLankInfo">1위</div>
                   <img src="/FE/FE01-html/images/bmbadge_waitfree.svg" class="contentClock"></img>
               </div>
@@ -6273,13 +6293,11 @@ function changeSectionContents(target) {
   } else {
     navGenre = target.textContent;
   }
-  console.log(navGenre, navGenre.length);
   const sections = document.querySelector("#sectionId");
   removeContents(sections);
   let temp;
   sectionContents.map((section) => {
     if (navGenre.trim() === section[0]) {
-      console.log(navGenre, section[0]);
       temp = section[1];
     }
   });

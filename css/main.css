@@ -90,6 +90,7 @@
 }
 .eventInfoWrap {
   height: 29px;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 12px 0 0;
