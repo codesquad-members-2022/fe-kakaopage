@@ -93,7 +93,7 @@ main {
 
 .cover-image-item {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .cover-image .button {
@@ -113,6 +113,12 @@ main {
 }
 
 .cover-image .carousel-item {
+    width: 100%;
+    flex-shrink: 0;
+    /* transform: translateX(-100%); */
+}
+
+.cover-image .carousel-img {
     width: 100%;
 }
 
