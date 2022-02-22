@@ -1,7 +1,8 @@
-const weekdayContents = [
-  [
-    "월",
-    `
+const datas = {
+  weekdayContents: [
+    [
+      "월",
+      `
   <div class="toonContent">
       <div class="toonContentTop">
           <img src="/FE/FE01-html/images/궁귀검신.png" alt="" class="contentImage">
@@ -17,10 +18,10 @@ const weekdayContents = [
           <span class="contentFollow">28.8만명</span>
       </div>
   </div>`,
-  ],
-  [
-    "화",
-    `
+    ],
+    [
+      "화",
+      `
     <div class="toonContent">
     <div class="toonContentTop">
       <img src="/FE/FE01-html/images/도굴왕.png" alt="" class="contentImage">
@@ -37,10 +38,10 @@ const weekdayContents = [
     </div>
   </div>
     `,
-  ],
-  [
-    "수",
-    `
+    ],
+    [
+      "수",
+      `
   <div class="toonContent">
   <div class="toonContentTop">
       <img src="/FE/FE01-html/images/던전 리셋.png" alt="" class="contentImage">
@@ -57,10 +58,10 @@ const weekdayContents = [
   </div>
   </div>
   `,
-  ],
-  [
-    `목`,
-    `
+    ],
+    [
+      `목`,
+      `
       <div class="toonContent">
       <div class="toonContentTop">
           <img src="/FE/FE01-html/images/용사의 전 여친입니다.png" alt="" class="contentImage">
@@ -77,10 +78,10 @@ const weekdayContents = [
       </div>
   </div>  
         `,
-  ],
-  [
-    "금",
-    `
+    ],
+    [
+      "금",
+      `
         <div class="toonContent">
         <div class="toonContentTop">
             <img src="/FE/FE01-html/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
@@ -97,10 +98,10 @@ const weekdayContents = [
         </div>
     </div>
         `,
-  ],
-  [
-    "토",
-    `
+    ],
+    [
+      "토",
+      `
         <div class="toonContent">
         <div class="toonContentTop">
             <img src="/FE/FE01-html/images/다정한 그대를 지키는 방법.png" alt="" class="contentImage">
@@ -117,10 +118,10 @@ const weekdayContents = [
         </div>
     </div>  
         `,
-  ],
-  [
-    "일",
-    `
+    ],
+    [
+      "일",
+      `
     <div class="toonContent">
     <div class="toonContentTop">
         <img src="/FE/FE01-html/images/흑막을 버리는 데 실패했다.png" alt="" class="contentImage">
@@ -137,10 +138,10 @@ const weekdayContents = [
     </div>
   </div>
     `,
-  ],
-  [
-    "완결",
-    `
+    ],
+    [
+      "완결",
+      `
         <div class="toonContent">
         <div class="toonContentTop">
             <img src="/FE/FE01-html/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
@@ -157,35 +158,38 @@ const weekdayContents = [
         </div>
     </div>
         `,
+    ],
   ],
-];
-const eventContents = [
-  ["홈", "/FE/FE01-html/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png"],
-  [
-    "요일연재",
-    "/FE/FE01-html/images/소설 _ 마법 아카데미의 육체파 천재 8타 _ 0-24.png",
+  eventContents: [
+    ["홈", "/FE/FE01-html/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png"],
+    [
+      "요일연재",
+      "/FE/FE01-html/images/소설 _ 마법 아카데미의 육체파 천재 8타 _ 0-24.png",
+    ],
+    [
+      "웹툰",
+      "/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
+    ],
+    ["소년", "/FE/FE01-html/images/웹툰 _ 롱리브더킹 1타 _ 21-24.png"],
+    [
+      "드라마",
+      "/FE/FE01-html/images/웹툰 _ 8클래스 마법사의 회귀 0타 _ 21-23.png",
+    ],
+    ["로맨스", "/FE/FE01-html/images/웹툰 _ 학사재생 9타 _ 0-24.png"],
+    [
+      "로판",
+      "/FE/FE01-html/images/웹툰 _ 남주를 주웠더니 남편이 생겨버렸다 3타 _ 15-23.png",
+    ],
+    ["액션무협", "/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png"],
+    [
+      "BL",
+      "/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
+    ],
   ],
-  [
-    "웹툰",
-    "/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
-  ],
-  ["소년", "/FE/FE01-html/images/웹툰 _ 롱리브더킹 1타 _ 21-24.png"],
-  [
-    "드라마",
-    "/FE/FE01-html/images/웹툰 _ 8클래스 마법사의 회귀 0타 _ 21-23.png",
-  ],
-  ["로맨스", "/FE/FE01-html/images/웹툰 _ 학사재생 9타 _ 0-24.png"],
-  [
-    "로판",
-    "/FE/FE01-html/images/웹툰 _ 남주를 주웠더니 남편이 생겨버렸다 3타 _ 15-23.png",
-  ],
-  ["액션무협", "/FE/FE01-html/images/웹툰 _ 더 라이브7타 _ 21-24.png"],
-  ["BL", "/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png"],
-];
-const sectionContents = [
-  [
-    "홈",
-    `
+  sectionContents: [
+    [
+      "홈",
+      `
   <div class="event">
       <div class="eventSlide" id="eventSlideId">
           <div class="eventSlideInfo">
@@ -1160,10 +1164,10 @@ const sectionContents = [
       </div>
   </div>
   `,
-  ],
-  [
-    "웹툰",
-    `
+    ],
+    [
+      "웹툰",
+      `
       <div class="webtoonGenreBar">
           <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
           </div>
@@ -2172,10 +2176,10 @@ const sectionContents = [
           </div>
       </div>
     `,
-  ],
-  [
-    "웹소설",
-    `
+    ],
+    [
+      "웹소설",
+      `
         <div class="webtoonGenreBar">
             <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
             </div>
@@ -3188,10 +3192,10 @@ const sectionContents = [
             </div>
         </div>
         `,
-  ],
-  [
-    "영화",
-    `
+    ],
+    [
+      "영화",
+      `
     <div id="showChange"></div>
     <div class="webtoonGenreBar">
         <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
@@ -4205,10 +4209,10 @@ const sectionContents = [
         </div>
     </div>
     `,
-  ],
-  [
-    "방송",
-    `
+    ],
+    [
+      "방송",
+      `
         <div id="showChange"></div>
         <div class="webtoonGenreBar">
             <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
@@ -5222,10 +5226,10 @@ const sectionContents = [
             </div>
         </div>
         `,
-  ],
-  [
-    "책",
-    `
+    ],
+    [
+      "책",
+      `
     <div id="showChange"></div>
     <div class="webtoonGenreBar">
         <div class="genreHome" onclick="changeTabsColor(this),  changeEventSlideContents(this)">홈
@@ -6239,6 +6243,8 @@ const sectionContents = [
         </div>
     </div>
     `,
+    ],
   ],
-];
-exports.modules = { weekdayContents, eventContents, sectionContents };
+};
+
+export { datas };
