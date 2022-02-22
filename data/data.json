@@ -1,116 +1,124 @@
 {
   "webtoon": [
     {
-      "day": "mon",
+      "day": ["mon", "wed", "fri"],
       "title": "학사재생",
       "summary": "금수저를 물고 태어나 버렸다!",
-      "info": "167만명|소유현,윰짝짝",
+      "author": "소유현,윰짝짝",
+      "view": "167만명",
+      "rating": 10.0,
+      "category": "로맨스",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=B9yif/hyoXEYHVNL/gMonAbOI5FKnlnRpgUvmR0&filename=th2",
-      "promotion": false
+      "promotion": false,
+      "updated": true
     },
     {
-      "day": "mon",
+      "day": ["mon", "wed", "fri"],
       "title": "후궁계약",
       "summary": "후궁으로 입금해 줘. 입금~",
-      "info": "93.5만명|밀리",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "로판",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=coL2BT/hzb7AO2NDX/kUIOK8kQUGSR1jVL7R9Sx0&filename=th2",
-      "promotion": false
+      "promotion": false,
+      "updated": false
     },
     {
-      "day": "mon",
+      "day": ["tue", "thu", "sat"],
       "title": "그 책에 마음을 주지 마세요",
       "summary": "책을 많이 읽읍시다.",
-      "info": "35.5만명|밀리",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "드라마",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=4i2ND/hy41JLoVim/MEkdJfaKxe99QY1C20PExk&filename=th2",
-      "promotion": true
+      "promotion": true,
+      "updated": true
     },
     {
-      "day": "mon",
+      "day": ["tue", "thu", "sat", "mon"],
       "title": "카르세아린",
       "summary": "모험을 떠나보자 코딩의 세계로",
-      "info": "35.5만명|밀리",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "BL/GL",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=cws2hh/hyfOlucjuP/ElSIwCpSyNvmQnZG2oXlU0&filename=th2",
-      "promotion": false
+      "promotion": false,
+      "updated": true
     },
     {
-      "day": "tue",
+      "day": ["tue", "thu", "sat"],
       "title": "아비무쌍",
       "summary": "좌충우돌 무협 액션&육아 일지!",
-      "info": "73.7만명|노경진,이현석",
+      "author": "Millie",
+      "view": "53.3만명",
+      "rating": 10.0,
+      "category": "소년",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=bjeleh/hyqE8jN3G6/EVu8C9UFE6lHrix03zV4d0&filename=th2",
-      "promotion": false
+      "promotion": false,
+      "updated": true
     },
     {
-      "day": "wed",
+      "day": ["tue", "thu", "sat"],
       "title": "세화, 가는 길",
       "summary": "천천히 치유되는 그날의 상처",
-      "info": "1.9만명|한혜연",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "액션무협",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=Y1Pyq/hzhOmK0732/Zqtg8dgUDhppRa9vTIS3Ok&filename=th2",
-      "promotion": false
+      "promotion": false,
+      "updated": false
     },
     {
-      "day": "thu",
+      "day": ["sat", "sun", "fri"],
       "title": "코드스쿼드의 목요일 수업",
       "summary": "JavaScript Deep Dive",
-      "info": "1.9만명|크롱",
+      "author": "Crong",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "일간 랭킹",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=chUX1P/hyVkI3H0ff/oBYHB6BQ8ZZCwsdZEfsod0&filename=th2",
-      "promotion": true
+      "promotion": true,
+      "updated": false
     },
     {
-      "day": "fri",
+      "day": ["sat", "sun", "fri"],
       "title": "불금",
       "summary": "불타는 금요일의 코딩",
-      "info": "190만명|Millie",
+      "author": "Millie",
+      "view": "190만명",
+      "rating": 10.0,
+      "category": "일간 랭킹",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=dy1Oc2/hywgI1bMRS/7QsDTWgZtp8XA30K0Si1u0&filename=th2",
-      "promotion": true
+      "promotion": true,
+      "updated": true
     },
     {
-      "day": "sat",
+      "day": ["sat", "sun", "wed"],
       "title": "코딩테스트",
       "summary": "열심히 풀자 ",
-      "info": "1.9만명|한혜연",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "일간 랭킹",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=NrXLi/hy41LXzB5C/5LFSmB51jHxKbhnif9BeGK&filename=th2",
-      "promotion": true
+      "promotion": true,
+      "updated": false
     },
     {
-      "day": "sun",
+      "day": ["mon", "wed", "fri"],
       "title": "회복의 날",
       "summary": "월요일에 다시 달리기 위해서 충전",
-      "info": "1.9만명|한혜연",
+      "author": "Millie",
+      "view": "35.5만명",
+      "rating": 10.0,
+      "category": "액션무협",
       "url": "https://dn-img-page.kakao.com/download/resource?kid=bgozrm/hzacc9w4du/IPiCrWsGU7P6buvUwydcGk&filename=th2",
-      "promotion": false
-    }
-  ],
-  "banner": [
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=bH1dTU/hzmU3e8xWG/I52O9I5Y2IpErVAge6ouC1",
-      "subject": "home",
-      "title": ""
-    },
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=USDUu/hzhOdHv1uC/KkuPALgpAw6EE8H76mUoxK",
-      "subject": "webtoon",
-      "title": ""
-    },
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=bHG7gZ/hzmU3fbCeL/SAfNilKJsxhLb3cBJ2bpgk",
-      "subject": "novel",
-      "title": ""
-    },
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=bXD3a1/hzhOesUH0V/MVnRHqVrYohKCSZdrQMX41",
-      "subject": "movie",
-      "title": ""
-    },
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=bHG7gZ/hzmU3fbCeL/SAfNilKJsxhLb3cBJ2bpgk",
-      "subject": "broad",
-      "title": ""
-    },
-    {
-      "url": "https://dn-img-page.kakao.com/download/resource?kid=USDUu/hzhOdHv1uC/KkuPALgpAw6EE8H76mUoxK",
-      "subject": "book",
-      "title": ""
+      "promotion": false,
+      "updated": false
     }
   ]
 }
