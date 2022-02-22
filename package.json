@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/soralee2821/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/soralee2821/fe-kakaopage#readme"
+  "homepage": "https://github.com/soralee2821/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
