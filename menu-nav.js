@@ -13,13 +13,16 @@ function createEventListenerMenu(){
 
     const menu = document.querySelector('.menu-nav');
     menu.addEventListener('click', (e) => {
-        const menuItem = e.target.closest('li');
-        const itemSelected = menu.querySelector('.menu-nav__item--selected');
-        if (itemSelected !== null) {
-            itemSelected.classList.remove('menu-nav__item--selected');
+        const SelectedItem = e.target.closest('li');
+        const previousSelectedItem = menu.querySelector('.menu-nav__item--selected');
+
+        if (previousSelectedItem === SelectedItem) return;
+
+        if (previousSelectedItem !== null) {
+            previousSelectedItem.classList.remove('menu-nav__item--selected');
         }
-        menuItem.classList.add('menu-nav__item--selected');
-        mainHTMLs[menuItem.dataset.label]();
+        SelectedItem.classList.add('menu-nav__item--selected');
+        mainHTMLs[SelectedItem.dataset.label]();
     });
 };
 
