@@ -4,14 +4,21 @@ import {mainBannerData} from './data/scrape/mainBannerData.js'
 import {promotionBannerData} from './data/scrape/promotionBannerData.js'
 import {$, $all} from './utility.js'
 
-function renderMain(tab, data) {
-  renderMainBanner(tab);
+function renderMain(tab, data, options) {
+  if (options === 'firstRender') renderMainBanner(tab);
   renderPromotionBanner(tab);
 
   for (let i in data) {
     renderContainer(data[i].class, data[i].title, data[i].items, data[i].layout);
   }
+
   renderMoveApp('move-app');
+}
+
+function renderDaily() {
+  const main = $('.main');
+  const newList = makeSelectDayDailySection();
+  main.appendChild(newList)
 }
 
 function renderContainer(selector, title, num, options) {
@@ -56,7 +63,7 @@ function makeLayout(selector, num, options, container) {
   switch (options) {
     case 'cardLayout':
       if (selector === 'daily__top') {
-        const newDailyList = makeSelectDayListHome();
+        const newDailyList = makeSelectDayHomeList();
         container.appendChild(newDailyList);
       }
       newList = makeWebtoonList(num);
@@ -73,7 +80,7 @@ function makeLayout(selector, num, options, container) {
 }
 
 // ========== SelectDayHome (웹툰-홈 화면의 요일탭)==========
-function makeSelectDayListHome() {
+function makeSelectDayHomeList() {
   const newList = document.createElement("ul");
   newList.classList.add('select__day');
   makeSelectDayItems(newList);
@@ -97,11 +104,55 @@ function makeSelectDayItems(list) {
     
     item.innerHTML = `<button type="button" class="day__btn">${day[index]}</button></li>`;
 
-    if (index === arrDaySun && today === defaultSun) item.classList.add('daily__top--focused');
-    if (today === index + 1) item.classList.add('daily__top--focused');
+    if (index === arrDaySun && today === defaultSun) item.classList.add('day--focused');
+    if (today === index + 1) item.classList.add('day--focused');
 
     list.appendChild(item);
   });
+}
+
+// ========== SelectDayDaily (웹툰-요일연재 화면의 요일탭)==========
+function makeSelectDayDailySection() {
+  const newList = document.createElement('section');
+  newList.classList.add('daily__webtoons');
+
+  const dailyList = makeSelectDayDailyList();
+  const optionsList = makeSelectDailyOptions();
+
+  const DAILY_ITEMS = 10;
+  const webtoonsList = makeWebtoonList(DAILY_ITEMS);
+
+  newList.appendChild(dailyList);
+  newList.appendChild(optionsList);
+  newList.appendChild(webtoonsList);
+
+  return newList
+}
+
+function makeSelectDayDailyList() {
+  const newList = document.createElement("ul");
+  newList.classList.add('daily__select__day');
+  makeSelectDayItems(newList);
+
+  return newList;
+}
+
+function makeSelectDailyOptions() {
+  const newList = document.createElement("ul");
+  newList.classList.add('daily__select__options');
+  newList.innerHTML = `<ul class="options__btn">
+  <li><button type="button" class="options__total options--focused">전체</button></li>
+  <li><div class="divider"></div></li>
+  <li><button type="button" class="options__normal">웹툰</button></li>
+  <li><div class="divider"></div></li>
+  <li><button type="button" class="options__waiting-free"><i class="fas fa-clock"></i> 웹툰</button></li>
+</ul>
+<div class="options__genre">
+  <button type="button" class="options__genre-btn">전체 (138)</button>
+  <i class="fas fa-sort-down"></i>
+</div>`;
+
+  return newList
 }
 
 // ========== WebtoonList ==========
@@ -325,4 +376,4 @@ function makePromotionItem(list, focus) {
   });
 }
 
-export {renderMain}
+export {renderMain, renderDaily}
