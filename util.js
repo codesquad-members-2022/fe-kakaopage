@@ -181,7 +181,7 @@ export function addSelectedTo(element){
         selectedInit(e.target)
         if(e.target.tagName === "LI"){
             e.target.classList.add('selected')
-            resetFlexbox();
+            resetFlexbox(e.target);
         }
     })
 }
@@ -200,9 +200,11 @@ export function addSelectedToday(){
     days[today].classList.add('selected')
 }
 
-export function resetFlexbox(){
-    const flexBox = document.getElementById('flex-box')
-
-    flexBox.innerHTML = '';
-    flexBox.innerHTML += `${createContentForms(10)}`;
+export function resetFlexbox(target){
+    if(target.classList[0] === 'day'){
+        const flexBox = document.getElementById('flex-box')
+    
+        flexBox.innerHTML = '';
+        flexBox.innerHTML += `${createContentForms(10)}`;
+    }
 }
