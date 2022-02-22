@@ -1,4 +1,4 @@
-import { renderPageNav, renderMainNav, renderDailySeriesRanking } from '../render.js';
+import { renderPageNav, renderMainNav, renderDailySeriesRanking, renderPage } from '../render.js';
 import { MainNavItems, ContentsNavItems, PageNavItems } from '../data';
 
 const changeSelectedItem = (items, selectedItem) => {
@@ -9,7 +9,8 @@ const changeSelectedItem = (items, selectedItem) => {
 
 const handleNav = (e) => {
   const nav = e.target.parentNode.parentNode;
-  const selectedItem = e.target.textContent;
+  const selectedItem = e.target.textContent.trim();
+  const category = e.target.dataset.category;
 
   // 이미 선택된 탭이 또 클릭된 경우
   if (e.target.classList.contains('selected')) return;
@@ -17,6 +18,7 @@ const handleNav = (e) => {
   if (nav.classList.contains('page-nav')) {
     changeSelectedItem(PageNavItems, selectedItem);
     renderPageNav();
+    renderPage(category);
   }
 
   else if (nav.classList.contains('main-nav')) {

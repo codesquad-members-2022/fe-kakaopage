@@ -5,6 +5,7 @@ import Categories from './categories.js';
 import SubBanners from './subBanners.js';
 import AnticipatedWorks from './anticipatedWorks.js';
 import EventBanners from './eventBanners.js';
+import { PageComponent } from './components.js';
 
 export {
   PageNavItems,
@@ -16,4 +17,5 @@ export {
   SubBanners,
   AnticipatedWorks,
   EventBanners,
+  PageComponent,
 };
