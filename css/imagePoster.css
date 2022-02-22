@@ -1,3 +1,7 @@
+.image-poster-wrapper {
+    cursor: pointer;
+}
+
 .image-poster__small,
 .image-poster__mid,
 .image-poster__large {

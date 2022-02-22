@@ -3,7 +3,7 @@ import { ImagePosterMoreDetailComponent } from "./ImagePosterMoreDetailComponent
 
 export const ImagePosterComponent = (axis = 'col', obj, content) => {
     return /* html */`
-    <a class="image-poster__${obj.name}-wrapper">
+    <a class="image-poster-wrapper">
     ${axis === 'col' ?
     `<div class="image-poster__${obj.imageSize} flex-${axis}">` :
     `<div class="image-poster flex-${axis}">`}
