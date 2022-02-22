@@ -52,7 +52,7 @@ export async function render(uid = 0, subUid = 0) {
     console.log(error);
     if (error.message === NOT_FOUND) {
       history.pushState(null, null, '/');
-      location.reload();
+      // location.reload();
     }
   }
 }

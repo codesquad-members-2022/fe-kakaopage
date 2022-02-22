@@ -1,5 +1,4 @@
-import { handleTabActive } from '../handleStyle/activeTab.js';
-import { navigateTo } from '../router.js';
+import { handleClickNavigation } from '../router.js';
 import { getParams } from '../utils.js';
 
 export function renderSubCategory(subCategoryIndexArr) {
@@ -15,23 +14,8 @@ export function renderSubCategory(subCategoryIndexArr) {
         </li>`
     )
     .join('')}`;
-  newUl.addEventListener('click', (event) => {
-    event.preventDefault();
-    const targetEl = event.target;
-    let targetLi = null;
-    if (targetEl.matches('span')) {
-      targetLi = targetEl.closest('li');
-    } else if (targetEl.matches('[data-subCategory]')) {
-      targetLi = targetEl;
-    }
-    if (targetLi) {
-      const {
-        href,
-        dataset: { subCategory },
-      } = event.target;
-      handleTabActive(targetLi, true);
-      navigateTo(href, categoryUid, subCategory);
-    }
-  });
+  newUl.addEventListener('click', (event) =>
+    handleClickNavigation(event, 'subCategory', true)
+  );
   return newUl;
 }
