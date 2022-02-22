@@ -44,3 +44,7 @@
 .contents-container__main {
     width: 100%;
 }
+
+.gone {
+    display: none;
+}
