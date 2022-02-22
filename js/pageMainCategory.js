@@ -2,17 +2,14 @@ import webtoonContentsObj from '../json/webtoonContents.json' assert { type: 'js
 import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
 import previewsObj from '../json/preview.json' assert { type: 'json' };
 
+import setTagListEl from './tagList/setTagListEl.js';
+
 import drawPreviews from './preview/drawPreviews.js';
 import clearPreviews from './preview/clearPreviews.js';
 
-import drawTagListEl from './drawTagListEl.js';
-import clearTagListEl from './clearTagListEl.js';
+import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 
-import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';
-import clearWebtoonContents from './webtoonComponent/clearWebtoonContents.js';
-
-import drawDayFilter from './dayFilter/drawDayFilter.js';
-import clearDayFilter from './dayFilter/clearDayFilter.js';
+import setDayFilter from './dayFilter/setDayFilter.js';
 
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
 
@@ -51,40 +48,30 @@ initMainCategoryDay();
 pageMainCategory.forEach((li, idx, list) => {
   li.addEventListener('click', (event) => {
     if (curIdx === idx) return;
-    let selectedDay = days[li.dataset.curday];
-    const dayFilterExists = !!selectedDay;
-
     const prevTarget = list[curIdx];
     const curTarget = event.target;
     const category = li.textContent;
+    let selectedDay = days[li.dataset.curday];
+    const dayContentsMap = dayContentsObj[category];
+    const dayContentsArr = dayContentsMap?.[selectedDay];
+    const webtoonContentsArr = webtoonContentsObj[category];
     setCurIdx(idx);
 
     // highlight
     toggleHighlight(prevTarget, curTarget);
 
-    // preview
+    // preview - 구현 후 함수 하나로 만들기
     const previewsArr = previewsObj[category];
     clearPreviews();
     drawPreviews(previewsArr);
 
     // tag list
-    clearTagListEl();
-    drawTagListEl(category);
+    setTagListEl(category);
 
     // webtoon contents
-    clearWebtoonContents();
-    if (dayFilterExists) {
-      const dayContentsArr = dayContentsObj[category][selectedDay];
-      dayContentsArr.forEach((dayContents) => {
-        drawWebtoonContents(dayContents);
-      });
-    }
-    webtoonContentsObj[category].forEach((webtoonContents) => {
-      drawWebtoonContents(webtoonContents);
-    });
+    setWebtoonContents({ dayContentsArr, webtoonContentsArr });
 
     // day filter
-    clearDayFilter();
-    drawDayFilter(li, dayContentsObj[category]);
+    setDayFilter(li, dayContentsMap);
   });
 });
