@@ -1,12 +1,9 @@
-import { renderDayTopContent } from './render/dayTop.js';
-import { addDayTopTabEvent } from "./eventListener.js";
+import { getToday } from './utility.js';
+import { renderPage } from './controller.js';
 
 function init() {
-    const date = new Date();
-    let today = date.getDay() - 1;
-    if(today === -1) today = 6;
-    renderDayTopContent(today);
-    addDayTopTabEvent();
+    const today = getToday();
+    renderPage(today);
 }
 
 init();
