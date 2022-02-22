@@ -59,6 +59,10 @@ input {
   height: 20px;
 }
 
+.sub_category_section {
+  width: 725px;
+}
+
 .search_button {
   border: none;
   background-color: white;
@@ -110,7 +114,7 @@ input {
   height: 67px;
 }
 
-.promotion_webtoon {
+.promotion_webtoon_section {
   width: 725px;
   height: 500px;
 }
