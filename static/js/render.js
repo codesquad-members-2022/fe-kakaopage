@@ -36,6 +36,7 @@ export async function render() {
     if (!selectedCategory) {
       throw new Error(NOT_FOUND);
     }
+    // 카테코리와 서브 카테고리 아이디에 맞는 내용 렌더링시작
     // mainlayout의 node를 지우고 새로 랜더링
     $mainLayout.innerHTML = ``;
 
