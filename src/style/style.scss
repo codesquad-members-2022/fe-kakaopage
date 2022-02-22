@@ -147,6 +147,10 @@ header {
   &:not(.main-banner) {
     background-color: $text-white;
   }
+
+  .temp-text {
+    text-align: center;
+  }
 }
 
 .contents:not(.main-nav, .main-banner) {

@@ -121,6 +121,8 @@ header {
   margin-top: 15px; }
   .contents:not(.main-banner) {
     background-color: #FFF; }
+  .contents .temp-text {
+    text-align: center; }
 
 .contents:not(.main-nav, .main-banner) {
   padding: 20px; }

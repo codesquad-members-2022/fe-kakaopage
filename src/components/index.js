@@ -2,7 +2,6 @@ import Nav from './nav/Nav.js';
 import PageNav from './nav/PageNav.js';
 import MainNav from './nav/MainNav.js';
 import ContentsNav from './nav/ContentsNav.js';
-import MainContents from './MainContents.js';
 import ContentsHeader from './contentsList/ContentsHeader.js';
 import SmallImgContainer from './contentsList/SmallImgContainer.js';
 import ContentsListItem from './contentsList/ContentsListItem.js';
@@ -26,13 +25,18 @@ import EventBannerItem from './banner/EventBannerItem.js';
 import EventBannerList from './banner/EventBannerList.js';
 import RecommendEvent from './section/RecommendEvent.js';
 import AppDownloadLink from './section/AppDownloadLink.js';
+import HomePage from './Page/HomePage.js';
+import WebtoonPage from './Page/WebtoonPage.js';
+import NovelPage from './Page/NovelPage.js';
+import MoviePage from './Page/MoviePage.js';
+import BroadcastPage from './Page/BroadcastPage.js';
+import BookPage from './Page/BookPage.js';
 
 export {
   Nav,
   PageNav,
   MainNav,
   ContentsNav,
-  MainContents,
   ContentsHeader,
   SmallImgContainer,
   ContentsListItem,
@@ -56,4 +60,10 @@ export {
   EventBannerList,
   RecommendEvent,
   AppDownloadLink,
+  HomePage,
+  WebtoonPage,
+  NovelPage,
+  MoviePage,
+  BroadcastPage,
+  BookPage,
 };
