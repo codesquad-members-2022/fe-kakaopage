@@ -1,8 +1,8 @@
-function createContentsSection({id = '', header}) {
-    const section = document.createElement('section');
-    section.className = 'contents-section';
-    section.id = id;
-    section.innerHTML = `
+function createContentsSection({ id = "", header }) {
+  const section = document.createElement("section");
+  section.className = "contents-section";
+  section.id = id;
+  section.innerHTML = `
     <div class="contents-header">
         <h2>${header}</h2>
         <div>
@@ -10,8 +10,8 @@ function createContentsSection({id = '', header}) {
         </div>
     </div>
     <div class="contents-wrapper"></div>
-    `
-    return section;
+    `;
+  return section;
 }
 
 export { createContentsSection };

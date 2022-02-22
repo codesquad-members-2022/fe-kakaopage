@@ -1,8 +1,8 @@
 function createContentVerticalSmall(contentData) {
-    const content = document.createElement('a');
-    content.classList = ['content-wrapper content-vertical-small'];
-    if (!contentData) return content;
-    content.innerHTML = `
+  const content = document.createElement("a");
+  content.classList = ["content-wrapper content-vertical-small"];
+  if (!contentData) return content;
+  content.innerHTML = `
     <div class="thumbnail">
         <img class="thumbnail-img" src="${contentData.thumbnail.img}" alt="썸네일 사진">
         <div class="thumbnail-caption">
@@ -17,7 +17,7 @@ function createContentVerticalSmall(contentData) {
         <dd class="content-readers">👨‍💻 ${contentData.description.readers}</dd>
     </dl>
     `;
-    return content;
+  return content;
 }
 
 export { createContentVerticalSmall };

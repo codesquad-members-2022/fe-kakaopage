@@ -1,7 +1,7 @@
 function createBannerSection() {
-    const section = document.createElement('section');
-    section.className = 'banner-section';
-    section.innerHTML = `
+  const section = document.createElement("section");
+  section.className = "banner-section";
+  section.innerHTML = `
     <button class="banner-button banner-button-left"></button>
     <div class="banner-wrapper">
         <div class="img-wrapper">
@@ -9,8 +9,8 @@ function createBannerSection() {
         </div>
     </div>
     <button class="banner-button banner-button-right"></button>
-    `
-    return section;
+    `;
+  return section;
 }
 
 export { createBannerSection };

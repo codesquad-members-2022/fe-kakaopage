@@ -1,6 +1,6 @@
 function createGenreNav() {
-    const nav = document.createElement('nav');
-    nav.innerHTML = `
+  const nav = document.createElement("nav");
+  nav.innerHTML = `
     <ul class="genre-nav">
         <li class="genre-nav__item genre-nav__item--selected">
             <button>홈</button>
@@ -31,19 +31,21 @@ function createGenreNav() {
         </li>
     </ul>
     `;
-    nav.addEventListener('click', (e) => {
-        const selectedItem = e.target.closest('li');
-        const previousSelectedItem = nav.querySelector('.genre-nav__item--selected');
-        
-        if (selectedItem === previousSelectedItem) return;
+  nav.addEventListener("click", (e) => {
+    const selectedItem = e.target.closest("li");
+    const previousSelectedItem = nav.querySelector(
+      ".genre-nav__item--selected"
+    );
 
-        if (previousSelectedItem !== null) {
-            previousSelectedItem.classList.remove('genre-nav__item--selected');
-        }
-        selectedItem.classList.add('genre-nav__item--selected');
-    });
+    if (selectedItem === previousSelectedItem) return;
 
-    return nav;
+    if (previousSelectedItem !== null) {
+      previousSelectedItem.classList.remove("genre-nav__item--selected");
+    }
+    selectedItem.classList.add("genre-nav__item--selected");
+  });
+
+  return nav;
 }
 
 export { createGenreNav };

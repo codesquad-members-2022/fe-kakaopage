@@ -1,7 +1,7 @@
 function createEventSlide() {
-    const div = document.createElement('div');
-    div.className = 'event-slide';
-    div.innerHTML = `
+  const div = document.createElement("div");
+  div.className = "event-slide";
+  div.innerHTML = `
     <div class="event-img">
         <img src="https://dn-img-page.kakao.com/download/resource?kid=jySqs/hzmU1hjQwo/MUcpK0XEI9k4AfWbJBfkZk" alt="">
     </div>
@@ -11,7 +11,7 @@ function createEventSlide() {
         <button class="event-section-nextBtn">></button>
     </div>
     `;
-    return div;
+  return div;
 }
 
 export { createEventSlide };
