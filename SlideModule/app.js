@@ -74,6 +74,19 @@ const slide = {
   },
 };
 
+const flag = {
+  flag: true,
+  setTrue() {
+    this.flag = true;
+  },
+  setFalse() {
+    this.flag = false;
+  },
+  isTrue() {
+    return this.flag;
+  },
+};
+
 const createImgEl = (src) => {
   const $img = document.createElement('img');
   $img.src = `./img/${src}.png`;
@@ -89,8 +102,8 @@ const offTransition = (element) => {
 };
 
 const onPrevBtn = (event) => {
-  if (!flag) return;
-  flag = false;
+  if (!flag.isTrue()) return;
+  flag.setFalse();
   slide.moveToPrevPage();
   carouselImages.decreaseIdx();
   slide.setSlideStateFirst();
@@ -98,8 +111,8 @@ const onPrevBtn = (event) => {
 };
 
 const onNextBtn = (event) => {
-  if (!flag) return;
-  flag = false;
+  if (!flag.isTrue()) return;
+  flag.setFalse();
   slide.moveToNextPage();
   carouselImages.increaseIdx();
   slide.setSlideStateLast();
@@ -108,7 +121,6 @@ const onNextBtn = (event) => {
 
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
-let flag = true;
 
 const myimages = ['여우신랑', '던전리셋', '에스티오'];
 // 시작 : [에스티오, 여우신랑, 던전리셋]
@@ -138,5 +150,5 @@ $slide.addEventListener('transitionend', (event) => {
   }
 
   slide.setPageMiddle();
-  flag = true;
+  flag.setTrue();
 });
