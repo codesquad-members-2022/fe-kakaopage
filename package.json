@@ -1,6 +1,6 @@
 {
   "name": "fe-kakaopage",
-  "type" : "module",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,8 @@
   "bugs": {
     "url": "https://github.com/dlwnstjrzz/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/dlwnstjrzz/fe-kakaopage#readme"
-  
+  "homepage": "https://github.com/dlwnstjrzz/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
