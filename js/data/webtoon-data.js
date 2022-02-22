@@ -9,18 +9,18 @@ export const webtoonData = [
   },
   { adtnlInfo: '전체' },
   {
-    url: 'https://dn-img-page.kakao.com/download/resource?kid=dy1Oc2/hywgI1bMRS/7QsDTWgZtp8XA30K0Si1u0&filename=th2',
-    title: '샬롯에게는 다섯명의 제자가 있다',
-    explain: '대마법사 샬롯의 제자들이 이상하다?',
-    people: '108.5',
-    writer: '용용',
-  },
-  {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=brEVr3/hzhOkF7eSj/xHW4lqdI3DERYTAhj85wa1&filename=th2',
     title: '프로야구생존기',
     explain: '노영웅의 프로야구 생존기!',
     people: '17.7',
     writer: '최훈',
+  },
+  {
+    url: 'https://dn-img-page.kakao.com/download/resource?kid=chUX1P/hyVkI3H0ff/oBYHB6BQ8ZZCwsdZEfsod0&filename=th2',
+    title: '아기 황후님',
+    explain: '사람들을 구하려면 결혼해야 한다고?',
+    people: '41.6',
+    writer: '유소이',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=dmaZLT/hzb7rxhmlz/4UqTzrdzXkui9o6Lgs8CxK&filename=th2',
