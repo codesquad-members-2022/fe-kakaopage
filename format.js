@@ -2,7 +2,7 @@ import { dummy } from "./sources.js"
 import { createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum, pickFromArr } from "./util.js"
 
 
-export const createFormat0 = () => {
+export const createFormatBannerMain = () => {
     const format0 = `
 <div class="slide-banner">
     <div class="img-with-line">
@@ -14,7 +14,7 @@ export const createFormat0 = () => {
     return format0
 }
 
-export const createFormat1A = () => {
+export const createFormatSummaryA = () => {
     const format1A = `
 <div class="recommendation">
     <button class="rec-btn" style="border-radius: 8px 0 0 0">오늘 UP</button>
@@ -28,7 +28,7 @@ export const createFormat1A = () => {
     return format1A
 }
 
-export const createFormat1B = (a, b, c) => {
+export const createFormatSummaryB= (a, b, c) => {
     const format1B = `
 <div class="recommendation">
     <button class="rec-btn" style="border-radius: 8px 0 0 8px">${a}</button>
@@ -39,7 +39,7 @@ export const createFormat1B = (a, b, c) => {
     return format1B
 }
 
-export const createFormat2 = () => {
+export const createFormatBannerAd = () => {
     const format2 = `
 <div class="slide-event">
     <button class="slide-button"><</button>
@@ -52,7 +52,7 @@ export const createFormat2 = () => {
     return format2
 }
 
-export const createFormat3 = () => {
+export const createFormatDailyTop = () => {
     const format3 = `
                 <div class="menu-form">
                     <div class="menu-form-title">
@@ -80,7 +80,7 @@ export const createFormat3 = () => {
     return format3
 }
 
-export const createFormat4 = () => {
+export const createFormatImgWithLine = () => {
     const format4 = `
 <div class="menu-form">
     <div class="menu-form-title">
@@ -100,7 +100,7 @@ export const createFormat4 = () => {
     return format4
 }
 
-export const createFormat5 = (formatTitle) => {
+export const createFormatContentsBox = (formatTitle) => {
     const format5 =`
     <div class="menu-form">
     <div class="menu-form-title">
@@ -117,7 +117,7 @@ export const createFormat5 = (formatTitle) => {
     return format5
 }
 
-export const createFormat6 = (formatTitle) => {
+export const createFormatRanking = (formatTitle) => {
     const format6 =`
 <div class="menu-form">
     <div class="menu-form-title">
@@ -133,7 +133,7 @@ export const createFormat6 = (formatTitle) => {
     return format6
 }
 
-export const createFormat7 = () => {
+export const createFormatBannerSub = () => {
     const format7 =`
 <div class="menu-form">
     <div class="menu-form-title">
@@ -149,7 +149,7 @@ export const createFormat7 = () => {
     return format7
 }
 
-export const createFormat8 = () => {
+export const createFormatDailyWebtoon = () => {
     const format8 = `
                 <div class="menu-form">
                     <ul class="nav-day" id="nav-day" style="margin-top:0">
@@ -183,7 +183,7 @@ export const createFormat8 = () => {
     return format8
 }
 
-export const createFormat9 = (formatTitle) => {
+export const createFormatHorizontalContents = (formatTitle) => {
     const format9 =`
             <div class="menu-form">
                 <div class="menu-form-title">
@@ -199,7 +199,7 @@ export const createFormat9 = (formatTitle) => {
     return format9
 }
 
-export const createFormat10 = (formatTitle) => {
+export const createFormatContentsBoxBigger = (formatTitle) => {
     const format10 =`
 <div class="menu-form">
     <div class="menu-form-title">
@@ -215,7 +215,7 @@ export const createFormat10 = (formatTitle) => {
     return format10
 }
 
-export const createFormat11 = (formatTitle) => {
+export const createFormatTotal = (formatTitle) => {
     const format11 =`
 <div class="menu-form">
     <div class="menu-form-title">
@@ -231,7 +231,7 @@ export const createFormat11 = (formatTitle) => {
     return format11
 }
 
-export const createFormat12 = () => {
+export const createFormatHotizontalList = () => {
     const format12 =`
     <div class="menu-form">
         <div class="menu-form-ranking">
