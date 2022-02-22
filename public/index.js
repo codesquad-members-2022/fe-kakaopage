@@ -212,7 +212,48 @@ const createDaysBlock = () => {
   });
 };
 
+const createSmallBanner = () => {
+  const smallBanner = `<div class="banner-container round-container">
+  <img
+    class="banner-img"
+    src="https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak"
+    alt="내가 죽였다"
+  />
+  <div class="banner-detail-container--small text-color--white">
+    <h3 class="banner-title--small">내가 죽였다</h3>
+    <div class="layout-center banner-detail-text-container">
+      <img
+        class="banner-detail-img--small"
+        src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
+      />
+      <span
+        class="layout-center banner-detail-text banner-detail-text--small"
+        ><img
+          class="banner-detail-icon banner-detail-icon--small"
+          src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
+        />웹툰</span
+      >
+      <span class="banner-detail-text--small">|</span>
+      <span
+        class="layout-center banner-detail-text banner-detail-text--small"
+      >
+        <img
+          class="banner-detail-icon banner-detail-icon--small"
+          src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
+        />22.1만명</span
+      >
+    </div>
+  </div>
+  <p class="banner-bottom-text banner-bottom-text--small">
+    누가 아군이고, 누가 적인가.
+  </p>
+</div>`;
+
+  return smallBanner;
+};
+
 const createSmallBannerBlock = () => {
+  const smallBanner = createSmallBanner();
   const smallBannerBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">기대신작 TOP</h2>
@@ -234,41 +275,7 @@ const createSmallBannerBlock = () => {
     </svg>
   </header>
   <div class="grid-2col">
-    <div class="banner-container round-container">
-      <img
-        class="banner-img"
-        src="https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak"
-        alt="내가 죽였다"
-      />
-      <div class="banner-detail-container--small text-color--white">
-        <h3 class="banner-title--small">내가 죽였다</h3>
-        <div class="layout-center banner-detail-text-container">
-          <img
-            class="banner-detail-img--small"
-            src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
-          />
-          <span
-            class="layout-center banner-detail-text banner-detail-text--small"
-            ><img
-              class="banner-detail-icon banner-detail-icon--small"
-              src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
-            />웹툰</span
-          >
-          <span class="banner-detail-text--small">|</span>
-          <span
-            class="layout-center banner-detail-text banner-detail-text--small"
-          >
-            <img
-              class="banner-detail-icon banner-detail-icon--small"
-              src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
-            />22.1만명</span
-          >
-        </div>
-      </div>
-      <p class="banner-bottom-text banner-bottom-text--small">
-        누가 아군이고, 누가 적인가.
-      </p>
-    </div>
+    ${smallBanner}
   </div>
 </div>`;
   insertIntoMain(smallBannerBlock);
