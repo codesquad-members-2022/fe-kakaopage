@@ -2,10 +2,12 @@ import { $ } from "./utils/dom.js";
 import { homeData } from "./data/homeData.js";
 import { coverImg } from "./data/coverImg.js";
 import { romanceTop } from "./data/genreItems.js";
+import { weekdayData } from "./data/weekdayData.js";
 
 import Category from "./views/Category.js";
 import SlideBanner from "./views/SlideBanner.js";
 import GenreBest from "./views/GenreBest.js";
+import Weekday from "./views/Weekday.js";
 
 const changeCoverImg = (subMenu) => {
     const coverImgSection = $(".cover-image");
@@ -41,6 +43,15 @@ const renderHome = () => {
     render(html);
 };
 
+const renderWeekday = () => {
+    const weekday = new Weekday(weekdayData);
+
+    let html = "";
+    html += weekday.getHtml();
+
+    render(html);
+};
+
 const preventDefaults = () => {
     $("body").addEventListener("click", (e) => {
         if (!e.target.matches("[data-link]")) return;
@@ -60,9 +71,13 @@ const bindSubMenuEvent = () => {
 
         if (targetPage === "홈") {
             renderHome();
-        } else {
-            render("");
+            return;
         }
+        if (targetPage === "요일연재") {
+            renderWeekday();
+            return;
+        }
+        render("");
     });
 };
 
