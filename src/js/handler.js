@@ -22,18 +22,18 @@ const handleNav = (event) => {
 
 const isAlreadyClicked = (eventTarget) => eventTarget.className.includes('--active');
 
-const changeNavStyle = (navtype, category) => {
-  const classActive = `${navtype}__item--active`;
-  const currTab = document.querySelector(`.${classActive}`);
-  if (currTab) currTab.classList.remove(classActive);
-
-  const newTab = document.querySelector(`.${navtype}__item[data-category="${category}"]`);
-  newTab.classList.add(classActive);
-};
-
 const loadContent = (navtype, category) => {
   changeNavStyle(navtype, category);
   loadGnbTabContents(category);
+};
+
+const changeNavStyle = (navtype, category) => {
+  const classActive = `${navtype}__item--active`;
+  const currentTab = document.querySelector(`.${classActive}`);
+  const clickedTab = document.querySelector(`.${navtype}__item[data-category="${category}"]`);
+
+  if (currentTab) currentTab.classList.remove(classActive);
+  clickedTab.classList.add(classActive);
 };
 
 const loadGnbTabContents = (tabName) => {
