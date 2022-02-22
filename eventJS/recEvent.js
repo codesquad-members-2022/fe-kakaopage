@@ -13,16 +13,12 @@ import { renderToonbyDay } from "./mainEvent.js";
 const renderMainSecHome = (clickedNav) => {
   remove(".main");
 
-  const containers = data.genre.reduce((containersArr, genre) => {
-    containersArr.push(createMaincontainer({ left: genre, right: "더보기" }));
-    return containersArr;
-  }, []);
+  const containers = data.genre.map((toonGen) => {
+    const imgData = toonGenreChecker(toonGen);
+    return createMaincontainer({ left: toonGen, right: "더보기" }, imgData);
+  });
 
   containers.forEach((container) => {
-    const toggleInfo = container.querySelector(".main--toggle--left")
-      .firstElementChild.textContent;
-    const getDataByGenre = toonGenreChecker(toggleInfo);
-    multiAppend(getDataByGenre, container, ".main__cartoonZone", createImgCard);
     $(".containEvery").appendChild(container);
   });
 
@@ -32,29 +28,27 @@ const renderMainSecHome = (clickedNav) => {
 const renderMainSecWoD = (clickedNav) => {
   remove(".main");
 
-  const changedToggle = ".main--toggle--left";
-  const container = createMaincontainer({ left: "", right: "전체(test)" });
-  removeAllChild(container, changedToggle);
-
-  const lists = createlist(data);
-  lists.forEach((list) =>
-    container.querySelector(changedToggle).appendChild(list)
+  const parentNav = ".main__nav--toggle";
+  const container = createMaincontainer(
+    { left: "", right: "전체(test)" },
+    data.toonData
   );
 
-  const weekendNav = createMainNav(data);
+  $(".containEvery").appendChild(container);
+  const newList = createlist(data.toggleLeft, "main--toggle--left");
+  remove(".main--toggle--left");
 
+  container
+    .querySelector(parentNav)
+    .insertBefore(newList, $(".main--toggle--right"));
+
+  const weekendNav = createMainNav(data);
   weekendNav
     .querySelector(".main__nav__dow--ul")
     .addEventListener("click", renderToonbyDay);
 
-  container.insertBefore(
-    weekendNav,
-    container.querySelector(".main__nav--toggle")
-  );
+  container.insertBefore(weekendNav, container.querySelector(parentNav));
 
-  multiAppend(data.toonData, container, ".main__cartoonZone", createImgCard);
-
-  $(".containEvery").appendChild(container);
   data.contentsChecker = clickedNav;
 };
 

@@ -13,7 +13,7 @@ const createMainNav = (data) => {
   return nav;
 };
 
-const createMaincontainer = (toggleinfo) => {
+const createMaincontainer = (toggleinfo, imgInfo) => {
   const containter = createEl("section");
   containter.classList.add("main");
   containter.innerHTML = `
@@ -24,45 +24,43 @@ const createMaincontainer = (toggleinfo) => {
     <div class="main--toggle--right">${toggleinfo.right}</div>
   </nav>
   <ul class="main__cartoonZone">
+    <li class="main__cartoonZone__cell">${imgInfo
+      .map((imgData) => createImgCard(imgData))
+      .join("")}</li> 
   </ul>
 `;
+
   return containter;
 };
 
 const createImgCard = (data) => {
-  const imgCard = createEl("li");
-  imgCard.classList.add("main__cartoonZone__cell");
-  imgCard.innerHTML = `
-  <div class="main__cartoonZone--imageWrapper">
-    <img
-      src=${data.imgUrl}
-      class="main__cartoonZone--image"
-    />
-    <div class="main__cartoonZone--imgTag">
-      <span class="main__cartoonZone--imgTagLeft">TOP</span>
-      <span class="main__cartoonZone--imgTagRight">인기</span>
+  return `
+  <li class="main__cartoonZone__cell">
+    <div class="main__cartoonZone--imageWrapper">
+      <img
+        src=${data.imgUrl}
+        class="main__cartoonZone--image"
+      />
+      <div class="main__cartoonZone--imgTag">
+        <span class="main__cartoonZone--imgTagLeft">TOP</span>
+        <span class="main__cartoonZone--imgTagRight">인기</span>
+      </div>
     </div>
-  </div>
-  <div class="main__cartoonZone--info">
-    <span class="main__cartoonZone--title">${data.title}</span>
-    <span class="main__cartoonZone--description">
-      ${data.info}
-    </span>
-  </div>
+    <div class="main__cartoonZone--info">
+      <span class="main__cartoonZone--title">${data.title}</span>
+      <span class="main__cartoonZone--description">
+        ${data.info}
+      </span>
+    </div>
+  </li>
 `;
-
-  return imgCard;
 };
 
-const createlist = (data) => {
-  const listArr = data.toggleLeft.reduce((acc, toggleFont) => {
-    const list = createEl("li");
-    list.textContent = toggleFont;
-    acc.push(list);
-    return acc;
-  }, []);
-
-  return listArr;
+const createlist = (data, className) => {
+  const UL = createEl("ul");
+  UL.classList.add(className);
+  UL.innerHTML = `${data.map((toggleStr) => `<li>${toggleStr}</li>`).join("")}`;
+  return UL;
 };
 
 const toonGenreChecker = (toonGenre) =>
