@@ -308,14 +308,18 @@ header {
 
 .contents-header a {
   color: #999; }
-
-.contents-header a::after {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-image: url("../img/icons/ic-more-gray.svg"); }
+  .contents-header a::before, .contents-header a::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+  .contents-header a::after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icons/ic-more-gray.svg"); }
 
 /* Small Contents List */
 .contents-list.small {

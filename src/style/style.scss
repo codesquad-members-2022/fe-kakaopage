@@ -375,15 +375,16 @@ header {
 
 .contents-header a {
   color: $text-mid-gray;
-}
+  @include pseudo-img();
 
-.contents-header a::after {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-image: url('../img/icons/ic-more-gray.svg');
+  &::after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('../img/icons/ic-more-gray.svg');
+  }
 }
 
 /* Small Contents List */
