@@ -1,4 +1,5 @@
-import { dataOfDays } from "./data/days.js";
+import { dataOfDays } from "./data/home/days.js";
+import { dataOfDrama } from "./data/home/drama.js";
 
 const $ = (selector) => {
   return document.querySelector(selector);
@@ -349,7 +350,6 @@ const createWebtoonWithGrade = (data) => {
 };
 
 const createWebtoonWithRank = (data, i) => {
-  console.log(i);
   const webtoon = `<div class="webtoon-container">
     <div class="webtoon-img-container round-container">
       <img
@@ -385,35 +385,39 @@ const createWebtoonWithRank = (data, i) => {
   return webtoon;
 };
 
-// const createGenreBlock = () => {
-//   const webtoons = createWebtoonWithGrade(5);
-//   const genreBlock = `<div class="center container contents-container">
-//   <header class="header-container">
-//     <h2 class="mr--auto">드라마 TOP</h2>
-//     <span class="text-color--gray">더보기</span>
-//     <svg
-//       class="arrow-with-text arrow--light-gray"
-//       xmlns="http://www.w3.org/2000/svg"
-//       class="h-6 w-6"
-//       fill="none"
-//       viewBox="0 0 24 24"
-//       stroke="currentColor"
-//     >
-//       <path
-//         stroke-linecap="round"
-//         stroke-linejoin="round"
-//         stroke-width="2"
-//         d="M9 5l7 7-7 7"
-//       />
-//     </svg>
-//   </header>
-//   <div class="grid-5col">
-//   ${webtoons}
-//   </div>
-// </div>`;
+const createGenreBlock = (genre) => {
+  const webtoons = [];
+  range(5).forEach(() => {
+    webtoons.push(createWebtoonWithGrade(genre));
+  });
 
-//   insertIntoMain(genreBlock);
-// };
+  const genreBlock = `<div class="center container contents-container">
+  <header class="header-container">
+    <h2 class="mr--auto">드라마 TOP</h2>
+    <span class="text-color--gray">더보기</span>
+    <svg
+      class="arrow-with-text arrow--light-gray"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 5l7 7-7 7"
+      />
+    </svg>
+  </header>
+  <div class="grid-5col">
+  ${webtoons.join("")}
+  </div>
+</div>`;
+
+  insertIntoMain(genreBlock);
+};
 
 const createDailyRank = () => {
   const dailyRank = `<li class="layout-center">
@@ -560,7 +564,7 @@ $(".main-header-nav").addEventListener("click", (e) => {
     createPromotionBlock();
     createDaysBlock();
     createSmallBannerBlock();
-    // createGenreBlock();
+    createGenreBlock(dataOfDrama);
     createDailyRankBlock();
     createEventBlock();
   } else {
