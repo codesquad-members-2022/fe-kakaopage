@@ -1,3 +1,4 @@
+import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon, genreFunction } from "./createPage.js";
 import { dummy } from "./sources.js";
 
 export function pickFromArr (arr) {
@@ -208,3 +209,15 @@ export function resetFlexbox(target){
         flexBox.innerHTML += `${createContentForms(10)}`;
     }
 }
+
+export function navEvent () {
+    const body = document.querySelector('body');
+
+    body.addEventListener("click", e => {
+        const genre = e.target.dataset.genre;
+        if (genre) {
+            genreFunction[genre]()
+        }
+    })
+}
+

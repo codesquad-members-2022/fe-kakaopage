@@ -1,18 +1,20 @@
 import { createFormat0, createFormat10, createFormat11, createFormat12, createFormat1A, createFormat1B, createFormat2, createFormat3, createFormat4, createFormat5, createFormat6, createFormat7, createFormat8, createFormat9 } from "./format.js";
-import { addClickEventToElement, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
+import { addClickEventToElement, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage, navEvent } from "./util.js";
 
 export const createPageInit = () => {
     addSelectedTo('body')
 
-    addClickEventToElement('#genre-home', createPageHome)
-    addClickEventToElement('#genre-daily', createPageDaily)
-    addClickEventToElement('#genre-webtoon', createPageWebtoon)
-    addClickEventToElement('#genre-teen', createPageTeen)
-    addClickEventToElement('#genre-drama', createPageDrama)
-    addClickEventToElement('#genre-romance', createPageRomance)
-    addClickEventToElement('#genre-rofan', createPageRofan)
-    addClickEventToElement('#genre-action', createPageAction)
-    addClickEventToElement('#genre-BL', createPageBL)
+    navEvent()
+
+    // addClickEventToElement('#genre-home', createPageHome)
+    // addClickEventToElement('#genre-daily', createPageDaily)
+    // addClickEventToElement('#genre-webtoon', createPageWebtoon)
+    // addClickEventToElement('#genre-teen', createPageTeen)
+    // addClickEventToElement('#genre-drama', createPageDrama)
+    // addClickEventToElement('#genre-romance', createPageRomance)
+    // addClickEventToElement('#genre-rofan', createPageRofan)
+    // addClickEventToElement('#genre-action', createPageAction)
+    // addClickEventToElement('#genre-BL', createPageBL)
     
     createPageHome();
 }
@@ -157,4 +159,16 @@ export const createPageBL = () => {
 
     initPage();
     addToContents(contents);
+}
+
+export const genreFunction = {
+    home: () => createPageHome(),
+    daily: () => createPageDaily(),
+    webtoon: () => createPageWebtoon(),
+    teen: () => createPageTeen(),
+    drama: () => createPageDrama(),
+    romance: () => createPageRomance(),
+    rofan: () => createPageRofan(),
+    action: () => createPageAction(),
+    BL: () => createPageBL()
 }

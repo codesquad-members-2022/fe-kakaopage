@@ -15,19 +15,12 @@ body{
     overflow-x: hidden;
 }
 
-.wrapper {
-    width: 100vw;
-    min-height: 100vh;
-
-    overflow: hidden;
-    background-color: var(--bg-color);
-}
-
 img {
     width: 100%;
     height: 100%;
 }
 
+/* 헤더 영역 */
 header {
     position: fixed;
     z-index: 100;
@@ -86,6 +79,16 @@ header {
     color: var(--font-color-gray);
     font-size: 18px;
     font-weight: bold;
+}
+
+
+/* 바디 영역 */
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+
+    overflow: hidden;
+    background-color: var(--bg-color);
 }
 
 .main-wrap {
@@ -316,7 +319,7 @@ header {
 
     font-size: 1.05rem;
     color: lightgray;
-    font-weight: 550;
+    font-weight: bold;
 }
 
 .category-nav-items {
@@ -330,7 +333,7 @@ header {
 
 .category-nav-sum {
     font-size: 0.9rem;
-    font-weight: 550;
+    font-weight: bold;
 }
 
 .contents-flex-box {
@@ -506,59 +509,6 @@ header {
     height: 100%;
 }
 
-footer {
-    width: 100vw;
-    height: 260px;
-
-    background-color: var(--bg-color);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.toApp {
-    width: 720px;
-    height: 70px;
-    line-height: 70px;
-    background-color: var(--kakao-yellow);
-    
-    text-align: center;
-    font-weight: 550;
-    font-size: 1.4rem;
-}
-
-.footer-fitst-line {
-    display: flex;
-
-    width: 720px;
-    height: 20px;
-
-    padding-top: 60px;
-}
-
-.footer-second-line {
-    width: 720px;
-    height: 20px;
-    margin-top: 6px;
-    margin-bottom: 15px;
-
-    display: flex;
-}
-
-details {
-    font-size: 0.85rem;
-    color: var(--font-color-gray);
-    font-weight: bold;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.details-line {
-    display: flex;
-}
-
 .horizontal-img-wrap {
     width: 142px;
     height: 96px;
@@ -604,4 +554,58 @@ details {
 
 .selected {
     color: black;
+}
+
+/* fotter 영역 */
+footer {
+    width: 100vw;
+    height: 260px;
+
+    background-color: var(--bg-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toApp {
+    width: 720px;
+    height: 70px;
+    line-height: 70px;
+    background-color: var(--kakao-yellow);
+    
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.footer-fitst-line {
+    display: flex;
+
+    width: 720px;
+    height: 20px;
+
+    padding-top: 60px;
+}
+
+.footer-second-line {
+    width: 720px;
+    height: 20px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+
+    display: flex;
+}
+
+details {
+    font-size: 0.85rem;
+    color: var(--font-color-gray);
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.details-line {
+    display: flex;
 }
