@@ -1,6 +1,7 @@
 import { $ } from "./utils/dom.js";
 import { nodes } from "./nodes.js";
 import { romanceTop } from "./data/genreItems.js";
+import Category from "./views/Category.js";
 
 // FIXME:파일분리
 const webtoonMenu = {
@@ -140,11 +141,6 @@ const preventDefaults = () => {
         e.preventDefault();
     });
 };
-
-const clearMainContents = () => {
-    $("#app").innerHTML = "";
-};
-
 const bindSubMenuEvent = () => {
     // TODO: 콜백함수 따로 빼기
     // TODO: 서브메뉴 외 다른 메뉴에도 적용되도록
@@ -156,22 +152,11 @@ const bindSubMenuEvent = () => {
         toggleClass(curEl, "active");
         // 커버이미지란 변경
         changeCoverImg(targetPage);
-        // 메인컨텐츠 비우기
-        clearMainContents();
 
-        // 필요한 노드들 추가하기(부모)
-        /* $(".contents-wrap").insertAdjacentHTML(
-            "afterbegin",
-            getElements(targetPage)
-        ); */
-
-        $("#app").innerHTML = getElements(targetPage);
-
+        // $("#app").innerHTML = getElements(targetPage);
         if (targetPage === "홈") {
-            //TODO: 추가한 노드들에 자식노드 추가
-            // FIXME: 로맨스TOP만 추가 테스트
-            // 테스트중: .genre-best가 만들어지면, createGenreItems()를 실행
-            /* createGenreItems(); */
+            const category = new Category();
+            category.render();
         }
     });
 };
@@ -184,7 +169,7 @@ const toggleWeekDayMenu = (target) => {
 const bindEventListener = () => {
     bindSubMenuEvent();
 
-    $(".contents-wrap").addEventListener("click", ({ target }) => {
+    $("#app").addEventListener("click", ({ target }) => {
         if ($(".week-day-menu")?.contains(target)) {
             toggleWeekDayMenu(target);
         }
