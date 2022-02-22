@@ -1,4 +1,3 @@
-import { createEventListnerGenreNav } from "./genre-nav.js";
 import { renderWebtoonMain } from "./mainHTML/webtoon.js";
 import { createEventListenerMenu } from "./menu-nav.js";
 

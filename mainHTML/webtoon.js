@@ -1,15 +1,16 @@
 import { createContentsSection } from "../components/contents-section.js";
-import { createEventListnerGenreNav } from "../genre-nav.js";
 import { webtoonMain } from "../index.js"
 import romanceTopData from "../data/webtoon/home/romance-top.js";
 import { createContentVerticalSmall } from "../components/content-vertical-small.js";
 import { createHomeDayNav } from "../components/home-day-nav.js";
 import { createEventSlide } from "../components/event-slide.js";
 import { createBannerSection } from "../components/banner-section.js";
+import { createGenreNav } from "../components/genre-nav.js";
 
 function renderWebtoonMain() {
     const mainContainer = document.querySelector('main .container');
     mainContainer.innerHTML = webtoonMain;
+    mainContainer.appendChild(createGenreNav());
     mainContainer.appendChild(createBannerSection());
     const sectionDatas = [
         { id: 'day-top-section', header: '요일 연재 TOP <span class="number-of-contents">(1,624)</span>' },
@@ -34,7 +35,6 @@ function renderWebtoonMain() {
     });
 
     mainContainer.querySelector('#recommend-event-section .contents-wrapper').appendChild(createEventSlide());
-    createEventListnerGenreNav();
 }
 
 export { renderWebtoonMain };
