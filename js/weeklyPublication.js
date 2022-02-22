@@ -4,7 +4,7 @@ import * as data from "./data.js";
 let HTMLTemplate = "";
 const promotionWebtoonSection = common.createPromotionWebtoonSection(data.weeklyPromotionWebtoonList);
 const webtoonCategorySection = createWebtoonCategorySection();
-const webtoonBoardSection = common.createWebtoonBoardSection(data.weeklyWebtoonList);
+const webtoonBoardSection = common.createWebtoonBoardSection(data.weeklyWebtoonList["화"]);
 HTMLTemplate += promotionWebtoonSection + webtoonCategorySection + webtoonBoardSection;
 export const weeklyPublicationTemplate = HTMLTemplate;
 

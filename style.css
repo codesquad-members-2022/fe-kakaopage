@@ -20,13 +20,16 @@
 .grid_container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 5px;
-  width: 725px;
+  gap: 1px;
+  width: 685px;
+  padding: 20px;
   text-align: center;
+  background-color: var(--background-color-white);
 }
 
 .grid_item {
-  padding: 19px;
+  width: 226px;
+  height: 69px;
   background-color: var(--background-color-gray);
 }
 
@@ -36,6 +39,12 @@
 
 .bold {
   font-weight: 600;
+}
+
+.paint_yellow {
+  background-image: url("https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 body {
@@ -60,10 +69,6 @@ input {
   border: none;
   width: 130px;
   height: 20px;
-}
-
-.sub_category_section {
-  width: 725px;
 }
 
 .search_button {
@@ -118,7 +123,7 @@ input {
   align-items: center;
   width: 725px;
   height: 67px;
-  margin: 15px;
+  margin: 15px 0 10px 0;
   background-color: var(--background-color-white);
 }
 
@@ -178,7 +183,6 @@ input {
 
 .webtoon_genre_filter {
   list-style: none;
-  margin: 10px;
 }
 
 .webtoon_genre_filter > .webtoon_genre {
@@ -206,6 +210,8 @@ input {
 }
 
 .webtoon_score {
+  display: flex;
+  justify-content: space-between;
   color: var(--background-color-yellow);
   background-color: black;
 }

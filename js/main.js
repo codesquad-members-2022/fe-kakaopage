@@ -1,29 +1,41 @@
 import {weeklyPublicationTemplate} from "./weeklyPublication.js";
 import {homeTemplate} from "./home.js";
+import {createWebtoonBoardSection} from "./common.js";
+import {weeklyWebtoonList} from "./data.js";
+let previousSubCategory = document.createElement("div");
+let previousWeekdayCategory = document.createElement("div");
 
 init();
 
 function init() {
-  createHTML("요일연재");
+  replaceSubCategoryWithTemplate("요일연재");
+  attachEventListner();
 }
 
-let previousSelectedSubCategory = document.createElement("div");
-const subCategoryNav = document.querySelector(".sub_category_navigation");
-subCategoryNav.addEventListener("click", (event) => {
-  const targetElement = event.target;
-  if (targetElement.tagName === "DIV") {
-    selectSubCategory(targetElement);
-    createHTML(targetElement.innerText);
-  }
-});
-
-function selectSubCategory(subCategoryDiv) {
-  previousSelectedSubCategory.classList.remove("bold");
-  subCategoryDiv.classList.add("bold");
-  previousSelectedSubCategory = subCategoryDiv;
+function attachEventListner() {
+  const subCategoryNav = document.querySelector(".sub_category_navigation");
+  const weekdayCategoryNav = document.querySelector(".weekday_category_navigation");
+  delegateEventListener(subCategoryNav, clickSubCategoryNav);
+  delegateEventListener(weekdayCategoryNav, clickWeekdayCategoryNav);
 }
 
-function createHTML(subCategory) {
+function delegateEventListener(parentElement, func) {
+  parentElement.addEventListener("click", (event) => {
+    const targetElement = event.target;
+    if (targetElement.tagName === "DIV") {
+      func(targetElement);
+    }
+  });
+}
+
+function clickSubCategoryNav(subCategoryNav) {
+  previousSubCategory.classList.remove("bold");
+  subCategoryNav.classList.add("bold");
+  previousSubCategory = subCategoryNav;
+  replaceSubCategoryWithTemplate(subCategoryNav.innerText);
+}
+
+function replaceSubCategoryWithTemplate(subCategory) {
   const subCategorySection = document.querySelector(".sub_category_section");
   switch (subCategory) {
     case "요일연재":
@@ -36,4 +48,17 @@ function createHTML(subCategory) {
       subCategorySection.innerHTML = "";
       break;
   }
+}
+
+function clickWeekdayCategoryNav(weekdayCategoryNav) {
+  previousWeekdayCategory.classList.remove("paint_yellow");
+  weekdayCategoryNav.classList.add("paint_yellow");
+  previousWeekdayCategory = weekdayCategoryNav;
+  replaceWebtoonBoardWithTemplate(weekdayCategoryNav.innerText);
+}
+
+function replaceWebtoonBoardWithTemplate(weekday) {
+  const webtoonBoardSection = document.querySelector(".webtoon_board");
+  const webtoonBoardTemplate = createWebtoonBoardSection(weeklyWebtoonList[weekday]);
+  webtoonBoardSection.innerHTML = webtoonBoardTemplate;
 }

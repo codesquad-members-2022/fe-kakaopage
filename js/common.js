@@ -49,7 +49,7 @@ function createWebtoonElement(webtoon) {
 function createWebtoonPreviewDiv(imgURL, webtoonScore) {
   return `<div class="webtoon_preview">
     <img src="${imgURL}">
-    <div class="webtoon_score category_align">
+    <div class="webtoon_score">
       ${webtoonScore}
       <img src="./image/wait_sign.svg">
     </div>
