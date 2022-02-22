@@ -8,6 +8,7 @@ import {
   AnticipatedWork,
   DailyRanking,
   RecommendEvent,
+  AppDownloadLink
 } from './index.js';
 import { Categories } from '../data';
 
@@ -28,6 +29,7 @@ const MainContents = () => {
             ${GenreTop('액션무협')}
             ${DailyRanking()}
             ${RecommendEvent()}
+            ${AppDownloadLink()}
           </div>`;
 };
 

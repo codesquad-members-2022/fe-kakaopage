@@ -25,6 +25,7 @@ import DailyRanking from './section/DailyRanking.js';
 import EventBannerItem from './banner/EventBannerItem.js';
 import EventBannerList from './banner/EventBannerList.js';
 import RecommendEvent from './section/RecommendEvent.js';
+import AppDownloadLink from './section/AppDownloadLink.js';
 
 export {
   Nav,
@@ -54,4 +55,5 @@ export {
   EventBannerItem,
   EventBannerList,
   RecommendEvent,
+  AppDownloadLink,
 };
