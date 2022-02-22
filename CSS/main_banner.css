@@ -22,6 +22,7 @@
 /* 배너 화살표 */
 .banner__prev, .banner__next {
   position: absolute;
+  z-index: 10;
   top: 45%;
   padding: 10px 16px;
   border: 1px solid var(--white-color);
@@ -43,6 +44,9 @@
 .main__banner {
   width: 720px;
   overflow: hidden;
+}
+.main__banner .banner__list {
+  transition: transform 0.5s;
 }
 
 .main__banner .banner__item {
