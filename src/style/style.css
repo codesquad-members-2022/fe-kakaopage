@@ -391,41 +391,33 @@ header {
 .contents-list.large {
   display: flex;
   justify-content: space-between; }
-
-.list-item.banner {
-  width: 49%;
-  border-radius: 5px;
-  overflow: hidden; }
-
-.list-item.banner a {
-  position: relative;
-  height: fit-content; }
-
-.list-item.banner .banner-info h2 {
-  font-size: 1.125rem;
-  margin-bottom: 4px; }
-
-.list-item.banner .banner-info span:not(:first-child) {
-  font-size: 0.875rem; }
-
-.list-item.banner .banner-info .badge {
-  top: 2px;
-  font-size: 0.8125rem; }
-
-.list-item.banner .banner-info span:not(:first-child)::before {
-  top: 1px;
-  width: 12px;
-  height: 12px;
-  margin-right: 2px; }
-
-.list-item.banner .banner-info .genre::after {
-  height: 10px;
-  border-right: 1px solid #999;
-  margin: 0 4px 0 6px; }
-
-.list-item.banner .banner-text {
-  font-size: 0.75rem;
-  padding: 4px; }
+  .contents-list.large .banner {
+    width: 49%;
+    border-radius: 5px;
+    overflow: hidden; }
+    .contents-list.large .banner a {
+      position: relative;
+      height: fit-content; }
+    .contents-list.large .banner .banner-info h2 {
+      font-size: 1.125rem;
+      margin-bottom: 4px; }
+    .contents-list.large .banner .banner-info span:not(:first-child) {
+      font-size: 0.875rem; }
+      .contents-list.large .banner .banner-info span:not(:first-child)::before {
+        top: 1px;
+        width: 12px;
+        height: 12px;
+        margin-right: 2px; }
+    .contents-list.large .banner .banner-info .badge {
+      top: 2px;
+      font-size: 0.8125rem; }
+    .contents-list.large .banner .banner-info .genre::after {
+      height: 10px;
+      border-right: 1px solid #999;
+      margin: 0 4px 0 6px; }
+    .contents-list.large .banner .banner-text {
+      font-size: 0.75rem;
+      padding: 4px; }
 
 /* Vertical Contents List */
 .contents-list.vertical > *:not(:last-child) {
