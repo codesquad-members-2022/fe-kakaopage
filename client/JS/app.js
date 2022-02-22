@@ -31,13 +31,21 @@ const markSelectedNav = (target) => {
   target.classList.add("selected");
 };
 
+const specifyNavClass = (target, nav) => {
+  if (target.tagName !== "SPAN") return;
+  markSelectedNav(target);
+  const name = nav.className;
+  const getNavContents = {
+    header__nav: showSelectedHeaderNav(target),
+  };
+  getNavContents[name];
+};
+
 const clickEventHandler = (event) => {
   event.preventDefault();
   const { target } = event;
   const nav = target.closest("nav");
-  const header = target.closest("header");
-  if (target.tagName === "SPAN" && nav) markSelectedNav(target);
-  if (target.tagName === "SPAN" && header) showSelectedHeaderNav(target);
+  if (nav) specifyNavClass(target, nav);
 };
 
 const init = () => {
