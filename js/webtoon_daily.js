@@ -1,8 +1,16 @@
 
+import { select, addClass, removeClass } from "./util.js";
 import { webtoonData } from "./webtoonData.js"
 
-function select(selector) {
-    return document.querySelector(selector)
+function createDailyDiv() {
+    const dailyDiv = document.createElement('div');
+    dailyDiv.className = "margin-center daily"
+    dailyDiv.innerHTML = `<ul class="l-center daily__nav">
+            </ul>
+            <div class="l-inline daily__contents">
+            </div>`
+    const $main = select('.main')
+    $main.insertBefore(dailyDiv, null)
 }
 
 function createDailyNav() {
@@ -22,23 +30,19 @@ function listenEvent() {
 function handleClick(e) {
     const $daily__button = e.target;
     // button box 클릭 시에만 실행하도록 범위 지정.
+    // addOn 된 경우에는 실행되지 않아서 한번 선택된 tab 에서는 이벤트가 발생하지 않는다.
     if($daily__button.className === 'daily__button') {
-        removeOn($daily__button)
-        addOn($daily__button)
+        removeClass('daily__button-on')
+        addClass($daily__button, 'daily__button-on')
         createDailyContent($daily__button)
     }
 }
 
-
-// 기존에 on 은 모두 삭제하고 클릭된 노드만 on
-function addOn(target) {
-    target.className += ' daily__button-on' // 한칸 띄고 넣어야함.
-}
-
-function removeOn(target) {
-    const $$daily__button = document.querySelectorAll(`.${target.className}`)
-    $$daily__button.forEach((node) => node.classList.remove('daily__button-on'))
-}
+// on class 를 가진 노드가 1개이므로 굳이 순회하면서 찾을 필요가 없다.
+// function removeOn(target) {
+//     const $$daily__button = document.querySelectorAll(`.${target.className}`)
+//     $$daily__button.forEach((node) => node.classList.remove('daily__button-on'))
+// }
 
 function createDailyContent(target) {
     const clickedDay = target.innerText;
@@ -90,16 +94,17 @@ function createTodayContent() {
     const $$daily__button = document.querySelectorAll('.daily__button')
     $$daily__button.forEach((node) => {
         if(node.innerText === today) {
-            addOn(node);
+            addClass(node, 'daily__button-on');
             createDailyContent(node);
         }
     })
 }
 
-function initWebtoon() {
+export function initWebtoonDaily() {
+    createDailyDiv()
     createDailyNav()
     createTodayContent()
     listenEvent()
 }
 
-initWebtoon();
+//initWebtoon();
