@@ -1,4 +1,6 @@
-window.onload = function () {
+import data from './datas.js'
+
+document.addEventListener('DOMContentLoaded', () => {
   function setThumbnail(doc, root, src, alt) {
     const thumbnail = doc.querySelector(root)
 
@@ -17,7 +19,7 @@ window.onload = function () {
 
     icon.insertAdjacentHTML(
       'afterbegin',
-      `<img src=${src} alt=${alt} width="13px"></img>`
+      /* html */ `<img src=${src} alt=${alt} width="13px"></img>`
     )
   }
 
@@ -36,7 +38,7 @@ window.onload = function () {
   const serial = document.querySelector('.serial')
   const webtoon = document.querySelector('.serial__webtoons')
 
-  function webtoonList() {
+  function setWebtoonList() {
     const days = ['tue', 'wen', 'thu', 'fri', 'sat', 'sun', 'end']
     for (let i = 0; i < days.length; i++) {
       // 월요일 웹툰 목록 HTML구조를 복사한것을 나머지 탭 웹툰 목록으로 사용
@@ -64,17 +66,20 @@ window.onload = function () {
     }
   }
 
-  webtoonList()
+  setWebtoonList()
 
   const dayTab = document.querySelector('.serial__list')
-  const dayTabList = dayTab.querySelectorAll('.serial__item')
+
+  dayTab.addEventListener('click', toggleActiveTab)
+  dayTab.addEventListener('click', toggleActiveWebtoonTab)
 
   // 1. 현재 focus 메뉴
   let currentActiveTab = dayTab.querySelector('.serial__item--focus')
 
-  function toggleActiveTab() {
+  function toggleActiveTab(e) {
     // 2. 현재 클릭한 메뉴
-    const tabItem = this
+    const tabItem = e.target
+
     if (currentActiveTab !== tabItem) {
       // 3. 현재 클릭한 메뉴에 focus 지정
       tabItem.classList.add('serial__item--focus')
@@ -87,22 +92,17 @@ window.onload = function () {
 
   const webtoonTabList = document.querySelectorAll('.serial__webtoons')
 
-  function toggleActiveWebtoonTab() {
-    const tabItem = this
+  function toggleActiveWebtoonTab(e) {
+    const tabItem = e.target
     // 1. 웹툰 목록을 전부 display: none 처리
-    webtoonTabList.forEach((e) => {
-      e.classList.add('display__none')
+    webtoonTabList.forEach((el) => {
+      el.classList.add('display__none')
     })
-    webtoonTabList.forEach((e) => {
+    webtoonTabList.forEach((el) => {
       // 2. 클릭한 요소에 data-day를 가져옴
       // 3. 가져온 값에 맞는 웹툰 목록을 display: flex 처리
-      if (tabItem.getAttribute('data-day') === e.getAttribute('data-day'))
-        e.classList.replace('display__none', 'display__flex')
+      if (tabItem.getAttribute('data-day') === el.getAttribute('data-day'))
+        el.classList.replace('display__none', 'display__flex')
     })
   }
-
-  dayTabList.forEach((e) => {
-    e.addEventListener('click', toggleActiveTab)
-    e.addEventListener('click', toggleActiveWebtoonTab)
-  })
-}
+})

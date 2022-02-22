@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/uBeom/fe-kakaopage#readme",
   "dependencies": {
+    "express": "^4.17.3",
     "node-sass": "^7.0.1"
   }
 }
