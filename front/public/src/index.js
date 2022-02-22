@@ -6,6 +6,9 @@ import GenreList from "./screens/Components/GenreList.js";
 const init = async () => {
   const { results: categories } = await getJson("categories");
   const { results: genres } = await getJson("genres");
+
+  localStorage.setItem("genres", JSON.stringify(genres));
+
   const main = document.querySelector(".main");
   const headerNav = document.querySelector(".header__nav");
 

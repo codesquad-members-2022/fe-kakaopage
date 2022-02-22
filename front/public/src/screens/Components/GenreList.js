@@ -17,7 +17,7 @@ function GenreList(target) {
   this.template = function () {
     const { genres } = this.state;
     return `
-      <ul class="mainBox main__navGenre">
+      <ul class="${genres.length ? "mainBox" : ""} main__navGenre">
         ${genres.reduce((tags, { genre, name, selected }) => {
           tags += `
             <li class="navGenre-item ${selected ? "selected" : ""}" 

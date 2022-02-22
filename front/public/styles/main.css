@@ -6,6 +6,7 @@
 .mainBox {
   background-color: #ffffff;
   width: 100%;
+  height: 60px;
   margin: 10px 0px;
 }
 
@@ -16,7 +17,6 @@
   color: #bbbbbb;
   font-size: 17px;
   font-weight: 500;
-  height: 60px;
 }
 .navGenre-item {
   cursor: pointer;
