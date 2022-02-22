@@ -1,5 +1,6 @@
 import { createImgTag } from "./util.mjs";
 import { imgs } from "./info.js";
+import { throttle } from "./throttle.mjs";
 
 /* carousel 개수, 이미지, 정보들 동기화 */
 const initCarousel = (carouselInfo) => {
@@ -39,25 +40,51 @@ const initCarousel = (carouselInfo) => {
 
     carouselInner.appendChild(card);
   }
+  const first = carouselInner.firstElementChild;
+  carouselInner.insertBefore(
+    carouselInner.lastElementChild.cloneNode(true),
+    carouselInner.firstElementChild
+  );
+  carouselInner.appendChild(first.cloneNode(true));
 };
 
 const addCarouselEvent = (leftClass, rightClass) => {
   const item = document.querySelector(".carousel__inner");
+  const counts = document.querySelector(".carousel__counts");
+  const maxCounts = document.querySelector(".carousel__total");
+  const leftButton = document.querySelector(leftClass);
+  const rightButton = document.querySelector(rightClass);
 
-  let x = 0;
-  document.querySelector(leftClass).addEventListener("click", () => {
-    x += 100;
-    item.style.transition = "0.5s";
-    item.style.transform = `translateX(${x}%)`;
-  });
-  document.querySelector(rightClass).addEventListener("click", () => {
-    x -= 100;
-    item.style.transition = "0.5s";
-    item.style.transform = `translateX(${x}%)`;
-  });
+  let x = -100;
+  item.style.transform = `translateX(${x}%)`;
+  leftButton.addEventListener(
+    "click",
+    throttle(() => {
+      counts.firstChild.nodeValue =
+        Number(counts.firstChild.nodeValue) === 1
+          ? Number(maxCounts.firstChild.nodeValue)
+          : Number(counts.firstChild.nodeValue) - 1;
+      x += 100;
+      item.style.transition = "0.5s";
+      item.style.transform = `translateX(${x}%)`;
+    }, 500)
+  );
+
+  rightButton.addEventListener(
+    "click",
+    throttle(() => {
+      counts.firstChild.nodeValue =
+        counts.firstChild.nodeValue === maxCounts.firstChild.nodeValue
+          ? 1
+          : Number(counts.firstChild.nodeValue) + 1;
+      x -= 100;
+      item.style.transition = "0.5s";
+      item.style.transform = `translateX(${x}%)`;
+    }, 500)
+  );
+
   item.addEventListener("transitionend", () => {
-    console.log(1);
-    if (x > 0) {
+    if (x === 0) {
       item.insertBefore(
         item.lastElementChild.cloneNode(true),
         item.firstElementChild
@@ -67,9 +94,9 @@ const addCarouselEvent = (leftClass, rightClass) => {
       item.appendChild(item.firstElementChild.cloneNode(true));
       item.removeChild(item.firstElementChild);
     }
-    x = 0;
+    x = -100;
     item.style.transition = "0s";
-    item.style.transform = `translateX(${0}%)`;
+    item.style.transform = `translateX(-100%)`;
   });
 };
 
