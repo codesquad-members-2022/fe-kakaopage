@@ -5,10 +5,12 @@ import romanceTopData from "../data/webtoon/home/romance-top.js";
 import { createContentVerticalSmall } from "../components/content-vertical-small.js";
 import { createHomeDayNav } from "../components/home-day-nav.js";
 import { createEventSlide } from "../components/event-slide.js";
+import { createBannerSection } from "../components/banner-section.js";
 
 function renderWebtoonMain() {
     const mainContainer = document.querySelector('main .container');
     mainContainer.innerHTML = webtoonMain;
+    mainContainer.appendChild(createBannerSection());
     const sectionDatas = [
         { id: 'day-top-section', header: '요일 연재 TOP <span class="number-of-contents">(1,624)</span>' },
         { id: 'new-work-top-section', header: '기대신작 TOP' },
