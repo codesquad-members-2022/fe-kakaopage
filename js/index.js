@@ -1,6 +1,6 @@
-import { $ } from "./dom.js";
+import { $ } from "./utils/dom.js";
 import { nodes } from "./nodes.js";
-import { romanceTop } from "./genreItems.js";
+import { romanceTop } from "./data/genreItems.js";
 
 // FIXME:파일분리
 const webtoonMenu = {
@@ -142,7 +142,7 @@ const preventDefaults = () => {
 };
 
 const clearMainContents = () => {
-    $(".contents-wrap").innerHTML = "";
+    $("#app").innerHTML = "";
 };
 
 const bindSubMenuEvent = () => {
@@ -165,7 +165,7 @@ const bindSubMenuEvent = () => {
             getElements(targetPage)
         ); */
 
-        $(".contents-wrap").innerHTML = getElements(targetPage);
+        $("#app").innerHTML = getElements(targetPage);
 
         if (targetPage === "홈") {
             //TODO: 추가한 노드들에 자식노드 추가
