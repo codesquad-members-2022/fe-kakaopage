@@ -1,19 +1,24 @@
-import setPreview from './preview/setPreview.js';
-import drawTagListEl from './drawTagListEl.js';
-import clearTagListEl from './clearTagListEl.js';
-import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';
-import clearWebtoonContents from './webtoonComponent/clearWebtoonContents.js';
 import webtoonContentsObj from '../json/webtoonContents.json' assert { type: 'json' };
 import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
+import previewsObj from '../json/preview.json' assert { type: 'json' };
+
+import drawPreviews from './preview/drawPreviews.js';
+import clearPreviews from './preview/clearPreviews.js';
+
+import drawTagListEl from './drawTagListEl.js';
+import clearTagListEl from './clearTagListEl.js';
+
+import drawWebtoonContents from './webtoonComponent/drawWebtoonContents.js';
+import clearWebtoonContents from './webtoonComponent/clearWebtoonContents.js';
+
 import drawDayFilter from './dayFilter/drawDayFilter.js';
 import clearDayFilter from './dayFilter/clearDayFilter.js';
+
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
+
 console.dir(webtoonContentsObj);
 console.dir(dayContentsObj);
-
-const pageMainCategoryContainer = document.querySelector(
-  '.page-main-category__container'
-);
+console.dir(previewsObj);
 
 const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
@@ -25,12 +30,9 @@ const setCurIdx = (idx) => {
   curIdx = idx;
 };
 
-const offHighLight = (element) => {
-  element.classList.toggle('color-black');
-};
-
-const onHighLight = (element) => {
-  element.classList.toggle('color-black');
+const toggleHighlight = (prevTarget, curTarget) => {
+  prevTarget.classList.toggle('color-black');
+  curTarget.classList.toggle('color-black');
 };
 
 const days = {
@@ -56,14 +58,20 @@ pageMainCategory.forEach((li, idx, list) => {
     const curTarget = event.target;
     const category = li.textContent;
     setCurIdx(idx);
-    offHighLight(prevTarget);
-    onHighLight(curTarget);
 
-    setPreview(category);
+    // highlight
+    toggleHighlight(prevTarget, curTarget);
 
+    // preview
+    const previewsArr = previewsObj[category];
+    clearPreviews();
+    drawPreviews(previewsArr);
+
+    // tag list
     clearTagListEl();
     drawTagListEl(category);
 
+    // webtoon contents
     clearWebtoonContents();
     if (dayFilterExists) {
       const dayContentsArr = dayContentsObj[category][selectedDay];
@@ -71,11 +79,11 @@ pageMainCategory.forEach((li, idx, list) => {
         drawWebtoonContents(dayContents);
       });
     }
-
     webtoonContentsObj[category].forEach((webtoonContents) => {
       drawWebtoonContents(webtoonContents);
     });
 
+    // day filter
     clearDayFilter();
     drawDayFilter(li, dayContentsObj[category]);
   });
