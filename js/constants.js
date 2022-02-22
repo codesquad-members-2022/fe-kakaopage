@@ -34,5 +34,11 @@ export const rowListTitleObj = {
   recommendation: { name: "recommend", title: "오늘의 추천", imageSize: "large", imageStatus: "clock" },
   romanceTop: { name: "romance", title: "로맨스 TOP", imageSize: "small", imageStatus: "grade"},
   nobilityTop: { name: "nobility", title: "로판 TOP", imageSize: "small", imageStatus: "grade"},
-  dramaTop: { name: "drama", title: "드라마 TOP", imageSize: "small", imageStatus: "grade"}
+  dramaTop: { name: "drama", title: "드라마 TOP", imageSize: "small", imageStatus: "grade"},
+  boyTop: { name: "boy", title: "소년 TOP", imageSize: "small", imageStatus: "grade"},
+  dailyRankingTop: { name: "dailyRanking", title: "일간 랭킹 TOP", imageSize: "small", imageStatus: "clock"},
+  webtoons: { name: "webtoons", title: "웹툰", imageSize: "mid", imageStatus: ""},
+  todayGift: { name: "gift", title: "오늘의 선물🎁", imageSize: "mid", imageStatus: "clock"},
+  popularity: { name: "popularity", title: "지금 뜨는 인기작", imageSize: "mid", imageStatus: "clock"},
+  exclusive: { name: "exclusive", title: "[ORIGINAL] 믿고보는 독.점.연.재", imageSize: "large", imageStatus: "clock"}
 };
