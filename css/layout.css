@@ -128,3 +128,6 @@ nav {
   font-size: 0;
   padding: 30px 0 15px;
 }
+.webtoonWrap {
+  border-bottom: 3px solid #ffd200;
+}
