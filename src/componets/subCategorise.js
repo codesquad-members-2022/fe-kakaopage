@@ -1,7 +1,10 @@
 const getSubCategoryTemp = (dataEl) => {
+    const updateNum = dataEl.updateNum ?
+    ` <spn class="sub-category__number">${dataEl.updateNum}</spn>`
+    : '';
     return (
         `<li class="sub-category">
-            <a href="${dataEl.link}" class="sub-category__link">${dataEl.category}<spn class="sub-category__number">${dataEl.updateNum}</spn></a>
+            <a href="${dataEl.link}" class="sub-category__link">${dataEl.category}${updateNum}</a>
         </li>`
     );
 }
