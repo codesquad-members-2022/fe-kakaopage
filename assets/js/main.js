@@ -137,18 +137,46 @@ function initSlider(sWrapper) {
     sliderBox.appendChild(cloneFirst);
     sliderBox.prepend(cloneLast);
     const itemWidth = 100;
-    let currentIdx = 1;
-    sliderPager.innerText = `${currentIdx} / ${sliderItem.length}`;
+    let currentIdx = 0;
+    let index = 0;
+    sliderPager.innerText = `${currentIdx + 1} / ${sliderItem.length}`;
 
     setInitPos(sliderBox, itemWidth);
     setTimeout(() => {
         sliderBox.classList.add('animate')
     }, 0)
+
+    sliderWrapper.addEventListener('click', (e) => {
+        const target = e.target;
+        const prevBtn = sliderWrapper.querySelector('.prev');
+        const nextBtn = sliderWrapper.querySelector('.next');
+    
+        switch (target) {
+            case prevBtn:
+                index = currentIdx - 1;
+                moveSlide(sliderBox, itemWidth, index);
+                currentIdx -= 1;
+                break;
+            case nextBtn:
+                index = currentIdx + 1;
+                moveSlide(sliderBox, itemWidth, index)
+                currentIdx += 1;
+                break;
+            default :
+                break;
+        }
+        sliderPager.innerText = `${currentIdx + 1} / ${sliderItem.length}`;
+    })
 }
 
 function setInitPos(sliderBox, itemWidth) {
     const initTranslateValue = `-${itemWidth}%` 
     sliderBox.style.transform = `translateX(${initTranslateValue})`
+}
+
+function moveSlide(sliderBox, itemWidth, idx) {
+    const translateValue = -idx * itemWidth;
+    sliderBox.style.marginLeft = `${translateValue}%`
 }
 
 (function() {
