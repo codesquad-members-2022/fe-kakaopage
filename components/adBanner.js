@@ -1,10 +1,11 @@
-import {infographic} from "../infographic.js";
-import {randomGen} from "../utils.js";
-import {images} from "../images.js";
+import {infographic} from "../utils/infographic.js";
+import {randomGen} from "../utils/utils.js";
+import {images} from "../utils/images.js";
+import Component from "./Component.js";
 
-export const AdBanner = (target, position)=> {
+export const AdBanner = (target, position)=>{
 
-    const template = `
+        const template =  `
      <div class="listContentBox AdBanner">
             <button type="button" class="prevBtn">
                 <img src=${infographic.prev}>
@@ -17,5 +18,5 @@ export const AdBanner = (target, position)=> {
             </button>
         </div>
     `;
-    target.insertAdjacentHTML(position, template)
-}
+     target.insertAdjacentHTML(position, template );
+    }

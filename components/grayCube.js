@@ -1,4 +1,4 @@
-export const GrayCube = (target, position)=> {
+export const GrayCube = ( target, position)=> {
 
     const template = `
          <div class="listContentBox  Cube">

@@ -1,8 +1,8 @@
-@import "/HomeHeader/HomeHeader.css";
-@import "/AdBanner/AdBanner.css";
-@import "/GrayCube/GrayCube.css";
-@import "/dailyHeader/dailyHeader.css";
-@import "/menuNav/menuNav.css";
+@import "/styles/HomeHeader.css";
+@import "/styles/AdBanner.css";
+@import "/styles/GrayCube.css";
+@import "/styles/dailyHeader.css";
+@import "/styles/menuNav.css";
 .mainContent{
     margin-top: 167px;
 
