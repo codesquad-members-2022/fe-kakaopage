@@ -16,7 +16,33 @@ export function makeImageSection(list) {
 }
 
 export function makeMenu(list) {
-  return `
+  if (list.firstSubInfo === undefined) {
+    return `  
+    <section class="section dp-flex mg-t-20">
+    <ul class="menu_ul pd-10">
+        <li class="menu_top_left">
+          <span>${list.firstInfo} </span>
+        </li>
+        <li>
+          <span>${list.secondInfo} </span>
+        </li>
+        <li class="menu_top_right">
+          <span>${list.thirdInfo} </span>
+        </li>
+        <li class="menu_bottom_left">
+          <span>${list.fourthInfo} </span>
+        </li>
+        <li>
+          <span>${list.fifthInfo}</span>
+        </li>
+        <li class="menu_bottom_right">
+          <span>${list.sixthInfo} </span>
+        </li>
+      </ul>
+    </section>
+    `;
+  } else {
+    return `
   <section class="section dp-flex mg-t-20">
   <ul class="menu_ul pd-10">
       <li class="menu_top_left">
@@ -43,6 +69,7 @@ export function makeMenu(list) {
       </li>
     </ul>
   </section>`;
+  }
 }
 
 export function makeAdvert(list) {
@@ -75,17 +102,10 @@ export function makeDate(list) {
 
 export function makeTitle(list) {
   return `
-  <span class="section_title txt-l mg-b-10 pd-10 width-50"
-  >${list.title}</span>
-  <span class="more_content pd-10 txt-r width-50">${list.contents}</span>
+  <span class="section_title txt-l mg-b-10 pd-10 width-80"
+  >${list.title}<span>${list.webtoonNum}</span></span>
+  <span class="more_content pd-10 txt-r width-20">${list.contents}</span>
   `;
-}
-
-export function addTag(list) {
-  const tag = document.createElement(`${list.tagName}`);
-  tag.innerText = `${list.content}`;
-  document.querySelector(`.${list.className}`).append(tag);
-  return '';
 }
 
 export function makeFiveWebtoon(list) {
@@ -123,7 +143,7 @@ export function makeRanking(list) {
     <img src="${list.url}" / alt="${list.title} 이미지"
     width="95" height="130">
     <img
-  src="./src/image/기다리면 무료.png"
+  src="../src/image/기다리면 무료.png"
   alt="시계 이미지"
   width="25"
   height="25"
@@ -208,7 +228,7 @@ export function makeLongImageWebtoon(list) {
   <img src="${list.url}" / alt="${list.title} 이미지"
   width="140" height="200">
   <img
-  src="./src/image/기다리면 무료.png"
+  src="../src/image/기다리면 무료.png"
   alt="시계 이미지"
   width="25"
   height="25"

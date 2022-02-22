@@ -46,6 +46,7 @@ export const webtoonData = [
   {
     title: '🔥HOT 최근 프로모션 진행작',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=rQjE3/hzp2l39Lfz/8MWGhF07tZNNjDE8txEzW0&filename=th2',

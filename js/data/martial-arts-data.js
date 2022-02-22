@@ -14,6 +14,7 @@ export const martialArtsData = [
   {
     title: '오늘의 추천!',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=SKYCW/hzp2fwcBFb/dWOf9IIkKZtdQxlLTlwYwk&filename=th3',
@@ -46,6 +47,7 @@ export const martialArtsData = [
   {
     title: '일간 액션/무협 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',

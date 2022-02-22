@@ -14,6 +14,7 @@ export const romanceData = [
   {
     title: '오늘의 추천!',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=bCNWIv/hyzcGfksul/Zq57CfVCGkMOdA8U2t9xx0&filename=th3',
@@ -46,6 +47,7 @@ export const romanceData = [
   {
     title: '일간 로맨스 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',

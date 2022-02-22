@@ -1,9 +1,12 @@
-import home from './home.js';
-import serial from './serial.js';
-import webtoon from './webtoon.js';
-import boy from './boy.js';
-import drama from './drama.js';
-import romance from './romance.js';
+import home from './components/home.js';
+import serial from './components/serial.js';
+import webtoon from './components/webtoon.js';
+import boy from './components/boy.js';
+import drama from './components/drama.js';
+import romance from './components/romance.js';
+import fantasy from './components/fantasy.js';
+import martialArts from './components/martial-arts.js';
+import bl from './components/bl.js';
 
 (function init() {
   document.querySelector('.menubar_tag').addEventListener('click', changeUI);
@@ -32,10 +35,13 @@ function changeUI(e) {
       romance();
       break;
     case '로판':
+      fantasy();
       break;
     case '무협':
+      martialArts();
       break;
     case 'BL':
+      bl();
       break;
   }
 }

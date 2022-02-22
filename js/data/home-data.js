@@ -25,15 +25,11 @@ export const homeData = [
   },
   {
     title: '요일연재TOP',
+    webtoonNum: '(3495)',
     contents: '더보기👉',
   },
   {
     adtnlInfo: '완결',
-  },
-  {
-    tagName: 'span',
-    contents: '3,495',
-    className: 'section_title',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=JKbkM/hzhOksSPjb/Zk4kiHai3IGS77dRy1iO1K&filename=th2',
@@ -118,6 +114,7 @@ export const homeData = [
   {
     title: '기대신작 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=Yk6Z8/hzp2eEeYQs/krX54tpVGT7X0Suk4PEcmK',
@@ -134,6 +131,7 @@ export const homeData = [
   {
     title: '로맨스 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=lLRDp/hzb7uHbYRi/3aMKXm2PXLc62IZKWBOSak&filename=th2',
@@ -183,6 +181,7 @@ export const homeData = [
   {
     title: '로판 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=czz1LH/hzhOdNxBuR/13Yh4xVNddVTlBceG9PgvK&filename=th2',
@@ -232,6 +231,7 @@ export const homeData = [
   {
     title: '일간 랭킹 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',
@@ -266,6 +266,7 @@ export const homeData = [
   {
     title: '추천 이벤트',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=bnJszq/hzp2nnDXAM/raGUe2y54VTgPi6k8JHXoK',

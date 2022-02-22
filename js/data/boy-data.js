@@ -19,6 +19,7 @@ export const boyData = [
   {
     title: '오늘의 추천',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=bZGDFx/hzmU3eOgUo/nXYKhtUVKR36YUKsrQoxG0&filename=th3',
@@ -47,6 +48,7 @@ export const boyData = [
   {
     title: '일간 소년 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',
@@ -82,6 +84,7 @@ export const boyData = [
   {
     title: '[ORIGINAL] 믿고보는 독점연재',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=fJhlQ/hzhOmjpFzJ/QqTh7BYmWBWkiRXoHLQ0wK&filename=th3',
@@ -110,6 +113,7 @@ export const boyData = [
   {
     title: '[GIFT] 오늘의 선물🎁',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=bqGRvJ/hzhOiBaqTh/rMUNsRjC8R4taVsjY7Pkrk&filename=th2',

@@ -14,6 +14,7 @@ export const fantasyData = [
   {
     title: '오늘의 추천!',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=LuzfO/hzb7A8BVFq/MkBWlLD02ekF6A8nMYoeq0&filename=th3',
@@ -46,6 +47,7 @@ export const fantasyData = [
   {
     title: '일간 로맨스판타지 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',

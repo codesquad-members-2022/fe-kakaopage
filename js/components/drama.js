@@ -1,10 +1,10 @@
-import { dramaData } from './data/drama-data.js';
-import { makeImageSection } from './contents.js';
-import { makeThreeMenu } from './contents.js';
-import { makeTitle } from './contents.js';
-import { makeLongImageWebtoon } from './contents.js';
-import { makeRanking } from './contents.js';
-import { makeWebtoonInfo } from './contents.js';
+import { dramaData } from '../data/drama-data.js';
+import { makeImageSection } from '../function/contents.js';
+import { makeThreeMenu } from '../function/contents.js';
+import { makeTitle } from '../function/contents.js';
+import { makeLongImageWebtoon } from '../function/contents.js';
+import { makeRanking } from '../function/contents.js';
+import { makeWebtoonInfo } from '../function/contents.js';
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
   ${makeImageSection(dramaData[0])}

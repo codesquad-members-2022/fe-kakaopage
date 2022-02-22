@@ -15,6 +15,7 @@ export const dramaData = [
   {
     title: '오늘의 추천!',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=kKJXv/hzhOj1iY3r/6EwfaVZUC5Re1RHTkHTIok&filename=th3',
@@ -43,6 +44,7 @@ export const dramaData = [
   {
     title: '일간 드라마 TOP',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     rankingNum: '1',
@@ -77,6 +79,7 @@ export const dramaData = [
   {
     title: '지금 UP 뜬 추천작',
     contents: '더보기👉',
+    webtoonNum: '',
   },
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=dy1Oc2/hywgI1bMRS/7QsDTWgZtp8XA30K0Si1u0&filename=th2',

@@ -10,6 +10,7 @@ export const serialData = [
   {
     title: '전체 | 웹툰 | 🕔웹툰',
     contents: '전체▼',
+    webtoonNum: '',
   },
   {
     adtnlInfo: '완결',

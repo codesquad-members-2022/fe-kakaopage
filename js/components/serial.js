@@ -1,8 +1,8 @@
-import { serialData } from './data/serial-data.js';
-import { makeImageSection } from './contents.js';
-import { makeTitle } from './contents.js';
-import { makeDate } from './contents.js';
-import { makeFiveWebtoon } from './contents.js';
+import { serialData } from '../data/serial-data.js';
+import { makeImageSection } from '../function/contents.js';
+import { makeTitle } from '../function/contents.js';
+import { makeDate } from '../function/contents.js';
+import { makeFiveWebtoon } from '../function/contents.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
