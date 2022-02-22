@@ -1,20 +1,10 @@
-import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents } from "./format.js";
-import { addGenreNavEventTo, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
+import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
+import { addGenreNavEventTo, addHeadNavEventTo, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
 
 export const createPageInit = () => {
     addSelectedTo('body')
     addGenreNavEventTo('body')
-
-    // addClickEventToElement('#genre-home', createPageHome)
-    // addClickEventToElement('#genre-daily', createPageDaily)
-    // addClickEventToElement('#genre-webtoon', createPageWebtoon)
-    // addClickEventToElement('#genre-teen', createPageTeen)
-    // addClickEventToElement('#genre-drama', createPageDrama)
-    // addClickEventToElement('#genre-romance', createPageRomance)
-    // addClickEventToElement('#genre-rofan', createPageRofan)
-    // addClickEventToElement('#genre-action', createPageAction)
-    // addClickEventToElement('#genre-BL', createPageBL)
-    
+    addHeadNavEventTo('body')
     createPageHome();
 }
 
@@ -160,6 +150,11 @@ export const createPageBL = () => {
     addToContents(contents);
 }
 
+export const createPageNotYet = () => {
+    initPage();
+    addToContents(createFormatNotYet())
+}
+
 export const genreFunction = {
     home: () => createPageHome(),
     daily: () => createPageDaily(),
@@ -170,4 +165,13 @@ export const genreFunction = {
     rofan: () => createPageRofan(),
     action: () => createPageAction(),
     BL: () => createPageBL()
+}
+
+export const headerFunction = {
+    home: () => createPageNotYet(),
+    webtoon: () => createPageHome(),
+    webnovel: () => createPageNotYet(),
+    movie: () => createPageNotYet(),
+    broad: () => createPageNotYet(),
+    book: () => createPageNotYet(),
 }

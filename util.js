@@ -1,4 +1,4 @@
-import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon, genreFunction } from "./createPage.js";
+import { createPageNotYet, genreFunction, headerFunction } from "./createPage.js";
 import { dummy } from "./sources.js";
 
 export function pickFromArr (arr) {
@@ -211,9 +211,9 @@ export function resetFlexbox(target){
 }
 
 export function addGenreNavEventTo (element) {
-    const body = document.querySelector(element);
+    const el = document.querySelector(element);
 
-    body.addEventListener("click", e => {
+    el.addEventListener("click", e => {
         const genre = e.target.dataset.genre;
         if (genre) {
             genreFunction[genre]()
@@ -221,3 +221,14 @@ export function addGenreNavEventTo (element) {
     })
 }
 
+export function addHeadNavEventTo (element) {
+    const el = document.querySelector(element);
+
+    el.addEventListener("click", e => {
+        const header = e.target.dataset.header
+
+        if(header){
+            headerFunction[header]();
+        }
+    })
+}

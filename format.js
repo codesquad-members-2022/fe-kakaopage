@@ -61,14 +61,14 @@ export const createFormatDailyTop = () => {
                     </div>
 
                     <ul class="nav-day" id="nav-day">
-                        <li class="day">월</li>
-                        <li class="day">화</li>
-                        <li class="day">수</li>
-                        <li class="day">목</li>
-                        <li class="day">금</li>
-                        <li class="day">토</li>
-                        <li class="day">일</li>
-                        <li class="day">완결</li>
+                        <li class="day" data-day="Mon">월</li>
+                        <li class="day" data-day="Tue">화</li>
+                        <li class="day" data-day="Wed">수</li>
+                        <li class="day" data-day="Thu">목</li>
+                        <li class="day" data-day="Fri">금</li>
+                        <li class="day" data-day="Sat">토</li>
+                        <li class="day" data-day="Son">일</li>
+                        <li class="day" data-day="Fin">완결</li>
                     </ul>
 
                     <div class="contents-flex-box" id="flex-box">
@@ -240,4 +240,15 @@ export const createFormatHotizontalList = () => {
     </div>`
 
 return format12
+}
+
+export const createFormatNotYet = () => {
+    const format = `
+    <div class="banner-main">
+        <div class="img-with-line">
+            <img class="img-with" src="https://pbs.twimg.com/media/ELhHQZmUYAEk2AI?format=jpg&name=900x900">
+        </div>
+    </div>`
+
+    return format
 }
