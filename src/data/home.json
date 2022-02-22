@@ -1,0 +1,41 @@
+{
+    "mainBanner": [{
+        "link": "/home?seriesId=53190884",
+        "title": "제목1",
+        "status": "NEW",
+        "category": "소설",
+        "description": "우리 아직 이혼 안했어요",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목2",
+        "status": "이벤트",
+        "category": "웹툰",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목3",
+        "status": "NEW",
+        "category": "소설",
+        "description": "우리 아직 이혼 안했어요",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목4",
+        "status": "UP",
+        "category": "웹툰",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }], 
+    "subCategories": [{
+        "link": "/home?seriesId=53190884",
+        "category": "오늘 신작"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "2번 캐시 선물"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "정주행 타이밍!"
+    }]
+}

@@ -1,0 +1,56 @@
+{
+    "categories": ["홈", "랭킹", "로맨스", "액션", "애니메이션", "장르전체"],
+    "mainBanner": [{
+        "link": "/home?seriesId=53190884",
+        "title": "제목1",
+        "status": "NEW",
+        "category": "웹툰",
+        "description": "우리 아직 이혼 안했어요",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목2",
+        "status": "인기",
+        "category": "웹툰",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목3",
+        "status": "NEW",
+        "category": "인기",
+        "description": "우리 아직 이혼 안했어요",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목4",
+        "status": "UP",
+        "category": "웹툰",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }],
+    "subCategories": [{
+        "link": "/home?seriesId=53190884",
+        "category": "금주 추천 혜택"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "할인 영화"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "주요 개봉작"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "일단 10분"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "추천 영화"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "19금 특별관"
+    }], 
+    "eventBanner": [
+        "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK",
+        "ttps://dn-img-page.kakao.com/download/resource?kid=cLpNgw/hzp2moLmjN/dYhxv2zfFGIU9lDxuRkutK",
+        "https://dn-img-page.kakao.com/download/resource?kid=d6OBqA/hzp2jZSWXI/2jQb8ZNUuJRItOFTer6lh0"
+    ]
+}
