@@ -1,30 +1,31 @@
 import { renderer } from './view.js';
 import { webtoonData } from '../data/data.js';
 
-/* Gnb 관련 */
-const addHandlerOnGnb = () => {
-  const gnbEl = document.querySelector('.gnb');
-  gnbEl.addEventListener('click', HandleGnb);
+const addHandlerOnNav = (nav) => {
+  const navEl = document.querySelector(`.${nav}`);
+  navEl.addEventListener('click', handleNav);
 };
 
-const HandleGnb = (event) => {
-  const tabName = event.target.dataset.category;
-  if (!tabName) return;
+const handleNav = (event) => {
+  const navtype = event.target.parentNode.dataset.navtype;
+  const category = event.target.dataset.category;
+  if (!navtype || !category) return;
 
-  loadGnbTab(tabName);
+  loadContent(navtype, category);
 };
 
-const loadGnbTab = (tabName) => {
-  toggleGnbTabStyle(tabName);
-  loadGnbTabContents(tabName);
+const changeNavStyle = (navtype, category) => {
+  const classActive = `${navtype}__item--active`;
+  const currTab = document.querySelector(`.${classActive}`);
+  if (currTab) currTab.classList.remove(classActive);
+
+  const newTab = document.querySelector(`.${navtype}__item[data-category="${category}"]`);
+  newTab.classList.add(classActive);
 };
 
-const toggleGnbTabStyle = (tabName) => {
-  const currTab = document.querySelector('.gnb__item--active');
-  if (currTab) currTab.classList.remove('gnb__item--active');
-
-  const newTab = document.querySelector(`.gnb__item[data-category="${tabName}"]`);
-  newTab.classList.add('gnb__item--active');
+const loadContent = (navtype, category) => {
+  changeNavStyle(navtype, category);
+  loadGnbTabContents(category);
 };
 
 const loadGnbTabContents = (tabName) => {
@@ -152,4 +153,4 @@ const loadWebtoonBl = (categoryData) => {
   renderer.gridMenu(categoryData.gridMenu);
 };
 
-export { addHandlerOnGnb, loadGnbTab };
+export { addHandlerOnNav, loadContent };

@@ -1,12 +1,12 @@
 import { renderer } from './view.js';
-import { addHandlerOnGnb, loadGnbTab } from './handler.js';
+import { loadContent, addHandlerOnNav } from './handler.js';
 
 const init = () => {
   renderer.header();
   renderer.footer();
   renderer.gnb();
-  addHandlerOnGnb();
-  loadGnbTab('홈');
+  addHandlerOnNav('gnb');
+  loadContent('gnb', '홈');
 };
 
 window.addEventListener('DOMContentLoaded', init);
