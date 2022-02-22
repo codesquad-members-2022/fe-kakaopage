@@ -4,6 +4,16 @@ import {mainBannerData} from './data/scrape/mainBannerData.js'
 import {promotionBannerData} from './data/scrape/promotionBannerData.js'
 import {$, $all} from './utility.js'
 
+function renderMain(tab, data) {
+  renderMainBanner(tab);
+  renderPromotionBanner(tab);
+
+  for (let i in data) {
+    renderContainer(data[i].class, data[i].title, data[i].items, data[i].layout);
+  }
+  renderMoveApp('move-app');
+}
+
 function renderContainer(selector, title, num, options) {
   const main = $('.main');
   const newContainer = makeContainer(selector, title);
@@ -315,4 +325,4 @@ function makePromotionItem(list, focus) {
   });
 }
 
-export {renderContainer, renderPromotionBanner, renderMoveApp, renderMainBanner}
+export {renderMain}

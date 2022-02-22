@@ -1,8 +1,5 @@
-import {dailyTopData} from './data/scrape/dailyTop.js'
-import {dailyRankingData} from './data/scrape/dailyRanking.js'
-import {promotionBannerData} from './data/scrape/promotionBannerData.js'
 import {containerInfo} from './data/containerInfoData.js'
-import {renderContainer, renderPromotionBanner, renderMoveApp} from './render.js'
+import {renderMain} from './render.js'
 import {$, $all} from './utility.js'
 
 const clickGenresList = () => {
@@ -70,21 +67,13 @@ function clickPromotionBanner() {
   })
 }
 
-function setPromotionBanner(focus) {
-  renderPromotionBanner(focus);
-  clickPromotionBanner();
-}
+function eventMain() {
+  renderMain('홈', containerInfo);
 
-function renderMain() {
   clickGenresList();
-  setPromotionBanner('홈');
-
-  for (let i in containerInfo) {
-    renderContainer(containerInfo[i].class, containerInfo[i].title, containerInfo[i].items, containerInfo[i].layout);
-  }
+  clickPromotionBanner();
   clickDailyTopList();
-  renderMoveApp('move-app');
 }
 
-window.addEventListener('load', renderMain);
+window.addEventListener('load', eventMain);
 
