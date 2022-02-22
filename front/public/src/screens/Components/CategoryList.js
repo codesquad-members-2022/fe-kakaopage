@@ -1,54 +1,23 @@
 import Component from "../Component.js";
 import Category from "./Category.js";
-import { createExtendsRelation } from "../../utils.js";
+import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
 
 function CategoryList(target) {
   this.target = target;
-  this.state = {
-    categories: [
-      {
-        name: "홈",
-        category: "home",
-        waitForFree: false,
-        newAlert: false,
-        selected: false,
-      },
-      {
-        name: "웹툰",
-        category: "webtoon",
-        waitForFree: true,
-        newAlert: true,
-        selected: true,
-      },
-      {
-        name: "웹소설",
-        category: "webnovel",
-        waitForFree: true,
-        newAlert: true,
-        selected: false,
-      },
-      {
-        name: "영화",
-        category: "movie",
-        waitForFree: false,
-        newAlert: true,
-        selected: false,
-      },
-      {
-        name: "방송",
-        category: "broadcast",
-        waitForFree: false,
-        newAlert: true,
-      },
-      {
-        name: "책",
-        category: "book",
-        waitForFree: false,
-        newAlert: true,
-        selected: false,
-      },
-    ],
+  this.state = {};
+
+  this.setEvent = function () {
+    this.addEvent("click", ".header__nav-item", ({ target }) => {
+      const eventTarget = target.closest(".header__nav-item");
+      updateNodeClasses(eventTarget, "selected");
+    });
   };
+
+  this.setState = function (newState) {
+    this.state = { ...this.state, ...newState };
+    this.appendHTML();
+  };
+
   this.template = function () {
     const { categories } = this.state;
     return `
@@ -61,7 +30,6 @@ function CategoryList(target) {
       }, "")}
     </ul>`;
   };
-  this.appendHTML();
 }
 
 createExtendsRelation(CategoryList, Component);

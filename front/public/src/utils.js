@@ -5,8 +5,8 @@ const createExtendsRelation = (Child, Parent) => {
   Child.prototype.constructor = Child;
 };
 
-const updateNodeClasses = (nodeList, target, className) => {
-  [...nodeList.children].forEach((node) => {
+const updateNodeClasses = (target, className) => {
+  [...target.parentNode.children].forEach((node) => {
     node.classList.remove(className);
   });
   target.classList.add(className);

@@ -17,7 +17,6 @@ function Category(target) {
           ${newAlert ? '<span class="yellow-dot"></span>' : ""}
         </li>`;
   };
-  this.render();
 }
 
 createExtendsRelation(Category, Component);

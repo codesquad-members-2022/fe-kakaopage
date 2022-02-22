@@ -6,12 +6,14 @@ import { handleNavCategory } from "./nav-category.js";
 import FullButton from "./screens/Components/FullButton.js";
 import CategoryList from "./screens/Components/CategoryList.js";
 import Category from "./screens/Components/Category.js";
+import { getJson } from "./utils.js";
 
 const init = async (category, genre) => {
   const main = document.querySelector(".main");
   const header = document.querySelector(".header");
   const categoryList = new CategoryList(header);
-
+  const { results: categories } = await getJson("categories");
+  categoryList.setState({ categories });
   // const initCategory = category;
   // const initGenre = genre;
   // [...headerNav.children].forEach((categoryNode) => {

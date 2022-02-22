@@ -21,6 +21,7 @@ Component.prototype.template = function () {
 
 Component.prototype.addEvent = function (eventType, selector, callback) {
   const children = [...this.target.querySelectorAll(selector)];
+
   const isTarget = (target) =>
     children.includes(target) || target.closest(selector);
   this.target.addEventListener(eventType, (event) => {
