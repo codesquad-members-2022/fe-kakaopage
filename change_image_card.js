@@ -30,7 +30,6 @@ export const changeImageCardInfo = (inputImageCardInfo) => {
     imageCardTitle.innerHTML = inputImageCardInfo[n]["title"];
     
     for (let j = 0 ; j<4 ; j++){
-      console.log(inputImageCardInfo[n][j]);
       imageCardInfo[j].className = inputImageCardInfo[n]["info"][j];
     }
     console.log(imageCardInfo[4]);
