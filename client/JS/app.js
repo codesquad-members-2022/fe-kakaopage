@@ -2,13 +2,6 @@ import { ads, days, newThings, listContents, dummy, mainNav } from "./parts.js";
 
 const startPage = "웹툰";
 const main = document.querySelector("main");
-// const ads = document.querySelector(".ads");
-// const days = document.querySelector(".days");
-// const newThings = document.querySelector(".new-things");
-// const listContents = document.querySelector(".list-contents");
-// const dummy = document.querySelector(".dummy");
-// const mainNav = document.querySelector(".main__nav");
-// const daysNav = document.querySelector(".days__nav");
 const headerNav = document.querySelector(".header__nav");
 const navs = [headerNav, mainNav];
 const assembly = {
@@ -36,20 +29,13 @@ const showSelectedNav = (event) => {
   main.innerHTML = text;
 };
 
-const markSelectedNav = (event) => {
+const clickEventHandler = (event) => {
   event.preventDefault();
-  const { parentNode } = event.target;
-  const previousSelectedTarget = parentNode.querySelector(".selected");
-  if (previousSelectedTarget)
-    previousSelectedTarget.classList.remove("selected");
-  event.target.classList.add("selected");
-};
-
-const markSelectedNavEvent = (nav) => {
-  const children = nav.querySelectorAll("span");
-  children.forEach((child) => {
-    child.addEventListener("click", markSelectedNav);
-  });
+  const { target } = event;
+  if (target.tagName === "SPAN" && target.parentNode.tagName === "NAV") {
+    target.parentNode.querySelector(".selected").classList.remove("selected");
+    target.classList.add("selected");
+  }
 };
 
 const init = () => {
@@ -58,7 +44,7 @@ const init = () => {
   headerNav.querySelectorAll("span").forEach((child) => {
     child.addEventListener("click", showSelectedNav);
   });
-  navs.forEach((nav) => markSelectedNavEvent(nav));
+  document.addEventListener("click", clickEventHandler);
 };
 
 init();
