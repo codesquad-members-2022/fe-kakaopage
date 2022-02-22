@@ -16,8 +16,11 @@ function makeMainBannerLayout() {
 
   const btns = makeBannerBtns();
   const newList = makeMainBannerList(focus);
+  const counter = makeMainBannerCounter();
+  
   newDiv.appendChild(btns);
   newDiv.appendChild(newList);
+  newDiv.appendChild(counter);
 
   return newDiv
 }
@@ -51,6 +54,16 @@ function makeMainBannerItems(list) {
 
     list.appendChild(item);
   });
+}
+
+function makeMainBannerCounter() {
+  const newList = document.createElement("div");
+  newList.classList.add('banner__count');
+  newList.innerHTML = `<span class="now">1</span>
+  <span>/</span>
+  <span class="total">${mainBannerData.length}</span>`
+
+  return newList;
 }
 
 export {renderMainBanner} 
