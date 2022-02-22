@@ -7,7 +7,7 @@ const createSnb = (subCategorys) => {
 
   return `
     <nav class="snb">
-      <ul class="snb__list">
+      <ul data-navtype="snb" class="snb__list">
         ${items}
       </ul>
     </nav>
