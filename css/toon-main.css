@@ -1,18 +1,3 @@
-.timer-image {
-  width: 16px;
-  height: 16px;
-}
-.man-image {
-  width: 11px;
-  height: 11px;
-}
-.new-image {
-  height: 13px;
-}
-.up-image {
-  height: 13px;
-}
-
 .toon-category {
   margin-top: 163px;
   width: 100%;
@@ -28,6 +13,7 @@
   box-sizing: border-box;
   background-color: #fff;
   margin: 0px auto;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .toon-category li {
@@ -167,6 +153,7 @@
   width: 100%;
   height: 140px;
   background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .toon-ad-banner-1_banner__image {
@@ -197,6 +184,7 @@
   height: 607px;
   background-color: #fff;
   color: #bbb;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .toon-daytop_header {
@@ -244,7 +232,6 @@
 }
 
 .toon-daytop_album {
-  margin-top: 22px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -253,6 +240,7 @@
 
 .toon-daytop_frame {
   width: 120.6px;
+  margin-top: 20px;
 }
 
 .toon-daytop_frame_box {
@@ -284,11 +272,31 @@
 .toon-daytop_frame__title {
   color: #333;
   line-height: 1.5;
+  margin: 9px 0 7px;
 }
 
 .toon-daytop_frame__detail {
   white-space: nowrap;
   overflow: hidden;
-  font-size: 14px;
   justify-content: flex-start;
+  align-items: center;
+  font-weight: 450;
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+.timer-image {
+  width: 16px;
+  height: 16px;
+}
+.man-image {
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+}
+.new-image {
+  height: 13px;
+}
+.up-image {
+  height: 13px;
 }

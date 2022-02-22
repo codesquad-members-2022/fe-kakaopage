@@ -126,7 +126,7 @@ input:focus {
   outline: none;
 }
 
-/* my 광역 */
+/* custom 전역 */
 
 * {
   box-sizing: border-box;
@@ -136,6 +136,7 @@ input:focus {
 
 body {
   background-color: #eee;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -149,8 +150,9 @@ button {
   background-color: transparent;
 }
 
-body {
-  font-family: "Noto Sans KR", sans-serif;
+img,
+image {
+  cursor: pointer;
 }
 
 .text-ellipsis {
