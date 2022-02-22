@@ -3,15 +3,15 @@ const SNB = () => {
   snbNav.classList.add('snb');
   snbNav.innerHTML = `
         <ul class="snb__list">
-          <li class="snb__item selected">홈</li>
-          <li class="snb__item">요일연재</li>
-          <li class="snb__item">웹툰</li>
-          <li class="snb__item">소년</li>
-          <li class="snb__item">드라마</li>
-          <li class="snb__item">로맨스</li>
-          <li class="snb__item">로판</li>
-          <li class="snb__item">액션무협</li>
-          <li class="snb__item">BL</li>
+          <li class="snb__item selected" data-category="홈">홈</li>
+          <li class="snb__item" data-category="요일연재">요일연재</li>
+          <li class="snb__item" data-category="웹툰">웹툰</li>
+          <li class="snb__item" data-category="소년">소년</li>
+          <li class="snb__item" data-category="드라마">드라마</li>
+          <li class="snb__item" data-category="로맨스">로맨스</li>
+          <li class="snb__item" data-category="로판">로판</li>
+          <li class="snb__item" data-category="액션무협">액션무협</li>
+          <li class="snb__item" data-category="BL">BL</li>
         </ul>
     `;
   return snbNav;

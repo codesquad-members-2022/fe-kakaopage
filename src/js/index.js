@@ -1,3 +1,7 @@
-import { addTabFeatureToGNB } from './gnbTab.js';
+import { addTabFeature } from './eventHandler.js';
 
-addTabFeatureToGNB();
+const init = () => {
+  addTabFeature();
+};
+
+init();
