@@ -1,17 +1,18 @@
 /**
  * use in MainBanner, BigCardList
  */
-
 import { formatUserCount } from "../../utils.js";
+import { createExtendsRelation } from "../../utils.js";
+import Component from "../Component.js";
 
-const BigCard = ({
-  title,
-  userCount,
-  waitForFree,
-  mainDesc,
-  imageHorizontalUrl,
-}) => {
-  return `            <li class="bigCard">
+function BigCard(target, state) {
+  Component.call(this, target, state);
+
+  this.template = function () {
+    const { title, userCount, waitForFree, mainDesc, imageHorizontalUrl } =
+      this.state;
+
+    return `<li class="bigCard">
     <div class="main__mainBanner">
       <div class="banner__imgBox">
         <img src="${imageHorizontalUrl}" alt=${title} />
@@ -36,6 +37,9 @@ const BigCard = ({
       </div>
     </div>
   </li>`;
-};
+  };
+}
+
+createExtendsRelation(BigCard, Component);
 
 export default BigCard;

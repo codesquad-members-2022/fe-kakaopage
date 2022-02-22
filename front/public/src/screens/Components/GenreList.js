@@ -3,9 +3,6 @@ import Component from "../Component.js";
 
 function GenreList(target) {
   Component.call(this, target);
-  //   const genreName = event.target.dataset.genre;
-  //   const genreContents = genres[category][genreName].screen(categoryResults);
-  //   renderGenreContents(genreContents);
 
   this.setEvent = function () {
     this.addEvent("click", ".navGenre-item", ({ target }) => {
@@ -17,7 +14,7 @@ function GenreList(target) {
   this.template = function () {
     const { genres } = this.state;
     return `
-      <ul class="${genres.length ? "mainBox" : ""} main__navGenre">
+      <ul class="${genres.length ? "mainBox mainNav" : ""} main__navGenre">
         ${genres.reduce((tags, { genre, name, selected }) => {
           tags += `
             <li class="navGenre-item ${selected ? "selected" : ""}" 
@@ -27,6 +24,7 @@ function GenreList(target) {
           return tags;
         }, "")}
       </ul>
+      <ul class="main__contentsBox"></ul>
     `;
   };
 }

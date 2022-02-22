@@ -1,5 +1,11 @@
-const NavDetail = () => {
-  return `<li class="mainBox main__navDetail">
+import { createExtendsRelation } from "../../utils.js";
+import Component from "../Component.js";
+
+function NavDetail(target) {
+  Component.call(this, target);
+
+  this.template = function () {
+    return `<li class="mainBox main__navDetail">
     <div class="nav_detailBox">
       <div class="detailBox border-top-left">
         <span class="detailName">오늘 UP</span>
@@ -27,6 +33,9 @@ const NavDetail = () => {
       </div>
     </div>
   </li>`;
-};
+  };
+}
+
+createExtendsRelation(NavDetail, Component);
 
 export default NavDetail;

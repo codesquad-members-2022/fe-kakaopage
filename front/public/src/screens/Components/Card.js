@@ -1,15 +1,22 @@
 import { formatUserCount } from "../../utils.js";
+import { createExtendsRelation } from "../../utils.js";
+import Component from "../Component.js";
 
-const Card = ({
-  title,
-  imageVerticalUrl,
-  rank,
-  adult,
-  status,
-  userCount,
-  waitForFree,
-}) => {
-  return `<li class="card">
+function Card(target, state) {
+  Component.call(this, target, state);
+
+  this.template = function () {
+    const {
+      title,
+      imageVerticalUrl,
+      rank,
+      adult,
+      status,
+      userCount,
+      waitForFree,
+    } = this.state;
+
+    return `<li class="card">
     <div class="card__imgBox">
       <img
         class="cardImg"
@@ -43,6 +50,9 @@ const Card = ({
       </span>
     </div>
   </li>`;
-};
+  };
+}
+
+createExtendsRelation(Card, Component);
 
 export default Card;

@@ -1,6 +1,6 @@
-function Component(target) {
+function Component(target, state) {
   this.target = target;
-  this.state = {};
+  this.state = state || {};
   this.eventTypes = [];
 }
 

@@ -1,37 +1,29 @@
-/**
- * CardInfoRow
- * CardInfoRow
- * CardInfoRow
- */
-
 import CardInfoRow from "./CardInfoRow.js";
+import { createExtendsRelation } from "../../utils.js";
+import Component from "../Component.js";
 
-const DateTop = (webtoons) => {
+function DateTop(target, state) {
+  Component.call(this, target, state);
+
+  const { koreaDay } = this.state;
+  const webtoons = JSON.parse(localStorage.getItem("webtoons"));
   const dateTopCards = webtoons
-    .sort((wt1, wt2) => {
-      return wt2.rank - wt1.rank;
-    })
+    .filter((wt) => wt.days.includes(koreaDay))
+    .sort((wt1, wt2) => wt2.rank - wt1.rank)
     .slice(0, 3);
-  return `
-    <li class="mainBox main__contents">
-      <div class="contents">
-        <div class="contents__header">
-          <div class="contents__title">
-            <span>일간 랭킹 TOP</span>
-          </div>
-          <div class="contents__more">
-            <span>더보기></span>
-          </div>
-        </div>
-        <div class="contents__body">
-          <ul class="contents__date">
-            ${dateTopCards
-              .map((card, index) => CardInfoRow(index + 1, card))
-              .join("")}
-          </ul>
-        </div>
-      </div>
-    </li>`;
-};
+
+  this.template = function () {
+    return `
+      <ul class="contents__date">
+        ${dateTopCards
+          .map((card, index) =>
+            new CardInfoRow("_", { ...card, ranking: index + 1 }).template()
+          )
+          .join("")}
+      </ul>`;
+  };
+}
+
+createExtendsRelation(DateTop, Component);
 
 export default DateTop;

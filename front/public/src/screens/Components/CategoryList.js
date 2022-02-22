@@ -1,9 +1,5 @@
 import Component from "../Component.js";
-import {
-  createExtendsRelation,
-  updateNodeClasses,
-  getJson,
-} from "../../utils.js";
+import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
 
 function CategoryList(target) {
   Component.call(this, target);

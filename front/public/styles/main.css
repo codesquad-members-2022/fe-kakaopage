@@ -6,8 +6,11 @@
 .mainBox {
   background-color: #ffffff;
   width: 100%;
-  height: 60px;
   margin: 10px 0px;
+}
+
+.mainNav {
+  height: 60px;
 }
 
 .main__navGenre {

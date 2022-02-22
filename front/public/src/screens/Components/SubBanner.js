@@ -1,5 +1,11 @@
-const SubBanner = () => {
-  return `<li class="mainBox main__subBanner">
+import { createExtendsRelation } from "../../utils.js";
+import Component from "../Component.js";
+
+function SubBanner(target) {
+  Component.call(this, target);
+
+  this.template = function () {
+    return `<li class="mainBox main__subBanner">
     <div class="arrow">
       <span><</span>
     </div>
@@ -12,6 +18,9 @@ const SubBanner = () => {
       <span>></span>
     </div>
   </li>`;
-};
+  };
+}
+
+createExtendsRelation(SubBanner, Component);
 
 export default SubBanner;
