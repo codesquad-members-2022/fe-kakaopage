@@ -17,6 +17,10 @@ import SubBannerItem from './banner/SubBannerItem.js';
 import SubBanner from './section/SubBanner.js';
 import GenreTop from './section/GenreTop.js';
 import AnticipatedWork from './section/AnticipatedWork.js';
+import VerticalImgContainer from './contentsList/VerticalImgContainer.js';
+import VerticalContentsListItem from './contentsList/VerticalContentsListItem.js';
+import VerticalContentsList from './contentsList/VerticalContentsList.js';
+import DailyRanking from './section/DailyRanking.js';
 
 export {
   Nav,
@@ -38,4 +42,8 @@ export {
   SubBanner,
   GenreTop,
   AnticipatedWork,
+  VerticalImgContainer,
+  VerticalContentsListItem,
+  VerticalContentsList,
+  DailyRanking,
 };
