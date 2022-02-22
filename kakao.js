@@ -1,4 +1,4 @@
-const mainCategoryMenu = document.querySelector(".tab .main_category ul");
+const weekCategory = document.querySelector(".tab .main_category ul");
 
 function showContent(event){
     if(event.target.tagName !== "LI") return;
@@ -7,6 +7,8 @@ function showContent(event){
         event.target.classList.add("weekend_check");
         event.target.classList.add("sub_active");  
     }
+
+
 }
 
-mainCategoryMenu.addEventListener("click",showContent);
+weekCategory.addEventListener("click",showContent);
