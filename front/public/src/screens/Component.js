@@ -4,14 +4,7 @@ function Component(target) {
 }
 
 Component.prototype.render = function () {
-  if (this.target) {
-    this.target.innerHTML = this.template();
-    this.setEvent();
-  }
-};
-
-Component.prototype.appendHTML = function () {
-  this.target.innerHTML += this.template();
+  this.target.innerHTML = this.template();
   this.setEvent();
 };
 
@@ -34,9 +27,7 @@ Component.prototype.setEvent = function () {};
 
 Component.prototype.setState = function (newState) {
   this.state = { ...this.state, ...newState };
-  if (this.target) {
-    this.render();
-  }
+  this.render();
 };
 
 export default Component;

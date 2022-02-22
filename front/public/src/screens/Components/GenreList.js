@@ -1,17 +1,11 @@
-import genres from "../../genres.js";
-import { renderGenreContents } from "../../core.js";
-import {
-  getJson,
-  createExtendsRelation,
-  updateNodeClasses,
-} from "../../utils.js";
+import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
 import Component from "../Component.js";
-const { results: webtoonResults } = await getJson("webtoon");
 
 function GenreList(target) {
-  // const webtoonGenre = genres.webtoon;
-  // const initScreenGenre = webtoonGenre[initGenre].screen(webtoonResults);
-  // renderGenreContents(initScreenGenre);
+  //   const genreName = event.target.dataset.genre;
+  //   const genreContents = genres[category][genreName].screen(categoryResults);
+  //   renderGenreContents(genreContents);
+
   this.target = target;
   this.state = {};
 
@@ -22,14 +16,8 @@ function GenreList(target) {
     });
   };
 
-  this.setState = function (newState) {
-    this.state = { ...this.state, ...newState };
-    this.appendHTML();
-  };
-
   this.template = function () {
     const { genres } = this.state;
-    console.log(genres);
     return `
       <ul class="mainBox main__navGenre">
         ${genres.reduce((tags, { genre, name, selected }) => {

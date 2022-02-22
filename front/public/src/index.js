@@ -13,17 +13,25 @@ const init = async () => {
   const { results: categories } = await getJson("categories");
   const { results: genres } = await getJson("genres");
   const main = document.querySelector(".main");
-  const header = document.querySelector(".header");
+  const headerNav = document.querySelector(".header__nav");
 
-  const categoryList = new CategoryList(header);
-  categoryList.setState({ categories });
-
-  const category = categoryList.state.categories.find(
-    ({ selected }) => selected
-  ).category;
-
+  const categoryList = new CategoryList(headerNav);
   const genreList = new GenreList(main);
+
+  categoryList.setState({
+    categories: categories.map((cInfo) => {
+      const category = new Category(headerNav);
+      category.setState({ ...cInfo });
+      return category;
+    }),
+  });
+  console.log(categoryList);
+  const category = categoryList.state.categories.find(
+    ({ state: { selected } }) => selected
+  ).state.category;
+
   genreList.setState({ genres: genres[category] });
+
   // Category 에 맞는 Contents 들 main 에 넣기
   // 1. 장르 Navigation
   // 2. 장르에 맞는 Contents들
