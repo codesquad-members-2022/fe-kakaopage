@@ -25,11 +25,10 @@ function renderWebtoonMain() {
     });
     mainContainer.querySelector('#day-top-section .contents-header').after(createHomeDayNav());
     // 로맨스 TOP
-    const romanceTopSection = mainContainer.querySelector('#romance-top-section .contents-wrapper');
+    const romanceTopWrapper = mainContainer.querySelector('#romance-top-section .contents-wrapper');
     romanceTopData.forEach(data => {
-        romanceTopSection.insertAdjacentHTML('beforeend', createContentVerticalSmall(data));
+        romanceTopWrapper.appendChild(createContentVerticalSmall(data));
     });
-
     createEventListnerGenreNav();
 }
 
