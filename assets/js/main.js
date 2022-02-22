@@ -44,6 +44,8 @@ function changeTopBanner(targetLnb) {
     const targetBannerData = topBanner[targetLnb];
     const itemHtml = targetBannerData.map(data => creatTopBannerHtml(data));
     banner.querySelector('.slider_items').innerHTML = itemHtml.join('');
+
+    initSlider(banner);
 }
 
 function creatTopBannerHtml(data) {
@@ -119,6 +121,34 @@ function createWebtoonDayContents(targetDay) {
         }
     })
     document.querySelector('.day_contents .item_list').innerHTML = items.join('');
+}
+
+function initSlider(sWrapper) {
+    const sliderWrapper = sWrapper;
+    const sliderBox = sliderWrapper.querySelector('.slider_items');
+    const sliderPager = sliderWrapper.querySelector('.slider_pager');
+    const sliderItem = sliderBox.querySelectorAll('.item');
+    const firstItem = sliderBox.firstElementChild;
+    const lastItem = sliderBox.lastElementChild;
+    const cloneFirst = firstItem.cloneNode(true);
+    const cloneLast = lastItem.cloneNode(true);
+    cloneFirst.classList.add('clone');
+    cloneLast.classList.add('clone');
+    sliderBox.appendChild(cloneFirst);
+    sliderBox.prepend(cloneLast);
+    const itemWidth = 100;
+    let currentIdx = 1;
+    sliderPager.innerText = `${currentIdx} / ${sliderItem.length}`;
+
+    setInitPos(sliderBox, itemWidth);
+    setTimeout(() => {
+        sliderBox.classList.add('animate')
+    }, 0)
+}
+
+function setInitPos(sliderBox, itemWidth) {
+    const initTranslateValue = `-${itemWidth}%` 
+    sliderBox.style.transform = `translateX(${initTranslateValue})`
 }
 
 (function() {
