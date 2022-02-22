@@ -1,4 +1,4 @@
-import { LOCAL_FETCH_URL } from "./constants.js";
+import { LOCAL_FETCH_URL, SERVER_FETCH_URL } from "./constants.js";
 
 const updateSelectedNode = (nodeList, target) => {
   [...nodeList.children].forEach((node) => {
