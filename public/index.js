@@ -1,3 +1,5 @@
+import { dataOfDays } from "./data/days.js";
+
 const $ = (selector) => {
   return document.querySelector(selector);
 };
@@ -158,7 +160,12 @@ const createPromotionBlock = () => {
 };
 
 const createDaysBlock = () => {
-  const webtoon = createWebtoonWithRank();
+  const date = new Date();
+  const day = date.getDay();
+
+  const webtoonWithRank = createWebtoonWithRank(5, day, dataOfDays);
+  const webtoonWithGrade = createWebtoonWithGrade(5, day, dataOfDays);
+
   const daysBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">요일 연재 TOP</h2>
@@ -181,20 +188,22 @@ const createDaysBlock = () => {
   </header>
   <nav class="nav-days">
     <ul class="nav-item-sort text-color--light-gray">
-      <li>월</li>
-      <li>화</li>
-      <li>수</li>
-      <li>목</li>
-      <li class="current-tab underline-thin text-color--black">금</li>
-      <li>토</li>
-      <li>일</li>
-      <li>완결</li>
+      <li data-days='1'>월</li>
+      <li class="current-tab underline-thin text-color--black" data-days='2'>화</li>
+      <li data-days='3'>수</li>
+      <li data-days='4'>목</li>
+      <li data-days='5'>금</li>
+      <li data-days='6'>토</li>
+      <li data-days='0'>일</li>
+      <li data-days='7'>완결</li>
     </ul>
   </nav>
-  <div class="grid-5col">
-    ${webtoon}
+  <div id="daysTop" class="grid-5col">
+    ${webtoonWithRank}
+    ${webtoonWithGrade}
   </div>
 </div>`;
+
   insertIntoMain(daysBlock);
 
   $(".nav-days").addEventListener("click", (e) => {
@@ -206,9 +215,22 @@ const createDaysBlock = () => {
         node.classList.remove("text-color--black");
       }
     });
+
     e.target.classList.add("current-tab");
     e.target.classList.add("underline-thin");
     e.target.classList.add("text-color--black");
+
+    const webtoonWithRank = createWebtoonWithRank(
+      5,
+      e.target.dataset.days,
+      dataOfDays
+    );
+    const webtoonWithGrade = createWebtoonWithGrade(
+      5,
+      e.target.dataset.days,
+      dataOfDays
+    );
+    $("#daysTop").innerHTML = webtoonWithRank + webtoonWithGrade;
   });
 };
 
@@ -281,80 +303,93 @@ const createSmallBannerBlock = () => {
   insertIntoMain(smallBannerBlock);
 };
 
-const createWebtoonWithGrade = () => {
-  const webtoon = `<div class="webtoon-container">
-  <div class="webtoon-img-container round-container">
-    <img
-      class="webtoon-img"
-      src="https://dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2"
-      alt="은동은동+옹동스"
-    />
-    <div class="layout-center webtoon-img-bar">
-      <img
-        class="star-img"
-        src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
-      />
-      <span class="mr--auto">10.0</span>
-      <img
-        class="watch-img"
-        src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-      />
-    </div>
-  </div>
-  <h3 class="webtoon-title">은동은동+옹동스</h3>
-  <div class="layout-center">
-    <img
-      class="webtoon-state-img"
-      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-      alt="업데이트"
-    />
-    <img
-      class="people-img"
-      src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-    />
-    <span class="text-color--gray webtoon-details-text">46.1만명</span>
-  </div>
-</div>`;
+const createWebtoonWithGrade = (n, day, data) => {
+  const webtoons = [];
 
-  return webtoon;
+  for (let i = 0; i < n; i++) {
+    const webtoon = `<div class="webtoon-container">
+    <div class="webtoon-img-container round-container">
+      <img
+        class="webtoon-img"
+        src="${data[day].img}"
+        alt="${data[day].title}"
+      />
+      <div class="layout-center webtoon-img-bar">
+        <img
+          class="star-img"
+          src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
+        />
+        <span class="mr--auto">10.0</span>
+        <img
+          class="watch-img"
+          src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+        />
+      </div>
+    </div>
+    <h3 class="webtoon-title">${data[day].title}</h3>
+    <div class="layout-center">
+      <img
+        class="webtoon-state-img"
+        src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+        alt="업데이트"
+      />
+      <img
+        class="people-img"
+        src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+      />
+      <span class="text-color--gray webtoon-details-text">${data[day].readers}만명</span>
+    </div>
+  </div>`;
+
+    webtoons.push(webtoon);
+  }
+
+  return webtoons.join("");
 };
 
-const createWebtoonWithRank = () => {
-  const webtoon = `<div class="webtoon-container">
-  <div class="webtoon-img-container round-container">
-    <img
-      class="webtoon-img"
-      src="https://dn-img-page.kakao.com/download/resource?kid=c9BidG/hzhOhJV5W3/ApkqR0bIKHmF8faTtNCm60&filename=th2"
-      alt="남편님, 다시 결혼해주세요!"
-    />
-    <div class="layout-center webtoon-img-bar">
-      <span class="mr--auto ml--small">2위</span>
+const createWebtoonWithRank = (n, day, data) => {
+  const webtoons = [];
+  for (let i = 0; i < n; i++) {
+    const webtoon = `<div class="webtoon-container">
+    <div class="webtoon-img-container round-container">
       <img
-        class="watch-img"
-        src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+        class="webtoon-img"
+        src="${data[day].img}"
+        alt="${data[day].title}"
       />
+      <div class="layout-center webtoon-img-bar">
+        <span class="mr--auto ml--small">${i + 1}위</span>
+        <img
+          class="watch-img"
+          src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+        />
+      </div>
     </div>
-  </div>
-  <h3 class="webtoon-title">남편님, 다시 결혼해주세요!</h3>
-  <div class="layout-center">
-    <img
-      class="webtoon-state-img"
-      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-      alt="업데이트"
-    />
-    <img
-      class="people-img"
-      src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-    />
-    <span class="text-color--gray webtoon-details-text">46.1만명</span>
-  </div>
-</div>`;
+    <h3 class="webtoon-title">${data[day].title}</h3>
+    <div class="layout-center">
+      <img
+        class="webtoon-state-img"
+        src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+        alt="업데이트"
+      />
+      <img
+        class="people-img"
+        src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+      />
+      <span class="text-color--gray webtoon-details-text">${
+        data[day].readers
+      }만명</span>
+    </div>
+  </div>`;
 
-  return webtoon;
+    webtoons.push(webtoon);
+  }
+
+  return webtoons.join("");
 };
 
 const createGenreBlock = () => {
-  const webtoons = createWebtoonWithGrade();
+  const webtoons = createWebtoonWithGrade(5);
   const genreBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">드라마 TOP</h2>
