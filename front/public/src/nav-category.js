@@ -1,5 +1,5 @@
 import { renderCategoryContents } from "./core.js";
-import { updateSelectedNode } from "./utils.js";
+import { updateNodeClasses } from "./utils.js";
 import categories from "./categories.js";
 
 const headerNav = document.querySelector(".header__nav");
@@ -7,7 +7,7 @@ const nav = document.querySelector(".main__navGenre");
 
 const handleNavCategory = async (event) => {
   const target = event.target.closest(".header__nav-item");
-  updateSelectedNode(headerNav, target);
+  updateNodeClasses(headerNav, target, "selected");
 
   const category = target.dataset.category;
 

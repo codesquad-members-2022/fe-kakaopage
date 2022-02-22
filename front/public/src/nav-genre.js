@@ -1,5 +1,5 @@
 import { renderGenreContents } from "./core.js";
-import { updateSelectedNode } from "./utils.js";
+import { updateNodeClasses } from "./utils.js";
 import genres from "./genres.js";
 import { getJson } from "./utils.js";
 
@@ -13,7 +13,7 @@ const handleNavGenre = async (event) => {
 
   const { results: categoryResults } = await getJson(category);
 
-  updateSelectedNode(genreNav, event.target);
+  updateNodeClasses(genreNav, event.target, "selected");
 
   const genreName = event.target.dataset.genre;
   const genreContents = genres[category][genreName].screen(categoryResults);

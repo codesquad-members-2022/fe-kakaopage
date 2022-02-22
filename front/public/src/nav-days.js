@@ -1,5 +1,5 @@
 import { renderDaysContents } from "./core.js";
-import { updateSelectedNode } from "./utils.js";
+import { updateNodeClasses } from "./utils.js";
 import DaysList from "./screens/Components/DaysList.js";
 import { getJson } from "./utils.js";
 
@@ -14,7 +14,7 @@ const handleNavDays = async (event) => {
 
   const daysContents = DaysList(event.target.textContent, webtoons, 10);
 
-  updateSelectedNode(daysNav, event.target);
+  updateNodeClasses(daysNav, event.target, "selected");
   renderDaysContents(daysContents);
 };
 

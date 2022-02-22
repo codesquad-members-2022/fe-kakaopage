@@ -1,10 +1,10 @@
 import { LOCAL_FETCH_URL, SERVER_FETCH_URL } from "./constants.js";
 
-const updateSelectedNode = (nodeList, target) => {
+const updateNodeClasses = (nodeList, target, className) => {
   [...nodeList.children].forEach((node) => {
-    node.classList.remove("selected");
+    node.classList.remove(className);
   });
-  target.classList.add("selected");
+  target.classList.add(className);
 };
 
 const formatUserCount = (userCount) => {
@@ -23,4 +23,4 @@ const getJson = (dataName) => {
   });
 };
 
-export { updateSelectedNode, getJson, formatUserCount };
+export { updateNodeClasses, getJson, formatUserCount };
