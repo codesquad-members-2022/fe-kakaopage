@@ -1,18 +1,18 @@
 import {
-  MainNav,
-  DailySeriesRanking,
-  MainBanner,
-  CategoryMenu,
-  SubBanner,
-  GenreTop,
   AnticipatedWork,
+  AppDownloadLink,
+  CategoryMenu,
   DailyRanking,
-  RecommendEvent, AppDownloadLink,
+  DailySeriesRanking,
+  GenreTop,
+  MainBanner,
+  MainNav,
+  RecommendEvent,
+  SubBanner,
 } from '../index.js';
 import { Categories } from '../../data';
 
-const WebtoonPage = () => {
-
+const HomeContents = () => {
   return `<div class="main-contents">
             ${MainNav()}
             ${MainBanner()}
@@ -30,6 +30,6 @@ const WebtoonPage = () => {
             ${RecommendEvent()}
             ${AppDownloadLink()}
           </div>`;
-};
+}
 
-export default WebtoonPage;
+export default HomeContents;

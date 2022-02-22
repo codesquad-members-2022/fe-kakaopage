@@ -25,12 +25,21 @@ import EventBannerItem from './banner/EventBannerItem.js';
 import EventBannerList from './banner/EventBannerList.js';
 import RecommendEvent from './section/RecommendEvent.js';
 import AppDownloadLink from './section/AppDownloadLink.js';
-import HomePage from './Page/HomePage.js';
-import WebtoonPage from './Page/WebtoonPage.js';
-import NovelPage from './Page/NovelPage.js';
-import MoviePage from './Page/MoviePage.js';
-import BroadcastPage from './Page/BroadcastPage.js';
-import BookPage from './Page/BookPage.js';
+import HomePage from './page/HomePage.js';
+import WebtoonPage from './page/WebtoonPage.js';
+import NovelPage from './page/NovelPage.js';
+import MoviePage from './page/MoviePage.js';
+import BroadcastPage from './page/BroadcastPage.js';
+import BookPage from './page/BookPage.js';
+import HomeContents from './mainContents/HomeContents.js';
+import DailyContents from './mainContents/DailyContents.js';
+import WebtoonContents from './mainContents/WebtoonContents.js';
+import ShonenContents from './mainContents/ShonenContents.js';
+import DramaContents from './mainContents/DramaContents.js';
+import RomanceContents from './mainContents/RomanceContents.js';
+import RomanceFantasyContents from './mainContents/RomanceFantasyContents.js';
+import ActionContents from './mainContents/ActionContents.js';
+import BLContents from './mainContents/BLContents.js';
 
 export {
   Nav,
@@ -66,4 +75,13 @@ export {
   MoviePage,
   BroadcastPage,
   BookPage,
+  HomeContents,
+  DailyContents,
+  WebtoonContents,
+  ShonenContents,
+  DramaContents,
+  RomanceContents,
+  RomanceFantasyContents,
+  ActionContents,
+  BLContents,
 };
