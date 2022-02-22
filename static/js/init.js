@@ -1,4 +1,5 @@
 import { ELEMENT_ID } from './constants/variable.js';
+import { handleTabActive } from './handleStyle/activeTab.js';
 import { render } from './render.js';
 import { navigateTo } from './router.js';
 import { $get } from './utils.js';
@@ -23,6 +24,8 @@ function init() {
       dataset: { category },
     } = event.target;
     if (event.target.matches(`[data-category]`)) {
+      const targetLi = event.target.closest('li');
+      handleTabActive(targetLi);
       navigateTo(href, category);
     }
   });

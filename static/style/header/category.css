@@ -7,11 +7,6 @@
   width: 18%;
 }
 
-.header__index:hover,
-.header__index:active {
-  border-bottom: 4px solid var(--main-yellow);
-}
-
 .c-category__content {
   position: relative;
   font-size: 1.1rem;
