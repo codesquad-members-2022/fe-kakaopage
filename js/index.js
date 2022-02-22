@@ -1,9 +1,11 @@
-import { handleCategory } from "./handle-cateogry.js";
+import { initEventListener } from "./event-listener.js";
+import { dowTopDefault } from "./blocks/dow-top.js";
+import { renderingDowNavDefault } from "./rendering-nav.js";
 
-export const initEventListener = () => {
-  document.querySelectorAll(".nav__list").forEach((e) => {
-    e.addEventListener("click", handleCategory);
-  });
+const renderingDefault = () => {
+  renderingDowNavDefault();
+  dowTopDefault();
 };
 
 initEventListener();
+renderingDefault();
