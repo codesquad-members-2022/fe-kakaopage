@@ -7,18 +7,25 @@ import { expectedTop } from "./blocks/expected-top.js";
 import { romanceTop } from "./blocks/romance-top.js";
 import { dailyTop } from "./blocks/daily-top.js";
 import { eventBanner } from "./components/event-banner.js";
+import { dowSerialization } from "./blocks/dow-serialization.js";
 
 const mainNavContents = {
   홈: [
-    { class: "promotion-banner", func: promotionBanner },
-    { class: "sub-ad-banner", func: subAdBanner },
-    { class: "dow-top", func: dowTop },
-    { class: "expected-top", func: expectedTop },
-    { class: "romance-top", func: romanceTop },
-    { class: "daily-top", func: dailyTop },
-    { class: "event-banner", func: eventBanner },
+    { block: "promotion-banner", func: promotionBanner, frame: "use" },
+    { block: "sub-ad-banner", func: subAdBanner, frame: "use" },
+    { block: "dow-top", func: dowTop, frame: "use" },
+    { block: "expected-top", func: expectedTop, frame: "use" },
+    { block: "romance-top", func: romanceTop, frame: "use" },
+    { block: "daily-top", func: dailyTop, frame: "use" },
+    { block: "event-banner", func: eventBanner, frame: "use" },
   ],
-  요일연재: ["dow__serialization"],
+  요일연재: [
+    {
+      block: "dow__serialization",
+      func: dowSerialization,
+      frame: "unuse",
+    },
+  ],
 };
 
 const nav = [

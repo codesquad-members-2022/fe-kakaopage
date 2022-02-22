@@ -1,5 +1,5 @@
 import { $ } from "./utils.js";
-import { initEventListener } from "./index.js";
+import { initEventListener } from "./event-listener.js";
 import { dowTopContents } from "./blocks/dow-top.js";
 
 export const renderingContents = (selectedValue, navContents, navRendering) => {
@@ -9,12 +9,13 @@ export const renderingContents = (selectedValue, navContents, navRendering) => {
       ? navContents[selectedValue].reduce(
           (acc, cur) =>
             acc +
-            `<div class="${cur.class} frame">
+            `<div class="${cur.block} ${cur.frame === "use" ? "frame" : ""}">
     ${cur.func(selectedValue, cur)}
     </div>`,
           ""
         )
-      : dowTopContents(selectedValue);
+      : //렌더링할 곳이 요일탭이면
+        dowTopContents(selectedValue);
 
   $(`.${navRendering}`).innerHTML = renderingData;
 
