@@ -233,6 +233,25 @@ li {
   display: flex;
   justify-content: space-evenly;
 }
+.imageBox {
+  position: relative;
+}
+
+.yellow {
+  color: #f7d43e;
+}
+
+.rank {
+  padding: 5px;
+  background-color: #242526;
+  display: flex;
+  border-radius: 0 0 10px 10px;
+}
+
+.rank img {
+  border: 1px solid red;
+  width: 3px;
+}
 
 .content__info__title {
   margin: 6px 0;
@@ -247,6 +266,7 @@ li {
 .content__info img {
   height: 120px;
   width: 120px;
+  border-radius: 10px 10px 0 0;
 }
 
 .tab_list {
@@ -258,6 +278,7 @@ li {
   text-align: center;
   border-right: 0;
   box-sizing: border-box;
+  border-bottom: 1px solid #eee;
 }
 .tab_list.tab_active a {
   color: black;
