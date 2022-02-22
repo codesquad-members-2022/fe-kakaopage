@@ -4,10 +4,16 @@ main {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 main > * {
   background-color: snow;
   margin-top: 0.5rem;
   border-radius: 0.5rem;
+}
+
+.dummy {
+  text-align: center;
+  padding: 1rem;
 }
 
 /* mian__nav ======================================================= */
@@ -163,4 +169,71 @@ main > * {
   margin-right: 1rem;
   border-top-right-radius: var(--border-radius1);
   border-bottom-right-radius: var(--border-radius1);
+}
+
+/* list-contents ======================================================= */
+
+.list-contents > * {
+  padding: 1rem;
+  padding-bottom: 0rem;
+}
+
+.list-contents__menu {
+  display: flex;
+  align-items: baseline;
+}
+
+.list-contents__menu--name {
+  margin-right: 0.1rem;
+}
+
+.list-contents__menu--count {
+  font-size: 0.7rem;
+  color: var(--color-grey-main);
+}
+
+.list-contents__menu--more {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--color-grey-main);
+}
+
+.list-contents__content {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.list-contents__content--info {
+  padding: 0.4rem;
+}
+
+.list-contents__content--info > * {
+  padding-bottom: 0.4rem;
+}
+
+.list-contents__content--image {
+  display: block;
+  width: 6rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: var(--border-radius1);
+}
+
+.list-contents__content--image > img {
+  display: block;
+  height: 100%;
+}
+
+.list-contents__content--title {
+  font-size: 0.8rem;
+}
+
+.list-contents__content--explain {
+  font-size: 0.7rem;
+  color: var(--color-grey-main);
+}
+
+.list-contents__content--info-detail {
+  font-size: 0.7rem;
+  color: var(--color-grey-main);
 }
