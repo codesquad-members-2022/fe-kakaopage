@@ -14,7 +14,7 @@ function clickGenresList() {
     item.addEventListener('click', (event) => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
-      moveGenreNav(event.target)
+      moveGenreNav(event.target);
     })
   });
 }
@@ -92,13 +92,13 @@ function clickPromotionBanner() {
 }
 
 function eventHome() {
-  clickGenresList();
   clickPromotionBanner();
   clickDailyTopList();
 }
 
 function loadHome() {
   renderHome('홈', containerInfo, 'firstRender');
+  clickGenresList();
   eventHome();
 }
 
