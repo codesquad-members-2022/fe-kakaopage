@@ -1,6 +1,7 @@
 import { dataOfDays } from "./data/home/days.js";
 import { dataOfDrama } from "./data/home/drama.js";
 import { dataOfsBanner } from "./data/home/smallBanner.js";
+import { dataOfDailyRank } from "./data/home/dailyRank.js";
 
 const $ = (selector) => {
   return document.querySelector(selector);
@@ -420,14 +421,14 @@ const createGenreBlock = (genre) => {
   insertIntoMain(genreBlock);
 };
 
-const createDailyRank = () => {
+const createDailyRank = (data) => {
   const dailyRank = `<li class="layout-center">
   <p class="daily-ranking">1</p>
   <div class="daily-rank-img-container round-container">
     <img
       class="daily-rank-img"
-      src="https://dn-img-page.kakao.com/download/resource?kid=bxZgfW/hzhOjAWIkc/W6ngPs1TUSSfuOQ1MzpH70&filename=th2"
-      alt="막내 황녀님"
+      src="${data.img}"
+      alt="${data.title}"
     />
     <img
       class="clock-img--yellow"
@@ -436,22 +437,22 @@ const createDailyRank = () => {
   </div>
   <div class="daily-rank-details">
     <div>
-      <h3 class="webtoon-title daily-rank-title">막내 황녀님</h3>
+      <h3 class="webtoon-title daily-rank-title">${data.title}</h3>
       <span class="webtoon-details-text text-color--gray"
         ><img
           class="people-img"
           src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-        />118만명 | 기다무웹툰 | 로판 | 돌대 [악어스튜디오],사하</span
+        />${data.desc}</span
       >
     </div>
-    <p class="text-color--gray webtoon-details-text">화 연재</p>
+    <p class="text-color--gray webtoon-details-text">${data.day} 연재</p>
   </div>
 </li>`;
   return dailyRank;
 };
 
 const createDailyRankBlock = () => {
-  const dailyRank = createDailyRank();
+  const dailyRank = createDailyRank(dataOfDailyRank);
   const dailyRankBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">일간 랭킹 TOP</h2>
