@@ -1,0 +1,68 @@
+{
+  "results": {
+    "home": [{ "name": "홈", "genre": "home", "selected": true }],
+    "webtoon": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "요일연재", "genre": "days", "selected": false },
+      { "name": "웹툰", "genre": "webtoon", "selected": false },
+      { "name": "소년", "genre": "boy", "selected": false },
+      { "name": "드라마", "genre": "drama", "selected": false },
+      { "name": "로맨스", "genre": "romance", "selected": false },
+      { "name": "로판", "genre": "rofan", "selected": false },
+      { "name": "액션무협", "genre": "action", "selected": false },
+      { "name": "BL", "genre": "bl", "selected": false }
+    ],
+    "webnovel": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "요일연재", "genre": "days", "selected": false },
+      { "name": "웹소설", "genre": "webnovel", "selected": false },
+      { "name": "판타지", "genre": "fantasy", "selected": false },
+      { "name": "현판", "genre": "hyunfan", "selected": false },
+      { "name": "로맨스", "genre": "romance", "selected": false },
+      { "name": "로판", "genre": "rofan", "selected": false },
+      { "name": "무협", "genre": "action", "selected": false },
+      { "name": "판드", "genre": "fande", "selected": false },
+      { "name": "BL", "genre": "bl", "selected": false },
+      { "name": "단행본", "genre": "sepvol", "selected": false }
+    ],
+    "webnovel": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "요일연재", "genre": "days", "selected": false },
+      { "name": "웹소설", "genre": "webnovel", "selected": false },
+      { "name": "판타지", "genre": "fantasy", "selected": false },
+      { "name": "현판", "genre": "hyunfan", "selected": false },
+      { "name": "로맨스", "genre": "romance", "selected": false },
+      { "name": "로판", "genre": "rofan", "selected": false },
+      { "name": "무협", "genre": "action", "selected": false },
+      { "name": "판드", "genre": "fande", "selected": false },
+      { "name": "BL", "genre": "bl", "selected": false },
+      { "name": "단행본", "genre": "sepvol", "selected": false }
+    ],
+    "movie": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "랭킹", "genre": "ranking", "selected": false },
+      { "name": "로맨스", "genre": "romance", "selected": false },
+      { "name": "액션", "genre": "action", "selected": false },
+      { "name": "애니메이션", "genre": "animation", "selected": false },
+      { "name": "장르전체", "genre": "genreAll", "selected": false }
+    ],
+    "broadcast": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "예능", "genre": "entertain", "selected": false },
+      { "name": "드라마", "genre": "drama", "selected": false },
+      { "name": "애니메이션", "genre": "animation", "selected": false },
+      { "name": "해외시리즈", "genre": "overseas", "selected": false },
+      { "name": "랭킹", "genre": "ranking", "selected": false },
+      { "name": "장르전체", "genre": "genreAll", "selected": false }
+    ],
+    "book": [
+      { "name": "홈", "genre": "home", "selected": true },
+      { "name": "연재", "genre": "serial", "selected": false },
+      { "name": "베스트셀러", "genre": "bestseller", "selected": false },
+      { "name": "랭킹", "genre": "ranking", "selected": false },
+      { "name": "스릴러", "genre": "thriller", "selected": false },
+      { "name": "자기계발", "genre": "selfDev", "selected": false },
+      { "name": "학습만화", "genre": "learning", "selected": false }
+    ]
+  }
+}
