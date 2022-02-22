@@ -1,3 +1,30 @@
+const PageNavItems = [
+  {
+    name: '홈',
+    isSelected: true,
+  },
+  {
+    name: '웹툰',
+    isSelected: false,
+  },
+  {
+    name: '웹소설',
+    isSelected: false,
+  },
+  {
+    name: '영화',
+    isSelected: false,
+  },
+  {
+    name: '방송',
+    isSelected: false,
+  },
+  {
+    name: '책',
+    isSelected: false,
+  },
+]
+
 const MainNavItems = [
   {
     name: '홈',
@@ -72,4 +99,4 @@ const ContentsNavItems = [
   },
 ]
 
-export { MainNavItems, ContentsNavItems };
+export { PageNavItems, MainNavItems, ContentsNavItems };

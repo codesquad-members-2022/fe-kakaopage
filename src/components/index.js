@@ -1,4 +1,5 @@
 import Nav from './nav/Nav.js';
+import PageNav from './nav/PageNav.js';
 import MainNav from './nav/MainNav.js';
 import ContentsNav from './nav/ContentsNav.js';
 import MainContents from './MainContents.js';
@@ -27,6 +28,7 @@ import RecommendEvent from './section/RecommendEvent.js';
 
 export {
   Nav,
+  PageNav,
   MainNav,
   ContentsNav,
   MainContents,
