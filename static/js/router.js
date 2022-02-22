@@ -7,9 +7,9 @@ import { getParams } from './utils.js';
 
 // 나머지 카테고리는 반복이어서 생략
 export const routes = [
-  { categoryUid: 0, category: Main },
-  { categoryUid: 1, category: Webtoon },
-  { categoryUid: 2, category: Novel },
+  { categoryUid: 0, renderCategory: Main },
+  { categoryUid: 1, renderCategory: Webtoon },
+  { categoryUid: 2, renderCategory: Novel },
 ];
 
 export function navigateTo(url) {

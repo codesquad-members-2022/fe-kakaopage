@@ -25,12 +25,12 @@ async function preRender(uid) {
 }
 
 export async function render() {
-  const { categoryUid, subCategoryUid } = getParams();
   const $mainLayout = $get(MAIN_LAYOUT);
   // 우선 서버 동작 없이 mock데이터로 구현
   // const uidContent = await preRender(categoryUid);
   try {
-    const { category: selectedCategory } = routes.find(
+    const { categoryUid, subCategoryUid } = getParams();
+    const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid
     );
     if (!selectedCategory) {
@@ -39,7 +39,7 @@ export async function render() {
     // mainlayout의 node를 지우고 새로 랜더링
     $mainLayout.innerHTML = ``;
 
-    const contentObj = await selectedCategory(subCategoryUid);
+    const contentObj = await selectedCategory.renderCategory(subCategoryUid);
 
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
