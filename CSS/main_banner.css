@@ -77,6 +77,17 @@
   font-size: 1rem;
 }
 
+.main__banner .banner__count {
+  position: absolute;
+  bottom: 12%;
+  right: 5%;
+}
+
+.main__banner .banner__count span {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.864);
+}
+
 /* ======== promotion banner ======== */
 .promotion__banner {
   position: relative;
