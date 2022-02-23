@@ -1,13 +1,27 @@
-import DaysTop from "../../Components/DaysTop.js";
+import Component from "../../Component.js";
 import MainBanner from "../../Components/MainBanner.js";
+import FullButton from "../../Components/FullButton.js";
+import { createExtendsRelation } from "../../../utils.js";
 
-const DaysGenre = (webtoons) => {
-  const today = new Date().getDay() - 1;
+function DaysGenre(target) {
+  Component.call(this, target);
 
-  return `
-    ${MainBanner(webtoons.filter((wt) => wt.isMain.days))}
-    ${DaysTop(today, webtoons)}
-`;
-};
+  const mainBanner = new MainBanner(target, { genre: "days" });
+
+  this.setState({
+    contents: [mainBanner, new FullButton()],
+  });
+
+  this.template = function () {
+    const { contents } = this.state;
+    return `${contents?.reduce((tags, content) => {
+      tags += content.template();
+      return tags;
+    }, "")}`;
+  };
+  this.render();
+}
+
+createExtendsRelation(DaysGenre, Component);
 
 export default DaysGenre;

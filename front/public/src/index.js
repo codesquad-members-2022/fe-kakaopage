@@ -3,6 +3,7 @@ import Category from "./screens/Components/Category.js";
 import { getJson } from "./utils.js";
 import GenreList from "./screens/Components/GenreList.js";
 import HomeGenre from "./screens/Webtoon/genre/HomeGenre.js";
+import DaysGenre from "./screens/Webtoon/genre/DaysGenre.js";
 
 const init = async () => {
   const { results: categories } = await getJson("categories");
@@ -34,7 +35,7 @@ const init = async () => {
   categoryList.setState({ genreList });
 
   const contentsBox = main.querySelector(".main__contentsBox");
-  const initGenreScreen = new HomeGenre(contentsBox);
+  new HomeGenre(contentsBox);
 };
 
 init();

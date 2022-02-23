@@ -1,10 +1,12 @@
 import { formatUserCount, createExtendsRelation } from "../../utils.js";
 import Component from "../Component.js";
 
-function MainBanner(target) {
-  Component.call(this, target);
+function MainBanner(target, state) {
+  Component.call(this, target, state);
 
-  const webtoon = JSON.parse(localStorage.getItem("webtoons"))[0]; // 일단 한개만, 나중에 슬라이더
+  const webtoon = JSON.parse(localStorage.getItem("webtoons")).filter(
+    (wt) => wt.isMain[this.state.genre]
+  )[0]; // 일단 한개만, 나중에 슬라이더
 
   this.template = function () {
     return `

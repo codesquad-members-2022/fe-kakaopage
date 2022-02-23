@@ -32,14 +32,12 @@ function HomeGenre(target) {
           count: 10,
         }),
       });
-      console.log(daysTopBox.state);
-      // daysTopBox.render();
       this.render();
     });
   };
 
   /* 메인 배너 Component */
-  const mainBanner = new MainBanner(target);
+  const mainBanner = new MainBanner(target, { genre: "home" });
   /* Nav Detail (Webtoon Status Nav) Component */
   const navDetail = new NavDetail(target);
   /* 서브 배너 (promotion) Component */
