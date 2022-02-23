@@ -1,4 +1,4 @@
-import {webtoonItems} from './data/data_cover.js'
+import {webtoonItems} from '/client/data/data_cover.js'
 function makeWebtoonItems() {
     let result = '';
     const newData = webtoonItems;
