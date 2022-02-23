@@ -1,14 +1,10 @@
-https://stackoverflow.com/questions/41473093/change-css-on-html-button-click
-
-Element.classList
+# [Element.classList](https://stackoverflow.com/questions/41473093/change-css-on-html-button-click)
 : The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.
 
---------------
-https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
-- Document Object Model
+# [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
 
-- DomInterface
+## DomInterface
     - Document
     - DOMString
     - DOMStringList

@@ -1,0 +1,15 @@
+DOM조작 API
+querySelector
+createElement
+
+nodeType의 이해
+document.body.tagName;
+document.querySelector("body");
+    - 속성정보가 다 나온다.
+
+```javascript
+var body = document.querySelector("body");
+body.nodeType;
+
+var div = document.querySelector("body > div");
+```

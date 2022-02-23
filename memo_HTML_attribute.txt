@@ -1,0 +1,4 @@
+# [HTML attribute reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#global_event_handlers)
+: Elements in HTML have __attributes__, these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
+
+

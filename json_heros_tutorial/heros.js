@@ -1,5 +1,3 @@
-// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
-
 // To obtain the JSON, we use an API called Fetch. This API allows us to make network request to retrieve resources from a server via JavaScript(e.g. images, text, JSON, even HTML snippets). meaning that we can update small sections of content without having to reload the entire page.
 async function populate() {
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
