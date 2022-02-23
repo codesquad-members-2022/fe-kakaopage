@@ -25,6 +25,7 @@ export function rendering(tabName){
 function renderHomePage(tabName){
     renderMenu(tabName);
     renderSubBanner(tabName);
+    renderDailyTop();
 }
 
 function renderMenu(tabName){
@@ -73,4 +74,37 @@ function createContentsMain(...children){
     }
 
     return $main;
+}
+
+function renderDailyTop(selectedWeek = 'mon'){
+    const $nav = createWeeklyNavNode(getWeekNavData());
+    setNavEvent('week-nav__list');
+}
+
+function getWeekNavData(){
+    return [
+        { text : '월', dataKey : 'mon', selected : true },
+        { text : '화', dataKey : 'tue', selected : false },
+        { text : '수', dataKey : 'wed', selected : false },
+        { text : '목', dataKey : 'thu', selected : false },
+        { text : '금', dataKey : 'fri', selected : false },
+        { text : '토', dataKey : 'sat', selected : false },
+        { text : '일', dataKey : 'sun', selected : false },
+        { text : '완결', dataKey : 'end', selected : false },
+    ]
+}
+
+function createWeeklyNavNode(weekData){
+    const $nav = document.createElement('nav');
+    const $list = document.createElement('ul');
+
+    $nav.appendChild($list);
+    $nav.classList.add('week-nav');
+    $list.classList.add('week-nav__list', 'center');
+
+    weekData.map( data => {
+        $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)}
+    );
+
+    return $nav;
 }
