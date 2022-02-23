@@ -72,12 +72,22 @@ label.right {
   background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93");
 }
 
+@keyframes slide01 {
+  0% {left:0%;}
+  30% {left: 0%;}
+  33% {left:-100%; }
+  63% {left: -100%;}
+  66% {left:-200%;}
+  97% {left: -200%;}
+  100% {left:0%;}
+}
 
 .slide-control [class*="control"] {display: none;}
 #slide01:checked ~ .slide-control .control01 {display: block;}
 #slide02:checked ~ .slide-control .control02 {display: block;}
 #slide03:checked ~ .slide-control .control03 {display: block;}
 
-#slide01:checked ~ .slidelist .slideitem {transform: translateX(0);}
+#slide01:checked ~ .slidelist .slideitem {transform: translateX(0);animation:slide01 20s infinite;}
+
 #slide02:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
 #slide03:checked ~ .slidelist .slideitem {transform: translateX(-200%);}
