@@ -10,6 +10,9 @@ import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 import setDayFilter from './dayFilter/setDayFilter.js';
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
 import drawSlideBtn from './slide/drawSlideBtn.js';
+
+import CarouselSlider from './preview/slider/CarouselSlider.js';
+import createPreviewEl from './preview/createPreviewEl.js';
 console.dir(webtoonContentsObj);
 console.dir(dayContentsObj);
 console.dir(previewsObj);
@@ -17,6 +20,11 @@ console.dir(previewsObj);
 const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
+const ELEMENT_WIDTH = 720;
+const carouselSlider = new CarouselSlider({
+  elementWidth: ELEMENT_WIDTH,
+  createItemElFunc: createPreviewEl,
+});
 
 const curMainCategoryIdx = {
   value: 2,
@@ -38,6 +46,7 @@ const timer = {
   },
   clearTimer() {
     clearInterval(this.timerId);
+    this.timerId = null;
   },
   exists() {
     return !!this.timerId;
@@ -72,7 +81,7 @@ const initMainPage = () => {
   const dayContentsMap = dayContentsObj[defaultCategoryName];
   const dayContentsArr = dayContentsMap?.[today];
   const webtoonContentsArr = webtoonContentsObj[defaultCategoryName];
-  setPreviews(previews, timer);
+  setPreviews({ previews, timer, slider: carouselSlider });
   setTagListEl(defaultCategoryName);
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
   setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
@@ -98,7 +107,7 @@ pageMainCategory.forEach((categoryEl, idx, list) => {
     toggleHighlight(prevTarget, curTarget);
 
     // preview - 구현 후 함수 하나로 만들기
-    setPreviews(previews, timer);
+    setPreviews({ previews, timer, slider: carouselSlider });
 
     // tag list
     setTagListEl(categoryName);
