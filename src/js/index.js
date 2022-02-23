@@ -83,3 +83,14 @@ const moveTab = () => {
 
 renderTodayToons();
 moveTab();
+
+const renderGenreSections = () => {
+  const genreSections = $$(`[data-genre]`);
+  genreSections.forEach(section => {
+    const genre = section.dataset.genre;
+    const toons = selectToons('genre', genre);
+    insertGridItem(toons, genre);
+  });
+};
+
+renderGenreSections();
