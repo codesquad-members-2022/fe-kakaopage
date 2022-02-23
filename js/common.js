@@ -10,7 +10,17 @@ export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
 
 function createPromotionWebtoonDiv(promotionWebtoon) {
   return `<div class="promotion_webtoon">
-    <img src="${promotionWebtoon.url}">
+    <img class="promotion_webtoon_image" src="${promotionWebtoon.url}">
+    <div class="promotion_webtoon_details">
+      <div class="promotion_webtoon_title">${promotionWebtoon.title}</div>
+      <div>
+        <img src="./image/update_promotion.svg" alt="promotion_update"/>
+        <img src="./image/wait_sign.svg" alt="wait_sign" />
+        <span class="font_white">웹툰</span>
+        <img src="./image/read_count.png" alt="read_count_icon" />
+        <span class="font_white">${promotionWebtoon.readCount}</span>
+      </div>
+    </div>
     <div class="promotion_webtoon_phrase">
       ${promotionWebtoon.phrase}
     </div>
@@ -51,7 +61,7 @@ function createWebtoonPreviewDiv(imgURL, webtoonScore) {
     <img src="${imgURL}">
     <div class="webtoon_score">
       ${webtoonScore}
-      <img src="./image/wait_sign.svg">
+      <img src="./image/wait_sign.svg" alt="wait_sign" />
     </div>
   </div>`;
 }
