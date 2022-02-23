@@ -14,28 +14,28 @@ export function GNBHandler(e) {
   $(`.${selected}`).classList.remove(selected);
   parentClass.add(selected);
 
-  if (e.target.innerText === "홈") {
+  if (e.target.dataset.name === "홈") {
     renderNothing();
     return;
   }
-  if (e.target.innerText === "웹툰") {
+  if (e.target.dataset.name === "웹툰") {
     renderWebtoon();
     addEvent();
     return;
   }
-  if (e.target.innerText === "웹소설") {
+  if (e.target.dataset.name === "웹소설") {
     renderNothing();
     return;
   }
-  if (e.target.innerText === "영화") {
+  if (e.target.dataset.name === "영화") {
     renderNothing();
     return;
   }
-  if (e.target.innerText === "방송") {
+  if (e.target.dataset.name === "방송") {
     renderNothing();
     return;
   }
-  if (e.target.innerText === "책") {
+  if (e.target.dataset.name === "책") {
     renderNothing();
     return;
   }
@@ -51,7 +51,6 @@ export function SNBHander(e) {
 
   $(`.${selected}`).classList.remove(selected);
   e.target.classList.add(selected);
-  console.log(e.target);
 
   if (e.target.innerText === "홈") {
     renderWebtoon();
