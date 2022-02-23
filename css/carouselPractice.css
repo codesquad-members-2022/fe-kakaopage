@@ -1,0 +1,11 @@
+.slide__container {
+  max-width: 660px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slide__list {
+  display: flex;
+  transition: all 0.5s ease-out;
+}

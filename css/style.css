@@ -8,14 +8,16 @@ header {
   top: 0;
   width: 100%;
   z-index: 1;
-
   background-color: #fff;
 }
 
-.header__container {
+.container__space__between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__container {
   width: 720px;
   height: 80px;
 }
@@ -55,7 +57,7 @@ main {
   justify-content: space-around;
   align-items: center;
   color: #bbbbbb;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 65px;
 }
 
@@ -66,7 +68,7 @@ main {
 .banner__box {
   position: relative;
   width: 720px;
-  height: 480px;
+  height: 440px;
 }
 
 .banner__box .banner__content {
@@ -92,7 +94,7 @@ main {
   object-fit: cover;
 }
 
-.content {
+.container__flex__column {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -114,4 +116,104 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
+}
+
+/*  */
+.main__home__nav {
+  display: grid;
+  /* width: 680px; */
+  height: 160px;
+  /* padding: 20px; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 5px;
+  column-gap: 5px;
+  /* justify-content: center;
+  align-items: center; */
+  /* background-color: #fff; */
+}
+
+.home__nav__menu {
+  /* width: 224px;
+  height: 56px; */
+  background-color: #f3f3f3;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* 중복제거 */
+}
+
+.home__nav__container {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sub__banner__container {
+  height: 140px;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.main__sub__banner {
+  width: 548px;
+  height: 98px;
+}
+.sub__banner__arrow {
+  width: 40px;
+  height: 40px;
+}
+
+.interval {
+  margin-top: 12px;
+}
+
+.contents__more__box {
+  height: 50px;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.container__justify__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new__webtoon__banner {
+  width: 336px;
+  height: 224px;
+  border-radius: 10px;
+}
+
+.new__webtoon__interval {
+  margin-left: 12px;
+}
+
+.event__size {
+  width: 700px;
+  height: 338px;
+}
+
+.ranking__content__size {
+  width: 84px;
+  height: 114px;
+}
+
+.ranking__content__box {
+  display: flex;
+}
+
+.banner__position {
+  position: absolute;
+  top: 70%;
+}
+
+.arrow__position {
+  position: absolute;
+  top: 50%;
+}
+
+.banner__title__background {
+  background-color: #ffd200;
+  height: 40px;
 }
