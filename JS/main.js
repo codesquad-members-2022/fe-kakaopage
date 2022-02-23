@@ -1,15 +1,17 @@
 import {containerInfo} from './data/containerInfoData.js'
 import {todayWebtoonsData} from './data/todayWebtoons.js'
 import {renderHome, renderDaily} from './render.js'
+import {dailyTopData} from './data/scrape/dailyTopData.js'
+import {makeWebtoonList} from './components/webtoonList.js'
 import {$, $all} from './utility.js'
 
-function setFocus(target, className) {
+const setFocus = (target, className) => {
   const focused = $(`.${className}`);
   if (focused) focused.classList.remove(className);
   target.classList.add(className);
 }
 
-function clickGenresList() {
+const clickGenresList = () => {
   const genresItem = $all('.genres__item');
   genresItem.forEach(item => {
     item.addEventListener('click', (event) => {
@@ -20,17 +22,7 @@ function clickGenresList() {
   });
 }
 
-function clickDailyTopList() {
-  const selectDay = $all('.day__btn');
-  selectDay.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      const focusedClass = 'day--focused';
-      setFocus(event.target.parentNode, focusedClass);
-    })
-  })
-}
-
-function moveGenreNav(target) {
+const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       resetMain();
@@ -40,12 +32,12 @@ function moveGenreNav(target) {
     case 'daily':
       resetMain();
       renderDaily(todayWebtoonsData);
-      clickDailyTopList();
+      clickDailyTopList(dailyTopData);
       break;
   }
 }
 
-function resetMain() {
+const resetMain = () =>{
   const main = $('.main');
 
   while (main.children.length > 2) {
@@ -53,7 +45,36 @@ function resetMain() {
   }
 }
 
-function makeCloneNode() {
+const clickDailyTopList = (data) => {
+  const selectDay = $all('.day');
+  selectDay.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      const parentNode = event.target.parentNode;
+      const focusedClass = 'day--focused';
+      setFocus(parentNode, focusedClass);
+
+      const topContainer = event.target.closest('.select__day').parentNode;
+      topContainer.removeChild($('.webtoons__list'));
+
+      const filterData = selectDailyWebtoonData(parentNode, data);
+      const DAILY_ITEMS = 10; 
+      const newList = makeWebtoonList(DAILY_ITEMS, filterData);
+      
+      topContainer.appendChild(newList);
+    })
+  })
+}
+
+const selectDailyWebtoonData = (parentNode, data) => {
+  const select = parentNode.dataset.day;
+  const filterData = (select === 'end')
+    ? data
+    : data.filter((el) => el.day.includes(select) && !(el.review.includes('위')));
+
+  return filterData;
+}
+
+const makeCloneNode = () => {
   const list = $('.main__banner .banner__list');
   const items = $all('.main__banner .banner__item');
   const firstNode = items[0].cloneNode(true);
@@ -67,7 +88,7 @@ function makeCloneNode() {
   return list
 }
 
-function eventMainBanner() {
+const eventMainBanner = () => {
   const list = makeCloneNode();
   const items = $all('.main__banner .banner__item');
   const width = $('.main__banner .banner__item').offsetWidth;
@@ -96,7 +117,7 @@ const slideMainBanner = (list, items, width, counter) => {
   })
 }
 
-function clickBannerPrevBtn() {
+const clickBannerPrevBtn = () => {
   const focused = $('.focused');
   const prevItem = focused.previousElementSibling;
 
@@ -109,7 +130,7 @@ function clickBannerPrevBtn() {
   }
 }
 
-function clickBannerNextBtn() {
+const clickBannerNextBtn = () => {
   const focused = $('.focused');
   const nextItem = focused.nextElementSibling;
 
@@ -122,7 +143,7 @@ function clickBannerNextBtn() {
   }
 }
 
-function clickPromotionBanner() {
+const clickPromotionBanner = () => {
   const promo = $('.promotion__banner');
   promo.addEventListener('click', (e) => {
     if (e.target.classList.contains('fa-chevron-left')) {
@@ -135,18 +156,18 @@ function clickPromotionBanner() {
   })
 }
 
-function eventHome() {
+const eventHome = () => {
   clickPromotionBanner();
-  clickDailyTopList();
+  clickDailyTopList(dailyTopData);
 }
 
-function loadHome() {
+const loadHome = () => {
   renderHome('홈', containerInfo, 'firstRender', todayWebtoonsData);
   eventHome();
+  clickGenresList();
 }
 
 window.addEventListener('load', () => {
   loadHome();
-  clickGenresList();
   eventMainBanner();
 });
