@@ -1,2 +1,4 @@
 yarn-error.log
 .idea
+node_modules
+yarn.lock
