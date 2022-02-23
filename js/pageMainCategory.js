@@ -72,6 +72,6 @@ pageMainCategory.forEach((li, idx, list) => {
     setWebtoonContents({ dayContentsArr, webtoonContentsArr });
 
     // day filter
-    setDayFilter(li, dayContentsMap);
+    setDayFilter({ categoryEl: li, dayContentsMap });
   });
 });
