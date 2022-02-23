@@ -1,4 +1,4 @@
-import todayData from '../data/webtoonData.js';
+import todayData from './webtoonData.js';
 import createDom from './createDOM.js';
 function makeTodayList(day) {
   let todayList = ''; 
