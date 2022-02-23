@@ -422,8 +422,20 @@ table {
   background-color: #ffd200;
 }
 
-.webtoon-slide__img .webtoon-slide__img--first {
+.webtoon-slide__img {
+  position: relative;
+}
+.webtoon-slide__img .webtoon-slide__img--item {
   display: block;
+}
+
+.webtoon-slide__number {
+  position: absolute;
+  right: 24px;
+  bottom: 57px;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.6;
 }
 
 .webtoon-slide__btn .webtoon-slide__btn--common {

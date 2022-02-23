@@ -54,9 +54,20 @@
 }
 
 .webtoon-slide__img {
-  .webtoon-slide__img--first {
+  position: relative;
+
+  .webtoon-slide__img--item {
     display: block;
   }
+}
+
+.webtoon-slide__number {
+  position: absolute;
+  right: 24px;
+  bottom: 57px;
+  font-size: 20px;
+  color: $white;
+  opacity: 0.6;
 }
 
 .webtoon-slide__btn {

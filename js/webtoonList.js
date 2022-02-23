@@ -38,36 +38,35 @@ function setWebtoonList() {
 }
 
 function toggleActiveWebtoonTab(e) {
+  if (e.target.tagName === this.tagName) return
   const container = document.querySelector('#container')
   const webtoonTabList = container.querySelectorAll('.serial__webtoons')
 
-  if (e.target.tagName !== this.tagName) {
-    const tabItem = e.target
-    // 1. 웹툰 목록을 전부 display: none 처리
-    webtoonTabList.forEach((el) => {
-      el.classList.add('display__none')
-    })
-    webtoonTabList.forEach((el) => {
-      // 2. 클릭한 요소에 data-day를 가져옴
-      // 3. 가져온 값에 맞는 웹툰 목록을 display: flex 처리
-      if (tabItem.getAttribute('data-day') === el.getAttribute('data-day'))
-        el.classList.replace('display__none', 'display__flex')
-    })
-  }
+  const tabItem = e.target
+  // 1. 웹툰 목록을 전부 display: none 처리
+  webtoonTabList.forEach((el) => {
+    el.classList.add('display__none')
+  })
+  webtoonTabList.forEach((el) => {
+    // 2. 클릭한 요소에 data-day를 가져옴
+    // 3. 가져온 값에 맞는 웹툰 목록을 display: flex 처리
+    if (tabItem.getAttribute('data-day') === el.getAttribute('data-day'))
+      el.classList.replace('display__none', 'display__flex')
+  })
 }
 
 function toggleActiveTab(e) {
   // 2. 현재 클릭한 메뉴
   const tabItem = e.target
-  if (e.target.tagName !== this.tagName) {
-    if (currentActiveTab !== tabItem) {
-      // 3. 현재 클릭한 메뉴에 focus 지정
-      tabItem.classList.add('serial__item--focus')
-      // 4. 전에 클릭한 메뉴 focus 삭제
-      currentActiveTab.classList.remove('serial__item--focus')
-      // 5. 현재 focus에 클릭한 메뉴로 초기화
-      currentActiveTab = tabItem
-    }
+  if (e.target.tagName === this.tagName) return
+
+  if (currentActiveTab !== tabItem) {
+    // 3. 현재 클릭한 메뉴에 focus 지정
+    tabItem.classList.add('serial__item--focus')
+    // 4. 전에 클릭한 메뉴 focus 삭제
+    currentActiveTab.classList.remove('serial__item--focus')
+    // 5. 현재 focus에 클릭한 메뉴로 초기화
+    currentActiveTab = tabItem
   }
 }
 
