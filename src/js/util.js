@@ -3,9 +3,8 @@ const DATA_URL = 'data/data.json';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);
 
-const activateTab = ({ target }, parentNode) => {
-  if (target.parentNode.tagName === 'LI') target = target.parentNode;
-  [...parentNode.children].forEach(child => {
+const activateTab = target => {
+  [...target.parentNode.children].forEach(child => {
     child.classList.toggle(CL.SELECTED, child === target);
   });
 };
@@ -29,7 +28,7 @@ const today = new Date()
 const CL = {
   SELECTED: 'selected',
   WHOLE: 'whole',
-  DAY_NAME: '.day__item',
+  DAY_ITEM: '.day__item',
 };
 
 const TITLE = {

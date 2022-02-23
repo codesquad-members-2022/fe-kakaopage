@@ -1,5 +1,6 @@
 import { $, activateTab, CL, data } from './util.js';
 import { render } from './render.js';
+import { cloneBanner, initSlider, slideBanner } from './slider.js';
 
 const $gnb = $('.gnb__list');
 
@@ -9,31 +10,23 @@ function addTabFeature() {
 
 function gnbHandler(e) {
   if (e.target.matches('.gnb__list')) return;
-  removeAlarm(e);
-  activateTab(e, $gnb);
-
-  let target = e.target;
-  if (target.tagName === 'A') target = e.target.parentNode;
-
-  changeTitleByGNB(target);
-
+  const target = e.target.closest('.gnb__item');
+  removeAlarm(target);
+  activateTab(target);
+  changeTitleByGNB(target.id);
   if (target.id !== 'webtoon') {
     render.otherPage(target.id);
     return;
   }
-
   render.webtoonPage(data);
   setEventHandlers();
 }
 
-function changeTitleByGNB(target) {
-  document.title = `${target.id} | kakaopage by Millie`;
+function changeTitleByGNB(targetId) {
+  document.title = `${targetId} | kakaopage by Millie`;
 }
 
-function removeAlarm({ target }) {
-  if (target.parentNode.classList.contains('gnb__item')) {
-    target = target.parentNode;
-  }
+function removeAlarm(target) {
   target.classList.remove('alarm');
 }
 
@@ -48,8 +41,9 @@ const handler = {
     if (!$days) return;
 
     $days.addEventListener('click', e => {
-      if (!e.target.matches(CL.DAY_NAME)) return;
-      activateTab(e, $days);
+      const target = e.target.closest('.day__item');
+      if (!target) return;
+      activateTab(target);
       filterWebtoonsByDay(e, data);
     });
   },
@@ -58,27 +52,40 @@ const handler = {
     const $snb = $('.snb__list');
 
     $snb.addEventListener('click', e => {
-      if (e.target.matches('.snb__list')) return;
-      activateTab(e, $snb);
-      const category = e.target.dataset.category;
+      const target = e.target.closest('.snb__item');
+      if (e.target !== target) return;
+      const category = target.dataset.category;
+      activateTab(target);
       render.contents(category);
       this.daybar();
       this.mainBannerBtn();
     });
   },
 
+  intervalId: null,
+
   mainBannerBtn() {
     const $mainBanner = $('.main-banner');
     const $mainBannerList = $('.main-banner__list');
-    $mainBanner.addEventListener('click', e => {
-      if (!e.target.matches('.main-banner__btn-img')) return;
+    const bannerCount = $mainBannerList.children.length;
+    cloneBanner($mainBannerList);
+    initSlider($mainBannerList, bannerCount);
 
-      if (e.target.parentNode.classList.contains('btn--prev')) {
-        // ing...
-        $mainBannerList.style.transform = `translateX(${0}px)`;
-      } else {
-        $mainBannerList.style.transform = `translateX(${-720}px)`;
+    let isClicked = false;
+    this.intervalId = setInterval(() => {
+      if (!isClicked) {
+        slideBanner($mainBannerList, 'next', bannerCount);
       }
+    }, 3000);
+
+    $mainBanner.addEventListener('click', e => {
+      const target = e.target.closest('.main-banner__btn');
+      if (!target) return;
+      isClicked = true;
+      target.classList.contains('btn--prev')
+        ? slideBanner($mainBannerList, 'prev', bannerCount)
+        : slideBanner($mainBannerList, 'next', bannerCount);
+      setTimeout(() => (isClicked = false), 3000);
     });
   },
 };
