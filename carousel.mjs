@@ -2,7 +2,7 @@ import { createImgTag } from "./util.mjs";
 import { imgs } from "./info.js";
 import { throttle } from "./throttle.mjs";
 
-/* carousel 개수, 이미지, 정보들 동기화 */
+/* carousel 동기화 */
 const initCarousel = (carouselInfo) => {
   const total = document.querySelector(".carousel__total").firstChild;
 
@@ -85,14 +85,16 @@ const addCarouselEvent = (leftClass, rightClass) => {
 
   item.addEventListener("transitionend", () => {
     if (x === 0) {
+      item.removeChild(item.lastElementChild);
       item.insertBefore(
-        item.lastElementChild.cloneNode(true),
+        item.lastElementChild.previousElementSibling.cloneNode(true),
         item.firstElementChild
       );
-      item.removeChild(item.lastElementChild);
     } else {
-      item.appendChild(item.firstElementChild.cloneNode(true));
       item.removeChild(item.firstElementChild);
+      item.appendChild(
+        item.firstElementChild.nextElementSibling.cloneNode(true)
+      );
     }
     x = -100;
     item.style.transition = "0s";
