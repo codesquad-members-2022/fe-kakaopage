@@ -8,7 +8,6 @@ const initPosition = 0;
 const time = 3000;
 
 let position = -slideWidth;
-let autoPlay;
 
 const makingClone = () => {
   const cloneSlide_first = slideImg[0].cloneNode(true);
@@ -53,12 +52,14 @@ const playEvent = (btnEvent) => {
   moveSlide(position, slideSpeed);
 };
 
-function timerInterval() {
+let autoPlay;
+
+const timerInterval = () => {
   return setInterval(() => {
     playEvent();
     isEnd();
   }, time);
-}
+};
 
 export const slideShow = (e) => {
   clearInterval(autoPlay);
