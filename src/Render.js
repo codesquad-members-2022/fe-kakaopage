@@ -1,6 +1,6 @@
 import Menu from "./data/Menu.json" assert { type: "json" };
 import * as HTMLCreator from "./HTMLCreator.js"
-import { setNavEvent } from "./EventController.js"
+import { setNavEvent } from "./NavEventController.js"
 
 const $body_main = document.querySelector('.custom');
 
