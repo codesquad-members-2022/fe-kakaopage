@@ -52,9 +52,9 @@ export function SNBHander(e) {
   $(`.${selected}`).classList.remove(selected);
   e.target.classList.add(selected);
 
-  if (e.target.innerText === "홈") {
-    renderWebtoon();
-    addEvent();
-    return;
-  }
+  // if (e.target.dataset.name === "홈") {
+  //   renderWebtoon();
+  //   addEvent();
+  //   return;
+  // }
 }
