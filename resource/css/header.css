@@ -75,6 +75,7 @@ gnb
 }
 .gnb__link {
     display: block;
+    height: 68px;
     padding-top: 10px;
     font-weight: var(--fw-M);
     font-size: var(--fs-L);
@@ -82,7 +83,7 @@ gnb
     text-align: center;
 }
 .gnb__link--active{
-    line-height: 55px;
+    /* line-height: 55px; */
     border-bottom: 3px solid var(--yellow);
 }
 .gnb__link.clock-icon {
