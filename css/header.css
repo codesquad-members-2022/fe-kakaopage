@@ -34,7 +34,7 @@ header
     right: 0;
     height: 130px;
     width: 100%;
-    background-color: white;
+    background-color: var(--main-white);
     z-index: 2;
 }
 
@@ -115,6 +115,17 @@ header
     color: var(--main-black);
     text-align: center;
     text-decoration: none;
+}
+
+.headNav__menu:nth-child(n+3):after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-gold);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 32px;
+    margin-left: 6px
 }
 
 .headNav__under {
