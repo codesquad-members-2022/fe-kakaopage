@@ -40,11 +40,6 @@
     margin: 0;
     height: 60px;
     width: 720px;
-<<<<<<< HEAD:css/component/article.css
-=======
-    background-color: red;
-
->>>>>>> 118ddf10b6a1812fc3b35c2cb9735f7c77a729bb:css/article.css
     border-bottom: 1px solid var(--main-color);
     /* 오류 발생 부분 */
 }
