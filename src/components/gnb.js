@@ -12,7 +12,7 @@ const getTemplate = () => {
     return `
         <ul class="gnb__container tab__container">
         ${gnbData.map(data => `
-            <li class="gnb__item center" data-tab=${data.dataTab}>
+            <li class="gnb__item center" data-gnb=${data.dataTab}>
                 <a href=${data.link}><img src=${data.src} alt=${data.alt} /></a>
             </li>`).join('')}
         </ul>
@@ -20,7 +20,7 @@ const getTemplate = () => {
 }
 
 const setDefault = () => {
-    const defaultClicked = document.querySelector(`.gnb__item[data-tab=${DEFAULT_PAGE}]`);
+    const defaultClicked = document.querySelector(`.gnb__item[data-gnb=${DEFAULT_PAGE}]`);
     defaultClicked.classList.add('gnb-tab__item--selected');
 }
 
