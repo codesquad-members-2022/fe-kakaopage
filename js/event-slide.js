@@ -1,9 +1,10 @@
 import { $ } from "./utils.js";
 const slides = $(".main-ad-banner__img-container");
 const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
-const slideWidth = 720;
+const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
 const slideSpeed = 0.2;
 const delay = slideSpeed * 1000;
+const initPosition = 0;
 
 let position = -slideWidth;
 
@@ -14,20 +15,18 @@ const makingClone = () => {
   slides.insertBefore(cloneSlide_last, slides.firstElementChild);
 };
 
-const initEvent = () => {
-  slides.classList.remove("slideshow-prev");
-  slides.classList.remove("slideshow-next");
-};
-
 const returnOriginSlide = () => {
-  if (position > 0) position = -slideWidth * (slideImg.length - 1);
+  if (position >= initPosition) position = -slideWidth * slideImg.length;
   else if (position < -slideWidth * slideImg.length) position = -slideWidth;
 };
 
 const isEnd = () => {
-  if (position < 0 && position > -slideWidth * slideImg.length) return;
+  if (position < initPosition && position > -slideWidth * slideImg.length)
+    return;
+
   returnOriginSlide();
-  const slideSpeed = 0;
+
+  const slideSpeed = initPosition;
   setTimeout(() => {
     moveSlide(position, slideSpeed);
   }, delay);
@@ -54,7 +53,6 @@ const playEvent = (btnEvent) => {
 
 export const slideShow = (e) => {
   const btnEvent = e.target.parentNode.dataset.event;
-  initEvent();
   playEvent(btnEvent);
   isEnd();
 };
