@@ -1,11 +1,8 @@
-import previewsArr from '../../json/preview.json' assert { type: 'json' };
 import createPreviewEl from './createPreviewEl.js';
 import drawSlideBtn from './drawSlideBtn.js';
 
 const timerFunc = () => {
-  const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
-  prevBtn.click();
   nextBtn.click();
 };
 

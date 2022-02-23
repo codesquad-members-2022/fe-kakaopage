@@ -1,6 +1,6 @@
 import webtoonContentsObj from '../json/webtoonContents.json' assert { type: 'json' };
 import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
-import previewsObj from '../json/preview.json' assert { type: 'json' };
+import previewsObj from '../json/previews.json' assert { type: 'json' };
 
 import setTagListEl from './tagList/setTagListEl.js';
 import setPreviews from './preview/setPreviews.js';
@@ -18,10 +18,17 @@ const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
 
-let curIdx = 2;
-
-const setCurIdx = (idx) => {
-  curIdx = idx;
+const curMainCategoryIdx = {
+  value: 2,
+  get() {
+    return this.value;
+  },
+  set(idx) {
+    this.value = idx;
+  },
+  is(idx) {
+    return this.value === idx;
+  },
 };
 
 const timer = {
@@ -55,11 +62,8 @@ const toggleHighlight = (prevTarget, curTarget) => {
 
 const initMainPage = () => {
   initMainCategoryDay();
-  const categoryEls = document.querySelectorAll(
-    '.page-main-category__container li'
-  );
-  const defaultIdx = curIdx;
-  const defaultCategoryEl = categoryEls[defaultIdx];
+  const defaultIdx = curMainCategoryIdx.get();
+  const defaultCategoryEl = pageMainCategory[defaultIdx];
   const defaultCategoryName = defaultCategoryEl.textContent;
   const today = days[defaultCategoryEl.dataset.curday];
   defaultCategoryEl.classList.add('color-black');
@@ -76,32 +80,32 @@ const initMainPage = () => {
 
 initMainPage();
 
-pageMainCategory.forEach((li, idx, list) => {
-  li.addEventListener('click', (event) => {
-    if (curIdx === idx) return;
-    const prevTarget = list[curIdx];
+pageMainCategory.forEach((categoryEl, idx, list) => {
+  categoryEl.addEventListener('click', (event) => {
+    if (curMainCategoryIdx.is(idx)) return;
+    const prevTarget = list[curMainCategoryIdx.get()];
     const curTarget = event.target;
-    const category = li.textContent;
-    let selectedDay = days[li.dataset.curday];
-    const dayContentsMap = dayContentsObj[category];
+    const categoryName = categoryEl.textContent;
+    let selectedDay = days[categoryEl.dataset.curday];
+    const previews = previewsObj[categoryName];
+    const dayContentsMap = dayContentsObj[categoryName];
     const dayContentsArr = dayContentsMap?.[selectedDay];
-    const webtoonContentsArr = webtoonContentsObj[category];
-    setCurIdx(idx);
+    const webtoonContentsArr = webtoonContentsObj[categoryName];
+    curMainCategoryIdx.set(idx);
 
     // highlight
     toggleHighlight(prevTarget, curTarget);
 
     // preview - 구현 후 함수 하나로 만들기
-    const previews = previewsObj[category];
     setPreviews(previews, timer);
 
     // tag list
-    setTagListEl(category);
+    setTagListEl(categoryName);
 
     // webtoon contents
     setWebtoonContents({ dayContentsArr, webtoonContentsArr });
 
     // day filter
-    setDayFilter({ categoryEl: li, dayContentsMap });
+    setDayFilter({ categoryEl, dayContentsMap });
   });
 });
