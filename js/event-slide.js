@@ -21,15 +21,19 @@ const changingOrder = (btnEvent) => {
   return btnEvent === "prev" ? order-- : order++;
 };
 
-const isEnd = () => {
-  if (order !== 0 && order !== 4) return;
-  const slideSpeed = 0;
+const returnOriginSlide = () => {
   if (order === 0) order = 3;
   else if (order === 4) order = 1;
   position = order * -slideWidth;
+};
+
+const isEnd = () => {
+  if (order !== 0 && order !== 4) return;
+  const slideSpeed = 0;
+  returnOriginSlide();
   setTimeout(() => {
     moveSlide(position, slideSpeed);
-  }, 0);
+  }, 201);
 };
 
 const moveSlide = (position, slideSpeed) => {
@@ -38,7 +42,7 @@ const moveSlide = (position, slideSpeed) => {
 };
 
 const setEvent = (btnEvent) => {
-  const slideSpeed = 0.3;
+  const slideSpeed = 0.2;
   position += slideWidth * (btnEvent === "prev" ? 1 : -1);
   slides.classList.add(`slideshow-${btnEvent}`);
   moveSlide(position, slideSpeed);
