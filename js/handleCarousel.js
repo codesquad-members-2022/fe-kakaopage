@@ -13,6 +13,7 @@ export const handleCarousel = () => {
     const lastChild = carouselList.lastElementChild;
 
     let curIndex = 1;
+    let throttingTimer;
 
     carouselList.appendChild(firstChild.cloneNode(true));
     carouselList.insertBefore(lastChild.cloneNode(true), carouselList.firstElementChild);
@@ -22,37 +23,47 @@ export const handleCarousel = () => {
     carouselTotalCount.innerHTML = carouselLen;
 
     rightArrow.addEventListener("click", () => {
-        if(curIndex <= carouselLen) {
-            carouselList.style.transition = '400ms';
-            carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
-        }
+        if(!throttingTimer) {
+            throttingTimer = setTimeout(() => {
+                throttingTimer = null;
+                if(curIndex <= carouselLen) {
+                    carouselList.style.transition = '400ms';
+                    carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
+                }
 
-        if(curIndex === carouselLen){
-            setTimeout(() => {
-                carouselList.style.transition = '0ms';
-                carouselList.style.transform = `translateX(-${carouselWidth}px)`;
+                if(curIndex === carouselLen){
+                    setTimeout(() => {
+                        carouselList.style.transition = '0ms';
+                        carouselList.style.transform = `translateX(-${carouselWidth}px)`;
+                    }, 400);
+                    curIndex = 1;
+                    carouselCurCount.innerHTML = curIndex;
+                    return;
+                }
+                curIndex += 1;
+                carouselCurCount.innerHTML = curIndex;
             }, 400);
-            curIndex = 1;
-            carouselCurCount.innerHTML = curIndex;
-            return;
         }
-        curIndex += 1;
-        carouselCurCount.innerHTML = curIndex;
     });
 
     leftArrow.addEventListener("click", () => {
-        if(curIndex >= 0) {
-            carouselList.style.transition = 'transform 0.4s ease-in-out';
-            carouselList.style.transform = `translateX(-${carouselWidth * (--curIndex)}px)`;
-        }
+        if(!throttingTimer) {
+            throttingTimer = setTimeout(() => {
+                throttingTimer = null;
+                if(curIndex >= 0) {
+                    carouselList.style.transition = 'transform 0.4s ease-in-out';
+                    carouselList.style.transform = `translateX(-${carouselWidth * (--curIndex)}px)`;
+                }
 
-        if(curIndex === 0) {
-            setTimeout(() => {
-                carouselList.style.transition = '0ms';
-                carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
+                if(curIndex === 0) {
+                    setTimeout(() => {
+                        carouselList.style.transition = '0ms';
+                        carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
+                    }, 400);
+                    curIndex = carouselLen;
+                }
+                carouselCurCount.innerHTML = curIndex;
             }, 400);
-            curIndex = carouselLen;
         }
-        carouselCurCount.innerHTML = curIndex;
     });
 }
