@@ -5,6 +5,6 @@ export function setSelectedSNB() {
   $(".days ul").firstElementChild.classList = "snb__selected";
 }
 
-export function render(el) {
-  $(".contents").innerHTML = el;
+export function render({ to, el }) {
+  $(to).innerHTML = el;
 }

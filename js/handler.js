@@ -16,28 +16,28 @@ export function GNBHandler(e) {
   parentClass.add(selected);
 
   if (e.target.dataset.name === "홈") {
-    render("홈");
+    render({ to: ".contents", el: "홈" });
     return;
   }
   if (e.target.dataset.name === "웹툰") {
-    render(createTabWebtoonHome());
+    render({ to: ".contents", el: createTabWebtoonHome() });
     addEvent();
     return;
   }
   if (e.target.dataset.name === "웹소설") {
-    render("웹소설");
+    render({ to: ".contents", el: "웹소설" });
     return;
   }
   if (e.target.dataset.name === "영화") {
-    render("영화");
+    render({ to: ".contents", el: "영화" });
     return;
   }
   if (e.target.dataset.name === "방송") {
-    render("방송");
+    render({ to: ".contents", el: "방송" });
     return;
   }
   if (e.target.dataset.name === "책") {
-    render("책");
+    render({ to: ".contents", el: "책" });
     return;
   }
 }

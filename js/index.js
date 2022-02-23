@@ -3,7 +3,7 @@ import { addEvent } from "./event.js";
 import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
 
 function init() {
-  render(createTabWebtoonHome());
+  render({ to: ".contents", el: createTabWebtoonHome() });
   setSelectedSNB();
   addEvent();
 }
