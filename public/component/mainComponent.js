@@ -6,7 +6,10 @@ const createMainNav = (data) => {
   nav.classList.add("main__nav__dow");
   nav.innerHTML = `
       <ul class="main__nav__dow--ul">
-      ${data.week.map((day) => `<li>${day}</li>`).join("")}
+      ${data.week.reduce(
+        (listHtml, day) => (listHtml += `<li>${day}</li>`),
+        ""
+      )}
       </ul>
   `;
 
@@ -24,7 +27,10 @@ const createMaincontainer = (toggleinfo, imgInfo) => {
     <div class="main--toggle--right">${toggleinfo.right}</div>
   </nav>
   <ul class="main__cartoonZone">
-    ${imgInfo.map((imgData) => createImgCard(imgData)).join("")}
+    ${imgInfo.reduce(
+      (imgHtml, imgData) => (imgHtml += createImgCard(imgData)),
+      ""
+    )}
   </ul>
 `;
 
@@ -57,7 +63,10 @@ const createImgCard = (data) => {
 const createlist = (data, className) => {
   const UL = createEl("ul");
   UL.classList.add(className);
-  UL.innerHTML = `${data.map((toggleStr) => `<li>${toggleStr}</li>`).join("")}`;
+  UL.innerHTML = `${data.reduce(
+    (listHtml, toggleData) => (listHtml += `<li>${toggleData}</li>`),
+    ""
+  )}`;
   return UL;
 };
 
