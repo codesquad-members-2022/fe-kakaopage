@@ -1,36 +1,50 @@
-const preCategoryMenu = document.querySelector(".main_category ul li:nth-child(2)")
-const mainCategoryMenu = document.querySelector(".main_category ul li:nth-child(3)");
-const weekend = document.querySelector(".underline ul li:nth-child(2)");
+import { webtoonData } from "./data.js";
+import { webtoonCard } from "./webtoon.js";
 
-const webtoonTitle = document.querySelector(".webtoon_title");
-const slideShow = document.querySelector(".slideshow_slide");
-const slideshowInfo = document.querySelector(".slideshow_info");
+const weekCategory = document.querySelector(".tab .main_category ul");
+const mainCategory = document.querySelector(".main_category ul");
 
-const underLine = document.querySelector(".underline");
-const allWeb = document.querySelector(".all_web")
-
-
-function webtoonContent(){
-    mainCategoryMenu.classList.add("sub_active");
-    preCategoryMenu.classList.remove("sub_active");
-
-    slideShow.style.backgroundImage ="url('img/extream.jpg')";
-    webtoonTitle.innerText="더 익스트림";
-    slideshowInfo.innerText = "외발소년의 스포츠 성장드라마";
-
-    allWeb.style.display = "none";
+function showMain(){
+    function mainContent(event){
+        if(event.target.tagName !=="LI")return;
+        else{
+            mainCategory.querySelector(".sub_active").classList.remove("sub_active");
+            event.target.classList.add("sub_active");
+        }
+    }
+    mainCategory.addEventListener("click",mainContent);
 }
 
-function originalContent(){
-    preCategoryMenu.classList.add("sub_active");
-    mainCategoryMenu.classList.remove("sub_active");
-
-    webtoonTitle.innerText="로드 오브 머니";
-    slideShow.style.backgroundImage ="url('img/roadofmoney.jpg')";
-    slideshowInfo.innerText = "세상에 없던 꼴통 재벌이 되다.";
-
-    allWeb.style.display = "flex";
+function showDayWebtoon(){
+    function getDay(event){
+        if(event.target.tagName !== "LI") return;
+        else{
+            weekCategory.querySelector(".weekend_check").classList.remove("weekend_check");
+            weekCategory.querySelector(".sub_active").classList.remove("sub_active");
+            event.target.classList.add("weekend_check");
+            event.target.classList.add("sub_active"); 
+            showWebtoon(event);
+        }
+    }
+    weekCategory.addEventListener("click",getDay);
 }
 
-preCategoryMenu.addEventListener("click",originalContent);
-mainCategoryMenu.addEventListener("click",webtoonContent);
+function showWebtoon(event){
+    const dayWebToonData = webtoonData.filter(function(webtoon){
+        return event.target.dataset.value === webtoon.day
+    });
+    // document.querySelector('.webtoon_list ul').innerHTML = "";
+    makeHtml(dayWebToonData);
+}
+
+function makeHtml(dayWebToonData){
+    const webtoonCardTemplate = dayWebToonData.map(e => webtoonCard(e)).reduce((acc,cur)=>acc+cur,"");
+    // const webtoonCardTemplate = dayWebToonData.reduce((acc,cur) => acc + webtoonCard(cur),"");
+    document.querySelector('.webtoon_list ul').innerHTML = webtoonCardTemplate;
+}
+
+function init(){
+    showMain();
+    showDayWebtoon()
+}
+init();
