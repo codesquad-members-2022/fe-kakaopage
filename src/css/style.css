@@ -4,16 +4,16 @@
 @import "main.css";
 
 body {
-    background-color: #eee;
+  background-color: #eee;
 }
 .container {
-    width: 720px;
-    margin: 0 auto;
+  width: 720px;
+  margin: 0 auto;
 }
 .app-download {
-    height: 70px;
-    margin-top: 11px;
+  height: 70px;
+  margin-top: 11px;
 }
 .app-download img {
-    height: auto;
+  height: auto;
 }

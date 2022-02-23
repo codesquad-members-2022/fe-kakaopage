@@ -1,0 +1,52 @@
+[
+  {
+    "thumbnail": {
+      "img": "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
+      "caption": "1위"
+    },
+    "description": {
+      "title": "카카오짱",
+      "readers": "100만명"
+    }
+  },
+  {
+    "thumbnail": {
+      "img": "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
+      "caption": "2위"
+    },
+    "description": {
+      "title": "카카오짱",
+      "readers": "100만명"
+    }
+  },
+  {
+    "thumbnail": {
+      "img": "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
+      "caption": "3위"
+    },
+    "description": {
+      "title": "카카오짱",
+      "readers": "100만명"
+    }
+  },
+  {
+    "thumbnail": {
+      "img": "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
+      "caption": "4위"
+    },
+    "description": {
+      "title": "카카오짱",
+      "readers": "100만명"
+    }
+  },
+  {
+    "thumbnail": {
+      "img": "https://item.kakaocdn.net/do/4be9625c0426fb7d21c0bff1e8af2e1df43ad912ad8dd55b04db6a64cddaf76d",
+      "caption": "5위"
+    },
+    "description": {
+      "title": "카카오짱",
+      "readers": "100만명"
+    }
+  }
+]
