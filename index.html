@@ -51,7 +51,7 @@
         </nav>
       </div>
     </header>
-    <main class="main-content">
+    <main class="main">
       <nav class="nav-box">
         <ul class="nav-box__list">
           <li class="nav-box__text">홈</li>
@@ -74,7 +74,7 @@
         </div>
         <div class="image-box__page-info">1 / 3</div>
         <div class="image-box-container__box translateX-100">
-          <div class="image-box main-content__image-box">
+          <div class="image-box main__image-box">
             <img
               class="image-box__upload_webtoon"
               src="./image/upload_webtoon.jpg"
@@ -97,7 +97,7 @@
               </div>
             </div>
           </div>
-          <div class="image-box main-content__image-box">
+          <div class="image-box main__image-box">
             <img
               class="image-box__upload_webtoon"
               src="https://dn-img-page.kakao.com/download/resource?kid=bbIdoP/hzhOi9qjVl/5FphIqKutQWsKju113rBhK"
@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <div class="image-box main-content__image-box">
+          <div class="image-box main__image-box">
             <img
               class="image-box__upload_webtoon"
               src="https://dn-img-page.kakao.com/download/resource?kid=vY9EO/hzhOm4DsAe/ooN3xLPLUZPU6Uid2Matlk"
@@ -143,7 +143,7 @@
               </div>
             </div>
           </div>
-          <div class="image-box main-content__image-box">
+          <div class="image-box main__image-box">
             <img
               class="image-box__upload_webtoon"
               src="./image/upload_webtoon.jpg"
@@ -166,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div class="image-box main-content__image-box">
+          <div class="image-box main__image-box">
             <img
               class="image-box__upload_webtoon"
               src="https://dn-img-page.kakao.com/download/resource?kid=bbIdoP/hzhOi9qjVl/5FphIqKutQWsKju113rBhK"
@@ -191,13 +191,13 @@
           </div>
         </div>
       </div>
-      <div class="main-content__content">
-        <nav class="nav-box main-content__content__nav">
+      <div class="main-content">
+        <nav class="nav-box main-content__nav">
           <ul class="nav-box__list weekly-webtoon-ul">
             <li class="nav-box__text weekly-nav">월</li>
             <li class="nav-box__text weekly-nav">화</li>
             <li class="nav-box__text weekly-nav selected-text">수</li>
-            <div class="circle main-content__content__nav__circile-wed"></div>
+            <div class="circle main-content__nav__circile-wed"></div>
             <li class="nav-box__text weekly-nav">목</li>
             <li class="nav-box__text weekly-nav">금</li>
             <li class="nav-box__text weekly-nav">토</li>
@@ -205,24 +205,20 @@
           </ul>
         </nav>
         <div class="nav-box">
-          <div class="nav-box__list main-content__content__menu">
-            <div class="main-content__content__menu__left">
-              <span class="main-content__content__menu__text selected-text"
-                >전체</span
-              >
-              <span class="main-content__content__menu__text">|</span>
-              <span class="main-content__content__menu__text">웹툰</span>
-              <span class="main-content__content__menu__text">|</span>
-              <div class="main-content__content__menu__webtoonbox">
+          <div class="nav-box__list main-content__menu">
+            <div class="main-content__menu__left">
+              <span class="main-content__menu__text selected-text">전체</span>
+              <span class="main-content__menu__text">|</span>
+              <span class="main-content__menu__text">웹툰</span>
+              <span class="main-content__menu__text">|</span>
+              <div class="main-content__menu__webtoonbox">
                 <img src="./image/bmbadge_waitfree.svg" alt="" />
-                <span class="main-content__content__menu__text">웹툰</span>
+                <span class="main-content__menu__text">웹툰</span>
               </div>
             </div>
-            <div class="main-content__content__menu__right">
-              <div class="main-content__content__menu__sortingbox">
-                <span class="main-content__content__menu__text">
-                  전체 (169)</span
-                >
+            <div class="main-content__menu__right">
+              <div class="main-content__menu__sortingbox">
+                <span class="main-content__menu__text"> 전체 (169)</span>
                 <img
                   src="./image/ico_sorting_arrow.svg"
                   alt="ico_sorting_arrow"
@@ -231,7 +227,7 @@
             </div>
           </div>
         </div>
-        <div class="main-content__content__main">
+        <div class="main-content__main">
           <div class="image-card">
             <img class="image-card__img" src="./image/manhwa_one.png" alt="" />
             <div class="image-card__area"></div>
@@ -493,7 +489,7 @@
         </div>
       </div>
       <img
-        class="main-content__advertise"
+        class="main__advertise"
         src="./image/kakaopage_download_link.png"
         alt=""
       />
@@ -513,7 +509,7 @@
         <div>저작권 OK</div>
       </div>
     </footer>
-    <script src="image-box-handler.js"></script>
+    <script type="module" src="image-box-handler.js"></script>
     <script type="module" src="handler.js"></script>
   </body>
 </html>
