@@ -1,4 +1,4 @@
-import { $, addImg, addTag, setProperty } from "./dom-lib.js";
+import { $, addImg, addTag, setProperty, data } from "./dom-lib.js";
 
 class Main {
   constructor() {
@@ -15,13 +15,13 @@ class Main {
 
   eventHandler(e) {
     console.log("target:>>", e.target);
-    console.log("this :>> ", this);
     const action = e.target.dataset.action;
     if (action) this[action]();
+    // <div data-action="fire"> => fire()
   }
 
   home() {
-    console.log("안녕");
+    console.log("홈");
   }
 
   setJumbotron() {

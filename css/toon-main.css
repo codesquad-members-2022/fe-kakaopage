@@ -216,12 +216,12 @@
   cursor: pointer;
 }
 
-.toon-daytop ul {
+.ul-day {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
-.toon-daytop li {
+.ul-day li {
   width: 100%;
   text-align: center;
   padding-top: 15px;
@@ -241,6 +241,7 @@
 .toon-daytop_frame {
   width: 120.6px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .toon-daytop_frame_box {

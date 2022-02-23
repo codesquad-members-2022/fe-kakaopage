@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <link
       rel="shortcut icon"
       href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611"
       type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"
     />
     <meta charset="UTF-8" />
     <title>홈 - 웹툰 | 카카오페이지</title>
@@ -29,7 +33,7 @@
           <button class="kakaopage-menu2">
             <div class="menu-stage"></div>
             <div class="menu-cash">캐시충전</div>
-            <div class="menu-login">로그인</div>
+            <div class="menu-login" data-action="login">로그인</div>
           </button>
           <div class="menu-stage-tooltip"></div>
         </div>
@@ -48,7 +52,7 @@
 
     <div class="toon-category">
       <ul>
-        <li data-set-action="home"><a>홈</a></li>
+        <li><a data-action="home">홈</a></li>
         <li><a>요일연재</a></li>
         <li><a>웹툰</a></li>
         <li><a>소년</a></li>
@@ -114,7 +118,7 @@
           <div class="toon-daytop_title__see-more">더보기 ></div>
         </div>
 
-        <ul>
+        <ul class="ul-day">
           <li>월</li>
           <li>화</li>
           <li>수</li>
