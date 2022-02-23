@@ -1,7 +1,7 @@
-import { modayWebtoonContents } from "./data/contents.js";
+import { mondayWebtoonContents } from "./data/contents.js";
 
 const makeToonTemplate = (imageUrl, star, title, read) => {
-  const toonTemplate = `<div>
+  return `<div>
     <div>
       <div class="toon__box">
         <img class="toon" src=${imageUrl} alt="toon"/>
@@ -16,11 +16,9 @@ const makeToonTemplate = (imageUrl, star, title, read) => {
       <span>${read}</span>
     </div>
   </div>`;
-
-  return toonTemplate;
 };
 
-const createdToonTemplate = modayWebtoonContents.map(
+const createdToonTemplate = mondayWebtoonContents.map(
   ({ imageUrl, star, title, read }) =>
     makeToonTemplate(imageUrl, star, title, read)
 );
