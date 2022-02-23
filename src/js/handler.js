@@ -1,5 +1,12 @@
 import { renderer } from './view.js';
-import { webtoonData } from '../data/data.js';
+import { loader } from './loader.js';
+import {
+  DATA_WEBTOON,
+  DATA_WEBNOVEL,
+  DATA_MOVIE,
+  DATA_BROADCAST,
+  DATA_BOOK,
+} from '../data/data.js';
 
 const addHandlerOnNav = (nav) => {
   const navEl = document.querySelector(`.${nav}`);
@@ -10,24 +17,22 @@ const handleNav = (event) => {
   const navtype = event.target.parentNode.dataset.navtype;
   const category = event.target.dataset.category;
 
-  if (!navtype || !category) return;
+  if (!category) return;
 
   if (isAlreadyClicked(event.target)) {
     window.scrollTo(0, 0);
     return;
   }
 
-  loadContent(navtype, category);
+  if (navtype === 'gnb') loadContentFromGnb(category);
+  if (navtype === 'snb') loadContentFromSnb(category);
 };
 
 const isAlreadyClicked = (eventTarget) => eventTarget.className.includes('--active');
 
-const loadContent = (navtype, category) => {
-  changeNavStyle(navtype, category);
-  loadGnbTabContents(category);
-};
+const updateDocumentTitle = (title) => (document.title = `${title} | 카카오페이지`);
 
-const changeNavStyle = (navtype, category) => {
+const updateNavStyle = (navtype, category) => {
   const classActive = `${navtype}__item--active`;
   const currentTab = document.querySelector(`.${classActive}`);
   const clickedTab = document.querySelector(`.${navtype}__item[data-category="${category}"]`);
@@ -36,129 +41,115 @@ const changeNavStyle = (navtype, category) => {
   clickedTab.classList.add(classActive);
 };
 
-const loadGnbTabContents = (tabName) => {
+const loadContentFromGnb = (category) => {
   const mainEl = document.querySelector('.main');
   mainEl.innerHTML = '';
-  document.title = `${tabName} | 카카오페이지`;
 
-  if (!(tabName === '웹툰')) {
-    mainEl.innerHTML = `
-    <div style="text-align:center;padding:80px 0;font-size:1.25rem">
-      ${tabName} 탭은 준비 중입니다. <strong>웹툰</strong> 탭을 이용해주세요.
-    </div>
-    `;
+  updateDocumentTitle(category);
+  updateNavStyle('gnb', category);
+
+  if (category === '홈') {
+    mainEl.innerHTML = `<p style="text-align:center;padding:100px 0;">홈 탭은 준비 중입니다.</p>`;
     return;
   }
 
-  loadWebToon('0');
+  loadContent(category, '0');
+  // 0은 서브카테고리의 '홈'이다. 예) 웹툰탭의 홈, 웹소설탭의 홈
 };
 
-const loadWebToon = (category) => {
-  renderer.snb(webtoonData.category);
+const loadContent = (globalCategory, subCategory) => {
+  const DATA = getData(globalCategory);
+
+  renderer.snb(DATA.category);
   renderer.categoryContentWrap();
-  addHandlerOnSnb();
-  toggleSnbTabStyle(category);
-  loadSnbTabContents(category);
+
+  addHandlerOnNav('snb');
+  loadContentFromSnb(subCategory);
 };
 
-/* Snb 관련 */
-const addHandlerOnSnb = () => {
-  const snbEl = document.querySelector('.snb');
-  snbEl.addEventListener('click', HandleSnb);
+const getData = (globalCategory) => {
+  if (globalCategory === '웹툰') return DATA_WEBTOON;
+  if (globalCategory === '웹소설') return DATA_WEBNOVEL;
+  if (globalCategory === '영화') return DATA_MOVIE;
+  if (globalCategory === '방송') return DATA_BROADCAST;
+  if (globalCategory === '책') return DATA_BOOK;
 };
 
-const HandleSnb = (event) => {
-  const category = event.target.dataset.subcategory;
-  if (!category) return;
-
-  const currCategory = document.querySelector('.snb__item--active').dataset.subcategory;
-  if (currCategory === category) return;
-
-  toggleSnbTabStyle(category);
-  loadSnbTabContents(category);
-};
-
-const toggleSnbTabStyle = (category) => {
-  const currTab = document.querySelector('.snb__item--active');
-  if (currTab) currTab.classList.remove('snb__item--active');
-
-  const newTab = document.querySelector(`.snb__item[data-subcategory="${category}"]`);
-  newTab.classList.add('snb__item--active');
-};
-
-const loadSnbTabContents = (category) => {
+const loadContentFromSnb = (subCategory) => {
   const categoryContentEl = document.querySelector('.category-content');
   categoryContentEl.innerHTML = '';
 
-  const categoryData = webtoonData[category];
-  renderer.mainBanner(categoryData.mainBanner);
+  updateNavStyle('snb', subCategory);
 
-  switch (category) {
-    case '0':
-      loadWebtoonHome(categoryData);
-      break;
-    case '1':
-      loadWebtoonDailySeries(categoryData);
-      break;
-    case '2':
-      loadWebtoonBoy(categoryData);
-      break;
-    case '3':
-      loadWebtoonDrama(categoryData);
-      break;
-    case '4':
-      loadWebtoonRomance(categoryData);
-      break;
-    case '5':
-      loadWebtoonRomanceFantasy(categoryData);
-      break;
-    case '6':
-      loadWebtoonAction(categoryData);
-      break;
-    case '7':
-      loadWebtoonBl(categoryData);
-      break;
-  }
+  const gnbLabel = document.querySelector('.gnb__item--active').dataset.category;
+  if (gnbLabel === '웹툰') loadWebtoon(subCategory);
+  if (gnbLabel === '웹소설') loadWebnovel(subCategory);
+  if (gnbLabel === '영화') loadMovie(subCategory);
+  if (gnbLabel === '방송') loadBroadcast(subCategory);
+  if (gnbLabel === '책') loadBook(subCategory);
 };
 
-const loadWebtoonHome = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
-  renderer.promotionBanner(categoryData.promotionBanner);
-  renderer.sectionBasic('기대신작 TOP');
-  renderer.sectionBasic('로맨스 TOP');
-  renderer.sectionBasic('로판 TOP');
-  renderer.sectionBasic('드라마 TOP');
-  renderer.sectionBasic('BL TOP');
-  renderer.sectionBasic('소년 TOP');
-  renderer.sectionBasic('액션무협 TOP');
-  renderer.sectionBasic('일간 랭킹 TOP');
-  renderer.sectionBasic('추천 이벤트 TOP');
+const loadWebtoon = (subCategory) => {
+  const DATA = DATA_WEBTOON[subCategory];
+  updateDocumentTitle(`${DATA_WEBTOON.category[subCategory]} - 웹툰`);
+
+  if (subCategory === '0') loader.webtoonHome(DATA);
+  if (subCategory === '1') loader.webtoonWeeky(DATA);
+  if (subCategory === '2') loader.webtoonBoy(DATA);
+  if (subCategory === '3') loader.webtoonDrama(DATA);
+  if (subCategory === '4') loader.webtoonRomance(DATA);
+  if (subCategory === '5') loader.webtoonRomanceFantasy(DATA);
+  if (subCategory === '6') loader.webtoonAction(DATA);
+  if (subCategory === '7') loader.webtoonBl(DATA);
 };
 
-const loadWebtoonDailySeries = (categoryData) => {};
+const loadWebnovel = (subCategory) => {
+  const DATA = DATA_WEBNOVEL[subCategory];
+  updateDocumentTitle(`${DATA_WEBNOVEL.category[subCategory]} - 웹소설`);
 
-const loadWebtoonBoy = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
+  if (subCategory === '0') loader.webnovelHome(DATA);
+  if (subCategory === '1') loader.webnovelWeeky(DATA);
+  if (subCategory === '2') loader.webnovelFantasy(DATA);
+  if (subCategory === '3') loader.webnovelRomance(DATA);
+  if (subCategory === '4') loader.webnovelRomanceFantasy(DATA);
+  if (subCategory === '5') loader.webnovelWuxia(DATA);
+  if (subCategory === '6') loader.webnovelFantasyDrama(DATA);
+  if (subCategory === '7') loader.webnovelBL(DATA);
 };
 
-const loadWebtoonDrama = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
+const loadMovie = (subCategory) => {
+  const DATA = DATA_MOVIE[subCategory];
+  updateDocumentTitle(`${DATA_MOVIE.category[subCategory]} - 영화`);
+
+  if (subCategory === '0') loader.movieHome(DATA);
+  if (subCategory === '1') loader.movieRanking(DATA);
+  if (subCategory === '2') loader.movieAction(DATA);
+  if (subCategory === '3') loader.movieAnimation(DATA);
+  if (subCategory === '4') loader.movieAll(DATA);
 };
 
-const loadWebtoonRomance = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
+const loadBroadcast = (subCategory) => {
+  const DATA = DATA_BROADCAST[subCategory];
+  updateDocumentTitle(`${DATA_BROADCAST.category[subCategory]} - 방송`);
+
+  if (subCategory === '0') loader.broadcastHome(DATA);
+  if (subCategory === '1') loader.broadcastVarietyshow(DATA);
+  if (subCategory === '2') loader.broadcastDrama(DATA);
+  if (subCategory === '3') loader.broadcastAnimation(DATA);
+  if (subCategory === '4') loader.broadcastForeign(DATA);
+  if (subCategory === '5') loader.broadcastAll(DATA);
 };
 
-const loadWebtoonRomanceFantasy = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
+const loadBook = (subCategory) => {
+  const DATA = DATA_BOOK[subCategory];
+  updateDocumentTitle(`${DATA_BOOK.category[subCategory]} - 책`);
+
+  if (subCategory === '0') loader.bookHome(DATA);
+  if (subCategory === '1') loader.bookSeries(DATA);
+  if (subCategory === '2') loader.bookBestseller(DATA);
+  if (subCategory === '3') loader.bookRanking(DATA);
+  if (subCategory === '4') loader.bookThriller(DATA);
+  if (subCategory === '6') loader.bookSelfimprovement(DATA);
 };
 
-const loadWebtoonAction = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
-};
-
-const loadWebtoonBl = (categoryData) => {
-  renderer.gridMenu(categoryData.gridMenu);
-};
-
-export { addHandlerOnNav, loadContent };
+export { addHandlerOnNav, loadContentFromGnb };

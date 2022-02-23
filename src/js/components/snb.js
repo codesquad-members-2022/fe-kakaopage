@@ -2,7 +2,7 @@ const createSnb = (subCategorys) => {
   let items = '';
 
   subCategorys.forEach((subCategory, index) => {
-    items += `<li data-subcategory="${index}" class="snb__item">${subCategory}</li>`;
+    items += `<li data-category="${index}" class="snb__item">${subCategory}</li>`;
   });
 
   return `
