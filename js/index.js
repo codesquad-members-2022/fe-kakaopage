@@ -1,8 +1,9 @@
-import { renderWebtoon, setSelectedSNB } from "./render.js";
+import { render, setSelectedSNB } from "./render.js";
 import { addEvent } from "./event.js";
+import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
 
 function init() {
-  renderWebtoon();
+  render(createTabWebtoonHome());
   setSelectedSNB();
   addEvent();
 }
