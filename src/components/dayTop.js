@@ -1,5 +1,5 @@
-import { getSectionTop } from '../componets/sectionTop.js';
-import { getGradeListTemp } from '../componets/gradeList.js';
+import { getSectionTop } from '../components/sectionTop.js';
+import { getGradeListTemp } from '../components/gradeList.js';
 
 const getDayTopContent = (data, dayIdx) => {
     const rankRowData = data['rankRow'][dayIdx];

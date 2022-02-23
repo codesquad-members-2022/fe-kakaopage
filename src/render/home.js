@@ -1,6 +1,6 @@
-import { getMainBannersTemp } from '../componets/mainBanners.js';
-import { getSubCategoriesTemp } from '../componets/subCategorise.js';
-import { getEventBannersTemp } from '../componets/eventBanner.js';
+import { getMainBannersTemp } from '../components/mainBanners.js';
+import { getSubCategoriesTemp } from '../components/subCategorise.js';
+import { getEventBannersTemp } from '../components/eventBanner.js';
 
 const getHomePage = (props, today) => {
     return (

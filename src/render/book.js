@@ -1,6 +1,6 @@
-import { getCategoriesTemp } from '../componets/categorise.js';
-import { getMainBannersTemp } from '../componets/mainBanners.js';
-import { getSubCategoriesTemp } from '../componets/subCategorise.js';
+import { getCategoriesTemp } from '../components/categorise.js';
+import { getMainBannersTemp } from '../components/mainBanners.js';
+import { getSubCategoriesTemp } from '../components/subCategorise.js';
 
 const getBookPage = (props) => {
     return (

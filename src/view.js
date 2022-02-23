@@ -4,7 +4,7 @@ import { getWebFictionPage } from './render/webFiction.js';
 import { getMoviePage } from './render/movie.js';
 import { getTVPage } from './render/tv.js';
 import { getBookPage } from './render/book.js';
-import { getDayTopContent } from './componets/dayTop.js';
+import { getDayTopContent } from './components/dayTop.js';
 
 const getPageTemplete = (INITIAL_PAGE, data, today) => {
     const pageTemplete = {
