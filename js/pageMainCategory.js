@@ -9,7 +9,7 @@ import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 
 import setDayFilter from './dayFilter/setDayFilter.js';
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
-
+import drawSlideBtn from './slide/drawSlideBtn.js';
 console.dir(webtoonContentsObj);
 console.dir(dayContentsObj);
 console.dir(previewsObj);
@@ -76,6 +76,7 @@ const initMainPage = () => {
   setTagListEl(defaultCategoryName);
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
   setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
+  drawSlideBtn();
 };
 
 initMainPage();

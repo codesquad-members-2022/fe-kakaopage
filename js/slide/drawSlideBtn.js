@@ -14,12 +14,12 @@ const drawSlideBtn = () => {
   previewContainerEl.appendChild(prevBtn);
   previewContainerEl.appendChild(nextBtn);
 
-  prevBtn.addEventListener('click', () => {
-    console.log('이전버튼눌림');
-  });
-  nextBtn.addEventListener('click', () => {
-    console.log('다음버튼눌림');
-  });
+  // prevBtn.addEventListener('click', () => {
+  //   console.log('이전버튼눌림');
+  // });
+  // nextBtn.addEventListener('click', () => {
+  //   console.log('다음버튼눌림');
+  // });
 };
 
 export default drawSlideBtn;
