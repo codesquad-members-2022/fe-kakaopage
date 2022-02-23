@@ -1,21 +1,27 @@
 // Get the element with id="defaultOpen" and click on it
 // const landingPage = document.getElementById("defaultOpen").click();
 
+// const fs = require('node:fs');
+// const sample = JSON.parse(fs.readFileSync('/sample.json'));
 
-console.log("hello world");
-const mainNodeList = document.querySelectorAll(".main-li");
-mainNodeList.forEach(test);
+const days = {
+  "Mon":"Action",
+  "Tue":"Drama",
+  "Wed":"Webtoon",
+  "Thu":"Romance",
+  "Fri":"Fantasy"
+}
 
+console.log('hello world');
 
-function openPage() {
-  const mainContents = document.getElementsByClassName("main-contents");
-  const contentDiv = document.createElement('div');
-  const ttx = document.createTextNode('wow!');
-  
-  contentDiv.appendChild(ttx);
-  mainContents.appendChild(contentDiv);
+function populateMain(obj) {
+  const main = document.querySelector('main');
+  const myDiv = document.createElement('div');
+  myDiv.textContent = obj["Mon"];
+  main.appendChild(myDiv);
 
 }
+populateMain(days);
 
 function test() {
   console.log("test sucess!");

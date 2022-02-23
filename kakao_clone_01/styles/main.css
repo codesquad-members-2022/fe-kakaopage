@@ -1,0 +1,45 @@
+:root {
+  --hover-yellow: rgb(250, 252, 233);
+  --border-bottom-color: #ffd200;
+}
+nav {
+  display: block;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-ul {
+  background-color: var(--white);
+  width: 720px;
+  height: 60px;
+  box-sizing: border-box;
+  visibility: visible;
+  padding: 0px 2% ;
+  margin: 0px auto;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+/* Style tab links */
+.main-li {
+  list-style-type: none;
+  background-color: var(--white);
+  color: var(--font-dark);
+  float: left;
+  border: 1px black;
+
+  outline: none;
+  cursor: pointer;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.main-contents {
+  width: 720px;
+  margin: 11px auto 0px;
+}
+.sample {
+  background-color: blue;
+}

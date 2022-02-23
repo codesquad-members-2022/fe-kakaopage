@@ -1,0 +1,33 @@
+/* @import "main.css";
+@import "header.css";
+@import "footer.css"; */
+
+:root {
+  --yellow: #ffec42;
+  --white: #ffffff;
+  --font-dark: rgb(0, 0, 0);
+  --hover-yellow: #fbffd5;
+}
+* {
+  box-sizing: border-box;
+  font-family: NotoSans;
+  line-height: 1.4;
+}
+div {
+  background-color: black;
+}
+/* Set height of body and the document to 100% */
+body, html {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+.full-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
