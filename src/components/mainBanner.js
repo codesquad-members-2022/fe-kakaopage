@@ -3,7 +3,15 @@ import { START_SLIDE_PAGE } from "../constant.js";
 import { getBannerTemplate, getBannerContentTemplate} from "./banner.js";
 import { getSlideBtnTemplate, getpageNumTemplate } from "./slide.js";
 
-export const getMainBannerTemplate = (currGenre) => {
+export const renderMainBanner = (genre) => {
+    const mainBanner = document.createElement('div');
+    mainBanner.classList.add('main-banner', 'slides')
+    mainBanner.innerHTML = getMainBannerTemplate(genre);
+    document.querySelector('.tab-contents').appendChild(mainBanner);
+    setMainBannerSlide(genre);
+}
+
+const getMainBannerTemplate = (currGenre) => {
     const bannerData = mainBaneerData[currGenre];
     const bannerTemplate = getBannerTemplate('main-banner', bannerData[START_SLIDE_PAGE - 1]);
     const slideBtnTemplate = getSlideBtnTemplate();
@@ -11,7 +19,7 @@ export const getMainBannerTemplate = (currGenre) => {
     return bannerTemplate + slideBtnTemplate + pageNumTemplate;
 }
 
-export const setMainBannerSlide = (currGenre) => {
+const setMainBannerSlide = (currGenre) => {
     const bannerData = mainBaneerData[currGenre];
     const container = document.querySelector('.main-banner__contents');
     const currPage = container.querySelector('li');
