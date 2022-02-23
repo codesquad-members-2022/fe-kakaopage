@@ -6,6 +6,5 @@ const handleMain = (req, res) => {
 };
 
 mainRouter.get("/", handleMain);
-console.log("hi");
 
 export default mainRouter;
