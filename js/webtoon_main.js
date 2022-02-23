@@ -2,7 +2,7 @@
 import { select, addClass, removeClass } from "./util.js";
 import { initWebtoonDaily } from "./webtoon_daily.js";
 import { createContents, createCategory } from "./webtoon_contents.js";
-import { createRecommend } from "./webtoon_genre.js";
+import { createRecommend } from "./webtoon_recommend.js";
 
 function createMainNav() {
     const $mainNav = document.createElement('nav')

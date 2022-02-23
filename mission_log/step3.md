@@ -1,9 +1,6 @@
 
 ### 탭 UI 동작
 
-#### demo
-- [kakaopage](https://bangdler.github.io/fe-kakaopage/)
-
 #### 요구사항    
 - 탭을 누르면 하위 콘텐츠가 변경되어 노출된다
 - 탭 선택 시, 화면 새로고침이 일어나지 않는다.
