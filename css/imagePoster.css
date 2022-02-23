@@ -1,22 +1,92 @@
-.image-poster__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 12px;
+.image-poster-wrapper {
+    cursor: pointer;
 }
 
-.image-poster__img {
+.image-poster__small,
+.image-poster__mid,
+.image-poster__large {
+    margin-bottom: 20px;
+}
+
+.image-poster__small {
+    margin-right: 20px;
     width: 120px;
-    height: 120px;
-    background-image: url("../images/sample_content_img.png");
+}
+
+.image-poster__mid {
+    width: 140px;
+}
+
+.image-poster__large {
+    margin-right: 20px;
+    width: 155px;
+}
+
+.image-poster__small-item,
+.image-poster__mid-item,
+.image-poster__large-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-poster__small_img,
+.image-poster__mid_img,
+.image-poster__large_img {
     background-size: cover;
     background-position: center center;
-    margin-bottom: 15px;
     border-radius: 6px;
+    vertical-align: top;
+}
+
+.image-poster__small_img {
+    width: 120px;
+    height: 120px;
+}
+
+.image-poster__mid_img {
+    width: 140px;
+    height: 96px;
+}
+
+.image-poster__large_img {
+    width: 155px;
+    height: 200px;
+}
+
+.image-poster_status {
+    height: 26px;
+    position: absolute;
+    border-top-left-radius: 8px;
+    content: url("https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a");
+}
+
+.item__inner {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background-color: var(--color-dark-gray);
+}
+
+.item__inner .item__inner_rank {
+    display: inline-block;
+    margin: 3px 0 0 4px;
+    color: var(--color-yellow);
+}
+
+.item__inner_wait {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+}
+
+.item__inner_star {
+    content: url("https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac");
 }
 
 .image-poster__title {
-    width: 155px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -24,7 +94,30 @@
     color: var(--color-gray);
 }
 
-.image-poster__subscription {
+.image-poster__detail_subscription {
+    height: 11px;
     font-size: var(--font-14);
     color: var(--color-pale-gray);
+}
+
+.image-poster__detail_separator {
+    width: 1px;
+    height: 10px;
+    margin: 1px 5px 0 5px;
+    background-color: var(--color-pale-gray);
+}
+
+.detail-more-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.detail-more__inner {
+    display: flex;
+    margin: 10px 0;
+}
+
+.detail-more__title {
+    margin-left: 5px;
 }

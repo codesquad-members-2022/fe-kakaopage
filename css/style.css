@@ -7,6 +7,7 @@
 @import 'issue.css';
 @import 'advertise.css';
 @import 'rowList.css';
+@import 'columnList.css';
 @import 'topic.css';
 @import 'imagePoster.css';
 @import 'week.css';
@@ -22,4 +23,18 @@ body {
 
 ul {
     list-style: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row_mr20 {
+    margin-right: 20px;
 }

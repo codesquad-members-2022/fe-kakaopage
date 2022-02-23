@@ -8,19 +8,25 @@
     margin: 0 auto;
 }
 
-.main__nav {
-    margin-bottom: 10px;
+.main__nav,
+.week__nav {
     background-color: var(--color-white);
 }
 
-.main__nav-ul {
+.main__nav-ul,
+.week__nav-ul {
     height: var(--gnb-height);
     display: flex;
     align-items: center;
 }
 
+.main__nav-ul {
+    margin-bottom: 10px;
+}
+
 .main__nav_genre,
-.main__nav_day {
+.week__nav_day
+{
     flex-grow: 1;
     padding: 15px;
     font-size: var(--font-20);
@@ -28,7 +34,12 @@
     color: var(--color-pale-gray);
 }
 
-.main__nav-ul .main__nav_link {
+.main__nav-ul .main__nav_link,
+.week__nav-ul .week__nav_link {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
 }
 
@@ -91,20 +102,24 @@
     background-color: var(--color-yellow);
 }
 
-.main__app .main__app_button {
+.main__app .main__app_link {
     width: 500px;
-    border: none;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
     background-color: var(--color-transparent);
+    color: var(--color-dark-gray);
     font-size: var(--font-20);
     cursor: pointer;
 }
 
 
-.main__nav_day_selected {
+.week__nav_day_selected {
     background-image: url("../images/back_circle_new.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 40px;
+    color: var(--color-gray);
 }
 
 .text_selected {

@@ -1,7 +1,7 @@
 import { $ } from "./utils.js";
 
 export const footer = {    
-    detailSlide: function() {
+    detailSlide() {
         const businessInfoEl = $(".footer__business_info");
         const businessDetails = $(".footer__details");
         businessInfoEl.addEventListener("click", ()=> {
