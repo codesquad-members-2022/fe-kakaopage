@@ -6,12 +6,12 @@ export const ads =
   </section>
   `;
 
-export const mainNav =
+export const webtoonNav =
   /*html*/
   `
-  <nav class="main__nav">
-    <span class="selected">홈</span>
-    <span>요일연재</span>
+  <nav class="webtoon__nav">
+    <span>홈</span>
+    <span class="selected">요일연재</span>
     <span>웹툰</span>
     <span>소년</span>
     <span>드라마</span>

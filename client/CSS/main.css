@@ -13,20 +13,22 @@ main > * {
 
 .dummy {
   text-align: center;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-/* main__nav ======================================================= */
-.main__nav {
+/* webtoon__nav ======================================================= */
+.webtoon__nav {
+  width: var(--width-main);
   padding-top: var(--padding-main-top-bottom);
   padding-bottom: var(--padding-main-top-bottom);
 }
 
-.main__nav {
+.webtoon__nav {
   color: var(--color-grey-main);
 }
 
-.main__nav > .selected {
+.webtoon__nav > .selected {
   color: var(--color-black-main);
 }
 
