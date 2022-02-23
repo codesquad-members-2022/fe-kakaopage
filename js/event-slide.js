@@ -2,8 +2,15 @@ import { $ } from "./utils.js";
 const slides = $(".main-ad-banner__img-container");
 const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
 const slideWidth = 720;
+const slideSpeed = 0.2;
+const delay = slideSpeed * 1000;
+const originFirstSlide = 1;
+const originLastSlide = slideImg.length;
+const cloneFirstSlide = originFirstSlide - 1;
+const cloneLastSlide = originLastSlide + 1;
+
 let order = 1;
-let position = -720;
+let position = -slideWidth;
 
 const makingClone = () => {
   const cloneSlide_first = slideImg[0].cloneNode(true);
@@ -22,18 +29,18 @@ const changingOrder = (btnEvent) => {
 };
 
 const returnOriginSlide = () => {
-  if (order === 0) order = 3;
-  else if (order === 4) order = 1;
+  if (order === cloneFirstSlide) order = originLastSlide;
+  else if (order === cloneLastSlide) order = originFirstSlide;
   position = order * -slideWidth;
 };
 
 const isEnd = () => {
-  if (order !== 0 && order !== 4) return;
+  if (order !== cloneFirstSlide && order !== cloneLastSlide) return;
   const slideSpeed = 0;
   returnOriginSlide();
   setTimeout(() => {
     moveSlide(position, slideSpeed);
-  }, 201);
+  }, delay);
 };
 
 const moveSlide = (position, slideSpeed) => {
@@ -42,8 +49,7 @@ const moveSlide = (position, slideSpeed) => {
 };
 
 const setEvent = (btnEvent) => {
-  const slideSpeed = 0.2;
-  position += slideWidth * (btnEvent === "prev" ? 1 : -1);
+  position += btnEvent === "prev" ? slideWidth : -slideWidth;
   slides.classList.add(`slideshow-${btnEvent}`);
   moveSlide(position, slideSpeed);
 };
