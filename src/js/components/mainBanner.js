@@ -30,16 +30,20 @@ const createMainBanner = (bannerItems) => {
     `;
   });
 
+  const singleItemWidth = 720;
+
   return `
     <div class="main-banner">
-      <ul class="main-banner__list">
+      <ul data-currentindex="1" data-totalitem="${bannerItems.length}" style="width: ${
+    singleItemWidth * bannerItems.length
+  }px" class="main-banner__list">
         ${items}
       </ul>
       <button class="main-banner__btn main-banner__btn-prev">
-        <img src="static/icon/ic-banner-paging-back-nor.svg" />
+        <img data-btndirection="prev" src="static/icon/ic-banner-paging-back-nor.svg" />
       </button>
       <button class="main-banner__btn main-banner__btn-next">
-        <img src="static/icon/ic-banner-paging-next-nor.svg" />
+        <img data-btndirection="next" src="static/icon/ic-banner-paging-next-nor.svg" />
       </button>
       <div class="main-banner__orderinfo">
         <span data-showing="1" class="main-banner__curr-order">1</span>
