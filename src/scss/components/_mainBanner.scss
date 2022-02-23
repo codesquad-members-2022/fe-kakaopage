@@ -5,6 +5,11 @@
   position: relative;
   background: $gray-4;
 
+  &__list {
+    display: flex;
+    transition: 0.3s ease-out;
+  }
+
   &__item {
     width: 720px;
     height: 480px;
@@ -72,6 +77,7 @@
     margin-top: -20px;
     width: 40px;
     height: 40px;
+    overflow: hidden;
   }
 
   &__btn-prev {

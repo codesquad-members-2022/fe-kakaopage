@@ -136,6 +136,8 @@ img { width: 100%; }
 
 .main-banner { width: 720px; height: 480px; overflow: hidden; position: relative; background: #ced4da; }
 
+.main-banner__list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; }
+
 .main-banner__item { width: 720px; height: 480px; position: relative; }
 
 .main-banner__desc { position: absolute; left: 20px; bottom: 60px; width: 400px; }
@@ -154,7 +156,7 @@ img { width: 100%; }
 
 .main-banner__caption { position: absolute; bottom: 0; right: 0; left: 0; height: 40px; line-height: 42px; text-align: center; font-size: 1.125rem; background: #ffd200; }
 
-.main-banner__btn { position: absolute; top: 50%; margin-top: -20px; width: 40px; height: 40px; }
+.main-banner__btn { position: absolute; top: 50%; margin-top: -20px; width: 40px; height: 40px; overflow: hidden; }
 
 .main-banner__btn-prev { left: 20px; }
 
