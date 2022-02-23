@@ -1,5 +1,6 @@
 # test file
 test.html
+index_original.html
 
 # temporarily removed features
-mutationObserver.js
+temp/
