@@ -1,10 +1,7 @@
-import { renderDailyTop, renderGenreTop } from "./Render.js"
-import { setWeekNavEvent } from "./NavEventController.js"
+import * as Render from "./Render.js"
 
 function init(){
-    renderDailyTop();
-    renderGenreTop();
-    setWeekNavEvent();
+    Render.rendering('home');
 }
 
 init();

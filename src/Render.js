@@ -1,17 +1,23 @@
-import { createTopListHTML } from "./HTMLCreator.js"
+import Menu from "./data/Menu.json" assert { type: "json" };
+import * as HTMLCreator from "./HTMLCreator.js"
+import { setNavEvent } from "./EventController.js"
 
-function renderTopList(listType, dataKey = null){
-    const comicList = document.getElementById(`list-${listType}`);
-    comicList.innerHTML = createTopListHTML(dataKey ? dataKey : listType);
+const $body_main = document.querySelector('.custom');
+
+export function rendering(tabName){
+    const renders = {
+        'home' : null,
+        'daily' : null,
+        'webToon' : null,
+        'boy' : null,
+        'drama' : null,
+        'romance' : null,
+        'rofan' : null,
+        'action' : null,
+        'bl' : null
+    }
+
+    $body_main.innerHTML = '';
+    // renders[tabName](tabName);
+    setNavEvent('main-nav__list');
 }
-
-function renderGenreTop(){
-    const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
-    genreList.map(genre => renderTopList(genre));
-}
-
-function renderDailyTop(selectedWeek = 'mon'){
-    renderTopList('week', selectedWeek);
-}
-
-export { renderDailyTop, renderGenreTop };
