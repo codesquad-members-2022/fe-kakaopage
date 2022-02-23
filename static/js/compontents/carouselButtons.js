@@ -18,8 +18,8 @@ export function CarouselButtons({
   `;
 
   $buttonCatainer.addEventListener('click', (event) => {
-    const targetBtn = event.target.closest('button');
-    if (targetBtn && targetBtn.matches('[data-move]')) {
+    const $targetBtn = event.target.closest('button');
+    if ($targetBtn && $targetBtn.matches('[data-move]')) {
       const moveType = event.target.dataset.move;
       if (moveType == 'next') {
         slideToNext();

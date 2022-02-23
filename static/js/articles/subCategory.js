@@ -3,9 +3,9 @@ import { getParams } from '../utils.js';
 
 export function renderSubCategory(subCategoryIndexArr) {
   const { categoryUid, subCategoryUid } = getParams();
-  const newUl = document.createElement('ul');
-  newUl.classList.add('c-category');
-  newUl.innerHTML = `
+  const $newUl = document.createElement('ul');
+  $newUl.classList.add('c-category');
+  $newUl.innerHTML = `
   ${subCategoryIndexArr
     .map(
       (categoryIndex, idx) =>
@@ -16,8 +16,8 @@ export function renderSubCategory(subCategoryIndexArr) {
         </li>`
     )
     .join('')}`;
-  newUl.addEventListener('click', (event) =>
+  $newUl.addEventListener('click', (event) =>
     handleClickNavigation(event, 'subCategory', true)
   );
-  return newUl;
+  return $newUl;
 }

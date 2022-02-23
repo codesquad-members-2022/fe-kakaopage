@@ -26,8 +26,8 @@ export function CarouselLayout({ carouselsArr }) {
   const $carouselContentsLayout = document.createElement('div');
   $carouselContentsLayout.classList.add('l-carousel__content');
   carouselsArr.forEach((element) => {
-    const carouselElement = CarouselElement(element);
-    $carouselContentsLayout.appendChild(carouselElement);
+    const $carouselElement = CarouselElement(element);
+    $carouselContentsLayout.appendChild($carouselElement);
   });
 
   function handleCarousel(idx) {
