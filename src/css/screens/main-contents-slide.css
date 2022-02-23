@@ -1,0 +1,46 @@
+.main__contents__slide {
+}
+
+.main__contents__slide__wrapper {
+  position: relative;
+  width: 720px;
+  height: 410px;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slides.animated {
+  transition: 0.5s ease-out;
+}
+
+.slides li {
+  width: 720px;
+  height: 410px;
+  background-color: #ccc;
+  float: left;
+}
+
+.slide-ctr-btn {
+  position: absolute;
+  top: 175px;
+  width: 720px;
+  /* margin-top: 30px; */
+}
+
+.slide-ctr-btn .prev {
+  position: absolute;
+
+  left: 10px;
+}
+
+.slide-ctr-btn .next {
+  position: absolute;
+  right: 10px;
+}
