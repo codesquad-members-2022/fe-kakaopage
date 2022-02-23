@@ -6,4 +6,8 @@ const range = (n) => {
   return [...Array(n)];
 };
 
-export { $, range };
+const insertIntoMain = (component) => {
+  $("main").insertAdjacentHTML("beforeend", component);
+};
+
+export { $, range, insertIntoMain };

@@ -1,16 +1,7 @@
-import {
-  createCateNav,
-  createBanner,
-  createCateBtnBlock,
-  createPromotionBlock,
-  createDaysBlock,
-  createSmallBannerBlock,
-  createGenreBlock,
-  createDailyRankBlock,
-  createEventBlock,
-} from "./render.js";
 import { $ } from "./utils.js";
-import { dataOfDrama } from "./data/home/drama.js";
+import { renderHome } from "./render.js";
+import { createCateNav } from "./components/category-nav.js";
+import { webtoonCateEvL } from "./eventlistener.js";
 
 $(".main-header-nav").addEventListener("click", (e) => {
   const currentTab = $(".current-tab", ".underline-thick");
@@ -22,14 +13,8 @@ $(".main-header-nav").addEventListener("click", (e) => {
 
   if (e.target.dataset.mainNav === "1") {
     createCateNav();
-    createBanner();
-    createCateBtnBlock();
-    createPromotionBlock();
-    createDaysBlock();
-    createSmallBannerBlock();
-    createGenreBlock(dataOfDrama);
-    createDailyRankBlock();
-    createEventBlock();
+    renderHome();
+    webtoonCateEvL();
   } else {
     $("main").innerHTML = "";
   }
