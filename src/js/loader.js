@@ -1,9 +1,11 @@
 import { renderer } from './renderer.js';
+import { addHandlerOnBanner } from './bannerHandler.js';
 
 const loader = {
   // 홈 - 웹툰
   webtoonHome(DATA) {
     renderer.mainBanner(DATA.mainBanner);
+    addHandlerOnBanner('main-banner');
     renderer.gridMenu(DATA.gridMenu);
     renderer.promotionBanner(DATA.promotionBanner);
   },
