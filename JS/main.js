@@ -1,4 +1,5 @@
 import {containerInfo} from './data/containerInfoData.js'
+import {todayWebtoonsData} from './data/todayWebtoons.js'
 import {renderHome, renderDaily} from './render.js'
 import {$, $all} from './utility.js'
 
@@ -33,12 +34,12 @@ function moveGenreNav(target) {
   switch (target.dataset.nav) {
     case 'home':
       resetMain();
-      renderHome('홈', containerInfo, 'reRender');
+      renderHome('홈', containerInfo, 'reRender', todayWebtoonsData);
       eventHome();
       break;
     case 'daily':
       resetMain();
-      renderDaily();
+      renderDaily(todayWebtoonsData);
       clickDailyTopList();
       break;
   }
@@ -46,7 +47,7 @@ function moveGenreNav(target) {
 
 function resetMain() {
   const main = $('.main');
-  
+
   while (main.children.length > 2) {
     main.removeChild(main.lastChild);
   }
@@ -140,7 +141,7 @@ function eventHome() {
 }
 
 function loadHome() {
-  renderHome('홈', containerInfo, 'firstRender');
+  renderHome('홈', containerInfo, 'firstRender', todayWebtoonsData);
   eventHome();
 }
 

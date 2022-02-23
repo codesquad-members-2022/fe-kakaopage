@@ -6,25 +6,25 @@ import {makeWebtoonList} from './components/webtoonList.js'
 import {renderMoveApp} from './components/moveApp.js'
 import {$, $all} from './utility.js'
 
-function renderHome(tab, data, options) {
+function renderHome(tab, layoutInfo, options, data) {
   if (options === 'firstRender') renderMainBanner(tab);
 
   renderPromotionBanner(tab);
 
-  for (let i in data) {
-    renderContainer(data[i].class, data[i].title, data[i].items, data[i].layout);
+  for (let i in layoutInfo) {
+    renderContainer(layoutInfo[i].class, layoutInfo[i].title, layoutInfo[i].items, layoutInfo[i].layout, data);
   }
 
   renderMoveApp('move-app');
 }
 
-function renderDaily() {
+function renderDaily(data) {
   const main = $('.main');
   const newList = makeSelectDayDailySection();
   main.appendChild(newList)
 
   const DAILY_ITEMS = 10;
-  const webtoonsList = makeWebtoonList(DAILY_ITEMS);
+  const webtoonsList = makeWebtoonList(DAILY_ITEMS, data);
   newList.appendChild(webtoonsList);
 }
 

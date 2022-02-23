@@ -4,12 +4,12 @@ import {makeEventSection} from './eventSection.js'
 import {makeWebtoonList} from './webtoonList.js'
 import {$, $all} from '../utility.js'
 
-function renderContainer(selector, title, num, options) {
+function renderContainer(selector, title, num, options, data) {
   const main = $('.main');
   const newContainer = makeContainer(selector, title);
 
   main.appendChild(newContainer);
-  makeLayout(selector, num, options, newContainer)
+  makeLayout(selector, num, options, newContainer, data)
 }
 
 // ========== Container ==========
@@ -33,7 +33,7 @@ function makeContainerTitle(title) {
 }
 
 // ==================== layout ====================
-function makeLayout(selector, num, options, container) {
+function makeLayout(selector, num, options, container, data) {
   let newList = null;
   switch (options) {
     case 'cardLayout':
@@ -41,7 +41,7 @@ function makeLayout(selector, num, options, container) {
         const newDailyList = makeSelectDayHomeList();
         container.appendChild(newDailyList);
       }
-      newList = makeWebtoonList(num);
+      newList = makeWebtoonList(num, data);
       break;
     case 'ranking':
       newList = makeRankingList();
