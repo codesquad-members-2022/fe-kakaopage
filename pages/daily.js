@@ -1,6 +1,6 @@
-import {BannerBox} from "../components/BannerBox.js";
+import {BannerBox} from "../components/bannerBox.js";
 import {dailyHeader} from "../components/dailyHeader.js";
-
+import {myFetch} from '../utils.js';
 export const daily = async (target, position)=>{
     const template = `
              <div class="listContentBox BannerBox">
@@ -14,6 +14,8 @@ export const daily = async (target, position)=>{
     const header= target.firstElementChild;
     target.innerHTML = template;
     target.insertAdjacentElement('afterbegin', header);
-    BannerBox(target.querySelector('.BannerBox'));
-    await dailyHeader( target, 'beforeend',);
+    const images = await myFetch('images');
+    const infographic = await myFetch('infographic');
+    BannerBox(target.querySelector('.BannerBox'), images, infographic);
+    await dailyHeader( target, 'beforeend', infographic);
 }

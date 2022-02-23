@@ -1,9 +1,7 @@
-import {randomGen} from "../utils/utils.js";
-import Component from "./Component.js";
-import {infographic} from "../utils/infographic.js";
-import {images} from "../utils/images.js";
+import {randomGen} from "../utils.js";
 
-export const BannerBox = (target, )=>{
+
+export const BannerBox = (target,images, infographic )=>{
     const template =
     `<div class="carousel">
                 <img src=${randomGen(images.banner)} />

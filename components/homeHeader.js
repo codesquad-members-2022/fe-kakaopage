@@ -1,4 +1,4 @@
-import {AddEvent, jsonRoute, renderGrid} from "../utils/utils.js";
+import {AddEvent, jsonRoute, renderGrid} from "../utils.js";
 import {comicItem} from "./comicsGrid.js";
 
 export const homeHeader = async (target, position)=>{

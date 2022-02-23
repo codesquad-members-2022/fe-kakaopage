@@ -1,9 +1,8 @@
-import {AddEvent, getWebtoonData, jsonRoute, renderGrid} from "../utils/utils.js";
+import {AddEvent, getWebtoonData, jsonRoute, renderGrid} from "../utils.js";
 import {comicItem} from "./comicsGrid.js";
-import {infographic} from "../utils/infographic.js";
 
 
-export const dailyHeader = async (target, position)=>{
+export const dailyHeader = async (target, position, infographic)=>{
     const template =  `
       <ul class="dailyHeader">
         ${["월", "화", "수", "목", "금","토","일","완결"].map((day,index)=> `<li ${(new Date().getDay()+6)%7===index?"class='selected'":""} data-key=${index}>${day}</li>`).join('')}

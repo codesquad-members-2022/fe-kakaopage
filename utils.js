@@ -1,4 +1,4 @@
-import {comicItem} from "../components/comicsGrid.js";
+import {comicItem} from "./components/comicsGrid.js";
 
 export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
     typeof el[v[0]] == 'function' ? el[v[0]](v[1]) : (el[v[0]] = v[1])
@@ -30,6 +30,11 @@ export const jsonRoute = (key)=>{
   return map.get(key)
 }
 export const renderGrid = async(target,key)=>{
-    const data = await (await fetch('./utils/comics.json')).json()
-    data[jsonRoute(key)].map(comic=>comicItem(comic, target))
+    const data = await myFetch('comics');
+    const infographic = await myFetch('infographic');
+    data[jsonRoute(key)].map(comic=>comicItem(comic, target, infographic))
+}
+export const myFetch = async (key)=>{
+    const url = `http://127.0.0.1:3000/${key}.json`
+    return await(await fetch(url)).json();
 }

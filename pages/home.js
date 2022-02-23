@@ -1,6 +1,6 @@
-import Component from "../components/Component.js";
+
 import {BannerBox} from "../components/BannerBox.js";
-import {getWebtoonData} from "../utils/utils.js";
+import {myFetch} from "../utils.js";
 import {AdBanner} from "../components/AdBanner.js";
 import {GrayCube} from "../components/GrayCube.js";
 import {comicItem} from "../components/comicsGrid.js";
@@ -24,8 +24,10 @@ export const home = async(target, position)=>{
     target.innerHTML = template;
     target.insertAdjacentElement('afterbegin', header);
     const bannerBox = target.querySelector('.BannerBox');
-    BannerBox(bannerBox)
+    const images = await myFetch('images');
+    const infographic = await myFetch('infographic');
+    BannerBox(bannerBox, images, infographic);
     GrayCube(target.querySelector('.catchphrase'), 'afterend');
-    AdBanner( target.querySelector('.catchphrase'), 'afterend');
+    AdBanner( target.querySelector('.catchphrase'), 'afterend', images, infographic);
     await homeHeader(target.querySelector('.freeComics'), 'afterbegin');
 }

@@ -1,9 +1,6 @@
-import {infographic} from "../utils/infographic.js";
-import {randomGen} from "../utils/utils.js";
-import {images} from "../utils/images.js";
-import Component from "./Component.js";
+import {randomGen} from '../utils.js';
 
-export const AdBanner = (target, position)=>{
+export const AdBanner = (target, position, images, infographic)=>{
 
         const template =  `
      <div class="listContentBox AdBanner">

@@ -1,4 +1,4 @@
-import {AddEvent} from "./utils/utils.js";
+import {AddEvent} from "./utils.js";
 import {menuNav} from "./components/menuNav.js";
 import {headerBar} from "./components/headerBar.js";
 import {home} from "./pages/Home.js";
@@ -45,85 +45,6 @@ const App = async (target, position)=>{
 
 }
 await App(body,'afterbegin')
-
-//
-// const renderGrid = ()=>{
-//     const grid=document.querySelector('.comicsGrid');
-//     for(let i=0; i<20; i++){
-//        comicItem(images.thumbnails, infographic, grid);
-//     }
-// }
-// const renderDaily = ()=> {
-//     let prev = grid.previousElementSibling;
-//     while(prev){ //grid 이전의 노드를 삭제
-//         grid.parentNode.removeChild(prev);
-//         prev = grid.previousElementSibling;
-//     }
-//     let parentPrev =grid.parentElement.previousElementSibling;
-//     while(parentPrev.className!=='catchphrase'){
-//         parentPrev.parentNode.removeChild(parentPrev);
-//         parentPrev = grid.parentElement.previousElementSibling;
-//     }
-//     BannerBox(bannerBox)
-//     dailyHeader(infographic, comicsBox, 'beforebegin');
-//     grid.style.paddingTop='';
-//     grid.innerHTML= '';
-//     renderGrid();
-// }
-//
-// const renderHome = ()=>{
-//     let prev = comicsBox.previousElementSibling;
-//     while(prev.className !== 'catchphrase') {
-//         prev.parentNode.removeChild(prev);
-//         prev= comicsBox.previousElementSibling;
-//     }
-//     HomeHeader(comicsBox, 'afterbegin');
-//     GrayCube(comicsBox, 'beforebegin')
-//     AdBanner(comicsBox, 'beforebegin');
-//     grid.innerHTML ='';
-//     grid.style.paddingTop = '20px';
-//     renderGrid();
-// }
-// const renderHeader = ()=>{
-//     menuNav(nav, 'afterbegin');
-//     BannerBox(bannerBox, 'afterbegin', images, infographic);
-// }
-//
-// let template = '';
-// const map = new Map()
-// AddEvent(nav, 'click', 'li', ({target})=>{
-//     nav.querySelector('.selected').classList.remove('selected')
-//     target.classList.toggle('selected')
-//     const li = target.closest('li');
-//     li.classList.add('selected');
-//     if (li.classList.contains('toon')) {
-//         if(!template)return;
-//         section.innerHTML = template;
-//         template = "";
-//     } else {
-//         if(template)return;
-//         template = section.innerHTML;
-//         section.innerHTML= "<span>This is Dummy Page</span>";
-// }})
-//
-//
-// const topBanner = section.querySelector('.TopBanner');
-//
-//
-// AddEvent(topBanner, 'click', 'span', ({target})=>{
-//     topBanner.querySelector('.selected').classList.remove('selected');
-//     const span = target.closest('span')
-//     span.classList.add('selected');
-// })
-// AddEvent(topBanner, 'click', '.home', e=>{
-//     renderHome();
-// })
-// AddEvent(topBanner, 'click', '.daily', e=>{
-//     renderDaily();
-// })
-//
-// renderHeader();
-// renderHome();
 
 
 

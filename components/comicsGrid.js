@@ -1,10 +1,8 @@
-import {getWebtoonData, randomGen, shuffled} from "../utils/utils.js";
-import Component from "./Component.js";
-import {infographic} from "../utils/infographic.js";
 
 
 
-export const comicItem = (comic,target) => {
+
+export const comicItem = (comic,target, infographic) => {
     const {rating,image, title, author, totalView, additional:{adult,rest,up}} = comic;
     const template =  `
     <a class="wrapper">

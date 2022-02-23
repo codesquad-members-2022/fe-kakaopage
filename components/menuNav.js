@@ -1,4 +1,4 @@
-import {AddEvent} from "../utils/utils.js";
+import {AddEvent} from "../utils.js";
 
 export const menuNav = (target)=>{
     const template =  `
