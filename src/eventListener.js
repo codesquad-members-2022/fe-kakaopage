@@ -1,4 +1,4 @@
-import { $, getToday } from './utility.js';
+import { $ } from './utility.js';
 
 const clickEvent = ({ renderPage, renderDayTop, currentPageData }) => {
     document.body.addEventListener('click', (e) => {
