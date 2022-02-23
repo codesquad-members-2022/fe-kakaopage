@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>홈 - 웹툰 | 카카오페이지</title>
+    <link rel="stylesheet" type="text/css" href="./css/variables.css" />
+    <link rel="stylesheet" type="text/css" href="./css/global.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container center">
+        <h1 class="mr--auto">kakaopage</h1>
+        <form class="main-header-form">
+          <input class="main-header-input" />
+          <svg
+            class="input-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </form>
+        <ul class="layout-center">
+          <li>
+            <a href="#" class="main-header-item layout-center"
+              ><div id="stage-container">
+                <img
+                  id="stage-img"
+                  src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f"
+                  alt="스테이지"
+                /></div
+            ></a>
+          </li>
+          <li>
+            <a class="text-color--gray main-header-item" href="#">캐시충전</a>
+          </li>
+          <li class="text-color--gray main-header-item">|</li>
+          <li><a class="text-color--gray" href="#">로그인</a></li>
+        </ul>
+      </div>
+      <nav class="main-header-nav center">
+        <ul class="nav-item-sort">
+          <li data-main-nav="0" class="current-tab underline-thick">홈</li>
+          <li data-main-nav="1">웹툰</li>
+          <li data-main-nav="2">웹소설</li>
+          <li data-main-nav="3">영화</li>
+          <li data-main-nav="4">방송</li>
+          <li data-main-nav="5">책</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main></main>
+
+    <div class="center">
+      <button class="app-button">
+        <b>카카오페이지</b>
+        &nbsp;앱으로 보기
+        <svg
+          class="arrow-with-text arrow--black"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <footer class="center footer">
+      <div>
+        <ul class="layout-center footer-list">
+          <li class="footer-item">
+            <a class="text-color--light-gray" href="#">회사소개</a>
+          </li>
+          <li class="footer-item text-color--light-gray">•</li>
+          <li class="footer-item">
+            <a class="text-color--light-gray" href="#">이용약관</a>
+          </li>
+          <li class="footer-item text-color--light-gray">•</li>
+          <li class="footer-item">
+            <a class="text-color--light-gray" href="#">개인정보처리방침</a>
+          </li>
+          <li class="footer-item text-color--light-gray">•</li>
+          <li class="footer-item">
+            <a class="text-color--light-gray" href="#">청소년보호정책</a>
+          </li>
+          <li class="footer-item text-color--light-gray">•</li>
+          <li><a class="text-color--light-gray" href="#">공지사항</a></li>
+        </ul>
+        <ul class="layout-center footer-list">
+          <li class="footer-item text-color--light-gray">
+            (주)카카오엔터테인먼트 사업자 정보
+          </li>
+          <li class="footer-item text-color--light-gray">|</li>
+          <li>
+            <a class="text-color--light-gray" href="#">사업자 정보 확인</a>
+          </li>
+        </ul>
+        <p class="text-color--light-gray">&copy; Kakao Entertainment Corp.</p>
+      </div>
+      <div>
+        <img
+          id="copyright-img"
+          src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af"
+          alt="ok mark"
+        />
+        <p id="copyright-text" class="text-color--gray">저작권 ok</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
