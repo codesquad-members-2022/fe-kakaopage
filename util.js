@@ -52,7 +52,6 @@ export function combineFormats(arr){
 
 export function addSelectedToday(){
     const days = document.querySelectorAll('.day')
-
     const today = new Date().getDay()-1;
 
     days[today].classList.add('selected')

@@ -398,10 +398,6 @@ header {
     overflow: hidden;
 }
 
-#img-with-small {
-    width: 100%;
-}
-
 #line-with-small {
     width: 100%;
     top: 12.5rem;
@@ -441,11 +437,6 @@ header {
 
     border-radius: 0.31rem;
     overflow: hidden;
-}
-
-.ranking-img {
-    width: 100%;
-    height: 100%;
 }
 
 .ranking-desc-title {
@@ -505,11 +496,6 @@ header {
     margin-right: 1.88rem;
 }
 
-.horizontal-img {
-    width: 100%;
-    height: 100%;
-}
-
 .contents-flex-box-bigger {
     height: 17.5rem;
 
@@ -531,11 +517,6 @@ header {
 
     border-radius: 0.31rem;
     overflow: hidden;
-}
-
-.content-vertical-img {
-    width: 100%;
-    height: 100%;
 }
 
 .selected {
