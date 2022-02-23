@@ -63,3 +63,12 @@ export function createSubBannerHTML(){
     </div>
     `
 }
+
+export function createContainerHeaderHTML(title, count = null){
+    const $countSpanHTML = !count ? '' : `<span class="contents-container__comic-count">(${count})</span>`;
+    return /* html */ `
+        <span class="contents-container__title">${title}</span>
+        ${$countSpanHTML}
+        <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
+    `
+}

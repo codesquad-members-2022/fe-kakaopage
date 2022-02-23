@@ -48,3 +48,29 @@ function renderSubBanner(tabName){
     $sub_banner_section.classList.add('sub-banner', 'section');
     $body_main.appendChild($sub_banner_section);
 }
+
+function renderContentsContainer($header, $main){
+    const $container = document.createElement('section');
+    $container.classList.add('contents-container', 'section', 'center');
+    $container.append($header, $main);
+    $body_main.appendChild($container);
+}
+
+function createContentsHeader(title, count = null){
+    const $header = document.createElement('div');
+    const headerHTML = HTMLCreator.createContainerHeaderHTML(title, count);
+    $header.classList.add('contents-container__header', 'center');
+    $header.innerHTML = headerHTML;
+    return $header;
+}
+
+function createContentsMain(...children){
+    const $main = document.createElement('div');
+    $main.classList.add('contents-container__main');
+
+    if(children){
+        $main.append(...children);
+    }
+
+    return $main;
+}
