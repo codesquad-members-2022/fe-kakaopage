@@ -28,3 +28,5 @@ re-rendering을 막는 법 : 검색해보니 history API를 써서 페이지를 
 format 이름에 대한 고민
 
 rem으로 변경할 경우 1px같은 수는 0.063rem인데 그래도 통일시키는게 나은지?
+
+data-set을 이용하는 방법과 tagName을 이용하는 방법

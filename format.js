@@ -1,6 +1,6 @@
+import { createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
 import { dummy } from "./sources.js"
-import { createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum, pickFromArr } from "./util.js"
-
+import { pickFromArr } from "./util.js"
 
 export const createFormatBannerMain = () => {
     const format0 = `
@@ -102,7 +102,7 @@ export const createFormatImgWithLine = () => {
 
 export const createFormatContentsBox = (formatTitle) => {
     const format5 =`
-    <div class="menu-form">
+<div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">${formatTitle}</div>
         <div class="title-more">더보기></div>

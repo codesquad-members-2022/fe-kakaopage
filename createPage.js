@@ -1,10 +1,10 @@
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
-import { addGenreNavEventTo, addHeadNavEventTo, addSelectedTo, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
+import { addClickEventToElement, addGenreNavEvent,  addHeadNavEvent, addSelected, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
 
 export const createPageInit = () => {
-    addSelectedTo('body')
-    addGenreNavEventTo('body')
-    addHeadNavEventTo('body')
+    addClickEventToElement('body', addSelected)
+    addClickEventToElement('body', addGenreNavEvent)
+    addClickEventToElement('body', addHeadNavEvent)
     createPageHome();
 }
 

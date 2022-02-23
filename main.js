@@ -1,5 +1,4 @@
-import { createPageAction, createPageBL, createPageDaily, createPageDrama, createPageHome, createPageInit, createPageRofan, createPageRomance, createPageTeen, createPageWebtoon } from "./createPage.js";
-import { addClickEventToElement, addSelectedTo, addToContents, pickFromArr, randomView } from "./util.js";
+import { createPageInit} from "./createPage.js";
 
 const main = () => {
     createPageInit()
