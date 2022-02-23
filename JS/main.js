@@ -3,7 +3,7 @@ import {todayWebtoonsData} from './data/todayWebtoons.js'
 import {renderHome, renderDaily} from './render.js'
 import {dailyTopData} from './data/scrape/dailyTopData.js'
 import {makeWebtoonList} from './components/webtoonList.js'
-import {eventMainBanner} from './slideEvent.js'
+import {eventMainBanner} from './slider.js'
 import {$, $all} from './utility.js'
 
 const setFocus = (target, className) => {
