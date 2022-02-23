@@ -211,9 +211,7 @@ const createDaysBlock = () => {
 
   $(".nav-days ul").childNodes.forEach((it) => {
     if (it.nodeType === 1 && it.dataset.day === String(day)) {
-      it.classList.add("current-tab");
-      it.classList.add("underline-thin");
-      it.classList.add("text-color--black");
+      it.classList.add("current-tab", "underline-thin", "text-color--black");
     }
   });
 
@@ -221,15 +219,19 @@ const createDaysBlock = () => {
     const days = e.target.closest("ul").childNodes;
     days.forEach((node) => {
       if (node.nodeType === 1) {
-        node.classList.remove("current-tab");
-        node.classList.remove("underline-thin");
-        node.classList.remove("text-color--black");
+        node.classList.remove(
+          "current-tab",
+          "underline-thin",
+          "text-color--black"
+        );
       }
     });
 
-    e.target.classList.add("current-tab");
-    e.target.classList.add("underline-thin");
-    e.target.classList.add("text-color--black");
+    e.target.classList.add(
+      "current-tab",
+      "underline-thin",
+      "text-color--black"
+    );
 
     const webtoons = [];
     range(5).forEach((_, idx) => {
