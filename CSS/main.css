@@ -59,28 +59,34 @@
   border-bottom: 1px solid var(--main-bg-color);
 }
 
-.daily__top .select__day .day button {
+.daily__top .day__btn  {
+  width: 100%;
   font-size: 1.25rem;
   color: var(--non-focus-font-color);
 }
 
-.daily__top .select__day .daily__top--focused {
+.daily__top .select__day .day--focused {
   border-bottom: 2px solid var(--main-point-color);
 }
 
-.daily__top .select__day .daily__top--focused button {
+.daily__top .select__day .day--focused .day__btn {
   color: var(--black-color);
 }
 
 /* ======== daily__select__day ======== */
-.daily__select__day {
+.daily__webtoons .select__day {
   margin-top: 12px;
   padding: 8px 0;
   border-bottom: 1px solid var(--main-bg-color);
   background-color: var(--white-color);
 }
 
-.daily__select__day li button {
+.daily__webtoons .select__day .day--focused {
+  border-radius: 50%;
+  background-color: var(--main-point-color);
+}
+
+.daily__webtoons .select__day .day__btn {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -88,8 +94,7 @@
   color: var(--non-focus-font-color);
 }
 
-.daily__select__day .day--focused {
-  background-color: var(--main-point-color);
+.daily__webtoons .select__day .day--focused .day__btn {
   color: var(--black-color);
 }
 

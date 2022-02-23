@@ -22,6 +22,7 @@
 /* 배너 화살표 */
 .banner__prev, .banner__next {
   position: absolute;
+  z-index: 10;
   top: 45%;
   padding: 10px 16px;
   border: 1px solid var(--white-color);
@@ -43,6 +44,9 @@
 .main__banner {
   width: 720px;
   overflow: hidden;
+}
+.main__banner .banner__list {
+  transition: transform 0.5s;
 }
 
 .main__banner .banner__item {
@@ -75,6 +79,17 @@
 .main__banner .banner__viewer p {
   padding: 0 8px;
   font-size: 1rem;
+}
+
+.main__banner .banner__count {
+  position: absolute;
+  bottom: 12%;
+  right: 5%;
+}
+
+.main__banner .banner__count span {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.864);
 }
 
 /* ======== promotion banner ======== */
