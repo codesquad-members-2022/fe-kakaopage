@@ -6,7 +6,11 @@
     background-color: #fff;
 }
 
+<<<<<<< HEAD
 .nav__weekdays-lists {
+=======
+.nav__weekdays-ul {
+>>>>>>> 118ddf10b6a1812fc3b35c2cb9735f7c77a729bb
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,5 +60,8 @@
     width: 720px;
     margin-top: 5px;
     background-color: #fff;
+<<<<<<< HEAD
     transition: ease-in 1s;
+=======
+>>>>>>> 118ddf10b6a1812fc3b35c2cb9735f7c77a729bb
 }
