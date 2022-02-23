@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611" type="image/x-icon" />
     <link rel="stylesheet" href="/fe-kakaopage/src/css/index.css" />
-    <title>홈 - 웹툰ㅣ카카오페이지</title>
+    <title>요일연재 - 웹툰ㅣ카카오페이지</title>
   </head>
   <body>
     <header class="header">
@@ -60,10 +60,10 @@
       <nav class="container">
         <ul class="lnb flex justify-between">
           <li>
-            <a href="#" class="lnb__link lnb__item__selected" href="#">홈</a>
+            <a href="/fe-kakaopage/toon.html" class="lnb__link" href="#">홈</a>
           </li>
           <li>
-            <a href="/fe-kakaopage/toon-day.html" class="lnb__link" href="#">요일연재</a>
+            <a href="#" class="lnb__link lnb__item__selected" href="#">요일연재</a>
           </li>
           <li>
             <a class="lnb__link" href="#">웹툰</a>
@@ -114,139 +114,93 @@
           <button><img src="/fe-kakaopage/src/img/ic-banner-paging-next-nor.svg" alt="" /></button>
         </div>
       </section>
-      <section class="container">
-        <div class="notice border-round">
-          <a class="notice__item flex items-center_justify-center" href="#">
-            <div>
-              <span>오늘 UP</span>
-              <span class="font-16 badge__yellow">205</span>
-            </div>
-          </a>
-          <a class="notice__item flex justify-center" href="#">
-            <div>
-              <span>오늘 신작</span>
-              <span class="font-16 badge__yellow">4</span>
-            </div>
-          </a>
-          <a class="notice__item flex items-center_justify-center" href="#">
-            <div>
-              <span>오리지널</span>
-              <span class="font-16 badge__yellow">2,328</span>
-            </div>
-          </a>
-          <a class="notice__item flex items-center_justify-center" href="#">
-            <div>
-              <span>완결까지 정주행</span>
-            </div>
-          </a>
-          <a class="notice__item flex items-center_justify-center" href="#">
-            <div>
-              <span>독립운동가 웹툰</span>
-            </div>
-          </a>
-          <a class="notice__item flex items-center_justify-center" href="#">
-            <div>
-              <span>오늘 랭킹</span>
-              <span class="font-16 badge__yellow">1위</span>
-            </div>
-          </a>
-        </div>
-      </section>
-      <section data-section="daily" class="container">
-        <div class="flex justify-between">
-          <div class="flex items-center_justify-center">
-            <h3 class="section__title">요일 연재 TOP</h3>
-            <span class="section__total">(1,622)</span>
-          </div>
-          <a class="more" href="#">더보기 ></a>
-        </div>
+      <section class="container pd-t-0">
         <nav>
           <ul class="lnb section__lnb flex justify-between">
-            <li data-day="1" class="lnb__link pointer">월</li>
-            <li data-day="2" class="lnb__link pointer">화</li>
-            <li data-day="3" class="lnb__link pointer">수</li>
-            <li data-day="4" class="lnb__link pointer">목</li>
-            <li data-day="5" class="lnb__link pointer">금</li>
-            <li data-day="6" class="lnb__link pointer">토</li>
-            <li data-day="0" class="lnb__link pointer">일</li>
-            <li class="lnb__link pointer">완결</li>
+            <li>
+              <a class="lnb__link badge__yellow lnb__item__selected" href="#">월</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">화</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">수</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">목</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">금</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">토</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">일</a>
+            </li>
+            <li>
+              <a class="lnb__link" href="#">전체</a>
+            </li>
           </ul>
         </nav>
-        <div class="grid"></div>
-      </section>
-      <section class="new container">
-        <div class="flex justify-between">
-          <div class="flex items-center_justify-center">
-            <h3 class="section__title">기대신작 TOP</h3>
-          </div>
-          <a class="more" href="#">더보기 ></a>
-        </div>
-        <div class="flex justify-between mg-t-20">
-          <a href="#" class="banner width-half flex p-relative border-round">
-            <img class="w-100" src="/fe-kakaopage/src/img/resource" alt="도굴왕" />
-            <div class="banner__info p-absolute">
-              <div class="mg-l-20 mg-b-20">
-                <div class="banner__info__title">도굴왕</div>
-                <div class="banner__info__description">
-                  <img class="h-15" src="/fe-kakaopage/src/img/badge-bigthum-new.svg" alt="새 작품" />
-                  <img class="mg-l-10 h-15" src="/fe-kakaopage/src/img/ico-bigthum-wait.svg" alt="기다리면 무료" />
-                  <div class="mg-l-5">웹툰</div>
-                  <div class="bar"></div>
-                  <img class="h-15" src="/fe-kakaopage/src/img/ico-bigthum-person.svg" alt="구독자" />
-                  <div class="mg-l-5">200.9만명</div>
-                </div>
+        <nav class="p-relative">
+          <ul class="lnb section__lnb flex">
+            <li>
+              <a class="lnb__link lnb__item__selected" href="#">전체</a>
+            </li>
+            <li class="flex items-center">
+              <div class="bar"></div>
+              <a class="lnb__link" href="#">웹툰</a>
+            </li>
+            <li class="flex items-center">
+              <div class="bar"></div>
+              <img class="mg-r-5" src="/fe-kakaopage/src/img/bmbadge_waitfree.svg" alt="기다리면 무료" />
+              <a class="lnb__link" href="#">웹툰</a>
+            </li>
+            <li class="lnb__item__modal btn__toggle">전체 (16)</li>
+          </ul>
+        </nav>
+        <div class="grid">
+          <div class="grid__item">
+            <div class="border-round">
+              <div class="flex">
+                <img class="grid__thumnail" src="//dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2" alt="썸네일" />
               </div>
-              <p class="banner__info__comment flex items-center_justify-center">여기도 '그 자식'이 다 털어갔냐?</p>
-            </div>
-          </a>
-          <a href="#" class="banner width-half flex p-relative border-round">
-            <img class="w-100" src="/fe-kakaopage/src/img/resource" alt="도굴왕" />
-            <div class="banner__info p-absolute">
-              <div class="mg-l-20 mg-b-20">
-                <div class="banner__info__title">도굴왕</div>
-                <div class="banner__info__description">
-                  <img class="h-15" src="/fe-kakaopage/src/img/badge-bigthum-new.svg" alt="새 작품" />
-                  <img class="mg-l-10 h-15" src="/fe-kakaopage/src/img/ico-bigthum-wait.svg" alt="기다리면 무료" />
-                  <div class="mg-l-5">웹툰</div>
-                  <div class="bar"></div>
-                  <img class="h-15" src="/fe-kakaopage/src/img/ico-bigthum-person.svg" alt="구독자" />
-                  <div class="mg-l-5">200.9만명</div>
-                </div>
+              <div class="grid__item__bottom">
+                <span>1위</span>
+                <img class="w-16" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="기다리면 무료" />
               </div>
-              <p class="banner__info__comment flex items-center_justify-center">여기도 '그 자식'이 다 털어갔냐?</p>
             </div>
-          </a>
-        </div>
-      </section>
-      <section class="container">
-        <div class="flex justify-between">
-          <div class="flex items-center_justify-center">
-            <h3 class="section__title">로맨스 TOP</h3>
-            <span class="section__total">(1,622)</span>
+            <div class="txt-lh-1_5 mg-t-10">
+              <div class="font-16 txt-ellipsis">도굴왕 도굴왕도굴왕</div>
+              <div class="flex items-center">
+                <img class="w-11" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="구독자" />
+                <span class="mg-l-5 pd-t-2 font-14 third-text-color">200.8만명</span>
+              </div>
+            </div>
           </div>
-          <a class="more" href="#">더보기 ></a>
-        </div>
-        <div class="grid"></div>
-      </section>
-      <section class="container">
-        <div class="flex justify-between">
-          <div class="flex items-center_justify-center">
-            <h3 class="section__title">드라마 TOP</h3>
-            <span class="section__total">(1,622)</span>
+          <div class="grid__item">
+            <div class="border-round">
+              <div class="flex">
+                <img class="grid__thumnail" src="//dn-img-page.kakao.com/download/resource?kid=CLJBa/hyATqn0Q3p/xPvmPoA8nEKeYkZKdMlyy0&filename=th2" alt="썸네일" />
+              </div>
+              <div class="grid__item__bottom">
+                <div class="flex items-center_justify-center">
+                  <img class="w-16" src="/fe-kakaopage/src/img/badge-thumbnail-star.svg" alt="별점" />
+                  <span class="mg-l-5 pd-t-2">9.9</span>
+                </div>
+                <img class="w-16" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="기다리면 무료" />
+              </div>
+            </div>
+            <div class="txt-lh-1_5 mg-t-10">
+              <div class="font-16 main-text-color txt-ellipsis">도굴왕 도굴왕도굴왕</div>
+              <div class="flex items-center">
+                <img class="w-11" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="구독자" />
+                <span class="mg-l-5 pd-t-2 font-14 third-text-color">200.8만명</span>
+              </div>
+            </div>
           </div>
-          <a class="more" href="#">더보기 ></a>
         </div>
-        <div class="grid"></div>
-      </section>
-      <section class="container">
-        <div class="flex justify-between">
-          <div class="flex items-center_justify-center">
-            <h3 class="section__title">소년 TOP</h3>
-            <span class="section__total">(1,622)</span>
-          </div>
-          <a class="more" href="#">더보기 ></a>
-        </div>
-        <div class="grid"></div>
       </section>
       <div class="app__btn flex justify-center">
         <a class="flex" href="#"><img class="h-70" src="/fe-kakaopage/src/img/appDownload.png" alt="앱 다운로드" /></a>
@@ -293,6 +247,5 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/fe-kakaopage/src/js/index.js"></script>
   </body>
 </html>

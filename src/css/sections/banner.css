@@ -1,0 +1,73 @@
+.banner {
+  --banner-main-color: #fff;
+  --banner-second-color: #222;
+}
+
+.banner__info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.banner__info__title {
+  font-size: var(--28px);
+  font-weight: var(--bold);
+  color: var(--banner-main-color);
+}
+
+.banner__info__description {
+  display: flex;
+  align-items: center;
+  left: 20px;
+}
+
+.banner__page {
+  opacity: 0.6;
+  margin-right: 20px;
+}
+
+.banner__info__description,
+.banner__page {
+  margin-top: 10px;
+  color: var(--banner-main-color);
+  font-size: var(--20px);
+}
+
+.banner .bar {
+  margin: 0 8px;
+  height: 16px;
+  background-color: var(--banner-main-color);
+}
+
+.banner__info__comment {
+  padding: 15px;
+  background-color: var(--identity-color);
+  color: var(--banner-second-color);
+  font-size: var(--18px);
+  font-weight: var(--thin);
+}
+
+.banner__controller {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0;
+  top: 45%;
+  width: 100%;
+}
+
+.new .banner__info__description {
+  font-size: var(--14px);
+}
+
+.new .banner__info__title {
+  font-size: var(--18px);
+}
+
+.new .bar {
+  height: 12px;
+}
+
+.new .banner__info__comment {
+  height: 24px;
+  font-size: var(--12px);
+}

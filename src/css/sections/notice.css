@@ -1,10 +1,3 @@
-.badge {
-  display: inline-block;
-  padding: 6px 7px 2px 7px;
-  background-color: var(--identity-color);
-  border-radius: 50px;
-}
-
 .notice {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -12,9 +5,9 @@
   column-gap: 3px;
 }
 
-.notice-btn {
+.notice__item {
   padding: 15px;
-  font-size: var(--font-18px);
-  font-weight: var(--font-bold);
+  font-size: var(--18px);
+  font-weight: var(--bold);
   background-color: var(--main-bg-color);
 }
