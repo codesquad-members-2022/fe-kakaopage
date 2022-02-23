@@ -3,7 +3,7 @@ import { createBox } from "../box/index.js";
 import { createCategory } from "../category/index.js";
 import { createWorkSmall } from "../workSmall/index.js";
 
-const category = createCategory(DAYS);
+const category = createCategory(DAYS, "days");
 const workSmall = createWorkSmall({
   str1: "1",
   str2: "위",

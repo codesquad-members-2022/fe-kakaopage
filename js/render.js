@@ -16,7 +16,7 @@ import {
 } from "./constants.js";
 import { $ } from "./utils.js";
 
-const category = createCategory(CATEGORIES);
+const category = createCategory(CATEGORIES, "snb");
 const largeBanner = createBanner(BANNER.LARGE);
 const recommend = createRecommend(RECOMMEND_BUTTONS);
 const adSlide = createAdSlide();
@@ -52,8 +52,18 @@ const contents = nodes.reduce((acc, node) => acc + node);
 
 export function renderWebtoon() {
   $(".contents").innerHTML = contents;
+  setSelectedSNB();
 }
 
 export function renderNothing() {
   $(".contents").innerHTML = "";
+}
+
+export function setSelectedSNB() {
+  $(".snb ul").firstElementChild.classList = "snb__selected";
+  $(".days ul").firstElementChild.classList = "snb__selected";
+}
+
+export function renderSNB() {
+  $(".contents").innerHTML = category;
 }

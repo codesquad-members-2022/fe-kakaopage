@@ -7,6 +7,7 @@
   --gray: #eee;
   --gray2: rgb(153, 153, 153);
   --gray3: #bdbdbd;
+  --gray4: rgb(187, 187, 187);
   --black: #242526;
   --yellow: #ffd200;
   --yellow2: #fecc2e;
@@ -113,6 +114,10 @@
   border-bottom-style: solid;
 }
 
+.snb__selected {
+  color: var(--black);
+}
+
 .contents {
   display: flex;
   flex-direction: column;
@@ -125,6 +130,7 @@
 .category {
   margin-top: 18px;
   width: 100%;
+  color: var(--gray4);
 }
 
 .category > ul {

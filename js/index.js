@@ -1,6 +1,10 @@
-import { renderWebtoon } from "./render.js";
+import { renderWebtoon, setSelectedSNB } from "./render.js";
 import { addEvent } from "./event.js";
 
-renderWebtoon();
+function init() {
+  renderWebtoon();
+  setSelectedSNB();
+  addEvent();
+}
 
-addEvent();
+init();
