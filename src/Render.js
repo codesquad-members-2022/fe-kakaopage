@@ -24,6 +24,7 @@ export function rendering(tabName){
 
 function renderHomePage(tabName){
     renderMenu(tabName);
+    renderSubBanner(tabName);
 }
 
 function renderMenu(tabName){
@@ -39,4 +40,11 @@ function renderMenu(tabName){
 export function renderTopList(listType, dataKey = null){
     const comicList = document.getElementById(`list-${listType}`);
     comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
+}
+
+function renderSubBanner(tabName){
+    const $sub_banner_section = document.createElement('section');
+    $sub_banner_section.innerHTML = HTMLCreator.createSubBannerHTML(tabName);
+    $sub_banner_section.classList.add('sub-banner', 'section');
+    $body_main.appendChild($sub_banner_section);
 }
