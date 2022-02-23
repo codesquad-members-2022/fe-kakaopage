@@ -1,12 +1,12 @@
-import { renderSet } from './view.js';
-import { addHandlerOnGnb, loadGnbTab } from './handler.js';
+import { renderer } from './renderer.js';
+import { addHandlerOnNav, loadContentFromGnb } from './navHandler.js';
 
 const init = () => {
-  renderSet.renderHeader();
-  renderSet.renderFooter();
-  renderSet.renderGnb();
-  addHandlerOnGnb();
-  loadGnbTab('홈');
+  renderer.header();
+  renderer.footer();
+  renderer.gnb();
+  addHandlerOnNav('gnb');
+  loadContentFromGnb('웹툰');
 };
 
-init();
+window.addEventListener('DOMContentLoaded', init);

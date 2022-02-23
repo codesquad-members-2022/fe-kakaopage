@@ -5,6 +5,11 @@
   position: relative;
   background: $gray-4;
 
+  &__list {
+    display: flex;
+    transition: 0.3s ease-out;
+  }
+
   &__item {
     width: 720px;
     height: 480px;
@@ -70,6 +75,9 @@
     position: absolute;
     top: 50%;
     margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
   }
 
   &__btn-prev {
@@ -78,5 +86,14 @@
 
   &__btn-next {
     right: 20px;
+  }
+
+  &__orderinfo {
+    position: absolute;
+    right: 24px;
+    bottom: 48px;
+    color: $gray-4;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }

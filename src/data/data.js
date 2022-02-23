@@ -1,5 +1,5 @@
-const webtoonData = {
-  // 웹툰 탭의 서브 카테고리
+// 웹툰
+const DATA_WEBTOON = {
   category: ['홈', '요일연재', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL'],
 
   // 0: 홈
@@ -21,6 +21,14 @@ const webtoonData = {
         view: '20.4',
         path: 'static/thumb/main_toon_0_2.png',
       },
+      {
+        title: '톱스타, 그 자체',
+        caption: '다시 톱스타가 될 수 있을까?',
+        tag: 'event',
+        type: '웹툰',
+        view: '5',
+        path: '',
+      },
     ],
     gridMenu: [
       ['오늘 UP', '195'],
@@ -37,7 +45,7 @@ const webtoonData = {
   1: {
     mainBanner: [
       {
-        title: '화산전쟁',
+        title: '화산전생',
         caption: '나도 그들처럼 영웅이 되고 싶었다',
         tag: 'event',
         type: '웹툰',
@@ -201,4 +209,49 @@ const webtoonData = {
   },
 };
 
-export { webtoonData };
+// 웹소설
+const DATA_WEBNOVEL = {
+  category: ['홈', '요일연재', '판타지', '로맨스', '로판', '무협', '판드', 'BL'],
+  0: {}, // 0: 홈
+  1: {}, // 1: 요일연재
+  2: {}, // 2: 판타지
+  3: {}, // 3: 로맨스
+  4: {}, // 4: 로판
+  5: {}, // 5: 무협
+  6: {}, // 6: 판드
+  7: {}, // 7: BL
+};
+
+// 영화
+const DATA_MOVIE = {
+  category: ['홈', '랭킹', '액션', '애니메이션', '장르전체'],
+  0: {}, // 0: 홈
+  1: {}, // 1: 랭킹
+  2: {}, // 2: 액션
+  3: {}, // 3: 애니메이션
+  4: {}, // 4: 장르전체
+};
+
+// 방송
+const DATA_BROADCAST = {
+  category: ['홈', '예능', '드라마', '애니메이션', '해외시리즈', '장르전체'],
+  0: {}, // 0: 홈
+  1: {}, // 1: 예능
+  2: {}, // 2: 드라마
+  3: {}, // 3: 애니메이션
+  4: {}, // 4: 해외시리즈
+  5: {}, // 5: 장르전체
+};
+
+// 책
+const DATA_BOOK = {
+  category: ['홈', '연재', '베스트셀러', '랭킹', '스릴러', '자기계발'],
+  0: {}, // 0: 홈
+  1: {}, // 1: 연재
+  2: {}, // 2: 베스트셀러
+  3: {}, // 3: 랭킹
+  4: {}, // 4: 스릴러
+  5: {}, // 5: 자기계발
+};
+
+export { DATA_WEBTOON, DATA_WEBNOVEL, DATA_MOVIE, DATA_BROADCAST, DATA_BOOK };
