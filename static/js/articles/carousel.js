@@ -26,13 +26,19 @@ export function renderCarousel(carouselsArr) {
 
   const [$carouselContentsLayout, handleCarousel] = CarouselLayout({
     carouselsArr,
-    idx,
   });
   $carouselLayout.append($carouselContentsLayout);
 
-  const $buttonCatainer = CarouselButtons({ idx, carouselsArrLength });
+  // carousel을 움직이게하는 버튼 렌더링
+  const $buttonCatainer = CarouselButtons({
+    idx,
+    carouselsArrLength,
+    slideToPrev,
+    slideToNext,
+  });
   $carouselLayout.append($buttonCatainer);
 
+  // carousel을 3초마다 이동
   function moveCarousel() {
     setInterval(() => {
       slideToNext();

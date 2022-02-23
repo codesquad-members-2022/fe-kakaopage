@@ -27,23 +27,11 @@
 # 공부할 내용
 
 - [x] history api
+- [ ] 동적으로 돔 조작 및 이벤트 등록,삭제
 - [x] event bubbling, capturing, event delegation
-- [ ] express
+- [ ] nodejs - express
 
-# 목표 및 진행상황
-
-오늘은 구현에 집중하고 이론적인 내용은 내일 pr보낸 뒤에 공부할 예정
-
-현재상황
-
-- 대략전인 구현 과정: 템플릿 리터럴 일단 그대로 쓰고 그 다음 분리
-- 카테고리 및 서브카테고리에 따라 고유 id번호를 부여하고, 메인페이지에서 파리미터 url로 카테고리 id를 전달해 해당 카테고리 페이지를 렌더링하게 해뒀다.
-- 폴더구조 설명
-  - article:
-  - category:
-  - constatns: 정적 변수(class, id)
-  - handleStyle
-  - root:
+# 미션 구현과정 및 고민들
 
 ## [x] 파리미터 라우팅
 
@@ -54,7 +42,7 @@
 고민
 
 - 미션2: 서버없이 url과 url파리미터만 사용해서 렌더링할 수 있는지 고민해보기
-- 미션3: 서버가 있지만 이미 파라미터로 구현해서 /main, /webtoon과 같은 path는 사용하지 않기로함. 사실상 현재 서버는 없어도 라우팅에 문제 없음
+- 미션3: 서버가 있지만 이미 `파라미터`로 구현해서 /main, /webtoon과 같은 path는 사용하지 않기로함. `사실상 현재 서버는 없어도 라우팅에 문제 없음`
 
 해결
 
@@ -94,15 +82,16 @@ export async function render() {
   }
 ```
 
-## [x] node.js를 활용해 브라우저 새로고침없이 탭 이동
+## [x] node.js를 활용 목적 및 라우팅 관리
 
-- express서버에서 라우팅을 관리하기보다 돔조작과 history api조작 연습을 위해 클라이언트에서 라우팅관리
+- express서버에서 라우팅을 관리하기보다 `돔조작과 history api조작 연습을 위해 클라이언트에서 라우팅관리`
 - `app.get("/*" (_, res) => res.sendfile(, "index.html"))`이런식으로 어떤 path로 가든 html파일을렌더링하기
-- `라우팅관리`: `/, /webtoons`이런식으로 카테고리별로 path를 만들어 위의 설명대로 어떤 path로 가든 index.html을 렌더링하게할려다가 이미 url 파리미터로 구분했기 때문에 서버는 데이터 렌더링목적으로만 사용.
+- `라우팅관리`: `/, /webtoons`이런식으로 카테고리별로 path를 만들어 위의 설명대로 어떤 path로 가든 index.html을 렌더링하게할려다가 이미 url 파리미터로 구분했기 때문에 `서버는 데이터 렌더링목적으로만 사용.`
 - 카데고리와 서브카테고리에 맞는 데이터만 post요청시 보내주는 것으로 계획 중
 - front에서 레이아웃을 렌더링하는 함수(render)를 실행하기 전에 post로 categoryUid에 맞는 데이터를 server에서 가져오는 함수(preRender)만들기
 
 ```js
+// render.js - 클라
 // 렌더링하기 전 cateogoryUid에 해당하는 데이터를 서버에서 받아오기
 async function preRender(uid) {
   const body = { uid };
@@ -115,13 +104,19 @@ async function preRender(uid) {
   }).then((response) => response.json());
   return data;
 }
+// server.js - 서버
+// mocke데이터를 post로 받아올 예정
+app.post('/*', (req, res) => {
+  const { uid } = req.body;
+  res.send({ uid });
+});
 ```
 
 ## DOM 조작관련 문제들
 
-1. html 태그에서 바로 onclick 비효율적인가?
+1. [ ] html 태그에서 바로 onclick 비효율적인가?
 
-2. dom요소를 지우고 계속 새로 만드는게 나을까 innerHtml로 요소만 바꾸는게 나을까
+2. [ ] dom요소를 지우고 계속 새로 만드는게 나을까 innerHtml로 요소만 바꾸는게 나을까
 
 - innerHtml로 html > body > main에 있는 5개의 article태그를 가져와, 안에 구성만 바꿔주는 방식
 - 카테고리와 서브카데고리에 맞는 데이터를 받아서 넘겨줌.
@@ -140,6 +135,7 @@ async function preRender(uid) {
 ```
 
 ```js
+// 웹툰 카테고리 예시
 export const Webtoon = async (subCategoryUid) => {
   const subCategory = renderSubCategory(subCategoryIndexArr);
   const carousel = renderCarousel(subCategoryUid);
@@ -155,7 +151,7 @@ export const Webtoon = async (subCategoryUid) => {
   });
 };
 
-// 레이아웃은 그대로 두고 안에 내용만 article별로 변경
+//categoryUid와 subCategoryUid별 데이터를 받아 레이아웃에 전달하는 함수
 export function renderMainChildDOM({
   subCategory,
   carousel,
@@ -173,9 +169,9 @@ export function renderMainChildDOM({
 }
 ```
 
-그런데 안에 구성 렌더링을 할 때 innerHtml로 하니까 이벤트리스너 등록하기가 까다로웠음. 아래 3번에서 해결
+그런데 안에 구성 렌더링을 할 때 `innerHtml로 하니까 이벤트리스너 등록하기가 까다로웠음`. 아래 3번에서 해결
 
-3. innherHTml에 이벤트리스너 등록 어떻게 하지?
+3. [x] innherHTml에 이벤트리스너 등록 어떻게 하지?
 
 wrapper를 createElement로 만들고, wrapper안에 요소를 innerHtml로 만들었음
 
@@ -201,3 +197,12 @@ export function renderSubCategory(subCategoryIndexArr) {
   return newUl;
 }
 ```
+
+4. [ ] carousel 애니메이션 만들기
+
+- 'js carousel'과 같은 키워드 검색없이 carousel이 동작하려면 어떤 이벤트와 css요소를 사용해야할까 고민하면서 구현해보았습니다.
+- setInterval로 3초 간격으로 이미지가 넘어가게 만들었습니다
+
+문제
+
+현재 보여지는 타켓 이미지의 번호($/3: $부분)를 동적으로 관리하는데 어려움을 겪었습니다.

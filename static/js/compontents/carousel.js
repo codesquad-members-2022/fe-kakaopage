@@ -22,7 +22,7 @@ function CarouselElement({ title, views, genre, subTitle, imgUrl }) {
   return $carouselElement;
 }
 
-export function CarouselLayout({ carouselsArr, idx }) {
+export function CarouselLayout({ carouselsArr }) {
   const $carouselContentsLayout = document.createElement('div');
   $carouselContentsLayout.classList.add('l-carousel__content');
   carouselsArr.forEach((element) => {

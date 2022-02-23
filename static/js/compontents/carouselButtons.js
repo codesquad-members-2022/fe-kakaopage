@@ -1,4 +1,9 @@
-export function CarouselButtons({ idx, carouselsArrLength }) {
+export function CarouselButtons({
+  idx,
+  carouselsArrLength,
+  slideToPrev,
+  slideToNext,
+}) {
   const $buttonCatainer = document.createElement('div');
   $buttonCatainer.innerHTML = `
   <div class="c-carousel__buttons">
@@ -13,11 +18,14 @@ export function CarouselButtons({ idx, carouselsArrLength }) {
   `;
 
   $buttonCatainer.addEventListener('click', (event) => {
-    // event.preventDefault();
-    // debugger;
     const targetBtn = event.target.closest('button');
     if (targetBtn && targetBtn.matches('[data-move]')) {
-      console.log(targetBtn.dataset.move);
+      const moveType = event.target.dataset.move;
+      if (moveType == 'next') {
+        slideToNext();
+      } else {
+        slideToPrev();
+      }
     }
   });
   return $buttonCatainer;
