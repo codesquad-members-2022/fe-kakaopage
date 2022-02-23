@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 app.get("/", function (req, res) {
-  res.render("kakopageMain.html");
+  res.render("/kakopageMain.html");
 });
 
 var server = app.listen(3000, function () {

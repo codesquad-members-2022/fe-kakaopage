@@ -1,8 +1,12 @@
-import { datas } from "/FE/FE01-html/js/data.js";
+import datas from "./data.js";
+import { renderWebtoonGenreBar } from "./section.js";
 const weekdayContents = datas.weekdayContents;
 const eventContents = datas.eventContents;
 const sectionContents = datas.sectionContents;
-
+async function init() {
+  renderWebtoonGenreBar();
+}
+init();
 function changeTabsColor(target) {
   const Tabs = target.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {
