@@ -14,6 +14,7 @@ export const handleCarousel = () => {
 
     let curIndex = 1;
     let throttingTimer;
+    let autoTimer;
 
     carouselList.appendChild(firstChild.cloneNode(true));
     carouselList.insertBefore(lastChild.cloneNode(true), carouselList.firstElementChild);
@@ -22,48 +23,66 @@ export const handleCarousel = () => {
     carouselList.style.transform = `translateX(-${carouselWidth * curIndex}px)`;
     carouselTotalCount.innerHTML = carouselLen;
 
+    const nextBtnClick = () => {
+        throttingTimer = null;
+        if(curIndex <= carouselLen) {
+            carouselList.style.transition = '400ms';
+            carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
+        }
+
+        if(curIndex === carouselLen){
+            setTimeout(() => {
+                carouselList.style.transition = '0ms';
+                carouselList.style.transform = `translateX(-${carouselWidth}px)`;
+            }, 400);
+            curIndex = 1;
+            carouselCurCount.innerHTML = curIndex;
+            return;
+        }
+        curIndex += 1;
+        carouselCurCount.innerHTML = curIndex;
+    }
+
+    const prevBtnClick = () => {
+        throttingTimer = null;
+        if(curIndex >= 0) {
+            carouselList.style.transition = 'transform 0.4s ease-in-out';
+            carouselList.style.transform = `translateX(-${carouselWidth * (--curIndex)}px)`;
+        }
+
+        if(curIndex === 0) {
+            setTimeout(() => {
+                carouselList.style.transition = '0ms';
+                carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
+            }, 400);
+            curIndex = carouselLen;
+        }
+        carouselCurCount.innerHTML = curIndex;
+    }
+    
+    const autoPlay = () => {
+        autoTimer = setInterval(nextBtnClick, 2000);
+    }
+
     rightArrow.addEventListener("click", () => {
+        clearInterval(autoTimer);
         if(!throttingTimer) {
             throttingTimer = setTimeout(() => {
-                throttingTimer = null;
-                if(curIndex <= carouselLen) {
-                    carouselList.style.transition = '400ms';
-                    carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
-                }
-
-                if(curIndex === carouselLen){
-                    setTimeout(() => {
-                        carouselList.style.transition = '0ms';
-                        carouselList.style.transform = `translateX(-${carouselWidth}px)`;
-                    }, 400);
-                    curIndex = 1;
-                    carouselCurCount.innerHTML = curIndex;
-                    return;
-                }
-                curIndex += 1;
-                carouselCurCount.innerHTML = curIndex;
+                nextBtnClick();
+                autoPlay();
             }, 400);
         }
     });
 
     leftArrow.addEventListener("click", () => {
+        clearInterval(autoTimer);
         if(!throttingTimer) {
             throttingTimer = setTimeout(() => {
-                throttingTimer = null;
-                if(curIndex >= 0) {
-                    carouselList.style.transition = 'transform 0.4s ease-in-out';
-                    carouselList.style.transform = `translateX(-${carouselWidth * (--curIndex)}px)`;
-                }
-
-                if(curIndex === 0) {
-                    setTimeout(() => {
-                        carouselList.style.transition = '0ms';
-                        carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
-                    }, 400);
-                    curIndex = carouselLen;
-                }
-                carouselCurCount.innerHTML = curIndex;
+                prevBtnClick();
+                autoPlay();
             }, 400);
         }
     });
+
+    autoPlay();
 }
