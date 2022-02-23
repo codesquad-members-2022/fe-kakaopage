@@ -1,7 +1,6 @@
 const MainBanner = data => {
   const mainBanner = document.createElement('div');
-  mainBanner.classList.add('mainbox');
-  mainBanner.classList.add('main-banner');
+  mainBanner.classList.add('mainbox', 'main-banner');
   mainBanner.innerHTML = `
   <ul class="main-banner__list">
   ${createMainBannerItem(data)}

@@ -1,7 +1,6 @@
 const ScrollBanner = () => {
   const scrollBanner = document.createElement('div');
-  scrollBanner.classList.add('mainbox');
-  scrollBanner.classList.add('scroll-banner');
+  scrollBanner.classList.add('mainbox', 'scroll-banner');
   scrollBanner.innerHTML = `
     <button type="button" class="scroll-banner__btn btn--prev">
     <img

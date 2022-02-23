@@ -1,7 +1,6 @@
 const DayBar = () => {
   const dayBar = document.createElement('nav');
-  dayBar.classList.add('mainbox');
-  dayBar.classList.add('main-day');
+  dayBar.classList.add('mainbox', 'main-day');
 
   dayBar.innerHTML = `
     <ul class="day__list">
