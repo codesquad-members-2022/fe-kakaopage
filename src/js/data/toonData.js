@@ -1,7 +1,7 @@
 const data = {
   0: {
     title: '도굴왕',
-    type: '소년',
+    genre: 'boy',
     img: '//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2',
     score: 10.0,
     reader: 201.8,
@@ -17,7 +17,7 @@ const data = {
   },
   1: {
     title: '이 용사 실화냐',
-    type: '소년',
+    genre: 'boy',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=eH0mbP/hzp2m3kTd1/vYzzIRp1boG2MeWl3AFUhk&filename=th2',
     score: 10.0,
     reader: 17.1,
@@ -33,7 +33,7 @@ const data = {
   },
   2: {
     title: '막내 황녀님',
-    type: '로맨스',
+    genre: 'romance',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=cppzaC/hzp2ifvC1J/IAy6e8p17VpMjWaIfr3bkK&filename=th2',
     score: 10.0,
     reader: 118.1,
@@ -49,7 +49,7 @@ const data = {
   },
   3: {
     title: '병약한? 남편의 계약 아내',
-    type: '로맨스',
+    genre: 'romance',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=bujpXE/hzp2dkXhhM/Mu7WpXkD00LxrI4448tPEK&filename=th2',
     score: 10.0,
     reader: 27.4,
@@ -65,7 +65,7 @@ const data = {
   },
   4: {
     title: '궁귀검신',
-    type: '소년',
+    genre: 'boy',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=biG4Nt/hzb7sXLBzm/Spy2JkLBLu3zUwNl9TaznK&filename=th2',
     score: 10.0,
     reader: 51.3,
@@ -81,7 +81,7 @@ const data = {
   },
   5: {
     title: '다정한 그대를 지키는 방법',
-    type: '로맨스',
+    genre: 'romance',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=cRT27X/hzb7xkvb7b/Aqq7Dg18kl4JNephTEoqXK&filename=th2',
     score: 10.0,
     reader: 88.9,
@@ -97,7 +97,7 @@ const data = {
   },
   6: {
     title: '빈껍데기 공작부인',
-    type: '로맨스',
+    genre: 'romance',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=qnE7v/hzb7xKF0sd/QKoyuFgYDkf53tKkWcm2yk&filename=th2',
     score: 10.0,
     reader: 146.9,
@@ -113,7 +113,7 @@ const data = {
   },
   7: {
     title: '로열 셰프 영애님',
-    type: '로맨스',
+    genre: 'romance',
     img: '//dn-img-page.kakao.com/download/resource?kid=hczXh/hzmU2fMnub/cOpubbT9K34zgxegMOSmhk&filename=th2',
     score: 9.9,
     reader: 90.4,
@@ -129,7 +129,7 @@ const data = {
   },
   8: {
     title: '악녀는 두 번 산다',
-    type: '로맨스',
+    genre: 'romance',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=buFJDf/hzb7rKB44w/1dAWermHRTJPW3iLyVGlIk&filename=th2',
     score: 10.0,
     reader: 104.8,
@@ -145,7 +145,7 @@ const data = {
   },
   9: {
     title: '프로야구생존기',
-    type: '드라마',
+    genre: 'drama',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=mLxer/hyZ8xiGrsa/lo9hJND6wYN5T51AklU2V0&filename=th2',
     score: 9.9,
     reader: 17.8,
@@ -161,7 +161,7 @@ const data = {
   },
   10: {
     title: '던전 리셋',
-    type: '소년',
+    genre: 'boy',
     img: '//dn-img-page.kakao.com/download/resource?kid=Gyr9T/hyzcEIxXrY/IOjoLAwzHAuikkDDsMGAe0&filename=th1',
     score: 9.9,
     reader: 71.4,
@@ -177,7 +177,7 @@ const data = {
   },
   11: {
     title: '지옥에서 독식',
-    type: '소년',
+    genre: 'boy',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=pw32S/hzhOgKyZGa/Sn5Z1dlG6XVyzgLM3vikPK&filename=th2',
     score: 8.4,
     reader: 17.3,
@@ -193,7 +193,7 @@ const data = {
   },
   12: {
     title: '로드 오브 머니',
-    type: '드라마',
+    genre: 'drama',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=4pT3F/hyLi76skGR/u3m5gW9VYP1mP6xNTTAafk&filename=th2',
     score: 9.9,
     reader: 49.3,
@@ -209,7 +209,7 @@ const data = {
   },
   13: {
     title: '은동은동+옹동스',
-    type: '드라마',
+    genre: 'drama',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=cgFsdM/hyqDwq9N9Z/PVMVvlVDN6YuDepkjUGrAk&filename=th1',
     score: 9.5,
     reader: 46.1,
@@ -225,7 +225,7 @@ const data = {
   },
   14: {
     title: '씨름의 희열',
-    type: '드라마',
+    genre: 'drama',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=bwkGCN/hzb7AnZjT5/uRPM6CY6zzMSX4VbYqxSZK&filename=th1',
     score: 8.5,
     reader: 11.1,
@@ -241,7 +241,7 @@ const data = {
   },
   15: {
     title: '닥터 최태수',
-    type: '드라마',
+    genre: 'drama',
     img: 'https://dn-img-page.kakao.com/download/resource?kid=bKYnUU/hyVkJgE0EE/uiEchjrue9WW9P3htoKnX1&filename=th1',
     score: 10.0,
     reader: 271.3,
