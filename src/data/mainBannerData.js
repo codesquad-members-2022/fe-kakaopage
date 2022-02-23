@@ -33,7 +33,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=b8lhpM/hzp2jZTeQq/idpscnCSjQd93wOKxhvov1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '여우신랑',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -63,7 +63,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=luwjD/hyVkMjKYTy/ocIYcV1pYCo6MzPpEYj8tK',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '엑스텐',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -93,7 +93,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=bPyki0/hzhOfLhfRJ/Hg2KsU5P8odGmpNDG74Rt1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '리플: 버서커',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -123,7 +123,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '파멸의 공주님',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -153,7 +153,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': '	https://dn-img-page.kakao.com/download/resource?kid=dAy72e/hzmU1BJ9rk/oq58nqY7JDjcUXEjVIpfs1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '파멸의 공주님',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -183,7 +183,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=cWdaE/hzp2nVyWEE/RnGrsOQNnGo9EVqNNoeuk1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '엑스텐',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -213,7 +213,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': 'https://dn-img-page.kakao.com/download/resource?kid=d99Egu/hzp2fiEdy2/pMPdXoXEcu1TzjHY7TTVm1',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '리플: 버서커',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },
@@ -243,7 +243,7 @@ export const mainBaneerData = {
         {
             'order': '1',
             'src': '	https://dn-img-page.kakao.com/download/resource?kid=bieQhm/hzp2mI9n4A/9aqnCcDnI3LGkjcXFC8n00',
-            'title': '당신의 밤을 나에게 주오',
+            'title': '파멸의 공주님',
             'description': '"너도 괴물이구나?"',
             'tags': {'status': "up", 'free': 'true', 'type': '웹툰','views': '11.7만명'}    
         },

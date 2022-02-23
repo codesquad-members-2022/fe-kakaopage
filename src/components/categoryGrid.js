@@ -1,4 +1,5 @@
 import { gridData } from "../data/categoryGridData.js";
+import { icons } from "../data/icons.js";
 
 export const renderCategoryGrid = (genre) => {
   const categoryGrid = document.createElement('div');
