@@ -71,3 +71,11 @@
 .pd-20 {
   padding: 20px;
 }
+.change-color {
+  font-weight: bolder;
+  color: #ff0000;
+}
+.border-color {
+  border: 3px solid var(--yellow-color);
+  border-radius: 15px;
+}
