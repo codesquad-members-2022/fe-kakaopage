@@ -1,4 +1,4 @@
-import { renderer } from './view.js';
+import { renderer } from './renderer.js';
 
 const loader = {
   // 홈 - 웹툰

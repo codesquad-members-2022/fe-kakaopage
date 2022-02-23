@@ -1,4 +1,4 @@
-import { renderer } from './view.js';
+import { renderer } from './renderer.js';
 import { loadContentFromGnb, addHandlerOnNav } from './handler.js';
 
 const init = () => {

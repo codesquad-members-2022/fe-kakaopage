@@ -1,4 +1,4 @@
-import { renderer } from './view.js';
+import { renderer } from './renderer.js';
 import { loader } from './loader.js';
 import {
   DATA_WEBTOON,
