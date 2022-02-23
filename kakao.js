@@ -5,14 +5,14 @@ const weekCategory = document.querySelector(".tab .main_category ul");
 const mainCategory = document.querySelector(".main_category ul");
 
 function showMain(){
-    function mainContent(event){
+    function mainContentClickHandler(event){
         if(event.target.tagName !=="LI")return;
         else{
             mainCategory.querySelector(".sub_active").classList.remove("sub_active");
             event.target.classList.add("sub_active");
         }
     }
-    mainCategory.addEventListener("click",mainContent);
+    mainCategory.addEventListener("click",mainContentClickHandler);
 }
 
 function showDayWebtoon(){
