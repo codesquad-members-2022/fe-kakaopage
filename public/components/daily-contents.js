@@ -60,7 +60,7 @@ const createDailyContents = () => {
     />
   </div>
 
-  <div class="grid-5col">
+  <div class="grid-5col mt--m">
   ${webtoons.join("")}
   </div>
 </div>`;

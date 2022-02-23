@@ -100,7 +100,7 @@ const createGenreBlock = (genre) => {
       />
     </svg>
   </header>
-  <div class="grid-5col">
+  <div class="grid-5col mt--m">
   ${webtoons.join("")}
   </div>
 </div>`;

@@ -46,7 +46,7 @@ const createDaysBlock = () => {
       <li data-day='7'>완결</li>
     </ul>
   </nav>
-  <div id="daysTop" class="grid-5col">
+  <div id="daysTop" class="grid-5col mt--m">
     ${webtoons.join("")}
   </div>
 </div>`;

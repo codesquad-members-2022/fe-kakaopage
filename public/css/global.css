@@ -55,6 +55,10 @@ nav li {
   margin-left: 10px;
 }
 
+.mt--m {
+  margin-top: 15px;
+}
+
 .container {
   background-color: var(--white);
   margin-bottom: 15px;
@@ -81,7 +85,6 @@ a {
 }
 
 .grid-5col {
-  margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
