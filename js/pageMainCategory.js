@@ -9,7 +9,6 @@ import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 
 import setDayFilter from './dayFilter/setDayFilter.js';
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
-import drawSlideBtn from './slide/drawSlideBtn.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreviewEl from './preview/createPreviewEl.js';
@@ -21,10 +20,8 @@ const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
 const ELEMENT_WIDTH = 720;
-const carouselSlider = new CarouselSlider({
-  elementWidth: ELEMENT_WIDTH,
-  createItemElFunc: createPreviewEl,
-});
+const PREV_BTN_SELECTOR = '.prev-btn';
+const NEXT_BTN_SELECTOR = '.next-btn';
 
 const curMainCategoryIdx = {
   value: 2,
@@ -41,10 +38,14 @@ const curMainCategoryIdx = {
 
 const timer = {
   timerId: null,
-  setTimer(func, sec) {
-    this.timerId = setInterval(func, sec * 1000);
+  setTimer(sec) {
+    this.timerId = setInterval(() => {
+      const nextBtn = document.querySelector(NEXT_BTN_SELECTOR);
+      nextBtn.click();
+    }, sec * 1000);
   },
   clearTimer() {
+    if (!this.exists()) return;
     clearInterval(this.timerId);
     this.timerId = null;
   },
@@ -52,6 +53,14 @@ const timer = {
     return !!this.timerId;
   },
 };
+
+const carouselSlider = new CarouselSlider({
+  elementWidth: ELEMENT_WIDTH,
+  createItemElFunc: createPreviewEl,
+  prevBtnEl: document.querySelector(PREV_BTN_SELECTOR),
+  nextBtnEl: document.querySelector(NEXT_BTN_SELECTOR),
+  timer: timer,
+});
 
 const days = {
   0: '일',
@@ -85,7 +94,6 @@ const initMainPage = () => {
   setTagListEl(defaultCategoryName);
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
   setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
-  drawSlideBtn();
 };
 
 initMainPage();
