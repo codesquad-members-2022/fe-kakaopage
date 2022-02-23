@@ -72,37 +72,39 @@
         </nav>
     </header>
     <main class="main">
+        <!-- 최상단 네비게이션 바 -->
         <nav class="main-nav center">
             <ul class="main-nav__list center">
-                <li class="main-nav__item main-nav__item--selected">
+                <li class="main-nav__item main-nav__item--selected" data-data-key="home">
                     <a href="#">홈</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="daily">
                     <a href="#">요일연재</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="webToon">
                     <a href="#">웹툰</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="boy">
                     <a href="#">소년</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="drama">
                     <a href="#">드라마</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="romance">
                     <a href="#">로맨스</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="rofan">
                     <a href="#">로판</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="action">
                     <a href="#">액션무협</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item" data-data-key="bl">
                     <a href="#">BL</a>
                 </li>
             </ul>
         </nav>
+        <!-- 메인 베너 -->
         <section class="main-banner section">
             <div class="banner">
                 <img src="resources/images/thumbnail/main_banner" alt="메인배너 이미지" class="banner__image">
@@ -139,230 +141,7 @@
                 </div>
             </div>
         </section>
-        <section class="contents_menu section">
-            <div class="contents_menu__container center">
-                <a href="#" class="contents_menu__item contents_menu__item--up center">
-                    <span class="contents_menu__title">오늘 UP</span>
-                    <div class="count_badge">
-                        <span class="count_badge__text border__ellipse">229</span>
-                    </div>
-                </a>
-                <a href="#" class="contents_menu__item contents_menu__item--new center">
-                    <span class="contents_menu__title">오늘 신작</span>
-                    <div class="count_badge">
-                        <span class="count_badge__text border__ellipse">1</span>
-                    </div>
-                    <a href="#" class="contents_menu__item contents_menu__item--origin center">
-                        <span class="contents_menu__title">오리지널</span>
-                        <div class="count_badge">
-                            <span class="count_badge__text border__ellipse">2,336</span>
-                        </div>
-                    </a>
-                    <a href="#" class="contents_menu__item contents_menu__item--end center">
-                        <span class="contents_menu__title">완결까지 정주행</span>
-                    </a>
-                    <a href="#" class="contents_menu__item contents_menu__item--event center">
-                        <span class="contents_menu__title">독립운동가 웹툰</span>
-                    </a>
-                    <a href="#" class="contents_menu__item contents_menu__item--ranking center">
-                        <span class="contents_menu__title">오늘 랭킹</span>
-                        <div class="count_badge">
-                            <span class="count_badge__text border__ellipse">1위</span>
-                        </div>
-                    </a>
-            </div>
-        </section>
-        <section class="sub-banner section">
-            <div class="banner center">
-                <img src="resources/images/thumbnail/sub_banner.png" alt="서브배너 이미지" class="sub-banner__image">
-                <div class="banner__paging z-index_1">
-                    <img src="resources/images/icon/ic-paging-back-nor.svg" alt="메인배너 이전버튼" class="banner__paging--icon">
-                    <img src="resources/images/icon/ic-paging-next-nor.svg" alt="메인배너 다음버튼" class="banner__paging--icon">
-                </div>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">요일연재 TOP</span>
-                <span class="contents-container__comic-count">(1,626)</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <nav class="week-nav">
-                <ul class="week-nav__list center">
-                    <li class="week-nav__item week-nav__item-selected" data-data-key="mon">월</li>
-                    <li class="week-nav__item" data-data-key="tue">화</li>
-                    <li class="week-nav__item" data-data-key="wed">수</li>
-                    <li class="week-nav__item" data-data-key="thu">목</li>
-                    <li class="week-nav__item" data-data-key="fri">금</li>
-                    <li class="week-nav__item" data-data-key="sat">토</li>
-                    <li class="week-nav__item" data-data-key="sun">일</li>
-                    <li class="week-nav__item" data-data-key="end">완결</li>
-                </ul>
-            </nav>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-week"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">기대신작 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="mini-banner">
-                <ul class="banner-list center">
-                    <li class="banner-item">
-                        <img src="resources/images/thumbnail/expect_new_1" alt="메인배너 이미지">
-                    </li>
-                    <li class="banner-item">
-                        <img src="resources/images/thumbnail/expect_new_1" alt="메인배너 이미지">
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">로맨스 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-romance"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">로판 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-rofan"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">드라마 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-drama"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">BL/GL TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-bl"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">소년 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-boy"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">액션무협 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="comic-list center" id="list-action"> <!-- li comic data --> </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">일간 랭킹 TOP</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main">
-                <ul class="rank__list center">
-                    <il class="rank__item center">
-                        <span class="rank__item--ranking">1</span>
-                        <div class="rank__item--image">
-                            <img src="resources/images/thumbnail/resource_today_2.jpeg" alt="일간 랭킹 1위">
-                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
-                        </div>
-                        <div class="rank__item--info">
-                            <span class="rank__item--title">남편님, 다시 결혼해주세요!</span>
-                            <div class="rank__item--detail center">
-                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
-                                <span class="comic-list__info--reader">31만명</span>
-                                <div class="separator"></div>
-                                <span>기다무웹툰</span>
-                                <div class="separator"></div>
-                                <span>로판</span>
-                                <div class="separator"></div>
-                                <span>지은설,연홍,세리안</span>
-                            </div>
-                            <span class="rank__item--week">화 연재</span>
-                        </div>
-                    </il>
-                    <il class="rank__item center">
-                        <span class="rank__item--ranking">2</span>
-                        <div class="rank__item--image">
-                            <img src="resources/images/thumbnail/resource_today_1.jpeg" alt="일간 랭킹 2위">
-                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
-                        </div>
-                        <div class="rank__item--info">
-                            <span class="rank__item--title">이번 생은 가주가 되겠습니다</span>
-                            <div class="rank__item--detail center">
-                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
-                                <span class="comic-list__info--reader">122.7만명</span>
-                                <div class="separator"></div>
-                                <span>기다무웹툰</span>
-                                <div class="separator"></div>
-                                <span>로판</span>
-                                <div class="separator"></div>
-                                <span>앤트스튜디오,몬,김로아</span>
-                            </div>
-                            <span class="rank__item--week">월 연재</span>
-                        </div>
-                    </il>
-                    <il class="rank__item center">
-                        <span class="rank__item--ranking">3</span>
-                        <div class="rank__item--image">
-                            <img src="resources/images/thumbnail/resource_today_3.jpeg" alt="일간 랭킹 3위">
-                            <img src="resources/images/icon/badge_time.png" alt="연재 아이콘" class="badge_time z-index_1">
-                        </div>
-                        <div class="rank__item--info">
-                            <span class="rank__item--title">남주를 주웠더니 남편이 생겨버렸다</span>
-                            <div class="rank__item--detail center">
-                                <img src="resources/images/icon/icon_read_count.png" alt="독자 아이콘" class="icon-reader">
-                                <span class="comic-list__info--reader">51.2만명</span>
-                                <div class="separator"></div>
-                                <span>기다무웹툰</span>
-                                <div class="separator"></div>
-                                <span>로판</span>
-                                <div class="separator"></div>
-                                <span>마리씨,서촌,초암</span>
-                            </div>
-                            <span class="rank__item--week">원 연재</span>
-                        </div>
-                    </il>
-                </ul>
-            </div>
-        </section>
-        <section class="contents-container section center">
-            <div class="contents-container__header center">
-                <span class="contents-container__title">추천 이벤트</span>
-                <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
-            </div>
-            <div class="contents-container__main center">
-                <div class="event-banner center">
-                    <img src="resources/images/thumbnail/resource_event_banner.png" alt="이벤트 배너"class="event-banner_image">
-                    <div class="event-banner_order z-index_1">
-                        <span>◁ 4 / 8 ▷</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <button class="btn__app">
-                <img src="resources/images/thumbnail/appDownload.png" alt="카카오페이지 앱 다운로드 버튼">
-        </button>
+        <section class="custom"><!-- 커스텀 --></section>
     </main>
     <footer class="footer">
         <div class="footer__left">
