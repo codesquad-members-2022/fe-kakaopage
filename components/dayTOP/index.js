@@ -30,8 +30,6 @@ const el = `
 ${category}
 <style>${style}</style>
 <div class="day-top row">
-${Array.from({ length: 10 })
-  .map((x) => workSmall)
-  .join("")}
+  ${Array.from({ length: 10 }).reduce((acc) => acc + workSmall, "")}
 </div>
 `;

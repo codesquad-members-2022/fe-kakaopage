@@ -9,13 +9,15 @@ export function createRecommend(buttonNames) {
     <div class="recommend white col">
       <div class="recommend__container">
         ${buttonNames
-          .map((row) => {
-            return `<div class="row">${row
-              .map((btnName) => {
-                return `<button class="btn recommend__btn">${btnName}</button>`;
-              })
-              .join("")}</div>`;
-          })
+          .map(
+            (row) =>
+              `<div class="row">${row.reduce(
+                (acc, btnName) =>
+                  acc +
+                  `<button class="btn recommend__btn">${btnName}</button>`,
+                ""
+              )}</div>`
+          )
           .join("")}
       </div>
     </div>

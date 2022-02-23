@@ -7,7 +7,7 @@ export function createCategory(categories, type) {
   return `
   <div class="category ${type}">
     <ul class="row">
-      ${categories.map((category) => `<li>${category}</li>`).join("")}
+    ${categories.reduce((acc, category) => acc + `<li>${category}</li>`, "")}
     </ul>
   </div>
   `;
