@@ -1,0 +1,38 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 720px;
+}
+
+.container {
+  width: 720px;
+  overflow: hidden;
+  border: 2px solid #ffd200;
+}
+
+.slide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #ffd200;
+}
+
+button:active {
+  background-color: #ffd999;
+}
+
+.buttons {
+  display: flex;
+  width: 720px;
+  justify-content: space-between;
+}

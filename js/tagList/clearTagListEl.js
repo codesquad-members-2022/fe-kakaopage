@@ -1,4 +1,4 @@
-const clearTagList = () => {
+const clearTagListEl = () => {
   const main = document.querySelector('.page-main');
   const tagListContainer = document.querySelector('.tag-list__container');
 
@@ -6,4 +6,4 @@ const clearTagList = () => {
   main.removeChild(tagListContainer.parentElement);
 };
 
-export default clearTagList;
+export default clearTagListEl;

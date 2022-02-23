@@ -1,0 +1,2392 @@
+{
+  "홈": {
+    "월": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/8클래스마법사.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "8클래스 마법사",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "도굴왕",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "로열셰프 영애님",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/24분의1로맨스.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "24분의 1 로맨스",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "녹음의관",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/롱리브더킹.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "롱리브더킹",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "샤크",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/막내황녀님.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "막내 황녀님",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/무당기협.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "무당기협",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "화": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "환골탈태",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "샤크",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "유리의 성",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "나혼자만 레벨업",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "묵향",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "수": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "독고3",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/쪽쪽이.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "쪽쪽이를 주세요",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/무당기협.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "무당기협",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "샤크",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/압도적그대.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "압도적 그대",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/죽음대신결혼.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "죽음 대신 결혼",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/8클래스마법사.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "8클래스 마법사",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "도굴왕",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "목": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "녹음의 관",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "묵향",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "사내 맞선",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이 용사 실화냐",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "환골탈태",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "독고3",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "니니툰즈",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "도굴왕",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "금": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/롱리브더킹.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "롱리브더킹",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/폭군을길들이고.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "폭군을 길들이고 도망쳐버렸다",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "이 용사 실화냐",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "유리의 성",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/세화.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "세화, 가는 길",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "신이라 불리운 사나이",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뽑기로강해진.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "뽑기로 강해진 SSS급 헌터",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "로열셰프 영애님",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/압도적그대.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "압도적 그대",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "토": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "독고3",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "녹음의 관",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/무당기협.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "무당기협",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/8클래스마법사.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "8클래스 마법사",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "샤크",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/압도적그대.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "압도적 그대",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "로열 셰프 영애님",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/세화.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "세화, 가는 길",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "일": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/남주의연적이.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "남주의 연적이 되어버렸다",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "샤크",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "유리의 성",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "나혼자만 레벨업",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "묵향",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "전체": [
+      {
+        "coverType": "normal",
+        "contentsTitle": "요일 연재 TOP",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "녹음의 관",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "묵향",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "사내 맞선",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이 용사 실화냐",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "환골탈태",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "독고3",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "니니툰즈",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "도굴왕",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ]
+  },
+  "요일연재": {
+    "월": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "유리의 성",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "샤크",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "유리의 성",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "나혼자만 레벨업",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "묵향",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "화": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "신이라 불리운 사나이",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/롱리브더킹.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "롱리브더킹",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "독고3",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "묵향 다크레이디",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/세화.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "세화, 가는 길",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/남주의연적이.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "남주의 연적이 되어버렸다",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "녹음의 관",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/압도적그대.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "압도적 그대",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/24분의1로맨스.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "24분의 1 로맨스",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "수": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/막내황녀님.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "막내 황녀님",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "도굴왕",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/막내황녀님.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "막내 황녀님",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "샤크",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/세화.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "세화",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "신이라 불리운 사나이",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뽑기로강해진.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "뽑기로 강해진 SSS급 헌터",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/쪽쪽이.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "쪽쪽이를 주세요",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "환골탈태",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "목": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "샤크",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "유리의 성",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "나혼자만 레벨업",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "뒤끝작렬",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/묵향.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "묵향",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "금": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/뽑기로강해진.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "뽑기로 강해진 SSS급 헌터",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/폭군을길들이고.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "폭군을 길들이고 도망쳐버렸다",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "사내 맞선",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/쪽쪽이.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "쪽쪽이를 주세요",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "로열 셰프 영애님",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "이 용사 실화냐",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "신이라 불리운 사나이 [완전판]",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "독고3",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "토": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "환골탈태",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "로열 셰프 영애님",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "독고3",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "니니툰즈",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "나 혼자만 레벨업",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/남주의연적이.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "남주의 연적이 되어버렸다",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/도굴왕.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "도굴왕",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "이 용사 실화냐",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "환골탈태",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/롱리브더킹.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "롱리브더킹",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "일": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/8클래스마법사.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "8 클래스 마법사",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "나 혼자만 레벨업",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/24분의1로맨스.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "24분의 1 로맨스",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "니니툰즈",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/녹음의관.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "녹음의 관",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뽑기로강해진.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "뽑기로 강해진 SSS급 헌터",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "환골탈태",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "사내 맞선",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "샤크",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/무당기협.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "무당기협",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ],
+    "전체": [
+      {
+        "coverType": "normal",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/뽑기로강해진.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "뽑기로 강해진 SSS급 헌터",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/폭군을길들이고.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "폭군을 길들이고 도망쳐버렸다",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "사내 맞선",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 4,
+            "score": 9.6,
+            "title": "템빨",
+            "state": "update",
+            "subscriberCount": 159800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/쪽쪽이.png",
+            "ranking": 5,
+            "score": 9.5,
+            "title": "쪽쪽이를 주세요",
+            "state": "update",
+            "subscriberCount": 590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/로열셰프영애님.png",
+            "ranking": 6,
+            "score": 9.1,
+            "title": "로열 셰프 영애님",
+            "state": "update",
+            "subscriberCount": 398200,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 7,
+            "score": 8.6,
+            "title": "이 용사 실화냐",
+            "state": "update",
+            "subscriberCount": 790800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 8,
+            "score": 9.2,
+            "title": "신이라 불리운 사나이 [완전판]",
+            "state": "update",
+            "subscriberCount": 3590800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 9,
+            "score": 8.3,
+            "title": "이그레트",
+            "state": "update",
+            "subscriberCount": 1190800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 10,
+            "score": 9.4,
+            "title": "독고3",
+            "state": "update",
+            "subscriberCount": 19000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화"]
+          }
+        ]
+      }
+    ]
+  },
+  "웹툰": {
+    "월": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/독고3.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "독고3",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "환골탈태",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/신이라불리운사나이.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "신이라 불리운 사나이",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "화": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/나혼자만레벨업.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "나혼자만레벨업",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/8클래스마법사.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "8클래스마법사",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/남주의연적이.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "남주의 연적이 되어버렸다",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "수": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/막내황녀님.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "막내 황녀님",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/롱리브더킹.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "롱리브더킹",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/샤크.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "샤크",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "목": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/사내맞선.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "사내 맞선",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/유리의성.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "유리의 성",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/환골탈태.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "환골탈태",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "금": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/이용사실화냐.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "이 용사 실화냐",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/세화.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "세화",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "죽음 대신 결혼",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "토": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/니니툰즈.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "니니툰즈",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/뒤끝작렬.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "뒤끝작렬",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/압도적그대.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "압도적 그대",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "일": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/하필이면.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "하필이면 까마귀가 되어버렸다",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/쪽쪽이.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "쪽쪽이를 주세요",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/템빨.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "템빨",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ],
+    "전체": [
+      {
+        "coverType": "wide",
+        "webtoonArr": [
+          {
+            "coverSrc": "./assets/data/cover/남주의연적이.png",
+            "ranking": 1,
+            "score": 9.7,
+            "title": "남주의 연적이 되어버렸다",
+            "state": "new",
+            "subscriberCount": 1390999,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["수", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/이그레트.png",
+            "ranking": 2,
+            "score": 9.8,
+            "title": "이그레트",
+            "state": "new",
+            "subscriberCount": 780000,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["월", "목"]
+          },
+          {
+            "coverSrc": "./assets/data/cover/하필이면.png",
+            "ranking": 3,
+            "score": 9.9,
+            "title": "하필이면 까마귀가 되어버렸다",
+            "state": "new",
+            "subscriberCount": 4510800,
+            "badge": "waitfree-badge",
+            "summary": "여기도 '그 자식'이 다 털어갔냐?",
+            "tags": ["기다무웹툰", "로맨스", "아현,유한려"],
+            "days": ["화", "목"]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,83 +1,155 @@
 {
-  "홈": {
-    "previewCoverPath": "./data/preview/내가죽였다.png",
-    "title": "내가 죽였다",
-    "class": "웹툰",
-    "state": "event",
-    "waitfree": false,
-    "subscriber": 203951,
-    "summary": "누가 아군이고, 누가 적인가."
-  },
-  "요일연재": {
-    "previewCoverPath": "./data/preview/지옥에서독식.png",
-    "title": "지옥에서 독식",
-    "class": "웹툰",
-    "state": "update",
-    "waitfree": true,
-    "subscriber": 173357,
-    "summary": "난이도: 지옥 종말의 별에 진입합니다"
-  },
-  "웹툰": {
-    "previewCoverPath": "./data/preview/0번째마법사.png",
-    "title": "0번째 마법사",
-    "class": "웹툰",
-    "state": "hot",
-    "waitfree": false,
-    "subscriber": 114409,
-    "summary": "천재 마법사의 몰락과 대재앙"
-  },
-  "소년": {
-    "previewCoverPath": "./data/preview/따봉으로레벨업.png",
-    "title": "따봉으로 레벨업",
-    "class": "웹툰",
-    "state": "update",
-    "waitfree": true,
-    "subscriber": 151002,
-    "summary": "따봉으로 강해지는 최강헌터 엄지척!"
-  },
-  "드라마": {
-    "previewCoverPath": "./data/preview/롱리브더킹.png",
-    "title": "롱리브더킹",
-    "class": "웹툰",
-    "state": "event",
-    "waitfree": false,
-    "subscriber": 2466721,
-    "summary": "왕의 귀환! 장세출이 돌아왔다!"
-  },
-  "로맨스": {
-    "previewCoverPath": "./data/preview/사장님의특별지시.png",
-    "title": "사장님의 특별지시",
-    "class": "웹툰",
-    "state": "event",
-    "waitfree": true,
-    "subscriber": 409581,
-    "summary": "발렌타인기념, 한시한편+경품 이벤트!"
-  },
-  "로판": {
-    "previewCoverPath": "./data/preview/남편님다시결혼해주세요.png",
-    "title": "남편님, 다시 결혼해 주세요!",
-    "class": "웹툰",
-    "state": "event",
-    "waitfree": false,
-    "subscriber": 220501,
-    "summary": "웹툰 런칭 기념, 이벤트 중!"
-  },
-  "액션무협": {
-    "previewCoverPath": "./data/preview/황성독보천하컬렉션.png",
-    "title": "황성 독보천하 컬렉션",
-    "class": "웹툰",
-    "state": "hot",
-    "waitfree": true,
-    "subscriber": 16000,
-    "summary": "부잣집 도련님, 개방파 입문?"
-  },
-  "BL": {
-    "previewCoverPath": "./data/preview/플러그인.png",
-    "title": "플러그 인",
-    "class": "웹툰",
-    "state": "new",
-    "waitfree": false,
-    "subscriber": 54099,
-    "summary": "수학여행에서 본 여자애가, 너라고?!"
-  }
+  "홈": [
+    {
+      "previewCoverPath": "./assets/data/preview/지옥에서독식",
+      "title": "지옥에서 독식",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 173357,
+      "summary": "난이도: 지옥 종말의 별에 진입합니다"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/내가죽였다",
+      "title": "내가 죽였다",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 203951,
+      "summary": "누가 아군이고, 누가 적인가."
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
+      "title": "따봉으로 레벨업",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 151002,
+      "summary": "따봉으로 강해지는 최강헌터 엄지척!"
+    }
+  ],
+  "요일연재": [
+    {
+      "previewCoverPath": "./assets/data/preview/지옥에서독식",
+      "title": "지옥에서 독식",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 173357,
+      "summary": "난이도: 지옥 종말의 별에 진입합니다"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/내가죽였다",
+      "title": "내가 죽였다",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 203951,
+      "summary": "누가 아군이고, 누가 적인가."
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
+      "title": "따봉으로 레벨업",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 151002,
+      "summary": "따봉으로 강해지는 최강헌터 엄지척!"
+    }
+  ],
+  "웹툰": [
+    {
+      "previewCoverPath": "./assets/data/preview/지옥에서독식",
+      "title": "지옥에서 독식",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 173357,
+      "summary": "난이도: 지옥 종말의 별에 진입합니다"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/내가죽였다",
+      "title": "내가 죽였다",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 203951,
+      "summary": "누가 아군이고, 누가 적인가."
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
+      "title": "따봉으로 레벨업",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 151002,
+      "summary": "따봉으로 강해지는 최강헌터 엄지척!"
+    }
+  ],
+  "소년": [
+    {
+      "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
+      "title": "따봉으로 레벨업",
+      "class": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 151002,
+      "summary": "따봉으로 강해지는 최강헌터 엄지척!"
+    }
+  ],
+  "드라마": [
+    {
+      "previewCoverPath": "./assets/data/preview/롱리브더킹",
+      "title": "롱리브더킹",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 2466721,
+      "summary": "왕의 귀환! 장세출이 돌아왔다!"
+    }
+  ],
+  "로맨스": [
+    {
+      "previewCoverPath": "./assets/data/preview/사장님의특별지시",
+      "title": "사장님의 특별지시",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": true,
+      "subscriber": 409581,
+      "summary": "발렌타인기념, 한시한편+경품 이벤트!"
+    }
+  ],
+  "로판": [
+    {
+      "previewCoverPath": "./assets/data/preview/남편님다시결혼해주세요",
+      "title": "남편님, 다시 결혼해 주세요!",
+      "class": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 220501,
+      "summary": "웹툰 런칭 기념, 이벤트 중!"
+    }
+  ],
+  "액션무협": [
+    {
+      "previewCoverPath": "./assets/data/preview/황성독보천하컬렉션",
+      "title": "황성 독보천하 컬렉션",
+      "class": "웹툰",
+      "state": "hot",
+      "waitfree": true,
+      "subscriber": 16000,
+      "summary": "부잣집 도련님, 개방파 입문?"
+    }
+  ],
+  "BL": [
+    {
+      "previewCoverPath": "./assets/data/preview/플러그인",
+      "title": "플러그 인",
+      "class": "웹툰",
+      "state": "new",
+      "waitfree": false,
+      "subscriber": 54099,
+      "summary": "수학여행에서 본 여자애가, 너라고?!"
+    }
+  ]
 }

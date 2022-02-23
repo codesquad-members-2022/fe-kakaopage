@@ -12,6 +12,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Noto Sans KR';
 }
 
 body {
@@ -60,4 +61,8 @@ li {
 
 .relative {
   position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

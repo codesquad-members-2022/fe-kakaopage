@@ -1,6 +1,7 @@
 :root {
   --yellow: #ffd200;
-  --normal-component-width: 120px;
+  --preview-width: 720px;
+  /* --normal-component-width: 120px;
   --small-component-width: 84px;
   --big-component-width: 155px;
   --col-component-width: 100%;
@@ -19,5 +20,5 @@
 
   --wide-cover-width: 142px;
   --wide-cover-img-width: 142px;
-  --wide-cover-img-height: 96px;
+  --wide-cover-img-height: 96px; */
 }

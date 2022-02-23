@@ -1,6 +1,13 @@
+.filter {
+  width: 720px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #bbbbbb;
+}
+
 .day-filter {
   display: flex;
-  border-bottom: 1px solid rgb(241, 241, 241);
 }
 
 .day-filter li {
@@ -8,54 +15,13 @@
   padding: 25px 0;
   font-size: 20px;
   text-align: center;
-  color: #bbbbbb;
   cursor: pointer;
 }
 
-.filter-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5px;
-  border-bottom: 1px solid rgb(241, 241, 241);
-}
-
-.free-filter__container {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+/* filter UI탭 클릭 */
+.day-filter li.circle {
+  background: url('../../assets/data/filter/circle.png') 51% 53% / 45px
+    no-repeat;
+  color: black;
   font-weight: bold;
-  color: #bbbbbb;
-}
-
-.free-filter__container li {
-  padding: 25px 10px;
-  cursor: pointer;
-}
-
-.free-filter__container .seperator {
-  padding: 0;
-}
-
-.free-filter__container li:last-child {
-  display: flex;
-  align-items: center;
-}
-
-.free-filter__container li:last-child img {
-  margin-right: 5px;
-}
-
-.category-filter {
-  display: flex;
-  align-items: center;
-  padding: 20px 13px 10px;
-}
-
-.category-filter__dropdown-btn {
-  font-size: 18px;
-  color: #999999;
-}
-
-.category-filter__dropdown-icon {
-  margin-left: 5px;
 }

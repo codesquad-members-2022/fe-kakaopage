@@ -30,7 +30,6 @@
 .webtoon-cover {
   width: 120px;
   height: 150px;
-  background: url('../../img/resource.png');
   background-size: cover;
   border-radius: 6px;
 }
