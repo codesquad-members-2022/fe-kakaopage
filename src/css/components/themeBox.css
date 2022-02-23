@@ -1,0 +1,41 @@
+.theme__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+.theme__item {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-light-black);
+  background-color: var(--color-light-grey);
+  cursor: pointer;
+}
+
+.theme__badge {
+  padding: 3px 5px 3px 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--color-yellow);
+}
+
+.theme__item:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+.theme__item:nth-child(3) {
+  border-top-right-radius: 10px;
+}
+
+.theme__item:nth-child(4) {
+  border-bottom-left-radius: 10px;
+}
+
+.theme__item:nth-child(6) {
+  border-bottom-right-radius: 10px;
+}

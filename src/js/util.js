@@ -1,10 +1,39 @@
-export const DATA_URL = 'data/data.json';
+const DATA_URL = 'data/data.json';
 
-export const $ = selector => document.querySelector(selector);
+const $ = selector => document.querySelector(selector);
+const $$ = selector => document.querySelectorAll(selector);
 
-export const CL = {
+const activateTab = ({ target }, parentNode) => {
+  if (target.parentNode.tagName === 'LI') target = target.parentNode;
+  [...parentNode.children].forEach(child => {
+    child.classList.toggle(CL.SELECTED, child === target);
+  });
+};
+
+const loadData = async param => {
+  const response = await fetch(DATA_URL);
+  const json = await response.json();
+  const data = await json[param];
+  return data;
+};
+
+let data = null;
+loadData('webtoon')
+  .then(d => (data = d))
+  .catch(console.log);
+
+const today = new Date()
+  .toLocaleString('en-us', { weekday: 'short' })
+  .toLowerCase();
+
+const CL = {
   SELECTED: 'selected',
   WHOLE: 'whole',
-  DAY_NAME: '.day__name',
-  NAV_SUBJECT: 'nav__subject',
+  DAY_NAME: '.day__item',
 };
+
+const TITLE = {
+  promotion: '🔥HOT 최근 프로모션 진행작',
+};
+
+export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE };

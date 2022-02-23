@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('./header.css');
-@import url('./main.css');
-@import url('./footer.css');
-@import url('./reset.css');
+@import url('./base/reset.css');
+@import url('./base/variables.css');
 
-:root {
-  /* Color */
-  --color-white: #ffffff;
-  --color-light-grey: #eeeeee;
-  --color-grey: #bdbdbd;
-  --color-dark-grey: #6e6d6d;
-  --color-black: #000000;
-  --color-light-yellow: #ffd200;
-  --color-yellow: #fcbc19;
-
-  /* Box size */
-  --main-width: 720px;
-}
+@import url('./components/header.css');
+@import url('./components/gnb.css');
+@import url('./components/main.css');
+@import url('./components/dayBar.css');
+@import url('./components/mainBanner.css');
+@import url('./components/snb.css');
+@import url('./components/themeBox.css');
+@import url('./components/scrollBanner.css');
+@import url('./components/footer.css');
