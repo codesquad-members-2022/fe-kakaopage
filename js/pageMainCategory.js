@@ -3,14 +3,12 @@ import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
 import previewsObj from '../json/preview.json' assert { type: 'json' };
 
 import setTagListEl from './tagList/setTagListEl.js';
-
 import drawPreviews from './preview/drawPreviews.js';
 import clearPreviews from './preview/clearPreviews.js';
 
 import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 
 import setDayFilter from './dayFilter/setDayFilter.js';
-
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
 
 console.dir(webtoonContentsObj);
@@ -21,15 +19,10 @@ const pageMainCategory = document.querySelectorAll(
   '.page-main-category__container li'
 );
 
-let curIdx = 1;
+let curIdx = 2;
 
 const setCurIdx = (idx) => {
   curIdx = idx;
-};
-
-const toggleHighlight = (prevTarget, curTarget) => {
-  prevTarget.classList.toggle('color-black');
-  curTarget.classList.toggle('color-black');
 };
 
 const days = {
@@ -43,7 +36,34 @@ const days = {
   '-1': '전체',
 };
 
-initMainCategoryDay();
+const toggleHighlight = (prevTarget, curTarget) => {
+  prevTarget.classList.toggle('color-black');
+  curTarget.classList.toggle('color-black');
+};
+
+const initMainPage = () => {
+  initMainCategoryDay();
+  const categoryEls = document.querySelectorAll(
+    '.page-main-category__container li'
+  );
+  const defaultIdx = curIdx;
+  const defaultCategoryEl = categoryEls[defaultIdx];
+  const defaultCategoryName = defaultCategoryEl.textContent;
+  const today = days[defaultCategoryEl.dataset.curday];
+  defaultCategoryEl.classList.add('color-black');
+
+  const previewsArr = previewsObj[defaultCategoryName];
+  const dayContentsMap = dayContentsObj[defaultCategoryName];
+  const dayContentsArr = dayContentsMap?.[today];
+  const webtoonContentsArr = webtoonContentsObj[defaultCategoryName];
+  clearPreviews();
+  drawPreviews(previewsArr);
+  setTagListEl(defaultCategoryName);
+  setWebtoonContents({ dayContentsArr, webtoonContentsArr });
+  setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
+};
+
+initMainPage();
 
 pageMainCategory.forEach((li, idx, list) => {
   li.addEventListener('click', (event) => {
