@@ -1,10 +1,6 @@
 import {
-  HomePage,
   WebtoonPage,
-  NovelPage,
-  MoviePage,
-  BroadcastPage,
-  BookPage,
+  TempPage,
   HomeContents,
   DailyContents,
   WebtoonContents,
@@ -17,12 +13,12 @@ import {
 } from '../components';
 
 const PageComponent = {
-  home: () => HomePage(),
+  home: () => TempPage('Home'),
   webtoon: () => WebtoonPage(),
-  novel: () => NovelPage(),
-  movie: () => MoviePage(),
-  broadcast: () => BroadcastPage(),
-  book: () => BookPage(),
+  novel: () => TempPage('Novel'),
+  movie: () => TempPage('Movie'),
+  broadcast: () => TempPage('Broadcast'),
+  book: () => TempPage('Book'),
 };
 
 const ContentsComponent = {

@@ -25,12 +25,8 @@ import EventBannerItem from './banner/EventBannerItem.js';
 import EventBannerList from './banner/EventBannerList.js';
 import RecommendEvent from './section/RecommendEvent.js';
 import AppDownloadLink from './section/AppDownloadLink.js';
-import HomePage from './page/HomePage.js';
 import WebtoonPage from './page/WebtoonPage.js';
-import NovelPage from './page/NovelPage.js';
-import MoviePage from './page/MoviePage.js';
-import BroadcastPage from './page/BroadcastPage.js';
-import BookPage from './page/BookPage.js';
+import TempPage from './page/TempPage.js';
 import HomeContents from './mainContents/HomeContents.js';
 import DailyContents from './mainContents/DailyContents.js';
 import WebtoonContents from './mainContents/WebtoonContents.js';
@@ -69,12 +65,8 @@ export {
   EventBannerList,
   RecommendEvent,
   AppDownloadLink,
-  HomePage,
   WebtoonPage,
-  NovelPage,
-  MoviePage,
-  BroadcastPage,
-  BookPage,
+  TempPage,
   HomeContents,
   DailyContents,
   WebtoonContents,
