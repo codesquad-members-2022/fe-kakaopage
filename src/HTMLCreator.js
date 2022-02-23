@@ -51,3 +51,15 @@ export function createMenuItemHTML(data){
     ${badgeHTML}
 </a>`
 }
+
+export function createSubBannerHTML(){
+    return /* html */ `
+    <div class="banner center">
+        <img src="resources/images/thumbnail/sub_banner.png" alt="서브배너 이미지" class="sub-banner__image">
+        <div class="banner__paging z-index_1">
+            <img src="${IconSrc.paging_back}" alt="메인배너 이전버튼" class="banner__paging--icon">
+            <img src="${IconSrc.paging_next}" alt="메인배너 다음버튼" class="banner__paging--icon">
+        </div>
+    </div>
+    `
+}
