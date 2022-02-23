@@ -6245,6 +6245,39 @@ const datas = {
     `,
     ],
   ],
+  eventRender: [
+    `
+    <div class="event">
+    <div class="eventSlide" id="eventSlideId">
+        <div class="eventSlideInfo">
+            <div class="slideMoveBtn">
+                <img src="/FE/FE01-html/images/previous button.svg" alt="">
+                <img src="/FE/FE01-html/images/next button.svg" alt="">
+            </div>
+            <div class="eventTitle">에스티오</div>
+            <div class="eventInfoWrap">
+                <div class="eventLeft">
+                    <div class="eventStatusWrap heightCenterSort">
+                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt="" class="eventStatus">
+                    </div>
+                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
+                    <div class="eventGenreInfo">웹툰</div>
+                    <div class="eventSlash">|</div>
+                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt="" class="readCountEvent">
+                    <div class="eventFollow">31.3만명</div>
+                </div>
+                <div class="eventRight">
+                    <div class="eventPageNum">1</div>
+                    <div class="eventPageTotalNum">/3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imgCopyWrap centerSort">
+        <div class="imgCopy">확인하러 가기</div>
+    </div>
+</div>`,
+  ],
 };
 
 export { datas };
