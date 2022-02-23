@@ -17,7 +17,7 @@ const init = async () => {
   const headerNav = document.querySelector(".header__nav");
 
   const categoryList = new CategoryList(headerNav);
-  const genreList = new GenreList(main);
+  const genreList = new GenreList(main, { genre: "home" });
 
   categoryList.setState({
     categories: categories.map((cInfo) => {
@@ -31,7 +31,7 @@ const init = async () => {
     ({ state: { selected } }) => selected
   ).state.category;
 
-  genreList.setState({ genres: genres[category] });
+  genreList.setState({ genres: genres[category], category });
   categoryList.setState({ genreList });
 
   const contentsBox = main.querySelector(".main__contentsBox");

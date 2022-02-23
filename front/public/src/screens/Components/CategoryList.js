@@ -10,7 +10,11 @@ function CategoryList(target) {
       updateNodeClasses(eventTarget, "selected");
       const category = eventTarget.dataset.category;
       const genres = JSON.parse(localStorage.getItem("genres"));
-      this.state.genreList.setState({ genres: genres[category] });
+      this.state.genreList.setState({
+        category,
+        genres: genres[category],
+        genre: "home",
+      });
     });
   };
 

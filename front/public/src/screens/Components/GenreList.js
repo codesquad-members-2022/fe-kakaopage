@@ -1,51 +1,38 @@
 import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
 import Component from "../Component.js";
-import ActionGenre from "../Webtoon/genre/ActionGenre.js";
-import BLGenre from "../Webtoon/genre/BLGenre.js";
-import BoyGenre from "../Webtoon/genre/BoyGenre.js";
-import DaysGenre from "../Webtoon/genre/DaysGenre.js";
-import DramaGenre from "../Webtoon/genre/DramaGenre.js";
-import HomeGenre from "../Webtoon/genre/HomeGenre.js";
-import RofanGenre from "../Webtoon/genre/RofanGenre.js";
-import RomanceGenre from "../Webtoon/genre/RomanceGenre.js";
-import WebtoonGenre from "../Webtoon/genre/WebtoonGenre.js";
+import categories from "../../categories.js";
 
 function GenreList(target, state) {
   Component.call(this, target, state);
 
-  this.state = {
-    ...state,
-    screens: {
-      home: HomeGenre,
-      days: DaysGenre,
-      webtoon: WebtoonGenre,
-      boy: BoyGenre,
-      drama: DramaGenre,
-      romance: RomanceGenre,
-      rofan: RofanGenre,
-      action: ActionGenre,
-      bl: BLGenre,
-    },
+  this.render = function () {
+    const { category, genre } = this.state;
+    this.target.innerHTML = this.template();
+    const contentsBox = document.querySelector(".main__contentsBox");
+    new categories[category][genre](contentsBox);
+    this.removeEvent();
+    this.setEvent();
   };
 
   this.setEvent = function () {
     this.addEvent("click", ".navGenre-item", ({ target }) => {
-      const contentsBox = document.querySelector(".main__contentsBox");
       const eventTarget = target.closest(".navGenre-item");
       updateNodeClasses(eventTarget, "selected");
-      new this.state.screens[eventTarget.dataset.genre](contentsBox);
+      this.setState({ genre: eventTarget.dataset.genre });
     });
   };
 
   this.template = function () {
-    const { genres } = this.state;
+    const { genres, genre } = this.state;
     return `
       <ul class="${genres.length ? "mainBox mainNav" : ""} main__navGenre">
-        ${genres.reduce((tags, { genre, name, selected }) => {
+        ${genres.reduce((tags, gInfo) => {
           tags += `
-            <li class="navGenre-item ${selected ? "selected" : ""}" 
-            data-genre="${genre}">
-                ${name}
+            <li class="navGenre-item ${
+              gInfo.genre === genre ? "selected" : ""
+            }" 
+            data-genre="${gInfo.genre}">
+                ${gInfo.name}
             </li>`;
           return tags;
         }, "")}
