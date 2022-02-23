@@ -32,6 +32,10 @@ function headerNavClickHandler(event){
     const $nav_item_selected = document.querySelector(`.${selected}`);
     let $nav_item = event.target;
 
+    if($nav_item.tagName === 'UL'){
+        return;
+    }
+
     if($nav_item.tagName === 'A'){
         $nav_item = $nav_item.parentNode;
     }
