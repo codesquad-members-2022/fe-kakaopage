@@ -7,6 +7,11 @@ const data = {
     "기다리면 무료 소설",
     "인기 웹소설",
   ],
+  eventDisplay: [
+    { og: ".main__cartoonZone__cell", ev: "ev__main__cartoonZone__cell" },
+    { og: ".main__cartoonZone--imgTag", ev: "ev__main__cartoonZone--imgTag" },
+    { og: ".main__cartoonZone--info", ev: "ev__main__cartoonZone--info" },
+  ],
   week: ["월", "화", "수", "목", "금", "토", "일", "요일완결"],
   genre: ["소년", "드라마", "로맨스", "로판", "액션무협", "BL"],
   toggleLeft: ["전체", "웹툰", "웹툰"],
@@ -18,6 +23,7 @@ const data = {
       info: "인포 테스트",
       genre: "소년",
       day: "월",
+      hot: true,
     },
     {
       imgUrl:
@@ -26,6 +32,7 @@ const data = {
       info: "인포 테스트",
       genre: "소년",
       day: "화",
+      hot: true,
     },
     {
       imgUrl:
@@ -34,6 +41,7 @@ const data = {
       info: "인포 테스트",
       genre: "소년",
       day: "월",
+      hot: false,
     },
     {
       imgUrl:
@@ -42,6 +50,7 @@ const data = {
       info: "인포 테스트",
       genre: "소년",
       day: "수",
+      hot: false,
     },
     {
       imgUrl:
@@ -50,6 +59,7 @@ const data = {
       info: "인포 테스트",
       genre: "소년",
       day: "목",
+      hot: false,
     },
 
     {
@@ -58,6 +68,7 @@ const data = {
       info: "인포 테스트",
       genre: "드라마",
       day: "금",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -65,6 +76,7 @@ const data = {
       info: "인포 테스트",
       genre: "드라마",
       day: "금",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -72,12 +84,14 @@ const data = {
       info: "인포 테스트",
       genre: "드라마",
       day: "목",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
       title: "드라마 4",
       info: "인포 테스트",
       genre: "드라마",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -85,6 +99,7 @@ const data = {
       info: "인포 테스트",
       genre: "드라마",
       day: "화",
+      hot: false,
     },
 
     {
@@ -93,6 +108,7 @@ const data = {
       info: "인포 테스트",
       genre: "로맨스",
       day: "토",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -100,6 +116,7 @@ const data = {
       info: "인포 테스트",
       genre: "로맨스",
       day: "토",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -107,6 +124,7 @@ const data = {
       info: "인포 테스트",
       genre: "로맨스",
       day: "일",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -114,6 +132,7 @@ const data = {
       info: "인포 테스트",
       genre: "로맨스",
       day: "일",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -121,6 +140,7 @@ const data = {
       info: "인포 테스트",
       genre: "로맨스",
       day: "일",
+      hot: false,
     },
 
     {
@@ -129,6 +149,7 @@ const data = {
       info: "인포 테스트",
       genre: "로판",
       day: "수",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -136,6 +157,7 @@ const data = {
       info: "인포 테스트",
       genre: "로판",
       day: "수",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -143,6 +165,7 @@ const data = {
       info: "인포 테스트",
       genre: "로판",
       day: "화",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -150,6 +173,7 @@ const data = {
       info: "인포 테스트",
       genre: "로판",
       day: "월",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -157,6 +181,7 @@ const data = {
       info: "인포 테스트",
       genre: "로판",
       day: "화",
+      hot: false,
     },
 
     {
@@ -165,6 +190,7 @@ const data = {
       info: "인포 테스트",
       genre: "액션무협",
       day: "일",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -172,6 +198,7 @@ const data = {
       info: "인포 테스트",
       genre: "액션무협",
       day: "일",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -179,6 +206,7 @@ const data = {
       info: "인포 테스트",
       genre: "액션무협",
       day: "요일완결",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -186,6 +214,7 @@ const data = {
       info: "인포 테스트",
       genre: "액션무협",
       day: "요일완결",
+      hot: false,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -193,6 +222,7 @@ const data = {
       info: "인포 테스트",
       genre: "액션무협",
       day: "요일완결",
+      hot: false,
     },
 
     {
@@ -201,6 +231,7 @@ const data = {
       info: "인포 테스트",
       genre: "BL",
       day: "요일완결",
+      hot: true,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -208,6 +239,7 @@ const data = {
       info: "인포 테스트",
       genre: "BL",
       day: "요일완결",
+      hot: true,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -215,6 +247,7 @@ const data = {
       info: "인포 테스트",
       genre: "BL",
       day: "월",
+      hot: true,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -222,6 +255,7 @@ const data = {
       info: "인포 테스트",
       genre: "BL",
       day: "수",
+      hot: true,
     },
     {
       imgUrl: "./pageImage/madothuki.png",
@@ -229,6 +263,7 @@ const data = {
       info: "인포 테스트",
       genre: "BL",
       day: "금",
+      hot: true,
     },
   ],
 };

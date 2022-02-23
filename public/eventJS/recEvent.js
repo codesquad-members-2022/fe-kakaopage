@@ -36,7 +36,8 @@ const renderMainSecWoD = () => {
     getMainHtml({ left: "", right: "전체(test)" }, data.toonData)
   );
 
-  domUtil.$(".containEvery").appendChild(container);
+  domUtil.$(".containEvery").appendChild(container); // 위로 올린이유 아이 삭제를 실패해서
+
   const newList = createDomEl(
     "ul",
     "main--toggle--left",
@@ -58,6 +59,16 @@ const renderMainSecWoD = () => {
 
 const renderMainSecToon = () => {
   domUtil.remove(".main");
+
+  const containers = data.domUtil.createDomEl(
+    "section",
+    "main",
+    createDomEl({ left: "HOT 최근 프로모션 진행작", rigth: "더보기" })
+  );
+
+  domUtil.$All(".");
+
+  domUtil.createEl();
 };
 
 export { renderMainSecHome, renderMainSecWoD };

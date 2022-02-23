@@ -19,9 +19,9 @@ const getMainNavHtml = (data) => {
   `;
 };
 
-const getMainHtml = (toggleinfo, imgInfo) => {
+const getMainHtml = (toggleinfo, imgInfo, classname) => {
   return `
-  <nav class="main__nav--toggle">
+  <nav class="main__nav--toggle ${classname ?? ""}">
     <ul class="main--toggle--left">
       <li>${toggleinfo.left}</li>
     </ul>
