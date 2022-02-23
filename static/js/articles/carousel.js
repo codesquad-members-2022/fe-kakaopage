@@ -7,18 +7,18 @@ export function renderCarousel(carouselsArr) {
 
   function slideToPrev() {
     if (idx <= 0) {
-      idx = carouselsArrLength - 1;
+      idx = handleCarousel(2);
       return;
     }
-    idx--;
+    idx = handleCarousel(idx - 1);
   }
 
   function slideToNext() {
     if (idx >= carouselsArrLength - 1) {
-      idx = 0;
+      idx = handleCarousel(0);
       return;
     }
-    idx++;
+    idx = handleCarousel(idx + 1);
   }
 
   const $carouselLayout = document.createElement('div');
@@ -42,7 +42,6 @@ export function renderCarousel(carouselsArr) {
   function moveCarousel() {
     setInterval(() => {
       slideToNext();
-      idx = handleCarousel(idx);
     }, 3000);
   }
 
