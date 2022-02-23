@@ -70,6 +70,8 @@
     position: absolute;
     top: 50%;
     margin-top: -20px;
+    width: 40px;
+    height: 40px;
   }
 
   &__btn-prev {
@@ -78,5 +80,14 @@
 
   &__btn-next {
     right: 20px;
+  }
+
+  &__orderinfo {
+    position: absolute;
+    right: 24px;
+    bottom: 48px;
+    color: $gray-4;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }

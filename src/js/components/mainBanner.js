@@ -41,6 +41,11 @@ const createMainBanner = (bannerItems) => {
       <button class="main-banner__btn main-banner__btn-next">
         <img src="static/icon/ic-banner-paging-next-nor.svg" />
       </button>
+      <div class="main-banner__orderinfo">
+        <span class="main-banner__curr-order">1</span>
+        /
+        <span class="main-banner__total-count">${bannerItems.length}</span>
+      </div>
     </div>
   `;
 };
