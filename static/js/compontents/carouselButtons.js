@@ -5,16 +5,14 @@ export function CarouselButtons({
   slideToNext,
 }) {
   const $buttonCatainer = document.createElement('div');
+  $buttonCatainer.classList.add('c-carousel__buttons');
   $buttonCatainer.innerHTML = `
-  <div class="c-carousel__buttons">
     <button type="button" data-move="prev" class="c-carousel__button move-button">
       <i class="fas fa-angle-left"></i>
     </button>
     <button type="button" data-move="next" class="c-carousel__button move-button">
       <i class="fas fa-angle-right"></i>
     </button>
-    </div>
-  <div class="c-carousel__index">${idx + 1} / ${carouselsArrLength}</div>
   `;
 
   $buttonCatainer.addEventListener('click', (event) => {
