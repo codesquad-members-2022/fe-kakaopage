@@ -3,8 +3,9 @@ import { renderSubCategory } from '../articles/subCategory.js';
 import { renderMainChildDOM } from '../utils.js';
 
 export const Webtoon = async (subCategoryUid) => {
+  const tempSubUid = subCategoryUid > 1 ? 0 : subCategoryUid;
   const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = renderCarousel(mock_carouselElementArr[subCategoryUid]);
+  const carousel = renderCarousel(mock_carouselElementArr[tempSubUid]);
   const eventBox = `Webtoon`;
   const evenCarouel = `Webtoon`;
   const mainContent = `Webtoon`;
