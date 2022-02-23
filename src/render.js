@@ -6,7 +6,7 @@ import { renderGenreTab, setGenreTabEvent } from "./components/genreTab.js";
 import { renderMainBanner } from "./components/mainBanner.js";
 import { renderCategoryGrid } from "./components/categoryGrid.js";
 import { renderEventBanner } from "./components/eventBanner.js";
-
+import { renderWorkSection } from "./components/section/workSection.js";
 
 export const initRender = () => {
     renderHeader();
@@ -31,11 +31,13 @@ const render = (component, genre) => {
         'mainBanner': renderMainBanner,
         'categoryGrid': renderCategoryGrid,
         'eventBanner': renderEventBanner,
+        'dayRanking': renderWorkSection.bind(null, "small", component)
     }
     funcs[component](genre);
 }
 
-//GNB는 시간상 제대로 구현하지 않음.
+
+//GNB는 시간이 되면 나중에 구현
 const activateGnb = () => {  
     const gnb = document.querySelector('.gnb');
     gnb.addEventListener('click', (e) => {
