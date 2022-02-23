@@ -127,9 +127,3 @@ header
     margin-bottom: 32px;
     margin-left: 6px
 }
-
-.headNav__under {
-    border-bottom: var(--main-yellow);
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-}
