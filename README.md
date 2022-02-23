@@ -95,23 +95,23 @@
 
 ### 1주차 미션1
 
-#### 홈 - home.html
+#### 홈 탭
 
 https://user-images.githubusercontent.com/58525009/154987681-1fde9280-4e99-4ef4-b712-370c694c680d.mp4
 
-#### 요일연재 - index.html
+#### 요일연재 탭
 
 https://user-images.githubusercontent.com/58525009/154492255-c6fc51cf-94ff-49c7-8d7e-658707118929.mp4
 
 ### 1주차 미션2
 
-#### 요일연재 - index.html
+#### 요일연재 탭
 
 https://user-images.githubusercontent.com/58525009/154607701-f3e10833-b4df-4396-b12e-53c1d3712910.mp4
 
 ### 2주차 미션1
 
-#### 홈 - home.html
+#### 홈 탭
 
 https://user-images.githubusercontent.com/58525009/155128798-c0ebcaae-3b5e-4a62-af13-786a1737def5.mp4
 
