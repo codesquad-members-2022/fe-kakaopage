@@ -1,10 +1,11 @@
 import datas from "./data.js";
-import { renderWebtoonGenreBar } from "./section.js";
+import { renderWebtoonGenreBar, renderEvent } from "./section.js";
 const weekdayContents = datas.weekdayContents;
 const eventContents = datas.eventContents;
 const sectionContents = datas.sectionContents;
 async function init() {
   renderWebtoonGenreBar();
+  renderEvent();
 }
 init();
 function changeTabsColor(target) {
