@@ -1,9 +1,12 @@
-const {
-  weekdayContents,
-  eventContents,
-  sectionContents,
-} = require("./js/data"); // require 인식 안되고 있음 왜일까...
-
+import datas from "./data.js";
+import { renderWebtoonGenreBar } from "./section.js";
+const weekdayContents = datas.weekdayContents;
+const eventContents = datas.eventContents;
+const sectionContents = datas.sectionContents;
+async function init() {
+  renderWebtoonGenreBar();
+}
+init();
 function changeTabsColor(target) {
   const Tabs = target.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {

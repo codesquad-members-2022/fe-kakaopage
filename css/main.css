@@ -1,112 +1,3 @@
-html {
-  margin: 0;
-  padding: 0;
-}
-body {
-  width: 100%;
-  background-color: #eee;
-  margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
-}
-/* 헤더 */
-.headerAndNavWrap {
-  width: 100%;
-  position: fixed;
-  background: white;
-  z-index: 10;
-}
-header,
-nav {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-.headerLeft {
-  width: 130px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.title {
-  /* font-size: 2em; */
-  width: 100%;
-  margin: 22px 0px 22px;
-}
-.headerRight {
-  width: 590px;
-  height: 100%;
-  display: flex;
-  justify-content: right;
-}
-.searchBarWrap {
-  width: 186px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.searchBar {
-  width: 100%;
-  height: 33.2px;
-  border-radius: 33.2px;
-  border: 1px solid #cfcfcf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.searchInput {
-  width: 136px;
-  border: none;
-}
-.searchBtn {
-  width: 30px;
-  height: 27.2px;
-  background: none;
-  border: none;
-}
-.magnifyingGlass {
-  width: 20px;
-  height: 20px;
-}
-.headerButtonWrap {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-.headerButtonWrap > * {
-  color: #999;
-  font-size: 18px;
-  font-weight: bold;
-}
-.stage {
-  margin: 0 0 0 22px;
-}
-.chargeCash {
-  margin: 0 10px 0 22px;
-}
-.logIn {
-  margin: 0 0 0 10px;
-}
-/* 네비게이션바 */
-nav {
-  height: 69px;
-}
-.navWrap {
-  height: 68px;
-  width: 720px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0;
-}
-.navWrap > * {
-  width: calc(100% / 6);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .section {
   width: 720px;
   padding: 160px 0 0 0;
@@ -127,7 +18,7 @@ nav {
 .webtoonGenreBar {
   height: 67px;
   display: flex;
-  background: white;
+  background: #ffffff;
 }
 .webtoonGenreBar > * {
   height: 100%;
@@ -152,11 +43,11 @@ nav {
 .webtoon,
 .boy,
 .romanticFantasy {
-  width: 72.7px;
+  width: 73px;
 }
 .drama,
 .romance {
-  width: 89.6px;
+  width: 90px;
 }
 .bl {
   width: 58px;
@@ -195,7 +86,7 @@ nav {
   margin: 6px 0 0;
   font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
 }
 .eventInfoWrap {
   height: 29px;
@@ -210,7 +101,7 @@ nav {
 }
 .eventLeft > *,
 .expectToonInfoWrap > * {
-  color: white;
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
@@ -219,13 +110,13 @@ nav {
   align-items: center;
 }
 .eventStatus {
-  width: 52.8px;
+  width: 53px;
   height: 22px;
   background-size: cover;
   margin: 0 10px 0 0;
 }
 .clock {
-  color: white;
+  color: #ffffff;
   margin: 0 4px 0 0;
 }
 .eventGenreInfo {
@@ -245,7 +136,7 @@ nav {
 }
 .eventRight > * {
   font-size: 20px;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   opacity: 0.6;
 }
@@ -253,9 +144,6 @@ nav {
   height: 40px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #ffd200;
 }
 .imgCopy {
@@ -263,11 +151,8 @@ nav {
 }
 .eventButtons {
   height: 161px;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  background-color: #ffffff;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -280,31 +165,38 @@ nav {
   background: #eee;
   font-size: 18px;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
 }
 
 .todayUp {
   border-radius: 10px 0 0 0;
 }
+.original {
+  border-radius: 0 10px 0 0;
+}
+.straightRun {
+  border-radius: 0 0 0 10px;
+}
+.todayLanking {
+  border-radius: 0 0 10px 0;
+}
+
 .countNew {
   min-width: 24px;
   height: 24px;
   border-radius: 33px;
   background-color: #ffd200;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 0 0 10px;
 }
 /* .todayNew {
-  margin: 0 2px 0 2px;
-} */
+      margin: 0 2px 0 2px;
+    } */
 /* .original {
-  border-radius: 0 10px 0 0;
-} */
+      border-radius: 0 10px 0 0;
+    } */
 .waitForFreeWebtoon {
   height: 534px;
-  background-color: white;
+  background-color: #ffffff;
   box-sizing: border-box;
   padding: 0 20px 20px 20px;
 }
@@ -405,16 +297,13 @@ nav {
 }
 .slideAd {
   height: 140px;
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
 }
 .slideBtn {
   width: 85px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .slideAdImg {
   width: 550px;
@@ -423,7 +312,7 @@ nav {
 }
 .weekdayTop {
   height: 606px;
-  background-color: white;
+  background-color: #ffffff;
 }
 .weekdayTopWeekInfo {
   width: 680px;
@@ -474,9 +363,7 @@ nav {
   height: 30px;
   box-sizing: border-box;
   padding: 0 8px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #242526;
   border-radius: 0 0 8px 8px;
 }
@@ -486,8 +373,6 @@ nav {
 }
 .contentInfo {
   height: 20px;
-  display: flex;
-  align-items: center;
 }
 .contentInfo > * {
   margin: 0 2px 0 2px;
@@ -514,7 +399,7 @@ nav {
 }
 .expectedWebtoon {
   height: 313px;
-  background: white;
+  background: #ffffff;
 }
 .expectToonContentWrap {
   height: 223px;
@@ -540,9 +425,7 @@ nav {
 }
 .expectToonInfoWrap {
   height: 20px;
-  display: flex;
   justify-content: left;
-  align-items: center;
 }
 .expectToonInfoWrap > * {
   height: 20px;
@@ -571,7 +454,7 @@ nav {
 }
 .genreTop {
   height: 300px;
-  background-color: white;
+  background-color: #ffffff;
 }
 .toonContentWrap {
   display: flex;
@@ -581,7 +464,7 @@ nav {
 }
 .dayRankingTop {
   height: 480px;
-  background-color: white;
+  background-color: #ffffff;
 }
 .dayRankingTopTop {
   margin: 0 0 20px 0;
@@ -595,8 +478,6 @@ nav {
 .rankingNumWrap {
   width: 35px;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 .rankingNum {
   font-size: 22px;
@@ -618,10 +499,6 @@ nav {
   height: 114px;
   margin: 0 0 0 20px;
 }
-.statusAndTitle {
-  display: flex;
-  align-items: center;
-}
 .dayRankingStatus {
   width: 16px;
   height: 16px;
@@ -639,4 +516,55 @@ nav {
 }
 .dayRankingUpdateDay {
   margin: 22px 0 0 0;
+}
+.recommendEventWrap {
+  height: 420px;
+  background-color: #ffffff;
+  margin: 11px 0 0;
+}
+.recommendEventTop {
+  margin: 0px 20px 22px 20px;
+}
+.recommendEventImage {
+  width: 678px;
+  height: 339px;
+  margin: 0.5px 0;
+  background-image: url("/FE/FE01-html/images/_진격의\ 거인_\ 정주행\ 프로모션\ \(2_14_2_28\).png");
+  background-size: cover;
+  border-radius: 6px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.recommendEventController {
+  height: 27px;
+  position: absolute;
+  left: 20px;
+  bottom: 27px;
+}
+.recommendEventPrevBtn,
+.recommendEventNextBtn {
+  width: 30px;
+  background-size: cover;
+  height: 16px;
+}
+
+.recommendEventCount {
+  width: 35px;
+  height: 100%;
+  color: #eee;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.gotoApp {
+  width: 720px;
+  height: 70px;
+  padding: 0;
+  background: #ffd200;
+  margin: 20px 0;
+}
+.gotoAppImg {
+  width: 504px;
+  background-size: contain;
 }
