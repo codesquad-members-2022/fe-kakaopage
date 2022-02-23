@@ -7,8 +7,8 @@ const $body_main = document.querySelector('.custom');
 export function rendering(tabName){
     const renders = {
         'home' : renderHomePage,
-        'daily' : null,
-        'webToon' : null,
+        'daily' : renderDailyPage,
+        'webToon' : renderWebToonPage,
         'boy' : null,
         'drama' : null,
         'romance' : null,
@@ -26,6 +26,16 @@ function renderHomePage(tabName){
     renderMenu(tabName);
     renderSubBanner(tabName);
     renderDailyTop();
+    renderGenreTop();
+    renderInstallButton();
+}
+
+function renderDailyPage(tabName){
+    renderDailyTop();
+    renderInstallButton();
+}
+
+function renderWebToonPage(tabName){
     renderGenreTop();
     renderInstallButton();
 }
