@@ -9,12 +9,12 @@ export function rendering(tabName){
         'home' : renderHomePage,
         'daily' : renderDailyPage,
         'webToon' : renderWebToonPage,
-        'boy' : null,
-        'drama' : null,
-        'romance' : null,
-        'rofan' : null,
-        'action' : null,
-        'bl' : null
+        'boy' : renderBoyPage,
+        'drama' : renderDramaPage,
+        'romance' : renderRomancePage,
+        'rofan' : renderRofanPage,
+        'action' : renderActionPage,
+        'bl' : renderBlPage
     }
 
     $body_main.innerHTML = '';
@@ -38,6 +38,33 @@ function renderDailyPage(tabName){
 function renderWebToonPage(tabName){
     renderGenreTop();
     renderInstallButton();
+}
+
+function renderDramaPage(){
+    renderDailyTop();
+    renderInstallButton();
+}
+
+function renderBoyPage(){
+    renderDailyTop();
+}
+
+function renderRomancePage(){
+    renderGenreTop();
+    renderInstallButton();
+}
+
+function renderRofanPage(){
+    renderDailyTop();
+}
+
+function renderActionPage(){
+    renderInstallButton();
+}
+
+function renderBlPage(){
+    renderDailyTop();
+    renderGenreTop();
 }
 
 function renderMenu(tabName){
