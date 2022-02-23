@@ -1,10 +1,10 @@
 export const blData = [
   {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=bqyJkx/hzp2fwmJDP/qx8LbXn8n6DHxfK0B4sMkk',
-    title: '용아 바룰 냐라는 나라',
-    status: '추천',
-    people: '105.6',
-    message: '인정하고 싶진 않지만, 당신이 좋아.',
+    title: '지수에 관하여',
+    status: 'New',
+    people: '1.6',
+    message: '선배는, 왜 저한테 잘해 주세요?',
   },
   {
     firstInfo: '지난달의 BL',
