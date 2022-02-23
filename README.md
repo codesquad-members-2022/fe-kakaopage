@@ -2,14 +2,25 @@
 
 ## ToDo
 
-- [x] 카카오페이지 HTML, CSS 구현
-- [x] 탭 기능 구현
-- [x] flex 완벽 정리
+week2
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/68533016/155253767-995e99e5-aed1-4883-991c-c399a27615cb.gif)
+
+- [x] 탭 기능 리팩터
+  - [x] Array.prototype.forEach.call 없애기
+  - [x] innerHTML로 변경
+- 슬라이드 애니메이션 구현
+- [ ] 데이터 저장, 가져오는 방식
+  - [ ] 데이터 분리하기
 - [ ] css 겹치는 코드 리팩터
 - [ ] 크롱 피드백, 클래스명 리팩터
-- [ ] 데이터 저장, 가져오는 방식
-- [ ] 브랜치 두 개에서 작업했을 때 PR 처리 how?
-- [ ] display 속성 정리
+
+week1
+
+- [x] 카카오페이지 HTML, CSS 구현
+- [x] flex 완벽 정리
+- [x] 브랜치 두 개에서 작업했을 때 PR 처리 how?
+- [x] display 속성 정리
 
 ---
 
