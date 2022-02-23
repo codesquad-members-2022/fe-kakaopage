@@ -102,10 +102,13 @@
     background-color: var(--color-yellow);
 }
 
-.main__app .main__app_button {
+.main__app .main__app_link {
     width: 500px;
-    border: none;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
     background-color: var(--color-transparent);
+    color: var(--color-dark-gray);
     font-size: var(--font-20);
     cursor: pointer;
 }
