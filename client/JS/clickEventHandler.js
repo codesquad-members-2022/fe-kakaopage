@@ -1,6 +1,5 @@
-import { assembly, webtoonAssembly } from "./assembly.js";
+import { mainAssembly, webtoonAssembly, daysAssembly } from "./assembly.js";
 
-const startPage = "웹툰";
 const main = document.querySelector("main");
 
 const removeMainPart = () => {
@@ -14,18 +13,9 @@ const removeWebtoonPart = (name) => {
   });
 };
 
-const drawWithAssembly = (assembly, type) => {
-  assembly[type].forEach((part) => (main.innerHTML += part));
-};
-
-const drawMainPart = (type) => {
-  drawWithAssembly(assembly, type);
-};
-
-const drawWebtoonPart = (type) => {
-  const newPart = document.createElement("section");
-  main.append(newPart);
-  drawWithAssembly(webtoonAssembly, type);
+const removeDaysPart = () => {
+  const columncontents = document.querySelector(".column-contents");
+  columncontents.innerHTML = "";
 };
 
 const removeAndDrawView = (target, name) => {
@@ -33,11 +23,16 @@ const removeAndDrawView = (target, name) => {
   const navPalette = {
     header__nav: () => {
       removeMainPart();
-      drawMainPart(type);
+      drawWithAssembly(mainAssembly, type);
     },
     webtoon__nav: () => {
       removeWebtoonPart(name);
-      drawWebtoonPart(type);
+      drawWithAssembly(webtoonAssembly, type);
+    },
+    days__nav: () => {
+      const target = document.querySelector(".column-contents");
+      removeDaysPart();
+      drawWithAssembly(daysAssembly, type, target);
     },
   };
   const selectedPalette = navPalette[name];
@@ -56,16 +51,13 @@ const filterNav = (target, nav) => {
   removeAndDrawView(target, name);
 };
 
-const clickEventHandler = (event) => {
+export const drawWithAssembly = (assembly, type, target = main) => {
+  assembly[type].forEach((part) => (target.innerHTML += part));
+};
+
+export const clickEventHandler = (event) => {
   event.preventDefault();
   const { target } = event;
   const nav = target.closest("nav");
   if (nav) filterNav(target, nav);
 };
-
-const init = () => {
-  drawMainPart(startPage);
-  document.addEventListener("click", clickEventHandler);
-};
-
-init();

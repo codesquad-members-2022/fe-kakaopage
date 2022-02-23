@@ -22,10 +22,8 @@ main > * {
   width: var(--width-main);
   padding-top: var(--padding-main-top-bottom);
   padding-bottom: var(--padding-main-top-bottom);
-}
-
-.webtoon__nav {
   color: var(--color-grey-main);
+  align-items: center;
 }
 
 .webtoon__nav > .selected {
@@ -102,6 +100,10 @@ main > * {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
+}
+
+.column-contents__empty {
+  width: calc(var(--width-content) + 0.1rem * 2);
 }
 
 .column-contents__content {

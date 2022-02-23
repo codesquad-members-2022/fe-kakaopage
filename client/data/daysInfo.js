@@ -1,0 +1,152 @@
+export const daysInfo = {
+  mon: [
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+  ],
+  tue: [
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+  ],
+  wed: [
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+  ],
+  thu: [],
+  fri: [
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+    {
+      name: "무늬",
+      image: "flower.png",
+      rank: 100,
+      views: 150.0,
+    },
+  ],
+  sat: [],
+  sun: [],
+  fin: [],
+};

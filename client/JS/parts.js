@@ -1,3 +1,5 @@
+import { daysInfo } from "../data/daysInfo.js";
+
 export const ads =
   /*html*/
   `
@@ -40,6 +42,48 @@ export const newThings =
   </section>
   `;
 
+export const columnContent = (contentInfo) => {
+  const { name, image, rank, views } = contentInfo;
+  if (name === "") return /*html*/ `<div class="column-contents__empty"></div>`;
+  const content =
+    /*html*/
+    `
+      <div class="column-contents__content">
+        <div class="column-contents__content--image">
+          <div class="column-contents__content--picture">
+            <img src="../IMG/${image}" alt="content image">
+          </div>
+          <div class="column-contents__content--info">
+            <div class="column-contents__content--rank">${rank}위</div>
+            <div class="column-contents__content--clock">
+              <i class="fas fa-history"></i>
+            </div>
+          </div>
+        </div>
+        <div class="column-contents__content--name">${name}</div>
+        <div class="column-contents__content--views">
+          <i class="fas fa-user-circle"></i>
+          <span>${views}만 명</span>
+        </div>
+      </div>
+      `;
+  return content;
+};
+
+export const columnContents = (targetDay) => {
+  const emptyContentInfo = { name: "", image: "", rank: "", views: "" };
+  const emptyContent = columnContent(emptyContentInfo);
+  const columnCount = 5;
+  let emptyCount = columnCount - (targetDay.length % columnCount);
+  let result = "";
+  targetDay.forEach((contentInfo) => (result += columnContent(contentInfo)));
+  while (emptyCount !== 0 && emptyCount !== columnCount) {
+    result += emptyContent;
+    emptyCount--;
+  }
+  return result;
+};
+
 export const days =
   /*html*/
   `
@@ -67,24 +111,7 @@ export const days =
     </div>
 
     <div class="column-contents">
-      <div class="column-contents__content">
-        <div class="column-contents__content--image">
-          <div class="column-contents__content--picture">
-            <img src="../IMG/flower.png" alt="content image">
-          </div>
-          <div class="column-contents__content--info">
-            <div class="column-contents__content--rank">100위</div>
-            <div class="column-contents__content--clock">
-              <i class="fas fa-history"></i>
-            </div>
-          </div>
-        </div>
-        <div class="column-contents__content--name">무늬</div>
-        <div class="column-contents__content--views">
-          <i class="fas fa-user-circle"></i>
-          <span>150.0만명</span>
-        </div>
-      </div>
+      ${columnContents(daysInfo["mon"])}
     </div>
   </section>
   `;
