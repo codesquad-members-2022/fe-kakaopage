@@ -1,0 +1,12 @@
+.dow-serialization__nav span {
+  font-size: 20px;
+  color: var(--gray);
+}
+
+.dow-serialization__total {
+  margin-right: 20px;
+}
+
+.dow-serialization__contents {
+  margin-top: 1px;
+}

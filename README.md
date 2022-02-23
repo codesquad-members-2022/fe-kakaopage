@@ -1,6 +1,6 @@
 # fe-kakaopage
 
-![](https://im.ezgif.com/tmp/ezgif-1-06e1286211.gif)
+<p align="center"><img src="https://user-images.githubusercontent.com/92701121/154663404-2a8aff79-0c78-45cf-90cc-0e12684f3386.gif" width="50%" heigth="50%"></p>
 
 <br>
 <br>

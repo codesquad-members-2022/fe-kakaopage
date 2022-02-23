@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Pushster&display=swap");
+
+/* Components */
+@import "components/nav.css";
+@import "components/page-header.css";
+@import "components/page-footer.css";
+@import "components/adBanner.css";
+@import "components/subAdBanner.css";
+@import "components/promotionBanner.css";
+@import "components/webtoon-bar.css";
+@import "components/eventBanner.css";
+@import "components/frame.css";
+
+/* Screens */
+@import "screens/webtoonTop.css";
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 1000vh;
+  background-color: #eeeeee;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 20px;
+}
+
+button {
+  border-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.page-main {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 720px;
+}

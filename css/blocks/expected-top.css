@@ -1,0 +1,42 @@
+.expected-top {
+  font-size: 20px;
+}
+
+.expected-top__webtoon {
+  margin: 0px 2px 0px 2px;
+}
+
+.expected-top__img {
+  width: 325px;
+  height: 223px;
+  border-radius: 10px;
+}
+
+.expected-top__webtoon svg {
+  width: 35px;
+}
+
+.expected-top__webtoon .clock-icon {
+  width: 13px;
+}
+
+.expected-top__webtoon .user-icon {
+  width: 12px;
+}
+
+.expected-top span {
+  font-size: 0.95rem;
+}
+
+.expected-top h3 {
+  font-size: 0.95rem;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.expected-top .webtoon-card--big__sub-title {
+  padding: 12px;
+}
+
+.expected-top .webtoon-card--big__info-bar {
+  bottom: 50px;
+}

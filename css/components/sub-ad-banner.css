@@ -1,0 +1,22 @@
+.sub-ad-banner {
+  position: relative;
+  padding: 20px 80px;
+}
+
+.sub-ad-banner__img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.sub-ad-banner svg {
+  position: absolute;
+  top: 55px;
+}
+
+.sub-ad-banner__back-btn {
+  left: 20px;
+}
+
+.sub-ad-banner__next-btn {
+  right: 20px;
+}
