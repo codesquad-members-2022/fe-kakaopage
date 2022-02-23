@@ -156,12 +156,15 @@ const parsingHomeTop = async () => {
   
   let result = [];
   $item.each((idx, node) => {
+    const day = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+    const random = Math.floor(Math.random() * 8);
     result.push({
       title: $(node).find('div.css-6mi0ws > span').text(),
       review: $(node).find('div.css-nfxgqr').text(),
       viewer: $(node).find('div.css-1c1ahuy').text(),
       img_url: 'https:' + $(node).find('img').attr('data-src'),
-      img_alt: $(node).find('img').attr('alt')
+      img_alt: $(node).find('img').attr('alt'),
+      day: day[random]
     })
   });
   return result
