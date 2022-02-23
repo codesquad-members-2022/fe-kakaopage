@@ -7,6 +7,7 @@ import { createGenreBlock } from "./components/webtoon.js";
 import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { dataOfDrama } from "./data/home/drama.js";
+import { createDailyContents } from "./components/daily-contents.js";
 
 const renderHome = () => {
   createBanner();
@@ -19,4 +20,9 @@ const renderHome = () => {
   createEventBlock();
 };
 
-export { renderHome };
+const renderDailyContents = () => {
+  createBanner();
+  createDailyContents();
+};
+
+export { renderHome, renderDailyContents };

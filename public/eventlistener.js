@@ -1,5 +1,5 @@
 import { $ } from "./utils.js";
-import { renderHome } from "./render.js";
+import { renderDailyContents, renderHome } from "./render.js";
 
 const webtoonCateEvL = () => {
   return $(".webtoon-category").addEventListener("click", (e) => {
@@ -17,6 +17,10 @@ const webtoonCateEvL = () => {
     switch (e.target.dataset.cate) {
       case "home": {
         renderHome();
+        break;
+      }
+      case "days": {
+        renderDailyContents();
         break;
       }
     }
