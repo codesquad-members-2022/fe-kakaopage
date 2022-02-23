@@ -12,7 +12,7 @@ const renderPage = async (gnbTarget) => {
     $(".contents").innerHTML = '';
     $(".contents").insertAdjacentHTML('afterbegin', PageTemplete);
     if(gnbTarget === '웹툰' || gnbTarget === '웹소설') {
-        $$('.section__day-top-tab')[today].children[0].classList.add('day-top-tab__button--active');
+        $$('.day-top-tab__button')[today].classList.add('day-top-tab__button--active');
     }
     return currentPageData;
 }
