@@ -59,12 +59,18 @@
   left: 20px;
   z-index: 1;
 }
+.image-box__leftbutton:hover {
+  cursor: pointer;
+}
 
 .image-box__rightbutton {
   position: absolute;
   top: 220px;
   left: 650px;
   z-index: 1;
+}
+.image-box__rightbutton:hover {
+  cursor: pointer;
 }
 .image-box__page-info {
   font-size: 1.56rem;
