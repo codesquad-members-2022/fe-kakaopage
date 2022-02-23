@@ -3,8 +3,7 @@ import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
 import previewsObj from '../json/preview.json' assert { type: 'json' };
 
 import setTagListEl from './tagList/setTagListEl.js';
-import drawPreviews from './preview/drawPreviews.js';
-import clearPreviews from './preview/clearPreviews.js';
+import setPreviews from './preview/setPreviews.js';
 
 import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 
@@ -23,6 +22,19 @@ let curIdx = 2;
 
 const setCurIdx = (idx) => {
   curIdx = idx;
+};
+
+const timer = {
+  timerId: null,
+  setTimer(func, sec) {
+    this.timerId = setInterval(func, sec * 1000);
+  },
+  clearTimer() {
+    clearInterval(this.timerId);
+  },
+  exists() {
+    return !!this.timerId;
+  },
 };
 
 const days = {
@@ -52,12 +64,11 @@ const initMainPage = () => {
   const today = days[defaultCategoryEl.dataset.curday];
   defaultCategoryEl.classList.add('color-black');
 
-  const previewsArr = previewsObj[defaultCategoryName];
+  const previews = previewsObj[defaultCategoryName];
   const dayContentsMap = dayContentsObj[defaultCategoryName];
   const dayContentsArr = dayContentsMap?.[today];
   const webtoonContentsArr = webtoonContentsObj[defaultCategoryName];
-  clearPreviews();
-  drawPreviews(previewsArr);
+  setPreviews(previews, timer);
   setTagListEl(defaultCategoryName);
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
   setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
@@ -81,9 +92,8 @@ pageMainCategory.forEach((li, idx, list) => {
     toggleHighlight(prevTarget, curTarget);
 
     // preview - 구현 후 함수 하나로 만들기
-    const previewsArr = previewsObj[category];
-    clearPreviews();
-    drawPreviews(previewsArr);
+    const previews = previewsObj[category];
+    setPreviews(previews, timer);
 
     // tag list
     setTagListEl(category);
