@@ -4,15 +4,24 @@ import Component from "../Component.js";
 function ContentsBox(target, state) {
   Component.call(this, target, state);
 
-  this.getBodyNode = function () {
-    const contentsBodies = target.querySelectorAll(".contents__body");
-    return [...contentsBodies].find(
-      (body) => body.dataset.contents === this.state.contents
-    );
+  this.createContentBodyDiv = function () {
+    const { classes, contents, contentsBody } = this.state;
+    const contentsBodyDiv = document.createElement("div");
+    contentsBodyDiv.classList.add("contents__body");
+    contentsBodyDiv.setAttribute("data-contents", contents);
+    if (classes) {
+      classes.forEach((className) => {
+        contentsBodyDiv.classList.add(className);
+      });
+    }
+    contentsBodyDiv.innerHTML = contentsBody?.template() || "";
+    return contentsBodyDiv;
   };
 
+  this.state = { ...state, contentsBodyDiv: this.createContentBodyDiv() };
+
   this.template = function () {
-    const { title, titleNum, classes, contents, contentsBody } = this.state;
+    const { title, titleNum, contentsBodyDiv } = this.state;
     return `<li class="mainBox main__contents">
      <div class="contents">
        <div class="contents__header">
@@ -24,14 +33,12 @@ function ContentsBox(target, state) {
            <span>더보기></span>
          </div>
        </div>
-       <div data-contents="${contents}" class="contents__body ${
-      classes ? classes.join(" ") : ""
-    }">
-        ${contentsBody?.template()}
-       </div>
+       ${contentsBodyDiv.outerHTML}
      </div>
    </li>`;
   };
+
+  this.render();
 }
 
 createExtendsRelation(ContentsBox, Component);

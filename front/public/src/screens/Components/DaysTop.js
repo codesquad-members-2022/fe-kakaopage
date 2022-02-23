@@ -4,22 +4,25 @@ import Component from "../Component.js";
 function DaysTop(target, state) {
   Component.call(this, target, state);
 
-  const { days, koreaDay } = this.state;
-
   this.template = function () {
+    const { days, koreaDay, daysList } = this.state;
     return `
       <ul class="contents__daysNav">
       ${days
         .map(
           (day) =>
-            `<li class='${koreaDay === day ? "selected" : ""}'>${day}</li>`
+            `<li class='daysNav-item${
+              koreaDay === day ? " selected" : ""
+            }'>${day}</li>`
         )
         .join("")}
           </ul>
           <ul class="contentsCard">
-            ${this.state.daysList?.template()}
+            ${daysList?.template()}
           </ul>`;
   };
+
+  this.render();
 }
 
 createExtendsRelation(DaysTop, Component);

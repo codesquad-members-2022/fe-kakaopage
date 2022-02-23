@@ -7,13 +7,36 @@ import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../Component.js";
-import { createExtendsRelation } from "../../../utils.js";
+import { createExtendsRelation, updateNodeClasses } from "../../../utils.js";
 import DaysList from "../../Components/DaysList.js";
 import ContentsBox from "../../Components/ContentsBox.js";
 import FullButton from "../../Components/FullButton.js";
 
 function HomeGenre(target) {
   Component.call(this, target);
+
+  this.setEvent = function () {
+    this.addEvent("click", ".daysNav-item", ({ target }) => {
+      const eventTarget = target.closest(".daysNav-item");
+      updateNodeClasses(eventTarget, "selected");
+      const koreaDay = eventTarget.textContent;
+      const daysTopBox = this.state.contents.find(
+        (content) =>
+          content.constructor.name === "ContentsBox" &&
+          content.state.contents === "daysTop"
+      );
+      daysTopBox.state.contentsBody.setState({
+        koreaDay,
+        daysList: new DaysList(daysTopBox.state.contentsBodyDiv, {
+          koreaDay,
+          count: 10,
+        }),
+      });
+      console.log(daysTopBox.state);
+      // daysTopBox.render();
+      this.render();
+    });
+  };
 
   /* 메인 배너 Component */
   const mainBanner = new MainBanner(target);
@@ -32,8 +55,11 @@ function HomeGenre(target) {
     contents: "daysTop",
     titleNum: 1318,
   });
-  const daysList = new DaysList("_", { koreaDay, count: 10 });
-  const daysTop = new DaysTop(daysTopBox.getBodyNode(), {
+  const daysList = new DaysList(daysTopBox.state.contentsBodyDiv, {
+    koreaDay,
+    count: 10,
+  });
+  const daysTop = new DaysTop(daysTopBox.state.contentsBodyDiv, {
     days,
     koreaDay,
     daysList,
@@ -73,7 +99,7 @@ function HomeGenre(target) {
     contentsBody: new RecommendEvent(),
   });
 
-  this.state = {
+  this.setState({
     contents: [
       mainBanner,
       navDetail,
@@ -86,7 +112,7 @@ function HomeGenre(target) {
       recommendEventBox,
       new FullButton(),
     ],
-  };
+  });
   this.template = function () {
     const { contents } = this.state;
     return `${contents?.reduce((tags, content) => {
