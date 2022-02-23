@@ -45,7 +45,7 @@ function renderEvent(genreInfo) {
               <img src="/FE/FE01-html/images/previous button.svg" alt="">
               <img src="/FE/FE01-html/images/next button.svg" alt="">
           </div>
-          <div class="eventTitle">${title}</div>
+          <div class="eventTitle" id="eventTitleId">${title}</div>
           <div class="eventInfoWrap">
               <div class="eventLeft">
                   <div class="eventStatusWrap heightCenterSort">
@@ -55,7 +55,7 @@ function renderEvent(genreInfo) {
                   <div class="eventGenreInfo">${genreInfo}</div>
                   <div class="eventSlash">|</div>
                   <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt="" class="readCountEvent">
-                  <div class="eventFollow">${follow}</div>
+                  <div class="eventFollow" id="eventFollowId">${follow}</div>
               </div>
               <div class="eventRight">
                   <div class="eventPageNum">1</div>

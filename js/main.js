@@ -44,12 +44,18 @@ function changeDayAndContents(target) {
 function changeEventSlideContents(target) {
   const genre = target.textContent;
   const slide = document.querySelector("#eventSlideId");
+  const eventTitle = document.querySelector("#eventTitleId");
+  const eventFollow = document.querySelector("#eventFollowId");
   eventContents.map((content) => {
     if (genre.trim() === content.genre) {
       const imageUrl = content.imgsrc;
-      slide.style.backgroundImage = `url('${imageUrl}')`;
+      const title = content.title;
+      const follow = content.follow;
     }
   });
+  slide.style.backgroundImage = `url('${imageUrl}')`;
+  eventTitle.textContent = title;
+  eventFollow.textContent = follow;
 }
 function changeSectionContents(target) {
   let navGenre;
