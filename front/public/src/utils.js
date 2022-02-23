@@ -19,7 +19,7 @@ const formatUserCount = (userCount) => {
 const getJson = (dataName) => {
   return new Promise((resolve, reject) => {
     try {
-      fetch(`${LOCAL_FETCH_URL}${dataName}.json`)
+      fetch(`${GITHUB_PAGE_FETCH_URL}${dataName}.json`)
         .then((response) => response.json())
         .then((json) => resolve(json));
     } catch (error) {
