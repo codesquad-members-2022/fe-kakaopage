@@ -1,4 +1,4 @@
-import { $, today } from "./utils.js";
+import { $ } from "./utils.js";
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 import { ContentListInfos } from "./ContentListInfos.js";
 
@@ -23,7 +23,7 @@ export const nav = {
                 this.removeLinkColor(weekElement.children, 'week__nav_day_selected');
                 target.classList.add('week__nav_day_selected');
                 
-                weeks?.remove();
+                weeks.remove();
                 contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent('1', +target.dataset.id));
             }
         });
