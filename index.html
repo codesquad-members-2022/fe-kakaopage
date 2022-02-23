@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-      <link href=”https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=”stylesheet”>
-      <link rel="stylesheet" href="css/header.css">
-      <link rel="stylesheet" href="css/navbar.css">
-      <link rel="stylesheet" href="css/common.css">
+      <link rel="stylesheet" href="/css/header.css">
+      <link rel="stylesheet" href="/css/navbar.css">
+      <link rel="stylesheet" href="/css/common.css">
+      <link rel="stylesheet" href="/css/menu.css">
       <meta charset="utf-8">  
       <title>카카오페이지</title>
     </head>
@@ -82,23 +82,49 @@
               </span> -->
               <img src="./pic/slide1.png" style="width: 720px; height: 480px;">
             </div>
-            
-            <div class="slide-description">
-
-            </div>
-            
           </div>
+        </div>
+        <div class="main__menu">
+            <div class="menu flex__center">
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">오늘 UP</div>
+                <div class="menu-content_num">231</div>
+              </a>
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">오늘 신작</div>
+                <div class="menu-content_num">1</div>
+              </a>
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">오리지널</div>
+                <div class="menu-content_num">2,337</div>
+              </a>
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">완결까지 정주행</div>
+                <!-- <div class="menu-content_num"></div> -->
+              </a>
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">독립운동가 웹툰</div>
+                <!-- <div class="menu-content_num"></div> -->
+              </a>
+              <a href="#" class="menu-content flex__center">
+                <div class="menu-content__text">오늘 랭킹</div>
+                <div class="menu-content_num">1위</div>
+              </a>
+            </div>
+
+
+
         </div>
         <div class="navbar-second navbar-week">
           <ul class="navbar-second-1">
-            <li class="navbar-second-content"><div class="navbar-week-1">월</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">화</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">수</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">목</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">금</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">토</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">일</div></li>
-            <li class="navbar-second-content"><div class="navbar-week-1">완결</div></li>
+            <li class="navbar-second-content"><div class="mon">월</div></li>
+            <li class="navbar-second-content"><div class="tue">화</div></li>
+            <li class="navbar-second-content"><div class="wed">수</div></li>
+            <li class="navbar-second-content"><div class="thu">목</div></li>
+            <li class="navbar-second-content"><div class="fri">금</div></li>
+            <li class="navbar-second-content"><div class="sat">토</div></li>
+            <li class="navbar-second-content"><div class="sun">일</div></li>
+            <li class="navbar-second-content"><div class="end">완결</div></li>
           </ul>
         </div>
         <div class="navbar-webtoon">
@@ -241,6 +267,8 @@
           </div>
         </div>
       </main>
-      <script src="javascript/header.js"></script>
+      
+      <script type="module" src="/src/exec.js"></script>
+      <!-- <script type="module" src="./src/main.js"></script> -->
     </body>
 </html>

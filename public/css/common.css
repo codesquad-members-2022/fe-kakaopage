@@ -19,3 +19,9 @@
   background-position: 50% 50%;
   background-size: 44px;
 }
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
