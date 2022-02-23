@@ -2,7 +2,7 @@ import { IconSrc } from "./data/IconSrc.js"
 import DailyTop from "./data/DailyTop.json" assert { type: "json" };
 import GenreTop from "./data/GenreTop.json" assert { type: "json" };
 
-function createTopThumbHTML(comicInfo) {
+export function createTopThumbHTML(comicInfo) {
     const ratingIconClass = isNaN(comicInfo.rating) ? 'comic-thumb__star gone' : 'comic-thumb__star';
     const thumbHTML = /* html */
         `<li class="comic-list__item center">
@@ -27,7 +27,7 @@ function createTopThumbHTML(comicInfo) {
     return thumbHTML;
 }
 
-function createTopListHTML(type){
+export function createTopListHTML(type){
     let listHTML = '';
     const comicData = type in DailyTop ? DailyTop[type] : GenreTop[type];
     for(const data of comicData){
@@ -36,4 +36,18 @@ function createTopListHTML(type){
     return listHTML;
 }
 
-export { createTopListHTML };
+export function createMenuItemHTML(data){
+    let badgeHTML = '';
+
+    if (data.badge !== null) {
+        badgeHTML = /* html */ `<div class="count_badge">
+        <span class="count_badge__text border__ellipse">${data.badge}</span>
+    </div>
+    `;
+    }
+
+    return /* html */ `<a href="#" class="contents_menu__item center" data-key="${data.key}">
+    <span class="contents_menu__title">${data.title}</span>
+    ${badgeHTML}
+</a>`
+}

@@ -1,0 +1,34 @@
+{
+    "home" : [
+        {
+            "title" : "오늘 UP",
+            "badge" : "229",
+            "dataKey" : "up"
+        },
+        {
+            "title" : "오늘 신작",
+            "badge" : "12",
+            "dataKey" : "new"
+        },
+        {
+            "title" : "오리지널",
+            "badge" : "2,336",
+            "dataKey" : "origin"
+        },
+        {
+            "title" : "완결까지 정주행",
+            "badge" : null,
+            "dataKey" : "end"
+        },
+        {
+            "title" : "독립운동가 웹툰",
+            "badge" : null,
+            "dataKey" : "event"
+        },
+        {
+            "title" : "오늘 랭킹",
+            "badge" : "1위",
+            "dataKey" : "item"
+        }
+    ]
+}
