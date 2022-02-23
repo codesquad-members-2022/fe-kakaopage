@@ -72,3 +72,10 @@ export function createContainerHeaderHTML(title, count = null){
         <a href="#" class="contents-container__more" alt="더보기 버튼">더보기 ></a>
     `
 }
+
+export function createWeekNavItemHTML(text, dataKey, selected){
+    const selectedClass = !selected ? '' : 'week-nav__item-selected';
+    return /* html */ `
+    <li class="week-nav__item ${selectedClass}" data-data-key="${dataKey}">${text}</li>
+    `
+}
