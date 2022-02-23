@@ -5,8 +5,10 @@ const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
 const slideSpeed = 0.2;
 const delay = slideSpeed * 1000;
 const initPosition = 0;
+const time = 3000;
 
 let position = -slideWidth;
+let autoPlay;
 
 const makingClone = () => {
   const cloneSlide_first = slideImg[0].cloneNode(true);
@@ -51,10 +53,20 @@ const playEvent = (btnEvent) => {
   moveSlide(position, slideSpeed);
 };
 
+function timerInterval() {
+  return setInterval(() => {
+    playEvent();
+    isEnd();
+  }, time);
+}
+
 export const slideShow = (e) => {
+  clearInterval(autoPlay);
+  autoPlay = timerInterval();
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
   isEnd();
 };
 
+autoPlay = timerInterval();
 makingClone();
