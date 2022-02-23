@@ -1,12 +1,19 @@
 .carousel {
-    width: var(--max-width);
+    width: 720px;
     height: 480px;
+    overflow-x: hidden;
     position: relative;
-    background-image: url('../images/carousel_background.png');
-    background-repeat: no-repeat;
-    background-position: center center;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.carousel__box {
+}
+
+.carousel__background_img {
+    float: left;
+    width: 720px;
+    height: 480px;
 }
 
 .carousel .carousel_left_arrow {
@@ -45,7 +52,7 @@
     color: var(--color-white);
 }
 
-.carousel__inner .carousel_count {
+.carousel__count {
     opacity: .6;
     font-size: var(--font-20);
     color: var(--color-white);
