@@ -1,5 +1,5 @@
 let data;
-const DATA_URL = "../data/data.json";
+const DATA_URL = "data/data.json";
 
 // 1회성 json data 받기
 await (async function getJson() {
