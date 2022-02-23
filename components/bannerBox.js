@@ -1,15 +1,9 @@
 import {randomGen} from "../utils.js";
 
-export const BannerBox = (target, position, images, {clock,
-    Up,
-    Person,
-    Separator,
-    rating,
-    prev,
-    next,
-    down,})=>{
-    const template =  `
-         <div class="carousel">
+
+export const BannerBox = (target,images, infographic )=>{
+    const template =
+    `<div class="carousel">
                 <img src=${randomGen(images.banner)} />
                 <div class="info">
                     <div class="description">
@@ -18,12 +12,12 @@ export const BannerBox = (target, position, images, {clock,
                     </div>
                     <div class="infographic">
 
-                        <img src=${Up}/>
-                        <img src=${clock}/>
+                        <img src=${infographic.Up}/>
+                        <img src=${infographic.clock}/>
                         <div>웹툰</div>
-                        <img src=${Separator}
+                        <img src=${infographic.Separator}
                              alt="Seperator"/>
-                        <img src=${Person}/>
+                        <img src=${infographic.Person}/>
                         <div>81.1만명</div>
                         <div class="page">3 / 13</div>
                     </div>
@@ -31,11 +25,10 @@ export const BannerBox = (target, position, images, {clock,
             </div>
 
             <button type="button" class="prevBtn">
-                <img src=${prev}>
+                <img src=${infographic.prev}>
             </button>
             <button class="nextBtn">
-                <img src=${next}/>
-            </button>
-    `
-    target.insertAdjacentHTML(position, template)
+                <img src=${infographic.next}/>
+            </button>  `
+    target.innerHTML =  template
 }

@@ -1,4 +1,6 @@
-export const menuNav = (target,position)=>{
+import {AddEvent} from "../utils.js";
+
+export const menuNav = (target)=>{
     const template =  `
     <ul class="menuNav">
                <li class="menu">
@@ -24,7 +26,20 @@ export const menuNav = (target,position)=>{
                 <div class="dot"></div>
                 <a><img src="https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504"/></a>
             </li>
-</ul>
-`
-    target.insertAdjacentHTML(position, template);
+</ul>`
+    let tmp = '';
+    target.innerHTML = template;
+    AddEvent(target, 'click', '.menu', ({target:eventTarget})=>{
+        const section = document.querySelector('section')
+        const main = document.querySelector('main');
+        if(eventTarget.closest('li.menu').classList.contains('toon')){
+            if(!tmp)return false;
+            section.innerHTML = tmp;
+        }else{
+            if(tmp) return false;
+            tmp = section.innerHTML
+            section.innerHTML = '<span>This is Dummy Page</span>'
+        }
+
+    })
 }
