@@ -1,20 +1,20 @@
 
 import { select, addClass, removeClass } from "./util.js";
 import { webtoonData } from "./webtoonData.js"
-import { createContents } from "./webtoon_home.js";
 
 function createDailyDiv() {
     const dailyDiv = document.createElement('div');
     dailyDiv.className = "margin-center daily"
     dailyDiv.innerHTML = `<ul class="l-center daily__nav">
-            </ul>
-            <div class="l-inline daily__contents">
-            </div>`
+                          </ul>
+                          <div class="l-inline daily__contents">
+                          </div>`
     const $main = select('.main')
     $main.insertBefore(dailyDiv, null)
 }
 
 function createDailyNav() {
+
     createDailyDiv();
 
     const days = ['월', '화', '수', '목', '금', '토', '일', '전체']
@@ -62,27 +62,27 @@ function getDailyTemplate(day) {
             if(data.rank < 6) {
                 template +=
                     `<div class="daily__content">
-                <div class="content__inner">
-                    <img class="daily__img" src="${data.src}" alt="${data.title}">
-                    <div class="daily__bar">${data.rank}위</div>
-                </div>
-                <div class="daily__title">${data.title}</div>
-                <div class="daily__views">${data.views}만명</div>
-            </div>`
+                        <div class="content__inner">
+                            <img class="daily__img" src="${data.src}" alt="${data.title}">
+                            <div class="daily__bar">${data.rank}위</div>
+                        </div>
+                        <div class="daily__title">${data.title}</div>
+                        <div class="daily__views">${data.views}만명</div>
+                    </div>`
             }
             else{
                 template +=
                     `<div class="daily__content">
-                <div class="content__inner">
-                    <img class="daily__img" src="${data.src}" alt="${data.title}">
-                    <div class="daily__bar">
-                        <img src="./images/ico-thumbnail-star.svg" alt="별">
-                        ${data.rating}
-                    </div>
-                </div>
-                <div class="daily__title">${data.title}</div>
-                <div class="daily__views">${data.views}만명</div>
-            </div>`
+                        <div class="content__inner">
+                            <img class="daily__img" src="${data.src}" alt="${data.title}">
+                            <div class="daily__bar">
+                                <img src="./images/ico-thumbnail-star.svg" alt="별">
+                                ${data.rating}
+                            </div>
+                        </div>
+                        <div class="daily__title">${data.title}</div>
+                        <div class="daily__views">${data.views}만명</div>
+                    </div>`
             }
 
         }
@@ -108,6 +108,3 @@ export function initWebtoonDaily() {
     createTodayContent()
     listenEvent()
 }
-
-
-//initWebtoon();

@@ -1,75 +1,65 @@
 # fe-kakaopage
 
-#### 1. 구현
- 
-- header / main / footer 로 나누어 구현.
 
-- header
-    - [x] title : h1 tag 사용
-    - [x] menus
-        - [x] 검색 : input, button 사용
-            - 타원 모양 input 만들기가 어려웠음.
-            - border-radius 50%
-        - [x] stage 로고
-        - [x] users 
-            - 캐시충전, 로그인
-            - li 사이에 span 추가하여 '|' 구현
-    - [x] headNav
-        - ul, li 사용하여 tab menu 구현
-        - li 내부에 a 태그로 선택 가능하도록 구현 => li가 필요한가?
-        - 선택 표시 밑줄은 under class 추가
-    - [x] 상단바 고정
-        - headerFix class 추가 
-        - position fixed 로 구현
-        - header 높이 만큼 main 에 padding top 을 줘야함.
-        - 이미지 겹치는 현상 => z-index 를 부여하여 해결.        
-- main
-    - nav, contents, category, daily 로 구성
-    - [x] mainNav
-        - ul li 사용, 내부 a 태그는 적용하지 않았다. => js 내부 렌더링하는 경우에는 a 태그가 필요한가?
-        - 선택 표시 on class 추가
+#### 1. Tab UI 동적기능 구현
+
+#### check list
+- 웹툰 - 요일 영역
+    - [x] 요일 선택 시 노란색 표시 
+    - [x] 요일 선택 시 요일에 해당하는 웹툰 목록 보여주기
+            - webtoonData day 와 click 된 요일 비교하여 해당하는 목록 redering
+    - [x] 첫 화면에 오늘 요일에 해당되는 웹툰 목록 보여주기
+- 웹툰 - 메인 navigation 
+    - [x] 홈/요일연재/웹툰 등 선택 시 굵은 검은색 표시
+    - [x] 첫 화면 홈 표시
+    - 각 탭마다 re-rendering
+       - [x] 홈 탭 : contents - category - daily 구성
+       - [x] 웹툰, 요일연재 탭 : contents - daily 구성
+       - [x] 소년,드라마 등 : contents - recommend 구성
+            - webtoonData genre 추가하여 click부분 innerText 와 비교.
+            - 동일한 장르 4개까지 template에 추가하여 rendering
+       
+#### 설계
+
+- 작은 기능부터 만들기 3 -> 2 -> 1
+    - 3완료, 2 진행중..
     
-    - [x] contents
-        - img, img 위 요소, sentence 로 구성
-        - img 는 display : block 을 해줘야 빈틈 없이 들어감.
-        - img 위 button, text 는 상위 태그 position relative 후 absolute 사용하여 구현.
-        - button 은 button tag 에 background 로 버튼이미지를 넣어 구현.
+    1. header tab 선택 시
+        - 첫 화면에 header / main - 홈 (더미) / footer 
+        - header 의 각 tab 에 따른 main 템플릿을 구성 - 더미페이지
+        - tab 선택 시 main 변경.
         
-    - [x] category
-        - ul li 사용
-        - 원본 페이지의 홈 탭 부분이라 잘못 만들었으나 그냥 냅둠.
+    2. main - 웹툰 tab
+        - 홈 / 요일연재 등 nav tab 선택 시 변경.
+        - 내부 디자인 변경
     
-    - [x] daily 
-        - nav, contents 로 구성
-        - [x] nav
-            - ul, li 사용. li 내부에 button 사용.
-            - 선택요일 on class 추가
-        - [x] contents
-            - 여러 content div 를 가지고 있어 flex wrap 사용, 한 줄에 5개가 표현되도록 적절한 width 부여
-            - [x] content
-                - inner, title, views 로 구성
-                - [x] inner 
-                    - 이미지와 bar 로 구성되며 overflow hidden 과 border-radius 로 모양 구현
-                - [x] title
-                    - width 초과하는 부분 ... 표시 구현 (white-space, overflow, text-overflow)     
-                - [x] views
-- footer
-    - [x] footer menus
-        - 각 menu 는 a 태그로 구현
-        - 사이 가운데 점은 &#183 유니코드 사용, span tag 를 사이에 넣어줌.
-                    
+    3. 웹툰 - 요일연재 tab
+        - 요일 선택 시 만화 목록 변경
+        - 요일 선택 시 선택표시(원형)
+
+- js 구성 : main - daily, contents, recommend
+       
+    - webtoon_main 에서 `initWebtoon()` 실행
+    - 웹툰 탭의 mainNav 를 생성
+    - 웹툰 탭의 홈 화면을 rendering `renderStartPage`
+    - mainNav click 이벤트 생성.
+    - 하위 탭 클릭 시 main Nav 를 제외한 하위 메뉴 rendering (각 콤포넌트 생성)
+    - 각 콤포넌트 생성 함수는 daily, contents, recommend 별도 파일로 분리.
+    - daily 파일은 콤포넌트 생성 및 하위 클릭 이벤트(날짜 클릭) 생성도 같이 함.
+
 #### 2. 어려웠던 점
-- 적절한 시멘틱 태그 사용
-    - li 를 사용해야할 지, button 태그 등 특정 태그를 줄줄히 나열할지. 내부에 넣어주는 게 좋은지 잘 모르겠습니다.
 
-- class 네이밍
-    - 위에서 썼던 이름이 밑에서도 비슷하게 필요한 경우가 많았습니다. (아는 단어 pool 이 작아서..?)
-    - 하위 구조의 class 명을 지을 때 상위 구조를 네이밍에 표현해주는 경우, (head__menus 등) 더 하위로 갈 때 __를 어디까지 해주는게 좋을 지 헷갈렸습니다.
+- 큰 그림 설계가 어려워 작은 기능부터 만듦.
+    - 만들어놓은 html 에서 노출되는 요일별 UI 작동부터 구현하였습니다.
+    - 컴포넌트를 제대로 만들어놓고 시작하지 않다보니 상위 탭 구현으로 갈수록 코드가 깔끔하지 못하다는 느낌을 받았습니다.
+    - 현재 각 컴포넌트 js 파일마다 element 생성, event 생성, rendering 함수가 같이 존재합니다.
 
-- layout, font-size
-    - css 감이 없어 적당한 크기의 감? 을 찾기가 어려웠습니다.
-    - 모양 맞추기 위해 실행 후 검사하여 px 를 변경해보면서 적절한 px 를 찾아 구현하였는데, 시간도 오래걸리고 size가 고정되어 보수가 어려운 것 같습니다.
-    - rem, em, % 를 활용하면 될 것 같은데 시도는 못했습니다.
+- 컴포넌트 생성
+    - 정석적인 컴포넌트 구조에 대해 확실하게 알지 못해 임의대로 구현할 영역을 나누어 함수를 만들었습니다.  
+    - 어느 탭에서든 모양이 비슷하면 재사용할 수 있도록, data 나 특정 사항만 매개변수로 받는 컴포넌트 함수를 만들고 싶었지만 잘 안된 것 같습니다.
+    - 현재는 특정 탭에서만 사용이 가능한 컴포넌트 함수?(각 영역 rendering 함수) 로 구현
 
-- 공통 css 묶기
-    - layout 이나 font 관련 css 를 묶어보려고 했는데 class 마다 교집합되는 속성이 조금씩 달라 공통 css 묶기가 생각보다 어려웠습니다. (억지로 묶은 느낌..)
+- Data 다루기
+    - webtoonData 의 각 항목을 정하는 것도 어려웠고, 어느 수준까지 필터링 된 data 를 받았다고 가정할 지? 도 어려웠습니다.
+    - 컴포넌트 마다 사용할 data 객체를 분리하는게 좋을 지 아니면 한 객체에서 가져와 필터링을 하는게 좋을 지 고민도 됐습니다.
+        ex) 모든 만화 데이터에서 추천 만화를 분류할지 , 추천만화로 분류된 데이터에서 추천만화를 가져와 rendering 할지...

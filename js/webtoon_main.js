@@ -1,7 +1,8 @@
 
 import { select, addClass, removeClass } from "./util.js";
 import { initWebtoonDaily } from "./webtoon_daily.js";
-import { createContents, createCategory } from "./webtoon_home.js";
+import { createContents, createCategory } from "./webtoon_contents.js";
+import { createRecommend } from "./webtoon_genre.js";
 
 function createMainNav() {
     const $mainNav = document.createElement('nav')
@@ -47,10 +48,16 @@ function renderMenu(target) {
     const menuFuncs = {
         홈: renderHome,
         요일연재: renderDaily,
-        웹툰: renderDaily
+        웹툰: renderDaily,
+        장르: renderGenre
     }
     const key = target.innerText
-    menuFuncs[key]()
+    if(key === '홈' || key === '요일연재' || key === '웹툰') {
+        menuFuncs[key]()
+    }
+    else {
+        menuFuncs['장르'](key)
+    }
 }
 
 function clearMenu() {
@@ -72,6 +79,11 @@ function renderHome() {
 function renderDaily() {
     createContents();
     initWebtoonDaily();
+}
+
+function renderGenre(genre) {
+    createContents();
+    createRecommend(genre)
 }
 
 function initWebtoon() {
