@@ -49,7 +49,7 @@ function renderEvent(genreInfo) {
           <div class="eventInfoWrap">
               <div class="eventLeft">
                   <div class="eventStatusWrap heightCenterSort">
-                      <img src=${src} alt="" class="eventStatus">
+                      <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt="" class="eventStatus">
                   </div>
                   <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
                   <div class="eventGenreInfo">${genreInfo}</div>
@@ -69,6 +69,7 @@ function renderEvent(genreInfo) {
   </div>
 </div>
   `;
-  section.insertAdjacentHTML("beforeend", event);
+  const genreBar = document.querySelector("#webtoonGenresWrap");
+  genreBar.insertAdjacentHTML("afterend", event);
 }
 export { renderWebtoonGenreBar, renderEvent };

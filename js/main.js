@@ -3,9 +3,9 @@ import { renderWebtoonGenreBar, renderEvent } from "./section.js";
 const weekdayContents = datas.weekdayContents;
 const eventContents = datas.eventContents;
 const sectionContents = datas.sectionContents;
-async function init() {
+function init() {
   renderWebtoonGenreBar();
-  renderEvent();
+  renderEvent("웹툰");
 }
 init();
 function changeTabsColor(target) {
@@ -45,8 +45,8 @@ function changeEventSlideContents(target) {
   const genre = target.textContent;
   const slide = document.querySelector("#eventSlideId");
   eventContents.map((content) => {
-    if (genre.trim() === content[0]) {
-      const imageUrl = content[1];
+    if (genre.trim() === content.genre) {
+      const imageUrl = content.imgsrc;
       slide.style.backgroundImage = `url('${imageUrl}')`;
     }
   });
