@@ -1,4 +1,6 @@
-const imageBoxContainer = document.querySelector(".image-box-container");
+import { $ } from './selector.js';
+
+const imageBoxContainer = $(".image-box-container");
 const containerBox = imageBoxContainer.querySelector(".image-box-container__box");
 const imageBoxInfo = imageBoxContainer.querySelector(".image-box__page-info");
 const lastIdx = containerBox.childElementCount*100 - 100;
