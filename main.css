@@ -1,140 +1,180 @@
-:root{
-    /* color */
-    font-family: 'Noto Sans KR', sans-serif;
-    --text-color: #333333;
-    --main-white: #FFFFFF;
-    --background-color: #EEEEEE;
-    --accent-color: #FCBC19;
-    /*size*/
-    --width: 30%;
 
-    /*font-size*/
-    --largefont: 22px;
-}
-* {
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-    font-size: 100%;
-}
 /*1. 헤더 세팅*/
-.header{
-    width: 100vw;
-    background-color: var(--main-white);
-}
-.head, .navbar__menu{
-    display: flex;
-    /* flex-basis: 0;  */
-    /*전체 영역을 비율에 맞게 조정한다(1은 남은 마진만큼만)*/
-    margin: 0 20%;
-    background-color: var(--main-white);
-    justify-content: center;
-}
-
 .item{
-    padding: 40px;
-    width: var(--width);
-    background-color: var(--main-white);
-}
-/*검색창 세팅*/
-.search{
-   display: flex;
-   background-color: var(--main-white);
-   margin-left: 200px;
-   padding-left: 100px;
-   position: relative;
+    padding-top: 2rem;
 }
 
-.searchborder{
-    position: relative;
-    width: 200px;
-    height: 30px;
-    border-radius: 15px;
-    border-color: #999999;
-    border: 1px solid;
-}
+/*검색창*/
 #searchInput{
-    margin-left: 10px;
-    position: absolute;
-    width: 150px;
-    height: 30px;
-    border-color: none;
+    border: 1px solid var(--dark-grey);
+    border-radius: 15px;
 }
-.search i{
-    position: absolute;
-    margin-left: 170px;
-    padding-top: 8px;
-    color: #898989;
-}
-/*stage 세팅*/
-.stage{
-    padding-left: 30px;
-    padding-right: 0;
-}
-
 .stage img{
-    width: 60%;
+    width: 5rem;
 }
 /*로그인 세팅*/
 .user{
     display: flex;
     justify-content: space-around;
     font-size: var(--largefont);
-    color: #999999;
+    color: var(--dark-grey);
     border: 0;
     padding-left:0; margin-left:0;
 }
 /* 2. 네비바 세팅 */
-a{
-    text-decoration-line: none;
-    color: var(--text-color);
-}
 
-.navbar__menu li{
-    padding: 20px;
-    width: var(--width);
-    background-color: pink;
-    cursor: pointer;
-    list-style: none;
+.navbar__menu button{
+    padding: 2rem 1.5rem 0 1.5rem;
     font-size: var(--largefont);
-    text-align: center;
-}
-
-/*3. 장르 */
-.contents__genre{
-    background-color: blue;
-    margin: 20px 20%;
-    width: 60%;
-    padding: 30px;
-    display: flex;
-    justify-content: space-around; 
-    justify-content: center;
     
 }
 
-.contents__genre li{
-    padding: 15px 33px;
-    display: inline;
-    background-color: pink;
-    cursor: pointer;
-    list-style: none;
-    font-size: 20px;
-    text-align: center;
-   
+.navbar #nav__toon{
+    border-bottom: 4px solid var(--accent-color);
 }
 
-.contents__genre a{
-    color: var(--background-color);
+/*3. 장르 */
+.contents__genre button{
+    color: var(--dark-grey);
+}
+
+.genrebar__tab:first-child{
+    color: var(--text-color);
 }
 
 /* 4. 배너 */
 .banner{
-    margin: 20px 20%;
-    width: 60%;
-    height: 500px;
-    background-color: red;
+    height: 35rem;
+    position: relative;
+    z-index: -5;
+    margin-top: 1rem;
 }
 
-body{
-    background-color: var(--background-color);
+.banner__image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.banner__button{
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 15rem;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+.banner__button button{
+    background-color:transparent;
+    border: none;
+}
+
+.underbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    color: var(--main-white);
+    margin-top: 28rem;
+    position: absolute;
+    padding: 0 5%;
+}
+
+.count{
+    color: var(--background-color);
+    font-size: 2rem;
+}  
+
+.comment{
+    position: absolute;
+    width: 100%;
+    margin-top: 31.6rem;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    z-index: 1;
+    text-align: center;
+} 
+
+/*5. 카테고리 */
+
+.category__ele{
+    height: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1rem 1rem;
+}
+
+ .category__ele li{
+    margin: 1rem;
+    padding-top: 1.7rem;
+    background-color: grey;
+    text-align: center;
+}
+
+/*6. 기다리면 무료 */
+
+.waiting__contents .wc{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    height: 5em;
+}
+
+/*7. 홈> 요일 연재 TOP */
+.daily__contents{
+    display: grid;
+    grid-template-columns: repeat(5,7.2rem);
+    grid-template-rows: repeat(2,12.5rem);
+    margin: 1rem 1.5rem;
+    column-gap: 1.5rem;
+    height: 25rem;
+}
+
+.daily__contents .content{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.c_img{
+    height: 7rem;
+    background-color: skyblue;
+}
+
+.days button, .wdays button{
+    padding: 0 20px;
+    color: var(--dark-grey);
+}
+
+/* 적용이 안되는 이유는 아마 우선순위 때문인 것 같다 
+ .days__Mon{
+    border-bottom: 4px solid var(--accent-color);
+    color: var(--text-color);
+} */
+
+.days button:first-child{
+    color: var(--text-color);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+/*8. 웹툰> 웹툰: 요일별 */
+.webtoon{
+    display: none;
+}
+.w__content{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.wc_Image img{
+    width: 150px;
+    height: 130px;
+}
+
+.wc_Info{
+    margin: 2rem 0 0 1rem;
 }

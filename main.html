@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -12,18 +13,17 @@
     <title>홈 | 카카오페이지</title>
 </head>
 
-<body>
-    <div class="header">
-    <!-- Head -->
+<div>
+<div class="header">
+    <!-- 1. 헤더 -->
     <head>
         <div class="head">
             <div class="item logo">
                 <img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954" alt="logo-kakaopage">
             </div>
             <div class="item search">
-                <div class="searchborder"></div>
-                <input type="text" id="searchInput">
-                <i class="fas fa-search"></i>
+                <span><input type="text" id="searchInput"></span>
+                <span><i class="fas fa-search"></i></span>
             </div>
             <div class="item stage">
                 <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="">
@@ -35,54 +35,167 @@
             </button>
         </div>
     </head>
-    <!-- navbar-->
+    <!-- 2. 네비바-->
         <nav class="navbar">
-            <ul class= "navbar__menu">
-                <li><a href="">홈</a></li>
-                <li><a href="">웹툰</a></li>
-                <li><a href="">웹소설</a></li>
-                <li><a href="">영화</a></li>
-                <li><a href="">방송</a></li>
-                <li><a href="">책</a></li>
-            </ul>
+            <div class= "navbar__menu">
+                <button type="button" id="nav__home">홈</a></button>
+                <button type="button" id="nav__toon">웹툰</a></button>
+                <button type="button" id="nav__novel">웹소설</a></button>  
+                <button type="button" id="nav__movie">영화</a></button>
+                <button type="button" id="nav__tv">방송</a></button>
+                <button type="button" id="nav__book">책</a></button>
+            </div>
         </nav>
-    </div>
 
+    </div>
+    <!--3. 장르-->
+    <!-- <section class="contents__genre">
+        <div class="genrebar">
+            <button type="button" id="genrebar__home">홈</button>
+            <button type="button" id="genrebar__days">요일연재</button>
+            <button type="button" id="genrebar__webtoon">웹툰</button>
+            <button type="button" id="genrebar__boys">소년</button>
+            <button type="button" id="genrebar__drama">드라마</button>
+            <button type="button" id="genrebar__romance">로맨스</button>
+            <button type="button" id="genrebar__rofan">로판</button>
+            <button type="button" id="genrebar__action">액션무협</button>
+            <button type="button" id="genrebar__bl">BL</button>
+        </div>     
+    
+    </section> -->
     <section class="contents__genre">
-        <ul>
-            <li><a href="">홈</a></li>
-            <li><a href="">요일연재</a></li>
-            <li><a href="">웹툰</a></li>
-            <li><a href="">소년</a></li>
-            <li><a href="">드라마</a></li>
-            <li><a href="">로맨스</a></li>
-            <li><a href="">로판</a></li>
-            <li><a href="">액션무협</a></li>
-            <li><a href="">BL</a></li>
-        </ul>     
+        <div class="genrebar">
+            <button type="button" class="genrebar__tab">홈</button>
+            <button type="button" class="genrebar__tab">요일연재</button>
+            <button type="button" class="genrebar__tab">웹툰</button>
+            <button type="button" class="genrebar__tab">소년</button>
+            <button type="button" class="genrebar__tab">드라마</button>
+            <button type="button" class="genrebar__tab">로맨스</button>
+            <button type="button" class="genrebar__tab">로판</button>
+            <button type="button" class="genrebar__tab">액션무협</button>
+            <button type="button" class="genrebar__tab">BL</button>
+        </div>     
     
     </section>
-
     <section class="banner">
+        <img src="https://dn-img-page.kakao.com/download/resource?kid=bmZHoY/hzmU21Eygj/bQ1xicVVVpZmUPCE77WemK" class="banner__image"/>
         <div class="banner__button">
-            <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="">
+            <button type="button"><img id ="btn1" src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt=""></button>
+            <button type="button"><img id ="btn2" src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt=""></button>
         </div>
-        <div class="banner__image">
-            <img src="#" alt="">
-        </div>
-        <div class="banner__info">
-            <div class="title">흑막을 버리는데</div>
-            <span class="status">이벤트</span>
-            <span class="type">웹툰</span>
-            <span class="type">|</span>
-            <span class="type">사람모양</span>
-            <span class="followers">29만</span>
-        </div>
-        <div class="comment">무림과 현세를</div>
-    </section>
 
+        <div class="underbtn">
+            <div class="banner__info">
+                <div class="title">흑막을 버리는데</div>
+                <span class="status">이벤트</span>
+                <span class="type">웹툰</span>
+                <span class="type">|</span>
+                <span><img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt=""></span>
+                <span class="followers">29만</span>
+            </div>
+            <div class="count">4/12</div>
+        </div>
+        <div class="comment">댓글달면 캐시가 우르르</div>
+    
+    </section>
+<!--5. 카테고리 -->
     <section class="category">
-
+        <ul class="category__ele">
+            <li><a href="#">오늘 신작</a></li>
+            <li><a href="#">100만 픽!</a></li>
+            <li><a href="#">HOT 뜨거!</a></li>
+        </ul>
     </section>
+<!--6. 기다리면 무료 -->
+    <section class="waiting">
+        <div class="waiting__title">
+            <div class="waiting__info">
+                <span>기다리면 무료 웹툰</span>
+                <span>(3,528)</span>
+            </div>
+            <div class="waiting__more">더보기 ></div>
+        </div>
+        <div class="waiting__contents">
+            <div class="wc 1">
+                <div class="img 1">이미지1</div>
+                <div class="imgInfo 1">
+                    <div id="info__title">웹툰 제목</div>
+                    <div id="info__des">웹툰 설명</div>
+                    <div id="info__detail">
+                        <span>사람모양</span>
+                        <span class="fan">12.7만명</span>
+                        <span class="writer">미우</span>
+                        
+                    </div>
+                </div>
+            </div>
+           
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 7. 요일별 웹툰-->
+    <section class="daily">
+        <div class="daily__title">
+            <div class="daily__info">
+                <span>요일 연재 TOP</span>
+                <span>(1,625)</span>
+            </div>
+            <div class="daily__more">더보기 ></div>
+        </div>
+
+        <div class="daily__days">
+            <div class="days">
+                <button type="button" class ="days__Mon">월</button>
+                <button type="button" class="days__Tue">화</button>
+                <button type="button" class="days__Wed">수</button>
+                <button type="button" class="days__Thu">목</button>
+                <button type="button" class="days__Fri">금</button>
+                <button type="button" class="days__Sat">토</button>
+                <button type="button" class="days__Sun">일</button>
+                <button type="button" class="days__Finished">완결</button>
+            </div>
+        </div>
+        <div class="daily__contents">
+            <div class="content">
+                <img class="c_img" src="https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2"; alt="">
+                <div class="c_rank">순위</div>
+                <div class="c_title">제목</div>
+                <div class="c_follower">
+                    <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="">
+                    <span>122.7만</span>
+                </div>
+            </div>
+        
+
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    
+</div>
+<section class="webtoon__days">
+    <div class="wdays">
+        <button type="button">월</button>
+        <button type="button">화</button>
+        <button type="button">수</button>
+        <button type="button">목</button>
+        <button type="button">금</button>
+        <button type="button">토</button>
+        <button type="button">일</button>
+        <button type="button">완결</button>
+    </div>
+</section>
+
+<section class="webtoon">
+    <ul class="webtoon__contents">
+        <!--리스트로 콘텐츠 들어감-->
+    </ul>
+</section>
+<script type="module" src="main.js"></script>
+<script type="module" src="innerHtml.js"></script>
+<script type="module" src="w-contents.js"></script>
+<script type="module" src="data_cover.js"></script>
 </body>
 </html>
