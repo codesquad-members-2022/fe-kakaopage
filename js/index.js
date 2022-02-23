@@ -98,11 +98,12 @@ const bindEventListener = () => {
     });
 
     let clickCnt = 0;
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const carouselItems = carouselItemWrapper.children;
+    const imageWidth = $(".cover-image").clientWidth;
+    const clonedNodeCnt = 2;
     $(".cover-image").addEventListener("click", ({ target }) => {
         if (!target.classList.contains("button")) return;
-        const carouselItemWrapper = $(".carousel-item-wrap");
-        const carouselItems = carouselItemWrapper.children;
-        const imageWidth = $(".cover-image").clientWidth;
         const customTransition = "transform 0.4s ease-in-out";
 
         if (target.closest(".btn-left")) {
@@ -118,6 +119,27 @@ const bindEventListener = () => {
             carouselItemWrapper.style.transform = `translateX(${
                 -imageWidth * clickCnt
             }px)`;
+        }
+    });
+
+    $(".cover-image").addEventListener("transitionend", () => {
+        if (!carouselItems[clickCnt].dataset.clone) return;
+
+        if (carouselItems[clickCnt].dataset.clone === "last") {
+            carouselItemWrapper.style.transition = "none";
+            clickCnt = carouselItems.length - clonedNodeCnt;
+            carouselItemWrapper.style.transform = `translateX(${
+                -imageWidth * clickCnt
+            }px)`;
+            return;
+        }
+        if (carouselItems[clickCnt].dataset.clone === "first") {
+            carouselItemWrapper.style.transition = "none";
+            clickCnt = carouselItems.length - clickCnt;
+            carouselItemWrapper.style.transform = `translateX(${
+                -imageWidth * clickCnt
+            }px)`;
+            return;
         }
     });
 };
