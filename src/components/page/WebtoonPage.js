@@ -1,7 +1,10 @@
-import { HomeContents } from '../index.js';
+import { MainNavItems, ContentsComponent } from '../../data';
 
 const WebtoonPage = () => {
-  return HomeContents();
+
+  const selectedItem = MainNavItems.find((item) => item.isSelected).data;
+
+  return ContentsComponent[selectedItem]();
 };
 
 export default WebtoonPage;

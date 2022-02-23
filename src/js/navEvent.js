@@ -3,8 +3,12 @@ import { MainNavItems, ContentsNavItems, PageNavItems } from '../data';
 
 const changeSelectedItem = (items, selectedItem) => {
   items.forEach((item) => {
-    (item.isSelected || item.name === selectedItem) && (item.isSelected = !item.isSelected)
-  })
+    (item.isSelected || item.name === selectedItem) && (item.isSelected = !item.isSelected);
+  });
+};
+
+const resetNav = () => {
+  !MainNavItems[0].isSelected && changeSelectedItem(MainNavItems, MainNavItems[0].name);
 };
 
 const handleNav = (e) => {
@@ -17,6 +21,7 @@ const handleNav = (e) => {
 
   if (nav.classList.contains('page-nav')) {
     changeSelectedItem(PageNavItems, selectedItem);
+    resetNav();
     renderPageNav();
     renderPage(category);
   }
