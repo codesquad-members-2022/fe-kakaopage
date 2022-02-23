@@ -21,6 +21,14 @@ const DATA_WEBTOON = {
         view: '20.4',
         path: 'static/thumb/main_toon_0_2.png',
       },
+      {
+        title: '톱스타, 그 자체',
+        caption: '다시 톱스타가 될 수 있을까?',
+        tag: 'event',
+        type: '웹툰',
+        view: '5',
+        path: '',
+      },
     ],
     gridMenu: [
       ['오늘 UP', '195'],
@@ -37,7 +45,7 @@ const DATA_WEBTOON = {
   1: {
     mainBanner: [
       {
-        title: '화산전쟁',
+        title: '화산전생',
         caption: '나도 그들처럼 영웅이 되고 싶었다',
         tag: 'event',
         type: '웹툰',
