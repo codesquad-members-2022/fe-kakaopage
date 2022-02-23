@@ -81,22 +81,7 @@ const bindSubMenuEvent = () => {
     });
 };
 
-const toggleWeekDayMenu = (target) => {
-    const curEl = target.parentNode;
-    toggleClass(curEl, "active");
-};
-
-const bindEventListener = () => {
-    bindSubMenuEvent();
-
-    $("#app").addEventListener("click", ({ target }) => {
-        if ($(".week-day-menu")?.contains(target)) {
-            const today = target.innerText;
-            toggleWeekDayMenu(target);
-            renderWeekday(today);
-        }
-    });
-
+const bindCaroulselEvent = () => {
     let clickCnt = 0;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
@@ -140,6 +125,24 @@ const bindEventListener = () => {
                 -imageWidth * clickCnt
             }px)`;
             return;
+        }
+    });
+};
+
+const toggleWeekDayMenu = (target) => {
+    const curEl = target.parentNode;
+    toggleClass(curEl, "active");
+};
+
+const bindEventListener = () => {
+    bindSubMenuEvent();
+    bindCaroulselEvent();
+
+    $("#app").addEventListener("click", ({ target }) => {
+        if ($(".week-day-menu")?.contains(target)) {
+            const today = target.innerText;
+            toggleWeekDayMenu(target);
+            renderWeekday(today);
         }
     });
 };
