@@ -1,20 +1,12 @@
-import {
-  createEl,
-  $,
-  remove,
-  replaceInner,
-  cloneAndDsiplay,
-} from "./eventJS/util.js";
+import { domUtil } from "./eventJS/util.js";
 
 import { renderMainSecHome, renderMainSecWoD } from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
 import { renderToonbyDay } from "./eventJS/mainEvent.js";
 
-$(".prev").addEventListener("click", () => {});
-
 renderMainSecHome();
 
-$(".recommand__nav--ul").addEventListener("click", function (event) {
+domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
   if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
     renderMainSecHome();

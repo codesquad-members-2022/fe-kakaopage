@@ -1,10 +1,15 @@
-import { $, createEl } from "../eventJS/util.js";
+import { domUtil } from "../eventJS/util.js";
 import { data } from "./data.js";
 
-const createMainNav = (data) => {
-  const nav = createEl("nav");
-  nav.classList.add("main__nav__dow");
-  nav.innerHTML = `
+const createDomEl = (tagType, className, innerHTML) => {
+  const domElement = domUtil.createEl(tagType);
+  domElement.classList.add(className);
+  domElement.innerHTML = innerHTML;
+  return domElement;
+};
+
+const getMainNavHtml = (data) => {
+  return `
       <ul class="main__nav__dow--ul">
       ${data.week.reduce(
         (listHtml, day) => (listHtml += `<li>${day}</li>`),
@@ -12,14 +17,10 @@ const createMainNav = (data) => {
       )}
       </ul>
   `;
-
-  return nav;
 };
 
-const createMaincontainer = (toggleinfo, imgInfo) => {
-  const containter = createEl("section");
-  containter.classList.add("main");
-  containter.innerHTML = `
+const getMainHtml = (toggleinfo, imgInfo) => {
+  return `
   <nav class="main__nav--toggle">
     <ul class="main--toggle--left">
       <li>${toggleinfo.left}</li>
@@ -28,16 +29,14 @@ const createMaincontainer = (toggleinfo, imgInfo) => {
   </nav>
   <ul class="main__cartoonZone">
     ${imgInfo.reduce(
-      (imgHtml, imgData) => (imgHtml += createImgCard(imgData)),
+      (imgHtml, imgData) => (imgHtml += getImgCardHtml(imgData)),
       ""
     )}
   </ul>
 `;
-
-  return containter;
 };
 
-const createImgCard = (data) => {
+const getImgCardHtml = (data) => {
   return `
   <li class="main__cartoonZone__cell">
     <div class="main__cartoonZone--imageWrapper">
@@ -60,30 +59,22 @@ const createImgCard = (data) => {
 `;
 };
 
-const createlist = (data, className) => {
-  const UL = createEl("ul");
-  UL.classList.add(className);
-  UL.innerHTML = `${data.reduce(
+const getlistHtml = (data) => {
+  return `${data.reduce(
     (listHtml, toggleData) => (listHtml += `<li>${toggleData}</li>`),
     ""
-  )}`;
-  return UL;
+  )}
+  `;
 };
 
-const toonGenreChecker = (toonGenre) =>
+const getToonGenre = (toonGenre) =>
   data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
 
-const multiAppend = (data, parent, className, creatingFunc) => {
-  data.forEach((el) => {
-    parent.querySelector(className).appendChild(creatingFunc(el));
-  });
-};
-
 export {
-  createMainNav,
-  createMaincontainer,
-  createImgCard,
-  createlist,
-  toonGenreChecker,
-  multiAppend,
+  createDomEl,
+  getMainNavHtml,
+  getMainHtml,
+  getlistHtml,
+  getToonGenre,
+  getImgCardHtml,
 };

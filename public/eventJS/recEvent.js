@@ -1,51 +1,63 @@
-import { $, remove, removeAllChild } from "./util.js";
+import { domUtil } from "./util.js";
 import {
-  createMainNav,
-  createMaincontainer,
-  createImgCard,
-  createlist,
-  toonGenreChecker,
-  multiAppend,
+  createDomEl,
+  getMainNavHtml,
+  getMainHtml,
+  getlistHtml,
+  getToonGenre,
 } from "../component/mainComponent.js";
 import { data } from "../component/data.js";
 import { renderToonbyDay } from "./mainEvent.js";
 
 const renderMainSecHome = () => {
-  remove(".main");
+  domUtil.remove(".main");
 
-  const containers = data.genre.map((toonGen) => {
-    const imgData = toonGenreChecker(toonGen);
-    return createMaincontainer({ left: toonGen, right: "더보기" }, imgData);
+  const main = data.genre.map((toonGen) => {
+    const imgData = getToonGenre(toonGen);
+    return createDomEl(
+      "section",
+      "main",
+      getMainHtml({ left: toonGen, right: "더보기" }, imgData)
+    );
   });
 
-  containers.forEach((container) => {
-    $(".containEvery").appendChild(container);
+  main.forEach((container) => {
+    domUtil.$(".containEvery").appendChild(container);
   });
 };
 
 const renderMainSecWoD = () => {
-  remove(".main");
+  domUtil.remove(".main");
 
   const parentNav = ".main__nav--toggle";
-  const container = createMaincontainer(
-    { left: "", right: "전체(test)" },
-    data.toonData
+  const container = createDomEl(
+    "section",
+    "main",
+    getMainHtml({ left: "", right: "전체(test)" }, data.toonData)
   );
 
-  $(".containEvery").appendChild(container);
-  const newList = createlist(data.toggleLeft, "main--toggle--left");
-  remove(".main--toggle--left");
+  domUtil.$(".containEvery").appendChild(container);
+  const newList = createDomEl(
+    "ul",
+    "main--toggle--left",
+    getlistHtml(data.toggleLeft)
+  );
+  domUtil.remove(".main--toggle--left");
 
   container
     .querySelector(parentNav)
-    .insertBefore(newList, $(".main--toggle--right"));
+    .insertBefore(newList, domUtil.$(".main--toggle--right"));
 
-  const weekendNav = createMainNav(data);
+  const weekendNav = createDomEl("nav", "main__nav__dow", getMainNavHtml(data));
   weekendNav
     .querySelector(".main__nav__dow--ul")
     .addEventListener("click", renderToonbyDay);
 
   container.insertBefore(weekendNav, container.querySelector(parentNav));
+};
+
+const renderMainSecToon = () => {
+  domUtil.remove(".main");
 };
 
 export { renderMainSecHome, renderMainSecWoD };
