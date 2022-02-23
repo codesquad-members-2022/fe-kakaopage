@@ -1,0 +1,68 @@
+{
+  "results": {
+    "home": [],
+    "webtoon": [
+      { "name": "홈", "genre": "home" },
+      { "name": "요일연재", "genre": "days" },
+      { "name": "웹툰", "genre": "webtoon" },
+      { "name": "소년", "genre": "boy" },
+      { "name": "드라마", "genre": "drama" },
+      { "name": "로맨스", "genre": "romance" },
+      { "name": "로판", "genre": "rofan" },
+      { "name": "액션무협", "genre": "action" },
+      { "name": "BL", "genre": "bl" }
+    ],
+    "webnovel": [
+      { "name": "홈", "genre": "home" },
+      { "name": "요일연재", "genre": "days" },
+      { "name": "웹소설", "genre": "webnovel" },
+      { "name": "판타지", "genre": "fantasy" },
+      { "name": "현판", "genre": "hyunfan" },
+      { "name": "로맨스", "genre": "romance" },
+      { "name": "로판", "genre": "rofan" },
+      { "name": "무협", "genre": "action" },
+      { "name": "판드", "genre": "fande" },
+      { "name": "BL", "genre": "bl" },
+      { "name": "단행본", "genre": "sepvol" }
+    ],
+    "webnovel": [
+      { "name": "홈", "genre": "home" },
+      { "name": "요일연재", "genre": "days" },
+      { "name": "웹소설", "genre": "webnovel" },
+      { "name": "판타지", "genre": "fantasy" },
+      { "name": "현판", "genre": "hyunfan" },
+      { "name": "로맨스", "genre": "romance" },
+      { "name": "로판", "genre": "rofan" },
+      { "name": "무협", "genre": "action" },
+      { "name": "판드", "genre": "fande" },
+      { "name": "BL", "genre": "bl" },
+      { "name": "단행본", "genre": "sepvol" }
+    ],
+    "movie": [
+      { "name": "홈", "genre": "home" },
+      { "name": "랭킹", "genre": "ranking" },
+      { "name": "로맨스", "genre": "romance" },
+      { "name": "액션", "genre": "action" },
+      { "name": "애니메이션", "genre": "animation" },
+      { "name": "장르전체", "genre": "genreAll" }
+    ],
+    "broadcast": [
+      { "name": "홈", "genre": "home" },
+      { "name": "예능", "genre": "entertain" },
+      { "name": "드라마", "genre": "drama" },
+      { "name": "애니메이션", "genre": "animation" },
+      { "name": "해외시리즈", "genre": "overseas" },
+      { "name": "랭킹", "genre": "ranking" },
+      { "name": "장르전체", "genre": "genreAll" }
+    ],
+    "book": [
+      { "name": "홈", "genre": "home" },
+      { "name": "연재", "genre": "serial" },
+      { "name": "베스트셀러", "genre": "bestseller" },
+      { "name": "랭킹", "genre": "ranking" },
+      { "name": "스릴러", "genre": "thriller" },
+      { "name": "자기계발", "genre": "selfDev" },
+      { "name": "학습만화", "genre": "learning" }
+    ]
+  }
+}
