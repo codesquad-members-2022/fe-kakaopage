@@ -50,6 +50,8 @@ const clickDailyTopList = (data) => {
   const selectDay = $all('.day');
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
+      if (!event.target.classList.contains('day__btn')) return false
+
       const parentNode = event.target.parentNode;
       const focusedClass = 'day--focused';
       setFocus(parentNode, focusedClass);
