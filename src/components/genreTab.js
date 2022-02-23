@@ -28,14 +28,4 @@ const setDefault = (genreTab) => {
     defaultClicked.classList.add('genre-tab__item--selected');
 }
 
-const setGenreTabEvent = () => {
-    genreTab.addEventListener('click', (e) => {
-        const prevClicked = genreTab.querySelector('.genre-tab__item--selected');
-        const targetLi = e.target.closest('li');
-        if (prevClicked === targetLi) return;
-        prevClicked.classList.remove('genre-tab__item--selected');
-        targetLi.classList.add('genre-tab__item--selected');
-    });
-}
-
-export {renderGenreTab, setGenreTabEvent};
+export {renderGenreTab};
