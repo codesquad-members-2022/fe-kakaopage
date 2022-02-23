@@ -1,0 +1,21 @@
+:root {
+  --color-yellow-main: #fdd578;
+  --color-black-main: #14110a;
+  --color-white-main: #f7f3eb;
+  --color-grey-main: #818181;
+  --color-grey-sub: #353535;
+  --color-grey3: #d3d2d2;
+  --border-radius1: 0.5rem;
+  --border-main: solid 0.2rem;
+  --padding-main-top-bottom: 1.2rem;
+  --padding-main-left-right: 1rem;
+  --width-main: 530px;
+  --width-content: calc(
+    calc(
+        var(--width-main) - var(--padding-main-left-right) *
+          calc(var(--contents-column-count) + 2)
+      ) / var(--contents-column-count)
+  );
+  --contents-column-count: 5;
+  --days-contents-count: 8;
+}

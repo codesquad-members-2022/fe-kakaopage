@@ -1,0 +1,11 @@
+footer {
+  color: var(--color-grey-main);
+  font-size: 0.5rem;
+  width: var(--width-main);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
