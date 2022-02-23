@@ -83,31 +83,33 @@ export { renderHome };
 import { renderMidButton } from './component/midButton.js';
 import { renderNav } from './component/nav.js';
 import { renderArticle } from './component/article.js';
-// import { renderPromotionBanner, renderRecommandBanner } from './component/banner.js';
 import { renderSections, renderSectionWrapper } from './component/section.js';
+import { renderPromotionBanner, renderRecommandBanner } from './component/banner.js';
+// function renderPromotionBanner() {
+//     return `<aside class="aside__promotion-banner">
+//     <div class="aside__promotion-banner-inner">
+//         <i class="fas fa-chevron-circle-left" id="left-icon"></i>
+//         <img src="./img/promotion.jpg" alt="images">
+//         <i class="fas fa-chevron-circle-right" id="right-icon"></i>
+//     </div>
+// </aside>`
+// }
 
-function renderPromotionBanner() {
-    return `<aside class="aside__promotion-banner">
-    <div class="aside__promotion-banner-inner">
-        <i class="fas fa-chevron-circle-left" id="left-icon"></i>
-        <img src="/useimages/promotion.jpg" alt="images">
-        <i class="fas fa-chevron-circle-right" id="right-icon"></i>
-    </div>
-</aside>`
-}
+// function renderRecommandBanner() {
+//     return ` <aside class="aside__recommend-banner">
+//     <header class="article__header">
+//         <div class="article__header-wrapper">
+//             <div class="article__header-text-wrapper">
+//                 <h2>추천 이벤트</h2>
+//             </div>
+//             <button class="article__header-button">더보기 ></button>
+//         </div>
+//     </header>
+//     <div class="aside__reommend-banner-image-wrapper">
+//         <img src="./img/왕실교사 하이네 경품.png" alt="image">
+//     </div>
+// </aside>`
+// }
 
-function renderRecommandBanner() {
-    return ` <aside class="aside__recommend-banner">
-    <header class="article__header">
-        <div class="article__header-wrapper">
-            <div class="article__header-text-wrapper">
-                <h2>추천 이벤트</h2>
-            </div>
-            <button class="article__header-button">더보기 ></button>
-        </div>
-    </header>
-    <div class="aside__reommend-banner-image-wrapper">
-        <img src="./useimages/왕실교사 하이네 경품.png" alt="image">
-    </div>
-</aside>`
-}
+// github pages 배포하는 과정에서 따로 만들어둔 ./componet/banner.js 파일에서 404오류가 계속 나길래 일단 임시로
+// 여기에 추가해주었습니다. 다른 파일들은 문제없이 수신이 되고 있는데 해당 파일만 그래서 😂 추후 해결 방법을 찾아보고자 합니다.

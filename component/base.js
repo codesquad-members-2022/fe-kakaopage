@@ -28,7 +28,7 @@ function renderBanner() {
     <aside class="aside__banner">
         <i class="fas fa-chevron-circle-left" id="banner-left-icon"></i>
         <i class="fas fa-chevron-circle-right" id="banner-right-icon"></i>
-        <img src="./useimages/웹툰 _ 롱리브더킹 7타 _ 10-21.png" alt="image">
+        <img src="./img/웹툰 _ 롱리브더킹 7타 _ 10-21.png" alt="image">
         <div class="aside__banner-tittle-wrapper">
             <br>
             <h3 class="aside__banner-tittle">롱리브더킹</h3>
