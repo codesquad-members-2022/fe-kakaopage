@@ -38,11 +38,6 @@ function renderMenu(tabName){
     Menu[tabName].map(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
 }
 
-export function renderTopList(listType, dataKey = null){
-    const comicList = document.getElementById(`list-${listType}`);
-    comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
-}
-
 function renderSubBanner(tabName){
     const $sub_banner_section = document.createElement('section');
     $sub_banner_section.innerHTML = HTMLCreator.createSubBannerHTML(tabName);
@@ -78,6 +73,10 @@ function createContentsMain(...children){
 
 function renderDailyTop(selectedWeek = 'mon'){
     const $nav = createWeeklyNavNode(getWeekNavData());
+    const $week_list = createTopList('week', selectedWeek);
+    const $main = createContentsMain($nav, $week_list);
+    const $header = createContentsHeader('요일연재 TOP', '1,626');
+    renderContentsContainer($header, $main);
     setNavEvent('week-nav__list');
 }
 
@@ -107,4 +106,17 @@ function createWeeklyNavNode(weekData){
     );
 
     return $nav;
+}
+
+function createTopList(listType, dataKey = null){
+    const $list = document.createElement('ul');
+    $list.classList.add('comic-list', 'center');
+    $list.id = `list-${listType}`;
+    $list.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
+    return $list;
+}
+
+export function renderTopList(listType, dataKey = null){
+    const comicList = document.getElementById(`list-${listType}`);
+    comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
 }
