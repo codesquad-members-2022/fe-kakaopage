@@ -1,7 +1,6 @@
 const WebtoonList = (webtoonData, header, title) => {
   const webtoonList = document.createElement('div');
-  webtoonList.classList.add('mainbox');
-  webtoonList.classList.add('webtoon-box');
+  webtoonList.classList.add('mainbox', 'webtoon-box');
   if (header) webtoonList.classList.add(header);
 
   webtoonList.innerHTML = `

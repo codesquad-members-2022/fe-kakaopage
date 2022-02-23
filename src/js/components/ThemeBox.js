@@ -1,7 +1,6 @@
 const ThemeBox = () => {
   const themeBox = document.createElement('div');
-  themeBox.classList.add('mainbox');
-  themeBox.classList.add('main-theme-box');
+  themeBox.classList.add('mainbox', 'main-theme-box');
   themeBox.innerHTML = `
     <ul class="theme__list">
     <li class="theme__item">
