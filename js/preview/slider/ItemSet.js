@@ -32,4 +32,7 @@ export default class ItemSet {
   increaseIdx() {
     this.curIdx = this.getNextIdx();
   }
+  getLength() {
+    return this.length;
+  }
 }
