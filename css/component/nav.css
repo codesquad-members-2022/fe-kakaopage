@@ -1,0 +1,19 @@
+
+.nav {
+    width: 720px;
+    height: 60px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.nav-lists {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    font-size: 20px;
+    list-style: none;
+}
+
+.nav-list.active {
+    font-weight: 800;
+}

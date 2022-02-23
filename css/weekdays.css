@@ -6,7 +6,7 @@
     background-color: #fff;
 }
 
-.nav__weekdays-ul {
+.nav__weekdays-lists {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,4 +56,5 @@
     width: 720px;
     margin-top: 5px;
     background-color: #fff;
+    transition: ease-in 1s;
 }

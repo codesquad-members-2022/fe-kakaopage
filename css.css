@@ -1,11 +1,12 @@
-@import url(./css/header-nav-banner.css);
-@import url(./css/mid-button.css);
-@import url(./css/section-book.css);
-@import url(./css/article.css);
-@import url(./css/recommend-banner.css);
-@import url(./css/footer.css);
-@import url(./css/weekdays.css);
+@import url(./css/component/base.css);
+@import url(./css/component/nav.css);
+@import url(./css/component/midButton.css);
+@import url(./css/component/banner.css);
+@import url(./css/component/section.css);
 
+@import url(./css/component/article.css);
+@import url(./css/weekdays.css);
+@import url(./css/webtoon.css);
 :root {
     --main-color: #eeeeee;
     --sub-color: #f9d201;
@@ -28,8 +29,4 @@ a {
 a:visited {
     text-decoration: none;
     color: black;
-}
-
-.nav__list.active {
-    font-weight: 800;
 }
