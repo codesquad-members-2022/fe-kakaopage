@@ -4,12 +4,7 @@ const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
 const slideWidth = 720;
 const slideSpeed = 0.2;
 const delay = slideSpeed * 1000;
-const originFirstSlide = 1;
-const originLastSlide = slideImg.length;
-const cloneFirstSlide = originFirstSlide - 1;
-const cloneLastSlide = originLastSlide + 1;
 
-let order = 1;
 let position = -slideWidth;
 
 const makingClone = () => {
@@ -24,20 +19,15 @@ const initEvent = () => {
   slides.classList.remove("slideshow-next");
 };
 
-const changingOrder = (btnEvent) => {
-  return btnEvent === "prev" ? order-- : order++;
-};
-
 const returnOriginSlide = () => {
-  if (order === cloneFirstSlide) order = originLastSlide;
-  else if (order === cloneLastSlide) order = originFirstSlide;
-  position = order * -slideWidth;
+  if (position > 0) position = -slideWidth * (slideImg.length - 1);
+  else if (position < -slideWidth * slideImg.length) position = -slideWidth;
 };
 
 const isEnd = () => {
-  if (order !== cloneFirstSlide && order !== cloneLastSlide) return;
-  const slideSpeed = 0;
+  if (position < 0 && position > -slideWidth * slideImg.length) return;
   returnOriginSlide();
+  const slideSpeed = 0;
   setTimeout(() => {
     moveSlide(position, slideSpeed);
   }, delay);
@@ -48,17 +38,24 @@ const moveSlide = (position, slideSpeed) => {
   slides.style.transform = `translateX(${position}px)`;
 };
 
-const setEvent = (btnEvent) => {
+const changePosition = (btnEvent) => {
   position += btnEvent === "prev" ? slideWidth : -slideWidth;
+};
+
+const setEvent = (btnEvent) => {
   slides.classList.add(`slideshow-${btnEvent}`);
+};
+
+const playEvent = (btnEvent) => {
+  changePosition(btnEvent);
+  setEvent(btnEvent);
   moveSlide(position, slideSpeed);
 };
 
 export const slideShow = (e) => {
   const btnEvent = e.target.parentNode.dataset.event;
   initEvent();
-  changingOrder(btnEvent);
-  setEvent(btnEvent);
+  playEvent(btnEvent);
   isEnd();
 };
 
