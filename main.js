@@ -5,7 +5,7 @@ const $main__container = document.querySelector(".main__container");
 const $headerNav = document.querySelector(".header__navigation__menu");
 const element = document.querySelector(".main__week__menu");
 const toonsBox = document.querySelector(".toons__box");
-const $main__container__copy = $main__container.cloneNode(true);
+const $main__container__copy = $main__container?.cloneNode(true);
 
 $headerNav.addEventListener("click", (event) => {
   const selectedImg = event.target.closest("img");
