@@ -65,11 +65,13 @@
 .main__cartoonZone--imageWrapper {
   position: relative;
   width: 150px;
+  height: 150px;
 }
 
 .main__cartoonZone--image {
   border-radius: 15px;
   width: 100%;
+  height: 100%;
 }
 
 .main__cartoonZone--imgTag {
