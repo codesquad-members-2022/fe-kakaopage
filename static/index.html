@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="/static/style/style.css" />
     <title>FE-kakaopage</title>
     <link
       rel="stylesheet"
@@ -41,12 +41,14 @@
           <ul class="c-category">
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="0" href="/?categoryUid=0">홈</a>
+                <a data-category="0" href="/?categoryUid=0&subCategoryUid=0"
+                  >홈</a
+                >
               </div>
             </li>
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="1" href="/?categoryUid=1"
+                <a data-category="1" href="/?categoryUid=1&subCategoryUid=0"
                   >웹툰∙<i class="fas fa-clock"></i
                 ></a>
                 <div class="c-category__alaram"></div>
@@ -54,7 +56,7 @@
             </li>
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="2" href="/?categoryUid=2"
+                <a data-category="2" href="/?categoryUid=2&subCategoryUid=0"
                   >웹소설∙<i class="fas fa-clock"></i
                 ></a>
                 <div class="c-category__alaram"></div>
@@ -62,19 +64,25 @@
             </li>
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="3" href="/?categoryUid=3">영화</a>
+                <a data-category="3" href="/?categoryUid=3&subCategoryUid=0"
+                  >영화</a
+                >
                 <div class="c-category__alaram"></div>
               </div>
             </li>
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="4" href="/?categoryUid=4">방송</a>
+                <a data-category="4" href="/?categoryUid=4&subCategoryUid=0"
+                  >방송</a
+                >
                 <div class="c-category__alaram"></div>
               </div>
             </li>
             <li class="header__index c-category__index" data-link>
               <div class="c-category__content">
-                <a data-category="5" href="/?categoryUid=5">책</a>
+                <a data-category="5" href="/?categoryUid=5&subCategoryUid=0"
+                  >책</a
+                >
                 <div class="c-category__alaram"></div>
               </div>
             </li>
@@ -82,7 +90,7 @@
         </nav>
       </header>
       <main class="l-main" id="main-layout">
-        <article class="c-main__category l-main__child" id="sub-category">
+        <!-- <article class="c-main__category l-main__child" id="sub-category">
           <ul class="c-category">
             <li class="main__index c-category__index"><span>홈</span></li>
             <li class="main__index c-category__index"><span>요일연재</span></li>
@@ -95,7 +103,7 @@
             <li class="main__index c-category__index"><span>BL</span></li>
           </ul>
         </article>
-        <article class="l-carousel l-main__child" id="carousel">
+        <article class="l-main__child" id="carousel">
           <div class="c-carousel">
             <img
               class="c-carousel__img"
@@ -148,11 +156,11 @@
           </div>
           <div class="c-grid__component">
             <span class="c-grid__name">완결까지 정주행</span>
-            <!-- <div class="c-grid__number"></div> -->
+            <div class="c-grid__number"></div>
           </div>
           <div class="c-grid__component">
             <span class="c-grid__name">독립운동가 웹툰 </span>
-            <!-- <div class="c-grid__number"></div> -->
+            <div class="c-grid__number"></div>
           </div>
           <div class="c-grid__component">
             <span class="c-grid__name">오늘 랭킹</span>
@@ -472,9 +480,9 @@
               </div>
             </div>
           </div>
-        </article>
+        </article> -->
       </main>
     </div>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="/static/js/init.js"></script>
   </body>
 </html>

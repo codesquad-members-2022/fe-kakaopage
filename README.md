@@ -2,106 +2,208 @@
 
 # 다른 사람 pr 엿보기
 
-- [ ] calc
-- [ ] stacking context
-- [ ] 구분하는 주석 표시도 좋네요.
-- [ ] 자주 쓰는 애들 class 묶기: flex center, box-sizing,
-- [ ] vw가 %단위 대비 상대적으로 가진 장점
-- [ ] rem vs em 차이
-- [ ] vsc - live sass compiler
-- [ ] 웹폰트?
-- [ ] css is 함수
+- calc
+- stacking context
+- 구분하는 주석 표시도 좋네요.
+- 자주 쓰는 애들 class 묶기: flex center, box-sizing,
+- vw가 %단위 대비 상대적으로 가진 장점
+- rem vs em 차이
+- vsc - live sass compiler
+- 웹폰트?
+- css is 함수
 
-# 목표
+- html태그에서 id를 사용할 땐 클래스와 달리 id역할은 무엇인지 스스로 정의하고 사용
+- async/await
 
-- spa 방식으로 해보기
-- template, logic 분리
-- scss 사용 -> [참고](https://ossam5.tistory.com/90)
+# 프로그래밍 요구사항
 
-# 진행 순서
+- tempalte literal 문법
+- DOM 조작과정에서 createElement, appendChild, insertBefore 등의 메서드
+- Event delegation으로 중복된 이벤트 등록 줄이기
+- node.js사용
+- 어느 정도까진 괜찮지만 계속 dom을 추가하고 빼는 건 좋지 못할 수 있다.(apppend, remove)
+- 탬플릿 리터럴 vs createElement -> 프레임워크vs바닐라로 이어지는 성능과 효율성
 
-## 큰 흐름
+# 공부할 내용
 
-- `클래스를 사용하지 말라는 요구사항을 못보고 클래스를 사용하다가 리팩토링`
-- spa로 헤더의 탭을 누르면 하위 콘텐츠및 타이틀이 변경되게 하기
+- [x] history api
+- [ ] 동적으로 돔 조작 및 이벤트 등록,삭제
+- [x] event bubbling, capturing, event delegation
+- [ ] nodejs - express
 
-## 구체적인 흐름 설계
+# 미션 구현과정 및 고민들
 
-- layout은 html에 태그로 남겨두고 안에 콘텐츠만 js로 렌더링
+## [x] 파리미터 라우팅
 
-# 고민
+문제
 
-> ✅ : 해결
-> ❗️ : 아직 고민 중
+- 카테고리 네비게이션을 클릭하면 해당 화면이 렌더링되지만, 새로고침이나 url을 통해 접근하면 화면이 렌더링되지 않는다.
 
-✅ spa처럼 만들려다가 주소를 `a href="/" -> a href="/path"` 이런식으로 하면 html이 하나여서 빈화면으로 넘어감.
+고민
 
-- 어떤 path이던지 index.html을 다시 랜더링하면 될려나? -> 안 됨. 다시 렌더링할 때 path에 맞는 화면을 불러올 수 있는데 path설정 자체가 안 됨. html은 하나여서.
-- 서버가 있다면 app.get("/\*" (\_, res) => res.sendfile(<root file path>, "index.html"))로 계속 html파일을 렌더링해야할듯.
-- 서버 없이도 parameter를 활용해 페이지 리프레쉬돼도 빈 화면으로 안넘어가게 만듦.
+- 미션2: 서버없이 url과 url파리미터만 사용해서 렌더링할 수 있는지 고민해보기
+- 미션3: 서버가 있지만 이미 `파라미터`로 구현해서 /main, /webtoon과 같은 path는 사용하지 않기로함. `사실상 현재 서버는 없어도 라우팅에 문제 없음`
 
-  ```
-    기존방법: / -> /webtoons
-    고친방법: / -> /?categoryUid=0
-  ```
+해결
 
-✅ 하위 컨텐츠 렌더링
+- url에서 파라미터만 가져와서 새로고침시 해당 파라미터로 렌더링
+- 첫 렌더링시 파라미터가 없을 때는 default를 0으로 하고 렌더링
+- 현재 카카오페이지는 메인카테고리와 서브카테고리로 구분된다. 메인카테고리에 따라 렌더링 되는 ui는 5가지 레이아웃으로 나눌 수 있는데, 레이아웃은 고정이고 안에 컨텐츠만 바뀐다. 따라서, index.html에는 5가지 레이아웃틀만 남겨두고 안에 카테고리 uid에 맞는 데이터를 불러와서 렌더링하기로 한다.
 
-- 홈, 웹툰, 웹소설 등의 main카테고리 마다 하위 컨텐츠의 레이아웃은 동일하다.
-- 레이아웃은 고정시키고 레이아웃 내부의 컨텐츠만 변경할 수 있도록 만들기
-- 대략적인 구조
+```js
+// utils.js
+export function getParams() {
+  const urlParams = window.location.search;
+  const params = new URLSearchParams(urlParams);
+  const categoryUid = Number(params.get('categoryUid'));
+  const subCategoryUid = Number(params.get('subCategoryUid'));
+  return { categoryUid, subCategoryUid };
+}
+// render.js
+export async function render() {
+  const $mainLayout = $get(MAIN_LAYOUT);
+  // 우선 서버 동작 없이 mock데이터로 구현
+  // const uidContent = await preRender(categoryUid);
+  try {
+    const { categoryUid, subCategoryUid } = getParams();
+    const selectedCategory = routes.find(
+      (route) => route.categoryUid === categoryUid
+    );
+    if (!selectedCategory) {
+      throw new Error(NOT_FOUND);
+    }
+    // 카테코리와 서브 카테고리 아이디에 맞는 내용 렌더링시작
+  } catch (error) {
+    console.log(error);
+    if (error.message === NOT_FOUND) {
+      history.pushState(null, null, '/');
+      location.reload();
+    }
+  }
+```
+
+## [x] node.js를 활용 목적 및 라우팅 관리
+
+- express서버에서 라우팅을 관리하기보다 `돔조작과 history api조작 연습을 위해 클라이언트에서 라우팅관리`
+- `app.get("/*" (_, res) => res.sendfile(, "index.html"))`이런식으로 어떤 path로 가든 html파일을렌더링하기
+- `라우팅관리`: `/, /webtoons`이런식으로 카테고리별로 path를 만들어 위의 설명대로 어떤 path로 가든 index.html을 렌더링하게할려다가 이미 url 파리미터로 구분했기 때문에 `서버는 데이터 렌더링목적으로만 사용.`
+- 카데고리와 서브카테고리에 맞는 데이터만 post요청시 보내주는 것으로 계획 중
+- front에서 레이아웃을 렌더링하는 함수(render)를 실행하기 전에 post로 categoryUid에 맞는 데이터를 server에서 가져오는 함수(preRender)만들기
+
+```js
+// render.js - 클라
+// 렌더링하기 전 cateogoryUid에 해당하는 데이터를 서버에서 받아오기
+async function preRender(uid) {
+  const body = { uid };
+  const data = await fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  }).then((response) => response.json());
+  return data;
+}
+// server.js - 서버
+// mocke데이터를 post로 받아올 예정
+app.post('/*', (req, res) => {
+  const { uid } = req.body;
+  res.send({ uid });
+});
+```
+
+## DOM 조작관련 문제들
+
+1. [ ] html 태그에서 바로 onclick 비효율적인가?
+
+2. [ ] dom요소를 지우고 계속 새로 만드는게 나을까 innerHtml로 요소만 바꾸는게 나을까
+
+- innerHtml로 html > body > main에 있는 5개의 article태그를 가져와, 안에 구성만 바꿔주는 방식
+- 카테고리와 서브카데고리에 맞는 데이터를 받아서 넘겨줌.
 
 ```html
-<header>
-  <nav>
-    <a data-category="0" href="/?categoryUid=0">홈</a>
-    <a data-category="1" href="/?categoryUid=1">웹툰</a>
-    <a data-category="2" href="/?categoryUid=2">웹소설</a>
-    <a data-category="3" href="/?categoryUid=3">영화</a>
-    <a data-category="4" href="/?categoryUid=4">방송</a>
-    <a data-category="5" href="/?categoryUid=5">책</a>
-  </nav>
-</header>
-<main class="l-main" id="main-layout">
-  <article class="l-main__child" id="sub-category"></article>
-  <article class="l-main__child" id="carousel"></article>
-  <article class="l-main__child" id="event-box"></article>
-  <article class="l-main__child" id="event-carousel"></article>
-  <article class="l-main__child" id="main-content"></article>
-</main>
+<body>
+  <header></header>
+  <main>
+    <article class="l-main__child" id="sub-category"></article>
+    <article class="l-main__child" id="carousel"></article>
+    <article class="l-main__child" id="event-box"></article>
+    <article class="l-main__child" id="event-carousel"></article>
+    <article class="l-main__child" id="main-content"></article>
+  </main>
+</body>
 ```
 
 ```js
-export const routes = [
-  { categoryUid: 0, getContent: Main },
-  { categoryUid: 1, getContent: Webtoon },
-  { categoryUid: 2, getContent: Novel },
-];
-```
+// 웹툰 카테고리 예시
+export const Webtoon = async (subCategoryUid) => {
+  const subCategory = renderSubCategory(subCategoryIndexArr);
+  const carousel = renderCarousel(subCategoryUid);
+  const eventBox = `Webtoon`;
+  const evenCarouel = `Webtoon`;
+  const mainContent = `Webtoon`;
+  return renderMainChildDOM({
+    subCategory,
+    carousel,
+    eventBox,
+    evenCarouel,
+    mainContent,
+  });
+};
 
-✅ nav > ul > li > span 이런 구조에서 어디에 addEventListener("click", fn)을 줄까
-
-- a태그에 준 데이터 속성을 활용해, nav의 어디를 누르든 `[data-category]`가 있을 때만 특정 기능이 작동하도록 만듦
-
-❗️ 카테고리마다 레이아웃안의 컨텐츠가 다른데 어떻게 렌더링할까?
-
-- htmltag를 관리하는 폴더를 만들어서 관리할까?
-
-```js
-async getHtml () {
-  return `<h1>이런식으로</h1>`
+//categoryUid와 subCategoryUid별 데이터를 받아 레이아웃에 전달하는 함수
+export function renderMainChildDOM({
+  subCategory,
+  carousel,
+  eventBox,
+  evenCarouel,
+  mainContent,
+}) {
+  const returnObj = {};
+  returnObj[SUB_CATEGORY] = subCategory;
+  returnObj[CAROUSEL] = carousel;
+  returnObj[EVENT_BOX] = eventBox;
+  returnObj[EVENT_CAROUSEL] = evenCarouel;
+  returnObj[MAIN_CONTENT] = mainContent;
+  return returnObj;
 }
 ```
 
-- 아니면 json 파일을 만들어서 받아올까? 이런식으로 하면 태그 안에 값들을 어떻게 동적으로 변경하지? 잘모르겠으니까 위의 방식으로 결정
+그런데 안에 구성 렌더링을 할 때 `innerHtml로 하니까 이벤트리스너 등록하기가 까다로웠음`. 아래 3번에서 해결
 
-```json
-id: "main-layout",
-content: "<h1>세부컨텐츠</h1>
+3. [x] innherHTml에 이벤트리스너 등록 어떻게 하지?
+
+wrapper를 createElement로 만들고, wrapper안에 요소를 innerHtml로 만들었음
+
+```js
+export function renderSubCategory(subCategoryIndexArr) {
+  const { categoryUid, subCategoryUid } = getParams();
+  const newUl = document.createElement('ul');
+  newUl.classList.add('c-category');
+  newUl.innerHTML = `
+  ${subCategoryIndexArr
+    .map(
+      (categoryIndex, idx) =>
+        `<li class="main__index c-category__index ${
+          idx === Number(subCategoryUid) && 'sub-category-active'
+        }" >
+          <a data-subCategory=${idx} href="/?categoryUid=${categoryUid}&subCategoryUid=${idx}">${categoryIndex}</a>
+        </li>`
+    )
+    .join('')}`;
+  newUl.addEventListener('click', (event) =>
+    handleClickNavigation(event, 'subCategory', true)
+  );
+  return newUl;
+}
 ```
 
-❗️ 디버깅 툴
+4. [ ] carousel 애니메이션 만들기
 
-- vscode extention을 사용해서 디버깅하는 방법 알아보기
+- 'js carousel'과 같은 키워드 검색없이 carousel이 동작하려면 어떤 이벤트와 css요소를 사용해야할까 고민하면서 구현해보았습니다.
+- setInterval로 3초 간격으로 이미지가 넘어가게 만들었습니다
 
-[참고자료](https://velog.io/@takeknowledge/로컬에서-CORS-policy-관련-에러가-발생하는-이유-3gk4gyhreu)
+문제
+
+- 현재 보여지는 타켓 이미지의 번호($/3: $부분)를 동적으로 관리하는데 어려움을 겪었습니다.
+- 컴포넌트를 기능별로 나누었을 때 공통으로 사용하는 변수 관리 어려움.

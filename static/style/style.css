@@ -1,9 +1,10 @@
 @import './reset.css';
 @import './header/layout.css';
 @import './main/layout.css';
+@import './event.css';
 
 :root {
-  --main-black: #333333;
+  --main-black: #222222;
   --main-yellow: #ffd200;
   --main-grey-ligth: #f3f3f3;
   --main-grey: #cfcece;
