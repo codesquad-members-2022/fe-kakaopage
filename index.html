@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kakao page - home</title>
+  <link rel="stylesheet" type="text/css" href="./resource/css/common.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/layout.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header__inner">
+      <h1 id="header__logo">
+        <a href="#">
+          <img src="./resource/images/common/logo-kakaopage.svg" alt="kakaopage 로고">
+        </a>
+      </h1>
+      <div class="header__service-area">
+        <div class="search">
+          <form class="search__form l_flex-h--center">
+            <input type="text" name="search" class="search__input">
+            <button type="button" class="search__button">
+              <span class="hidden-text">검색하기 버튼</span>
+            </button>
+          </form>
+        </div>
+        <a href="#" class="header__stage-logo">
+          <img src="./resource/images/common/logo-stage.svg" alt="stage 로고">
+        </a>
+        <div class="header__user-services l_flex--between">
+          <a href="#" class="header__user-service">캐시충전</a>
+          <a href="#" class="header__user-service">로그인</a>
+        </div>
+      </div>
+    </div>
+    <nav class="gnb">
+      <ul class="gnb__inner l_flex--between">
+        <li class="gnb__item"><a href="#" class="gnb__link" data-target="홈">홈</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link clock-icon gnb__link--active" data-target="웹툰">웹툰</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link clock-icon" data-target="웹소설">웹소설</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link" data-target="영화">영화</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link" data-target="방송">방송</a></li>
+        <li class="gnb__item"><a href="#" class="gnb__link" data-target="책">책</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="container">
+    <div class="contents">
+      <!-- <section class="section section-new-work">
+        <div class="section__top">
+          <h3 class="section__title">기대신작 TOP</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <div class="works row-2">
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/new-work_1.jpg" alt="">
+              <div class="new-work__info baner__info">
+                <p class="new-work__title banner__title">화산전생</p>
+                <div class="new-work__tags banner__tags">
+                  <span class="new-work__status banner__status">이벤트</span>
+                  <span class="new-work__category banner__category"><span class="banner__category-name">웹툰</span></span>
+                  <span class="new-work__reader banner__reader"><span class="banner__reader-number">183.1</span>만명</span>
+                </div>
+              </div>
+              <p class="new-work__description banner__description">나도 그들처럼 영웅이 되고 싶었다.</p>
+            </div>
+          </article>
+          <article class="row">
+            <div class="work__inner-wrap">
+              <img src="./resource/images/webtoon/new-work_2.jpg" alt="">
+              <div class="new-work__info baner__info">
+                <p class="new-work__title banner__title">화산전생</p>
+                <div class="new-work__tags banner__tags">
+                  <span class="new-work__status banner__status">이벤트</span>
+                  <span class="new-work__category banner__category"><span class="banner__category-name">웹툰</span></span>
+                  <span class="new-work__reader banner__reader"><span class="banner__reader-number">183.1</span>만명</span>
+                </div>
+              </div>
+              <p class="new-work__description banner__description">나도 그들처럼 영웅이 되고 싶었다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section-rank">
+        <div class="section__top">
+          <h3 class="section__title">일간 랭킹 TOP</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">1</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title"><i class="new-icon icon hidden-text">new 아이콘</i><i class="year15-icon icon hidden-text">15세 관람 아이콘</i>흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">2</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title"><i class="year15-icon icon hidden-text">15세 관람 아이콘</i>흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+        <article class="section-rank__work">
+          <span class="section-rank__rank_number">3</span>
+          <div class="section-rank__img-wrap">
+            <img src="./resource/images/webtoon/today-rank_1.jpg" alt="흑막을 버리는데 실패했다">
+          </div>
+          <div class="section-rank__work-info">
+            <h4 class="section-rank__title">흑막을 버리는데 실패했다</h4>
+            <div class="section-rank__description">
+              <span class="section-rank__reader"><span class="section-rank__reader-number">200.8</span>만명</span>
+              <span class="section-rank__category">기다무웹툰</span>
+              <span class="section-rank__category">로판</span>
+              <span class="section-rank__category">ASSAM,쓩늉,자은향</span>
+            </div>
+            <span class="section-rank__day">수 연재</span>
+          </div>
+        </article>
+      </section>
+      <section class="section section-recommand-event">
+        <div class="section__top">
+          <h3 class="section__title">추천 이벤트</h3>
+          <a href="#" class="section__more-button right-button">더보기</a>
+        </div>
+        <div class="recommand-event__img-wrap">
+          <img src="./resource/images/webtoon/recommand-event-banner_1.png" alt="필부필부 이벤트 배너">
+        </div>
+      </section> -->
+    </div>
+  </main>
+  <footer id="footer">
+    <a href="#" class="app-button"><span class="app-button__text"><em class="app-button__bold-text">카카오페이지</em> 앱으로 보기</span></a>
+    <div class="footer__inner">
+      <div class="footer__left-box">
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a href="#">회사소개</a></li>
+          <li class="footer__nav-item"><a href="#">이용약관</a></li>
+          <li class="footer__nav-item"><a href="#">개인정보처리방침</a></li>
+          <li class="footer__nav-item"><a href="#">청소년보호정책</a></li>
+          <li class="footer__nav-item"><a href="#">공지사항</a></li>
+        </ul>
+        <div class="footer__address_buttons">
+          <button type="button" class="footer__address-toggle-button">(주)카카오엔터테인먼트 사업자 정보 </button>
+          <a href="#" class="footer__address-link">사업자 정보 확인</a>
+        </div>
+        <address class="footer__address">
+          <p class="footer__line"><span class="address__section">대표자 : 이진수, 김성수</span><span class="address__section">호스팅서비스사업자 : (주)카카오엔터테인먼트</span></p>
+          <p class="footer__line"><span class="address__section">사업자 등록 번호 : 220-88-02594</span><span class="address__section">통신판매업신고 : 2018-성남분당B-0004</span></p>
+          <p class="footer__line"><span class="address__section">대표전화 : 1644-4755</span><span class="address__section">이메일 : contact@kakaopage.com</span><span class="address__section">주소 : 경기도 성남시 분당구 판교역로 221</span></p>
+        </address>
+        <p class="footer__copyright">ⓒ Kakao Entertainment Corp.</p>
+      </div>
+      <div class="footer__copyright-mark">
+        <img src="./resource/images/common/ok-mark.png" alt="저작권 OK 마크">
+        <span>저작권 ok</span>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

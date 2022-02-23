@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 @import url(./variable.css);
+@import url(./header.css);
+@import url(./footer.css);
 
 /**
 webtoon
@@ -20,16 +22,16 @@ webtoon
 }
 .sub-category__link {
     display: block;
-    font-size: var(--font-size-L);
+    font-size: var(--fs-L);
     font-weight: 500;
     line-height: 60px;
     text-align: center;
 }
 .sub-category__number {
     margin-left: 10px;
-    background: var(--color-yellow);
+    background: var(--yellow);
     padding: 0 8px;
-    font-size: var(--font-size-M);
+    font-size: var(--fs-M);
     font-weight: 400;
     line-height: 24px;
     border-radius: 12px;
@@ -59,14 +61,14 @@ webtoon
 }
 .day-top-tab__button {
     width: 100%;
-    font-size: var(--font-size-XL);
+    font-size: var(--fs-XL);
     line-height: 57px;
-    color: var(--color-gray);
+    color: var(--gray);
     text-align: center;
     border-bottom: 1px solid #f1f1f1;
 }
-.day-top-tab__button.on{
-    color: var(--color-black);
+.day-top-tab__button--active {
+    color: var(--black);
     line-height: 56px;
-    border-bottom: 2px solid var(--color-yellow);
+    border-bottom: 2px solid var(--yellow);
 }

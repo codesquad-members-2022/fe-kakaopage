@@ -1,6 +1,69 @@
-export default {
-    "rankRow": {
-        "mon": [{
+{
+    "categories": ["홈", "요일연재", "웹소설", "판타지", "현판", "로맨스", "로판", "무협", "판드", "BL", "단행본"],
+    "mainBanner": [{
+        "link": "/home?seriesId=53190884",
+        "title": "제목1",
+        "status": "공모전",
+        "category": "소설",
+        "description": "밥밥디라라",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목2",
+        "status": "이벤트",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목3",
+        "status": "이벤트",
+        "category": "소설",
+        "description": "밥밥디라라",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "title": "제목4",
+        "status": "UP",
+        "description": "세상에 없던 꼴통 재벌이 되다!",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cCfK7f/hzmU2UJ9oa/X4Pk0Kg4h6r7DgwiIdzOl0"
+    }], 
+    "subCategories": [{
+        "link": "/home?seriesId=53190884",
+        "category": "오늘 UP",
+        "updateNum": "206"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "오늘 신작",
+        "updateNum": "4"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "오리지널",
+        "updateNum": "2,330"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "소설"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "기다무플러스"
+    }, {
+        "link": "/home?seriesId=53190884",
+        "category": "오늘 랭킹",
+        "updateNum": "1위"
+    }],
+    "eventBanner": [{
+        "link": "https://page.kakao.com/theme/list?themeId=29791",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=cLpNgw/hzp2moLmjN/dYhxv2zfFGIU9lDxuRkutK",
+        "imgDecription": "도굴왕 포스터"
+    }, {
+        "link": "https://page.kakao.com/theme/list?themeId=29791",
+        "imgUrl": "https://dn-img-page.kakao.com/download/resource?kid=d6OBqA/hzp2jZSWXI/2jQb8ZNUuJRItOFTer6lh0",
+        "imgDecription": "화산전생 포스터"
+    }],
+    "dayTop": {
+        "sectionTitle": "요일 연재 TOP",
+        "worksLength": 1624,
+        "rankRow": [
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "제목1",
@@ -31,7 +94,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bJHG0X/hzhOe7jLtR/yr0qMvDmDWjJTsMCvcmdM0&filename=th22"
             }],
-        "tue": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "도굴왕",
@@ -62,7 +125,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=rXsr4/hy41LCCbZh/fBVAe3YWcZVU3fOL0tJxPk&filename=th2"
             }],
-        "wed": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "제목1",
@@ -93,7 +156,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bJHG0X/hzhOe7jLtR/yr0qMvDmDWjJTsMCvcmdM0&filename=th22"
             }],
-        "thu": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "도굴왕",
@@ -124,7 +187,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=rXsr4/hy41LCCbZh/fBVAe3YWcZVU3fOL0tJxPk&filename=th2"
             }],
-        "fri": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "제목1",
@@ -155,8 +218,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bJHG0X/hzhOe7jLtR/yr0qMvDmDWjJTsMCvcmdM0&filename=th22"
             }],
-        "sat": [
-            {
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "도굴왕",
@@ -187,7 +249,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=rXsr4/hy41LCCbZh/fBVAe3YWcZVU3fOL0tJxPk&filename=th2"
             }],
-        "sun": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "제목1",
@@ -218,8 +280,7 @@ export default {
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bJHG0X/hzhOe7jLtR/yr0qMvDmDWjJTsMCvcmdM0&filename=th22"
             }],
-        "end": [
-            {
+            [{
                 "link": "/home?seriesId=53190884",
                 "rank": "1위",
                 "title": "도굴왕",
@@ -249,10 +310,10 @@ export default {
                 "title": "화홍",
                 "readerNum": "113.8만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=rXsr4/hy41LCCbZh/fBVAe3YWcZVU3fOL0tJxPk&filename=th2"
-        }]
-    },
-    "gradeRow": {
-        "mon": [{
+            }]
+        ],
+        "gradeRow": [
+            [{
                 "link": "/home?seriesId=53190884",
                 "grade": "10.0",
                 "title": "제목6",
@@ -282,132 +343,8 @@ export default {
                 "title": "제목10",
                 "readerNum": "78.3만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
-        }],
-        "tue": [{
-                "link": "/home?seriesId=53190884",
-                "grade": "10.0",
-                "title": "백작가의 망나니",
-                "readerNum": "131만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbjtkI/hzacgYFTkq/PSAiujZt9kOXMOPj1XT7LK&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "프로야구 생존기",
-                "readerNum": "17.7만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.8",
-                "title": "비뢰도",
-                "readerNum": "104.2만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cyq0ma/hzb7yDg2ke/bIzebxQnLC3RJj7mkrwcUK&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "황녀님이 사악해",
-                "readerNum": "44.4만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=sA4wJ/hzmU2G6zLw/t1L9MrZkkNCS6BE9IkO6s0&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "백작가의 망나니",
-                "readerNum": "78.3만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
-        }],
-        "wed": [{
-                "link": "/home?seriesId=53190884",
-                "grade": "10.0",
-                "title": "제목6",
-                "readerNum": "131만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bBN4dK/hzhOhvRXM4/ykApb2W8w90ILBWRgWANM0&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목7",
-                "readerNum": "17.7만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bNhW1e/hzb7AOZqwu/Nvdfc6TfhUnn9CBNuUijq1&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.8",
-                "title": "제목8",
-                "readerNum": "104.2만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목9",
-                "readerNum": "44.4만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목10",
-                "readerNum": "78.3만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
-        }],
-        "thu": [{
-                    "link": "/home?seriesId=53190884",
-                    "grade": "10.0",
-                    "title": "백작가의 망나니",
-                    "readerNum": "131만명",
-                    "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbjtkI/hzacgYFTkq/PSAiujZt9kOXMOPj1XT7LK&filename=th2"
-                }, {
-                    "link": "/home?seriesId=53190884",
-                    "grade": "9.9",
-                    "title": "프로야구 생존기",
-                    "readerNum": "17.7만명",
-                    "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
-                }, {
-                    "link": "/home?seriesId=53190884",
-                    "grade": "9.8",
-                    "title": "비뢰도",
-                    "readerNum": "104.2만명",
-                    "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cyq0ma/hzb7yDg2ke/bIzebxQnLC3RJj7mkrwcUK&filename=th2"
-                }, {
-                    "link": "/home?seriesId=53190884",
-                    "grade": "9.9",
-                    "title": "황녀님이 사악해",
-                    "readerNum": "44.4만명",
-                    "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=sA4wJ/hzmU2G6zLw/t1L9MrZkkNCS6BE9IkO6s0&filename=th2"
-                }, {
-                    "link": "/home?seriesId=53190884",
-                    "grade": "9.9",
-                    "title": "백작가의 망나니",
-                    "readerNum": "78.3만명",
-                    "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
-                }],
-        "fri": [{
-                "link": "/home?seriesId=53190884",
-                "grade": "10.0",
-                "title": "제목6",
-                "readerNum": "131만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bBN4dK/hzhOhvRXM4/ykApb2W8w90ILBWRgWANM0&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목7",
-                "readerNum": "17.7만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bNhW1e/hzb7AOZqwu/Nvdfc6TfhUnn9CBNuUijq1&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.8",
-                "title": "제목8",
-                "readerNum": "104.2만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목9",
-                "readerNum": "44.4만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2"
-            }, {
-                "link": "/home?seriesId=53190884",
-                "grade": "9.9",
-                "title": "제목10",
-                "readerNum": "78.3만명",
-                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
-        }],
-        "sat": [{
+            }],
+            [{
                 "link": "/home?seriesId=53190884",
                 "grade": "10.0",
                 "title": "백작가의 망나니",
@@ -438,8 +375,132 @@ export default {
                 "readerNum": "78.3만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
             }],
-        "sun": [{
-            "link": "/home?seriesId=53190884",
+            [{
+                "link": "/home?seriesId=53190884",
+                "grade": "10.0",
+                "title": "제목6",
+                "readerNum": "131만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bBN4dK/hzhOhvRXM4/ykApb2W8w90ILBWRgWANM0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목7",
+                "readerNum": "17.7만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bNhW1e/hzb7AOZqwu/Nvdfc6TfhUnn9CBNuUijq1&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.8",
+                "title": "제목8",
+                "readerNum": "104.2만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목9",
+                "readerNum": "44.4만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목10",
+                "readerNum": "78.3만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
+            }],
+            [{
+                "link": "/home?seriesId=53190884",
+                "grade": "10.0",
+                "title": "백작가의 망나니",
+                "readerNum": "131만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbjtkI/hzacgYFTkq/PSAiujZt9kOXMOPj1XT7LK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "프로야구 생존기",
+                "readerNum": "17.7만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.8",
+                "title": "비뢰도",
+                "readerNum": "104.2만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cyq0ma/hzb7yDg2ke/bIzebxQnLC3RJj7mkrwcUK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "황녀님이 사악해",
+                "readerNum": "44.4만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=sA4wJ/hzmU2G6zLw/t1L9MrZkkNCS6BE9IkO6s0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "백작가의 망나니",
+                "readerNum": "78.3만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
+            }],
+            [{
+                "link": "/home?seriesId=53190884",
+                "grade": "10.0",
+                "title": "제목6",
+                "readerNum": "131만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bBN4dK/hzhOhvRXM4/ykApb2W8w90ILBWRgWANM0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목7",
+                "readerNum": "17.7만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bNhW1e/hzb7AOZqwu/Nvdfc6TfhUnn9CBNuUijq1&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.8",
+                "title": "제목8",
+                "readerNum": "104.2만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목9",
+                "readerNum": "44.4만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "제목10",
+                "readerNum": "78.3만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
+            }],
+            [{
+                "link": "/home?seriesId=53190884",
+                "grade": "10.0",
+                "title": "백작가의 망나니",
+                "readerNum": "131만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbjtkI/hzacgYFTkq/PSAiujZt9kOXMOPj1XT7LK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "프로야구 생존기",
+                "readerNum": "17.7만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.8",
+                "title": "비뢰도",
+                "readerNum": "104.2만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=cyq0ma/hzb7yDg2ke/bIzebxQnLC3RJj7mkrwcUK&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "황녀님이 사악해",
+                "readerNum": "44.4만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=sA4wJ/hzmU2G6zLw/t1L9MrZkkNCS6BE9IkO6s0&filename=th2"
+            }, {
+                "link": "/home?seriesId=53190884",
+                "grade": "9.9",
+                "title": "백작가의 망나니",
+                "readerNum": "78.3만명",
+                "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
+            }],
+            [{
+                "link": "/home?seriesId=53190884",
                 "rank": "5위",
                 "title": "제목5",
                 "readerNum": "113.8만명",
@@ -475,7 +536,7 @@ export default {
                 "readerNum": "78.3만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=jN9fX/hzhOeFqlOB/qn6PXZSeaBJXjMglhA7RX1&filename=th2"
             }],
-        "end": [{
+            [{
                 "link": "/home?seriesId=53190884",
                 "grade": "10.0",
                 "title": "백작가의 망나니",
@@ -505,6 +566,7 @@ export default {
                 "title": "백작가의 망나니",
                 "readerNum": "78.3만명",
                 "imgUrl": "//dn-img-page.kakao.com/download/resource?kid=bnyVEb/hzb7ywo78E/6OjHu0UqrNOHTuOGdxfpa1&filename=th2"
-        }]
+            }]
+        ]
     }
 }
