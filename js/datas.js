@@ -3,14 +3,14 @@ const data = [
   {
     // 화요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_4.png',
+    thumbnail__src: './resource_4.png',
     thumbnail__alt: '병약한? 남편의 계약 아내',
 
     title__class: '.serial-webtoon__title',
     title__text: '병약한? 남편의 계약 아내',
 
     icon__class: '.serial-webtoon__user--icon',
-    icon__src: './images/icon_new.svg',
+    icon__src: './icon_new.svg',
     icon__alt: '새작품',
 
     user__class: '.serial-webtoon__user--cnt',
@@ -22,7 +22,7 @@ const data = [
   {
     // 수요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_5.png',
+    thumbnail__src: './resource_5.png',
     thumbnail__alt: '인소의 법칙',
 
     title__class: '.serial-webtoon__title',
@@ -37,7 +37,7 @@ const data = [
   {
     // 목요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_6.png',
+    thumbnail__src: './resource_6.png',
     thumbnail__alt: '악당의 아빠를 꼬셔라',
 
     title__class: '.serial-webtoon__title',
@@ -52,14 +52,14 @@ const data = [
   {
     // 금요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_7.png',
+    thumbnail__src: './resource_7.png',
     thumbnail__alt: '남편님, 다시 결혼해 주세요!',
 
     title__class: '.serial-webtoon__title',
     title__text: '남편님, 다시 결혼해 주세요!',
 
     icon__class: '.serial-webtoon__user--icon',
-    icon__src: './images/icon_new.svg',
+    icon__src: './icon_new.svg',
     icon__alt: '새작품',
 
     user__class: '.serial-webtoon__user--cnt',
@@ -71,7 +71,7 @@ const data = [
   {
     // 토요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_8.png',
+    thumbnail__src: './resource_8.png',
     thumbnail__alt: '악녀는 모래시계를 되돌린다',
 
     title__class: '.serial-webtoon__title',
@@ -86,7 +86,7 @@ const data = [
   {
     // 일요일
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_9.png',
+    thumbnail__src: './resource_9.png',
     thumbnail__alt: '나 혼자 만렙 귀환자',
 
     title__class: '.serial-webtoon__title',
@@ -101,14 +101,14 @@ const data = [
   {
     // 완결
     thumbnail__class: '.serial__thumbnail--img',
-    thumbnail__src: './images/resource_10.png',
+    thumbnail__src: './resource_10.png',
     thumbnail__alt: '레이디 투 퀸',
 
     title__class: '.serial-webtoon__title',
     title__text: '레이디 투 퀸',
 
     icon__class: '.serial-webtoon__user--icon',
-    icon__src: './images/icon_15.png',
+    icon__src: './icon_15.png',
     icon__alt: '15',
 
     user__class: '.serial-webtoon__user--cnt',
@@ -118,3 +118,5 @@ const data = [
     day__text: '완결 더보기',
   },
 ]
+
+export default data
