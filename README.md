@@ -145,12 +145,8 @@ export function createBanner({ size, title, status, type, views, ad }) {
 </body>
 ```
 
-1. contents에 innerHTML 메소드를 활용하여 DOM 교체
-2. 모든 탭을 미리 그려놓고 display: none 으로 숨겨놓기
-   - 페이지의 매우 크다면 문제가 될 것 같기는 한데 그 적정선은 어디일까?
-
-- 위의 2가지 방법 이외에도 다른 방법이 있을까?
-- 지난 주 PR 훑어보고 공통적인 피드백 적용하기.
+- 홈 탭 클릭 ➡ 홈 랜더링 ➡ 이전 탭 이벤트 삭제 ➡ 홈 탭 이벤트 추가
+- 웹툰 탭 클릭 ➡ snb, days 랜더링 ➡ 이전 탭 이벤트 삭제 ➡ snb, days 이벤트 추가
 
 ### 학습 정리
 
