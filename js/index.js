@@ -82,14 +82,18 @@ const bindSubMenuEvent = () => {
 };
 
 const bindCaroulselEvent = () => {
-    let clickCnt = 0;
+    let clickCnt = 1;
+    let isTransitionEnd = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = 2;
+    const transitionDuration = "0.4s";
+
     $(".cover-image").addEventListener("click", ({ target }) => {
         if (!target.classList.contains("button")) return;
-        const customTransition = "transform 0.4s ease-in-out";
+        if (!isTransitionEnd) return;
+        const customTransition = `transform ${transitionDuration} ease-in-out`;
 
         if (target.closest(".btn-left")) {
             clickCnt--;
@@ -97,6 +101,7 @@ const bindCaroulselEvent = () => {
             carouselItemWrapper.style.transform = `translateX(${
                 -imageWidth * clickCnt
             }px)`;
+            isTransitionEnd = false;
         }
         if (target.closest(".btn-right")) {
             clickCnt++;
@@ -104,13 +109,22 @@ const bindCaroulselEvent = () => {
             carouselItemWrapper.style.transform = `translateX(${
                 -imageWidth * clickCnt
             }px)`;
+            isTransitionEnd = false;
         }
     });
 
     $(".cover-image").addEventListener("transitionend", () => {
-        if (!carouselItems[clickCnt].dataset.clone) return;
+        isTransitionEnd = true;
+        const lastNodeClonePos = 0;
+        const firstNodeClonePos = -(
+            carouselItems.length * imageWidth -
+            imageWidth
+        );
+        const curPos = Number(
+            carouselItemWrapper.style.transform.replace(/[^-0-9]/g, "")
+        );
 
-        if (carouselItems[clickCnt].dataset.clone === "last") {
+        if (curPos === lastNodeClonePos) {
             carouselItemWrapper.style.transition = "none";
             clickCnt = carouselItems.length - clonedNodeCnt;
             carouselItemWrapper.style.transform = `translateX(${
@@ -118,7 +132,8 @@ const bindCaroulselEvent = () => {
             }px)`;
             return;
         }
-        if (carouselItems[clickCnt].dataset.clone === "first") {
+
+        if (curPos === firstNodeClonePos) {
             carouselItemWrapper.style.transition = "none";
             clickCnt = carouselItems.length - clickCnt;
             carouselItemWrapper.style.transform = `translateX(${
