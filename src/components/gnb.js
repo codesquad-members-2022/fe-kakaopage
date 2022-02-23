@@ -24,17 +24,6 @@ const setDefault = () => {
     defaultClicked.classList.add('tab__item--selected');
 }
 
-const setGnbEvent = () => {
-    gnb.addEventListener('click', (e) => {
-        const prevClicked = document.querySelector('.gnb .tab__item--selected');
-        const targetLi = e.target.closest('li');
-        if (prevClicked === targetLi) return;
-        prevClicked.classList.remove('tab__item--selected');
-        targetLi.classList.add('tab__item--selected');
-    });
-}
-
-
-export {renderGnb, setGnbEvent};
+export {renderGnb};
 
 
