@@ -26,6 +26,7 @@ function renderHomePage(tabName){
     renderMenu(tabName);
     renderSubBanner(tabName);
     renderDailyTop();
+    renderGenreTop();
 }
 
 function renderMenu(tabName){
@@ -119,4 +120,16 @@ function createTopList(listType, dataKey = null){
 export function renderTopList(listType, dataKey = null){
     const comicList = document.getElementById(`list-${listType}`);
     comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
+}
+
+function renderGenreTop(){
+    const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
+    const genreTitle = ['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협'];
+    genreList.map((genre, index) => {
+        const $header = createContentsHeader(`${genreTitle[index]} TOP`);
+        const $list = createTopList(genre);
+        const $main = createContentsMain($list);
+        renderContentsContainer($header, $main);
+        renderTopList(genre);
+    });
 }
