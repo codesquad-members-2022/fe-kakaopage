@@ -161,7 +161,8 @@ const parsingHomeTop = async () => {
     const random2 = Math.floor(Math.random() * 7);
     const random3 = Math.floor(Math.random() * 7);
     const random4 = Math.floor(Math.random() * 7);
-    const randomDays = new Set([day[random1], day[random2], day[random3], day[random4]])
+    const random5 = Math.floor(Math.random() * 7);
+    const randomDays = new Set([day[random1], day[random2], day[random3], day[random4], day[random5]])
 
     result.push({
       title: $(node).find('div.css-6mi0ws > span').text(),
