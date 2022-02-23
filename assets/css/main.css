@@ -174,6 +174,7 @@
 }
 
 .item .info_txt.viewer {
+    flex-shrink: 0;
     padding-left: 15px;
     background: url(../images/ico/icon_read_count.png) no-repeat left center / 11px 11px;
 }
@@ -381,6 +382,7 @@
 
 .item_type3 .txt .item_desc {
     margin-top: 7px;
+    min-height: 1em;
 }
 
 /* banner */
@@ -402,6 +404,10 @@
 .banner .slider_items {
     display: flex;
     width: 100%;
+}
+
+.banner .slider_items.animate {
+    transition: .3s;
 }
 
 .banner .slider_items .item {
