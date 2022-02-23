@@ -23,7 +23,6 @@ navListsEl.forEach((navList) => {
             if(target.textContent === "홈") {
                 renderHome();
             }
-
             if(target.textContent === "웹툰") {
                 renderWebtoon();
             }

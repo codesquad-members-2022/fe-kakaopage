@@ -30,11 +30,11 @@ const homeData = {
 
 async function renderHome() {
     const mainEL = document.querySelector('main');
-    mainEL.innerHTML += renderMidButton(homeData['midButton']);
+    mainEL.innerHTML += renderMidButton(homeData.midButton);
     mainEL.innerHTML += renderArticle('article__weekdays-top', '','요일연재 TOP', '(1658)');
     mainEL.innerHTML += renderPromotionBanner();
     const articleWeekdaysTopEL = document.querySelector('.article__weekdays-top');
-    articleWeekdaysTopEL.innerHTML += renderNav('article__nav', homeData['articleNav']);
+    articleWeekdaysTopEL.innerHTML += renderNav('article__nav', homeData.articleNav);
 
     // articleBooks5Lists.forEach((articleBook, index) => {
     //     document.querySelector('main').innerHTML += renderArticle('article__books5', `${articleBook.id}`, `${articleBook.type} TOP`)
@@ -43,7 +43,7 @@ async function renderHome() {
     // }) app.js:72 Uncaught SyntaxError: Unexpected reserved word 오류
     // forEach에서 fetch 안됨
 
-    await displayWeekRanking(1, 10);
+    await displayWeekRanking(0, homeData.sectionNums);
     // 앞의 숫자: 요일 숫자, 뒤에 숫자 : 출력할 작품 수
 
     for(let i=0; i<homeData['articleBooks5Lists'].length; i++) {
@@ -63,7 +63,6 @@ function displayWeekRanking(day, sectionNums) {
         for(let i=0; i<sectionNums; i++) {
             html += renderSections(json[i].title, json[i].img, json[i].url, i+1)
         }
-
     document.querySelector('.article__weekdays-top').innerHTML += renderSectionWrapper(html);
 });
 }
@@ -77,7 +76,6 @@ function displayBooks5(tittle, type, id, sectionNums) {
             html += renderSections(json[i].title, json[i].img, json[i].url, i+1)
         }
     document.querySelector(`#${id}`).innerHTML += renderSectionWrapper(html);
-    
     })
 }
 
@@ -85,5 +83,31 @@ export { renderHome };
 import { renderMidButton } from './component/midButton.js';
 import { renderNav } from './component/nav.js';
 import { renderArticle } from './component/article.js';
-import { renderPromotionBanner, renderRecommandBanner } from './component/banner.js';
+// import { renderPromotionBanner, renderRecommandBanner } from './component/banner.js';
 import { renderSections, renderSectionWrapper } from './component/section.js';
+
+function renderPromotionBanner() {
+    return `<aside class="aside__promotion-banner">
+    <div class="aside__promotion-banner-inner">
+        <i class="fas fa-chevron-circle-left" id="left-icon"></i>
+        <img src="/useimages/promotion.jpg" alt="images">
+        <i class="fas fa-chevron-circle-right" id="right-icon"></i>
+    </div>
+</aside>`
+}
+
+function renderRecommandBanner() {
+    return ` <aside class="aside__recommend-banner">
+    <header class="article__header">
+        <div class="article__header-wrapper">
+            <div class="article__header-text-wrapper">
+                <h2>추천 이벤트</h2>
+            </div>
+            <button class="article__header-button">더보기 ></button>
+        </div>
+    </header>
+    <div class="aside__reommend-banner-image-wrapper">
+        <img src="./useimages/왕실교사 하이네 경품.png" alt="image">
+    </div>
+</aside>`
+}

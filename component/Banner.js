@@ -24,4 +24,4 @@ function renderRecommandBanner() {
 </aside>`
 }
 
-export { renderPromotionBanner, renderRecommandBanner };
+// export { renderPromotionBanner, renderRecommandBanner };
