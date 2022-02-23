@@ -1,5 +1,5 @@
 import { renderer } from './renderer.js';
-import { loadContentFromGnb, addHandlerOnNav } from './handler.js';
+import { addHandlerOnNav, loadContentFromGnb } from './navHandler.js';
 
 const init = () => {
   renderer.header();
