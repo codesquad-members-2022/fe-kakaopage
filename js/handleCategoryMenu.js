@@ -25,7 +25,6 @@ export const handleCategoryMenu = (menu) => {
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeekComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addFilterComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(menu, today));
-            nav.weekClick();
             break;
         case '2':
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWebToonComponent(menu));
