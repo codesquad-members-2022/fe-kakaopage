@@ -423,9 +423,9 @@ const createGenreBlock = (genre) => {
   insertIntoMain(genreBlock);
 };
 
-const createDailyRank = (data) => {
+const createDailyRank = (data, i) => {
   const dailyRank = `<li class="layout-center">
-  <p class="daily-ranking">1</p>
+  <p class="daily-ranking">${i + 1}</p>
   <div class="daily-rank-img-container round-container">
     <img
       class="daily-rank-img"
@@ -454,7 +454,10 @@ const createDailyRank = (data) => {
 };
 
 const createDailyRankBlock = () => {
-  const dailyRank = createDailyRank(dataOfDailyRank);
+  const dailyRank = [];
+  range(3).forEach((_, idx) => {
+    dailyRank.push(createDailyRank(dataOfDailyRank[idx], idx));
+  });
   const dailyRankBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">일간 랭킹 TOP</h2>
@@ -477,7 +480,7 @@ const createDailyRankBlock = () => {
   </header>
   <div>
     <ol class="daily-rank-list">
-      ${dailyRank}
+      ${dailyRank.join("")}
     </ol>
   </div>
 </div>`;
