@@ -1,6 +1,6 @@
 export const blData = [
   {
-    url: 'https://dn-img-page.kakao.com/download/resource?kid=bqyJkx/hzp2fwmJDP/qx8LbXn8n6DHxfK0B4sMkk',
+    url: 'https://dn-img-page.kakao.com/download/resource?kid=bieQhm/hzp2mI9n4A/9aqnCcDnI3LGkjcXFC8n00',
     title: '지수에 관하여',
     status: 'New',
     people: '1.6',
