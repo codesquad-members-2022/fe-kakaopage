@@ -5,6 +5,7 @@
 @import "screens/main-banner-header.css";
 @import "screens/main-banner-nav.css";
 @import "screens/main-nav.css";
+@import "screens/main-contents-slide.css";
 
 body {
   background-color: var(--main-color);
@@ -16,4 +17,5 @@ header {
   position: fixed;
   width: 100%;
   top: 0px;
+  z-index: 10;
 }
