@@ -10,14 +10,12 @@
 
 .main-banner__list {
   display: flex;
-  transition: all 0.5s ease-in;
 }
 
 .main-banner__item {
   position: relative;
   width: 720px;
   height: 480px;
-  transition: all 0.5s ease-in;
 }
 
 .main-banner__poster > img {
