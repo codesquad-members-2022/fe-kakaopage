@@ -6,7 +6,7 @@ const init = () => {
   renderer.footer();
   renderer.gnb();
   addHandlerOnNav('gnb');
-  loadContentFromGnb('홈');
+  loadContentFromGnb('웹툰');
 };
 
 window.addEventListener('DOMContentLoaded', init);
