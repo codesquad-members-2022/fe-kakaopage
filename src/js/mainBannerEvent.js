@@ -1,8 +1,14 @@
 import { $ } from '../utils.js';
 
-const setContainerWidth = () => {
-  const bannerCount = $('.main-banner .banner-container').childElementCount;
-  $('.main-banner .banner-container').style.width = `${720 * bannerCount}px`;
+const setContainerWidth = (...sections) => {
+  sections.forEach((section) => {
+    const sectionClass =
+      section === 'main' ? 'main-banner' :
+      section === 'sub' ? 'sub-banner' : 'recommend-event';
+
+    const bannerCount = $(`.${sectionClass} .banner-container`).childElementCount;
+    $(`.${sectionClass} .banner-container`).style.width = `${100 * bannerCount}%`;
+  })
 };
 
 const handleMainBanner = (e) => {
@@ -11,11 +17,11 @@ const handleMainBanner = (e) => {
 
   // 이후 translate 값 계산하는 것으로 수정할 예정
   if (button.classList.contains('next')) {
-    ul.style.transform = `translateX(${-720}px)`;
+    ul.style.transform = `translateX(${-50}%)`;
   }
 
   if (button.classList.contains('back')) {
-    ul.style.transform = `translateX(${0}px)`;
+    ul.style.transform = `translateX(${0}%)`;
   }
 };
 

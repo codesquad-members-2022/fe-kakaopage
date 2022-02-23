@@ -13,7 +13,7 @@ const DailySeriesRanking = () => {
   return `<section class="contents daily-series-ranking">
             ${ContentsHeader(title)}
             ${ContentsNav(ContentsNavItems)}
-            ${ContentsList(filteredWebtoon())}
+            ${ContentsList('small', filteredWebtoon())}
           </section>`;
 };
 

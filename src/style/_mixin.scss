@@ -1,0 +1,18 @@
+@mixin text-separator($height, $border-color) {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: $height;
+  border-right: 1px solid $border-color;
+}
+
+@mixin pseudo-img() {
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

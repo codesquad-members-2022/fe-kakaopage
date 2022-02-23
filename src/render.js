@@ -1,26 +1,29 @@
 import { $, convertStringToHTML } from './utils.js';
-import { Nav, MainContents, DailySeriesRanking } from './components';
-import { ContentsNavItems, MainNavItems } from './data';
-import { navCallback, mainBannerCallback } from './js';
+import { Nav, PageNav, DailySeriesRanking } from './components';
+import { PageNavItems, PageComponent, ContentsComponent } from './data';
+import { setContainerWidth } from './js';
 
-const renderMainNav = () => {
-  $('.main-nav').innerHTML = Nav(MainNavItems);
+const renderPageNav = () => {
+  if ($('.page-nav') === null) $('.header-wrapper').insertAdjacentHTML('beforeend', PageNav());
+  else $('.page-nav').innerHTML = Nav(PageNavItems);
 };
 
-const renderContentsNav = () => {
-  $('.contents-nav').innerHTML = Nav(ContentsNavItems);
-}
+const renderPage = (category = 'home') => {
+  $('.main-contents-container').innerHTML = PageComponent[category]();
+  if (category === 'webtoon') setContainerWidth('main', 'sub', 'event');
+};
+
+const renderContents = (category) => {
+  $('.main-contents-container').innerHTML = ContentsComponent[category]();
+};
 
 const renderDailySeriesRanking = () => {
   $('.daily-series-ranking').replaceWith(convertStringToHTML(DailySeriesRanking()));
-  $('.contents-nav').addEventListener('click', navCallback);
-}
-
-const renderAll = () => {
-  $('.main-contents-container').insertAdjacentHTML('afterbegin', MainContents());
-  $('.main-nav').addEventListener('click', navCallback);
-  $('.contents-nav').addEventListener('click', navCallback);
-  $('.main-banner').addEventListener('click', mainBannerCallback)
 };
 
-export { renderMainNav, renderContentsNav, renderDailySeriesRanking, renderAll };
+// const renderAll = () => {
+//   document.body.addEventListener('click', navCallback);
+//   $('.main-banner').addEventListener('click', mainBannerCallback);
+// };
+
+export { renderPageNav, renderPage, renderDailySeriesRanking, renderContents };

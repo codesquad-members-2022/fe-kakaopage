@@ -1,13 +1,15 @@
-const BannerListItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
+import { convertReader } from '../../utils.js';
+
+const BannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
   return `<li class="banner">
             <a href="${link}">
               <img src="${bannerImage}" alt="${webtoonInfo.title}" />
               <div class="banner-info">
-                <h2>${webtoonInfo.title}</h2>
+                <h2 class="title">${webtoonInfo.title}</h2>
                 <div>
                   <span class="badge">${bannerBadge}</span>
-                  <span class="genre pseudo-img">웹툰</span>
-                  <span class="reader pseudo-img">${webtoonInfo.readers}</span>
+                  <span class="genre">웹툰</span>
+                  <span class="reader">${convertReader(webtoonInfo.readers)}</span>
                 </div>
               </div>
               <p class="banner-text">${bannerText}</p>
@@ -15,4 +17,4 @@ const BannerListItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, lin
           </li>`
 }
 
-export default BannerListItem;
+export default BannerItem;

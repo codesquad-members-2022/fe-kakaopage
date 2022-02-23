@@ -1,9 +1,11 @@
-const SmallImgContainer = ({ title, image, rating, waitFree }) => {
+const SmallImgContainer = ({ title, squareImage, rating, waitFree }) => {
   return `<div class="img-container">
-            <img src="${image}" alt="${title}" />
+            <img src="${squareImage}" alt="${title}" />
             <div class="ranking-info">
-              <span class="rating pseudo-img">${rating}</span>
-              ${waitFree ? `<img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />` : ''}
+              <span class="rating">${rating}</span>
+              ${waitFree ? 
+                `<img src="src/img/icons/bmbadge_waitfree.svg" alt="기다리면 무료" />` :
+                '<span class="type">웹툰</span>'}
             </div>
           </div>`;
 }
