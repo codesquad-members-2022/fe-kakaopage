@@ -3,6 +3,7 @@
   font-weight: bold;
   margin-top: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .webtoon-card--big__info-bar {

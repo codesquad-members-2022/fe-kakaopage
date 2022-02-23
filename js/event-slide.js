@@ -23,32 +23,25 @@ const changingOrder = (btnEvent) => {
 
 const isEnd = () => {
   if (order !== 0 && order !== 4) return;
-
-  let initPosition;
-
-  if (order === 0) {
-    initPosition = -3 * slideWidth;
-    order = 3;
-    position = initPosition;
-  } else if (order === 4) {
-    initPosition = -slideWidth;
-    order = 1;
-    position = initPosition;
-  }
-  slides.style.transition = "0s";
-  slides.style.transform = `translateX(${initPosition}px)`;
+  const slideSpeed = 0;
+  if (order === 0) order = 3;
+  else if (order === 4) order = 1;
+  position = order * -slideWidth;
+  setTimeout(() => {
+    moveSlide(position, slideSpeed);
+  }, 0);
 };
 
-const moveSlide = () => {
-  slides.style.transition = "0.3s ease-out";
+const moveSlide = (position, slideSpeed) => {
+  slides.style.transition = `${slideSpeed}s ease-out`;
   slides.style.transform = `translateX(${position}px)`;
-  isEnd();
 };
 
 const setEvent = (btnEvent) => {
+  const slideSpeed = 0.3;
   position += slideWidth * (btnEvent === "prev" ? 1 : -1);
   slides.classList.add(`slideshow-${btnEvent}`);
-  moveSlide();
+  moveSlide(position, slideSpeed);
 };
 
 export const slideShow = (e) => {
@@ -56,6 +49,7 @@ export const slideShow = (e) => {
   initEvent();
   changingOrder(btnEvent);
   setEvent(btnEvent);
+  isEnd();
 };
 
 makingClone();

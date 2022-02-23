@@ -3,21 +3,26 @@
   position: relative;
 }
 
-.main-ad-banner > img {
+.main-ad-banner__img-container {
+  display: flex;
+  transform: translateX(-720px);
+}
+
+.main-ad-banner__img-container img {
   width: 720px;
 }
 
-.main-ad-banner__before-btn,
-.main-ad-banner__next-btn {
+.prev-btn,
+.next-btn {
   position: absolute;
   top: 240px;
 }
 
-.main-ad-banner__before-btn {
+.prev-btn {
   left: 20px;
 }
 
-.main-ad-banner__next-btn {
+.next-btn {
   right: 20px;
 }
 
