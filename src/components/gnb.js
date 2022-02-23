@@ -21,7 +21,7 @@ const getTemplate = () => {
 
 const setDefault = () => {
     const defaultClicked = document.querySelector(`.gnb__item[data-tab=${DEFAULT_PAGE}]`);
-    defaultClicked.classList.add('tab__item--selected');
+    defaultClicked.classList.add('gnb-tab__item--selected');
 }
 
 export {renderGnb};

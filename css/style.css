@@ -74,7 +74,7 @@
     margin: 0 auto;
 }
 
-.tab__item--selected {
+.gnb-tab__item--selected {
     border-bottom: solid 3px var(--color-yellow);
 }
 
