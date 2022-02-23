@@ -1,13 +1,13 @@
 import { icons } from "../../data/icons.js"
 
-export const makeWorkContainer = (workDataArr, type) => {
+export const makeWorkContainer = (genre, workDataArr, type) => {
     const func = { small : makeSmallType, horizontal: makeHorizontalType, vertical: makeVerticalType};
     const worksTemplate = workDataArr.map(workData => func[type](workData)).join(''); 
-    return `
-        <ul class="work-container">
-            ${worksTemplate}
-        </ul>
-    `
+    const workContainer = document.createElement('ul');
+    workContainer.className = 'work-container';
+    workContainer.dataset.genre = genre;
+    workContainer.innerHTML = worksTemplate;
+    return workContainer;
 }
 
 
