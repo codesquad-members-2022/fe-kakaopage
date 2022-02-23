@@ -27,6 +27,7 @@ function renderHomePage(tabName){
     renderSubBanner(tabName);
     renderDailyTop();
     renderGenreTop();
+    renderInstallButton();
 }
 
 function renderMenu(tabName){
@@ -132,4 +133,10 @@ function renderGenreTop(){
         renderContentsContainer($header, $main);
         renderTopList(genre);
     });
+}
+
+function renderInstallButton(){
+    const $section = document.createElement('section');
+    $section.innerHTML = HTMLCreator.createInstallButtonHTML();
+    $body_main.appendChild($section);
 }

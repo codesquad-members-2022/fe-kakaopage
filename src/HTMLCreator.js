@@ -79,3 +79,10 @@ export function createWeekNavItemHTML(text, dataKey, selected){
     <li class="week-nav__item ${selectedClass}" data-data-key="${dataKey}">${text}</li>
     `
 }
+
+export function createInstallButtonHTML(){
+    return /* html */ `
+    <button class="btn__app">
+                <img src="${IconSrc.button_app}" alt="카카오페이지 앱 다운로드 버튼">
+    </button>`
+}
