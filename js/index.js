@@ -101,6 +101,7 @@ const bindEventListener = () => {
     $(".cover-image").addEventListener("click", ({ target }) => {
         if (!target.classList.contains("button")) return;
         const carouselItemWrapper = $(".carousel-item-wrap");
+        const carouselItems = carouselItemWrapper.children;
         const imageWidth = $(".cover-image").clientWidth;
         const customTransition = "transform 0.4s ease-in-out";
 
@@ -118,7 +119,6 @@ const bindEventListener = () => {
                 -imageWidth * clickCnt
             }px)`;
         }
-        console.log(clickCnt);
     });
 };
 

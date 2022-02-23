@@ -115,6 +115,7 @@ main {
 
 .cover-image .carousel-item-wrap {
     height: 100%;
+    transform: translateX(-100%);
 }
 
 .cover-image .carousel-item {
