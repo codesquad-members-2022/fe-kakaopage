@@ -1,0 +1,12 @@
+.translateX-100 {
+  transform: translateX(-100%);
+}
+.translateX-200 {
+  transform: translateX(-200%);
+}
+.translateX-300 {
+  transform: translateX(-300%);
+}
+.translateX-400 {
+  transform: translateX(-400%);
+}

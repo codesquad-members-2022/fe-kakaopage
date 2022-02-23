@@ -2,6 +2,8 @@
 @import "./components/nav-box.css";
 @import "./components/image-box.css";
 @import "./components/image-card.css";
+@import "./components/translateX.css";
+@import "./components/transition.css";
 
 @import "reset.css";
 @import "header.css";

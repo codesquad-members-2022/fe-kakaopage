@@ -24,16 +24,15 @@ export const changeImageCardInfo = (inputImageCardInfo) => {
         // 마지막 녀석은 구독자 수로 넣어줘야함 주의
       }
     }
-    console.log(inputImageCardInfo[n]);
+    // console.log(inputImageCardInfo[n]);
     imageCardUrl.src = inputImageCardInfo[n]["url"];
     imageCardRank.innerHTML = inputImageCardInfo[n]["rank"];
     imageCardTitle.innerHTML = inputImageCardInfo[n]["title"];
     
     for (let j = 0 ; j<4 ; j++){
-      console.log(inputImageCardInfo[n][j]);
       imageCardInfo[j].className = inputImageCardInfo[n]["info"][j];
     }
-    console.log(imageCardInfo[4]);
+    // console.log(imageCardInfo[4]);
     imageCardInfo[4].innerHTML = inputImageCardInfo[n]["subscriber"];
     
   }

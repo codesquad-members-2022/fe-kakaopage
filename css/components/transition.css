@@ -1,0 +1,3 @@
+.transition-ease-in-out-sec {
+  transition: transform 1s ease-in-out;
+}

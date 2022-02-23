@@ -1,82 +1,82 @@
-.main-content {
+.main {
   margin-top: 180px;
   display: flex;
   flex-direction: column;
 }
 
-.main-content__image-box {
+.main__image-box {
   margin-top: 10px;
 }
-.main-content__content__nav {
+.main-content__nav {
   margin-top: 10px;
   position: relative;
 }
 
-.main-content__content__nav__circile-mon {
+.main-content__nav__circile-mon {
   position: absolute;
   left: 48px;
 }
-.main-content__content__nav__circile-tue {
+.main-content__nav__circile-tue {
   position: absolute;
   left: 145px;
 }
-.main-content__content__nav__circile-wed {
+.main-content__nav__circile-wed {
   position: absolute;
   left: 242px;
 }
-.main-content__content__nav__circile-thu {
+.main-content__nav__circile-thu {
   position: absolute;
   left: 340px;
 }
-.main-content__content__nav__circile-fri {
+.main-content__nav__circile-fri {
   position: absolute;
   left: 436px;
 }
-.main-content__content__nav__circile-sat {
+.main-content__nav__circile-sat {
   position: absolute;
   left: 535px;
 }
-.main-content__content__nav__circile-sun {
+.main-content__nav__circile-sun {
   position: absolute;
   left: 632px;
 }
-.main-content__content__menu {
+.main-content__menu {
   display: flex;
   justify-content: space-between;
   border-top: solid 2px;
   border-bottom: solid 2px;
   border-color: #f3f3f3;
 }
-.main-content__content__menu__left {
+.main-content__menu__left {
   margin-left: 15px;
   display: flex;
   color: #c5c5c5;
 }
-.main-content__content__menu__text {
+.main-content__menu__text {
   margin: 0 3px;
   font-size: 1.375rem;
   font-weight: 400;
 }
-.main-content__content__menu__webtoonbox {
+.main-content__menu__webtoonbox {
   display: flex;
   align-items: center;
 }
-.main-content__content__menu__sortingbox {
+.main-content__menu__sortingbox {
   display: flex;
   align-items: center;
   margin-right: 15px;
 }
-.main-content__content__menu__sortingbox span {
+.main-content__menu__sortingbox span {
   color: #999999;
 }
 
-.main-content__content__main {
+.main-content__main {
   background-color: #ffffff;
   width: 720px;
   display: flex;
   justify-self: start;
   flex-wrap: wrap;
 }
-.main-content__advertise {
+.main__advertise {
   margin-top: 15px;
 }

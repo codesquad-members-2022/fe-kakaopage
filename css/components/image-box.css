@@ -1,8 +1,17 @@
-.image-box {
+.image-box-container {
+  overflow: hidden;
+  position: relative;
+}
+.image-box-container__box {
+  display: flex;
   width: 720px;
+}
+.image-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
+  flex-shrink: 0;
 }
 
 .image-box__upload_webtoon {
@@ -46,19 +55,29 @@
 
 .image-box__leftbutton {
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 20px;
+  z-index: 1;
+}
+.image-box__leftbutton:hover {
+  cursor: pointer;
 }
 
 .image-box__rightbutton {
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 650px;
+  z-index: 1;
+}
+.image-box__rightbutton:hover {
+  cursor: pointer;
 }
 .image-box__page-info {
   font-size: 1.56rem;
   color: #ffffff;
   position: absolute;
   top: 410px;
-  left: 660px;
+  left: 650px;
+  width: 100%;
+  z-index: 1;
 }
