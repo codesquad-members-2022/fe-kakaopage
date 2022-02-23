@@ -3,6 +3,7 @@ import { STRING } from "./constants.js";
 export const getRandomNumber = ({ min, max }) => {
   return Math.floor(min + Math.random() * (max - min + 1));
 };
+
 export const getRandomString = ({ length }) => {
   return (
     "css-" +
@@ -13,3 +14,7 @@ export const getRandomString = ({ length }) => {
       .join("")
   );
 };
+
+export function $(selector) {
+  return document.querySelector(selector);
+}

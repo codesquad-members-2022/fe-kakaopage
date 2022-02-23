@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,7 @@
     <title>카카오페이지</title>
   </head>
   <body>
-    <!-- 헤더 -->
+    <!-- Header -->
     <div class="header-container">
       <header class="row init">
         <h1 class="h1">
@@ -30,494 +30,61 @@
         </div>
       </header>
     </div>
-    <!-- 네비게이션 -->
+    <!-- GNB -->
     <nav class="nav row">
       <ul class="nav__list row">
         <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">홈</button>
+          <button data-name="홈" class="btn btn-nav btn-black">홈</button>
+        </li>
+        <li class="nav-btn-container nav__selected">
+          <button data-name="웹툰" class="btn btn-nav btn-black">웹툰</button>
         </li>
         <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">웹툰</button>
+          <button data-name="웹소설" class="btn btn-nav btn-black">
+            웹소설
+          </button>
         </li>
         <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">웹소설</button>
+          <button data-name="영화" class="btn btn-nav btn-black">영화</button>
         </li>
         <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">영화</button>
+          <button data-name="방송" class="btn btn-nav btn-black">방송</button>
         </li>
         <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">방송</button>
-        </li>
-        <li class="nav-btn-container">
-          <button class="btn btn-nav btn-black">책</button>
+          <button data-name="책" class="btn btn-nav btn-black">책</button>
         </li>
       </ul>
     </nav>
-    <!-- 하위 컨텐츠 -->
-    <div class="contents gray">
-      <!-- 
-      <ul class="items-container">
-        <div class="items-title-container row">
-          <div class="row">
-            <div class="items__title">기다리면 무료 웹툰</div>
-            <div class="itmes__number">(3,526)</div>
-          </div>
-          <div class="items__more">더보기></div>
-        </div>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <img
-                class="icon-up"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                alt="up-icon"
-              />
-              <div class="items__subject">엔젤릭 레이디</div>
-            </div>
-            <div class="items__description">나도 네가 불행해졌으면 좋겠어.</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">36.8만명</div>
-              <div class="items__author">| 와플푸,수수</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="items__status-icon-new"></div>
-              <div class="items__subject">에스티오</div>
-            </div>
-            <div class="items__description">날 부른 게... 당신입니까?</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">30.8만명</div>
-              <div class="items__author">| 탱커,뿡빠,공든탑</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">병약한? 남편의 계약 아내</div>
-            </div>
-            <div class="items__description">우리 아직 이혼 안 했어요</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">18.7만명</div>
-              <div class="items__author">| 지은설,연홍,세리안</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">익애 ~봉황애사~</div>
-            </div>
-            <div class="items__description">사이다 여주의 동양 판타지</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">49.3만명</div>
-              <div class="items__author">| 연서,김공작</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      인기 웹툰
-      <ul class="items-container">
-        <div class="items-title-container row">
-          <div class="row">
-            <div class="items__title">인기 웹툰</div>
-            <div class="itmes__number">(130)</div>
-          </div>
-          <div class="items__more">더보기></div>
-        </div>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <img
-                class="icon-up"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                alt="up-icon"
-              />
-              <div class="items__subject">세화, 가는길</div>
-            </div>
-            <div class="items__description">천천히 치유되는 그날의 상처</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">1.4만명</div>
-              <div class="items__author">한혜연</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="items__status-icon-new"></div>
-              <div class="items__subject">남주와 그리는 로맨스</div>
-            </div>
-            <div class="items__description">썸 비스무리한 것이 시작된다?!</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">3.7만명</div>
-              <div class="items__author">전재훈</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">악녀의 탄생</div>
-            </div>
-            <div class="items__description">
-              그녀 앞에 나타난 세 남자, 그녀의 선택은?
-            </div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">27.6만명</div>
-              <div class="items__author">TB</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__thumbnail-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">인터넷 중독 캠프</div>
-            </div>
-            <div class="items__description">이 캠프의 진짜 목적은..?</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">1.9만명</div>
-              <div class="items__author">팀 천둥게</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      기다리면 무료 소설
-      <ul class="items-container">
-        <div class="items-title-container row">
-          <div class="row">
-            <div class="items__title">기다리면 무료 소설</div>
-            <div class="itmes__number">(4,467)</div>
-          </div>
-          <div class="items__more">더보기></div>
-        </div>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__time-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <img
-                class="icon-up"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                alt="up-icon"
-              />
-              <div class="items__subject">엔젤릭 레이디</div>
-            </div>
-            <div class="items__description">나도 네가 불행해졌으면 좋겠어.</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">36.8만명</div>
-              <div class="items__author">| 와플푸,수수</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__time-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="items__status-icon-new"></div>
-              <div class="items__subject">에스티오</div>
-            </div>
-            <div class="items__description">날 부른 게... 당신입니까?</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">30.8만명</div>
-              <div class="items__author">| 탱커,뿡빠,공든탑</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__time-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">병약한? 남편의 계약 아내</div>
-            </div>
-            <div class="items__description">우리 아직 이혼 안 했어요</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">18.7만명</div>
-              <div class="items__author">| 지은설,연홍,세리안</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__time-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">익애 ~봉황애사~</div>
-            </div>
-            <div class="items__description">사이다 여주의 동양 판타지</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">49.3만명</div>
-              <div class="items__author">| 연서,김공작</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      인기 웹소설
-      <ul class="items-container">
-        <div class="items-title-container row">
-          <div class="row">
-            <div class="items__title">인기 웹소설</div>
-            <div class="itmes__number">(83)</div>
-          </div>
-          <div class="items__more">더보기></div>
-        </div>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__fictuon-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <img
-                class="icon-up"
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                alt="up-icon"
-              />
-              <div class="items__subject">엔젤릭 레이디</div>
-            </div>
-            <div class="items__description">나도 네가 불행해졌으면 좋겠어.</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">36.8만명</div>
-              <div class="items__author">| 와플푸,수수</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__fictuon-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="items__status-icon-new"></div>
-              <div class="items__subject">에스티오</div>
-            </div>
-            <div class="items__description">날 부른 게... 당신입니까?</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">30.8만명</div>
-              <div class="items__author">| 탱커,뿡빠,공든탑</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__fictuon-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">병약한? 남편의 계약 아내</div>
-            </div>
-            <div class="items__description">우리 아직 이혼 안 했어요</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">18.7만명</div>
-              <div class="items__author">| 지은설,연홍,세리안</div>
-            </div>
-          </div>
-        </li>
-        <li class="items__item row">
-          <div class="items__image-container row">
-            <img class="items__thumbnail" src="" alt="" />
-            <div class="items__fictuon-icon"></div>
-          </div>
-          <div class="items__info">
-            <div class="row">
-              <div class="icon-up"></div>
-              <div class="items__subject">익애 ~봉황애사~</div>
-            </div>
-            <div class="items__description">사이다 여주의 동양 판타지</div>
-            <div class="row">
-              <div class="items__views-icon"></div>
-              <div class="items__views">49.3만명</div>
-              <div class="items__author">| 연서,김공작</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      실시간 랭킹
-      <div class="ranking">
-        <div class="ranking__container">
-          <div class="ranking__header row">
-            <div class="ranking__head">실시간 랭킹</div>
-            <div class="ranking__more-btn">더보기></div>
-          </div>
-          <ul class="ranking__contents col">
-            1등
-            <li class="ranking__content row">
-              <div class="ranking__rank">1</div>
-              <div class="ranking__thumbnail"></div>
-              <div class="ranking__time-icon"></div>
-              <div class="ranking__info">
-                <div>
-                  <div class="ranking__title">
-                    <img
-                      class="icon-up"
-                      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                      alt="up-icon"
-                    />태양검가 검술천재
-                  </div>
-                  <div class="row">
-                    <div class="ranking__views-icon"></div>
-                    <div class="ranking__views">117.6만명</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__category">기다무웹툰</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__type">로판</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__author">돌대[악어스튜디오],사히</div>
-                  </div>
-                  <div class="ranking__day-container row">
-                    <div class="ranking__day">화</div>
-                    <div>연재</div>
-                  </div>
-                </div>
-              </div>
-              <div class="ranking__change">-</div>
-            </li>
-            2등
-            <li class="ranking__content row">
-              <div class="ranking__rank">2</div>
-              <div class="ranking__thumbnail"></div>
-              <div class="ranking__time-icon"></div>
-              <div class="ranking__info">
-                <div>
-                  <div class="ranking__title">
-                    <img
-                      class="icon-up"
-                      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                      alt="up-icon"
-                    />막내 황녀님
-                  </div>
-                  <div class="row">
-                    <div class="ranking__views-icon"></div>
-                    <div class="ranking__views">117.6만명</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__category">기다무웹툰</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__type">로판</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__author">돌대[악어스튜디오],사히</div>
-                  </div>
-                  <div class="ranking__day-container row">
-                    <div class="ranking__day">화</div>
-                    <div>연재</div>
-                  </div>
-                </div>
-              </div>
-              <div class="ranking__change">-</div>
-            </li>
-            3등
-            <li class="ranking__content row">
-              <div class="ranking__rank">3</div>
-              <div class="ranking__thumbnail"></div>
-              <div class="ranking__time-icon"></div>
-              <div class="ranking__info">
-                <div>
-                  <div class="ranking__title">
-                    <img
-                      class="icon-up"
-                      src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                      alt="up-icon"
-                    />막내 황녀님
-                  </div>
-                  <div class="row">
-                    <div class="ranking__views-icon"></div>
-                    <div class="ranking__views">117.6만명</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__category">기다무웹툰</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__type">로판</div>
-                    <div class="ranking__block-icon">|</div>
-                    <div class="ranking__author">돌대[악어스튜디오],사히</div>
-                  </div>
-                  <div class="ranking__day-container row">
-                    <div class="ranking__day">화</div>
-                    <div>연재</div>
-                  </div>
-                </div>
-              </div>
-              <div class="ranking__change">-</div>
-            </li>
+    <!-- Main contents -->
+    <div class="contents gray"></div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__container row">
+        <div class="footer__row1 col">
+          <ul class="footer__ul row">
+            <li>회사소개</li>
+            <li>•이용약관</li>
+            <li>•개인정보처리방침</li>
+            <li>•청소년보호정책</li>
+            <li>•공지사항</li>
           </ul>
+          <div class="row">
+            <button class="footer__address">
+              (주)카카오엔터테인먼트 사업자 정보 ▼
+            </button>
+            <u class="footer__business-info-check-btn">사업자 정보 확인 </u>
+          </div>
+          <div>ⓒ Kakao Entertainment Corp.</div>
+        </div>
+        <div class="footer__row2">
+          <img
+            class="footer__icon"
+            src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af"
+            alt="ok mark"
+          />
+          <div>저작권 ok</div>
         </div>
       </div>
-       광고 -->
-      <!-- <div class="ad row">
-        <img
-          class="ad__contents"
-          src="https://dn-img-page.kakao.com/download/resource?kid=ry6vF/hzp2mCdOPV/PiNax6pBEB3DRSAjQOQgL0"
-          alt="[광고]피도 눈물도 없는 맹수를 조련하자\n이벤트 소설 | 악당을 조련하는 아기님"
-        />
-      </div> -->
-      <!-- 요일 연재 TOP -->
-      <!-- <div class=""></div> -->
-    </div>
+    </footer>
   </body>
 </html>

@@ -6,8 +6,11 @@
   --white: #fff;
   --gray: #eee;
   --gray2: rgb(153, 153, 153);
+  --gray3: #bdbdbd;
+  --gray4: rgb(187, 187, 187);
   --black: #242526;
   --yellow: #ffd200;
+  --yellow2: #fecc2e;
 }
 
 .header-container {
@@ -63,6 +66,7 @@
 
 .user-container {
   padding: 10px;
+  gap: 5px;
 }
 
 .col {
@@ -72,12 +76,11 @@
 
 .btn-nav {
   font-size: 20px;
-  padding: 0 40px 0 40px;
+  margin: 25px 40px 0 40px;
 }
 
 .btn-gray {
   background-color: white;
-  font-weight: bold;
   color: gray;
 }
 
@@ -85,6 +88,10 @@
   background-color: white;
   font-weight: bold;
   color: black;
+}
+
+.btn-medium {
+  font-size: 18px;
 }
 
 .nav {
@@ -98,18 +105,32 @@
 
 .nav-btn-container {
   margin: auto 0;
+  padding-bottom: 14px;
+}
+
+.nav__selected {
+  border-bottom-color: #ffd200;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+.snb__selected {
+  color: var(--black);
 }
 
 .contents {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   height: fit-content;
   overflow: hidden;
   margin-top: 146px;
 }
 
 .category {
-  margin-top: 20px;
+  margin-top: 18px;
   width: 100%;
+  color: var(--gray4);
 }
 
 .category > ul {
@@ -128,7 +149,7 @@
 .recommend {
   width: 720px;
   height: fit-content;
-  margin: 10px auto;
+  margin: auto;
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
@@ -235,6 +256,8 @@
   background-size: cover;
   margin-top: 3px;
   margin-right: 3px;
+  position: relative;
+  top: 2px;
 }
 
 .icon-views {
@@ -285,7 +308,7 @@
 
 .ad-slide {
   width: 720px;
-  margin: 10px auto;
+  margin: auto;
 }
 
 .ad-slide__container {
@@ -330,7 +353,7 @@
 .ranking__container {
   width: 720px;
   height: 493px;
-  margin: 10px auto;
+  margin: auto;
   background-color: #fff;
 }
 
@@ -376,6 +399,10 @@
   background-size: cover;
   position: relative;
   right: 84px;
+}
+
+.ranking__day {
+  margin-right: 3px;
 }
 
 .ranking__day-container {
@@ -453,4 +480,34 @@
   width: 504px;
   height: 98px;
   margin: auto auto;
+}
+
+.footer__container {
+  width: 720px;
+  padding: 84px 0 50px 0;
+  margin: auto;
+  justify-content: space-between;
+  color: var(--gray3);
+  font-size: 14px;
+}
+
+.footer__icon {
+  width: 55px;
+  height: 55px;
+}
+
+.footer__ul {
+  gap: 4px;
+}
+
+.footer__row1 {
+  gap: 6px;
+}
+
+.footer__address {
+  color: var(--gray3);
+}
+
+.footer__business-info-check-btn {
+  color: var(--gray3);
 }

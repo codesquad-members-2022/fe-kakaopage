@@ -44,3 +44,7 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
+footer {
+  background-color: var(--gray);
+}

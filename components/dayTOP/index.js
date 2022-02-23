@@ -3,7 +3,7 @@ import { createBox } from "../box/index.js";
 import { createCategory } from "../category/index.js";
 import { createWorkSmall } from "../workSmall/index.js";
 
-const category = createCategory(DAYS);
+const category = createCategory(DAYS, "days");
 const workSmall = createWorkSmall({
   str1: "1",
   str2: "위",
@@ -12,17 +12,17 @@ const workSmall = createWorkSmall({
   status: "up",
 });
 
-export function createDayTOP() {
+export function createDayTop() {
   return createBox({ title: "요일 연재 TOP", contents: el });
 }
 
 const style = `
 .day-top {
-  width: 682px;
+  width: 680px;
   height: fit-content;
   justify-content: space-around;
-  margin: auto auto;
   flex-wrap: wrap;
+  margin: auto auto;
 }
 `;
 
@@ -30,8 +30,6 @@ const el = `
 ${category}
 <style>${style}</style>
 <div class="day-top row">
-${Array.from({ length: 10 })
-  .map((x) => workSmall)
-  .join("")}
+  ${Array.from({ length: 10 }).reduce((acc) => acc + workSmall, "")}
 </div>
 `;

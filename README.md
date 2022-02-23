@@ -1,68 +1,11 @@
-## 기능요구사항
-
-### 기획서
-
-- 카카오 페이지의 구성은 좌측그림과 같은 내용을 구성한다.
-- 디자인/레이아웃은 최근카카오페이지의 UI를 최대한 비슷하게 제작한다.
-
-1. ‘웹툰' 버튼을 누를때만 콘텐츠를 보여준다.
-   웹툰을 제외한 ‘홈',’웹소설' 등은 dummy 화면을 제공한다.
-1. 두번째 카테고리의 모든 탭UI는 정상적으로 동작한다.
-   즉, 현재의 카카오페이지와 동일하게 콘텐츠를 노출한다.
-1. ‘요일' 카테고리가 노출되는 경우 요일별로 탭UI가 동작한다.
-   1,2,3 에 노출되는 탭 UI는 모두 새로운 페이지의 링크로 이동하지 않고, 현재 화면에서 콘텐츠가 렌더링되어 노출된다.
-1. 모든 이미지와 텍스트는 HTML에 하드코딩하지 않고 데이터로 메모리에 보관하고 있다가 필요한 시점에 렌더링에 사용된다.
-   (서버와 통신을 할 필요가 없음)
-1. 검색이나 로그인등 상단 영역은 UI만 노출하고 기능은 동작하지 않는다.
-
-- 기획서에서 동적인 탭UI 기능은 개발하지 않고 정적인 HTML,CSS 화면 구성만 한다.
-
-## 프로그래밍 요구사항
-
-### HTML
-
-- HTML는 용도에 맞는 tag를 찾아서 사용한다.
-- HTML5 Layout 태그를 활용한다.
-
-### CSS
-
-- 모든 엘리먼트들은 가지런히 배치해야하고, 일정한 간격을 유지하도록 한다.
-- 배치를 할때 flex 속성을 사용한다.
-
-## 추가 요구 사항
-
-### CSS
-
-- [ ] Flexbox 사용법에 대해서 별도로 정리한다.
-
-### git, github
-
-- commit 단위를 작게 나눈다
-- [ ] commit 로그를 작성하는 좋은 사례를 찾아본다
-- 매일매일 git push 를 통해서 원격 저장소에 코드를 올린다.
-
-## 추가학습거리
-
-- [ ] HTML 시멘틱 태그에 대해서 알아본다.
-- [ ] 웹접근성이 무엇인지 알아본다.
-
-## 고민
-
-- style을 컴포넌트 함수 내에 Internal 방식으로 삽입
-  - 컴포넌트를 재사용 할때마다 sytle 태그가 추가적으로 중복되어 생성됨.
-  - 파라미터로 style을 변경해주고 싶은데 방법이 떠오르지 않음.
-  - CSS 클래스의 이름을 무작위로 설정해주면 되지 않나?
-
-## TODO
+### TODO
 
 - [ ] before, after 활용
 - [x] 함수로 HTML 생성
 - [x] 생성한 HTML 조합
 - [x] CSS 컴포넌트 내에서 적용
-- [ ] CSS 네이밍 리팩토링
+- [ ] CSS 네이밍 리팩토링(진행중)
 - [ ] 컴포넌트 생성
-  - [ ] header
-  - [ ] navigation
   - [x] adSlide
   - [x] banner
   - [x] box
@@ -70,8 +13,151 @@
   - [x] dayTOP
   - [x] recommend
   - [x] workSmall
-  - [ ] 기대신작 TOP
-  - [ ] 각 장르 TOP
-  - [ ] 일간 랭킹 TOP
-  - [ ] 추천 이벤트
-  - [ ] footer
+  - [x] 기대신작 TOP
+  - [x] 각 장르 TOP
+  - [x] 일간 랭킹 TOP
+    - [ ] 일간 랭킹 TOP 컴포넌트 나누기
+  - [x] 추천 이벤트
+- [x] GNB 탭 이동
+- [ ] 웹툰 탭의 SNB 탭 이동
+- [ ] 배너 슬라이더 이동
+- [ ] 요일 연재 TOP 탭 이동
+
+### 폴더 구조
+
+```
+│  index.html
+│  README.md
+│
+├─components
+│  ├─adSlide
+│  │      index.js
+│  │
+│  ├─banner
+│  │      index.js
+│  │
+│  ├─box
+│  │      index.js
+│  │
+│  ├─Button
+│  │      index.js
+│  │
+│  ├─category
+│  │      index.js
+│  │
+│  ├─dayRankingTop
+│  │      index.js
+│  │
+│  ├─dayTop
+│  │      index.js
+│  │
+│  ├─footer
+│  │      index.js
+│  │
+│  ├─genreTop
+│  │      index.js
+│  │
+│  ├─newTop
+│  │      index.js
+│  │
+│  ├─recommend
+│  │      index.js
+│  │
+│  ├─recommendEvent
+│  │      index.js
+│  │
+│  └─workSmall
+│          index.js
+│
+├─css
+│      common.css
+│      style.css
+│
+└─js
+        constants.js
+        event.js
+        handler.js
+        index.js
+        render.js
+        utils.js
+```
+
+### 고민중...
+
+#### style 태그의 중복
+
+1. 컴포넌트를 재사용 할때마다 style 태그를 중복해서 생성합니다.
+1. 파라미터를 통해서 컴포넌트의 style을 다르게 지정해주고 싶습니다.
+
+그래서,
+
+클래스의 이름을 **동일**하게 지정해주던 방법
+➡
+클래스의 이름을 **무작위**로 지정해주는 방법
+
+으로 수정하였습니다.
+
+그러나, 동일한 스타일의 컴포넌트를 재사용할 경우에는,
+
+클래스 이름만 다르고 내부 코드는 동일한 **중복된** CSS 클래스를 생성합니다.
+
+```js
+export function createBanner({ size, title, status, type, views, ad }) {
+  return `
+  <style>${getStyle(size)}</style>
+  <div class="${banner}">
+    <div class="${list}">
+      <div class="${img}"></div>
+      <div class="banner-info col">
+        <div class="${bannerTitle}">${title}</div>
+        <div class="banner-category row">
+          <div class="${container} row">
+            <div class="${icon}"></div>
+            <div class="${icon2}"></div>
+            <div class="${category}">${type}</div>
+            <div class="${blockIcon}"></div>
+            <div class="${viewIcon}"></div>
+            <div class="${viewsNumber}">${views}만명</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="${description}">
+      <div class="${text}">${ad}</div>
+    </div>
+  </div>`;
+}
+```
+
+#### 탭 이동을 어떻게 구현할지
+
+- 추상화한 HTML
+
+```html
+<body>
+  <header></header>
+  <nav class="GNB">홈 웹툰 웹소설 영화 방송 책</nav>
+  <div class="contents">
+    <nav class="SNB">홈 요일연재 웹툰 소년 드라마 로맨스 로판 액션무협 BL</nav>
+    <!-- ... -->
+  </div>
+  <footer></footer>
+</body>
+```
+
+1. contents에 innerHTML 메소드를 활용하여 DOM 교체
+2. 모든 탭을 미리 그려놓고 display: none 으로 숨겨놓기
+   - 페이지의 매우 크다면 문제가 될 것 같기는 한데 그 적정선은 어디일까?
+
+- 위의 2가지 방법 이외에도 다른 방법이 있을까?
+- 지난 주 PR 훑어보고 공통적인 피드백 적용하기.
+
+### 학습 정리
+
+#### Flexbox 사용법
+
+#### commit 로그를 작성하는 좋은 사례
+
+#### HTML 시멘틱 태그
+
+#### 웹접근성
