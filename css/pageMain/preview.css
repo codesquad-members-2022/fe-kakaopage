@@ -5,6 +5,10 @@
   display: flex;
 }
 
+.preview-container {
+  overflow: hidden;
+}
+
 .preview {
   position: relative;
 }

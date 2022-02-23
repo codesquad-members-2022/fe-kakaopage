@@ -39,6 +39,11 @@ li {
   display: none;
 }
 
+.visibility-hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
 .color-gray {
   color: #bbb;
 }

@@ -12,11 +12,11 @@ const drawDummyPage = (curIdx) => {
   const mainPage = document.querySelector('.page-main');
   const dummyPage = document.querySelector('.dummy');
   if (curIdx === 1) {
-    mainPage.classList.remove('display-none');
+    mainPage.classList.remove('visibility-hidden');
     dummyPage.classList.add('display-none');
     return;
   }
-  mainPage.classList.add('display-none');
+  mainPage.classList.add('visibility-hidden');
   dummyPage.classList.remove('display-none');
 };
 
