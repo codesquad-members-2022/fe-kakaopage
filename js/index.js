@@ -97,15 +97,28 @@ const bindEventListener = () => {
         }
     });
 
+    let clickCnt = 0;
     $(".cover-image").addEventListener("click", ({ target }) => {
-        const classes = target.parentNode.classList;
-        if (!classes.contains("button")) return;
-        if (classes.contains("btn-left")) {
-            $(".carousel-item-wrap").classList.toggle("transform-left");
+        if (!target.classList.contains("button")) return;
+        const carouselItemWrapper = $(".carousel-item-wrap");
+        const imageWidth = $(".cover-image").clientWidth;
+        const customTransition = "transform 0.4s ease-in-out";
+
+        if (target.closest(".btn-left")) {
+            clickCnt--;
+            carouselItemWrapper.style.transition = customTransition;
+            carouselItemWrapper.style.transform = `translateX(${
+                -imageWidth * clickCnt
+            }px)`;
         }
-        if (classes.contains("btn-right")) {
-            $(".carousel-item-wrap").classList.toggle("transform-right");
+        if (target.closest(".btn-right")) {
+            clickCnt++;
+            carouselItemWrapper.style.transition = customTransition;
+            carouselItemWrapper.style.transform = `translateX(${
+                -imageWidth * clickCnt
+            }px)`;
         }
+        console.log(clickCnt);
     });
 };
 

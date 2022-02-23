@@ -84,19 +84,12 @@ main {
     color: #333;
 }
 
-.transform-left {
-    transform: translateX(-100%);
-}
-
-.transform-right {
-    transform: translateX(100%);
-}
-
 .cover-image {
     height: 480px;
     width: 700px;
     position: relative;
     color: #fff;
+    overflow: hidden;
 }
 
 .cover-image-item {
@@ -104,7 +97,7 @@ main {
     /* overflow: hidden; */
 }
 
-.cover-image .button {
+.cover-image button {
     position: absolute;
     top: 50%;
     margin-top: -18px;
