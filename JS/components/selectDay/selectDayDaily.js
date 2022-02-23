@@ -16,7 +16,7 @@ function makeSelectDayDailySection() {
 
 function makeSelectDayDailyList() {
   const newList = document.createElement("ul");
-  newList.classList.add('daily__select__day');
+  newList.classList.add('select__day');
   makeSelectDayItems(newList);
 
   return newList;
