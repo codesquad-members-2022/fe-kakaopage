@@ -1,21 +1,15 @@
-import home from './home.js';
-import serial from './serial.js';
-import webtoon from './webtoon.js';
-import boy from './boy.js';
+import home from './components/home.js';
+import serial from './components/serial.js';
+import webtoon from './components/webtoon.js';
+import boy from './components/boy.js';
+import drama from './components/drama.js';
+import romance from './components/romance.js';
+import fantasy from './components/fantasy.js';
+import martialArts from './components/martial-arts.js';
+import bl from './components/bl.js';
 
 (function init() {
-  const $ = (selector) =>
-    document.querySelector(selector).addEventListener('click', changeUI);
-
-  $('.menubar_tag > button:nth-child(1)');
-  $('.menubar_tag > button:nth-child(2)');
-  $('.menubar_tag > button:nth-child(3)');
-  $('.menubar_tag > button:nth-child(4)');
-  $('.menubar_tag > button:nth-child(5)');
-  $('.menubar_tag > button:nth-child(6)');
-  $('.menubar_tag > button:nth-child(7)');
-  $('.menubar_tag > button:nth-child(8)');
-  $('.menubar_tag > button:nth-child(9)');
+  document.querySelector('.menubar_tag').addEventListener('click', changeUI);
 })();
 
 function changeUI(e) {
@@ -35,14 +29,19 @@ function changeUI(e) {
       boy();
       break;
     case '드라마':
+      drama();
       break;
     case '로멘스':
+      romance();
       break;
     case '로판':
+      fantasy();
       break;
     case '무협':
+      martialArts();
       break;
     case 'BL':
+      bl();
       break;
   }
 }
