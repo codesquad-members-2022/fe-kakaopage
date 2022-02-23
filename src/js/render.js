@@ -9,14 +9,13 @@ import { ScrollBanner } from './components/ScrollBanner.js';
 const $main = $('.main');
 
 const render = {
-  webtoonPage(data) {
-    if ($main.childElementCount !== 1) return;
+  webtoonPage() {
     $main.innerHTML = '';
     $main.append(SNB());
     const $mainContents = document.createElement('div');
     $mainContents.classList.add('main-contents');
     $main.append($mainContents);
-    render.contents('홈');
+    this.contents('홈');
   },
 
   otherPage(tabName) {
@@ -67,7 +66,7 @@ const renderContent = {
   },
 
   webtoon() {
-    const $mainContents = $('.main-contents'); // 중복로직 - 비동기로 어떻게
+    const $mainContents = $('.main-contents');
     renderComponent.mainBanner();
     renderComponent.dayBar();
     $mainContents.append(displayWebtoon(data));
@@ -121,10 +120,10 @@ const renderContent = {
 
 const renderComponent = {
   mainBanner() {
-    const randomNum = Math.floor(Math.random() * 10);
+    const randomNum = Math.floor(Math.random() * 9);
     const $mainContents = $('.main-contents');
     $mainContents.innerHTML = '';
-    $mainContents.append(MainBanner([...data].splice(randomNum, 1)));
+    $mainContents.append(MainBanner([...data].splice(randomNum, 4)));
   },
 
   dayBar() {

@@ -63,6 +63,22 @@ const handler = {
       const category = e.target.dataset.category;
       render.contents(category);
       this.daybar();
+      this.mainBannerBtn();
+    });
+  },
+
+  mainBannerBtn() {
+    const $mainBanner = $('.main-banner');
+    const $mainBannerList = $('.main-banner__list');
+    $mainBanner.addEventListener('click', e => {
+      if (!e.target.matches('.main-banner__btn-img')) return;
+
+      if (e.target.parentNode.classList.contains('btn--prev')) {
+        // ing...
+        $mainBannerList.style.transform = `translateX(${0}px)`;
+      } else {
+        $mainBannerList.style.transform = `translateX(${-720}px)`;
+      }
     });
   },
 };
@@ -70,6 +86,7 @@ const handler = {
 function setEventHandlers() {
   handler.daybar();
   handler.SNB();
+  handler.mainBannerBtn();
 }
 
 export { addTabFeature };

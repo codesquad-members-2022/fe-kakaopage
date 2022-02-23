@@ -1,6 +1,7 @@
 const DATA_URL = 'data/data.json';
 
 const $ = selector => document.querySelector(selector);
+const $$ = selector => document.querySelectorAll(selector);
 
 const activateTab = ({ target }, parentNode) => {
   if (target.parentNode.tagName === 'LI') target = target.parentNode;
@@ -35,4 +36,4 @@ const TITLE = {
   promotion: '🔥HOT 최근 프로모션 진행작',
 };
 
-export { DATA_URL, $, activateTab, data, today, CL, TITLE };
+export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE };
