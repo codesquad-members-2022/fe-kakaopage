@@ -4,8 +4,9 @@ import { getWebFictionPage } from './render/webFiction.js';
 import { getMoviePage } from './render/movie.js';
 import { getTVPage } from './render/tv.js';
 import { getBookPage } from './render/book.js';
+import { getDayTopContent } from './componets/dayTop.js';
 
-const getPageTemplete = async (INITIAL_PAGE, data, today) => {
+const getPageTemplete = (INITIAL_PAGE, data, today) => {
     const pageTemplete = {
         "홈": () => getHomePage(data, today),
         "웹툰": () => getWebtoonPage(data, today),
@@ -14,7 +15,11 @@ const getPageTemplete = async (INITIAL_PAGE, data, today) => {
         "방송": () => getTVPage(data),
         "책": () => getBookPage(data),
     };
-    return pageTemplete[INITIAL_PAGE]();
+    const currentPageTemplete = pageTemplete[INITIAL_PAGE]();
+
+    return currentPageTemplete;
 }
 
-export { getPageTemplete };
+const getNewDayTopContent = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
+
+export { getPageTemplete, getNewDayTopContent };

@@ -1,9 +1,10 @@
 import { getToday } from './utility.js';
-import { renderPage } from './controller.js';
+import { renderPage, addEvent } from './controller.js';
+import { INITIAL_PAGE } from "./constant.js";
 
-function init() {
-    const today = getToday();
-    renderPage(today);
+async function init() {
+    renderPage(INITIAL_PAGE)
+    .then((currentPageData) => addEvent(currentPageData));
 }
 
 init();
