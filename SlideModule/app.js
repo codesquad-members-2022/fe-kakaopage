@@ -46,11 +46,18 @@ const onNextBtn = (event) => {
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-const myimages = ['여우신랑', '던전리셋', '에스티오'];
+const myimages = [
+  '여우신랑',
+  '던전리셋',
+  '에스티오',
+  '롱리브더킹',
+  '따봉으로레벨업',
+];
 // 시작 : [에스티오, 여우신랑, 던전리셋]
 // 이전버튼 : [던전리셋, 에스티오, 여우신랑]
 // 다음버튼 : [여우신랑, 던전리셋, 에스티오]
 const imageCarousel = new ImageCarousel(myimages);
+console.log(imageCarousel.images);
 slide.initSlide(imageCarousel);
 
 prevBtn.addEventListener('click', onPrevBtn);
@@ -74,5 +81,5 @@ $slide.addEventListener('transitionend', (event) => {
   }
 
   slide.setPageMiddle();
-  stopFlag.setTrue();
+  setTimeout(() => stopFlag.setTrue(), 500);
 });
