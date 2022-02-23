@@ -1,0 +1,66 @@
+* {margin: 0;padding:0; box-sizing: border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {
+  display:none;
+}
+
+.slidebox {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* .slide-img {
+  position: relative;
+  text-align: center;
+  margin-top: 11px;
+} */
+
+.slidebox img {
+  max-width:100%;
+  height: 480px;
+  width: 720px;
+}
+
+.slidebox .slidelist {
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.slidebox .slideitem {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  transition: all .35s;
+}
+
+.slidebox .slideitem label {
+  position: absolute;
+  z-index:1;
+  top:50%;
+  border-radius:50%;
+  padding:20px;
+  cursor:pointer;
+  
+}
+
+label.left {
+  left: 200px;
+  background-color: transparent;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56");
+}
+
+label.right {
+  right: 200px;
+  background-color: transparent;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93");
+}
