@@ -193,7 +193,7 @@ const createDaysBlock = () => {
   <nav class="nav-days">
     <ul class="nav-item-sort text-color--light-gray">
       <li data-day='1'>월</li>
-      <li class="current-tab underline-thin text-color--black" data-day='2'>화</li>
+      <li data-day='2'>화</li>
       <li data-day='3'>수</li>
       <li data-day='4'>목</li>
       <li data-day='5'>금</li>
@@ -208,6 +208,14 @@ const createDaysBlock = () => {
 </div>`;
 
   insertIntoMain(daysBlock);
+
+  $(".nav-days ul").childNodes.forEach((it) => {
+    if (it.nodeType === 1 && it.dataset.day === String(day)) {
+      it.classList.add("current-tab");
+      it.classList.add("underline-thin");
+      it.classList.add("text-color--black");
+    }
+  });
 
   $(".nav-days").addEventListener("click", (e) => {
     const days = e.target.closest("ul").childNodes;
@@ -545,7 +553,6 @@ export {
   createCateNav,
   createBanner,
   createCateBtnBlock,
-  createPromotionBlock,
   createPromotionBlock,
   createDaysBlock,
   createSmallBannerBlock,

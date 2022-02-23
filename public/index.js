@@ -3,7 +3,6 @@ import {
   createBanner,
   createCateBtnBlock,
   createPromotionBlock,
-  createPromotionBlock,
   createDaysBlock,
   createSmallBannerBlock,
   createGenreBlock,
