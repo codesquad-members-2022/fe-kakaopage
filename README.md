@@ -7,7 +7,7 @@
 <br>
 
 # 구현 계획
-<img width="1000" src="https://user-images.githubusercontent.com/17706346/155261615-270e45a6-3f43-4399-a12c-9a34cd13cda4.png">
+<img width="1100" src="https://user-images.githubusercontent.com/17706346/155263266-efdfe384-9a7e-47cc-8d75-45da610919be.png">
 
 - controller.js: 뷰에서 DOM을 직접 조작하지 않게 하고, 데이터와 뷰를 주고 받을 수 있는 인터페이스 역할
 - view.js: DOM에 사용할 수 있는 페이지별 또는 탭에 맞는 템플릿 리터럴을 반환해주는 역할
