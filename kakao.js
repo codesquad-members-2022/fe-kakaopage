@@ -43,8 +43,51 @@ function makeHtml(dayWebToonData){
     document.querySelector('.webtoon_list ul').innerHTML = webtoonCardTemplate;
 }
 
-function init(){
-    showMain();
-    showDayWebtoon()
-}
-init();
+// ==================slide
+
+function showSlides(){
+
+    const slides = document.querySelectorAll('.slide');
+    // const slider = document.querySelector(".slider");
+    const btnLeft = document.querySelector('.slider_btn_left');
+    const btnRight = document.querySelector(".slider_btn_right");
+    let curSlide = 0;
+    const maxSlide = slides.length;
+    
+    const moveSlides = function(slide){
+        slides.forEach(
+            (slide,index) => (slide.style.transform = `translateX(${100 * (index-curSlide)}%)`)
+        );
+    }
+    moveSlides(0);
+    
+    const nextSlide = function(){
+        if(curSlide === maxSlide-1){
+            curSlide = 0;
+        }else{
+            curSlide++;
+        }
+        moveSlides(curSlide);
+    }
+    
+    const prevSlide = function(){
+        if(curSlide === 0){
+            curSlide = maxSlide -1;
+        }else{
+            curSlide--;
+        }
+        moveSlides(curSlide);
+    }
+    
+    btnRight.addEventListener("click",nextSlide);
+    btnLeft.addEventListener("click",prevSlide);
+    
+    // setInterval(nextSlide, 3000);
+    };
+    
+    function init(){
+        showMain();
+        showDayWebtoon();
+        showSlides();
+    }
+    init();
