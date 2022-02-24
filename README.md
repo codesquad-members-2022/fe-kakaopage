@@ -56,16 +56,15 @@ Inline, External, Internal에 따라 다름. 왜 다르지...
   - 렌더함수를 어떻게 정의할까? `innerHtml = ''` 이걸 리턴하는 식으로 하면 될듯.
   - article태그를 innerhtml로 렌더링하고 안에 탬플릿 분리해서 선언하는 로직
 
-- js와 style을 합쳐서 관리해야하나
-- 기능별 브랜치를 만들고 merge 활용
-
 - 흐름
 
   - category & subCategory에 해당하는 파라미터를 누르면 서버에 post로 uid전달 -> 해당 데이터 서버에서 받기 -> 템플릿안에 데이터를 삽입해서 렌더링
 
-# 그룹 리뷰
-
-- git issue?
-- cors
-
 https://ichi.pro/ko/vanilla-jslo-peuleonteu-endeu-guseong-yoso-jagseong-152350005486233
+
+# 고민들
+
+### 클로저 활용
+
+- carousel에서 인덱스번호를 private하게 관리해보고 싶어서 closure를 사용함
+- 클로저 안에 함수를 선언한건 잘못된건가? 클로저에서 리턴하는 함수마다 공통적으로 쓰는 로직이 있어서 분리했는데 잘 모르겠음.

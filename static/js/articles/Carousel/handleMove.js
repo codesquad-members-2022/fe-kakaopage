@@ -4,7 +4,7 @@ export function handleMove(layout, wrapper, array) {
   let idx = 0;
   let carouselsArrLength = array.length;
 
-  function handleCarousel() {
+  function moveCarousel() {
     $carouselContentsWrapper.style.transition = 'all 0.5s ease-in-out';
     $carouselContentsWrapper.style.transform = `translateX(-${idx * 720}px)`;
     renderCarouselIndex();
@@ -50,15 +50,15 @@ export function handleMove(layout, wrapper, array) {
           } else {
             slideToPrev();
           }
-          handleCarousel();
+          moveCarousel();
         }
       });
       return $buttonCatainer;
     },
-    moveCarousel: function () {
+    initMove: function () {
       setInterval(() => {
         slideToNext();
-        handleCarousel();
+        moveCarousel();
       }, 3000);
     },
   };

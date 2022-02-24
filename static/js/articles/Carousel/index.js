@@ -22,7 +22,7 @@ export default function Carousel(carouselsArr) {
   $carouselLayout.append($buttonCatainer);
 
   moveEventHandler.renderCarouselIndex();
-  moveEventHandler.moveCarousel();
+  moveEventHandler.initMove();
 
   return $carouselLayout;
 }
