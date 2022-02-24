@@ -2,7 +2,7 @@ import { changeCirclePosition } from "./change-circle-position.js";
 // import {changeImageBoxInfo} from './change-image-box.js';
 import { changeImageCardInfo } from "./change-image-card.js";
 import { weeklyWebtoonDataInfo } from "./data.js";
-import { textSelectedPositionChange } from "./selected-position-change.js";
+import { textSelectedPositionChange } from "./text-selected-position-change.js";
 import { $ } from "./selector.js";
 
 const weeklyWebtoonUl = $(".weekly-webtoon-ul");
