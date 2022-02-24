@@ -14,37 +14,37 @@ export const handleCategoryMenu = (menu) => {
     contents.insertAdjacentHTML("beforeend", ContentListInfos.addBannerComponent(menu) ? ContentListInfos.addBannerComponent(menu) : "");
     contents.insertAdjacentHTML("beforeend", ContentListInfos.addRecommendationComponent(menu) ? ContentListInfos.addRecommendationComponent(menu) : "");
     switch(menu) {
-        case '0':
+        case '홈':
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addRomanceComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addNobilityComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addDramaComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addDailyRankingComponent(menu));
             break;
-        case '1':
+        case '요일연재':
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeekComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addFilterComponent(menu));
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(menu, today));
             break;
-        case '2':
+        case '웹툰':
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addWebToonComponent(menu));
             break;
-        case '3':
+        case '소년':
             contents.insertAdjacentHTML("beforeend", ContentListInfos.addBoyComponent(menu));
             commonGenreRender(contents, menu);
             break;
-        case '4':
+        case '드라마':
             commonGenreRender(contents, menu);
             break;
-        case '5':
+        case '로맨스':
             commonGenreRender(contents, menu);
             break;
-        case '6':
+        case '로판':
             commonGenreRender(contents, menu);
             break;
-        case '7':
+        case '액션무협':
             commonGenreRender(contents, menu);
             break;
-        case '8':
+        case 'BL':
             commonGenreRender(contents, menu);
             break;
         default:
