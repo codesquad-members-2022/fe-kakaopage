@@ -176,9 +176,7 @@ header {
     position: absolute;
     bottom: 14%;
     right: 17px;
-    color: $text-white;
     font-size: 1.25rem;
-    opacity: 0.6;
   }
 }
 
@@ -230,6 +228,13 @@ header {
   img {
     width: 100%;
     object-fit: contain;
+  }
+}
+
+.banner-count {
+  &, * {
+    color: $text-white;
+    opacity: 0.6;
   }
 }
 
@@ -651,6 +656,7 @@ header {
 
   .banner-container {
     display: flex;
+    transition: all 700ms;
 
     img {
       width: 100%;
