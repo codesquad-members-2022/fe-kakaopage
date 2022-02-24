@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:js/webtoon-datas.js
 =======
 // data
 >>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/datas.js
+=======
+>>>>>>> 32023a9 (refactor: 불필요한 코드, 파일 구조 정리)
 export const data = [
   {
     // 화요일
