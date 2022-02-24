@@ -7,7 +7,42 @@ const delay = slideSpeed * 1000;
 const initPosition = 0;
 const time = 3000;
 
-let position = -slideWidth;
+const clickFlag = {
+  value: false,
+  setTrue() {
+    this.value = true;
+  },
+  setFalse() {
+    this.value = false;
+  },
+  isTrue() {
+    return !!this.value;
+  },
+};
+
+const position = {
+  value: -slideWidth,
+  setValue(newValue) {
+    this.value = newValue;
+  },
+};
+
+const timerInterval = () => {
+  return setInterval(() => {
+    playEvent();
+    isEnd();
+  }, time);
+};
+
+const autoPlay = {
+  timer: timerInterval(),
+  start() {
+    this.timer = timerInterval();
+  },
+  stop() {
+    clearInterval(this.timer);
+  },
+};
 
 const makingClone = () => {
   const cloneSlide_first = slideImg[0].cloneNode(true);
@@ -17,29 +52,32 @@ const makingClone = () => {
 };
 
 const returnOriginSlide = () => {
-  if (position >= initPosition) position = -slideWidth * slideImg.length;
-  else if (position < -slideWidth * slideImg.length) position = -slideWidth;
+  if (position.value >= initPosition)
+    position.setValue(-slideWidth * slideImg.length);
+  else if (position.value < -slideWidth * slideImg.length)
+    position.setValue(-slideWidth);
 };
 
 const isEnd = () => {
-  if (position < initPosition && position > -slideWidth * slideImg.length)
+  if (
+    position.value < initPosition &&
+    position.value > -slideWidth * slideImg.length
+  )
     return;
-
   returnOriginSlide();
-
   const slideSpeed = initPosition;
   setTimeout(() => {
-    moveSlide(position, slideSpeed);
+    moveSlide(position.value, slideSpeed);
   }, delay);
 };
 
-const moveSlide = (position, slideSpeed) => {
+const moveSlide = (positionValue, slideSpeed) => {
   slides.style.transition = `${slideSpeed}s ease-out`;
-  slides.style.transform = `translateX(${position}px)`;
+  slides.style.transform = `translateX(${positionValue}px)`;
 };
 
 const changePosition = (btnEvent) => {
-  position += btnEvent === "prev" ? slideWidth : -slideWidth;
+  position.value += btnEvent === "prev" ? slideWidth : -slideWidth;
 };
 
 const setEvent = (btnEvent) => {
@@ -49,25 +87,18 @@ const setEvent = (btnEvent) => {
 const playEvent = (btnEvent) => {
   changePosition(btnEvent);
   setEvent(btnEvent);
-  moveSlide(position, slideSpeed);
-};
-
-let autoPlay;
-
-const timerInterval = () => {
-  return setInterval(() => {
-    playEvent();
-    isEnd();
-  }, time);
+  moveSlide(position.value, slideSpeed);
 };
 
 export const slideShow = (e) => {
-  clearInterval(autoPlay);
-  autoPlay = timerInterval();
+  if (clickFlag.isTrue()) return;
+  clickFlag.setTrue();
+  autoPlay.stop();
+  autoPlay.start();
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
   isEnd();
+  clickFlag.setFalse();
 };
 
-autoPlay = timerInterval();
 makingClone();
