@@ -1,50 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Pushster&display=swap");
+@import "./reset.css";
+@import "./variables.css";
 
-/* Components */
-@import "components/nav.css";
-@import "components/page-header.css";
-@import "components/page-footer.css";
-@import "components/adBanner.css";
-@import "components/subAdBanner.css";
-@import "components/promotionBanner.css";
-@import "components/webtoon-bar.css";
-@import "components/eventBanner.css";
-@import "components/frame.css";
+/*components*/
+@import "./components/frame.css";
+@import "./components/nav.css";
+@import "./components/webtoon-card--big.css";
+@import "./components/webtoon-card--long.css";
+@import "./components/promotion-banner.css";
+@import "./components/sub-ad-banner.css";
+@import "./components/webtoon-card.css";
+@import "./components/company-bar.css";
 
-/* Screens */
-@import "screens/webtoonTop.css";
+/*blocks*/
+@import "./blocks/header.css";
+@import "./blocks/main-ad-banner.css";
+@import "./blocks/expected-top.css";
+@import "./blocks/event-banner.css";
+@import "./blocks/romance-top.css";
+@import "./blocks/dow-serialization.css";
 
 body {
+  background-color: #eee;
+}
+
+.home,
+footer {
+  width: var(--basic-width);
   margin: 0 auto;
-  padding: 0;
-  height: 1000vh;
-  background-color: #eeeeee;
-  font-family: "Roboto", sans-serif;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-li {
-  font-size: 20px;
+.home {
+  margin-top: 169px;
 }
 
 button {
+  background: transparent;
   border-style: none;
+  padding: 0;
 }
 
-button:hover {
+button:hover,
+.nav__item:hover {
   cursor: pointer;
 }
 
-p {
-  margin: 0;
+.separator {
+  color: var(--gray);
+  margin: 0 3px;
 }
 
-.page-main {
-  margin: 0 auto;
-  margin-top: 150px;
-  width: 720px;
+.dow-top__contents,
+.expected-top__contents,
+.romance-top__contents,
+.dow-serialization__contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kakao-app {
+  margin-top: 10px;
 }

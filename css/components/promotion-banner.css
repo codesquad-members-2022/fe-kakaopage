@@ -1,0 +1,15 @@
+.promotion-banner {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.promotion-banner__item {
+  background-color: var(--light-gray);
+  font-size: 18px;
+  padding: 20px;
+  margin: 1px;
+  width: 224px;
+  border-radius: 5px;
+}
