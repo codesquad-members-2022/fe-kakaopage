@@ -35,4 +35,4 @@ import { renderBase } from './component/base.js';
 import { renderHome } from './pages/home.js';
 import { renderWeekdays } from './pages/weekdays.js';
 import { renderWebtoon } from './pages/webtoon.js';
-import { navClickEventHandler } from './utils/eventHandler.js';
+
