@@ -14,7 +14,7 @@ const setRanking = (e) => {
 };
 
 const setDay = (e) => {
-  e.day = dowTopList[j];
+  e.day = dowTopList[dow];
 };
 
 const limitTitleLength = (e) => {
@@ -23,7 +23,7 @@ const limitTitleLength = (e) => {
 };
 
 webtoons.dowTop.forEach((e, i) => {
-  if (i % webtoonLineLength === 0) j++;
+  if (i % webtoonLineLength === 0) dow++;
   if (dow > dowLength) dow = 0;
   setRanking(e);
   setDay(e);
