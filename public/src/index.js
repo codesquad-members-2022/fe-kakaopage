@@ -8,7 +8,7 @@ import DaysGenre from "./screens/Webtoon/genre/DaysGenre.js";
 const init = async () => {
   const { results: categories } = await getJson("categories");
   const { results: genres } = await getJson("genres");
-  const { results: webtoons } = await getJson("webtoon");
+  const { results: webtoons } = await getJson("webtoons");
 
   localStorage.setItem("genres", JSON.stringify(genres));
   localStorage.setItem("webtoons", JSON.stringify(webtoons));

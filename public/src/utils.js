@@ -1,4 +1,4 @@
-import { LOCAL_FETCH_URL, SERVER_FETCH_URL } from "./constants.js";
+import { HEROKU_SERVER_URL } from "./constants.js";
 
 const createExtendsRelation = (Child, Parent) => {
   Child.prototype = Object.create(Parent.prototype);
@@ -19,7 +19,7 @@ const formatUserCount = (userCount) => {
 const getJson = (dataName) => {
   return new Promise((resolve, reject) => {
     try {
-      fetch(`${GITHUB_PAGE_FETCH_URL}${dataName}.json`)
+      fetch(`${HEROKU_SERVER_URL}${dataName}`)
         .then((response) => response.json())
         .then((json) => resolve(json));
     } catch (error) {
