@@ -30,9 +30,7 @@ const homeData = {
 
 async function renderHome() {
     const mainEL = document.querySelector('main');
-    mainEL.innerHTML += renderMidButton(homeData.midButton);
-    mainEL.innerHTML += renderArticle('article__weekdays-top', '','요일연재 TOP', '(1658)');
-    mainEL.innerHTML += renderPromotionBanner();
+    mainEL.innerHTML += renderMidButton(homeData.midButton) + renderArticle('article__weekdays-top', '','요일연재 TOP', '(1658)') + renderPromotionBanner();
     const articleWeekdaysTopEL = document.querySelector('.article__weekdays-top');
     articleWeekdaysTopEL.innerHTML += renderNav('article__nav', homeData.articleNav);
 
@@ -55,7 +53,6 @@ async function renderHome() {
 }
 
 function displayWeekRanking(day, sectionNums) {
-
     fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=${day}`)
     .then(res => res.json())
     .then(json => {
@@ -68,7 +65,6 @@ function displayWeekRanking(day, sectionNums) {
     .then(html => {
         document.querySelector('.article__weekdays-top').innerHTML += renderSectionWrapper(html);
     })
-;
 }
 
 function displayBooks5(tittle, type, id, sectionNums) {
@@ -84,8 +80,6 @@ function displayBooks5(tittle, type, id, sectionNums) {
     .then(html => {
         document.querySelector(`#${id}`).innerHTML += renderSectionWrapper(html);
     })
-  
-
 }
 
 export { renderHome };

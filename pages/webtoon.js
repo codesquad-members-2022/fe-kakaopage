@@ -28,7 +28,7 @@ function renderRowArticle(index, sectionNums) {
         return html;
     })
     .then(html => {
-        document.querySelector('.article__webtoon-row').innerHTML = '';
+        deleteInnerHTML('.article__webtoon-row');
         document.querySelector('.article__webtoon-row').innerHTML += renderRowListWrapper(html);
     })
 }
@@ -58,4 +58,5 @@ function renderRowListWrapper(lists) {
 
 export { renderWebtoon };
 import { renderNav } from '../component/nav.js'
-import { navClickEventHandler } from '../utils.js';
+import { navClickEventHandler } from '../utils/eventHandler.js';
+import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
