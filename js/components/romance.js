@@ -1,5 +1,5 @@
 import { romanceData } from '../data/romance-data.js';
-import { contents } from '../contents.js';
+import { contents } from '../html-template.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `

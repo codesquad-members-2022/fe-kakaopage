@@ -1,5 +1,5 @@
 import { dramaData } from '../data/drama-data.js';
-import { contents } from '../contents.js';
+import { contents } from '../html-template.js';
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
   ${contents.makeImageSection(dramaData.mainImage)}
