@@ -342,3 +342,18 @@ li {
   bottom: 225px;
   left: 640px;
 }
+
+/* slider 애니메이션 */
+.slider {
+  overflow: hidden;
+}
+
+.slider-list {
+  display: flex;
+  transition: 0.2s ease-in;
+}
+
+.slider-list img {
+  width: 720px;
+  height: 480px;
+}
