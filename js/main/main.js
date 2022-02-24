@@ -90,39 +90,47 @@ const toggleHighlight = ($prevTarget, $curTarget) => {
   if ($curTarget) toggleClass(CATEGORY_HIGHLIGHT, $curTarget);
 };
 
+/* event listener */
+
+const onClick = ($category, selectedIdx, $$category) => (event) => {
+  if (categoryState.getUserIdx() === selectedIdx) return;
+
+  const prevTarget = $$category[categoryState.getUserIdx()];
+  const curTarget = event.target;
+  const categoryName = $category.textContent;
+  let selectedDay = days[$category.dataset.curday];
+  const previews = previewsObj[categoryName];
+  const dayContentsMap = dayContentsObj[categoryName];
+  const dayContentsArr = dayContentsMap?.[selectedDay];
+  const webtoonContentsArr = webtoonContentsObj[categoryName];
+  categoryState.setUserIdx(selectedIdx);
+
+  // highlight
+  toggleHighlight(prevTarget, curTarget);
+
+  // preview - 구현 후 함수 하나로 만들기
+  setPreviews({ previews, timer: sliderTimer, slider: carouselSlider });
+
+  // tag list
+  setTagListEl(categoryName);
+
+  // webtoon contents
+  setWebtoonContents({ dayContentsArr, webtoonContentsArr });
+
+  // day filter
+  setDayFilter({ categoryEl: $category, dayContentsMap });
+};
+
+const addListener = ($category, selectedIdx, $$category) => {
+  $category.addEventListener(
+    'click',
+    onClick($category, selectedIdx, $$category)
+  );
+};
+
 const main = () => {
   const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
-
-  $$category.forEach(($category, selectedIdx, $$category) => {
-    $category.addEventListener('click', (event) => {
-      if (categoryState.getUserIdx() === selectedIdx) return;
-
-      const prevTarget = $$category[categoryState.getUserIdx()];
-      const curTarget = event.target;
-      const categoryName = $category.textContent;
-      let selectedDay = days[$category.dataset.curday];
-      const previews = previewsObj[categoryName];
-      const dayContentsMap = dayContentsObj[categoryName];
-      const dayContentsArr = dayContentsMap?.[selectedDay];
-      const webtoonContentsArr = webtoonContentsObj[categoryName];
-      categoryState.setUserIdx(selectedIdx);
-
-      // highlight
-      toggleHighlight(prevTarget, curTarget);
-
-      // preview - 구현 후 함수 하나로 만들기
-      setPreviews({ previews, timer: sliderTimer, slider: carouselSlider });
-
-      // tag list
-      setTagListEl(categoryName);
-
-      // webtoon contents
-      setWebtoonContents({ dayContentsArr, webtoonContentsArr });
-
-      // day filter
-      setDayFilter({ categoryEl: $category, dayContentsMap });
-    });
-  });
+  $$category.forEach(addListener);
 
   const defaultCategoryIdx = categoryState.getDefaultIdx();
   initCategoryCurDay();
