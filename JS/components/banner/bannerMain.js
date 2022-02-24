@@ -11,8 +11,7 @@ function renderMainBanner() {
 
 function makeMainBannerLayout() {
   const newDiv = document.createElement('article');
-  newDiv.classList.add('main__banner');
-  newDiv.classList.add('banner');
+  newDiv.classList.add('main__banner', 'banner');
 
   const btns = makeBannerBtns();
   const newList = makeMainBannerList();
