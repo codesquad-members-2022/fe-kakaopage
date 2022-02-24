@@ -88,7 +88,7 @@ const bindCaroulselEvent = () => {
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = 2;
-    const transitionDuration = "1s";
+    const transitionDuration = "0.3s";
     const customTransition = `transform ${transitionDuration} ease-out`;
 
     const autoCarouselHandler = () => {
@@ -98,6 +98,7 @@ const bindCaroulselEvent = () => {
         carouselItemWrapper.style.transform = `translateX(${
             -imageWidth * clickCnt
         }px)`;
+        clickFlag = false;
     };
 
     let startCarousel = setInterval(autoCarouselHandler, 4000);
@@ -115,6 +116,7 @@ const bindCaroulselEvent = () => {
                 -imageWidth * clickCnt
             }px)`;
             clickFlag = false;
+            return;
         }
         if (target.closest(".btn-right")) {
             clickCnt++;
@@ -123,22 +125,18 @@ const bindCaroulselEvent = () => {
                 -imageWidth * clickCnt
             }px)`;
             clickFlag = false;
+            return;
         }
     });
 
-    // 클릭으로만 작동 (맨 끝 원본 이미지로 돌아가기)
     $(".cover-image").addEventListener("transitionend", () => {
         clickFlag = true;
-        console.log(clickCnt);
-        if (clickCnt > carouselItems.length - 1) clickCnt = carouselItems - 1;
+        const maxCnt = carouselItems.length - 1;
+        if (clickCnt > maxCnt) {
+            clickCnt = maxCnt;
+        }
+
         if (!carouselItems[clickCnt].dataset.clone) return;
-
-        /* const lastNodeClonePos = 0;
-        const firstNodeClonePos = -((carouselItems.length - 1) * imageWidth);
-
-        let curPos = Number(
-            carouselItemWrapper.style.transform.replace(/[^-0-9]/g, "")
-        ); */
 
         if (carouselItems[clickCnt].dataset.clone === "last") {
             carouselItemWrapper.style.transition = "none";
