@@ -183,6 +183,7 @@ header {
     background-color: gray;
 
     display: flex;
+    transition: ease-in-out 1s;
 }
 
 .img-with-line {

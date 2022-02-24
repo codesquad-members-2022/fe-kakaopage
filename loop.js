@@ -143,7 +143,7 @@ export function createContentFormsBigger(num){
 export function createBannerMain(){
     let format = '';
 
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < dummy.slideBannerMainImg.length; i++){
         format += `
             <div class="img-with-line">
                 <img class="img-with" src=${dummy.slideBannerMainImg[i]}>

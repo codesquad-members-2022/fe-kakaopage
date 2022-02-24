@@ -1,3 +1,4 @@
+import { transformBannerMain } from "./banner.js";
 import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
 import { addClickEventToElement, addToContents, combineFormats } from "./util.js";
@@ -28,6 +29,7 @@ export const renderPageHome = () => {
     addToContents(contents);
     addSelectedToday();
     document.getElementById('genre-home').classList.add('selected');
+    transformBannerMain(45);
 }
 
 export const renderPageDaily = () => {
@@ -39,6 +41,7 @@ export const renderPageDaily = () => {
     initPage();
     addToContents(contents);
     addSelectedToday();
+    transformBannerMain(45);
 }
 
 export const renderPageWebtoon = () => {
@@ -49,6 +52,7 @@ export const renderPageWebtoon = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageTeen = () => {
@@ -65,6 +69,7 @@ export const renderPageTeen = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageDrama = () => {
@@ -86,6 +91,7 @@ export const renderPageDrama = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageRomance = () => {
@@ -106,6 +112,7 @@ export const renderPageRomance = () => {
     
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageRofan = () => {
@@ -123,6 +130,7 @@ export const renderPageRofan = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageAction = () => {
@@ -139,6 +147,7 @@ export const renderPageAction = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const renderPageBL = () => {
@@ -155,6 +164,7 @@ export const renderPageBL = () => {
 
     initPage();
     addToContents(contents);
+    transformBannerMain(45);
 }
 
 export const createPageNotYet = () => {
