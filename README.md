@@ -6,30 +6,66 @@
 - 비동기적인 상황정도가 아니면 위 if(!selectedCategor) 에서 처리해도 되긴하고요.
   에러라는 상황을 표현하고 싶다면 지금처럼 할 수 있고요
 
-# 다른 사람 pr 엿보기
+# 이론정리계획
 
-- calc
-- stacking context
-- 구분하는 주석 표시도 좋네요.
-- 자주 쓰는 애들 class 묶기: flex center, box-sizing,
-- vw가 %단위 대비 상대적으로 가진 장점
-- rem vs em 차이
-- vsc - live sass compiler
-- 웹폰트?
-- css is 함수
+[ ] 돔 렌더링 과정
 
-- html태그에서 id를 사용할 땐 클래스와 달리 id역할은 무엇인지 스스로 정의하고 사용
-- async/await
+- 대충 순서는 알겠는데 설명할 정도는 아님
 
-# 프로그래밍 요구사항
+[x] HTML collection 및 돔 탐색 메소드들 별 특징
 
-- tempalte literal 문법
-- DOM 조작과정에서 createElement, appendChild, insertBefore 등의 메서드
-- Event delegation으로 중복된 이벤트 등록 줄이기
-- node.js사용
-- 어느 정도까진 괜찮지만 계속 dom을 추가하고 빼는 건 좋지 못할 수 있다.(apppend, remove)
-- 탬플릿 리터럴 vs createElement -> 프레임워크vs바닐라로 이어지는 성능과 효율성
+- live collection vs static collection:
+- html collection vs nodeList
 
-# 공부할 내용
+htmlcollection: live
+childNode 프로퍼티가 반환하는 nodelsit: live
+nodelist: static
 
-# 미션 구현과정 및 고민들
+-> hc나 nl이나 고차함수 잘 안먹히니까 배열로 만들어서 사용하면 편함
+
+[x] 돔 삽입
+
+- insertAdjacentHTML
+- innerHTML
+- crateElement -> append(or appendChild)
+
+[x] DOM 노드 간의 관계 접근 프로퍼티
+
+- element type만 찾는지 텍스트 요소를 포함하는지 구분해서 사용
+
+[ ] vanilla js 디자인 패턴?
+
+디자인 패턴이 뭘까? 일단 모듈 패턴으로 리팩토링하기로 계획. 큰 이유는 없고 한 번 해볼려고
+
+나중에 mvc패턴도 해볼생각
+
+디자인 패턴에 너무 종속되지 말고 일단하고 싶은대로 코드 짜기
+
+> https://www.patterns.dev/posts/classic-design-patterns/#whatisapattern
+
+Dynamic import
+
+[x] js로 css 접근
+
+Inline, External, Internal에 따라 다름. 왜 다르지...
+
+# 리팩토링 목표
+
+- 특정 데이터가 바뀔 때 전체가 렌더링되는 것이 아니라 특정부분만 렌더링되는 경우가 있을텐데 컴포넌트(특정영역)별로 변화를 감지해서 다시렌더링 되게 해야하나?
+
+  - 렌더함수를 어떻게 정의할까? `innerHtml = ''` 이걸 리턴하는 식으로 하면 될듯.
+  - article태그를 innerhtml로 렌더링하고 안에 탬플릿 분리해서 선언하는 로직
+
+- js와 style을 합쳐서 관리해야하나
+- 기능별 브랜치를 만들고 merge 활용
+
+- 흐름
+
+  - category & subCategory에 해당하는 파라미터를 누르면 서버에 post로 uid전달 -> 해당 데이터 서버에서 받기 -> 템플릿안에 데이터를 삽입해서 렌더링
+
+# 그룹 리뷰
+
+- git issue?
+- cors
+
+https://ichi.pro/ko/vanilla-jslo-peuleonteu-endeu-guseong-yoso-jagseong-152350005486233
