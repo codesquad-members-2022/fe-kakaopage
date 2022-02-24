@@ -413,7 +413,7 @@ table {
 .webtoon-slide__imgs {
   display: flex;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.5s;
 }
 .webtoon-slide__imgs .webtoon-slide__banner {
   padding: 10px;
@@ -424,6 +424,7 @@ table {
 
 .webtoon-slide__img {
   position: relative;
+  transform: translate3d(-720px, 0, 0);
 }
 .webtoon-slide__img .webtoon-slide__img--item {
   display: block;
