@@ -1,7 +1,7 @@
 import { selector, selectorAll, addClass, removeClass } from '../util/util.js';
 
 /* selector */
-const CATEGORY_LI_SELECTOR = '.header-category__item';
+const CATEGORY_ITEM_SELECTOR = '.header-category__item';
 const MAIN_PAGE_SELECTOR = '.page-main';
 const DUMMY_PAGE_SELECTOR = '.dummy';
 
@@ -44,7 +44,7 @@ const onHighLight = (element) => {
   addClass(HIGHLIGHT, element);
 };
 
-const $$category = selectorAll(CATEGORY_LI_SELECTOR);
+const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
 
 $$category.forEach(($category, clickedIdx, $$category) => {
   $category.addEventListener('click', (event) => {
@@ -52,7 +52,7 @@ $$category.forEach(($category, clickedIdx, $$category) => {
     const userIdx = categoryState.getUserIdx();
     if (userIdx === clickedIdx) return;
     const $prevCategory = $$category[userIdx];
-    const $curCategory = event.target.closest(CATEGORY_LI_SELECTOR);
+    const $curCategory = event.target.closest(CATEGORY_ITEM_SELECTOR);
     categoryState.setUserIdx(clickedIdx);
 
     offHighLight($prevCategory);
