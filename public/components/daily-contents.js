@@ -11,7 +11,7 @@ const createDailyContents = () => {
     webtoons.push(createWebtoonWithGrade(dataOfDays[0]));
   });
 
-  const dailyContentsBlock = `<div class="center container contents-container">
+  const dailyContentsBlock = `<div class="center container">
   <nav class="nav-days">
     <ul class="nav-item-sort text-color--light-gray">
       <li><span>월</span></li>
@@ -28,7 +28,7 @@ const createDailyContents = () => {
   </nav>
 
   <div
-    class="layout-center text-color--light-gray tab-font-size"
+    class="layout-center text-color--light-gray tab-font-size border-b contents-container"
   >
     <div class="mr--auto layout-center">
       <span class="text-color--black">전체</span>
@@ -60,7 +60,7 @@ const createDailyContents = () => {
     />
   </div>
 
-  <div class="grid-5col mt--m">
+  <div class="grid-5col contents-container">
   ${webtoons.join("")}
   </div>
 </div>`;
