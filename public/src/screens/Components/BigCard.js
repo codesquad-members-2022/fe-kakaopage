@@ -13,7 +13,6 @@ function BigCard(target, state) {
       this.state;
 
     return `<li class="bigCard">
-    <div class="main__mainBanner">
       <div class="banner__imgBox">
         <img src="${imageHorizontalUrl}" alt=${title} />
         <div class="imgBox__info">
@@ -35,7 +34,6 @@ function BigCard(target, state) {
       <div class="banner__message">
         <span>${mainDesc}</span>
       </div>
-    </div>
   </li>`;
   };
 }
