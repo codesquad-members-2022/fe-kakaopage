@@ -1,29 +1,52 @@
-import { insertIntoMain, range } from "../utils.js";
-import { dataOfDays } from "../data/home/days.js";
-import { createWebtoonWithGrade, createWebtoonWithRank } from "./webtoon.js";
+import { $, $$, insertIntoMain, getDay } from "../utils.js";
+import { getDayWebtoon } from "./days.js";
+
+const makeRoundTodayTab = (day) => {
+  $$(".nav-days li").forEach((it) => {
+    const tab = it.firstChild;
+
+    if (tab.dataset.day === String(day)) {
+      tab.classList.add("current-tab--round", "text-color--black");
+    }
+  });
+};
+
+const addDaysEvL = () => {
+  $(".nav-days").addEventListener("click", ({ target }) => {
+    const days = target.closest("ul").childNodes;
+
+    days.forEach((node) => {
+      if (node.nodeType === 1) {
+        const tab = node.firstChild;
+
+        tab.classList.remove("current-tab--round", "text-color--black");
+      }
+    });
+
+    if (target.tagName === "LI") {
+      target = target.firstChild;
+    }
+
+    target.classList.add("current-tab--round", "text-color--black");
+
+    $("#daily-contents").innerHTML = getDayWebtoon(target.dataset.day);
+  });
+};
 
 const createDailyContents = () => {
-  const webtoons = [];
-  range(5).forEach((_, idx) => {
-    webtoons.push(createWebtoonWithRank(dataOfDays[0], idx));
-  });
-  range(15).forEach(() => {
-    webtoons.push(createWebtoonWithGrade(dataOfDays[0]));
-  });
+  const day = getDay();
 
   const dailyContentsBlock = `<div class="center container">
   <nav class="nav-days">
     <ul class="nav-item-sort text-color--light-gray">
-      <li><span>월</span></li>
-      <li><span>화</span></li>
-      <li>
-        <span class="current-tab--round text-color--black">수</span>
-      </li>
-      <li><span>목</span></li>
-      <li><span>금</span></li>
-      <li><span>토</span></li>
-      <li><span>일</span></li>
-      <li><span>완결</span></li>
+      <li><span data-day='1'>월</span></li>
+      <li><span data-day='2'>화</span></li>
+      <li><span data-day='3'>수</span></li>
+      <li><span data-day='4'>목</span></li>
+      <li><span data-day='5'>금</span></li>
+      <li><span data-day='6'>토</span></li>
+      <li><span data-day='0'>일</span></li>
+      <li><span data-day='7'>완결</span></li>
     </ul>
   </nav>
 
@@ -60,11 +83,14 @@ const createDailyContents = () => {
     />
   </div>
 
-  <div class="grid-5col contents-container">
-  ${webtoons.join("")}
+  <div class="grid-5col contents-container" id='daily-contents'>
+  ${getDayWebtoon(day)}
   </div>
 </div>`;
+
   insertIntoMain(dailyContentsBlock);
+  makeRoundTodayTab(day);
+  addDaysEvL();
 };
 
 export { createDailyContents };

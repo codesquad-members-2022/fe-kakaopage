@@ -2,6 +2,10 @@ const $ = (selector) => {
   return document.querySelector(selector);
 };
 
+const $$ = (selecotr) => {
+  return document.querySelectorAll(selecotr);
+};
+
 const range = (n) => {
   return [...Array(n)];
 };
@@ -17,4 +21,4 @@ const getDay = () => {
   return day;
 };
 
-export { $, range, insertIntoMain, getDay };
+export { $, $$, range, insertIntoMain, getDay };

@@ -27,6 +27,7 @@ const underlineTodayTab = (day) => {
 const addDaysEvL = () => {
   $(".nav-days").addEventListener("click", ({ target }) => {
     const days = target.closest("ul").childNodes;
+
     days.forEach((node) => {
       if (node.nodeType === 1) {
         node.classList.remove(
@@ -39,7 +40,7 @@ const addDaysEvL = () => {
 
     target.classList.add("current-tab", "underline-thin", "text-color--black");
 
-    $("#daysTop").innerHTML = getDayWebtoon(target.dataset.day);
+    $("#days-top").innerHTML = getDayWebtoon(target.dataset.day);
   });
 };
 
@@ -78,7 +79,7 @@ const createDaysBlock = () => {
       <li data-day='7'>완결</li>
     </ul>
   </nav>
-  <div id="daysTop" class="grid-5col mt--m">
+  <div id="days-top" class="grid-5col mt--m">
     ${getDayWebtoon(day)}
   </div>
 </div>`;
@@ -88,4 +89,4 @@ const createDaysBlock = () => {
   addDaysEvL();
 };
 
-export { createDaysBlock };
+export { createDaysBlock, getDayWebtoon };
