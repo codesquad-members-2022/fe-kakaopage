@@ -28,22 +28,21 @@ body{
 
 .header{
     top:0px; 
-    /*sticky쓰려면 top, bottom, left, right들 중에 하나를 필수적으로 설정해야 함 */
+    z-index: 1000;
     background-color: var(--main-white);
-    position: sticky;
+    position: fixed;
     width: 100%;
     height: 10rem;
 }
 .head, .navbar__menu{
     display: flex;
     height: 5rem;
-    background-color: var(--main-white);
     justify-content: space-around;
+    background-color: var(--main-white);
 }
 
 .head, .navbar, section{
     width: 720px;
-    background-color: var(--main-white);
     margin: 0 auto;
 }
 
