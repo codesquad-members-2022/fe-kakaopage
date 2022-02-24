@@ -1,82 +1,82 @@
-.main {
+.webtoon-weekly {
   margin-top: 180px;
   display: flex;
   flex-direction: column;
 }
 
-.main__image-box {
+.webtoon-weekly__image-box {
   margin-top: 10px;
 }
-.main-content__nav {
+.webtoon-weekly-content__nav {
   margin-top: 10px;
   position: relative;
 }
 
-.main-content__nav__circile-mon {
+.webtoon-weekly-content__nav__circile-mon {
   position: absolute;
   left: 48px;
 }
-.main-content__nav__circile-tue {
+.webtoon-weekly-content__nav__circile-tue {
   position: absolute;
   left: 145px;
 }
-.main-content__nav__circile-wed {
+.webtoon-weekly-content__nav__circile-wed {
   position: absolute;
   left: 242px;
 }
-.main-content__nav__circile-thu {
+.webtoon-weekly-content__nav__circile-thu {
   position: absolute;
   left: 340px;
 }
-.main-content__nav__circile-fri {
+.webtoon-weekly-content__nav__circile-fri {
   position: absolute;
   left: 436px;
 }
-.main-content__nav__circile-sat {
+.webtoon-weekly-content__nav__circile-sat {
   position: absolute;
   left: 535px;
 }
-.main-content__nav__circile-sun {
+.webtoon-weekly-content__nav__circile-sun {
   position: absolute;
   left: 632px;
 }
-.main-content__menu {
+.webtoon-weekly-content__menu {
   display: flex;
   justify-content: space-between;
   border-top: solid 2px;
   border-bottom: solid 2px;
   border-color: #f3f3f3;
 }
-.main-content__menu__left {
+.webtoon-weekly-content__menu__left {
   margin-left: 15px;
   display: flex;
   color: #c5c5c5;
 }
-.main-content__menu__text {
+.webtoon-weekly-content__menu__text {
   margin: 0 3px;
   font-size: 1.375rem;
   font-weight: 400;
 }
-.main-content__menu__webtoonbox {
+.webtoon-weekly-content__menu__webtoonbox {
   display: flex;
   align-items: center;
 }
-.main-content__menu__sortingbox {
+.webtoon-weekly-content__menu__sortingbox {
   display: flex;
   align-items: center;
   margin-right: 15px;
 }
-.main-content__menu__sortingbox span {
+.webtoon-weekly-content__menu__sortingbox span {
   color: #999999;
 }
 
-.main-content__main {
+.webtoon-weekly-content__webtoon-weekly {
   background-color: #ffffff;
   width: 720px;
   display: flex;
   justify-self: start;
   flex-wrap: wrap;
 }
-.main__advertise {
+.webtoon-weekly__advertise {
   margin-top: 15px;
 }
