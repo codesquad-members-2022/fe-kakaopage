@@ -83,17 +83,29 @@ const bindSubMenuEvent = () => {
 
 const bindCaroulselEvent = () => {
     let clickCnt = 1;
-    let isTransitionEnd = true;
+    let clickFlag = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = 2;
-    const transitionDuration = "0.4s";
+    const transitionDuration = "0.8s";
+    const customTransition = `transform ${transitionDuration} ease-out`;
+
+    const autoCarouselHandler = () => {
+        clickCnt++;
+        carouselItemWrapper.style.transition = customTransition;
+        carouselItemWrapper.style.transform = `translateX(${
+            -imageWidth * clickCnt
+        }px)`;
+    };
+
+    let startCarousel = setInterval(autoCarouselHandler, 4000);
 
     $(".cover-image").addEventListener("click", ({ target }) => {
         if (!target.classList.contains("button")) return;
-        if (!isTransitionEnd) return;
-        const customTransition = `transform ${transitionDuration} ease-in-out`;
+        clearInterval(startCarousel);
+        startCarousel = setInterval(autoCarouselHandler, 4000);
+        if (!clickFlag) return;
 
         if (target.closest(".btn-left")) {
             clickCnt--;
@@ -101,7 +113,7 @@ const bindCaroulselEvent = () => {
             carouselItemWrapper.style.transform = `translateX(${
                 -imageWidth * clickCnt
             }px)`;
-            isTransitionEnd = false;
+            clickFlag = false;
         }
         if (target.closest(".btn-right")) {
             clickCnt++;
@@ -109,22 +121,24 @@ const bindCaroulselEvent = () => {
             carouselItemWrapper.style.transform = `translateX(${
                 -imageWidth * clickCnt
             }px)`;
-            isTransitionEnd = false;
+            clickFlag = false;
         }
     });
 
+    // 클릭으로만 작동 (맨 끝 원본 이미지로 돌아가기)
     $(".cover-image").addEventListener("transitionend", () => {
-        isTransitionEnd = true;
-        const lastNodeClonePos = 0;
-        const firstNodeClonePos = -(
-            carouselItems.length * imageWidth -
-            imageWidth
-        );
-        const curPos = Number(
-            carouselItemWrapper.style.transform.replace(/[^-0-9]/g, "")
-        );
+        clickFlag = true;
+        console.log(clickCnt);
+        if (!carouselItems[clickCnt].dataset.clone) return;
 
-        if (curPos === lastNodeClonePos) {
+        /* const lastNodeClonePos = 0;
+        const firstNodeClonePos = -((carouselItems.length - 1) * imageWidth);
+
+        let curPos = Number(
+            carouselItemWrapper.style.transform.replace(/[^-0-9]/g, "")
+        ); */
+
+        if (carouselItems[clickCnt].dataset.clone === "last") {
             carouselItemWrapper.style.transition = "none";
             clickCnt = carouselItems.length - clonedNodeCnt;
             carouselItemWrapper.style.transform = `translateX(${
@@ -132,8 +146,7 @@ const bindCaroulselEvent = () => {
             }px)`;
             return;
         }
-
-        if (curPos === firstNodeClonePos) {
+        if (carouselItems[clickCnt].dataset.clone === "first") {
             carouselItemWrapper.style.transition = "none";
             clickCnt = carouselItems.length - clickCnt;
             carouselItemWrapper.style.transform = `translateX(${
