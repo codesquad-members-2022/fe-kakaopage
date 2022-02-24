@@ -13,7 +13,7 @@ const drawPreviews = ({ previews, timer, slider }) => {
   if (previews.length === 1) return;
 
   // 타이머 등록
-  timer.setTimer(2);
+  timer.setTimer(3.5);
 };
 
 export default drawPreviews;

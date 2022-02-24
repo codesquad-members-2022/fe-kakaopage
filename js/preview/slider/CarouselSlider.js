@@ -1,7 +1,15 @@
 import ItemSet from './ItemSet.js';
 import StopFlag from './StopFlag.js';
 export default class CarouselSlider {
-  constructor({ elementWidth, createItemElFunc, prevBtnEl, nextBtnEl, timer }) {
+  constructor({
+    elementWidth,
+    createItemElFunc,
+    prevBtnEl,
+    nextBtnEl,
+    slideCurNumEl,
+    slideLastNumEl,
+    timer,
+  }) {
     this.sliderEl = document.querySelector('.slider');
     this.elementWidth = elementWidth;
     this.createItemEl = createItemElFunc;
@@ -10,6 +18,8 @@ export default class CarouselSlider {
     this.itemSet = null;
     this.prevBtnEl = prevBtnEl;
     this.nextBtnEl = nextBtnEl;
+    this.slideCurNumEl = slideCurNumEl;
+    this.slideLastNumEl = slideLastNumEl;
     this.stopFlag = new StopFlag();
     this.prevBtnEl.addEventListener('click', this.onPrevBtn.bind(this));
     this.nextBtnEl.addEventListener('click', this.onNextBtn.bind(this));
@@ -18,27 +28,37 @@ export default class CarouselSlider {
       this.transitionEnd.bind(this)
     );
   }
+  setSlideNum() {
+    const curNumEl = this.slideCurNumEl;
+    const lastNumEl = this.slideLastNumEl;
+    const curNum = this.itemSet.getCurIdx() + 1;
+    const lastNum = this.itemSet.getLength();
+    curNumEl.textContent = curNum;
+    lastNumEl.textContent = lastNum;
+  }
   onPrevBtn() {
     if (this.stopFlag.isTrue()) return;
     this.stopFlag.setTrue();
     this.timer.clearTimer();
-    this.timer.setTimer(2);
+    this.timer.setTimer(3.5);
     const { itemSet } = this;
     if (itemSet.getLength() === 1) return;
     this.moveToPrevPage();
     itemSet.decreaseIdx();
     this.setStateFirst();
+    this.setSlideNum();
   }
   onNextBtn() {
     if (this.stopFlag.isTrue()) return;
     this.stopFlag.setTrue();
     this.timer.clearTimer();
-    this.timer.setTimer(2);
+    this.timer.setTimer(3.5);
     const { itemSet } = this;
     if (itemSet.getLength() === 1) return;
     this.moveToNextPage();
     itemSet.increaseIdx();
     this.setStateLast();
+    this.setSlideNum();
   }
   transitionEnd() {
     const { sliderEl, itemSet } = this;
@@ -72,6 +92,7 @@ export default class CarouselSlider {
     const { items, length } = this.itemSet;
     this.offTransition();
     this.setPageMid();
+    this.setSlideNum();
 
     if (length === 1) {
       const firstItem = items[0];

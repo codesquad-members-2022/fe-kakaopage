@@ -22,6 +22,8 @@ const pageMainCategory = document.querySelectorAll(
 const ELEMENT_WIDTH = 720;
 const PREV_BTN_SELECTOR = '.prev-btn';
 const NEXT_BTN_SELECTOR = '.next-btn';
+const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';
+const SLIDE_LAST_NUM_SELECTOR = '.slide-number .last-number';
 
 const curMainCategoryIdx = {
   value: 2,
@@ -59,6 +61,8 @@ const carouselSlider = new CarouselSlider({
   createItemElFunc: createPreviewEl,
   prevBtnEl: document.querySelector(PREV_BTN_SELECTOR),
   nextBtnEl: document.querySelector(NEXT_BTN_SELECTOR),
+  slideCurNumEl: document.querySelector(SLIDE_CUR_NUM_SELECTOR),
+  slideLastNumEl: document.querySelector(SLIDE_LAST_NUM_SELECTOR),
   timer: timer,
 });
 
