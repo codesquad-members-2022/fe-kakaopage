@@ -1,16 +1,7 @@
 import { webtoonContents, week } from "./data/contents.js";
+import { createLiListTemplate } from "./util/createTag.js";
 
-const makeWeekTapTemplate = (day) => {
-  return `
-    <li>${day}</li>
-  `;
-};
-
-const createLiTemplate = (domStringContents) => {
-  return domStringContents.map((contents) => makeWeekTapTemplate(contents));
-};
-
-const $weekTap = createLiTemplate(week).join("");
+const $weekTap = createLiListTemplate(week);
 
 const createTuesdayTapTemplate = (imageUrl, title, star, read) => {
   return `
@@ -41,15 +32,14 @@ const createTuesdayTapTemplate = (imageUrl, title, star, read) => {
           <span>${read}</span>
         </div>
       </div>
-`;
+  `;
 };
 
-const tuesdayTapTemplate = webtoonContents.map(
-  ({ imageUrl, title, star, read }) =>
+const $tuesdayWebtoons = webtoonContents
+  .map(({ imageUrl, title, star, read }) =>
     createTuesdayTapTemplate(imageUrl, title, star, read)
-);
-
-const $tuesdayWebtoons = tuesdayTapTemplate.join("");
+  )
+  .join("");
 
 const $weekWebtoons = `
   <section>
