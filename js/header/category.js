@@ -52,7 +52,6 @@ $$category.forEach(($category, clickedIdx, $$category) => {
     const userIdx = categoryState.getUserIdx();
     if (userIdx === clickedIdx) return;
     const $prevCategory = $$category[userIdx];
-    console.log(event.target);
     const $curCategory = event.target.closest(CATEGORY_LI_SELECTOR);
     categoryState.setUserIdx(clickedIdx);
 
