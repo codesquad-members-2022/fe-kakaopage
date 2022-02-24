@@ -4,7 +4,7 @@ import webtoonContentsData from '../../json/webtoonContents.json' assert { type:
 import dayContentsData from '../../json/dayContents.json' assert { type: 'json' };
 import previewsData from '../../json/previews.json' assert { type: 'json' };
 
-import setTagListEl from './tagList/setTagListEl.js';
+import setTagList from './tagList/setTagList.js';
 import setPreviews from './preview/setPreviews.js';
 import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 import setDayFilter from './dayFilter/setDayFilter.js';
@@ -22,6 +22,8 @@ const NEXT_BTN_SELECTOR = '.next-btn';
 const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';
 const SLIDE_LAST_NUM_SELECTOR = '.slide-number .last-number';
 const CATEGORY_ITEM_SELECTOR = '.page-main-category__item';
+const PAGE_MAIN_SELECTOR = '.page-main';
+const TAG_LIST_CONTAINER_SELECTOR = '.tag-list__container';
 
 /* class name */
 const CATEGORY_HIGHLIGHT = 'color-black';
@@ -98,7 +100,11 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   setPreviews({ previews, slider: carouselSlider });
 
   // tag list
-  setTagListEl(categoryName);
+  setTagList({
+    category: categoryName,
+    $main: selector(PAGE_MAIN_SELECTOR),
+    $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR)
+  });
 
   // webtoon contents
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
