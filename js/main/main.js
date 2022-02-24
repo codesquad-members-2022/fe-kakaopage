@@ -8,15 +8,13 @@ import setTagListEl from './tagList/setTagListEl.js';
 import setPreviews from './preview/setPreviews.js';
 import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
 import setDayFilter from './dayFilter/setDayFilter.js';
-import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
+import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreviewEl from './preview/createPreviewEl.js';
 // console.dir(webtoonContentsObj);
 // console.dir(dayContentsObj);
 // console.dir(previewsObj);
-
-const ELEMENT_WIDTH = 720;
 
 /* selector */
 const PREV_BTN_SELECTOR = '.prev-btn';
@@ -28,10 +26,12 @@ const CATEGORY_ITEM_SELECTOR = '.page-main-category__item';
 /* class name */
 const CATEGORY_HIGHLIGHT = 'color-black';
 
-const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
+/* preview width */
+const ELEMENT_WIDTH = 720;
 
 const categoryState = {
-  idx: 2,
+  idx: null,
+  defaultIdx: 2,
   getUserIdx() {
     return this.idx;
   },
@@ -40,6 +40,9 @@ const categoryState = {
   },
   is(idx) {
     return this.idx === idx;
+  },
+  getDefaultIdx() {
+    return this.defaultIdx;
   },
 };
 
@@ -83,56 +86,47 @@ const days = {
 };
 
 const toggleHighlight = ($prevTarget, $curTarget) => {
-  toggleClass(CATEGORY_HIGHLIGHT, $prevTarget);
-  toggleClass(CATEGORY_HIGHLIGHT, $curTarget);
+  if ($prevTarget) toggleClass(CATEGORY_HIGHLIGHT, $prevTarget);
+  if ($curTarget) toggleClass(CATEGORY_HIGHLIGHT, $curTarget);
 };
 
-const initMainPage = () => {
-  initMainCategoryDay();
-  const defaultIdx = categoryState.getUserIdx();
-  const $defaultCategory = $$category[defaultIdx];
-  const defaultCategoryName = $defaultCategory.textContent;
-  const today = days[$defaultCategory.dataset.curday];
-  addClass(CATEGORY_HIGHLIGHT, $defaultCategory);
+const main = () => {
+  const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
 
-  const previews = previewsObj[defaultCategoryName];
-  const dayContentsMap = dayContentsObj[defaultCategoryName];
-  const dayContentsArr = dayContentsMap?.[today];
-  const webtoonContentsArr = webtoonContentsObj[defaultCategoryName];
-  setPreviews({ previews, timer, slider: carouselSlider });
-  setTagListEl(defaultCategoryName);
-  setWebtoonContents({ dayContentsArr, webtoonContentsArr });
-  setDayFilter({ categoryEl: $defaultCategory, dayContentsMap });
-};
+  $$category.forEach(($category, selectedIdx, $$category) => {
+    $category.addEventListener('click', (event) => {
+      if (categoryState.getUserIdx() === selectedIdx) return;
 
-initMainPage();
+      const prevTarget = $$category[categoryState.getUserIdx()];
+      const curTarget = event.target;
+      const categoryName = $category.textContent;
+      let selectedDay = days[$category.dataset.curday];
+      const previews = previewsObj[categoryName];
+      const dayContentsMap = dayContentsObj[categoryName];
+      const dayContentsArr = dayContentsMap?.[selectedDay];
+      const webtoonContentsArr = webtoonContentsObj[categoryName];
+      categoryState.setUserIdx(selectedIdx);
 
-$$category.forEach(($category, selectedIdx, list) => {
-  $category.addEventListener('click', (event) => {
-    if (categoryState.getUserIdx() === selectedIdx) return;
-    const prevTarget = list[categoryState.getUserIdx()];
-    const curTarget = event.target;
-    const categoryName = $category.textContent;
-    let selectedDay = days[$category.dataset.curday];
-    const previews = previewsObj[categoryName];
-    const dayContentsMap = dayContentsObj[categoryName];
-    const dayContentsArr = dayContentsMap?.[selectedDay];
-    const webtoonContentsArr = webtoonContentsObj[categoryName];
-    categoryState.setUserIdx(selectedIdx);
+      // highlight
+      toggleHighlight(prevTarget, curTarget);
 
-    // highlight
-    toggleHighlight(prevTarget, curTarget);
+      // preview - 구현 후 함수 하나로 만들기
+      setPreviews({ previews, timer, slider: carouselSlider });
 
-    // preview - 구현 후 함수 하나로 만들기
-    setPreviews({ previews, timer, slider: carouselSlider });
+      // tag list
+      setTagListEl(categoryName);
 
-    // tag list
-    setTagListEl(categoryName);
+      // webtoon contents
+      setWebtoonContents({ dayContentsArr, webtoonContentsArr });
 
-    // webtoon contents
-    setWebtoonContents({ dayContentsArr, webtoonContentsArr });
-
-    // day filter
-    setDayFilter({ categoryEl: $category, dayContentsMap });
+      // day filter
+      setDayFilter({ categoryEl: $category, dayContentsMap });
+    });
   });
-});
+
+  const defaultCategoryIdx = categoryState.getDefaultIdx();
+  initCategoryCurDay();
+  $$category[defaultCategoryIdx].click();
+};
+
+main();
