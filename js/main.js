@@ -12,8 +12,22 @@ import bl from './components/bl.js';
   document.querySelector('.menubar_tag').addEventListener('click', changeUI);
 })();
 
+function removeClass() {
+  const removeBtn = document.querySelectorAll('.menubar_tag button');
+
+  removeBtn.forEach((btn) => {
+    if (btn.classList.value === 'change-color') {
+      btn.classList.remove('change-color');
+    }
+  });
+}
+
 function changeUI(e) {
-  const title = e.target.innerText;
+  if (!e.target.closest('button')) return false;
+
+  removeClass();
+  const title = e.target.closest('button').innerText;
+  e.target.closest('button').classList.add('change-color');
 
   switch (title) {
     case '홈':
