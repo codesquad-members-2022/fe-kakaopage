@@ -13,8 +13,11 @@
   font-weight: var(--font-bold);
   border: 0;
 }
+/* 큰 광고 이미지 */
 .image_text {
   top: 310px;
+  width: 100%;
+  text-align: left;
 }
 .image_title {
   color: var(--white-color);
@@ -38,6 +41,31 @@
   font-weight: var(--font-max-bold);
   width: 100%;
   border-radius: 0px 0px 15px 15px;
+}
+
+.image_box {
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  height: 440px;
+  width: 660px;
+}
+
+.image_container {
+  position: absolute;
+  height: 440px;
+  width: 660px;
+  left: -660px;
+  white-space: nowrap;
+}
+
+.image_element {
+  text-decoration: none;
+  width: 660px;
+  height: 440px;
+  display: inline-block;
 }
 /* 박스 메뉴 */
 .menu_ul {
@@ -89,12 +117,14 @@
   left: 2%;
   font-size: var(--font-size-XL);
   background-color: var(--white-color);
+  cursor: pointer;
 }
-.soon {
+.next {
   top: 50%;
   right: 2%;
   font-size: var(--font-size-XL);
   background-color: var(--white-color);
+  cursor: pointer;
 }
 /* 공통된 섹션 */
 .section {
