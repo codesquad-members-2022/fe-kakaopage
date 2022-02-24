@@ -1,27 +1,23 @@
 import { webtoonData } from '../data/webtoon-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeDate } from '../function/contents.js';
-import { makeWebtoonInfo } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
+import { contents } from '../contents.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(webtoonData[0])}
-  
+  ${contents.makeImageSection(webtoonData.mainImage)}
   <section class="section dp-flex pd-10 mg-t-20">
-  ${makeDate(webtoonData[1])} 
-  ${makeWebtoonInfo(webtoonData[2])}
-  ${makeWebtoonInfo(webtoonData[3])}
-  ${makeWebtoonInfo(webtoonData[4])}
-  ${makeWebtoonInfo(webtoonData[5])}
-  ${makeWebtoonInfo(webtoonData[6])}
+  ${contents.makeDate(webtoonData.data)} 
+  ${contents.makeWebtoonInfo(webtoonData.firstWebtoonInfo)}
+  ${contents.makeWebtoonInfo(webtoonData.secondWebtoonInfo)}
+  ${contents.makeWebtoonInfo(webtoonData.thirdWebtoonInfo)}
+  ${contents.makeWebtoonInfo(webtoonData.fourthWebtoonInfo)}
+  ${contents.makeWebtoonInfo(webtoonData.fifthWebtoonInfo)}
   </section>
   <section class="section dp-flex pd-5 mg-t-20">
-  ${makeTitle(webtoonData[7])}
-  ${makeWebtoonInfo(webtoonData[8])}
-  ${makeWebtoonInfo(webtoonData[9])}
-  ${makeWebtoonInfo(webtoonData[10])}
-  ${makeWebtoonInfo(webtoonData[11])}
-  ${makeWebtoonInfo(webtoonData[12])}
+  ${contents.makeTitle(webtoonData.hotPromotion)}
+  ${contents.makeWebtoonInfo(webtoonData.firstPromotion)}
+  ${contents.makeWebtoonInfo(webtoonData.secondPromotion)}
+  ${contents.makeWebtoonInfo(webtoonData.thirdPromotion)}
+  ${contents.makeWebtoonInfo(webtoonData.fourthPromotion)}
+  ${contents.makeWebtoonInfo(webtoonData.fifthPromotion)}
   </section>`;
 }

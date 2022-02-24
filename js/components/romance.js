@@ -1,27 +1,23 @@
 import { romanceData } from '../data/romance-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeThreeMenu } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeLongImageWebtoon } from '../function/contents.js';
-import { makeAdvert } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
+import { contents } from '../contents.js';
+
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(romanceData[0])} 
-  ${makeThreeMenu(romanceData[1])}
+  ${contents.makeImageSection(romanceData.mainImage)} 
+  ${contents.makeThreeMenu(romanceData.threeMenu)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(romanceData[2])}
-  ${makeLongImageWebtoon(romanceData[3])}
-  ${makeLongImageWebtoon(romanceData[4])}
-  ${makeLongImageWebtoon(romanceData[5])}
-  ${makeLongImageWebtoon(romanceData[6])}
+  ${contents.makeTitle(romanceData.todayRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.firstRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.secondRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.thirdRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.fourthRcmnd)}
   </section>
-  ${makeAdvert(romanceData[7])}
+  ${contents.makeAdvert(romanceData.webtoonAdvert)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(romanceData[8])}
-  ${makeRanking(romanceData[9])}
-  ${makeRanking(romanceData[10])}
-  ${makeRanking(romanceData[11])}
+  ${contents.makeTitle(romanceData.romanceTOP)}
+  ${contents.makeRanking(romanceData.rank1st)} 
+  ${contents.makeRanking(romanceData.rank2st)}
+  ${contents.makeRanking(romanceData.rank3st)}
   </section>;
   `;
 }

@@ -1,43 +1,37 @@
 import { boyData } from '../data/boy-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeThreeMenu } from '../function/contents.js';
-import { makeAdvert } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeLongImageWebtoon } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
-import { makeWebtoonInfo } from '../function/contents.js';
+import { contents } from '../contents.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(boyData[0])}
-  ${makeThreeMenu(boyData[1])}
-  ${makeAdvert(boyData[2])}
+  ${contents.makeImageSection(boyData.mainImage)}
+  ${contents.makeThreeMenu(boyData.threeMenu)}
+  ${contents.makeAdvert(boyData.webtoonAdvert)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(boyData[3])}
-    ${makeLongImageWebtoon(boyData[4])}
-    ${makeLongImageWebtoon(boyData[5])}
-    ${makeLongImageWebtoon(boyData[6])}
-    ${makeLongImageWebtoon(boyData[7])}
+  ${contents.makeTitle(boyData.todayRcmnd)}
+  ${contents.makeLongImageWebtoon(boyData.firstRcmnd)}
+  ${contents.makeLongImageWebtoon(boyData.secondRcmnd)}
+  ${contents.makeLongImageWebtoon(boyData.thirdRcmnd)}
+  ${contents.makeLongImageWebtoon(boyData.fourthRcmnd)}
   </section>
   <section class="section dp-flex mg-t-20">
-    ${makeTitle(boyData[8])}
-    ${makeRanking(boyData[9])}
-    ${makeRanking(boyData[10])}
-    ${makeRanking(boyData[11])}
+  ${contents.makeTitle(boyData.boyTOP)}
+  ${contents.makeRanking(boyData.rank1st)}
+  ${contents.makeRanking(boyData.rank2st)}
+  ${contents.makeRanking(boyData.rank3st)}
   </section>;
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(boyData[12])}
-    ${makeLongImageWebtoon(boyData[13])}
-    ${makeLongImageWebtoon(boyData[14])}
-    ${makeLongImageWebtoon(boyData[15])}
-    ${makeLongImageWebtoon(boyData[16])}
+  ${contents.makeTitle(boyData.titleOriginal)}
+  ${contents.makeLongImageWebtoon(boyData.firstOriginal)}
+  ${contents.makeLongImageWebtoon(boyData.secondOriginal)}
+  ${contents.makeLongImageWebtoon(boyData.thirdOriginal)}
+  ${contents.makeLongImageWebtoon(boyData.fourthOriginal)}
   </section>
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(boyData[17])}
-  ${makeWebtoonInfo(boyData[18])}
-  ${makeWebtoonInfo(boyData[19])}
-  ${makeWebtoonInfo(boyData[20])}
-  ${makeWebtoonInfo(boyData[21])}
+  ${contents.makeTitle(boyData.todayGift)}
+  ${contents.makeWebtoonInfo(boyData.firstGift)}
+  ${contents.makeWebtoonInfo(boyData.secondGift)}
+  ${contents.makeWebtoonInfo(boyData.thirdGift)}
+  ${contents.makeWebtoonInfo(boyData.fourthGift)}
   </section>
   `;
 }

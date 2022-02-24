@@ -1,33 +1,28 @@
 import { dramaData } from '../data/drama-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeThreeMenu } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeLongImageWebtoon } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
-import { makeWebtoonInfo } from '../function/contents.js';
+import { contents } from '../contents.js';
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(dramaData[0])}
-  ${makeThreeMenu(dramaData[1])}
+  ${contents.makeImageSection(dramaData.mainImage)}
+  ${contents.makeThreeMenu(dramaData.threeMenu)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(dramaData[2])}
-  ${makeLongImageWebtoon(dramaData[3])}
-  ${makeLongImageWebtoon(dramaData[4])}
-  ${makeLongImageWebtoon(dramaData[5])}
-  ${makeLongImageWebtoon(dramaData[6])}
+  ${contents.makeTitle(dramaData.todayRcmnd)}
+  ${contents.makeLongImageWebtoon(dramaData.firstRcmnd)}
+  ${contents.makeLongImageWebtoon(dramaData.secondRcmnd)}
+  ${contents.makeLongImageWebtoon(dramaData.thirdRcmnd)}
+  ${contents.makeLongImageWebtoon(dramaData.fourthRcmnd)}
   </section>
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(dramaData[7])}
-  ${makeRanking(dramaData[8])}
-  ${makeRanking(dramaData[9])}
-  ${makeRanking(dramaData[10])}
+  ${contents.makeTitle(dramaData.dramaTOP)}
+  ${contents.makeRanking(dramaData.rank1st)}
+  ${contents.makeRanking(dramaData.rank2st)}
+  ${contents.makeRanking(dramaData.rank3st)}
   </section>;
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(dramaData[11])}
-  ${makeWebtoonInfo(dramaData[12])}
-  ${makeWebtoonInfo(dramaData[13])}
-  ${makeWebtoonInfo(dramaData[14])}
-  ${makeWebtoonInfo(dramaData[15])}
+  ${contents.makeTitle(dramaData.nowUp)}
+  ${contents.makeWebtoonInfo(dramaData.firstNowUp)}
+  ${contents.makeWebtoonInfo(dramaData.secondNowUp)}
+  ${contents.makeWebtoonInfo(dramaData.thirdNowUp)}
+  ${contents.makeWebtoonInfo(dramaData.fourthNowUp)}
   </section>;
   `;
 }
