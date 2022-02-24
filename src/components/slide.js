@@ -1,3 +1,4 @@
+import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH } from '../constant.js'
 import { icons } from '../data/icons.js'
 
 export const getSlideBtnTemplate = () => {
@@ -31,6 +32,10 @@ export const activateBtns = (parentElement) => {
     const container = document.querySelector('.main-banner__contents');
 }
 
+export const activateAutoSlide = (parentElement) => {
+
+}
+
 const moveToNext = (event) => {
     moveSlide(event, 'next');
 }
@@ -42,9 +47,11 @@ const moveToPrev = (event) => {
 const moveSlide = (e, direction) => {
     const slidesDiv = e.target.closest('.slides');
     const container = slidesDiv.querySelector('ul');
-    container.style.transition = '.5s ease-out';
+    const containerWidth = getComputedStyle(container).width; 
+    const slideWidth = `${parseInt(containerWidth , 10) / SLIDE_CONTAINER_LENGTH}px`;
+    container.style.transition = `${SLIDE_DELAY} ease-out`;
     const currSlide = direction === 'prev' ? container.firstElementChild : container.lastElementChild;
     currSlide.classList.add('curr-slide');
-    container.style.transform = `translateX(${direction === 'prev' ? '720px' : '-720px'})`;
+    container.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
 }
 
