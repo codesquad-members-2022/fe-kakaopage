@@ -9,10 +9,10 @@ export function initPage(){
 }
 
 export const renderPageInit = () => {
-    addClickEventToElement('body', addSelected)
-    addClickEventToElement('body', genreNavEventHandler)
-    addClickEventToElement('body', headNavEventHandler)
     renderPageHome();
+    addClickEventToElement('body', addSelected);
+    addClickEventToElement('body', genreNavEventHandler);
+    addClickEventToElement('body', headNavEventHandler);
 }
 
 export const renderPageHome = () => {
@@ -183,9 +183,9 @@ export const headerFunction = {
     book: () => createPageNotYet(),
 }
 
-export function addSelectedToday(){
-    const days = document.querySelectorAll('.day')
+function addSelectedToday(){
+    const days = document.querySelectorAll('.day');
     const today = new Date().getDay()-1;
 
-    days[today].classList.add('selected')
+    days[today].classList.add('selected');
 }

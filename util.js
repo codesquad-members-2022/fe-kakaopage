@@ -1,6 +1,3 @@
-import { genreFunction, headerFunction } from "./render.js";
-import { createContentForms } from "./loop.js";
-
 export function pickFromArr (arr) {
     const length = arr.length;
     const pickNum = Math.floor(Math.random() * length);

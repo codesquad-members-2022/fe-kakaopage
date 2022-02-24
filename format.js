@@ -1,13 +1,12 @@
-import { createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
+import { createBannerMain, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
 import { dummy } from "./sources.js"
 import { pickFromArr } from "./util.js"
 
 export const createFormatBannerMain = () => {
     const formatBannerMain = `
-<div class="banner-main">
-    <div class="img-with-line">
-        <img class="img-with" src=${pickFromArr(dummy.slideBannerMainImg)}>
-        <div class="line-with">${pickFromArr(dummy.contentDesc)}</div>
+<div class="slider">
+    <div class="banner-main">
+        ${createBannerMain()}
     </div>
 </div>`
 
