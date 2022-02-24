@@ -53,11 +53,11 @@ function displayWeekLists(index, sectionNums) {
         for(let i=0; i<sectionNums; i++) {
             html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
         }
+        document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
         return html;
     })
     .then(html => {
-        document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
-        document.querySelector('.article__weekdays').innerHTML = '';
+        deleteInnerHTML('.article__weekdays');
         document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
     })
 ;
@@ -66,4 +66,5 @@ function displayWeekLists(index, sectionNums) {
 export { renderWeekdays }
 import { renderNav } from '../component/nav.js'
 import { renderSections, renderSectionWrapper } from '../component/section.js';
-import { navClickEventHandler } from '../utils.js'
+import { navClickEventHandler } from '../utils/eventHandler.js';
+import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
