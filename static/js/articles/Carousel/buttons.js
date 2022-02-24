@@ -1,9 +1,4 @@
-export function CarouselButtons({
-  idx,
-  carouselsArrLength,
-  slideToPrev,
-  slideToNext,
-}) {
+export function CarouselButtons({ slideToPrev, slideToNext }) {
   const $buttonCatainer = document.createElement('div');
   $buttonCatainer.classList.add('c-carousel__buttons');
   $buttonCatainer.innerHTML = `

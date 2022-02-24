@@ -1,8 +1,7 @@
-import { CarouselLayout } from '../compontents/carousel.js';
-import { CarouselButtons } from '../compontents/carouselButtons.js';
-import { CarouselPageIndex } from '../compontents/carouselPageIndex.js';
+import { contentWrapper } from './contentWrapper.js';
+import { CarouselButtons } from './buttons.js';
 
-export function renderCarousel(carouselsArr) {
+export default function Carousel(carouselsArr) {
   let idx = 0;
   const carouselsArrLength = carouselsArr.length;
 
@@ -11,10 +10,10 @@ export function renderCarousel(carouselsArr) {
   $carouselLayout.classList.add('c-carousel__wrapper');
 
   // carousel 이미지들 렌더링
-  const [$carouselContentsLayout, handleCarousel] = CarouselLayout({
+  const $carouselContentsWrapper = contentWrapper({
     carouselsArr,
   });
-  $carouselLayout.append($carouselContentsLayout);
+  $carouselLayout.append($carouselContentsWrapper);
 
   // carousel을 움직이게하는 버튼 렌더링
   const $buttonCatainer = CarouselButtons({
@@ -27,21 +26,29 @@ export function renderCarousel(carouselsArr) {
   renderCarouselIndex();
 
   // 동적 기능 관련 함수들
+  // idx 때문에 따로 뺄 수가 없음.
+
+  function handleCarousel() {
+    $carouselContentsWrapper.style.transition = 'all 0.5s ease-in-out';
+    $carouselContentsWrapper.style.transform = `translateX(-${idx * 720}px)`;
+    renderCarouselIndex();
+  }
+
+  function handlePageIndex({ idx, carouselsArrLength }) {
+    const $carouselIndex = document.createElement('div');
+    $carouselIndex.classList.add('c-carousel__index');
+    $carouselIndex.innerHTML = `${idx + 1} / ${carouselsArrLength}`;
+    return $carouselIndex;
+  }
 
   function slideToPrev() {
-    if (idx <= 0) {
-      idx = handleCarousel(2);
-      return;
-    }
-    idx = handleCarousel(idx - 1);
+    idx <= 0 ? (idx = 2) : idx--;
+    handleCarousel();
   }
 
   function slideToNext() {
-    if (idx >= carouselsArrLength - 1) {
-      idx = handleCarousel(0);
-      return;
-    }
-    idx = handleCarousel(idx + 1);
+    idx >= carouselsArrLength - 1 ? (idx = 0) : idx++;
+    handleCarousel();
   }
 
   function renderCarouselIndex() {
@@ -51,7 +58,7 @@ export function renderCarousel(carouselsArr) {
       $prevCarouselIndex.remove();
     }
 
-    const $carouselPageIndex = CarouselPageIndex({ idx, carouselsArrLength });
+    const $carouselPageIndex = handlePageIndex({ idx, carouselsArrLength });
     $carouselLayout.append($carouselPageIndex);
   }
 
@@ -59,7 +66,6 @@ export function renderCarousel(carouselsArr) {
   function moveCarousel() {
     setInterval(() => {
       slideToNext();
-      renderCarouselIndex({ idx, carouselsArrLength });
     }, 3000);
   }
 

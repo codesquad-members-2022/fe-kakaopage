@@ -1,6 +1,16 @@
+export function contentWrapper({ carouselsArr }) {
+  const $carouselContentsLayout = document.createElement('div');
+  $carouselContentsLayout.classList.add('l-carousel__content');
+  carouselsArr.forEach((element) => {
+    const $carouselElement = CarouselElement(element);
+    $carouselContentsLayout.appendChild($carouselElement);
+  });
+
+  return $carouselContentsLayout;
+}
+
 function CarouselElement({ title, views, genre, subTitle, imgUrl }) {
   const $carouselElement = document.createElement('div');
-
   $carouselElement.innerHTML = `
     <img  class="c-carousel__img" src=${imgUrl} alt="carousel image" />
     <div class="c-carousel__content">
@@ -20,21 +30,4 @@ function CarouselElement({ title, views, genre, subTitle, imgUrl }) {
   `;
   $carouselElement.classList.add('c-carousel');
   return $carouselElement;
-}
-
-export function CarouselLayout({ carouselsArr }) {
-  const $carouselContentsLayout = document.createElement('div');
-  $carouselContentsLayout.classList.add('l-carousel__content');
-  carouselsArr.forEach((element) => {
-    const $carouselElement = CarouselElement(element);
-    $carouselContentsLayout.appendChild($carouselElement);
-  });
-
-  function handleCarousel(idx) {
-    $carouselContentsLayout.style.transition = 'all 0.5s ease-in-out';
-    $carouselContentsLayout.style.transform = `translateX(-${idx * 720}px)`;
-    return idx;
-  }
-
-  return [$carouselContentsLayout, handleCarousel];
 }
