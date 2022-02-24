@@ -205,8 +205,8 @@ const bindEventListener = () => {
 
 const init = () => {
     preventDefaults();
-    bindEventListener();
     renderHome();
+    bindEventListener();
 };
 
 init();

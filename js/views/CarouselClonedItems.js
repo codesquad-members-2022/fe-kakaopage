@@ -32,7 +32,6 @@ export default class extends Page {
     }
 
     getLastClonedItem() {
-        console.log(this.carouselImgs);
         const lastIdx = this.carouselImgs.length - 1;
         const carouselItem = this.carouselImgs[lastIdx];
         return this.getItemHTML(carouselItem, "last");
