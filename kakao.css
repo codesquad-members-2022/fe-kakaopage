@@ -205,6 +205,54 @@ body{
     margin-right:20px;    
 }
 
+/* ===============slide2=============== */
+.slider {
+    width: 720px;
+    height:450px;
+    margin: 0 auto 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider_slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+  }
+  
+  .slider_slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider_btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border: none;
+    background: var(--background-color);
+    color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .slider_btn_left {
+    left: 6%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .slider_btn_right {
+    right: 6%;
+    transform: translate(50%, -50%);
+  }
 /* ===============tab=============== */
 .tab{
     width:var(--global-width);
