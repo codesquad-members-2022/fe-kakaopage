@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     title: '인소의 법칙',
     user: '142.2만명',
@@ -26,5 +26,3 @@ const data = [
     banner: '연재 재개 기념, 이벤트 중!',
   },
 ]
-
-export default { data }

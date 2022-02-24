@@ -1,5 +1,5 @@
 // data
-const data = [
+export const data = [
   {
     // 화요일
     thumbnail__class: '.serial__thumbnail--img',
@@ -118,5 +118,3 @@ const data = [
     day__text: '완결 더보기',
   },
 ]
-
-export default data

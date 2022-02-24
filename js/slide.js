@@ -1,14 +1,18 @@
+import { searchSelctor } from './utility.js'
+
 let sNum = 1
 let pos = 0
+
 let manualNum = 0
-let autoNum = 0
 let manualRafId
 let manualLafId
+
+let autoNum = 0
 let autoRafId
 let autoStartRafId
 let autoStartNum = 0
 
-function setSlideImgStart(root, el, data) {
+export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
   const elCopy = el.cloneNode(true)
   const title = elCopy.querySelector('.slide-title')
@@ -31,7 +35,7 @@ function setSlideImgStart(root, el, data) {
   root.insertAdjacentHTML('afterbegin', createEl.innerHTML)
 }
 
-function setSlideImg(root, el, data) {
+export function setSlideImg(root, el, data) {
   const USER_UI_POS = 1
   const elCopy = el.cloneNode(true)
 
@@ -51,7 +55,7 @@ function setSlideImg(root, el, data) {
   root.appendChild(elCopy)
 }
 
-function setSlideBtn() {
+export function setSlideBtn() {
   const slide = document.querySelector('.webtoon-slide')
   const slideImgs = slide.querySelector('.webtoon-slide__imgs')
   const slideImg = slideImgs.querySelector('.webtoon-slide__img')
@@ -125,7 +129,6 @@ function moveManualSlideLeft() {
 
   manualLafId = requestAnimationFrame(moveManualSlideLeft)
   manualNum += 1
-  console.log(manualNum)
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
     manualNum = 0
@@ -135,6 +138,13 @@ function moveManualSlideLeft() {
     slideImgs.style.transform = `translate3d(-2880px, 0px, 0px)`
     pos = -2880
   }
+}
+
+export function moveAutoSlide() {
+  const ANIMATION_SEC = 60 * 0.5
+  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+
+  console.log(slideImgs)
 }
 
 // function moveAutoSlide() {
@@ -170,4 +180,4 @@ function moveManualSlideLeft() {
 // }
 
 // export default { setSlideImgStart, setSlideImg, setSlideBtn, moveAutoSlide }
-export default { setSlideImgStart, setSlideImg, setSlideBtn }
+// export default { setSlideImgStart, setSlideImg, setSlideBtn }
