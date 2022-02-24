@@ -70,7 +70,7 @@ function renderFooter() {
             </div>
         </div>
         <div class="footer__infor-image-wrapper">
-            <img src="./useimages/ok mark.png" alt="image">
+            <img src="./img/ok mark.png" alt="image">
         </div>
     </div>
 </footer>`

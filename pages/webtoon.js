@@ -25,8 +25,11 @@ function renderRowArticle(index, sectionNums) {
         for(let i=0; i<sectionNums; i++) {
             html += renderRowList(json[i].title, json[i].img, json[i].url)
         }
-    document.querySelector('.article__webtoon-row').innerHTML = '';
-    document.querySelector('.article__webtoon-row').innerHTML += renderRowListWrapper(html);
+        return html;
+    })
+    .then(html => {
+        document.querySelector('.article__webtoon-row').innerHTML = '';
+        document.querySelector('.article__webtoon-row').innerHTML += renderRowListWrapper(html);
     })
 }
 
@@ -54,5 +57,5 @@ function renderRowListWrapper(lists) {
 }
 
 export { renderWebtoon };
-import { renderNav } from './component/nav.js'
-import { navClickEventHandler } from './utils.js';
+import { renderNav } from '../component/nav.js'
+import { navClickEventHandler } from '../utils.js';
