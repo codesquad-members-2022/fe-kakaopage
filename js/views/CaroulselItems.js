@@ -1,4 +1,5 @@
 import Page from "./Page.js";
+import CarouselClonedItems from "./CarouselClonedItems.js";
 
 export default class extends Page {
     constructor(params) {
@@ -6,10 +7,9 @@ export default class extends Page {
         this.carouselImgs = params.carouselImgs;
     }
 
-    getHtml() {
+    getOriginalItemsHtml() {
         return this.carouselImgs
             .map((carouselImg) => {
-                console.log(carouselImg);
                 return `
             <div class="carousel-item">
         <img
@@ -34,5 +34,17 @@ export default class extends Page {
             `;
             })
             .join("");
+    }
+
+    getHtml() {
+        const carouselImgs = this.carouselImgs;
+        const cloneditems = new CarouselClonedItems({ carouselImgs });
+
+        let html = "";
+        html += cloneditems.getLastClonedItem();
+        html += this.getOriginalItemsHtml();
+        html += cloneditems.getFirstClonedItem();
+
+        return html;
     }
 }
