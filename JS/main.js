@@ -25,7 +25,7 @@ const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       resetMain();
-      renderMain('home', 'rerender');
+      renderMain('home');
       eventHome();
       break;
     case 'daily':
@@ -38,8 +38,8 @@ const moveGenreNav = (target) => {
 
 const resetMain = () =>{
   const main = $('.main');
-
-  while (main.children.length > 2) {
+  const GENRES_LIST = 1;
+  while (main.children.length > GENRES_LIST) {
     main.removeChild(main.lastChild);
   }
 }
@@ -123,5 +123,5 @@ const eventHome = () => {
 window.addEventListener('load', () => {
   renderMain('home');
   eventHome();
-  eventMainBanner();
+  // eventMainBanner();
 });
