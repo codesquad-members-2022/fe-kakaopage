@@ -53,8 +53,7 @@ const loadContentFromGnb = (category) => {
     return;
   }
 
-  loadContent(category, '0');
-  // 0은 서브카테고리의 '홈'이다. 예) 웹툰탭의 홈, 웹소설탭의 홈
+  loadContent(category, '홈');
 };
 
 const loadContent = (globalCategory, subCategory) => {
