@@ -1,5 +1,6 @@
+import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
 import { addEvent } from "./event.js";
-import { renderNothing, renderSNB, renderWebtoon } from "./render.js";
+import { render } from "./render.js";
 import { $ } from "./utils.js";
 
 export function GNBHandler(e) {
@@ -15,28 +16,28 @@ export function GNBHandler(e) {
   parentClass.add(selected);
 
   if (e.target.dataset.name === "홈") {
-    renderNothing();
+    render("홈");
     return;
   }
   if (e.target.dataset.name === "웹툰") {
-    renderWebtoon();
+    render(createTabWebtoonHome());
     addEvent();
     return;
   }
   if (e.target.dataset.name === "웹소설") {
-    renderNothing();
+    render("웹소설");
     return;
   }
   if (e.target.dataset.name === "영화") {
-    renderNothing();
+    render("영화");
     return;
   }
   if (e.target.dataset.name === "방송") {
-    renderNothing();
+    render("방송");
     return;
   }
   if (e.target.dataset.name === "책") {
-    renderNothing();
+    render("책");
     return;
   }
 }
@@ -51,10 +52,4 @@ export function SNBHander(e) {
 
   $(`.${selected}`).classList.remove(selected);
   e.target.classList.add(selected);
-
-  // if (e.target.dataset.name === "홈") {
-  //   renderWebtoon();
-  //   addEvent();
-  //   return;
-  // }
 }
