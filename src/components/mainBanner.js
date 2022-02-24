@@ -1,34 +1,65 @@
-import { mainBaneerData } from "../data/mainBannerData.js";
-import { START_SLIDE_PAGE } from "../constant.js";
-import { getBannerTemplate, getBannerContentTemplate} from "./banner.js";
-import { getSlideBtnTemplate, getpageNumTemplate } from "./slide.js";
+import { mainBannerData } from "../data/mainBannerData.js";
+import { START_SLIDE_INDEX } from "../constant.js";
+import { getBannerContentTemplate} from "./banner.js";
+import { getSlideBtnTemplate, getpageNumTemplate, activateBtns} from "./slide.js";
 
 export const renderMainBanner = (genre) => {
     const mainBanner = document.createElement('div');
     mainBanner.classList.add('main-banner', 'slides')
     mainBanner.innerHTML = getMainBannerTemplate(genre);
     document.querySelector('.tab-contents').appendChild(mainBanner);
-    setMainBannerSlide(genre);
+    activateMainBanner(mainBanner, genre);
 }
 
-const getMainBannerTemplate = (currGenre) => {
-    const bannerData = mainBaneerData[currGenre];
-    const bannerTemplate = getBannerTemplate('main-banner', bannerData[START_SLIDE_PAGE - 1]);
+const getMainBannerTemplate = (genre) => {
+    const bannerData = mainBannerData[genre];
+    const mainBannerContentsTemplate = getMainBannerContentsTemplate(genre);
     const slideBtnTemplate = getSlideBtnTemplate();
-    const pageNumTemplate = getpageNumTemplate('main-banner', START_SLIDE_PAGE, bannerData.length);
-    return bannerTemplate + slideBtnTemplate + pageNumTemplate;
+    const pageNumTemplate = getpageNumTemplate('main-banner', START_SLIDE_INDEX + 1, bannerData.length);
+    return mainBannerContentsTemplate + slideBtnTemplate + pageNumTemplate;
 }
 
-const setMainBannerSlide = (currGenre) => {
-    const bannerData = mainBaneerData[currGenre];
-    const container = document.querySelector('.main-banner__contents');
-    const currPage = container.querySelector('li');
-    currPage.classList.add('slide--curr');
+const getMainBannerContentsTemplate = (genre) => {
+    return `
+        <ul class="main-banner__contents">
+            ${getMainBannerSlidesTemplate(genre, START_SLIDE_INDEX)}
+        </ul>
+    `
+}
 
-    const prevSlide = getBannerContentTemplate('main-banner', bannerData[bannerData.length - 1]);
-    const nextSlide = getBannerContentTemplate('main-banner', bannerData[START_SLIDE_PAGE]);
-    currPage.insertAdjacentHTML('beforebegin', prevSlide);
-    currPage.insertAdjacentHTML('afterend', nextSlide);
-    currPage.previousElementSibling.classList.add('slide--prev');
-    currPage.nextElementSibling.classList.add('slide--next');
+const getMainBannerSlidesTemplate = (genre, currIndex) => {
+    const bannerData = mainBannerData[genre];
+    const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;
+    const nextIndex = currIndex + 1 >= bannerData.length ? 0 : currIndex + 1;
+    const indexSeries = [prevIndex, currIndex, nextIndex];
+    const mainBannerSlidesTemplate = indexSeries.map(index => getBannerContentTemplate('main-banner', bannerData[index])).join('');
+    return mainBannerSlidesTemplate;
+}
+
+const activateMainBanner = (mainBanner, genre) => {
+    activateBtns(mainBanner);
+    activateContainer(mainBanner, genre);
+}
+
+const activateContainer = (mainBanner, genre) => {
+    const container = mainBanner.querySelector('ul');
+    container.addEventListener('transitionend', () => {updateMainBanner(mainBanner, genre)});
+}
+
+const updateMainBanner = (mainBanner, genre) => {
+    const container = mainBanner.querySelector('ul');
+    const currIndex = Number(container.querySelector('.curr-slide').dataset.index);
+    updateContainer(container, genre, currIndex);
+    updatePageNum(mainBanner, currIndex)
+}
+
+const updateContainer = (container, genre, currIndex) => {
+    container.style.transition = 'none';
+    container.style.transform = 'translateX(0px)';
+    container.innerHTML = getMainBannerSlidesTemplate(genre, currIndex);
+}
+
+const updatePageNum = (mainBanner, currIndex) => {
+    const pageNum = mainBanner.querySelector('.main-banner__page-num--curr');
+    pageNum.innerText = currIndex + 1;
 }

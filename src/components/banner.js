@@ -1,17 +1,9 @@
 import { icons } from "../data/icons.js";
 
-export const getBannerTemplate = (parent, bannerData) => {
-    return `
-        <ul class="${parent}__contents">
-            ${getBannerContentTemplate(parent, bannerData)}
-        </ul>
-    `
-}
-
 export const getBannerContentTemplate = (parent, bannerData) => {
     const tagTemplate = getBannerTagTemplate(parent, bannerData.tags);
     return `
-        <li class="${parent}__content banner__content" ${bannerData.order ? `data-order=${bannerData.order}` : ''}>
+        <li class="${parent}__content banner__content" ${bannerData.index ? `data-index=${bannerData.index}` : ''}>
             <a href="#">
               <div class="banner__img-wrapper">
                 <img

@@ -22,3 +22,29 @@ export const getpageNumTemplate = (parent, currNum, totalNum) => {
         </div>
     `
 }
+
+export const activateBtns = (parentElement) => {
+    const prevBtn = parentElement.querySelector('.slide__btn--prev');
+    const nextBtn = parentElement.querySelector('.slide__btn--next');
+    prevBtn.addEventListener('click', moveToPrev);
+    nextBtn.addEventListener('click', moveToNext);
+    const container = document.querySelector('.main-banner__contents');
+}
+
+const moveToNext = (event) => {
+    moveSlide(event, 'next');
+}
+
+const moveToPrev = (event) => {
+    moveSlide(event, 'prev');
+}
+
+const moveSlide = (e, direction) => {
+    const slidesDiv = e.target.closest('.slides');
+    const container = slidesDiv.querySelector('ul');
+    container.style.transition = '.5s ease-out';
+    const currSlide = direction === 'prev' ? container.firstElementChild : container.lastElementChild;
+    currSlide.classList.add('curr-slide');
+    container.style.transform = `translateX(${direction === 'prev' ? '720px' : '-720px'})`;
+}
+
