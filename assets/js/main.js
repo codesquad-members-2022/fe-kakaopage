@@ -72,22 +72,30 @@ function creatTopBannerHtml(data) {
 
 function getBadge(data) {
     let badge = '';
-    for(let key in data.badge) {
-        if(data.badge[key]) {
+    let badgeSrc = '';
+    Object.entries(data.badge).forEach(([key, value]) => {
+        if(value) {
             switch (key) {
-                case 'up' :
-                    badge += '<img src="./assets/images/ico/badge_up_blue.svg" alt="up">'
+                case 'up' : 
+                    badgeSrc = 'badge_up_blue.svg'
+                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'new' :
-                    badge += '<img src="./assets/images/ico/badge_new_red.svg" alt="새작품"></img>'
+                    badgeSrc = 'badge_new_red.svg'
+                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'age15' :
-                    badge += '<img src="./assets/images/ico/badge_15.png" alt="15세 작품">'
+                    badgeSrc = 'badge_15.png'
+                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
             }
         }
-    }
+    })
     return badge
+}
+
+function creatBadgeHtml(badgeName, src) {
+    return `<img src="./assets/images/ico/${src}" alt="${badgeName}">`
 }
 
 function createItemType3Horizontal(data) {
