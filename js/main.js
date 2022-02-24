@@ -3,16 +3,21 @@ import {
   toggleActiveWebtoonTab,
   setWebtoonList,
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from './webtoon-list.js'
 =======
 } from './webtoonList.js'
 >>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
+=======
+} from './webtoon-list.js'
+>>>>>>> 32023a9 (refactor: 불필요한 코드, 파일 구조 정리)
 import {
   setSlideImgStart,
   setSlideImg,
   setSlideBtn,
   moveAutoSlide,
 } from './slide.js'
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { data } from './slide-datas.js'
 import { searchSelctor } from './utility.js'
@@ -34,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const slideEl = slides.querySelector('.webtoon-slide__img')
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
 =======
+=======
+import { data } from './slide-datas.js'
+>>>>>>> 32023a9 (refactor: 불필요한 코드, 파일 구조 정리)
 import { searchSelctor } from './utility.js'
 
 document.addEventListener('DOMContentLoaded', () => {

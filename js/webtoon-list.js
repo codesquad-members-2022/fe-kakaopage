@@ -8,9 +8,14 @@ import {
   setIcon,
   setUserCnt,
   setDay,
+<<<<<<< HEAD
 } from './dataParse.js'
 import { data } from './datas.js'
 >>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/webtoonList.js
+=======
+} from './webtoon-els.js'
+import { data } from './webtoon-datas.js'
+>>>>>>> 32023a9 (refactor: 불필요한 코드, 파일 구조 정리)
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
