@@ -1,7 +1,7 @@
 @import url('./css/var.css');
 @import url('./css/reset.css');
-@import url('./css/pageHeader/header.css');
-@import url('./css/pageHeader/category.css');
+@import url('./css/header/header.css');
+@import url('./css/header/category.css');
 @import url('./css/pageMain/main.css');
 @import url('./css/pageMain/category.css');
 @import url('./css/pageMain/preview.css');

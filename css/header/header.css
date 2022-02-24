@@ -1,10 +1,10 @@
-.page-header {
+.header {
   width: 100%;
   background-color: #fff;
   /* margin-bottom: 18px; */
 }
 
-.page-header__container {
+.header__row {
   display: flex;
   width: 720px;
   height: 80px;
@@ -13,21 +13,21 @@
   align-items: center;
 }
 
-.page-header__content {
+.header__content {
   display: flex;
   align-items: center;
 }
 
-.page-header__content:first-child {
+.header__content:first-child {
   width: 130px;
 }
 
-.page-header__content:last-child {
+.header__content:last-child {
   width: 590px;
   justify-content: flex-end;
 }
 
-.page-header__title {
+.header__title {
   font-size: 28px;
   position: relative;
   top: -4px;
@@ -66,7 +66,7 @@
   cursor: pointer;
 }
 
-.page-header__stage-btn {
+.header__stage-btn {
   margin-left: 22px;
   position: relative;
   bottom: -2px;

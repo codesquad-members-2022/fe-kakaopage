@@ -1,31 +1,31 @@
-.page-header__container:last-child {
+.header__container:last-child {
   height: 70px;
   width: 100%;
   border-bottom: 1px #dfdfdf solid;
 }
 
-.page-header-category {
+.header-category {
   width: 100%;
   height: 100%;
 }
 
-.page-header-category__container {
+.header-category__row {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
 }
 
-.page-header-category__container li {
+.header-category__item {
   padding-top: 30px;
   padding-bottom: 15px;
   border-bottom: 3px solid #fff;
 }
 
-.page-header-category__container li.yellow-border {
+.header-category__item.yellow-border {
   border-bottom: 3px solid var(--yellow);
 }
 
-.page-header-category__container img {
+.header-category__row img {
   margin: 0 39px;
 }
