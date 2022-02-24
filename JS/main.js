@@ -1,6 +1,4 @@
-import {containerInfo} from './data/containerInfoData.js'
-import {todayWebtoonsData} from './data/todayWebtoons.js'
-import {renderHome, renderDaily} from './render.js'
+import {renderMain} from './render.js'
 import {dailyTopData} from './data/scrape/dailyTopData.js'
 import {makeWebtoonList} from './components/webtoonList.js'
 import {eventMainBanner} from './slider.js'
@@ -27,12 +25,12 @@ const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       resetMain();
-      renderHome('홈', containerInfo, 'reRender', todayWebtoonsData);
+      renderMain('home', 'rerender');
       eventHome();
       break;
     case 'daily':
       resetMain();
-      renderDaily(todayWebtoonsData);
+      renderMain('daily');
       clickDailyTopList(dailyTopData);
       break;
   }
@@ -117,17 +115,13 @@ const clickPromotionBanner = () => {
 }
 
 const eventHome = () => {
+  clickGenresList();
   clickPromotionBanner();
   clickDailyTopList(dailyTopData);
 }
 
-const loadHome = () => {
-  renderHome('홈', containerInfo, 'firstRender', todayWebtoonsData);
-  eventHome();
-  clickGenresList();
-}
-
 window.addEventListener('load', () => {
-  loadHome();
+  renderMain('home');
+  eventHome();
   eventMainBanner();
 });

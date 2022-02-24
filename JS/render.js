@@ -1,21 +1,47 @@
+// ============== renderMain 관련 데이터 ==============
+import {containerInfo} from './data/containerInfoData.js'
+import {todayWebtoonsData} from './data/todayWebtoons.js'
+import {dailyTopData} from './data/scrape/dailyTopData.js'
+// ============== renderHome 관련 모듈 ==============
 import {renderContainer} from './components/container.js'
 import {renderMainBanner} from './components/banner/bannerMain.js'
 import {renderPromotionBanner} from './components/banner/bannerPromotion.js'
+import {renderMoveApp} from './components/moveApp.js'
+// ============== renderDaily 관련 모듈 ==============
 import {makeSelectDayDailySection} from './components/selectDay/selectDayDaily.js'
 import {makeWebtoonList} from './components/webtoonList.js'
-import {renderMoveApp} from './components/moveApp.js'
+
 import {$, $all} from './utility.js'
 
-function renderHome(tab, layoutInfo, options, data) {
-  if (options === 'firstRender') renderMainBanner(tab);
+function renderMain(tab, options = null) {
+  const tabInfo = {
+    home: {
+      func: renderHome,
+      data: todayWebtoonsData,
+      layoutInfo : containerInfo,
+      options: 'firstRender'
+    },
+    daily: {
+      func: renderDaily,
+      data: dailyTopData,
+      options: options
+    }
+  }
 
-  renderPromotionBanner(tab);
+  options === null
+  ? tabInfo[tab].func(tabInfo[tab].data, tabInfo[tab].layoutInfo, tabInfo[tab].options)
+  : tabInfo[tab].func(tabInfo[tab].data, tabInfo[tab].layoutInfo, options)
+}
+
+function renderHome(data, layoutInfo, options) {
+  if (options === 'firstRender') renderMainBanner();
+  renderPromotionBanner();
 
   for (let i in layoutInfo) {
     renderContainer(layoutInfo[i].class, layoutInfo[i].title, layoutInfo[i].items, layoutInfo[i].layout, data);
   }
 
-  renderMoveApp('move-app');
+  renderMoveApp();
 }
 
 function renderDaily(data) {
@@ -28,4 +54,4 @@ function renderDaily(data) {
   newList.appendChild(webtoonsList);
 }
 
-export {renderHome, renderDaily}
+export {renderMain}
