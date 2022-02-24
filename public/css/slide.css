@@ -98,7 +98,7 @@ label.right {
 #slide02:checked ~ .slide-control .control02 {display: block;}
 #slide03:checked ~ .slide-control .control03 {display: block;}
 
-/* #slide01:checked ~ .slidelist .slideitem {transform: translateX(0);animation:slide01 20s infinite;} */
+#slide01:checked ~ .slidelist .slideitem {transform: translateX(0);animation:slide01 20s infinite;}
 
 #slide02:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
 #slide03:checked ~ .slidelist .slideitem {transform: translateX(-200%);}

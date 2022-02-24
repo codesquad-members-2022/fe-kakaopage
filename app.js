@@ -1,20 +1,24 @@
 import express from "express";
 import path from 'path';
-import hbs from "express-handlebars";
+// import { hbs } from "express-handlebars"; 
+import { engine } from 'express-handlebars';
 const server = express();
 const __dirname = path.resolve();
 
 
-// server.engine("view engine", hbs({
-//   extname:"hbs",
-
-// }))
+server.engine("hbs", engine({
+    extname: "hbs",
+    defaultLayout: "layout.hbs",
+    partialsDir: "partials",
+  })
+);
+server.set("view engine", "hbs");
 server.use(express.static(__dirname + "/public"));
 
 
 server.get("/", (req, res) => {
-
-  res.sendFile(__dirname + "/index.html");
+  res.render("home");
+  // res.sendFile(__dirname + "/index.html");
   
 });
 
