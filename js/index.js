@@ -109,17 +109,24 @@ const bindCaroulselEvent = () => {
     const customTransition = `transform ${transitionDuration} ease-out`;
 
     const setPage = () => {
-        const curPage = carouselImgIdx > imageCnt ? imageCnt : carouselImgIdx;
-        pager.innerText = `${curPage} / ${imageCnt}`;
+        const firstPageNum = 1;
+        const lastPageNum = imageCnt;
+        let curPage = carouselImgIdx;
+
+        curPage = curPage > lastPageNum ? firstPageNum : curPage;
+        curPage = curPage < firstPageNum ? lastPageNum : curPage;
+
+        pager.innerText = `${curPage} / ${lastPageNum}`;
     };
     setPage();
 
     const setTransition = (transition) => {
         carouselItemWrapper.style.transition = transition;
-        setPage();
     };
 
     const setTransform = (carouselImgIdx) => {
+        setPage();
+
         carouselItemWrapper.style.transform = `translateX(${
             -imageWidth * carouselImgIdx
         }px)`;
