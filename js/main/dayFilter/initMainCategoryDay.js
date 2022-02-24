@@ -1,4 +1,4 @@
-import { selectorAll } from '../util/util.js';
+import { selectorAll } from '../../util/util.js';
 const CATEGORY_ITEM_SELECTOR = '.page-main-category__item';
 
 const initMainCategoryDay = () => {

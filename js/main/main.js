@@ -1,8 +1,8 @@
-import { selector, selectorAll } from './util/util.js';
+import { selector, selectorAll } from '../util/util.js';
 
-import webtoonContentsObj from '../json/webtoonContents.json' assert { type: 'json' };
-import dayContentsObj from '../json/dayContents.json' assert { type: 'json' };
-import previewsObj from '../json/previews.json' assert { type: 'json' };
+import webtoonContentsObj from '../../json/webtoonContents.json' assert { type: 'json' };
+import dayContentsObj from '../../json/dayContents.json' assert { type: 'json' };
+import previewsObj from '../../json/previews.json' assert { type: 'json' };
 
 import setTagListEl from './tagList/setTagListEl.js';
 import setPreviews from './preview/setPreviews.js';
