@@ -3,11 +3,13 @@ import { homeData } from "./data/homeData.js";
 import { coverImg } from "./data/coverImg.js";
 import { romanceTop } from "./data/genreItems.js";
 import { weekdayData } from "./data/weekdayData.js";
+import { carouselImgs } from "./data/carouselImgs.js";
 
 import Category from "./views/Category.js";
 import SlideBanner from "./views/SlideBanner.js";
 import GenreBest from "./views/GenreBest.js";
 import Weekday from "./views/Weekday.js";
+import CaroulselItems from "./views/CaroulselItems.js";
 
 const changeCoverImg = (subMenu) => {
     const coverImgSection = $(".cover-image");
@@ -41,6 +43,7 @@ const renderHome = () => {
     html += genreBest.getHtml();
 
     render(html);
+    renderCarousel();
 };
 
 const renderWeekday = (today = "월") => {
@@ -50,6 +53,15 @@ const renderWeekday = (today = "월") => {
     html += weekday.getHtml();
 
     render(html);
+    renderCarousel();
+};
+
+const renderCarousel = () => {
+    const carousel = new CaroulselItems({ carouselImgs });
+
+    let html = "";
+    html += carousel.getHtml();
+    $(".carousel-item-wrap").innerHTML = html;
 };
 
 const preventDefaults = () => {
