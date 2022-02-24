@@ -1,21 +1,24 @@
 import { BannerList } from '../index.js';
 import { MainBanners } from '../../data';
-import { mainBannerCallback } from '../../js';
+import { bannerCallback } from '../../js';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 
 const MainBanner = () => {
 
   const html = convertStringToHTML(
-          `<section class="contents main-banner">
+          `<section class="contents main-banner" data-banner="main">
             ${BannerList('main', MainBanners)}
-            <span class="banner-count">1 / 3</span>
+            <p class="banner-count">
+              <span class="current">1</span> / 
+              <span class="total">${MainBanners.length}</span>
+            </p>
             <div class="banner-btn-group">
               <button type="button" class="back">이전 배너</button>
               <button type="button" class="next">이후 배너</button>
             </div>
           </section>`);
 
-  html.addEventListener('click', mainBannerCallback);
+  html.addEventListener('click', bannerCallback);
   setContainerWidth(html);
 
   return html;

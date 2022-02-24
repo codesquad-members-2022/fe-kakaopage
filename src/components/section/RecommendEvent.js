@@ -1,6 +1,7 @@
 import { ContentsHeader, EventBannerList } from '../index.js';
 import { EventBanners } from '../../data';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
+import { bannerCallback } from '../../js';
 
 const RecommendEvent = () => {
 
@@ -9,9 +10,12 @@ const RecommendEvent = () => {
   const html = convertStringToHTML(
           `<section class="contents recommend-event">
             ${ContentsHeader(title)}
-            <div class="event-banner-wrapper">
+            <div class="event-banner-wrapper" data-banner="event">
               ${EventBannerList(EventBanners)}
-              <span class="banner-count">1 / 8</span>
+              <p class="banner-count">
+                <span class="current">1</span> / 
+                <span class="total">${EventBanners.length}</span>
+              </p>              
               <div class="banner-btn-group">
                 <button type="button" class="back">back</button>
                 <button type="button" class="next">next</button>
@@ -19,6 +23,7 @@ const RecommendEvent = () => {
             </div>
           </section>`);
 
+  html.addEventListener('click', bannerCallback);
   setContainerWidth(html);
 
   return html;

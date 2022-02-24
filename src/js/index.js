@@ -1,4 +1,4 @@
 import { navCallback } from './navEvent.js';
-import { mainBannerCallback } from './mainBannerEvent.js';
+import { bannerCallback } from './bannerEvent.js';
 
-export { navCallback, mainBannerCallback };
+export { navCallback, bannerCallback };
