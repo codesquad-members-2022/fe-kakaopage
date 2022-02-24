@@ -2,11 +2,24 @@ import { searchSelctor } from './utility.js'
 
 let sNum = 1
 let pos = 0
+<<<<<<< HEAD
 
 let manualNum = 0
 let manualRrafId
 let manualLrafId
 
+=======
+
+let manualNum = 0
+let manualRafId
+let manualLafId
+
+let autoNum = 0
+let autoRafId
+let autoStartRafId
+let autoStartNum = 0
+
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
   const elCopy = el.cloneNode(true)
@@ -125,10 +138,15 @@ function moveManualSlideLeft() {
   const FRAME_CNT = 1
   const END_POS = -2880
 
+<<<<<<< HEAD
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
 
   manualLrafId = requestAnimationFrame(moveManualSlideLeft)
   manualNum += FRAME_CNT
+=======
+  manualLafId = requestAnimationFrame(moveManualSlideLeft)
+  manualNum += 1
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
     manualNum = START_POS
@@ -140,9 +158,22 @@ function moveManualSlideLeft() {
   }
 }
 
+<<<<<<< HEAD
 function moveAutoSlideStartPos() {
   const slideNum = document.querySelector('.webtoon-slide__number')
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
+=======
+export function moveAutoSlide() {
+  const ANIMATION_SEC = 60 * 0.5
+  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+
+  console.log(slideImgs)
+}
+
+// function moveAutoSlide() {
+//   const ANIMATION_SEC = 180
+//   const slideImgs = document.querySelector('.webtoon-slide__imgs')
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 
   const SLIDE_START_NUM = 1
   const SLIDE_END_NUM = 5
@@ -178,6 +209,7 @@ function moveAutoSlideStartPos() {
   slideNum.textContent = `${sNum} / ${SLIDE_END_NUM}`
 }
 
+<<<<<<< HEAD
 export function moveAutoSlide() {
   const MS = 1000
 
@@ -193,3 +225,7 @@ export function moveAutoSlide() {
   }
   rafCallback()
 }
+=======
+// export default { setSlideImgStart, setSlideImg, setSlideBtn, moveAutoSlide }
+// export default { setSlideImgStart, setSlideImg, setSlideBtn }
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
