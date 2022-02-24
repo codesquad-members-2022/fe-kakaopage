@@ -1,0 +1,21 @@
+{
+  "home": [
+    { "text":"오늘 UP", "highlight":"128" },
+    { "text":"오늘 신작", "highlight":"3" },
+    { "text":"오리지널", "highlight":"2,334" },
+    { "text":"완결까지 정주행", "highlight":""},
+    { "text":"독립운동가 웹툰", "highlight":""},
+    { "text":"오늘 랭킹", "highlight":"1위"}
+  ],
+  "daily": [
+    {}
+  ],
+  "webtoon": [
+    {}
+  ],
+  "boy": [
+    { "text":"독점 신작", "highlight":"" },
+    { "text":"이벤트로 달리자", "highlight":"" },
+    { "text":"ㅂㅅㅎ 기다무!", "highlight":"" }
+  ]
+}
