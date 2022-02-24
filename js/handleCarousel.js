@@ -5,6 +5,7 @@ export const handleCarousel = () => {
     const leftArrow = $(".carousel_left_arrow");
     const rightArrow = $(".carousel_right_arrow");
     const carouselWidth = 720;
+    const carouselDuration = 400;
     const carouselLen = document.querySelectorAll(".carousel__background").length;
     const carouselCurCount = $('.carousel__count_current');
     const carouselTotalCount = $('.carousel__count_total');
@@ -26,7 +27,7 @@ export const handleCarousel = () => {
     const nextBtnClick = () => {
         throttingTimer = null;
         if(curIndex <= carouselLen) {
-            carouselList.style.transition = '400ms';
+            carouselList.style.transition = `${carouselDuration}ms`;
             carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
         }
 
@@ -34,7 +35,7 @@ export const handleCarousel = () => {
             setTimeout(() => {
                 carouselList.style.transition = '0ms';
                 carouselList.style.transform = `translateX(-${carouselWidth}px)`;
-            }, 400);
+            }, carouselDuration);
             curIndex = 1;
             carouselCurCount.innerHTML = curIndex;
             return;
@@ -54,7 +55,7 @@ export const handleCarousel = () => {
             setTimeout(() => {
                 carouselList.style.transition = '0ms';
                 carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
-            }, 400);
+            }, carouselDuration);
             curIndex = carouselLen;
         }
         carouselCurCount.innerHTML = curIndex;
@@ -70,7 +71,7 @@ export const handleCarousel = () => {
             throttingTimer = setTimeout(() => {
                 nextBtnClick();
                 autoPlay();
-            }, 400);
+            }, carouselDuration);
         }
     });
 
@@ -80,7 +81,7 @@ export const handleCarousel = () => {
             throttingTimer = setTimeout(() => {
                 prevBtnClick();
                 autoPlay();
-            }, 400);
+            }, carouselDuration);
         }
     });
 
