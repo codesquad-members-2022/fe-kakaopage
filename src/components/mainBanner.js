@@ -1,7 +1,7 @@
-import { mainBannerData } from "../data/mainBannerData.js";
-import { START_SLIDE_INDEX } from "../constant.js";
-import { getBannerContentTemplate} from "./banner.js";
-import { getSlideBtnTemplate, getpageNumTemplate, activateBtns} from "./slide.js";
+import { mainBannerData } from '../data/mainBannerData.js';
+import { START_SLIDE_INDEX } from '../constant.js';
+import { getBannerContentTemplate} from './banner.js';
+import { getSlideBtnTemplate, getpageNumTemplate, activateBtns} from './slide.js';
 
 export const renderMainBanner = (genre) => {
     const mainBanner = document.createElement('div');
@@ -21,7 +21,7 @@ const getMainBannerTemplate = (genre) => {
 
 const getMainBannerContentsTemplate = (genre) => {
     return `
-        <ul class="main-banner__contents">
+        <ul class='main-banner__contents'>
             ${getMainBannerSlidesTemplate(genre, START_SLIDE_INDEX)}
         </ul>
     `

@@ -1,5 +1,5 @@
 export const gridData = {
-    "home": [
+    'home': [
         {
             'title': '오늘 UP',
             'alarm': '198'
@@ -23,7 +23,7 @@ export const gridData = {
             'alarm': '1위'
         }
     ],
-    "boy": [
+    'boy': [
         {
             'title': '독점 신작'
         },
@@ -34,7 +34,7 @@ export const gridData = {
             'title': 'ㅂㅅㅎ 기다무!',
         }
     ],
-    "drama": [
+    'drama': [
         {
             'title': '월간베스트#20'
         },
@@ -45,7 +45,7 @@ export const gridData = {
             'title': '완결까지#정주행',
         }
     ],
-    "romance": [
+    'romance': [
         {
             'title': '완결까지 정주행'
         },
@@ -56,7 +56,7 @@ export const gridData = {
             'title': '기다무플러스',
         }
     ],
-    "rofan": [
+    'rofan': [
         {
             'title': '월간 베스트'
         },
@@ -67,7 +67,7 @@ export const gridData = {
             'title': '기다무 플러스',
         }
     ],
-    "action": [
+    'action': [
         {
             'title': '독점 신작🔥'
         },
@@ -78,7 +78,7 @@ export const gridData = {
             'title': '기다무 플러스',
         }
     ], 
-    "BL": [
+    'BL': [
         {
             'title': '지난달의 BL'
         },

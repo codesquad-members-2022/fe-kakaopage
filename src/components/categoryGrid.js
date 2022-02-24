@@ -1,5 +1,5 @@
-import { gridData } from "../data/categoryGridData.js";
-import { icons } from "../data/icons.js";
+import { gridData } from '../data/categoryGridData.js';
+import { icons } from '../data/icons.js';
 
 export const renderCategoryGrid = (genre) => {
   const categoryGrid = document.createElement('div');
@@ -11,12 +11,12 @@ export const renderCategoryGrid = (genre) => {
 const categoryGridTemplate = (genre) => {
     const dataArr = gridData[genre];
     return `
-    <ul class="category-grid__container">
+    <ul class='category-grid__container'>
         ${dataArr.map(data => `
-        <li class="category-grid__item">
-            <a class="category-grid__link center" href="#">
-              <span class="category-grid__title">${data.title}</span>
-              ${data.alarm? `<span class="category-grid__alarm">${data.alarm}</span>` : ''}
+        <li class='category-grid__item'>
+            <a class='category-grid__link center' href='#'>
+              <span class='category-grid__title'>${data.title}</span>
+              ${data.alarm? `<span class='category-grid__alarm'>${data.alarm}</span>` : ''}
             </a>
           </li>`
         ).join('')}

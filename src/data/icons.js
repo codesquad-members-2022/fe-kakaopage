@@ -11,7 +11,7 @@ export const icons = {
     prevBtn: 'https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56',
     nextBtn: 'https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93',
     fifteen: 'https://static-page.kakao.com/static/common/icon_15.png?ccf202bf79001052f43af077a0947e74',
-    new: "https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9",
+    new: 'https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9',
     downArrow: 'https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345',
     rightArrow: 'https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e'
 }

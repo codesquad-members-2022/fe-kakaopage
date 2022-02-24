@@ -1,10 +1,10 @@
-import { dayRankingData } from "../../data/works/dayRanking.js";
-import { makeWorkContainer } from "./workContainer.js";
-import { icons } from "../../data/icons.js";
-import { DEFAULT_DAY } from "../../constant.js";
+import { dayRankingData } from '../../data/works/dayRanking.js';
+import { makeWorkContainer } from './workContainer.js';
+import { icons } from '../../data/icons.js';
+import { DEFAULT_DAY } from '../../constant.js';
 
 const dataDic = {
-  "dayRanking": dayRankingData,
+  'dayRanking': dayRankingData,
 }
 
 export const renderWorkSection = (layout, contents, genre) => {
@@ -21,12 +21,12 @@ export const renderWorkSection = (layout, contents, genre) => {
 
 const getHeaderTemplate = () => {
     return  `
-    <div class="section__header">
-          <div class="section__title-box">
-            <span class="section__title">요일 연재 TOP</span>
-            <span class="section__title-num">(1,622)</span>
+    <div class='section__header'>
+          <div class='section__title-box'>
+            <span class='section__title'>요일 연재 TOP</span>
+            <span class='section__title-num'>(1,622)</span>
           </div>
-          <div class="section__more-btn">
+          <div class='section__more-btn'>
             <span>더보기</span>
             <img src=${icons.rightArrow} />
           </div>
@@ -39,16 +39,17 @@ const getWorkContainerTemplate = (layout, contents, genre, day = DEFAULT_DAY) =>
 }
 
 const getDayTabTemplate = () => {
+  const weekKoreanDic = {'mon': '월', 'tue': '화', 'wed': '수', 'thr': '목', 'fri': '금', 'sat': '토', 'sun': '일', 'end': '완결'}
   return `
-    <ul class="day-tab__container tab__container">
-      <li class="day-tab__item center" data-day="mon">월</li>
-      <li class="day-tab__item center" data-day="tue">화</li>
-      <li class="day-tab__item center" data-day="wed">수</li>
-      <li class="day-tab__item center" data-day="thr">목</li>
-      <li class="day-tab__item center" data-day="fri">금</li>
-      <li class="day-tab__item center" data-day="sat">토</li>
-      <li class="day-tab__item center" data-day="sun">일</li>
-      <li class="day-tab__item center" data-day="end">완결</li>
+    <ul class='day-tab__container tab__container'>
+      <li class='day-tab__item center' data-day='mon'>월</li>
+      <li class='day-tab__item center' data-day='tue'>화</li>
+      <li class='day-tab__item center' data-day='wed'>수</li>
+      <li class='day-tab__item center' data-day='thr'>목</li>
+      <li class='day-tab__item center' data-day='fri'>금</li>
+      <li class='day-tab__item center' data-day='sat'>토</li>
+      <li class='day-tab__item center' data-day='sun'>일</li>
+      <li class='day-tab__item center' data-day='end'>완결</li>
     </ul>
   `
 }

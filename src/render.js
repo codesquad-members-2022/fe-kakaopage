@@ -1,12 +1,12 @@
-import {DEFAULT_PAGE, DEFAULT_GENRE} from "./constant.js";
-import { genreRenderList } from "./data/renderData.js";
-import { renderHeader } from "./components/header.js";
-import { renderGnb } from "./components/gnb.js";
-import { renderGenreTab } from "./components/genreTab.js";
-import { renderMainBanner } from "./components/mainBanner.js";
-import { renderCategoryGrid } from "./components/categoryGrid.js";
-import { renderEventBanner } from "./components/eventBanner.js";
-import { renderWorkSection, changeContentsByDay } from "./components/section/workSection.js";
+import {DEFAULT_PAGE, DEFAULT_GENRE} from './constant.js';
+import { genreRenderList } from './data/renderData.js';
+import { renderHeader } from './components/header.js';
+import { renderGnb } from './components/gnb.js';
+import { renderGenreTab } from './components/genreTab.js';
+import { renderMainBanner } from './components/mainBanner.js';
+import { renderCategoryGrid } from './components/categoryGrid.js';
+import { renderEventBanner } from './components/eventBanner.js';
+import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
 
 export const initRender = () => {
     renderHeader();
@@ -29,7 +29,7 @@ const render = (component, genre) => {
         'mainBanner': renderMainBanner,
         'categoryGrid': renderCategoryGrid,
         'eventBanner': renderEventBanner,
-        'dayRanking': renderWorkSection.bind(null, "small", component),
+        'dayRanking': renderWorkSection.bind(null, 'small', component),
         신작 : renderWorkSection.bind(null, 'horizontal')
     }
     funcs[component](genre);
