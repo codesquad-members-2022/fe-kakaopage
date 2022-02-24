@@ -1,4 +1,4 @@
-import { selector, selectorAll } from '../util/util.js';
+import { selector, selectorAll, toggleClass, addClass } from '../util/util.js';
 
 import webtoonContentsObj from '../../json/webtoonContents.json' assert { type: 'json' };
 import dayContentsObj from '../../json/dayContents.json' assert { type: 'json' };
@@ -6,26 +6,29 @@ import previewsObj from '../../json/previews.json' assert { type: 'json' };
 
 import setTagListEl from './tagList/setTagListEl.js';
 import setPreviews from './preview/setPreviews.js';
-
 import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
-
 import setDayFilter from './dayFilter/setDayFilter.js';
 import initMainCategoryDay from './dayFilter/initMainCategoryDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreviewEl from './preview/createPreviewEl.js';
-console.dir(webtoonContentsObj);
-console.dir(dayContentsObj);
-console.dir(previewsObj);
+// console.dir(webtoonContentsObj);
+// console.dir(dayContentsObj);
+// console.dir(previewsObj);
 
 const ELEMENT_WIDTH = 720;
+
+/* selector */
 const PREV_BTN_SELECTOR = '.prev-btn';
 const NEXT_BTN_SELECTOR = '.next-btn';
 const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';
 const SLIDE_LAST_NUM_SELECTOR = '.slide-number .last-number';
 const CATEGORY_ITEM_SELECTOR = '.page-main-category__item';
 
-const pageMainCategory = selectorAll(CATEGORY_ITEM_SELECTOR);
+/* class name */
+const CATEGORY_HIGHLIGHT = 'color-black';
+
+const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
 
 const categoryState = {
   idx: 2,
@@ -79,18 +82,18 @@ const days = {
   '-1': '전체',
 };
 
-const toggleHighlight = (prevTarget, curTarget) => {
-  prevTarget.classList.toggle('color-black');
-  curTarget.classList.toggle('color-black');
+const toggleHighlight = ($prevTarget, $curTarget) => {
+  toggleClass(CATEGORY_HIGHLIGHT, $prevTarget);
+  toggleClass(CATEGORY_HIGHLIGHT, $curTarget);
 };
 
 const initMainPage = () => {
   initMainCategoryDay();
   const defaultIdx = categoryState.getUserIdx();
-  const defaultCategoryEl = pageMainCategory[defaultIdx];
-  const defaultCategoryName = defaultCategoryEl.textContent;
-  const today = days[defaultCategoryEl.dataset.curday];
-  defaultCategoryEl.classList.add('color-black');
+  const $defaultCategory = $$category[defaultIdx];
+  const defaultCategoryName = $defaultCategory.textContent;
+  const today = days[$defaultCategory.dataset.curday];
+  addClass(CATEGORY_HIGHLIGHT, $defaultCategory);
 
   const previews = previewsObj[defaultCategoryName];
   const dayContentsMap = dayContentsObj[defaultCategoryName];
@@ -99,23 +102,23 @@ const initMainPage = () => {
   setPreviews({ previews, timer, slider: carouselSlider });
   setTagListEl(defaultCategoryName);
   setWebtoonContents({ dayContentsArr, webtoonContentsArr });
-  setDayFilter({ categoryEl: defaultCategoryEl, dayContentsMap });
+  setDayFilter({ categoryEl: $defaultCategory, dayContentsMap });
 };
 
 initMainPage();
 
-pageMainCategory.forEach((categoryEl, idx, list) => {
-  categoryEl.addEventListener('click', (event) => {
-    if (categoryState.is(idx)) return;
+$$category.forEach(($category, selectedIdx, list) => {
+  $category.addEventListener('click', (event) => {
+    if (categoryState.getUserIdx() === selectedIdx) return;
     const prevTarget = list[categoryState.getUserIdx()];
     const curTarget = event.target;
-    const categoryName = categoryEl.textContent;
-    let selectedDay = days[categoryEl.dataset.curday];
+    const categoryName = $category.textContent;
+    let selectedDay = days[$category.dataset.curday];
     const previews = previewsObj[categoryName];
     const dayContentsMap = dayContentsObj[categoryName];
     const dayContentsArr = dayContentsMap?.[selectedDay];
     const webtoonContentsArr = webtoonContentsObj[categoryName];
-    categoryState.setUserIdx(idx);
+    categoryState.setUserIdx(selectedIdx);
 
     // highlight
     toggleHighlight(prevTarget, curTarget);
@@ -130,6 +133,6 @@ pageMainCategory.forEach((categoryEl, idx, list) => {
     setWebtoonContents({ dayContentsArr, webtoonContentsArr });
 
     // day filter
-    setDayFilter({ categoryEl, dayContentsMap });
+    setDayFilter({ categoryEl: $category, dayContentsMap });
   });
 });
