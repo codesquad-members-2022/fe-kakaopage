@@ -62,7 +62,8 @@
 }
 
 .small-icon {
-    height: 60%;
+    height: 70%;
+    margin-right: 5px;
 }
 
 /* common-tab */
@@ -478,26 +479,22 @@ header {
 
 /* daily-tops */
 
-.daily-tops {
-    width: 95%;
-    margin: 0 auto;
-}
-
-.daily-top__container {
+.work--horizontal {
     display: flex;
     align-items: center;
+    width: 95%;
     height:120px;
     margin-bottom: 20px;
 }
 
-.daily-top__rank {
+.work--horizontal-ranking {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-left: 10px;
     width:40px;
 }
 
-.daily-top__thumbnail-box {
+.work--horizontal-thumbnail-box {
     width: 90px;
     height: 100%;
     border-radius: 10px;
@@ -506,58 +503,43 @@ header {
     margin-right: 25px;
 }
 
-.daily-top__thumbnail-sub {
+.work--horizontal-label {
     position: absolute;
     top:0;
     left:0;
     width: 25px;
 }
 
-.daily-top__thumbnail-main {
+.work--horizontal-img-wrapper {
     width: 100%;
 }
 
-.daily-top__information {
+.work--horizontal-info {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-weight: 550;
 }
 
-.daily-top__information > div {
+.work--horizontal-info > div {
     height: 20px;
 }
 
-.daily-top__title-box {
+.work--horizontal-title {
     display: flex;
     align-items: center;
     margin-top: 15px;
 }
 
-.daily-top__title-icons {
-    height: 100%;
-    margin-right: 5px;
-}
-
-.daily-top__title-icons > img{
-    height: 80%;
-}
-
-.daily-top__title {
-    font-size: 1rem;
-}
-
-.daily-top__tags {
+.work--horizontal-details {
+    display: flex;
     font-size:  0.875rem;
     color: var(--color-gray);
-    padding-bottom: 20px;
+    margin: 10px 0px 30px 0px;
 }
 
-.daily-top__tags img {
-    margin-right: 5px;
-}
-
-.daily-ranked__info-update-day {
+.work--horizontal-update-day {
     margin-bottom: 15px; 
     font-size: 0.875rem;
     color: var(--color-gray);

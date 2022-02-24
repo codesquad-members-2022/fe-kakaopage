@@ -1,5 +1,5 @@
 const workSections = {
-    'home': ['dayRanking', 'newTop'],
+    'home': ['dayRanking', 'newTop', 'dailyRanking'],
     'daily': ['dayRanking'],
     'webtoon': ['dayRanking'],
     'boy': [],

@@ -4,6 +4,7 @@ export const icons = {
     hot:'	https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3',
     free: 'https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858',
     grayClock: 'https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a',
+    yellowClock: 'https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a',
     whitePerson: 'https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e',
     grayPerson:'https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871',
     star: '	https://static-page.kakao.com/static/common/badge-…umbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac',

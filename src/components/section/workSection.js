@@ -1,5 +1,6 @@
 import { dayRankingData } from '../../data/works/dayRankingData.js';
 import { newTopData } from '../../data/works/newTopData.js';
+import { dailyRankingData } from '../../data/works/dailyRanking.js';
 import { makeWorkContainer } from './workContainer.js';
 import { icons } from '../../data/icons.js';
 import { DEFAULT_DAY } from '../../constant.js';
@@ -7,11 +8,13 @@ import { DEFAULT_DAY } from '../../constant.js';
 const dataDic = {
   'dayRanking': dayRankingData,
   'newTop': newTopData,
+  'dailyRanking': dailyRankingData,
 }
 
 const sectionTitleDic = {
   'dayRanking': '요일 연재',
-  'newTop': '기대신작'
+  'newTop': '기대신작',
+  'dailyRanking': '일간 랭킹'
 }
 
 export const renderWorkSection = (layout, contents, genre) => {

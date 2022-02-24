@@ -30,7 +30,8 @@ const render = (component, genre) => {
         'categoryGrid': renderCategoryGrid,
         'eventBanner': renderEventBanner,
         'dayRanking': renderWorkSection.bind(null, 'small', component),
-        'newTop' : renderWorkSection.bind(null, 'banner', component)
+        'newTop' : renderWorkSection.bind(null, 'banner', component),
+        'dailyRanking': renderWorkSection.bind(null, 'horizontal', component)
     }
     funcs[component](genre);
 }

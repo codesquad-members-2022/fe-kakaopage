@@ -33,8 +33,28 @@ const makeSmallType = (workData) => {
     `
 }
 
-const makeHorizontalType = () => {
-
+const makeHorizontalType = (workData) => {
+    return `
+      <li class='work--horizontal'>
+          ${workData.ranking ? `<div class='work--horizontal-ranking'>${workData.ranking}</div>` : ''}
+          <div class='work--horizontal-thumbnail-box'>
+            <div class='work--horizontal-img-wrapper'>
+              <img src=${workData.src} />
+            </div>
+            <div class='work--horizontal-label'>
+              <img class='horizontal-icon' src=${icons.yellowClock} />
+            </div>
+          </div>
+          <div class='work--horizontal-info'>
+            <div class='work--horizontal-title'>${workData.titleIcon ? `<img class='small-icon' src=${icons[workData.titleIcon]}/>` : ''} ${workData.title}</div>
+            <div class='work--horizontal-details'>
+              <img class='small-icon' src=${icons.grayPerson} />
+              ${workData.tags.map(tag => `<span>${tag}</span>`).join(`<div class='divider'></div>`)}     
+            </div>
+            <div class='work--horizontal-update-day'>${workData.updateDay} 연재</div>
+          </div>
+      </li>
+    `
 }
 
 const makeVerticalType = () => {
