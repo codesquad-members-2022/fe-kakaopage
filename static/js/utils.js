@@ -23,11 +23,19 @@ export function renderMainChildDOM({
   evenCarouel,
   mainContent,
 }) {
-  const returnObj = {};
-  returnObj[SUB_CATEGORY] = subCategory;
-  returnObj[CAROUSEL] = carousel;
-  returnObj[EVENT_BOX] = eventBox;
-  returnObj[EVENT_CAROUSEL] = evenCarouel;
-  returnObj[MAIN_CONTENT] = mainContent;
-  return returnObj;
+  return {
+    [`${SUB_CATEGORY}`]: subCategory,
+    [`${CAROUSEL}`]: carousel,
+    [`${EVENT_BOX}`]: eventBox,
+    [`${EVENT_CAROUSEL}`]: evenCarouel,
+    [`${MAIN_CONTENT}`]: mainContent,
+  };
 }
+// 수정전 코드
+// const returnObj = {};
+// returnObj[SUB_CATEGORY] = subCategory;
+// returnObj[CAROUSEL] = carousel;
+// returnObj[EVENT_BOX] = eventBox;
+// returnObj[EVENT_CAROUSEL] = evenCarouel;
+// returnObj[MAIN_CONTENT] = mainContent;
+// return returnObj
