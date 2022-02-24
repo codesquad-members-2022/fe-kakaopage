@@ -32,6 +32,6 @@ navListsEl.forEach((navList) => {
 
 
 import { renderBase } from './component/base.js';
-import { renderHome } from './home.js';
-import { renderWeekdays } from './weekdays.js';
-import { renderWebtoon } from './webtoon.js';
+import { renderHome } from './pages/home.js';
+import { renderWeekdays } from './pages/weekdays.js';
+import { renderWebtoon } from './pages/webtoon.js';
