@@ -284,7 +284,18 @@ header {
 .gnb__item {
     flex: 1 1 auto;
     align-items: flex-end;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.gnb__new-mark {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--color-yellow);
 }
 
 /* contents */
