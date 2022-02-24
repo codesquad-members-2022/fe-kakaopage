@@ -324,7 +324,7 @@ header {
     font-weight: bold;
 }
 
-.contents-flex-box {
+.contents-box {
     width: 42.5rem;
 
     display: flex;
@@ -496,7 +496,7 @@ header {
     margin-right: 1.88rem;
 }
 
-.contents-flex-box-bigger {
+.contents-box-bigger {
     height: 17.5rem;
 
     display: flex;

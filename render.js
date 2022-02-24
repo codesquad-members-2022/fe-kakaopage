@@ -1,5 +1,12 @@
+import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
-import { addClickEventToElement, addSelected, addSelectedToday, addToContents, combineFormats, genreNavEventHandler, headNavEventHandler, initPage } from "./util.js";
+import { addClickEventToElement, addToContents, combineFormats } from "./util.js";
+
+export function initPage(){
+    const contents = document.getElementById('contents');
+
+    contents.innerHTML = '';
+}
 
 export const renderPageInit = () => {
     addClickEventToElement('body', addSelected)
@@ -174,4 +181,11 @@ export const headerFunction = {
     movie: () => createPageNotYet(),
     broad: () => createPageNotYet(),
     book: () => createPageNotYet(),
+}
+
+export function addSelectedToday(){
+    const days = document.querySelectorAll('.day')
+    const today = new Date().getDay()-1;
+
+    days[today].classList.add('selected')
 }

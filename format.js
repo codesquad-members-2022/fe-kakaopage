@@ -3,7 +3,7 @@ import { dummy } from "./sources.js"
 import { pickFromArr } from "./util.js"
 
 export const createFormatBannerMain = () => {
-    const format0 = `
+    const formatBannerMain = `
 <div class="banner-main">
     <div class="img-with-line">
         <img class="img-with" src=${pickFromArr(dummy.slideBannerMainImg)}>
@@ -11,11 +11,11 @@ export const createFormatBannerMain = () => {
     </div>
 </div>`
 
-    return format0
+    return formatBannerMain
 }
 
 export const createFormatSummaryA = () => {
-    const format1A = `
+    const FormatSummaryA = `
 <div class="summary">
     <button class="summary-btn" style="border-radius: 8px 0 0 0">오늘 UP</button>
     <button class="summary-btn">오늘 신작</button>
@@ -25,22 +25,22 @@ export const createFormatSummaryA = () => {
     <button class="summary-btn" style="border-radius: 0 0 8px 0">오늘 랭킹</button>
 </div>`
 
-    return format1A
+    return FormatSummaryA
 }
 
 export const createFormatSummaryB= (a, b, c) => {
-    const format1B = `
+    const FormatSummaryB = `
 <div class="summary">
     <button class="summary-btn" style="border-radius: 8px 0 0 8px">${a}</button>
     <button class="summary-btn">${b}</button>
     <button class="summary-btn" style="border-radius: 0 8px 8px 0">${c}</button>
 </div>`
 
-    return format1B
+    return FormatSummaryB
 }
 
 export const createFormatBannerAd = () => {
-    const format2 = `
+    const FormatBannerAd = `
 <div class="banner-ad">
     <button class="banner-ad-button"><</button>
     <div class="banner-ad-wrap ">
@@ -49,11 +49,11 @@ export const createFormatBannerAd = () => {
     <button class="banner-ad-button">></button>
 </div>`
 
-    return format2
+    return FormatBannerAd
 }
 
 export const createFormatDailyTop = () => {
-    const format3 = `
+    const FormatDailyTop = `
                 <div class="menu-form">
                     <div class="menu-form-title">
                         <div class="title-name">요일 연재 TOP</div>
@@ -71,17 +71,17 @@ export const createFormatDailyTop = () => {
                         <li class="day" data-day="Fin">완결</li>
                     </ul>
 
-                    <div class="contents-flex-box" id="flex-box">
+                    <div class="contents-box" id="contents-box">
                         ${createContentForms(10)}
                     </div>
 
                 </div>`
 
-    return format3
+    return FormatDailyTop
 }
 
 export const createFormatImgWithLine = () => {
-    const format4 = `
+    const formatImgWithLine = `
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">기대신작 TOP</div>
@@ -97,28 +97,28 @@ export const createFormatImgWithLine = () => {
 
 </div>`
 
-    return format4
+    return formatImgWithLine
 }
 
 export const createFormatContentsBox = (formatTitle) => {
-    const format5 =`
+    const formatContentsBox =`
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">${formatTitle}</div>
         <div class="title-more">더보기></div>
     </div>
 
-    <div class="contents-flex-box">
+    <div class="contents-box">
         ${createContentForms(5)}
     </div>
 
 </div>`
 
-    return format5
+    return formatContentsBox
 }
 
 export const createFormatRanking = (formatTitle) => {
-    const format6 =`
+    const formatRanking =`
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">${formatTitle}</div>
@@ -130,11 +130,11 @@ export const createFormatRanking = (formatTitle) => {
     </div>
 </div>`
 
-    return format6
+    return formatRanking
 }
 
 export const createFormatBannerSub = () => {
-    const format7 =`
+    const formatBannerSub =`
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">추천 이벤트</div>
@@ -146,11 +146,11 @@ export const createFormatBannerSub = () => {
     </div>
 </div>`
 
-    return format7
+    return formatBannerSub
 }
 
 export const createFormatDailyWebtoon = () => {
-    const format8 = `
+    const formatDailyWebtoon = `
                 <div class="menu-form">
                     <ul class="nav-day" id="nav-day" style="margin-top:0">
                         <li class="day">월</li>
@@ -174,17 +174,17 @@ export const createFormatDailyWebtoon = () => {
                         <div class="category-nav-sum">전체 ( )</div>
                     </div>
 
-                    <div class="contents-flex-box" id="flex-box">
+                    <div class="contents-box" id="contents-box">
                         ${createContentForms(10)}
                     </div>
 
                 </div>`
 
-    return format8
+    return formatDailyWebtoon
 }
 
 export const createFormatHorizontalContents = (formatTitle) => {
-    const format9 =`
+    const formatHorizontalContents =`
             <div class="menu-form">
                 <div class="menu-form-title">
                     <div class="title-name">${formatTitle}</div>
@@ -196,27 +196,27 @@ export const createFormatHorizontalContents = (formatTitle) => {
                 </div>
             </div>`
 
-    return format9
+    return formatHorizontalContents
 }
 
 export const createFormatContentsBoxBigger = (formatTitle) => {
-    const format10 =`
+    const formatContentsBoxBigger =`
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">${formatTitle}</div>
         <div class="title-more">더보기></div>
     </div>
 
-    <div class="contents-flex-box-bigger">
+    <div class="contents-box-bigger">
         ${createContentFormsBigger(4)}
     </div>
 </div>`
 
-    return format10
+    return formatContentsBoxBigger
 }
 
 export const createFormatTotal = (formatTitle) => {
-    const format11 =`
+    const formatTotal =`
 <div class="menu-form">
     <div class="menu-form-title">
         <div class="title-name">${formatTitle}</div>
@@ -228,27 +228,27 @@ export const createFormatTotal = (formatTitle) => {
     </div>
 </div>`
 
-    return format11
+    return formatTotal
 }
 
 export const createFormatHotizontalList = () => {
-    const format12 =`
+    const formatHotizontalList =`
     <div class="menu-form">
         <div class="menu-form-ranking">
             ${createHorizontalContents(20)}
         </div>
     </div>`
 
-return format12
+return formatHotizontalList
 }
 
 export const createFormatNotYet = () => {
-    const format = `
+    const formatNotYet = `
     <div class="banner-main">
         <div class="img-with-line">
             <img class="img-with" src="https://pbs.twimg.com/media/ELhHQZmUYAEk2AI?format=jpg&name=900x900">
         </div>
     </div>`
 
-    return format
+    return formatNotYet
 }
