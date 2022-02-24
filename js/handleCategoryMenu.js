@@ -1,6 +1,5 @@
 import { $, today } from "./utils.js";
 import { ContentListInfos } from "./ContentListInfos.js";
-import { nav } from "./nav.js";
 
 const commonGenreRender = (element, menu) => {
     element.insertAdjacentHTML("beforeend", ContentListInfos.addExclusiveComponent(menu));
@@ -12,7 +11,7 @@ export const handleCategoryMenu = (menu) => {
     const contents = $(".main__contents");
     contents.innerHTML = "";
     contents.insertAdjacentHTML("beforeend", ContentListInfos.addIssueComponent(menu) ? ContentListInfos.addIssueComponent(menu) : "");
-    contents.insertAdjacentHTML("beforeend", ContentListInfos.addAdvertiseComponent(menu) ? ContentListInfos.addAdvertiseComponent(menu) : "");
+    contents.insertAdjacentHTML("beforeend", ContentListInfos.addBannerComponent(menu) ? ContentListInfos.addBannerComponent(menu) : "");
     contents.insertAdjacentHTML("beforeend", ContentListInfos.addRecommendationComponent(menu) ? ContentListInfos.addRecommendationComponent(menu) : "");
     switch(menu) {
         case '0':

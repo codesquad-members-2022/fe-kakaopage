@@ -325,11 +325,11 @@ li 태그들에 이벤트를 달기 위하여 li를 관리하는 ul(부모태그
 
 상단 영역에서 카테고리 메뉴 바로 아래에 위치하는 내용들인데 여러 url에서 저런형태로 안의 텍스트만 다르고 형태는 똑같아 저 형태를 담당하는 컴포넌트 하나를 만들어 주면 좋겠다 생각했다. 네이밍은 우선 이슈들을 담당한다고 생각하여 IssueComponent로 지었음..
 
-2. AdvertiseComponent  
+2. BannerComponent  
 
-![advertiseComponent](https://user-images.githubusercontent.com/45479309/154855022-6b26e294-7148-4ef3-89d7-3738c257712c.png)
+![BannerComponent](https://user-images.githubusercontent.com/45479309/154855022-6b26e294-7148-4ef3-89d7-3738c257712c.png)
 
-위 컴포넌트 또한 많은 곳에서 사용되어져서 분리하였다. 이름은 광고를 의미하기 때문에 간단하게 AdvertiseComponent  
+위 컴포넌트 또한 많은 곳에서 사용되어져서 분리하였다. 이름은 광고를 의미하기 때문에 간단하게 BannerComponent  
 
 3. ImagePoster Component
 

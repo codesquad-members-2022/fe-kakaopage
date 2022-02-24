@@ -1,5 +1,5 @@
 import { IssueComponent } from "../component/IssueComponent.js";
-import { AdvertiseComponent } from "../component/AdvertiseComponent.js";
+import { BannerComponent } from "../component/BannerComponent.js";
 import { issueObj, rowListTitleObj } from "./constants.js";
 import { WebtoonData } from "./dummy.js";
 import { RowListContainer } from "../container/RowListContainer.js";
@@ -10,8 +10,8 @@ import { WeekComponent } from "../component/WeekComponent.js";
 import { today } from "./utils.js";
 
 export const ContentListInfos = {
-    addAdvertiseComponent() {
-        return AdvertiseComponent();
+    addBannerComponent() {
+        return BannerComponent();
     },
     addIssueComponent(menu) {
         if(Array.isArray(issueObj[menu]) && issueObj[menu].length === 0) return;
