@@ -42,7 +42,7 @@ const $tuesdayWebtoons = webtoonContents
   .join("");
 
 const $weekWebtoons = `
-  <section>
+  <section class="week__webtoons">
     <nav>
       <ul class="main__navigation__menu main__week__menu interval">
         ${$weekTap}
