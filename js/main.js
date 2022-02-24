@@ -10,11 +10,12 @@ import {
   moveAutoSlide,
 } from './slide.js'
 import { data } from './slideDatas.js'
+import { searchSelctor } from './utility.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dayTab = document.querySelector('.serial__list')
-  const slides = document.querySelector('.webtoon-slide__imgs')
-  const slideEl = slides.querySelector('.webtoon-slide__img')
+  const dayTab = searchSelctor('.serial__list')
+  const slides = searchSelctor('.webtoon-slide__imgs')
+  const slideEl = searchSelctor('.webtoon-slide__img')
 
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)

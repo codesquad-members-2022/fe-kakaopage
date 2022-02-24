@@ -4,13 +4,8 @@ let sNum = 1
 let pos = 0
 
 let manualNum = 0
-let manualRafId
-let manualLafId
-
-let autoNum = 0
-let autoRafId
-let autoStartRafId
-let autoStartNum = 0
+let manualRrafId
+let manualLrafId
 
 export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
@@ -81,20 +76,19 @@ export function setSlideBtn() {
 
 function setSlideNum(width) {
   const slideNum = document.querySelector('.webtoon-slide__number')
-
   const SLIDE_START_NUM = 1
   const SLIDE_END_NUM = 5
-  const ZERO = 0
-  const ONE = 1
+  const DISTINCT_POSI_NEGA = 0
+  const SLIDE_CNT = 1
 
-  if (width < ZERO) {
-    if (sNum < SLIDE_END_NUM) sNum += ONE
+  if (width < DISTINCT_POSI_NEGA) {
+    if (sNum < SLIDE_END_NUM) sNum += SLIDE_CNT
     else if (sNum === SLIDE_END_NUM) {
       sNum = SLIDE_START_NUM
       moveManualSlideRgiht()
     }
-  } else if (width > ZERO) {
-    if (sNum > SLIDE_START_NUM) sNum -= ONE
+  } else if (width > DISTINCT_POSI_NEGA) {
+    if (sNum > SLIDE_START_NUM) sNum -= SLIDE_CNT
     else if (sNum === SLIDE_START_NUM) {
       sNum = SLIDE_END_NUM
       moveManualSlideLeft()
@@ -106,78 +100,96 @@ function setSlideNum(width) {
 
 function moveManualSlideRgiht() {
   const ANIMATION_SEC = 60 * 0.5
-  const slide = document.querySelector('.webtoon-slide')
-  const slideImgs = slide.querySelector('.webtoon-slide__imgs')
+  const START_POS = 0
+  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+  const FRAME_CNT = 1
+  const FRAME_RESET = 0
 
-  manualRafId = requestAnimationFrame(moveManualSlideRgiht)
-  manualNum += 1
+  manualRrafId = requestAnimationFrame(moveManualSlideRgiht)
+  manualNum += FRAME_CNT
 
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
-    manualNum = 0
-    cancelAnimationFrame(manualRafId)
+    manualNum = FRAME_RESET
+    cancelAnimationFrame(manualRrafId)
   } else if (manualNum === ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0s'
     slideImgs.style.transform = `translate3d(0px, 0px, 0px)`
-    pos = 0
+    pos = START_POS
   }
 }
 
 function moveManualSlideLeft() {
   const ANIMATION_SEC = 60 * 0.5
-  const slideImgs = document.querySelector('.webtoon-slide__imgs')
+  const START_POS = 0
+  const FRAME_CNT = 1
+  const END_POS = -2880
 
-  manualLafId = requestAnimationFrame(moveManualSlideLeft)
-  manualNum += 1
+  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+
+  manualLrafId = requestAnimationFrame(moveManualSlideLeft)
+  manualNum += FRAME_CNT
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
-    manualNum = 0
-    cancelAnimationFrame(manualLafId)
+    manualNum = START_POS
+    cancelAnimationFrame(manualLrafId)
   } else if (manualNum === ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0s'
-    slideImgs.style.transform = `translate3d(-2880px, 0px, 0px)`
-    pos = -2880
+    slideImgs.style.transform = `translate3d(${END_POS}px, 0px, 0px)`
+    pos = END_POS
   }
 }
 
-export function moveAutoSlide() {
-  const ANIMATION_SEC = 60 * 0.5
+function moveAutoSlideStartPos() {
+  const slideNum = document.querySelector('.webtoon-slide__number')
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
 
-  console.log(slideImgs)
+  const SLIDE_START_NUM = 1
+  const SLIDE_END_NUM = 5
+  const SLIDE_CNT = 1
+  const IMG_WIDTH = 720
+  const S_HALF_MS = 500
+  const START_POS = 0
+
+  const start = new Date().getTime()
+
+  if (sNum < SLIDE_END_NUM) {
+    sNum += SLIDE_CNT
+    pos -= IMG_WIDTH
+    slideImgs.style.transition = 'all 0.5s'
+    slideImgs.style.transform = `translate3d(${pos}px, 0px, 0px)`
+  } else if (sNum === SLIDE_END_NUM) {
+    sNum = SLIDE_START_NUM
+    pos -= IMG_WIDTH
+    slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
+
+    function rafCallback() {
+      const resetRafId = requestAnimationFrame(rafCallback)
+      if (new Date().getTime() > start + S_HALF_MS) {
+        slideImgs.style.transition = 'all 0s'
+        pos = START_POS
+        slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
+        cancelAnimationFrame(resetRafId)
+      }
+    }
+    rafCallback()
+  }
+
+  slideNum.textContent = `${sNum} / ${SLIDE_END_NUM}`
 }
 
-// function moveAutoSlide() {
-//   const ANIMATION_SEC = 180
-//   const slideImgs = document.querySelector('.webtoon-slide__imgs')
+export function moveAutoSlide() {
+  const MS = 1000
 
-//   autoRafId = requestAnimationFrame(moveAutoSlide)
-//   autoNum += 1
-//   if (autoNum === ANIMATION_SEC) {
-//     if (pos > -720 * 5) {
-//       slideImgs.style.transition = 'all 0.5s'
-//       pos -= 720
-//     }
-//     slideImgs.style.transform = `translate3d(${pos}px, 0px, 0px)`
-//     autoNum = 0
+  let start = new Date().getTime()
 
-//     setSlideNum(-720)
-//   }
+  function rafCallback() {
+    requestAnimationFrame(rafCallback)
 
-// function moveAutoSlideStart() {
-//   const ANIMATION_SEC = 60
-//   const slideImgs = document.querySelector('.webtoon-slide__imgs')
-
-//   autoStartRafId = requestAnimationFrame(moveAutoSlideStart)
-//   autoStartNum += 1
-//   console.log(autoStartNum)
-
-//   if (autoStartNum === ANIMATION_SEC) {
-//     slideImgs.style.transition = 'all 0s'
-//     pos = 0
-//   }
-// }
-// }
-
-// export default { setSlideImgStart, setSlideImg, setSlideBtn, moveAutoSlide }
-// export default { setSlideImgStart, setSlideImg, setSlideBtn }
+    if (new Date().getTime() > start + MS) {
+      start = new Date().getTime()
+      moveAutoSlideStartPos()
+    }
+  }
+  rafCallback()
+}
