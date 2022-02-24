@@ -3,7 +3,6 @@ import {
   createDomEl,
   getMainNavHtml,
   getMainHtml,
-  getlistHtml,
   getToonGenre,
   getIsHot,
 } from "../component/mainComponent.js";
@@ -33,29 +32,27 @@ const renderMainSecWoD = () => {
     true,
     data.week
   );
+  domUtil.$(".main__nav__dow--ul").addEventListener("click", renderToonbyDay);
 };
 
 const renderMainSecToon = () => {
-  domUtil.remove(".main");
-
-  const containers = [true, false].map((isTrue) => {
-    const isTrueData = getIsHot(isTrue);
-    return domUtil.createDomEl(
-      "section",
-      "main",
-      createDomEl(
-        {
-          left: "HOT 최근 프로모션 진행작",
-          rigth: "더보기",
-        },
-        isTrueData
-      )
-    );
-  });
-
-  domUtil.$All(".");
-
-  domUtil.createEl();
+  // domUtil.remove(".main");
+  // const containers = [true, false].map((isTrue) => {
+  //   const isTrueData = getIsHot(isTrue);
+  //   return domUtil.createDomEl(
+  //     "section",
+  //     "main",
+  //     createDomEl(
+  //       {
+  //         left: "HOT 최근 프로모션 진행작",
+  //         rigth: "더보기",
+  //       },
+  //       isTrueData
+  //     )
+  //   );
+  // });
+  // domUtil.$All(".");
+  // domUtil.createEl();
 };
 
 export { renderMainSecHome, renderMainSecWoD };

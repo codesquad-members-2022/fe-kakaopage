@@ -93,7 +93,6 @@ export {
   createDomEl,
   getMainNavHtml,
   getMainHtml,
-  getlistHtml,
   getToonGenre,
   getImgCardHtml,
   getIsHot,
