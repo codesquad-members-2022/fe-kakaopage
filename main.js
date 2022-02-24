@@ -9,13 +9,13 @@ const $main__container__copy = $main__container?.cloneNode(true);
 
 $headerNav.addEventListener("click", (event) => {
   const selectedImg = event.target.closest("img");
-  const alt = selectedImg ? selectedImg.alt : null;
+  const className = selectedImg?.className;
   const $main = document.querySelector(".main");
   const $current__main__container = document.querySelector(".main__container");
 
-  if (alt === "menu home") {
+  if (className === "nav__home") {
     $main.replaceChild($main__container__copy, $current__main__container);
-  } else if (alt === "menu toon") {
+  } else if (className === "nav__toon") {
     $current__main__container.innerHTML = $weekWebtoons;
   }
 });
