@@ -35,3 +35,37 @@ app.use((req, res, next) => {
   next();
 });
 ```
+
+2. `getJson` 으로 데이터를 불러오는 과정 - 병렬처리
+
+크롱이 피드백을 주신 부분에 대한 내용이다.
+<img width="651" alt="스크린샷 2022-02-24 오후 4 49 20" src="https://user-images.githubusercontent.com/58503584/155480982-9b44500e-2eab-40b4-84f7-9ce3c17c393f.png">
+
+실제로 내 페이지를 처음 로드하면 아래와같이 Waterfall 이 순차적으로 이루어지는 것을 볼 수 있었다.
+
+<img width="1122" alt="스크린샷 2022-02-24 오후 4 51 22" src="https://user-images.githubusercontent.com/58503584/155481303-b6aa5659-30d1-418e-9388-6519707d9d92.png">
+
+- 위 데이터를 순차적으로 받아와야 하는지? -> 아니다.
+- 그렇다면 어떻게 병렬처리를 할 수 있을지?
+  - Promise.all
+  - 도리가 공유해주신 사이트의 방법
+
+```js
+const { results: categories } = await getJson("categories");
+const { results: genres } = await getJson("genres");
+const { results: webtoons } = await getJson("webtoons");
+```
+
+<img width="936" alt="스크린샷 2022-02-24 오후 7 59 27" src="https://user-images.githubusercontent.com/58503584/155511838-0f52236a-6810-4ea0-8329-20029631dd2e.png">
+
+기존에 사용하던 코드는 await await await 이기 때문에 Waterfall 이 순차적으로 이루어지고 최종적으로 응답된 시간이 `709ms` 인것을 볼 수 있었다.
+
+```js
+const paths = ["categories", "genres", "webtoons"];
+const [{ results: categories }, { results: genres }, { results: webtoons }] =
+  await Promise.all(paths.map((path) => getJson(path)));
+```
+
+<img width="936" alt="스크린샷 2022-02-24 오후 7 56 05" src="https://user-images.githubusercontent.com/58503584/155511318-488f5f8c-2ec9-43c2-a8f2-942732da3abb.png">
+
+- Waterfall 이 병렬적으로 이루어지고 있고, `453ms` 로 Finish 되었다.
