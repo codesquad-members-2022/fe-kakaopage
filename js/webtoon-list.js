@@ -1,10 +1,4 @@
-import {
-  setThumbnail,
-  setTitle,
-  setIcon,
-  setUserCnt,
-  setDay,
-} from './webtoon-els.js'
+import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
 import { data } from './webtoon-datas.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
@@ -30,7 +24,6 @@ export function setWebtoonList() {
       data[i].thumbnail__src,
       data[i].thumbnail__alt
     )
-    setTitle(wentoonCopy, data[i].title__class, data[i].title__text)
     if (i === iconDays[0] || i === iconDays[1] || i === iconDays[2])
       setIcon(
         wentoonCopy,
@@ -38,8 +31,7 @@ export function setWebtoonList() {
         data[i].icon__src,
         data[i].icon__alt
       )
-    setUserCnt(wentoonCopy, data[i].user__class, data[i].user__text)
-    setDay(wentoonCopy, data[i].day__class, data[i].day__text)
+    setTitleUserCntDay(wentoonCopy, data[i].user__class, data[i].user__text)
   }
 }
 
