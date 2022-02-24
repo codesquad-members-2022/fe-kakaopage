@@ -208,8 +208,8 @@ body{
 /* ===============slide2=============== */
 .slider {
     width: 720px;
-    height:450px;
-    margin: 0 auto 30px;
+    height:420px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
   }
