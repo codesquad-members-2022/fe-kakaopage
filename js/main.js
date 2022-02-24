@@ -18,6 +18,7 @@ import { data } from './slide-datas.js'
 import { searchSelctor } from './utility.js'
 =======
 import { data } from './slideDatas.js'
+<<<<<<< HEAD
 >>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelector('.webtoon-slide__imgs')
   const slideEl = slides.querySelector('.webtoon-slide__img')
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
+=======
+import { searchSelctor } from './utility.js'
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dayTab = searchSelctor('.serial__list')
+  const slides = searchSelctor('.webtoon-slide__imgs')
+  const slideEl = searchSelctor('.webtoon-slide__img')
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
 
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
