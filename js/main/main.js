@@ -108,7 +108,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   // highlight
   toggleHighlight(prevTarget, curTarget);
 
-  // preview - 구현 후 함수 하나로 만들기
+  // preview
   setPreviews({ previews, timer: sliderTimer, slider: carouselSlider });
 
   // tag list
@@ -132,8 +132,10 @@ const main = () => {
   const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
   $$category.forEach(addListener);
 
-  const defaultCategoryIdx = categoryState.getDefaultIdx();
-  initCategoryCurDay();
+  const categoriesWidthDayFilter = ['홈', '요일연재', '웹툰']; // Day 필터가 있는 카테고리 목록
+  initCategoryCurDay(categoriesWidthDayFilter); // Day 필터가 있는 카테고리 엘리먼트에 data-curday 프로퍼티 추가
+
+  const defaultCategoryIdx = categoryState.getDefaultIdx(); // 첫 페이지 접속시 렌더링할 카테고리의 인덱스
   $$category[defaultCategoryIdx].click();
 };
 
