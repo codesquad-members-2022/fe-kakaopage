@@ -46,6 +46,15 @@ display
 .slide-wrap {
     display: inline-flex;
 }
+.prev-slide {
+    transform: translateX(-100%);
+}
+.current-slide {
+    transform: translateX(0);
+}
+.next-slide {
+    transform: translateX(100%);
+}
 .slide-buttons {
     position: absolute;
     top: 50%;
