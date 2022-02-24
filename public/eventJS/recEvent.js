@@ -11,16 +11,16 @@ import { renderToonbyDay } from "./mainEvent.js";
 
 const renderMainSecHome = () => {
   domUtil.$(".main").innerHTML = "";
-  const mainHTML = data.genre.reduce((mainInner, toonGen) => {
+  const newMainHTML = data.genre.reduce((inner, toonGen) => {
     const filterToonByGen = getToonGenre(toonGen);
-    return (mainInner += getMainHtml(
+    return (inner += getMainHtml(
       filterToonByGen,
       true,
       { left: [toonGen], right: "더보기" },
       false
     ));
   }, "");
-  domUtil.$(".main").innerHTML = mainHTML;
+  domUtil.$(".main").innerHTML = newMainHTML;
 };
 
 const renderMainSecWoD = () => {

@@ -48,7 +48,7 @@
   display: flex;
   justify-content: flex-start;
   width: var(--contents-width);
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 .recommand__image--img {

@@ -32,9 +32,9 @@ const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
 `;
 };
 
-const getImgCardHtml = (data) => {
+const getImgCardHtml = (data, test) => {
   return `
-  <li class="main__cartoonZone__cell">
+  <li class="main__cartoonZone__cell${test ?? ""}">
     <div class="main__cartoonZone--imageWrapper">
       <img
         src=${data.imgUrl}
