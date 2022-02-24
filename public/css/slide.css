@@ -9,6 +9,7 @@ ul, li {list-style:none;}
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  height: 500px;
 }
 
 
@@ -33,9 +34,12 @@ ul, li {list-style:none;}
 }
 .slide-control {
   display:flex;
+  justify-content: center;
+  position: relative;
+  bottom: 250px;
 }
 .slide-control label {
-  position: absolute;
+  
   z-index: 1;
   top:50%;
   border-radius:50%;
@@ -44,18 +48,25 @@ ul, li {list-style:none;}
 }
 
 .slide-control .slide-page {
+  position: relative;
+  margin-left: 50px;
+  width: 500px;
   z-index: 2;
-  position: absolute;
-  top: 68.5%;
-  right: 358px;
-  color: #ffffff;
-  position: absolute;
+  top: 260%;
+  color: #fff;
   font-size: 20px;
   opacity: 0.6;
+  margin: 0 auto;
+  text-align: right;
+  transform:translateX(18%);
 }
 
+.control-label {
+  width: 1000px;
+  text-align: center;
+}
 label.left {
-  left: 355px;
+  margin-right: 600px;
   background-color: transparent;
   background-position: center center;
   background-size: 100%;
@@ -64,7 +75,6 @@ label.left {
 }
 
 label.right {
-  right: 355px;
   background-color: transparent;
   background-position: center center;
   background-size: 100%;
@@ -83,11 +93,12 @@ label.right {
 }
 
 .slide-control [class*="control"] {display: none;}
+#slide01:checked ~ .slide-control .control-label {display: block;}
 #slide01:checked ~ .slide-control .control01 {display: block;}
 #slide02:checked ~ .slide-control .control02 {display: block;}
 #slide03:checked ~ .slide-control .control03 {display: block;}
 
-#slide01:checked ~ .slidelist .slideitem {transform: translateX(0);animation:slide01 20s infinite;}
+/* #slide01:checked ~ .slidelist .slideitem {transform: translateX(0);animation:slide01 20s infinite;} */
 
 #slide02:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
 #slide03:checked ~ .slidelist .slideitem {transform: translateX(-200%);}
