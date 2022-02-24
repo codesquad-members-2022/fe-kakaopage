@@ -2,14 +2,14 @@ import {
   toggleActiveTab,
   toggleActiveWebtoonTab,
   setWebtoonList,
-} from './webtoonList.js'
+} from './webtoon-list.js'
 import {
   setSlideImgStart,
   setSlideImg,
   setSlideBtn,
   moveAutoSlide,
 } from './slide.js'
-import { data } from './slideDatas.js'
+import { data } from './slide-datas.js'
 import { searchSelctor } from './utility.js'
 
 document.addEventListener('DOMContentLoaded', () => {

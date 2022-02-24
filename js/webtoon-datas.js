@@ -1,4 +1,3 @@
-// data
 export const data = [
   {
     // 화요일

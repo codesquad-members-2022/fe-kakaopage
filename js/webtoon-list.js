@@ -4,8 +4,8 @@ import {
   setIcon,
   setUserCnt,
   setDay,
-} from './dataParse.js'
-import { data } from './datas.js'
+} from './webtoon-els.js'
+import { data } from './webtoon-datas.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 

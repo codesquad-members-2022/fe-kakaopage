@@ -502,6 +502,15 @@ table {
   background-color: #f3f3f3;
 }
 
+.noti--cnt {
+  padding: 4px 6px;
+  margin-left: 5px;
+  font-size: 13px;
+  background-color: #ffd200;
+  border: 0;
+  border-radius: 10px;
+}
+
 .webtoon-menu__list--top-left {
   border-radius: 5px 0 0 0;
 }
@@ -728,15 +737,6 @@ table {
 
 .footer__company3 {
   font-weight: 400;
-}
-
-.noti--cnt {
-  padding: 4px 6px;
-  margin-left: 5px;
-  font-size: 13px;
-  background-color: #ffd200;
-  border: 0;
-  border-radius: 10px;
 }
 
 .display__block {
