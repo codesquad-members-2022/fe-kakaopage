@@ -45,10 +45,12 @@ export async function render() {
 
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
+      const articleLayout = contentObj[ID];
+      if (!articleLayout) return; // 메인에는 서브네브가 없어서 공통 article이 없다면 loop 패스
       const $subLayout = document.createElement('article');
       $subLayout.classList.add(CLASS, MAIN_LAYOUT_CHILDREN);
       $subLayout.setAttribute('id', ID);
-      $subLayout.append(contentObj[ID]);
+      $subLayout.append(articleLayout);
       $mainLayout.append($subLayout);
     });
     // 선택된 카테고리 표시

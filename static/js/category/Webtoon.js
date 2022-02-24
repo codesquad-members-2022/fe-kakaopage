@@ -1,21 +1,19 @@
-import { renderCarousel } from '../articles/carousel.js';
+import Carousel from '../articles/Carousel/index.js';
 import { renderSubCategory } from '../articles/subCategory.js';
-import { renderMainChildDOM } from '../utils.js';
+import { ELEMENT_ID } from '../constants/variable.js';
+
+const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
+  ELEMENT_ID;
 
 export const Webtoon = async (subCategoryUid) => {
   const tempSubUid = subCategoryUid > 1 ? 0 : subCategoryUid;
-  const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = renderCarousel(mock_carouselElementArr[tempSubUid]);
-  const eventBox = `Webtoon`;
-  const evenCarouel = `Webtoon`;
-  const mainContent = `Webtoon`;
-  return renderMainChildDOM({
-    subCategory,
-    carousel,
-    eventBox,
-    evenCarouel,
-    mainContent,
-  });
+  return {
+    [`${SUB_CATEGORY}`]: renderSubCategory(subCategoryIndexArr),
+    [`${CAROUSEL}`]: Carousel(mock_carouselElementArr[tempSubUid]),
+    [`${EVENT_BOX}`]: `Webtoon`,
+    [`${EVENT_CAROUSEL}`]: `Webtoon`,
+    [`${MAIN_CONTENT}`]: `Webtoon`,
+  };
 };
 
 // mock: 임시데이터 - categoryUid에 해당하는 데이터를 서버에서 불러올 예정

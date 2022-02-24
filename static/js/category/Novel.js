@@ -1,5 +1,19 @@
 import { renderSubCategory } from '../articles/subCategory.js';
-import { renderMainChildDOM } from '../utils.js';
+import { ELEMENT_ID } from '../constants/variable.js';
+
+const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
+  ELEMENT_ID;
+
+export const Novel = async (subCategoryUid) => {
+  console.log(subCategoryUid);
+  return {
+    [`${SUB_CATEGORY}`]: renderSubCategory(subCategoryIndexArr),
+    [`${CAROUSEL}`]: 'Novel',
+    [`${EVENT_BOX}`]: 'Novel',
+    [`${EVENT_CAROUSEL}`]: 'Novel',
+    [`${MAIN_CONTENT}`]: 'Novel',
+  };
+};
 
 // mock: 임시데이터 - categoryUid에 해당하는 데이터를 서버에서 불러올 예정
 const subCategoryIndexArr = [
@@ -15,19 +29,3 @@ const subCategoryIndexArr = [
   'BL',
   '단행본',
 ];
-
-export const Novel = async (subCategoryUid) => {
-  console.log(subCategoryUid);
-  const subCategory = renderSubCategory(subCategoryIndexArr);
-  const carousel = 'Novel';
-  const eventBox = 'Novel';
-  const evenCarouel = 'Novel';
-  const mainContent = 'Novel';
-  return renderMainChildDOM({
-    subCategory,
-    carousel,
-    eventBox,
-    evenCarouel,
-    mainContent,
-  });
-};
