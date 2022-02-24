@@ -4,6 +4,7 @@ header {
   left: 0px;
   width: 100%;
   background-color: #fff;
+  z-index: 10;
 }
 .main-header {
   height: 80px;

@@ -6,10 +6,13 @@ import { createEventSlide } from "../components/event-slide.js";
 import { createBannerSection } from "../components/banner-section.js";
 import { createGenreNav } from "../components/genre-nav.js";
 import { mainContainer } from "../index.js";
+import { createMainSlide } from "../components/main-slide.js";
+import mainSlideData from "../data/webtoon/home/main-slide.js";
 
 const fragment = document.createElement("div");
 
 fragment.appendChild(createGenreNav());
+fragment.appendChild(createMainSlide(mainSlideData));
 fragment.appendChild(createBannerSection());
 const sectionDatas = [
   {
