@@ -1,6 +1,11 @@
 export const $ = (el) => document.querySelector(el);
 export const $$ = (el) => document.querySelectorAll(el);
 
+export const removeAndInsertHTML = (target, position, templete) => {
+    $(target).innerHTML = '';
+    $(target).insertAdjacentHTML(position, templete);
+}
+
 export const activateButton = (removeSelector, addSelector, className) => {
     removeSelector.classList.remove(className);
     addSelector.classList.add(className);
