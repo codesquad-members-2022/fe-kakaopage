@@ -1,5 +1,5 @@
-import {webtoonItems} from '/client/data/data_cover.js'
-function makeWebtoonItems() {
+import {webtoonItems} from '/client/data/webtoonData.js'
+export const makeWebtoonItems= function() {
     let result = '';
     const newData = webtoonItems;
     for (let i = 0; i < 5; i++) {
@@ -11,7 +11,7 @@ function makeWebtoonItems() {
             <div id="wc__title">${newData[i].title}</div>
             <div id="wc__des">${newData[i].des}</div>
             <div id="wc__detail">
-                <span><img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt=""></span>
+                <span><img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e" alt=""></span>
                 <span>${newData[i].viewer}</span>
                 <span>|</span>
                 <span>${newData[i].writer}</span>
@@ -23,4 +23,3 @@ function makeWebtoonItems() {
     
     return result
     }
-document.querySelector(".webtoon__contents").innerHTML += makeWebtoonItems();

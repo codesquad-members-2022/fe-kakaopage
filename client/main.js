@@ -60,3 +60,8 @@ $$days.addEventListener('click',daysClickHandler);
 //3. 웹툰> 요일연재 또는 웹툰
 //: 글자색 바꾸기
 const $webtoon__days=document.querySelector(".webtoon__days")
+$webtoon__days.addEventListener('click',daysClickHandler);
+
+const $btn1=document.querySelector("#btn1")
+const $btn2=document.querySelector("#btn2")
+

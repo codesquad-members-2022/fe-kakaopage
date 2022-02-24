@@ -56,20 +56,17 @@
     white-space: nowrap;
     overflow: hidden;
     display: flex;
-    background-color: red;
 }
 
 .banner__content{
     width: 720px;
     height: 100%;
-    
    
 }
 
 .banner__image{
     width: 720px;
-    height: 530px;
-    position: relative;
+    height: 520px;
     z-index: 1;
 }
 
@@ -78,8 +75,8 @@
     width: 720px;
     z-index: 3;
     display: flex;
-    margin-top: 15rem;
-    position: absolute;
+    margin-top: -16rem;
+
     justify-content: space-between;
 }
 .banner__button button{
@@ -94,8 +91,7 @@
     justify-content: space-between;
     z-index: 2;
     color: var(--main-white);
-    margin-top: -13rem;
-    position: absolute;
+    margin-top: 9rem;
     padding: 0 5%;
 }
 
@@ -107,11 +103,11 @@
 .comment{
     width: 720px;
     padding: 1rem;
-    margin-top: 42rem;
     background-color: var(--accent-color);
-    z-index: 1;
+    margin-top: 0.5rem;
+    z-index: 5;
     text-align: center;
-    position: relative;
+ 
 } 
 
 /*5. 카테고리 */
