@@ -1,10 +1,12 @@
-import { dayRankingData } from '../../data/works/dayRanking.js';
+import { dayRankingData } from '../../data/works/dayRankingData.js';
+import { newTopData } from '../../data/works/newTopData.js';
 import { makeWorkContainer } from './workContainer.js';
 import { icons } from '../../data/icons.js';
 import { DEFAULT_DAY } from '../../constant.js';
 
 const dataDic = {
   'dayRanking': dayRankingData,
+  'newTOP': newTopData,
 }
 
 export const renderWorkSection = (layout, contents, genre) => {
@@ -39,17 +41,19 @@ const getWorkContainerTemplate = (layout, contents, genre, day = DEFAULT_DAY) =>
 }
 
 const getDayTabTemplate = () => {
-  const weekKoreanDic = {'mon': '월', 'tue': '화', 'wed': '수', 'thr': '목', 'fri': '금', 'sat': '토', 'sun': '일', 'end': '완결'}
+  const weekWords = [
+    { 'en': 'mon', 'ko': '월' }, 
+    { 'en': 'tue', 'ko': '화' }, 
+    { 'en': 'wed', 'ko': '수' }, 
+    { 'en': 'thr', 'ko': '목' }, 
+    { 'en': 'fri', 'ko': '금' }, 
+    { 'en': 'sat', 'ko': '토' }, 
+    { 'en': 'sun', 'ko': '일' }, 
+    { 'en': 'end', 'ko': '완결'}
+  ];
   return `
     <ul class='day-tab__container tab__container'>
-      <li class='day-tab__item center' data-day='mon'>월</li>
-      <li class='day-tab__item center' data-day='tue'>화</li>
-      <li class='day-tab__item center' data-day='wed'>수</li>
-      <li class='day-tab__item center' data-day='thr'>목</li>
-      <li class='day-tab__item center' data-day='fri'>금</li>
-      <li class='day-tab__item center' data-day='sat'>토</li>
-      <li class='day-tab__item center' data-day='sun'>일</li>
-      <li class='day-tab__item center' data-day='end'>완결</li>
+      ${weekWords.map(day => `<li class='day-tab__item center' data-day='${day.en}'>${day.ko}</li>`).join('')}
     </ul>
   `
 }
