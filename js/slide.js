@@ -8,6 +8,7 @@ let pos = 0
 let manualNum = 0
 let manualRrafId
 let manualLrafId
+<<<<<<< HEAD
 
 export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
@@ -49,6 +50,8 @@ let autoNum = 0
 let autoRafId
 let autoStartRafId
 let autoStartNum = 0
+=======
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
 
 export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
@@ -130,16 +133,22 @@ function setSlideNum(width) {
   const SLIDE_CNT = 1
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (width < DISTINCT_POSI_NEGA) {
     if (sNum < SLIDE_END_NUM) sNum += SLIDE_CNT
 =======
   if (width < ZERO) {
     if (sNum < SLIDE_END_NUM) sNum += ONE
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
+=======
+  if (width < DISTINCT_POSI_NEGA) {
+    if (sNum < SLIDE_END_NUM) sNum += SLIDE_CNT
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
     else if (sNum === SLIDE_END_NUM) {
       sNum = SLIDE_START_NUM
       moveManualSlideRgiht()
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } else if (width > DISTINCT_POSI_NEGA) {
     if (sNum > SLIDE_START_NUM) sNum -= SLIDE_CNT
@@ -147,6 +156,10 @@ function setSlideNum(width) {
   } else if (width > ZERO) {
     if (sNum > SLIDE_START_NUM) sNum -= ONE
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
+=======
+  } else if (width > DISTINCT_POSI_NEGA) {
+    if (sNum > SLIDE_START_NUM) sNum -= SLIDE_CNT
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
     else if (sNum === SLIDE_START_NUM) {
       sNum = SLIDE_END_NUM
       moveManualSlideLeft()
@@ -159,10 +172,14 @@ function setSlideNum(width) {
 function moveManualSlideRgiht() {
   const ANIMATION_SEC = 60 * 0.5
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
   const START_POS = 0
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
   const FRAME_CNT = 1
   const FRAME_RESET = 0
+<<<<<<< HEAD
 
   manualRrafId = requestAnimationFrame(moveManualSlideRgiht)
   manualNum += FRAME_CNT
@@ -178,24 +195,31 @@ function moveManualSlideRgiht() {
 =======
   const slide = document.querySelector('.webtoon-slide')
   const slideImgs = slide.querySelector('.webtoon-slide__imgs')
+=======
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
 
-  manualRafId = requestAnimationFrame(moveManualSlideRgiht)
-  manualNum += 1
+  manualRrafId = requestAnimationFrame(moveManualSlideRgiht)
+  manualNum += FRAME_CNT
 
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
-    manualNum = 0
-    cancelAnimationFrame(manualRafId)
+    manualNum = FRAME_RESET
+    cancelAnimationFrame(manualRrafId)
   } else if (manualNum === ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0s'
     slideImgs.style.transform = `translate3d(0px, 0px, 0px)`
+<<<<<<< HEAD
     pos = 0
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
+=======
+    pos = START_POS
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
   }
 }
 
 function moveManualSlideLeft() {
   const ANIMATION_SEC = 60 * 0.5
+<<<<<<< HEAD
 <<<<<<< HEAD
   const START_POS = 0
   const FRAME_CNT = 1
@@ -271,44 +295,74 @@ export function moveAutoSlide() {
 }
 =======
   const slideImgs = document.querySelector('.webtoon-slide__imgs')
+=======
+  const START_POS = 0
+  const FRAME_CNT = 1
+  const END_POS = -2880
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
 
-  manualLafId = requestAnimationFrame(moveManualSlideLeft)
-  manualNum += 1
+  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+
+  manualLrafId = requestAnimationFrame(moveManualSlideLeft)
+  manualNum += FRAME_CNT
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
-    manualNum = 0
-    cancelAnimationFrame(manualLafId)
+    manualNum = START_POS
+    cancelAnimationFrame(manualLrafId)
   } else if (manualNum === ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0s'
-    slideImgs.style.transform = `translate3d(-2880px, 0px, 0px)`
-    pos = -2880
+    slideImgs.style.transform = `translate3d(${END_POS}px, 0px, 0px)`
+    pos = END_POS
   }
 }
 
-export function moveAutoSlide() {
-  const ANIMATION_SEC = 60 * 0.5
+function moveAutoSlideStartPos() {
+  const slideNum = document.querySelector('.webtoon-slide__number')
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
 
-  console.log(slideImgs)
+  const SLIDE_START_NUM = 1
+  const SLIDE_END_NUM = 5
+  const SLIDE_CNT = 1
+  const IMG_WIDTH = 720
+  const S_HALF_MS = 500
+  const START_POS = 0
+
+  const start = new Date().getTime()
+
+  if (sNum < SLIDE_END_NUM) {
+    sNum += SLIDE_CNT
+    pos -= IMG_WIDTH
+    slideImgs.style.transition = 'all 0.5s'
+    slideImgs.style.transform = `translate3d(${pos}px, 0px, 0px)`
+  } else if (sNum === SLIDE_END_NUM) {
+    sNum = SLIDE_START_NUM
+    pos -= IMG_WIDTH
+    slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
+
+    function rafCallback() {
+      const resetRafId = requestAnimationFrame(rafCallback)
+      if (new Date().getTime() > start + S_HALF_MS) {
+        slideImgs.style.transition = 'all 0s'
+        pos = START_POS
+        slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
+        cancelAnimationFrame(resetRafId)
+      }
+    }
+    rafCallback()
+  }
+
+  slideNum.textContent = `${sNum} / ${SLIDE_END_NUM}`
 }
 
-// function moveAutoSlide() {
-//   const ANIMATION_SEC = 180
-//   const slideImgs = document.querySelector('.webtoon-slide__imgs')
+export function moveAutoSlide() {
+  const MS = 1000
 
-//   autoRafId = requestAnimationFrame(moveAutoSlide)
-//   autoNum += 1
-//   if (autoNum === ANIMATION_SEC) {
-//     if (pos > -720 * 5) {
-//       slideImgs.style.transition = 'all 0.5s'
-//       pos -= 720
-//     }
-//     slideImgs.style.transform = `translate3d(${pos}px, 0px, 0px)`
-//     autoNum = 0
+  let start = new Date().getTime()
 
-//     setSlideNum(-720)
-//   }
+  function rafCallback() {
+    requestAnimationFrame(rafCallback)
 
+<<<<<<< HEAD
 // function moveAutoSlideStart() {
 //   const ANIMATION_SEC = 60
 //   const slideImgs = document.querySelector('.webtoon-slide__imgs')
@@ -331,3 +385,12 @@ export default { setSlideImgStart, setSlideImg, setSlideBtn }
 =======
 // export default { setSlideImgStart, setSlideImg, setSlideBtn }
 >>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
+=======
+    if (new Date().getTime() > start + MS) {
+      start = new Date().getTime()
+      moveAutoSlideStartPos()
+    }
+  }
+  rafCallback()
+}
+>>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
