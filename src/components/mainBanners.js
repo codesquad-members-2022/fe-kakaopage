@@ -1,4 +1,3 @@
-import { SLIDE_LENGTH } from "../constant.js";
 import { getSildeButton } from "./sildeButton.js";
 
 const checkMainBannerTags = (dataEl) => {
@@ -8,9 +7,9 @@ const checkMainBannerTags = (dataEl) => {
     return status + category + readerNum;
 }
 
-const getMainBannerTemp = (dataEl) => {
+const getMainBannerTemp = (dataEl, className) => {
   return (
-    `<li class="main-banner">
+    `<li class="main-banner ${className}">
         <a href="${dataEl.link}" class="main-banners__link">
             <div class="main-banner__img-wrap">
                 <img src="${dataEl.imgUrl}" alt="${dataEl.title} 포스터">
@@ -28,10 +27,10 @@ const getMainBannerTemp = (dataEl) => {
 }
 
 const getMainBannersTemp = (data) => {
-    let mainBannerList = '';
-    for (let i = 0; i < SLIDE_LENGTH; i++) {
-        mainBannerList += `${getMainBannerTemp(data[i])}\n`
-    }
+    let mainBannerList =
+    getMainBannerTemp(data[data.length - 1], 'prev-slide')
+    + getMainBannerTemp(data[0], 'current-slide')
+    + getMainBannerTemp(data[1], 'next-slide');
     return (
         `<div class="main-banners slider">
             <ul class="main-banners__contents slide-wrap">
