@@ -1,5 +1,5 @@
 // ============== renderMain 관련 데이터 ==============
-import {containerInfo} from './data/containerInfoData.js'
+import {homeContainerInfo} from './data/containerInfoData.js'
 import {todayWebtoonsData} from './data/todayWebtoons.js'
 import mainBannerData from './data/json/mainBannerData.json' assert { type: "json"} ;
 // ============== renderHome 관련 모듈 ==============
@@ -14,8 +14,7 @@ function renderMain(tab) {
   const tabInfo = {
     home: {
       func: renderHome,
-      data: todayWebtoonsData,
-      layoutInfo : containerInfo,
+      data : homeContainerInfo,
     },
     daily: {
       func: renderDaily,
@@ -23,15 +22,15 @@ function renderMain(tab) {
     }
   }
 
-  tabInfo[tab].func(tab, tabInfo[tab].data, tabInfo[tab].layoutInfo);
+  tabInfo[tab].func(tab, tabInfo[tab].data);
 }
 
-function renderHome(tab, data, layoutInfo) {
+function renderHome(tab, homeInfo) {
   renderMainBanner(mainBannerData[tab]);
   renderPromotionBanner();
 
-  for (let i in layoutInfo) {
-    renderContainer(layoutInfo[i].class, layoutInfo[i].title, layoutInfo[i].items, layoutInfo[i].layout, data);
+  for (let i in homeInfo) {
+    renderContainer(homeInfo[i].class, homeInfo[i].title, homeInfo[i].items, homeInfo[i].layout, homeInfo[i].data, tab);
   }
 
   renderMoveApp();
