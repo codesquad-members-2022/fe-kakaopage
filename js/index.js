@@ -85,15 +85,26 @@ const bindCaroulselEvent = () => {
     let carouselImgIdx = 1;
     let isClickable = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
+    const pager = $(".cover-image").querySelector(".page");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
-    const clonedNodeCnt = 2;
+    const clonedNodeCnt = [...carouselItems].filter(
+        (el) => el.dataset.clone
+    ).length;
+    const imageCnt = carouselItems.length - clonedNodeCnt;
     const transitionDuration = "0.3s";
     const autoCarouselDelay = 2500;
     const customTransition = `transform ${transitionDuration} ease-out`;
 
+    const setPage = () => {
+        const curPage = carouselImgIdx > imageCnt ? imageCnt : carouselImgIdx;
+        pager.innerText = `${curPage} / ${imageCnt}`;
+    };
+    setPage();
+
     const setTransition = (transition) => {
         carouselItemWrapper.style.transition = transition;
+        setPage();
     };
 
     const setTransform = (carouselImgIdx) => {
