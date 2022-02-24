@@ -43,17 +43,12 @@
 /* ======== main_banner ======== */
 .main__banner {
   width: 720px;
+  height: 480px;
   overflow: hidden;
 }
+
 .main__banner .banner__list {
   transition: transform 0.5s;
-}
-
-.main__banner .banner__item {
-    /* 이미지 삽입시 삭제할 영역 */
-  width: 720px;
-  height: 480px;
-  background-color: coral;
 }
 
 .main__banner .banner__img {
