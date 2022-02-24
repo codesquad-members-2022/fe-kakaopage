@@ -2,38 +2,24 @@ import { $ } from "./utils.js";
 const slides = $(".main-ad-banner__img-container");
 const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
 const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
-const slideSpeed = 0.2;
-const delay = slideSpeed * 1000;
+const slideSpeed = 0.3;
+const sec = 1000;
+const containerWidth = slideWidth * slideImg.length;
+const delay = slideSpeed * sec;
 const initPosition = 0;
-const time = 3000;
-
-const clickFlag = {
-  value: false,
-  setTrue() {
-    this.value = true;
-  },
-  setFalse() {
-    this.value = false;
-  },
-  isTrue() {
-    return !!this.value;
-  },
-};
-
+const autoTime = 2 * sec;
 const position = {
   value: -slideWidth,
   setValue(newValue) {
     this.value = newValue;
   },
 };
-
 const timerInterval = () => {
   return setInterval(() => {
     playEvent();
     isEnd();
-  }, time);
+  }, autoTime);
 };
-
 const autoPlay = {
   timer: timerInterval(),
   start() {
@@ -52,18 +38,12 @@ const makingClone = () => {
 };
 
 const returnOriginSlide = () => {
-  if (position.value >= initPosition)
-    position.setValue(-slideWidth * slideImg.length);
-  else if (position.value < -slideWidth * slideImg.length)
-    position.setValue(-slideWidth);
+  if (position.value >= initPosition) position.setValue(-containerWidth);
+  else if (position.value < -containerWidth) position.setValue(-slideWidth);
 };
 
 const isEnd = () => {
-  if (
-    position.value < initPosition &&
-    position.value > -slideWidth * slideImg.length
-  )
-    return;
+  if (position.value < initPosition && position.value > -containerWidth) return;
   returnOriginSlide();
   const slideSpeed = initPosition;
   setTimeout(() => {
@@ -91,14 +71,11 @@ const playEvent = (btnEvent) => {
 };
 
 export const slideShow = (e) => {
-  if (clickFlag.isTrue()) return;
-  clickFlag.setTrue();
   autoPlay.stop();
   autoPlay.start();
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
   isEnd();
-  clickFlag.setFalse();
 };
 
 makingClone();
