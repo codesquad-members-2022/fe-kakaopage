@@ -1,59 +1,69 @@
-import { $ } from './selector.js';
+import { $ } from "./selector.js";
 
 const imageBoxContainer = $(".image-box-container");
-const containerBox = imageBoxContainer.querySelector(".image-box-container__box");
+const containerBox = imageBoxContainer.querySelector(
+  ".image-box-container__box"
+);
 const imageBoxInfo = imageBoxContainer.querySelector(".image-box__page-info");
-const lastIdx = containerBox.childElementCount*100 - 100;
-const IMAGE_CNT = lastIdx/100 -1;
 const TRANSLATE_RANGE = 100;
+const lastIdx =
+  containerBox.childElementCount * TRANSLATE_RANGE - TRANSLATE_RANGE;
+const IMAGE_CNT = lastIdx / TRANSLATE_RANGE - 1;
+const SLIDER_INTERVAL = 2000;
+const TRANSITION_INTERVAL = 100;
 
-const nextImage = () =>{
+const nextImage = () => {
   let classArray = containerBox.className.split(" ");
   let transformRange = Number(classArray[1].split("-")[1]);
-  containerBox.className = `image-box-container__box translateX-${transformRange+TRANSLATE_RANGE} transition-ease-in-out-sec`;
+  containerBox.className = `image-box-container__box translateX-${
+    transformRange + TRANSLATE_RANGE
+  } transition-ease-in-out-millisecond`;
   classArray = containerBox.className.split(" ");
-  if (classArray[1] === `translateX-${lastIdx}`){
+  if (classArray[1] === `translateX-${lastIdx}`) {
     setTimeout(() => {
       containerBox.className = `image-box-container__box translateX-${TRANSLATE_RANGE}`;
-    transformRange = 0;
-    },1000)
+      transformRange = 0;
+    }, TRANSITION_INTERVAL);
   }
-  let nextImgCnt = transformRange/100 + 1;
-  if (nextImgCnt >IMAGE_CNT) nextImgCnt = 1;
-  imageBoxInfo.innerHTML = `${nextImgCnt} / ${IMAGE_CNT}`
+  let nextImgCnt = transformRange / TRANSLATE_RANGE + 1;
+  if (nextImgCnt > IMAGE_CNT) nextImgCnt = 1;
+  imageBoxInfo.innerHTML = `${nextImgCnt} / ${IMAGE_CNT}`;
   clearInterval(bannerTimer);
-  bannerTimer = setInterval(()=>{
+  bannerTimer = setInterval(() => {
     nextImage();
-  },3000);
-}
+  }, SLIDER_INTERVAL);
+};
 
-const prevImage = () =>{
+const prevImage = () => {
   let classArray = containerBox.className.split(" ");
   let transformRange = Number(classArray[1].split("-")[1]);
-  containerBox.className = `image-box-container__box translateX-${transformRange-TRANSLATE_RANGE} transition-ease-in-out-sec`;
+  containerBox.className = `image-box-container__box translateX-${
+    transformRange - TRANSLATE_RANGE
+  } transition-ease-in-out-millisecond`;
   classArray = containerBox.className.split(" ");
-  if (classArray[1] === `translateX-${0}`){
+  if (classArray[1] === `translateX-${0}`) {
     setTimeout(() => {
-      transformRange = lastIdx-TRANSLATE_RANGE;
+      transformRange = lastIdx - TRANSLATE_RANGE;
       containerBox.className = `image-box-container__box translateX-${transformRange}`;
-    },1000);
+    }, TRANSITION_INTERVAL);
   }
-  let prevImgCnt = transformRange/100 - 1;
+  let prevImgCnt = transformRange / TRANSLATE_RANGE - 1;
   if (prevImgCnt === 0) prevImgCnt = IMAGE_CNT;
-  imageBoxInfo.innerHTML = `${prevImgCnt} / ${IMAGE_CNT}`
+  imageBoxInfo.innerHTML = `${prevImgCnt} / ${IMAGE_CNT}`;
   clearInterval(bannerTimer);
-  bannerTimer = setInterval(()=>{
+  bannerTimer = setInterval(() => {
     nextImage();
-  },3000);
-}
+  }, SLIDER_INTERVAL);
+};
 
-
-let bannerTimer = setInterval(()=>{
+let bannerTimer = setInterval(() => {
   nextImage();
-},3000);
-
+}, SLIDER_INTERVAL);
 
 imageBoxContainer.addEventListener("click", (evt) => {
-  if(evt.target.parentNode.className === "image-box__rightbutton") {nextImage()}
-  else if (evt.target.parentNode.className === "image-box__leftbutton"){prevImage()};
-})
+  if (evt.target.parentNode.className === "image-box__rightbutton") {
+    nextImage();
+  } else if (evt.target.parentNode.className === "image-box__leftbutton") {
+    prevImage();
+  }
+});
