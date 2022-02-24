@@ -23,6 +23,7 @@
     font-size: 20px;
     color: var(--main-lightgray);
     text-align: center;
+    cursor: pointer;
 }
 
 .menu-on {
@@ -30,11 +31,24 @@
 }
 
 .contents {
+    margin: 0 auto;
+    width: 50%;
     position: relative;
+    display: flex;
+}
+
+.contents__viewer {
+    width: 100%;
+    display: flex;
+}
+
+.contents__wrap {
+    position: relative;
+    width: 100%;
 }
 
 .contents__img {
-    width: 100%;
+    width: 647.7px;
     display: block;
 }
 
@@ -143,7 +157,8 @@
     width: 45px;
     background-color: inherit;
     font-size: 19px;
-    color: var(--main-lightgray)
+    color: var(--main-lightgray);
+    cursor: pointer;
 }
 
 .daily__button-on {

@@ -1,7 +1,7 @@
 
 import { select, addClass, removeClass } from "./util.js";
 import { initWebtoonDaily } from "./webtoon_daily.js";
-import { createContents, createCategory } from "./webtoon_contents.js";
+import { initContents, createCategory } from "./webtoon_contents.js";
 import { createRecommend } from "./webtoon_recommend.js";
 
 function createMainNav() {
@@ -71,18 +71,18 @@ function clearMenu() {
 }
 
 function renderHome() {
-    createContents();
+    initContents();
     createCategory();
     initWebtoonDaily();
 }
 
 function renderDaily() {
-    createContents();
+    initContents();
     initWebtoonDaily();
 }
 
 function renderGenre(genre) {
-    createContents();
+    initContents();
     createRecommend(genre)
 }
 
