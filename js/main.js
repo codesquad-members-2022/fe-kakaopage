@@ -105,14 +105,20 @@ navTabs.forEach((tab) => {
 const prev = document.querySelector("#eventSlidePrevBtn");
 const next = document.querySelector("#eventSlideNextBtn");
 const eventSlideWrap = document.querySelector("#eventSlideId");
-console.log(eventSlideWrap);
 const itemWidth = 720;
 let currentWidth = 0;
+let curEventPage = document.querySelector("#curEventPage");
+let curPage = 1;
+console.log(curPage);
 next.addEventListener("click", function () {
   currentWidth -= itemWidth;
   eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
+  curPage += 1;
+  curEventPage.textContent = curPage;
 });
 prev.addEventListener("click", function () {
   currentWidth += itemWidth;
   eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
+  curPage -= 1;
+  curEventPage.textContent = curPage;
 });
