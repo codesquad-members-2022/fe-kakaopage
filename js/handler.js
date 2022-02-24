@@ -1,6 +1,11 @@
 import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
+<<<<<<< HEAD
 import { addEvent } from "./event.js";
 import { render } from "./render.js";
+=======
+import { addEventGNB, addEventSNB } from "./event.js";
+import { render, setSelectedSNB } from "./render.js";
+>>>>>>> step3
 import { $ } from "./utils.js";
 
 export function GNBHandler(e) {
@@ -16,6 +21,7 @@ export function GNBHandler(e) {
   parentClass.add(selected);
 
   if (e.target.dataset.name === "홈") {
+<<<<<<< HEAD
     render("홈");
     return;
   }
@@ -38,11 +44,40 @@ export function GNBHandler(e) {
   }
   if (e.target.dataset.name === "책") {
     render("책");
+=======
+    render({ to: ".contents", el: "홈" });
+    return;
+  }
+  if (e.target.dataset.name === "웹툰") {
+    render({ to: ".contents", el: createTabWebtoonHome() });
+    setSelectedSNB();
+    addEventSNB();
+    return;
+  }
+  if (e.target.dataset.name === "웹소설") {
+    render({ to: ".contents", el: "웹소설" });
+    return;
+  }
+  if (e.target.dataset.name === "영화") {
+    render({ to: ".contents", el: "영화" });
+    return;
+  }
+  if (e.target.dataset.name === "방송") {
+    render({ to: ".contents", el: "방송" });
+    return;
+  }
+  if (e.target.dataset.name === "책") {
+    render({ to: ".contents", el: "책" });
+>>>>>>> step3
     return;
   }
 }
 
+<<<<<<< HEAD
 export function SNBHander(e) {
+=======
+export function SNBHandler(e) {
+>>>>>>> step3
   const selected = "snb__selected";
   const isList = e.target.tagName === "LI";
   const isSelected = e.target.classList.contains(selected);

@@ -145,17 +145,40 @@ export function createBanner({ size, title, status, type, views, ad }) {
 </body>
 ```
 
+<<<<<<< HEAD
 1. contents에 innerHTML 메소드를 활용하여 DOM 교체
 2. 모든 탭을 미리 그려놓고 display: none 으로 숨겨놓기
    - 페이지의 매우 크다면 문제가 될 것 같기는 한데 그 적정선은 어디일까?
 
 - 위의 2가지 방법 이외에도 다른 방법이 있을까?
 - 지난 주 PR 훑어보고 공통적인 피드백 적용하기.
+=======
+#### snb의 탭 이동
+
+- contents에 innerHTML을 갱신하는 방법으로 랜더링.
+- snb가 contents의 하위 엘리먼트.
+- snb도 리랜더링됨.
+  - 탭을 이동할때마다 이벤트 등록을 snb에 다시 해줘야 하는 상황.
+- snb를 contents 상위로 분리하면 될 것 같다.
+
+#### 이벤트를 언제 왜 삭제해주어야 하는가?
+
+- DOM에서 엘리먼트를 제거하고 나면 추가했던 이벤트는 사라지는 것 같다.
+  - `getEventListeners(...)`
+- 그럼 이벤트 삭제를 언제 왜 해주어야 할까?
+  - 일정 조건을 달성하면 더이상 필요없는 이벤트일때?
+  - 탭 이동을 구현할 때 필요한가?
+>>>>>>> step3
 
 ### 학습 정리
 
 #### Flexbox 사용법
 
+<<<<<<< HEAD
+=======
+https://d2.naver.com/helloworld/8540176
+
+>>>>>>> step3
 #### commit 로그를 작성하는 좋은 사례
 
 #### HTML 시멘틱 태그
