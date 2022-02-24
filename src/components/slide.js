@@ -1,4 +1,4 @@
-import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH } from '../constant.js'
+import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH, AUTO_SLIDE_INTERVAL } from '../constant.js'
 import { icons } from '../data/icons.js'
 
 export const getSlideBtnTemplate = () => {
@@ -29,29 +29,31 @@ export const activateBtns = (parentElement) => {
     const nextBtn = parentElement.querySelector('.slide__btn--next');
     prevBtn.addEventListener('click', moveToPrev);
     nextBtn.addEventListener('click', moveToNext);
-    const container = document.querySelector('.main-banner__contents');
 }
 
 export const activateAutoSlide = (parentElement) => {
-
+    setInterval(() => {
+        moveSlide(parentElement, 'next');
+    }, AUTO_SLIDE_INTERVAL)
 }
 
 const moveToNext = (event) => {
-    moveSlide(event, 'next');
+    moveSlide(event.target, 'next');
 }
 
 const moveToPrev = (event) => {
-    moveSlide(event, 'prev');
+    moveSlide(event.target, 'prev');
 }
 
-const moveSlide = (e, direction) => {
-    const slidesDiv = e.target.closest('.slides');
+const moveSlide = (slideElement, direction) => {
+    const slidesDiv = slideElement.closest('.slides');
     const container = slidesDiv.querySelector('ul');
     const containerWidth = getComputedStyle(container).width; 
     const slideWidth = `${parseInt(containerWidth , 10) / SLIDE_CONTAINER_LENGTH}px`;
-    container.style.transition = `${SLIDE_DELAY} ease-out`;
     const currSlide = direction === 'prev' ? container.firstElementChild : container.lastElementChild;
+    
     currSlide.classList.add('curr-slide');
+    container.style.transition = `${SLIDE_DELAY} ease-out`;
     container.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
 }
 

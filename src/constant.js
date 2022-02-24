@@ -6,3 +6,4 @@ const week = ['sun','mon','tue','wed','thr','fri','sat']
 export const DEFAULT_DAY = week[new Date().getDay()];
 export const SLIDE_DELAY = '.5s'
 export const SLIDE_CONTAINER_LENGTH = 3;
+export const AUTO_SLIDE_INTERVAL = 3000;
