@@ -1,6 +1,6 @@
 import CategoryList from "./screens/Components/CategoryList.js";
 import Category from "./screens/Components/Category.js";
-import { getJson, getJsons } from "./utils.js";
+import { getJsons } from "./utils.js";
 import GenreList from "./screens/Components/GenreList.js";
 import HomeGenre from "./screens/Webtoon/genre/HomeGenre.js";
 
