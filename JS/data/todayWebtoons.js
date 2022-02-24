@@ -1,11 +1,10 @@
-import {dailyTopData} from './scrape/dailyTopData.js'
+import dailyTopData from './json/dailyTopData.json' assert { type: "json"} ;
 
 const getToday = (data) => {
   const today = new Date().getDay();
   const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-  const filterData = data.filter((el) => el.day.includes(day[today]) && !(el.review.includes('위')));
 
-  return filterData;
+  return data[day[today]];
 }
 
 const todayWebtoonsData = getToday(dailyTopData);

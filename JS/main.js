@@ -1,8 +1,8 @@
-import {renderMain} from './render.js'
-import {dailyTopData} from './data/scrape/dailyTopData.js'
-import {makeWebtoonList} from './components/webtoonList.js'
-import {eventMainBanner} from './slider.js'
-import {$, $all} from './utility.js'
+import dailyTopData from './data/json/dailyTopData.json' assert { type: "json"} ;
+import {renderMain} from './render.js';
+import {makeWebtoonList} from './components/webtoonList.js';
+import {eventMainBanner} from './slider.js';
+import {$, $all} from './utility.js';
 
 const setFocus = (target, className) => {
   const focused = $(`.${className}`);
@@ -57,22 +57,13 @@ const clickDailyTopList = (data) => {
       const topContainer = event.target.closest('.select__day').parentNode;
       topContainer.removeChild($('.webtoons__list'));
 
-      const filterData = selectDailyWebtoonData(parentNode, data);
       const DAILY_ITEMS = 10; 
-      const newList = makeWebtoonList(DAILY_ITEMS, filterData);
+      const targetDay = event.target.parentNode.dataset.day;
+      const newList = makeWebtoonList(DAILY_ITEMS, data[targetDay]);
       
       topContainer.appendChild(newList);
     })
   })
-}
-
-const selectDailyWebtoonData = (parentNode, data) => {
-  const select = parentNode.dataset.day;
-  const filterData = (select === 'end')
-    ? data
-    : data.filter((el) => el.day.includes(select) && !(el.review.includes('위')));
-
-  return filterData;
 }
 
 const clickBannerPrevBtn = () => {
