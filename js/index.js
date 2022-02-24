@@ -46,8 +46,9 @@ const renderHome = () => {
     renderCarousel();
 };
 
-const renderWeekday = (today = "월") => {
-    const weekday = new Weekday(weekdayData, today);
+const renderWeekday = (today = new Date().getDay()) => {
+    const days = ["일", "월", "화", "수", "목", "금", "토"];
+    const weekday = new Weekday(weekdayData, days[today]);
 
     let html = "";
     html += weekday.getHtml();
