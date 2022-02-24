@@ -1,5 +1,5 @@
 import Component from "../Component.js";
-import { createExtendsRelation } from "../../utils.js";
+import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
 
 import BigCard from "./BigCard.js";
 
@@ -11,12 +11,12 @@ function BigCardList() {
   const bigCards = wtForBigCard
     .sort((c1, c2) => c2.rank - c1.rank)
     .slice(0, 2)
-    .map((bigCardInfo) => new BigCard("_", bigCardInfo).template());
+    .map((bigCardInfo) => new BigCard("_", bigCardInfo));
 
   this.template = function () {
     return `
       <ul class="contentsBigCard">
-        ${bigCards.join("")}
+        ${getComponentsTemplate(bigCards)}
       </ul>`;
   };
 }

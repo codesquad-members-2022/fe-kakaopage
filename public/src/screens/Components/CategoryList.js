@@ -1,5 +1,9 @@
 import Component from "../Component.js";
-import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
+import {
+  createExtendsRelation,
+  getComponentsTemplate,
+  updateNodeClasses,
+} from "../../utils.js";
 
 function CategoryList(target) {
   Component.call(this, target);
@@ -19,12 +23,7 @@ function CategoryList(target) {
   };
 
   this.template = function () {
-    return `
-      ${this.state.categories?.reduce((tags, category) => {
-        tags += category.template();
-        return tags;
-      }, "")}
-    `;
+    return getComponentsTemplate(this.state.categories);
   };
 
   this.render();

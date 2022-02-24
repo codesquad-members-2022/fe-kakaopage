@@ -7,7 +7,11 @@ import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../Component.js";
-import { createExtendsRelation, updateNodeClasses } from "../../../utils.js";
+import {
+  createExtendsRelation,
+  updateNodeClasses,
+  getComponentsTemplate,
+} from "../../../utils.js";
 import DaysList from "../../Components/DaysList.js";
 import ContentsBox from "../../Components/ContentsBox.js";
 import FullButton from "../../Components/FullButton.js";

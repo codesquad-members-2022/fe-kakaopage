@@ -11,9 +11,9 @@ function DaysTop(target, state) {
       ${days
         .map(
           (day) =>
-            `<li class='daysNav-item${
-              koreaDay === day ? " selected" : ""
-            }'>${day}</li>`
+            `<li class='daysNav-item ${koreaDay === day ? " selected" : ""}'>
+              ${day}
+            </li>`
         )
         .join("")}
           </ul>

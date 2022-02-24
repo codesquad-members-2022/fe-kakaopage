@@ -1,12 +1,6 @@
-/**
- * Days Nav
- * CardList
- * CardList
- */
-
 import Card from "./Card.js";
 import Component from "../Component.js";
-import { createExtendsRelation } from "../../utils.js";
+import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
 
 function DaysList(target, state) {
   Component.call(this, target, state);
@@ -21,11 +15,8 @@ function DaysList(target, state) {
       this.state.count ? this.state.count : cardList.length
     );
 
-    const cards = sliceCardList.map((cardInfo) => {
-      const card = new Card("_", cardInfo);
-      return card.template();
-    });
-    return `${cards.join("")}`;
+    const cards = sliceCardList.map((cardInfo) => new Card("_", cardInfo));
+    return getComponentsTemplate(cards);
   };
 }
 
