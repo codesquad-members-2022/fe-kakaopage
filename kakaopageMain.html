@@ -63,29 +63,89 @@
 
     </div>
     <div class="section" id="sectionId">
-        <div class="eventButtons centerSort">
-            <div class="todayUp">
-                <div class="todayUpCopy">오늘 UP</div>
-                <div class="countNew">185</div>
+        <div class="event" id="eventId">
+            <div class="slideMoveBtn">
+                <img src="/FE/FE01-html/images/previous button.svg" alt="" id="eventSlidePrevBtn">
+                <img src="/FE/FE01-html/images/next button.svg" alt="" id="eventSlideNextBtn">
             </div>
-            <div class="todayNew">
-                <div class="todayNewCopy">오늘 신작</div>
-                <div class="countNew">10</div>
-            </div>
+            <div class="eventSlideWrap", id="eventSlideId">
+                <div class="eventSlideBox">
+                    <div class="eventSlide">
+                        <div class="eventSlideInfo">
+                            <div class="eventTitle" id="eventTitleId">${title}</div>
+                            <div class="eventInfoWrap", id="eventSlideWrapId">
+                                <div class="eventLeft">
+                                    <div class="eventStatusWrap heightCenterSort">
+                                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt=""
+                                            class="eventStatus">
+                                    </div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
+                                    <div class="eventGenreInfo">${genreInfo}</div>
+                                    <div class="eventSlash">|</div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt=""
+                                        class="readCountEvent">
+                                    <div class="eventFollow" id="eventFollowId">${follow}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgCopyWrap centerSort">
+                        <div class="imgCopy">확인하러 가기</div>
+                    </div>
+                </div>
+                <div class="eventSlideBox">
+                    <div class="eventSlide">
+                        <div class="eventSlideInfo">
+                            <div class="eventTitle" id="eventTitleId">${title}</div>
+                            <div class="eventInfoWrap">
+                                <div class="eventLeft">
+                                    <div class="eventStatusWrap heightCenterSort">
+                                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt=""
+                                            class="eventStatus">
+                                    </div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
+                                    <div class="eventGenreInfo">${genreInfo}</div>
+                                    <div class="eventSlash">|</div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt=""
+                                        class="readCountEvent">
+                                    <div class="eventFollow" id="eventFollowId">${follow}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgCopyWrap centerSort">
+                        <div class="imgCopy">확인하러 가기</div>
+                    </div>
+                </div>
+                <div class="eventSlideBox">
+                    <div class="eventSlide">
+                        <div class="eventSlideInfo">
+                            <div class="eventTitle" id="eventTitleId">${title}</div>
+                            <div class="eventInfoWrap">
+                                <div class="eventLeft">
+                                    <div class="eventStatusWrap heightCenterSort">
+                                        <img src="/FE/FE01-html/images/badge-bigthum-event.svg" alt=""
+                                            class="eventStatus">
+                                    </div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-wait.svg" class="clock"></img>
+                                    <div class="eventGenreInfo">${genreInfo}</div>
+                                    <div class="eventSlash">|</div>
+                                    <img src="/FE/FE01-html/images/ico-bigthum-person.svg" alt=""
+                                        class="readCountEvent">
+                                    <div class="eventFollow" id="eventFollowId">${follow}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgCopyWrap centerSort">
+                        <div class="imgCopy">확인하러 가기</div>
+                    </div>
+                </div>
 
-            <div class="original">
-                <div class="originalCopy">오리지널</div>
-                <div class="countNew">2,322</div>
             </div>
-            <div class="straightRun">
-                <div class="straightRunCopy">완결까지 정주행</div>
-            </div>
-            <div class="independence">
-                <div class="independenceCopy">독립운동가 웹툰</div>
-            </div>
-            <div class="todayLanking">
-                <div class="todayLankingCopy">오늘랭킹</div>
-                <div class="countNew centerSort">1위</div>
+            <div class="slideNum">
+                <div class="eventPageNum">1</div>
+                <div class="eventPageTotalNum">/3</div>
             </div>
         </div>
         <!-- <div class="waitForFreeWebtoon">
@@ -207,7 +267,7 @@
                 <div class="day thursday">목</div>
                 <div class="day friday">금</div>
                 <div class="day saturday"">토</div>
-                <div class="day sunday">일</div>
+                <div class=" day sunday">일</div>
                 <div class="day theEnd">완결</div>
             </div>
             <div class="weekdayContentWrap" id="weekdayContentWrapId">

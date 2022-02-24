@@ -38,8 +38,10 @@ function renderEvent(genreInfo) {
     }
   }
   const event = `
-  <div class="event">
-  <div class="eventSlide" id="eventSlideId">
+  <div class="event" id = "eventId">
+  <div className="eventSlideWrap">
+  <div className="eventSlideBox">
+  <div class="eventSlide">
       <div class="eventSlideInfo">
           <div class="slideMoveBtn">
               <img src="/FE/FE01-html/images/previous button.svg" alt="">
@@ -68,8 +70,41 @@ function renderEvent(genreInfo) {
       <div class="imgCopy">확인하러 가기</div>
   </div>
 </div>
+</div>
+</div>
   `;
   const genreBar = document.querySelector("#webtoonGenresWrap");
   genreBar.insertAdjacentHTML("afterend", event);
 }
-export { renderWebtoonGenreBar, renderEvent };
+function renderEventButtons() {
+  const eventButtons = `
+  <div class="eventButtons centerSort">
+  <div class="todayUp">
+      <div class="todayUpCopy">오늘 UP</div>
+      <div class="countNew">185</div>
+  </div>
+  <div class="todayNew">
+      <div class="todayNewCopy">오늘 신작</div>
+      <div class="countNew">10</div>
+  </div>
+
+  <div class="original">
+      <div class="originalCopy">오리지널</div>
+      <div class="countNew">2,322</div>
+  </div>
+  <div class="straightRun">
+      <div class="straightRunCopy">완결까지 정주행</div>
+  </div>
+  <div class="independence">
+      <div class="independenceCopy">독립운동가 웹툰</div>
+  </div>
+  <div class="todayLanking">
+      <div class="todayLankingCopy">오늘랭킹</div>
+      <div class="countNew centerSort">1위</div>
+  </div>
+</div>
+  `;
+  const event = document.querySelector("#eventId");
+  event.insertAdjacentHTML("afterend", eventButtons);
+}
+export { renderWebtoonGenreBar, renderEvent, renderEventButtons };

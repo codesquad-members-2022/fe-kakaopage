@@ -3,13 +3,11 @@
   padding: 160px 0 0 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-
-  /* border: 1px solid black; */
 }
 .section > * {
-  width: 100%;
-  height: 100px;
+  width: 720px;
   margin: 11px 0 0 0;
   box-sizing: border-box;
   padding: 0 20px 0 20px;
@@ -55,29 +53,57 @@
 .event {
   height: 520px;
   padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.eventSlideWrap {
+  width: 720px;
+  display: flex;
+  transition: 0.5s;
+}
+.slideMoveBtn {
+  position: absolute;
+  width: 680px;
+  top: 240px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.slideMoveBtn > * {
+  color: #eee;
+}
+.slideNum {
+  position: absolute;
+  display: flex;
+  bottom: 90px;
+  right: 50px;
+  z-index: 12;
+}
+.slideNum > * {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.eventSlideBox {
+  height: 480px;
 }
 .eventSlide {
   height: 440px;
-  width: 100%;
-  background-image: url("/FE/FE01-html/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png");
+  width: 720px;
+  background-image: url("/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 20px;
-  position: relative;
+  /* position: relative; */
 }
-.slideMoveBtn {
-  position: absolute;
-  width: 680px;
-  bottom: 200px;
-  display: flex;
-  justify-content: space-between;
-}
-.slideMoveBtn > * {
-  color: #eee;
-}
+
 .eventSlideInfo {
   height: 75px;
 }
@@ -131,15 +157,7 @@
 .eventFollow {
   margin: 0 0 1px 4px;
 }
-.eventRight {
-  display: flex;
-}
-.eventRight > * {
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: bold;
-  opacity: 0.6;
-}
+
 .imgCopyWrap {
   height: 40px;
   width: 100%;
@@ -148,6 +166,7 @@
 }
 .imgCopy {
   font-size: 18px;
+  font-weight: bold;
 }
 .eventButtons {
   height: 161px;

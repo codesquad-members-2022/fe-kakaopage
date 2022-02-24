@@ -1,11 +1,16 @@
 import datas from "./data.js";
-import { renderWebtoonGenreBar, renderEvent } from "./section.js";
+import {
+  renderWebtoonGenreBar,
+  renderEvent,
+  renderEventButtons,
+} from "./section.js";
 const weekdayContents = datas.weekdayContents;
 const eventContents = datas.eventContents;
 const sectionContents = datas.sectionContents;
 function init() {
   renderWebtoonGenreBar();
-  renderEvent("웹툰");
+  // renderEvent("웹툰");
+  renderEventButtons();
 }
 init();
 function changeTabsColor(target) {
@@ -43,14 +48,15 @@ function changeDayAndContents(target) {
 }
 function changeEventSlideContents(target) {
   const genre = target.textContent;
-  const slide = document.querySelector("#eventSlideId");
+  const slide = document.querySelector(".eventSlideId");
   const eventTitle = document.querySelector("#eventTitleId");
   const eventFollow = document.querySelector("#eventFollowId");
+  let imageUrl, title, follow;
   eventContents.map((content) => {
     if (genre.trim() === content.genre) {
-      const imageUrl = content.imgsrc;
-      const title = content.title;
-      const follow = content.follow;
+      imageUrl = content.imgsrc;
+      title = content.title;
+      follow = content.follow;
     }
   });
   slide.style.backgroundImage = `url('${imageUrl}')`;
@@ -94,4 +100,19 @@ navTabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
     changeBorderColor(e.currentTarget);
   });
+});
+
+const prev = document.querySelector("#eventSlidePrevBtn");
+const next = document.querySelector("#eventSlideNextBtn");
+const eventSlideWrap = document.querySelector("#eventSlideId");
+console.log(eventSlideWrap);
+const itemWidth = 720;
+let currentWidth = 0;
+next.addEventListener("click", function () {
+  currentWidth -= itemWidth;
+  eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
+});
+prev.addEventListener("click", function () {
+  currentWidth += itemWidth;
+  eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
 });
