@@ -82,76 +82,81 @@ const bindSubMenuEvent = () => {
 };
 
 const bindCaroulselEvent = () => {
-    let clickCnt = 1;
-    let clickFlag = true;
+    let carouselImgIdx = 1;
+    let isClickable = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = 2;
     const transitionDuration = "0.3s";
+    const autoCarouselDelay = 2500;
     const customTransition = `transform ${transitionDuration} ease-out`;
 
-    const autoCarouselHandler = () => {
-        if (!clickFlag) return;
-        clickCnt++;
-        carouselItemWrapper.style.transition = customTransition;
-        carouselItemWrapper.style.transform = `translateX(${
-            -imageWidth * clickCnt
-        }px)`;
-        clickFlag = false;
+    const setTransition = (transition) => {
+        carouselItemWrapper.style.transition = transition;
     };
 
-    let startCarousel = setInterval(autoCarouselHandler, 4000);
+    const setTransform = (carouselImgIdx) => {
+        carouselItemWrapper.style.transform = `translateX(${
+            -imageWidth * carouselImgIdx
+        }px)`;
+    };
+
+    const autoCarouselHandler = () => {
+        if (!isClickable) return;
+
+        carouselImgIdx++;
+        setTransition(customTransition);
+        setTransform(carouselImgIdx);
+
+        isClickable = false;
+    };
+
+    let autoCarousel = setInterval(autoCarouselHandler, autoCarouselDelay);
 
     $(".cover-image").addEventListener("click", ({ target }) => {
         if (!target.classList.contains("button")) return;
-        clearInterval(startCarousel);
-        startCarousel = setInterval(autoCarouselHandler, 4000);
+        clearInterval(autoCarousel);
+        autoCarousel = setInterval(autoCarouselHandler, autoCarouselDelay);
 
-        if (!clickFlag) return;
+        if (!isClickable) return;
         if (target.closest(".btn-left")) {
-            clickCnt--;
-            carouselItemWrapper.style.transition = customTransition;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
-            clickFlag = false;
+            carouselImgIdx--;
+            setTransition(customTransition);
+            setTransform(carouselImgIdx);
+
+            isClickable = false;
             return;
         }
         if (target.closest(".btn-right")) {
-            clickCnt++;
-            carouselItemWrapper.style.transition = customTransition;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
-            clickFlag = false;
+            carouselImgIdx++;
+
+            setTransition(customTransition);
+            setTransform(carouselImgIdx);
+            isClickable = false;
             return;
         }
     });
 
     $(".cover-image").addEventListener("transitionend", () => {
-        clickFlag = true;
+        isClickable = true;
         const maxCnt = carouselItems.length - 1;
-        if (clickCnt > maxCnt) {
-            clickCnt = maxCnt;
+        if (carouselImgIdx > maxCnt) {
+            carouselImgIdx = maxCnt;
         }
 
-        if (!carouselItems[clickCnt].dataset.clone) return;
+        if (!carouselItems[carouselImgIdx].dataset.clone) return;
 
-        if (carouselItems[clickCnt].dataset.clone === "last") {
-            carouselItemWrapper.style.transition = "none";
-            clickCnt = carouselItems.length - clonedNodeCnt;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
+        if (carouselItems[carouselImgIdx].dataset.clone === "last") {
+            carouselImgIdx = carouselItems.length - clonedNodeCnt;
+            setTransition("none");
+            setTransform(carouselImgIdx);
             return;
         }
-        if (carouselItems[clickCnt].dataset.clone === "first") {
-            carouselItemWrapper.style.transition = "none";
-            clickCnt = carouselItems.length - clickCnt;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
+        if (carouselItems[carouselImgIdx].dataset.clone === "first") {
+            carouselImgIdx = carouselItems.length - carouselImgIdx;
+            setTransition("none");
+            setTransform(carouselImgIdx);
             return;
         }
     });
