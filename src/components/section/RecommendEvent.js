@@ -1,4 +1,4 @@
-import { ContentsHeader, EventBannerList } from '../index.js';
+import { ContentsHeader, BannerList } from '../index.js';
 import { EventBanners } from '../../data';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 import { bannerCallback } from '../../js';
@@ -11,7 +11,7 @@ const RecommendEvent = () => {
           `<section class="contents recommend-event">
             ${ContentsHeader(title)}
             <div class="event-banner-wrapper" data-banner="event">
-              ${EventBannerList(EventBanners)}
+              ${BannerList('event', EventBanners)}
               <p class="banner-count">
                 <span class="current">1</span> / 
                 <span class="total">${EventBanners.length}</span>

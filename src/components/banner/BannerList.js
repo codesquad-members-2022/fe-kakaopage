@@ -1,11 +1,13 @@
-import { BannerItem, SubBannerItem } from '../index.js';
+import { BannerItem, SubBannerItem, EventBannerItem } from '../index.js';
 
 const BannerList = (list, bannerList) => {
+
   return `<ul class="banner-container">
             ${bannerList.reduce((prev, cur) => {
-              return prev += list === 'main' ?
-                BannerItem(cur) :
-                SubBannerItem(cur);
+              if (list === 'main') prev += BannerItem(cur);
+              else if (list === 'sub') prev += SubBannerItem(cur);
+              else prev += EventBannerItem(cur);
+              return prev;
             }, '')}
           </ul>`;
 };
