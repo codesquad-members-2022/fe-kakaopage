@@ -46,7 +46,7 @@ const categoryState = {
   },
 };
 
-const timer = {
+const sliderTimer = {
   timerId: null,
   setTimer(sec) {
     this.timerId = setInterval(() => {
@@ -71,7 +71,7 @@ const carouselSlider = new CarouselSlider({
   nextBtnEl: document.querySelector(NEXT_BTN_SELECTOR),
   slideCurNumEl: document.querySelector(SLIDE_CUR_NUM_SELECTOR),
   slideLastNumEl: document.querySelector(SLIDE_LAST_NUM_SELECTOR),
-  timer: timer,
+  timer: sliderTimer,
 });
 
 const days = {
@@ -111,7 +111,7 @@ const main = () => {
       toggleHighlight(prevTarget, curTarget);
 
       // preview - 구현 후 함수 하나로 만들기
-      setPreviews({ previews, timer, slider: carouselSlider });
+      setPreviews({ previews, timer: sliderTimer, slider: carouselSlider });
 
       // tag list
       setTagListEl(categoryName);
