@@ -118,29 +118,17 @@ main {
   gap: 15px;
 }
 
-/*  */
 .main__home__nav {
   display: grid;
-  /* width: 680px; */
   height: 160px;
-  /* padding: 20px; */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 5px;
   column-gap: 5px;
-  /* justify-content: center;
-  align-items: center; */
-  /* background-color: #fff; */
 }
 
 .home__nav__menu {
-  /* width: 224px;
-  height: 56px; */
   background-color: #f3f3f3;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* 중복제거 */
 }
 
 .home__nav__container {
