@@ -12,6 +12,13 @@ const updateNodeClasses = (target, className) => {
   target.classList.add(className);
 };
 
+const getComponentsTemplate = (components) => {
+  return components?.reduce((tags, component) => {
+    tags += component.template();
+    return tags;
+  }, "");
+};
+
 const formatUserCount = (userCount) => {
   return (userCount / 10000).toFixed(1) + "만명";
 };
@@ -35,4 +42,5 @@ export {
   formatUserCount,
   createExtendsRelation,
   getJsons,
+  getComponentsTemplate,
 };
