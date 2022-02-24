@@ -10,4 +10,11 @@ const insertIntoMain = (component) => {
   $("main").insertAdjacentHTML("beforeend", component);
 };
 
-export { $, range, insertIntoMain };
+const getDay = () => {
+  const date = new Date();
+  const day = date.getDay();
+
+  return day;
+};
+
+export { $, range, insertIntoMain, getDay };

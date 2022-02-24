@@ -1,18 +1,50 @@
-import { insertIntoMain, range, $ } from "../utils.js";
+import { insertIntoMain, range, $, getDay } from "../utils.js";
 import { createWebtoonWithGrade, createWebtoonWithRank } from "./webtoon.js";
 import { dataOfDays } from "../data/home/days.js";
 
-const createDaysBlock = () => {
-  const date = new Date();
-  const day = date.getDay();
-
+const getDayWebtoon = (day) => {
+  const NUM_OF_WEBTOONS = 5;
   const webtoons = [];
-  range(5).forEach((_, idx) => {
+
+  range(NUM_OF_WEBTOONS).forEach((_, idx) => {
     webtoons.push(createWebtoonWithRank(dataOfDays[day], idx));
   });
-  range(5).forEach(() => {
+  range(NUM_OF_WEBTOONS).forEach(() => {
     webtoons.push(createWebtoonWithGrade(dataOfDays[day]));
   });
+
+  return webtoons.join("");
+};
+
+const underlineTodayTab = (day) => {
+  $(".nav-days ul").childNodes.forEach((it) => {
+    if (it.nodeType === 1 && it.dataset.day === String(day)) {
+      it.classList.add("current-tab", "underline-thin", "text-color--black");
+    }
+  });
+};
+
+const addDaysEvL = () => {
+  $(".nav-days").addEventListener("click", ({ target }) => {
+    const days = target.closest("ul").childNodes;
+    days.forEach((node) => {
+      if (node.nodeType === 1) {
+        node.classList.remove(
+          "current-tab",
+          "underline-thin",
+          "text-color--black"
+        );
+      }
+    });
+
+    target.classList.add("current-tab", "underline-thin", "text-color--black");
+
+    $("#daysTop").innerHTML = getDayWebtoon(target.dataset.day);
+  });
+};
+
+const createDaysBlock = () => {
+  const day = getDay();
 
   const daysBlock = `<div class="center container contents-container">
   <header class="header-container">
@@ -47,47 +79,13 @@ const createDaysBlock = () => {
     </ul>
   </nav>
   <div id="daysTop" class="grid-5col mt--m">
-    ${webtoons.join("")}
+    ${getDayWebtoon(day)}
   </div>
 </div>`;
 
   insertIntoMain(daysBlock);
-
-  $(".nav-days ul").childNodes.forEach((it) => {
-    if (it.nodeType === 1 && it.dataset.day === String(day)) {
-      it.classList.add("current-tab", "underline-thin", "text-color--black");
-    }
-  });
-
-  $(".nav-days").addEventListener("click", (e) => {
-    const days = e.target.closest("ul").childNodes;
-    days.forEach((node) => {
-      if (node.nodeType === 1) {
-        node.classList.remove(
-          "current-tab",
-          "underline-thin",
-          "text-color--black"
-        );
-      }
-    });
-
-    e.target.classList.add(
-      "current-tab",
-      "underline-thin",
-      "text-color--black"
-    );
-
-    const webtoons = [];
-    range(5).forEach((_, idx) => {
-      webtoons.push(
-        createWebtoonWithRank(dataOfDays[e.target.dataset.day], idx)
-      );
-    });
-    range(5).forEach(() => {
-      webtoons.push(createWebtoonWithGrade(dataOfDays[e.target.dataset.day]));
-    });
-    $("#daysTop").innerHTML = webtoons.join("");
-  });
+  underlineTodayTab(day);
+  addDaysEvL();
 };
 
 export { createDaysBlock };
