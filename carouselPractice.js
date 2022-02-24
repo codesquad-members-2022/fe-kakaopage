@@ -9,12 +9,10 @@ const findSelectedImgNumber = () => {
   $selectedImg.className = $selectedImg.className.replace(" selected", "");
   const classNames = $selectedImg.className;
 
-  const numbers = [];
-  for (const className of classNames.split("")) {
-    if (Number.isInteger(parseInt(className, 10))) {
-      numbers.push(className);
-    }
-  }
+  const numbers = classNames
+    .split("")
+    .filter((className) => Number.isInteger(parseInt(className, 10)));
+
   const selectedImgNumber = parseInt(numbers.join(""), 10);
 
   return selectedImgNumber;
