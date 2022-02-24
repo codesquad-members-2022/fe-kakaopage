@@ -2,6 +2,7 @@
 import {homeContainerInfo} from './data/containerInfoData.js'
 import {todayWebtoonsData} from './data/todayWebtoons.js'
 import mainBannerData from './data/json/mainBannerData.json' assert { type: "json"} ;
+import promotionBannerData from './data/json/promotionBannerData.json' assert { type: "json"} ;
 // ============== renderHome 관련 모듈 ==============
 import {renderContainer} from './components/container.js'
 import {renderMainBanner} from './components/banner/bannerMain.js'
@@ -27,7 +28,7 @@ function renderMain(tab) {
 
 function renderHome(tab, homeInfo) {
   renderMainBanner(mainBannerData[tab]);
-  renderPromotionBanner();
+  renderPromotionBanner(promotionBannerData[tab]);
 
   for (let i in homeInfo) {
     renderContainer(homeInfo[i].class, homeInfo[i].title, homeInfo[i].items, homeInfo[i].layout, homeInfo[i].data, tab);
