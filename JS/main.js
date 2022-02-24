@@ -36,6 +36,9 @@ const moveGenreNav = (target) => {
     case 'webtoon':
       renderMain('webtoon');
       break;  
+    case 'boy':
+      renderMain('boy');
+      break; 
   }
 }
 
