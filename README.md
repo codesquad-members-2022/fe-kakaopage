@@ -145,12 +145,27 @@ export function createBanner({ size, title, status, type, views, ad }) {
 </body>
 ```
 
-- 홈 탭 클릭 ➡ 홈 랜더링 ➡ 이전 탭 이벤트 삭제 ➡ 홈 탭 이벤트 추가
-- 웹툰 탭 클릭 ➡ snb, days 랜더링 ➡ 이전 탭 이벤트 삭제 ➡ snb, days 이벤트 추가
+#### snb의 탭 이동
+
+- contents에 innerHTML을 갱신하는 방법으로 랜더링.
+- snb가 contents의 하위 엘리먼트.
+- snb도 리랜더링됨.
+  - 탭을 이동할때마다 이벤트 등록을 snb에 다시 해줘야 하는 상황.
+- snb를 contents 상위로 분리하면 될 것 같다.
+
+#### 이벤트를 언제 왜 삭제해주어야 하는가?
+
+- DOM에서 엘리먼트를 제거하고 나면 추가했던 이벤트는 사라지는 것 같다.
+  - `getEventListeners(...)`
+- 그럼 이벤트 삭제를 언제 왜 해주어야 할까?
+  - 일정 조건을 달성하면 더이상 필요없는 이벤트일때?
+  - 탭 이동을 구현할 때 필요한가?
 
 ### 학습 정리
 
 #### Flexbox 사용법
+
+https://d2.naver.com/helloworld/8540176
 
 #### commit 로그를 작성하는 좋은 사례
 

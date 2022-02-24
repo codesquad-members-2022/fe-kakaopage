@@ -1,6 +1,6 @@
 import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
-import { addEvent } from "./event.js";
-import { render } from "./render.js";
+import { addEventGNB, addEventSNB } from "./event.js";
+import { render, setSelectedSNB } from "./render.js";
 import { $ } from "./utils.js";
 
 export function GNBHandler(e) {
@@ -21,7 +21,8 @@ export function GNBHandler(e) {
   }
   if (e.target.dataset.name === "웹툰") {
     render({ to: ".contents", el: createTabWebtoonHome() });
-    addEvent();
+    setSelectedSNB();
+    addEventSNB();
     return;
   }
   if (e.target.dataset.name === "웹소설") {
@@ -42,7 +43,7 @@ export function GNBHandler(e) {
   }
 }
 
-export function SNBHander(e) {
+export function SNBHandler(e) {
   const selected = "snb__selected";
   const isList = e.target.tagName === "LI";
   const isSelected = e.target.classList.contains(selected);
