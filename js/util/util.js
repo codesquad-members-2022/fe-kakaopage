@@ -18,4 +18,10 @@ const toggleClass = (className, element) => {
   element.classList.toggle(className);
 };
 
-export { selector, selectorAll, addClass, removeClass, toggleClass };
+const createElement = (tagName, className) => {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  return element;
+}
+
+export { selector, selectorAll, addClass, removeClass, toggleClass, createElement };
