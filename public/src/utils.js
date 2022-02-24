@@ -16,16 +16,13 @@ const formatUserCount = (userCount) => {
   return (userCount / 10000).toFixed(1) + "만명";
 };
 
-const getJson = (dataName) => {
-  return new Promise((resolve, reject) => {
-    try {
-      fetch(`${HEROKU_SERVER_URL}${dataName}`)
-        .then((response) => response.json())
-        .then((json) => resolve(json));
-    } catch (error) {
-      reject(error);
-    }
-  });
+const getJson = async (dataName) => {
+  try {
+    const response = await fetch(`${HEROKU_SERVER_URL}${dataName}`);
+    return response.json();
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const getJsons = (paths) => {
