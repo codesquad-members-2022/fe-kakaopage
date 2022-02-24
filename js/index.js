@@ -88,10 +88,11 @@ const bindCaroulselEvent = () => {
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = 2;
-    const transitionDuration = "0.8s";
+    const transitionDuration = "1s";
     const customTransition = `transform ${transitionDuration} ease-out`;
 
     const autoCarouselHandler = () => {
+        if (!clickFlag) return;
         clickCnt++;
         carouselItemWrapper.style.transition = customTransition;
         carouselItemWrapper.style.transform = `translateX(${
@@ -105,8 +106,8 @@ const bindCaroulselEvent = () => {
         if (!target.classList.contains("button")) return;
         clearInterval(startCarousel);
         startCarousel = setInterval(autoCarouselHandler, 4000);
-        if (!clickFlag) return;
 
+        if (!clickFlag) return;
         if (target.closest(".btn-left")) {
             clickCnt--;
             carouselItemWrapper.style.transition = customTransition;
@@ -129,6 +130,7 @@ const bindCaroulselEvent = () => {
     $(".cover-image").addEventListener("transitionend", () => {
         clickFlag = true;
         console.log(clickCnt);
+        if (clickCnt > carouselItems.length - 1) clickCnt = carouselItems - 1;
         if (!carouselItems[clickCnt].dataset.clone) return;
 
         /* const lastNodeClonePos = 0;
