@@ -47,21 +47,20 @@
 /* 4. 배너 */
 .banner{
     margin-top: 1rem;
-    background-color: green;
+    overflow: hidden;
 }
 
 .banner__container{
     height: 35rem;
     width: 2160px;
-    white-space: nowrap;
-    overflow: hidden;
     display: flex;
+    white-space: nowrap;
+    transform: translateX(-1040px);
 }
 
 .banner__content{
     width: 720px;
     height: 100%;
-   
 }
 
 .banner__image{
