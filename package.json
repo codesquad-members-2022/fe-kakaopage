@@ -1,0 +1,22 @@
+{
+  "name": "fe-kakaopage",
+  "version": "1.0.0",
+  "description": "[데모페이지](https://otterp012.github.io/fe-kakaopage/main) ## 기능 - 홈, 요일, 웹툰 페이지가 구현했습니다. - 홈을 제외하고 요일, 웹툰 페이지는 각 페이지의 요일 탭을 눌렀을때 요일에 맞는 웹툰을 불러오는 기능을 구현하였습니다. - 배너를 동적으로 제어하는 기능은 아직 추가하지 못했습니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otterp012/fe-kakaopage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otterp012/fe-kakaopage/issues"
+  },
+  "homepage": "https://github.com/otterp012/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
