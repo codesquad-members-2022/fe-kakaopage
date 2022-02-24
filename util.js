@@ -1,4 +1,4 @@
-import { genreFunction, headerFunction } from "./createPage.js";
+import { genreFunction, headerFunction } from "./render.js";
 import { createContentForms } from "./loop.js";
 
 export function pickFromArr (arr) {
@@ -30,14 +30,15 @@ export function addClickEventToElement(elementName, func){
     element.addEventListener("click", func)
 }
 
-export function selectedInit(target){
-    target.parentNode.childNodes.forEach(v => {
-        if(v.tagName === "LI") v.classList.remove('selected')
-    })
+export function selectedInit(){
+    // target.parentNode.childNodes.forEach(v => {
+    //     if(v.tagName === "LI") v.classList.remove('selected')
+    // })
+    const selected = document.querySelector('.selected')
 }
 
 export function addSelected (e) {
-    selectedInit(e.target)
+    selectedInit()
     if (e.target.tagName === "LI") {
         e.target.classList.add('selected')
         resetFlexbox(e.target);
@@ -66,7 +67,7 @@ export function resetFlexbox(target){
     }
 }
 
-export function addHeadNavEvent (e) {
+export function headNavEventHandler (e) {
     const header = e.target.dataset.header
 
     if (header) {
@@ -74,7 +75,7 @@ export function addHeadNavEvent (e) {
     }
 }
 
-export function addGenreNavEvent (e) {
+export function genreNavEventHandler (e) {
     const genre = e.target.dataset.genre;
 
     if (genre) {

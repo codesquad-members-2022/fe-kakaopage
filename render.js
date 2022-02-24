@@ -1,14 +1,14 @@
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
-import { addClickEventToElement, addGenreNavEvent,  addHeadNavEvent, addSelected, addSelectedToday, addToContents, combineFormats, initPage } from "./util.js";
+import { addClickEventToElement, addSelected, addSelectedToday, addToContents, combineFormats, genreNavEventHandler, headNavEventHandler, initPage } from "./util.js";
 
-export const createPageInit = () => {
+export const renderPageInit = () => {
     addClickEventToElement('body', addSelected)
-    addClickEventToElement('body', addGenreNavEvent)
-    addClickEventToElement('body', addHeadNavEvent)
-    createPageHome();
+    addClickEventToElement('body', genreNavEventHandler)
+    addClickEventToElement('body', headNavEventHandler)
+    renderPageHome();
 }
 
-export const createPageHome = () => {
+export const renderPageHome = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryA(), createFormatBannerAd(), createFormatDailyTop(),
         createFormatImgWithLine(), createFormatContentsBox('로맨스 TOP'), createFormatContentsBox('로판 TOP'), createFormatContentsBox('드라마 TOP'),
@@ -23,7 +23,7 @@ export const createPageHome = () => {
     document.getElementById('genre-home').classList.add('selected');
 }
 
-export const createPageDaily = () => {
+export const renderPageDaily = () => {
     const formats = [
         createFormatBannerMain(), createFormatDailyWebtoon()
     ];
@@ -34,7 +34,7 @@ export const createPageDaily = () => {
     addSelectedToday();
 }
 
-export const createPageWebtoon = () => {
+export const renderPageWebtoon = () => {
     const formats = [
         createFormatBannerMain(), createFormatHotizontalList(), createFormatHorizontalContents('🔥HOT 최근 프로모션 진행작')
     ];
@@ -44,7 +44,7 @@ export const createPageWebtoon = () => {
     addToContents(contents);
 }
 
-export const createPageTeen = () => {
+export const renderPageTeen = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryB('독점 신작', '이벤트로 달리자', 'ㄸㅂㅇㄹ ㄹㅂㅇ'), 
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 소년 TOP'),
@@ -60,7 +60,7 @@ export const createPageTeen = () => {
     addToContents(contents);
 }
 
-export const createPageDrama = () => {
+export const renderPageDrama = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryB('월간베스트#20', '#이벤트로달리자', '완결까지#정주행'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 드라마 TOP'),
@@ -81,7 +81,7 @@ export const createPageDrama = () => {
     addToContents(contents);
 }
 
-export const createPageRomance = () => {
+export const renderPageRomance = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryB('완결까지 정주행', '인기완결작', '기다무플러스'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 로맨스 TOP'),
@@ -101,7 +101,7 @@ export const createPageRomance = () => {
     addToContents(contents);
 }
 
-export const createPageRofan = () => {
+export const renderPageRofan = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryB('월간 베스트', '스테디셀러정주행', '기다무 플러스'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 로맨스판타지 TOP'),
@@ -118,7 +118,7 @@ export const createPageRofan = () => {
     addToContents(contents);
 }
 
-export const createPageAction = () => {
+export const renderPageAction = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryB('독점 신작🔥', '이벤트로 달리자', '기다무 플러스'), 
         createFormatContentsBoxBigger('오늘의 추천!'), createFormatBannerAd(), createFormatContentsBox('일간 액션/무협 TOP'),
@@ -134,7 +134,7 @@ export const createPageAction = () => {
     addToContents(contents);
 }
 
-export const createPageBL = () => {
+export const renderPageBL = () => {
     const formats = [
         createFormatBannerMain(), createFormatSummaryA(), createFormatHorizontalContents('오늘의 추천!'), createFormatRanking('일간 BL TOP'),
         createFormatBannerAd(), createFormatHorizontalContents('믿고보는 독점/선연재'), createFormatHorizontalContents('취향저격 추천작'),
@@ -156,20 +156,20 @@ export const createPageNotYet = () => {
 }
 
 export const genreFunction = {
-    home: () => createPageHome(),
-    daily: () => createPageDaily(),
-    webtoon: () => createPageWebtoon(),
-    teen: () => createPageTeen(),
-    drama: () => createPageDrama(),
-    romance: () => createPageRomance(),
-    rofan: () => createPageRofan(),
-    action: () => createPageAction(),
-    BL: () => createPageBL()
+    home: () => renderPageHome(),
+    daily: () => renderPageDaily(),
+    webtoon: () => renderPageWebtoon(),
+    teen: () => renderPageTeen(),
+    drama: () => renderPageDrama(),
+    romance: () => renderPageRomance(),
+    rofan: () => renderPageRofan(),
+    action: () => renderPageAction(),
+    BL: () => renderPageBL()
 }
 
 export const headerFunction = {
     home: () => createPageNotYet(),
-    webtoon: () => createPageHome(),
+    webtoon: () => renderPageHome(),
     webnovel: () => createPageNotYet(),
     movie: () => createPageNotYet(),
     broad: () => createPageNotYet(),

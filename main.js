@@ -1,7 +1,7 @@
-import { createPageInit} from "./createPage.js";
+import { renderPageInit } from "./render.js";
 
 const main = () => {
-    createPageInit()
+    renderPageInit()
 
 }
 
