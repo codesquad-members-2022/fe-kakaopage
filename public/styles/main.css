@@ -29,8 +29,8 @@
 }
 
 .main__mainBanner {
+  position: relative;
   cursor: pointer;
-  height: 400px;
 }
 .contents .main__mainBanner {
   height: auto;
@@ -39,9 +39,7 @@
 .banner__imgBox {
   position: relative;
 }
-.main__mainBanner .banner__imgBox {
-  height: 360px;
-}
+
 .bigCard .banner__imgBox {
   height: 90%;
 }
@@ -52,7 +50,7 @@
 }
 .main__mainBanner .imgBox__info {
   left: 20px;
-  bottom: 10px;
+  bottom: 60px;
 }
 .bigCard .imgBox__info {
   left: 15px;
@@ -77,7 +75,7 @@
 }
 .main__mainBanner .imgBox__order {
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   right: 20px;
   font-size: 17px;
   font-weight: 600;
@@ -102,6 +100,10 @@
   color: #333333;
 }
 .main__mainBanner .banner__message {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
   font-size: 15px;
   height: 40px;
 }
