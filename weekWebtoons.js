@@ -6,11 +6,13 @@ const makeWeekTapTemplate = (day) => {
   `;
 };
 
-const createdWeekTapTemplate = week.map((day) => makeWeekTapTemplate(day));
+const createLiTemplate = (domStringContents) => {
+  return domStringContents.map((contents) => makeWeekTapTemplate(contents));
+};
 
-const $weekTap = createdWeekTapTemplate.join("");
+const $weekTap = createLiTemplate(week).join("");
 
-const makeTuesdayTapTemplate = (imageUrl, title, star, read) => {
+const createTuesdayTapTemplate = (imageUrl, title, star, read) => {
   return `
       <div>
         <div>
@@ -42,12 +44,12 @@ const makeTuesdayTapTemplate = (imageUrl, title, star, read) => {
 `;
 };
 
-const createdTuesdayTapTemplate = webtoonContents.map(
+const tuesdayTapTemplate = webtoonContents.map(
   ({ imageUrl, title, star, read }) =>
-    makeTuesdayTapTemplate(imageUrl, title, star, read)
+    createTuesdayTapTemplate(imageUrl, title, star, read)
 );
 
-const $tuesdayWebtoons = createdTuesdayTapTemplate.join("");
+const $tuesdayWebtoons = tuesdayTapTemplate.join("");
 
 const $weekWebtoons = `
   <section>
