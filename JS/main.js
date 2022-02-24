@@ -16,6 +16,8 @@ const clickGenresList = () => {
     item.addEventListener('click', (event) => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
+      
+      resetMain();
       moveGenreNav(event.target);
     })
   });
@@ -24,15 +26,16 @@ const clickGenresList = () => {
 const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
-      resetMain();
       renderMain('home');
       eventHome();
       break;
     case 'daily':
-      resetMain();
       renderMain('daily');
       clickDailyTopList(dailyTopData);
       break;
+    case 'webtoon':
+      renderMain('webtoon');
+      break;  
   }
 }
 

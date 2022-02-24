@@ -22,6 +22,10 @@ function renderMain(tab) {
     daily: {
       func: renderDaily,
       data: todayWebtoonsData,
+    },
+    webtoon: {
+      func: renderWebtoon,
+      data: todayWebtoonsData
     }
   }
 
@@ -43,6 +47,10 @@ function renderHome(tab, homeInfo) {
 function renderDaily(tab, data) {
   renderMainBanner(mainBannerData[tab]);
   renderSelectDayDaily(data);
+}
+
+function renderWebtoon(tab) {
+  renderMainBanner(mainBannerData[tab]);
 }
 
 export {renderMain}
