@@ -1,4 +1,5 @@
 import { icons } from '../../data/icons.js'
+import { getBannerContentTemplate } from '../banner.js'
 
 export const makeWorkContainer = (genre, workDataArr, type) => {
     const worksTemplate = workDataArr.map(workData => layoutDic[type](workData)).join(''); 
@@ -40,8 +41,15 @@ const makeVerticalType = () => {
 
 }
 
+const makeBannerType = (workData) => {
+  return getBannerContentTemplate('new-top', workData);
+}
+
+
 const layoutDic = { 
   small: makeSmallType, 
   horizontal: makeHorizontalType, 
-  vertical: makeVerticalType 
+  vertical: makeVerticalType,
+  banner: makeBannerType,
+
 };

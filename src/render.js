@@ -30,7 +30,7 @@ const render = (component, genre) => {
         'categoryGrid': renderCategoryGrid,
         'eventBanner': renderEventBanner,
         'dayRanking': renderWorkSection.bind(null, 'small', component),
-        신작 : renderWorkSection.bind(null, 'horizontal')
+        'newTop' : renderWorkSection.bind(null, 'banner', component)
     }
     funcs[component](genre);
 }

@@ -6,7 +6,7 @@ import { DEFAULT_DAY } from '../../constant.js';
 
 const dataDic = {
   'dayRanking': dayRankingData,
-  'newTOP': newTopData,
+  'newTop': newTopData,
 }
 
 export const renderWorkSection = (layout, contents, genre) => {
