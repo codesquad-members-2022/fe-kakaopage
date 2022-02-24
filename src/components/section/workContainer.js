@@ -3,11 +3,11 @@ import { getBannerContentTemplate } from '../banner.js'
 
 export const makeWorkContainer = (genre, workDataArr, type) => {
     const worksTemplate = workDataArr.map(workData => layoutDic[type](workData)).join(''); 
-    const workContainer = document.createElement('ul');
-    workContainer.className = 'work-container';
-    workContainer.dataset.genre = genre;
-    workContainer.innerHTML = worksTemplate;
-    return workContainer;
+    return `
+      <ul class='work-container' data-genre='${genre}'>
+        ${worksTemplate}
+      </ul>
+    `
 }
 
 const makeSmallType = (workData) => {

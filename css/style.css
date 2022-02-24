@@ -146,7 +146,7 @@
 
 /* common-section */
 .section__header {
-    padding: 30px 20px;
+    padding: 30px 20px 20px 20px;
     display: flex;
     justify-content: space-between;
     color: var(--color-gray);
@@ -162,7 +162,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px 20px 0px 20px;
+    margin: 20px 20px 20px 20px;
 }
 
 .work-tags {
@@ -440,6 +440,8 @@ header {
 
 .day-tab__item--selected {
     color: var(--color-black);
+    font-weight: 600;
+    border-bottom: solid 3px var(--color-yellow);
 }
 
 /* new-top */
@@ -448,6 +450,7 @@ header {
     width: calc((100% / 2) - 5px);
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .new-top__description {

@@ -9,24 +9,26 @@ const dataDic = {
   'newTop': newTopData,
 }
 
+const sectionTitleDic = {
+  'dayRanking': '요일 연재',
+  'newTop': '기대신작'
+}
+
 export const renderWorkSection = (layout, contents, genre) => {
   const workSection = document.createElement('section');
-  workSection.insertAdjacentHTML('beforeend', getHeaderTemplate());
-  if (contents === 'dayRanking') {
-    workSection.insertAdjacentHTML('beforeend', getDayTabTemplate());
-    setDefault(workSection.querySelector(`li[data-day='${DEFAULT_DAY}']`));
-  }
-  
-  workSection.insertAdjacentElement('beforeend', getWorkContainerTemplate(layout, contents, genre));
+  let workSectionTemplate = '';
+  workSectionTemplate += getHeaderTemplate(contents)
+  if (contents === 'dayRanking') workSectionTemplate += getDayTabTemplate();
+  workSectionTemplate += getWorkContainerTemplate(layout, contents, genre);
+  workSection.innerHTML = workSectionTemplate;
   document.querySelector('.tab-contents').appendChild(workSection);
 }
 
-const getHeaderTemplate = () => {
+const getHeaderTemplate = (contents) => {
     return  `
     <div class='section__header'>
           <div class='section__title-box'>
-            <span class='section__title'>요일 연재 TOP</span>
-            <span class='section__title-num'>(1,622)</span>
+            <span class='section__title'>${sectionTitleDic[contents]} TOP</span>
           </div>
           <div class='section__more-btn'>
             <span>더보기</span>
@@ -53,19 +55,19 @@ const getDayTabTemplate = () => {
   ];
   return `
     <ul class='day-tab__container tab__container'>
-      ${weekWords.map(day => `<li class='day-tab__item center' data-day='${day.en}'>${day.ko}</li>`).join('')}
+      ${weekWords.map(day => `<li class='day-tab__item center${markDefault(day.en)}' data-day='${day.en}'>${day.ko}</li>`).join('')}
     </ul>
   `
 }
 
-const setDefault = (item) => {
-  item.classList.add('day-tab__item--selected' ,'tab__item--selected');
+const markDefault = (day) => {
+  return day === DEFAULT_DAY ? ' day-tab__item--selected' : '';
 }
 
 export const changeContentsByDay = (dayRankSection, day) => {
   const oldContainer = dayRankSection.querySelector('.work-container');
   const currGenre = oldContainer.dataset.genre;
-  const newContainer = getWorkContainerTemplate('small', 'dayRanking', currGenre, day);
-  
-  dayRankSection.replaceChild(newContainer, oldContainer)
+  const newContainerTemplate = getWorkContainerTemplate('small', 'dayRanking', currGenre, day);
+  dayRankSection.removeChild(oldContainer);
+  dayRankSection.insertAdjacentHTML('beforeend', newContainerTemplate);
 }
