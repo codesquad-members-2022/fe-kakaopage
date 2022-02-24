@@ -32,9 +32,16 @@ export const activateBtns = (parentElement) => {
 }
 
 export const activateAutoSlide = (parentElement) => {
-    setInterval(() => {
-        moveSlide(parentElement, 'next');
-    }, AUTO_SLIDE_INTERVAL)
+    const autoSlide = startAutoSlide(parentElement);
+    parentElement.addEventListener('mouseover', () => {clearInterval(autoSlide)});
+    parentElement.addEventListener('mouseleave', () => {activateAutoSlide(parentElement)});
+}
+
+const startAutoSlide = (slide) => {
+    const autoSlide = setInterval(() => {
+        moveSlide(slide, 'next');
+    }, AUTO_SLIDE_INTERVAL);
+    return autoSlide;
 }
 
 const moveToNext = (event) => {
