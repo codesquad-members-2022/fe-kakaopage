@@ -28,4 +28,14 @@ const getJson = (dataName) => {
   });
 };
 
-export { updateNodeClasses, getJson, formatUserCount, createExtendsRelation };
+const getJsons = (paths) => {
+  return Promise.all(paths.map((path) => getJson(path)));
+};
+
+export {
+  updateNodeClasses,
+  getJson,
+  formatUserCount,
+  createExtendsRelation,
+  getJsons,
+};
