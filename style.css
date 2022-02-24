@@ -28,6 +28,9 @@
 }
 
 .grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 226px;
   height: 69px;
   background-color: var(--background-color-gray);

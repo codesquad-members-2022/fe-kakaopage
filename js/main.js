@@ -8,14 +8,17 @@ let previousWeekdayCategory = document.createElement("div");
 init();
 
 function init() {
-  replaceSubCategoryWithTemplate("요일연재");
-  attachEventListner();
+  renderSubCategory("요일연재");
+  attachSubCategoryHandler();
 }
 
-function attachEventListner() {
+function attachSubCategoryHandler() {
   const subCategoryNav = document.querySelector(".sub_category_navigation");
-  const weekdayCategoryNav = document.querySelector(".weekday_category_navigation");
   delegateEventListener(subCategoryNav, clickSubCategoryNav);
+}
+
+function attachWebtoonBoardHandler() {
+  const weekdayCategoryNav = document.querySelector(".weekday_category_navigation");
   delegateEventListener(weekdayCategoryNav, clickWeekdayCategoryNav);
 }
 
@@ -32,14 +35,15 @@ function clickSubCategoryNav(subCategoryNav) {
   previousSubCategory.classList.remove("bold");
   subCategoryNav.classList.add("bold");
   previousSubCategory = subCategoryNav;
-  replaceSubCategoryWithTemplate(subCategoryNav.innerText);
+  renderSubCategory(subCategoryNav.innerText);
 }
 
-function replaceSubCategoryWithTemplate(subCategory) {
+function renderSubCategory(subCategory) {
   const subCategorySection = document.querySelector(".sub_category_section");
   switch (subCategory) {
     case "요일연재":
       subCategorySection.innerHTML = weeklyPublicationTemplate;
+      attachWebtoonBoardHandler();
       break;
     case "홈":
       subCategorySection.innerHTML = homeTemplate;
@@ -54,10 +58,10 @@ function clickWeekdayCategoryNav(weekdayCategoryNav) {
   previousWeekdayCategory.classList.remove("paint_yellow");
   weekdayCategoryNav.classList.add("paint_yellow");
   previousWeekdayCategory = weekdayCategoryNav;
-  replaceWebtoonBoardWithTemplate(weekdayCategoryNav.innerText);
+  renderWebtoonBoard(weekdayCategoryNav.innerText);
 }
 
-function replaceWebtoonBoardWithTemplate(weekday) {
+function renderWebtoonBoard(weekday) {
   const webtoonBoardSection = document.querySelector(".webtoon_board");
   const webtoonBoardTemplate = createWebtoonBoardSection(weeklyWebtoonList[weekday]);
   webtoonBoardSection.innerHTML = webtoonBoardTemplate;

@@ -1,3 +1,11 @@
+export function calculateWeekday() {
+  const today = new Date();
+  const weekdayIndex = today.getDay();
+  const weekdayList = ["일","월", "화", "수", "목", "금", "토"];
+  const weekday = weekdayList[weekdayIndex];
+  return weekday;
+}
+
 export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
   let promotionWebtoonTemplate = `<section class="promotion_webtoon_section">`;
   weeklyPromotionWebtoonList.forEach((weeklyPromotionWebtoon) => {
