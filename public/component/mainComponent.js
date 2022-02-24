@@ -19,14 +19,10 @@ const getMainNavHtml = (data) => {
   `;
 };
 
-const getMainHtml = (toggleinfo, imgInfo, classname) => {
+const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
   return `
-  <nav class="main__nav--toggle ${classname ?? ""}">
-    <ul class="main--toggle--left">
-      <li>${toggleinfo.left}</li>
-    </ul>
-    <div class="main--toggle--right">${toggleinfo.right}</div>
-  </nav>
+  ${hasWeekNav(weekNav, weekNavinfo) ?? ""}
+  ${hasToggleNav(toggleNav, toggleinfo) ?? ""}
   <ul class="main__cartoonZone">
     ${imgInfo.reduce(
       (imgHtml, imgData) => (imgHtml += getImgCardHtml(imgData)),
@@ -59,16 +55,39 @@ const getImgCardHtml = (data) => {
 `;
 };
 
-const getlistHtml = (data) => {
-  return `${data.reduce(
-    (listHtml, toggleData) => (listHtml += `<li>${toggleData}</li>`),
-    ""
-  )}
-  `;
-};
-
 const getToonGenre = (toonGenre) =>
   data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
+
+const getIsHot = (isTrue) =>
+  data.toonData.filter((toonInfo) => toonInfo.hot === isTrue);
+
+const hasToggleNav = (isTrue, toggleInfo) => {
+  if (isTrue) {
+    return `<nav class="main__nav--toggle">
+      <ul class="main--toggle--left">
+        ${toggleInfo.left.reduce(
+          (html, font) => (html += `<li>${font}</li>`),
+          ""
+        )}
+      </ul>
+      <div class="main--toggle--right">${toggleInfo.right}</div>
+    </nav>`;
+  }
+};
+
+const hasWeekNav = (isTrue, weekNavinfo) => {
+  if (isTrue) {
+    return `<nav class="main__nav__dow">
+      <ul class="main__nav__dow--ul">
+      ${weekNavinfo.reduce(
+        (listHtml, day) => (listHtml += `<li>${day}</li>`),
+        ""
+      )}
+      </ul>
+    </nav>
+    `;
+  }
+};
 
 export {
   createDomEl,
@@ -77,4 +96,5 @@ export {
   getlistHtml,
   getToonGenre,
   getImgCardHtml,
+  getIsHot,
 };
