@@ -31,11 +31,18 @@ const createDailyRank = (data, i) => {
   return dailyRank;
 };
 
-const createDailyRankBlock = () => {
+const getTop3 = () => {
+  const TOP3 = 3;
   const dailyRank = [];
-  range(3).forEach((_, idx) => {
+
+  range(TOP3).forEach((_, idx) => {
     dailyRank.push(createDailyRank(dataOfDailyRank[idx], idx));
   });
+
+  return dailyRank.join("");
+};
+
+const createDailyRankBlock = () => {
   const dailyRankBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">일간 랭킹 TOP</h2>
@@ -58,7 +65,7 @@ const createDailyRankBlock = () => {
   </header>
   <div>
     <ol class="daily-rank-list">
-      ${dailyRank.join("")}
+      ${getTop3()}
     </ol>
   </div>
 </div>`;
