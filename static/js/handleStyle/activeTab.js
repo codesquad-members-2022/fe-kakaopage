@@ -18,9 +18,9 @@ export function handleTabActive({ categoryUid, subCategoryUid }) {
     .querySelector('ul');
   const $subCateogry = document
     .getElementById(SUB_CATEGORY)
-    .querySelector('ul');
-
+    ?.querySelector('ul');
   paintTab($mainCategory, categoryUid, false);
-  paintTab($subCateogry, subCategoryUid, true);
+  // main에는 서브 카테고리가 없음
+  $subCateogry && paintTab($subCateogry, subCategoryUid, true);
   return true;
 }
