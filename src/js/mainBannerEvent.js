@@ -1,16 +1,5 @@
 import { $ } from '../utils.js';
 
-const setContainerWidth = (...sections) => {
-  sections.forEach((section) => {
-    const sectionClass =
-      section === 'main' ? 'main-banner' :
-      section === 'sub' ? 'sub-banner' : 'recommend-event';
-
-    const bannerCount = $(`.${sectionClass} .banner-container`).childElementCount;
-    $(`.${sectionClass} .banner-container`).style.width = `${100 * bannerCount}%`;
-  })
-};
-
 const handleMainBanner = (e) => {
   const button = e.target;
   const ul = $('.main-banner .banner-container');
@@ -29,4 +18,4 @@ const checkTarget = (e) => e.target.tagName === 'BUTTON';
 
 const mainBannerCallback = (e) => checkTarget(e) && handleMainBanner(e);
 
-export { setContainerWidth, mainBannerCallback };
+export { mainBannerCallback };

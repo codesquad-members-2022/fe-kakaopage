@@ -1,11 +1,13 @@
 import { ContentsHeader, EventBannerList } from '../index.js';
 import { EventBanners } from '../../data';
+import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 
 const RecommendEvent = () => {
 
   const title = '추천 이벤트';
 
-  return `<section class="contents recommend-event">
+  const html = convertStringToHTML(
+          `<section class="contents recommend-event">
             ${ContentsHeader(title)}
             <div class="event-banner-wrapper">
               ${EventBannerList(EventBanners)}
@@ -15,7 +17,11 @@ const RecommendEvent = () => {
                 <button type="button" class="next">next</button>
               </div>
             </div>
-          </section>`;
-}
+          </section>`);
+
+  setContainerWidth(html);
+
+  return html;
+};
 
 export default RecommendEvent;

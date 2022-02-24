@@ -1,5 +1,6 @@
 import { Webtoons } from '../../data';
 import { ContentsHeader, ContentsList } from '../index.js';
+import { convertStringToHTML } from '../../utils.js';
 
 const GenreTop = (genre) => {
 
@@ -10,12 +11,13 @@ const GenreTop = (genre) => {
     return filteredGenreArray.length > 5 ?
       filteredGenreArray.slice(0, 5) :
       filteredGenreArray;
-  }
+  };
 
-  return `<section class="contents" data-genre="${genre}">
+  return convertStringToHTML(
+          `<section class="contents" data-genre="${genre}">
             ${ContentsHeader(title)}
             ${ContentsList('small', filteredWebtoon())}
-          </section>`;
+          </section>`);
 };
 
 export default GenreTop;
