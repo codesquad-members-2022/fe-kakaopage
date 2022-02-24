@@ -1,39 +1,39 @@
-.bl-container {
+.container {
   margin: 10px 0 10px;
   padding: 20px;
   width: 100%;
   background-color: var(--second-bg-color);
 }
 
-.section-title {
+.section__title {
   margin-right: 5px;
-  font-size: var(--font-20px);
-  font-weight: var(--font-thin);
+  font-size: var(--20px);
+  font-weight: var(--thin);
 }
 
-.section-total {
-  font-size: var(--font-14px);
+.section__total {
+  font-size: var(--14px);
 }
 
-.more {
-  font-size: var(--font-16px);
-}
-
-.section-total, .more {
+.section__total, .more {
   color: var(--second-text-color);
 }
 
-.round-border {
+.more {
+  font-size: var(--16px);
+}
+
+.border-round {
   border-radius: var(--border-radius);
   overflow: hidden;
 }
 
 .font-16 {
-  font-size: var(--font-16px);
+  font-size: var(--16px);
 }
 
 .font-14 {
-  font-size: var(--font-14px);
+  font-size: var(--14px);
 }
 
 .main-text-color {
@@ -42,4 +42,20 @@
 
 .third-text-color {
   color: var(--third-text-color);
+}
+
+.width-half {
+  width: calc((var(--page-width) - 50px) / 2);
+}
+
+.badge__yellow {
+  padding: 0.3em 0.4em 0.2em;
+  background-color: var(--identity-color);
+  border-radius: 50px;
+}
+
+.bar {
+  display: block;
+  min-width: 1px;
+  width: 1px;
 }

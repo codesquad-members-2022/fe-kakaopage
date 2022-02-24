@@ -1,0 +1,37 @@
+.lnb {
+  --lnb-text-color: #bbb;
+  --lnb-text-selected-color: var(--main-text-color);
+}
+
+.lnb {
+  font-size: var(--20px);
+}
+
+.lnb__link {
+  color: var(--lnb-text-color);
+  font-weight: var(--thin);
+}
+
+.lnb__item__selected {
+  font-weight: var(--bold);
+  color : var(--main-text-color)
+}
+
+.lnb__item__modal {
+ position: absolute;
+ right: 20px;
+ color: var(--second-text-color);
+ cursor: pointer;
+}
+
+/*lnb가 section안에 있을 경우 적용*/
+.section__lnb {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lnb .bar {
+  margin: 0 10px;
+  height: 16px;
+  background-color: var(--lnb-text-color);
+}

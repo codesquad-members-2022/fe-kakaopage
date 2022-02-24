@@ -1,4 +1,5 @@
 .header {
+  position: fixed;
   z-index: 1;
   top: 0;
   width: 100%;
@@ -7,13 +8,14 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.header-top {
+.header__top {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
 }
 
-.logo {
+.header__logo {
   display: block;
   background: url(/fe-kakaopage/src/img/logo-kakaopage.svg) no-repeat;
   width: 130px;
@@ -21,20 +23,23 @@
 }
 
 .header .bar {
-    display: block;
-    min-width: 1px;
-    width: 1px;
-    margin: 0 10px;
-    height: 12px;
-    background-color: #e2e2e2;
-  }
+  margin: 0 10px;
+  height: 12px;
+  background-color: #e2e2e2;
+}
 
-  .login-btn {
-    color: var(--second-text-color);
-    font-size: var(--font-18px);
-  }
+.header__btn__login {
+  color: var(--second-text-color);
+  font-size: var(--18px);
+}
 
-  .category-item {
-    margin: 0 39px;
-    padding: 30px 0 15px;
-  }
+.gnb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gnb__item {
+  margin: 0 39px;
+  padding: 30px 0 15px;
+}
