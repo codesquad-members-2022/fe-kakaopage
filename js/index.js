@@ -1,6 +1,5 @@
 import { $ } from "./utils/dom.js";
 import { homeData } from "./data/homeData.js";
-import { coverImg } from "./data/coverImg.js";
 import { romanceTop } from "./data/genreItems.js";
 import { weekdayData } from "./data/weekdayData.js";
 import { carouselImgs } from "./data/carouselImgs.js";
