@@ -2,10 +2,86 @@
 import { select } from "./util.js";
 import { contentsData } from "./webtoonData.js";
 
+// 전역변수를 사용하지 않는 방법은 뭘까..?
+let index = 1;
+let setTimer;
+
 export function initContents() {
     createContents();
     createCloneNode();
     listenEvent();
+    autoSlide();
+}
+
+function listenEvent() {
+    const $contents = select('.contents');
+    const $viewer = select('.contents__viewer')
+    animateReset($viewer, index) // 초기 슬라이더 위치 잡아주기
+    $contents.addEventListener('click', (e) => handleClick(e.target, $viewer));
+}
+
+function handleClick(target, $viewer) {
+    const $$contentsWrap = [...$viewer.children];
+    const maxIndex = $$contentsWrap.length - 1 // first clone node index
+    const minIndex = 0 // last clone node index
+    const realLastIndex = $$contentsWrap.length -2;
+    const realFirstIndex = 1;
+
+    if(target.className === 'contents__prevButton') {
+        if(index <= minIndex) {
+            index = realLastIndex
+            animateReset($viewer, index)
+        }
+        index --
+        animateTranslateX($viewer);
+        controlAuto();
+    }
+    else if(target.className === 'contents__nextButton') {
+        if(index >= maxIndex) {
+            index = realFirstIndex
+            animateReset($viewer, index)
+        }
+        index ++
+        animateTranslateX($viewer)
+        controlAuto();
+    }
+}
+
+function animateTranslateX(target)  {
+    const width = target.clientWidth * -1;
+    target.style.transform = `translateX(${index * width}px)`
+    target.style.transition = 'transform 0.5s ease-out'
+}
+
+function animateReset(target, index) {
+    const width = target.clientWidth * -1;
+    target.style.transition = 'none';
+    target.style.transform = `translateX(${index * width}px)`
+}
+
+function autoSlide() {
+    const $viewer = select('.contents__viewer')
+    const $$contentsWrap = [...$viewer.children];
+    const maxIndex = $$contentsWrap.length - 1 // first clone node index
+    const realFirstIndex = 1;
+
+    setTimer = setInterval(function() {
+        if (index >= maxIndex) {
+            index = realFirstIndex
+            animateReset($viewer, index)
+        }
+        index++
+        animateTranslateX($viewer)
+    }, 3000)
+}
+
+function clearTimer(timer) {
+    clearInterval(timer)
+}
+
+function controlAuto() {
+    clearTimer(setTimer)
+    autoSlide();
 }
 
 function createContents() {
@@ -31,74 +107,6 @@ function createCloneNode() {
 
     $contentsViewer.prepend($cloneLastNode);
     $contentsViewer.appendChild($cloneFirstNode)
-
-}
-
-function listenEvent() {
-    const $contents = select('.contents');
-    const $viewer = select('.contents__viewer')
-    animateTranslateX($viewer)
-    $contents.addEventListener('click', (e) => handleClick(e.target, $viewer));
-    //autoSlide($viewer)
-}
-
-// 전역으로 해야만 가능..?
-let index = 1
-
-function handleClick(target, $viewer) {
-    const $$contentsWrap = [...$viewer.children];
-    const maxIndex = $$contentsWrap.length - 1 // first clone node index
-    const minIndex = 0 // last clone node index
-    const realLastIndex = $$contentsWrap.length -2;
-    const realFirstIndex = 1;
-
-    if(target.className === 'contents__prevButton') {
-        if(index <= minIndex) {
-            index = realLastIndex
-            animateReset($viewer, index)
-        }
-        index --
-        animateTranslateX($viewer)
-
-    }
-    else if(target.className === 'contents__nextButton') {
-        if(index >= maxIndex) {
-            index = realFirstIndex
-            animateReset($viewer, index)
-        }
-        index ++
-        animateTranslateX($viewer)
-
-    }
-}
-
-function animateTranslateX(target)  {
-    const width = target.clientWidth * -1;
-    target.style.transform = `translateX(${index * width}px)`
-    //target.style.transition = 'transform 2s ease-out'
-    target.style.transitionProperty = `transform`
-    target.style.transitionDuration = `2s`
-}
-
-function animateReset(target, index) {
-    const width = target.clientWidth * -1;
-    target.style.transition = 'none';
-    target.style.transform = `translateX(${index * width}px)`
-}
-
-function autoSlide(target) {
-    let count = 1;
-    let setTimer = setInterval(function() {
-        slideLeft(target)
-        count += 1;
-        if(count > 2) {
-            clearTimer(setTimer)
-        }
-        }, 3000)
-}
-
-function clearTimer(timer) {
-    clearInterval(timer)
 }
 
 function getContentsTemplate(object, index) {
