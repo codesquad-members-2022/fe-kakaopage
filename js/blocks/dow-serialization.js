@@ -7,15 +7,32 @@ const position = "beforeend";
 const paddingTop = 20;
 const cardHeight = 205;
 const navHeight = 65 * 2;
+const webtoonLineLength = 5;
 const defaultHeight =
   document.querySelector(".rendering").offsetTop + navHeight + paddingTop;
-
-let containerTop = defaultHeight;
+const index = {
+  value: 0,
+  initValue() {
+    this.value = 0;
+  },
+  addOneLine() {
+    this.value += webtoonLineLength;
+  },
+};
+const containerTop = {
+  value: defaultHeight,
+  init() {
+    this.value = defaultHeight;
+  },
+  changeValue(newVal) {
+    this.value += newVal;
+  },
+};
 
 const renderingWebtoonLine = () => {
-  containerTop += cardHeight;
+  containerTop.changeValue(cardHeight);
   return dowTopWebtoons
-    .splice(0, 5)
+    .slice(index.value, index.value + webtoonLineLength)
     .reduce((acc, cur) => acc + webtoonCard(cur), "");
 };
 
@@ -30,16 +47,14 @@ const checkingCurrentTab = () => {
 const checkingRemainingSpace = () => {
   const browserHeight = window.innerHeight;
   const scrollTop = window.pageYOffset;
-  //홈->요일연재->홈 탭으로 이동시 containerTop 초기화
-  if (scrollTop === 0) containerTop = defaultHeight;
-  if (browserHeight - (containerTop - scrollTop) <= cardHeight) return 0;
+  if (browserHeight - (containerTop.value - scrollTop) <= cardHeight) return 0;
   return 1;
 };
 
 const scrollDowSerialization = () => {
   if (checkingCurrentTab() !== "요일연재" || !dowTopWebtoons.length) return;
   if (!checkingRemainingSpace()) return;
-
+  index.addOneLine();
   document
     .querySelector(".dow-serialization__contents")
     .insertAdjacentHTML(position, renderingWebtoonLine());
@@ -50,6 +65,8 @@ const dowSerializationContents = () => {
 };
 
 const dowSerialization = () => {
+  index.initValue();
+  containerTop.init();
   return dowNav() + dowSerializationNav() + dowSerializationContents();
 };
 
