@@ -3,6 +3,26 @@ import { getPageData } from "./data.js";
 import { getPageTemp, getNewDayTopContentTemp, getNewMainBannerTemp } from "./view.js";
 import { addClickEvent } from "./eventListener.js";
 
+export const MAIN_BANNER_INFO = {
+    mainBannerTimer: 0,
+    currentIdx: 1,
+    viewIdx: 1,
+    subtractIdx: function(slideLength) {
+        this.currentIdx--;
+        this.viewIdx--;
+        if(this.currentIdx <= 0) this.currentIdx = slideLength;
+        if(this.viewIdx <= 0) this.viewIdx = slideLength;
+    },
+    addIdx: function(slideLength) {
+        this.currentIdx++;
+        this.viewIdx++;
+        if(this.currentIdx >= slideLength - 1) this.currentIdx = -1;
+        if(this.viewIdx > slideLength) this.viewIdx = 1;
+    },
+    slideTime: 3000,
+    throttling: null
+};
+
 const activateDayTopTabButton = (gnbTarget, today) => {
     if(gnbTarget !== '웹툰' && gnbTarget !== '웹소설') return;
     $$('.day-top-tab__button')[today].classList.add('day-top-tab__button--active');
@@ -14,6 +34,8 @@ export const renderPage = async (gnbTarget) => {
     const response = await fetch(dataUrl);
     const currentPageData = await response.json();
     const pageTemp = getPageTemp(gnbTarget, currentPageData, today);
+    MAIN_BANNER_INFO.currentIdx = 1;
+    MAIN_BANNER_INFO.viewIdx = 1;
     removeAndInsertHTML('.contents', 'afterbegin', pageTemp);
     activateDayTopTabButton(gnbTarget, today);
     return currentPageData;
@@ -41,26 +63,6 @@ const moveSlide = (slideName, [oldSlide, newSlide]) => {
 const updateMainBannerIdx = (currentIdx) => {
     $('.main-banners .slide-paging-number__current').textContent = currentIdx;
 }
-
-export const MAIN_BANNER_INFO = {
-    mainBannerTimer: 0,
-    currentIdx: 1,
-    viewIdx: 1,
-    subtractIdx: function(slideLength) {
-        this.currentIdx--;
-        this.viewIdx--;
-        if(this.currentIdx <= 0) this.currentIdx = slideLength;
-        if(this.viewIdx <= 0) this.viewIdx = slideLength;
-    },
-    addIdx: function(slideLength) {
-        this.currentIdx++;
-        this.viewIdx++;
-        if(this.currentIdx >= slideLength - 1) this.currentIdx = -1;
-        if(this.viewIdx > slideLength) this.viewIdx = 1;
-    },
-    slideTime: 3000,
-    throttling: null
-};
 
 export const moveMainBanner = (newMainBannerData, parmToMoveMainBanner) => {
     MAIN_BANNER_INFO[parmToMoveMainBanner['idxFun']](parmToMoveMainBanner.slideLength);
