@@ -1,74 +1,64 @@
 import { domUtil } from "./util.js";
 
+// prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
 let pageCount = -1;
 const img = domUtil.$(".recommand__image--wrapper");
 const imgWidth = img.offsetWidth;
 const maxPage = domUtil.$(".recommand__image--wrapper").childElementCount - 1;
-// prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
-function onclickNext(target) {
-  domUtil.$(".recommand__image--pageCount").innerHTML = `${-pageCount} / ${
-    maxPage - 1
-  } `;
+const imgPage = domUtil.$(".recommand__image--pageCount");
+
+function onClickBannerController(event) {
+  if (event.target.className === "next") {
+    onclickNext();
+  } else if (event.target.className === "prev") {
+    onclickPrev();
+  }
+}
+
+function onclickNext() {
   img.style.transition = `${0.5}s`;
   if (maxPage > -pageCount) {
     pageCount--;
   }
   img.style.transform = `translate(${pageCount * imgWidth}px)`;
-  if (pageCount === -5) {
-    setTimeout(() => {
-      pageCount = -1;
-      img.style.transition = `${0}s`;
-      img.style.transform = `translate(${pageCount * imgWidth}px)`;
-    }, 500);
+  imgPage.innerHTML = `${-pageCount} / ${maxPage - 1} `;
+  if (pageCount === -maxPage) {
+    loop2first();
   }
 }
 
 function onclickPrev() {
-  domUtil.$(".recommand__image--pageCount").innerHTML = `${-pageCount} / ${
-    maxPage - 1
-  } `;
   img.style.transition = `${0.5}s`;
   if (0 > pageCount) {
     pageCount++;
   }
-  const pixel = imgWidth * pageCount;
   img.style.transform = `translate(${pageCount * imgWidth}px)`;
-  console.log(pageCount);
+  imgPage.innerHTML = `${-pageCount} / ${maxPage - 1} `;
   if (pageCount === 0) {
-    setTimeout(() => {
-      pageCount = -(maxPage - 1);
-      img.style.transition = `${0}s`;
-      img.style.transform = `translate(${pageCount * imgWidth}px)`;
-    }, 500);
+    loop2end();
   }
 }
 
-// const imageloop = setInterval(() => {
-//   onclickNext();
-// }, 1000);
-
 const loop2first = () => {
-  if (pageCount === -5) {
-    // debugger;
-    pageCount = 0;
+  imgPage.innerHTML = `${1} / ${maxPage - 1} `;
+  setTimeout(() => {
+    pageCount = -1;
     img.style.transition = `${0}s`;
-    img.style.transform = `translate(${img.childElementCount * imgWidth})`;
-    setTimeout(() => {
-      img.style.transition = `${0.5}s`;
-    }, 0);
-  }
+    img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  }, 500);
 };
 
-const loop2last = () => {
-  if (pageCount === 0) {
-    pageCount = -(img.childElementCount - 2);
-    console.log(pageCount);
+const loop2end = () => {
+  imgPage.innerHTML = `${maxPage - 1} / ${maxPage - 1} `;
+  setTimeout(() => {
+    pageCount = -(maxPage - 1);
     img.style.transition = `${0}s`;
-    img.style.transform = `translate(${pageCount * imgWidth})`;
-    setTimeout(() => {
-      img.style.transition = `${0.5}s`;
-    }, 0);
-  }
+    img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  }, 500);
 };
 
-export { onclickPrev, onclickNext };
+const imageloop = setInterval(() => {
+  onclickNext();
+}, 2000);
+
+export { onClickBannerController };

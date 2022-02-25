@@ -3,12 +3,14 @@ import { domUtil } from "./eventJS/util.js";
 import { renderMainSecHome, renderMainSecWoD } from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
 import { renderToonbyDay } from "./eventJS/mainEvent.js";
-import { onclickPrev, onclickNext } from "./eventJS/slider.js";
+import { onClickBannerController } from "./eventJS/slider.js";
 
 renderMainSecHome();
 
-domUtil.$(".next").addEventListener("click", onclickNext);
-domUtil.$(".prev").addEventListener("click", onclickPrev);
+domUtil
+  .$(".recommand__image--controller")
+  .addEventListener("click", onClickBannerController);
+
 domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
   if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
