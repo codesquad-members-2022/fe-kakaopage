@@ -45,6 +45,8 @@ import { data } from './slide-datas.js'
 import { searchSelctor } from './utility.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+  const SLIDE_IMG_FIRST = 3
+
   const dayTab = searchSelctor('.serial__list')
   const slides = searchSelctor('.webtoon-slide__imgs')
   const slideEl = searchSelctor('.webtoon-slide__img')
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   setSlideImgStart(slides, slideEl, data[SLIDE_IMG_FIRST])
@@ -73,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
 =======
   setSlideImgStart(slides, slideEl, data[3])
+=======
+  setSlideImgStart(slides, slideEl, data[SLIDE_IMG_FIRST])
+>>>>>>> f396c4d (docs: README 수정)
   data.forEach((e) => {
     setSlideImg(slides, slideEl, e)
   })
