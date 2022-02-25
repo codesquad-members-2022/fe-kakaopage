@@ -33,13 +33,19 @@ nav > div {
   position: relative;
 }
 
-.menu-list ul li {
+.menu-list li {
   box-sizing: border-box;
   flex: 1 1 auto;
   padding: 30px 0 15px;
 }
 
-.css-kakaopage {
+.menu-list .check {
+  border-bottom-color: #ffd200;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+.kakaopage > img {
   margin-top: 27px;
   margin-bottom: 19px;
   cursor: pointer;

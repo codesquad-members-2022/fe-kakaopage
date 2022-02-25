@@ -166,3 +166,7 @@ image {
   align-items: center;
   justify-content: space-between;
 }
+
+.hidden {
+  display: none;
+}
