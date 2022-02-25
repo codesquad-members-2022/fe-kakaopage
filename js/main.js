@@ -109,7 +109,6 @@ const itemWidth = 720;
 let currentWidth = 0;
 let curEventPage = document.querySelector("#curEventPage");
 let curPage = 1;
-console.log(curPage);
 next.addEventListener("click", function () {
   currentWidth -= itemWidth;
   eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
