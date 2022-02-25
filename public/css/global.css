@@ -63,6 +63,10 @@ nav li {
   border-bottom: 1px solid #e9ecef;
 }
 
+.overflow-hd {
+  overflow: hidden;
+}
+
 .container {
   background-color: var(--white);
   margin-bottom: 15px;
@@ -158,12 +162,17 @@ a {
   display: flex;
 }
 
+.position-rel {
+  position: relative;
+}
+
 /*========== arrow ==========*/
 
 .arrow-icon {
   width: 35px;
   height: 35px;
   padding: 5px;
+  z-index: 1;
 }
 
 .arrow--round-border {

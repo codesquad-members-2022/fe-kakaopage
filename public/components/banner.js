@@ -1,76 +1,83 @@
 import { insertIntoMain } from "../utils.js";
 import { dataOfsBanner } from "../data/home/smallBanner.js";
+import { dataOfBanner } from "../data/home/banner.js";
+
+const getBannerImg = () => {
+  const imgs = [];
+
+  dataOfBanner.forEach((data) => {
+    const img = `<div class="position-rel">
+    <div class="banner-img-container">
+      <img class="banner-img" src="${data.img}" alt="${data.title}"/>
+    </div>
+    <div class="banner-detail-container text-color--white">
+      <h3 class="banner-title">${data.title}</h3>
+      <div class="layout-center banner-detail-text-container">
+        <img class="banner-detail-img" src="${data.tag}"/>
+        <span class="layout-center banner-detail-text">
+          <img class="banner-detail-icon"
+          src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"/>
+        ${data.category}</span>
+        <span>|</span>
+        <span class="layout-center banner-detail-text">
+          <img class="banner-detail-icon"
+          src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"/>
+        ${data.readers}만명</span>
+      </div>
+    </div>
+    <p class="banner-bottom-text">${data.desc}</p>
+  </div>`;
+    imgs.push(img);
+  });
+
+  return imgs.join("");
+};
 
 const createBanner = () => {
-  const banner = `<div class="center container banner-container">
-  <img
-    class="banner-img"
-    src="https://dn-img-page.kakao.com/download/resource?kid=boPfot/hzacdN1xHr/Erv1JHofHUV7eK46ofjynk"
-    alt="도사강호"
-  />
+  const banner = `<div class="center container position-rel">
   <svg
-    class="arrow-icon arrow--round-border arrow-left arrow--white"
+    class="arrow-icon arrow--round-border arrow-left arrow--white" id="banner-left"
     xmlns="http://www.w3.org/2000/svg"
     class="h-6 w-6"
     fill="none"
     viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
+    stroke="currentColor">
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
-      d="M15 19l-7-7 7-7"
-    />
+      d="M15 19l-7-7 7-7"/>
   </svg>
   <svg
-    class="arrow-icon arrow--round-border arrow-right arrow--white"
+    class="arrow-icon arrow--round-border arrow-right arrow--white" id="banner-right"
     xmlns="http://www.w3.org/2000/svg"
     class="h-6 w-6"
     fill="none"
     viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
+    stroke="currentColor">
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
-      d="M9 5l7 7-7 7"
-    />
+      d="M9 5l7 7-7 7"/>
   </svg>
-  <div class="banner-detail-container text-color--white">
-    <h3 class="banner-title">도사강호</h3>
-    <div class="layout-center banner-detail-text-container">
-      <img
-        class="banner-detail-img"
-        src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
-      />
-      <span class="layout-center banner-detail-text"
-        ><img
-          class="banner-detail-icon"
-          src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
-        />웹툰</span
-      >
-      <span>|</span>
-      <span class="layout-center banner-detail-text">
-        <img
-          class="banner-detail-icon"
-          src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
-        />39.1만명</span
-      >
+  <div>
+    <div class="side-by-side overflow-hd">
+    ${getBannerImg()}
     </div>
   </div>
   <div class="banner-count-container">
-    <span class="banner-count text-color--light-gray">1/3</span>
+    <span class="banner-count text-color--light-gray">
+      1/${dataOfBanner.length}
+    </span>
   </div>
-  <p class="banner-bottom-text">시각이 다르면 무공도 다르다</p>
 </div>`;
 
   insertIntoMain(banner);
 };
 
 const createSmallBanner = (data) => {
-  const smallBanner = `<div class="banner-container round-container">
+  const smallBanner = `<div class="position-rel round-container">
   <img
     class="banner-img"
     src="${data.img}"
