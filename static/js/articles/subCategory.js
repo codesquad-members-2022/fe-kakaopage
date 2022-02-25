@@ -8,11 +8,11 @@ export function renderSubCategory(subCategoryIndexArr) {
   $newUl.innerHTML = `
   ${subCategoryIndexArr
     .map(
-      (categoryIndex, idx) =>
+      ({ key, value }) =>
         `<li class="main__index c-category__index ${
-          idx === Number(subCategoryUid) && 'sub-category-active'
+          key === Number(subCategoryUid) && 'sub-category-active'
         }" >
-          <a data-subCategory=${idx} href="/?categoryUid=${categoryUid}&subCategoryUid=${idx}">${categoryIndex}</a>
+          <a data-subCategory=${key} href="/?categoryUid=${categoryUid}&subCategoryUid=${key}">${value}</a>
         </li>`
     )
     .join('')}`;

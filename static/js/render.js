@@ -30,8 +30,14 @@ export async function render() {
 
   try {
     const { categoryUid, subCategoryUid } = getParams();
-    const uidContent = await preRender({ categoryUid, subCategoryUid });
-    console.log(uidContent);
+    const { content, isSuccess, msg } = await preRender({
+      categoryUid,
+      subCategoryUid,
+    });
+    if (!isSuccess) {
+      throw new Error(msg);
+    }
+
     const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid
     );
@@ -42,7 +48,7 @@ export async function render() {
     // mainlayout의 node를 지우고 새로 랜더링
     $mainLayout.innerHTML = ``;
 
-    const contentObj = await selectedCategory.renderCategory(subCategoryUid);
+    const contentObj = await selectedCategory.Category(content);
 
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {

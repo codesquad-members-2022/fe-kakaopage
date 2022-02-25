@@ -68,3 +68,7 @@ https://ichi.pro/ko/vanilla-jslo-peuleonteu-endeu-guseong-yoso-jagseong-15235000
 
 - carousel에서 인덱스번호를 private하게 관리해보고 싶어서 closure를 사용함
 - 클로저 안에 함수를 선언한건 잘못된건가? 클로저에서 리턴하는 함수마다 공통적으로 쓰는 로직이 있어서 분리했는데 잘 모르겠음.
+
+### 따닥 방지
+
+- https://darrengwon.tistory.com/1312

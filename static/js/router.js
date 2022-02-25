@@ -1,14 +1,14 @@
-import { Main } from './category/Main.js';
-import { Webtoon } from './category/Webtoon.js';
-import { Novel } from './category/Novel.js';
+import Main from './category/Main.js';
+import Webtoon from './category/Webtoon.js';
+import Novel from './category/Novel.js';
 import { render } from './render.js';
 import { handleTabActive } from './handleStyle/activeTab.js';
 
 // 나머지 카테고리는 반복이어서 생략
 export const routes = [
-  { categoryUid: 0, renderCategory: Main },
-  { categoryUid: 1, renderCategory: Webtoon },
-  { categoryUid: 2, renderCategory: Novel },
+  { categoryUid: 0, Category: Main },
+  { categoryUid: 1, Category: Webtoon },
+  { categoryUid: 2, Category: Novel },
 ];
 
 export function navigateTo(url) {
