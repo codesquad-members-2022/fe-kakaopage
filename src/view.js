@@ -4,7 +4,7 @@ import { getWebFictionPageTemp } from './render/webFiction.js';
 import { getMoviePageTemp } from './render/movie.js';
 import { getTVPageTemp } from './render/tv.js';
 import { getBookPageTemp } from './render/book.js';
-import { getDayTopContent } from './components/dayTop.js';
+import { getDayTopContentTemp } from './components/dayTop.js';
 import { getMainBannerTemp } from './components/mainBanners.js';
 
 const getPageTemp = (INITIAL_PAGE, data, today) => {
@@ -21,8 +21,8 @@ const getPageTemp = (INITIAL_PAGE, data, today) => {
     return currentPageTemp;
 }
 
-const getDayTopContentTemp = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
+const getNewDayTopContentTemp = (dayTopData, currentTabIdx) => getDayTopContentTemp(dayTopData, currentTabIdx);
 
-const getMainBannerTemp = (data, className) => getMainBannerTemp(data, className);
+const getNewMainBannerTemp = (data, className) => getMainBannerTemp(data, className);
 
-export { getPageTemp, getDayTopContentTemp, getMainBannerTemp };
+export { getPageTemp, getNewDayTopContentTemp, getNewMainBannerTemp };

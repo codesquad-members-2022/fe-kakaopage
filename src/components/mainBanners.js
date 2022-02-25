@@ -1,4 +1,4 @@
-import { getSildeButton } from "./sildeButton.js";
+import { getSildeButtonTemp } from "./sildeButton.js";
 
 const checkMainBannerTags = (dataEl) => {
     const status = dataEl.status ? `<span class="main-banner__status banner__status">${dataEl.status}</span>` : '';
@@ -36,7 +36,7 @@ const getMainBannersTemp = (data) => {
             <ul class="main-banners__contents slide-wrap">
                 ${mainBannerList}
             </ul>
-            ${getSildeButton('main-banners__slide-button')}
+            ${getSildeButtonTemp('main-banners__slide-button')}
             <div class="slide-paging-number">
                 <span class="slide-paging-number__current">1</span>
                 <span class="slide-paging-number__all">${data.length}</span>

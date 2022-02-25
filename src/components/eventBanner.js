@@ -1,4 +1,4 @@
-import { getSildeButton } from "./sildeButton.js";
+import { getSildeButtonTemp } from "./sildeButton.js";
 
 const getEventBannerTemp = (dataEl, className) => {
     return (
@@ -24,7 +24,7 @@ const getEventBannersTemp = (data) => {
                     ${eventBannerList}
                 </ul>
             </div>
-            ${getSildeButton('event-banners__slide-button')}
+            ${getSildeButtonTemp('event-banners__slide-button')}
         </div>`
 );
 }

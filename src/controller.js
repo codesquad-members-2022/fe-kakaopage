@@ -1,6 +1,6 @@
 import { $, $$, removeAndInsertHTML, getToday } from "./utility.js";
 import { getPageData } from "./data.js";
-import { getPageTemp, getDayTopContentTemp, getMainBannerTemp } from "./view.js";
+import { getPageTemp, getNewDayTopContentTemp, getNewMainBannerTemp } from "./view.js";
 import { addClickEvent } from "./eventListener.js";
 
 const activateDayTopTabButton = (gnbTarget, today) => {
@@ -13,20 +13,20 @@ export const renderPage = async (gnbTarget) => {
     const dataUrl = getPageData(gnbTarget);
     const response = await fetch(dataUrl);
     const currentPageData = await response.json();
-    const PageTemp = getPageTemp(gnbTarget, currentPageData, today);
-    removeAndInsertHTML('.contents', 'afterbegin', PageTemp);
+    const pageTemp = getPageTemp(gnbTarget, currentPageData, today);
+    removeAndInsertHTML('.contents', 'afterbegin', pageTemp);
     activateDayTopTabButton(gnbTarget, today);
     return currentPageData;
 }
 
 export const renderDayTop = (dayTopData, currentTabIdx) => {
-    const newDayTopContentTemp = getDayTopContentTemp(dayTopData, currentTabIdx);
+    const newDayTopContentTemp = getNewDayTopContentTemp(dayTopData, currentTabIdx);
     const newDayTopContent = newDayTopContentTemp.rankList + newDayTopContentTemp.gradeList;
     removeAndInsertHTML('.day-top-conntent', 'afterbegin', newDayTopContent);
 }
 
 const renderMainBanner = (newMainBannerData, [className, insertPosition]) => {
-    const newMainBannerTemp = getMainBannerTemp(newMainBannerData, className);
+    const newMainBannerTemp = getNewMainBannerTemp(newMainBannerData, className);
     $('.main-banners__contents').insertAdjacentHTML(insertPosition, newMainBannerTemp);
 }
 
@@ -43,7 +43,7 @@ const updateMainBannerIdx = (currentIdx) => {
 }
 
 export const MAIN_BANNER_INFO = {
-    mainBannerTimer: function() {},
+    mainBannerTimer: 0,
     currentIdx: 1,
     viewIdx: 1,
     subtractIdx: function(slideLength) {
@@ -76,7 +76,6 @@ export const startMainBanerTimer = (mainBannersData) => {
         parmToRenderFun: ['next-slide', 'beforeend'],
         slideLength: mainBannersData.length
     };
-
     MAIN_BANNER_INFO.mainBannerTimer = setInterval(() => {
         moveMainBanner(mainBannersData[MAIN_BANNER_INFO.currentIdx + 1], parmToMoveMainBanner);
     }, MAIN_BANNER_INFO.slideTime);
