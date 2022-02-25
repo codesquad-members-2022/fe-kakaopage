@@ -154,6 +154,10 @@ a {
   padding: 4px 6px;
 }
 
+.side-by-side {
+  display: flex;
+}
+
 /*========== arrow ==========*/
 
 .arrow-icon {
