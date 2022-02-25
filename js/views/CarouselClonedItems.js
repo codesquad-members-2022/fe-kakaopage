@@ -18,7 +18,7 @@ export default class extends Page {
         <p class="title">${carouselItem.title}</p>
         <div class="description">
         <div>
-            <span>${carouselItem.subscriber}</span>
+            <span>🙍‍♀️ ${carouselItem.subscriber}</span>
         </div>
         </div>
         <div
