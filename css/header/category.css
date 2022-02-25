@@ -1,0 +1,32 @@
+.header__container:last-child {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px #dfdfdf solid;
+}
+
+.header-category {
+  width: 100%;
+  height: 100%;
+}
+
+.header-category__row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.header-category__item {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+}
+
+.header-category__item.yellow-border {
+  border-bottom: 3px solid var(--yellow);
+}
+
+.header-category__row img {
+  margin: 0 39px;
+}

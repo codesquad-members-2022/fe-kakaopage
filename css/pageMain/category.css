@@ -2,12 +2,12 @@
   font-size: 20px;
 }
 
-.page-main-category__container {
+.page-main-category__row {
   display: flex;
   align-items: center;
 }
 
-.page-main-category__container li {
+.page-main-category__row li {
   padding: 22px 0;
   display: flex;
   justify-content: center;

@@ -5,6 +5,10 @@
   display: flex;
 }
 
+.preview-container {
+  overflow: hidden;
+}
+
 .preview {
   position: relative;
 }
@@ -32,6 +36,7 @@
   color: white;
   font-size: 28px;
   font-weight: bold;
+  line-height: 30px;
 }
 
 .preview-detail {
@@ -99,4 +104,18 @@
 .prev-btn:active,
 .next-btn:active {
   transform: scale(1);
+}
+
+.slide-number {
+  position: absolute;
+  top: 400px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.slide-number .cur-number::after {
+  content: '/';
+  display: block;
+  margin: 0 10px;
 }

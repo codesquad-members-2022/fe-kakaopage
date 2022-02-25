@@ -1,0 +1,283 @@
+{
+  "홈": [
+    {
+      "previewCoverPath": "./assets/data/preview/메이플",
+      "title": "오프라인 RPG <br/>코믹 메이플스토리",
+      "state": "event",
+      "summary": "삼시세편으로 봄방학 알차게 즐기기!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/도사강호",
+      "title": "도사 강호",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": true,
+      "subscriber": 394000,
+      "summary": "시각이 다르면 무공도 다르다!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/네크로맨서학교의소환천재",
+      "title": "네크로맨서 학교의 소환 천재",
+      "genre": "소설",
+      "state": "event",
+      "waitfree": true,
+      "subscriber": 744000,
+      "summary": "하루 3편 무료+캐시 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/무인이랑",
+      "title": "무인 이랑",
+      "state": "hot",
+      "summary": "무인 한이랑의 무협 활극!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/사내맞선드라마",
+      "title": "<사내 맞선> <br />드라마화 기념 쏜다!",
+      "state": "event",
+      "summary": "캐시와 스페셜 굿즈 선물까지!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/드라마",
+      "title": "듣기만 해도 당 충전되는<br/> <사내 맞선> 오디오 드라마",
+      "state": "event",
+      "summary": "이게될까?에서 만나보기"
+    },
+
+    {
+      "previewCoverPath": "./assets/data/preview/소설속시한부",
+      "title": "소설 속 시한부<br/>주인공이 되었다!",
+      "state": "event",
+      "waitfree": false,
+      "summary": "추천작 읽으면 전원 캐시 선물!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/탑스타의이중생활",
+      "title": "탑스타의 이중생활",
+      "genre": "소설",
+      "state": "new",
+      "waitfree": false,
+      "summary": "런칭 기념 이용권+캐시 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/괴물공작가의계약공녀",
+      "title": "괴물 공작가의 계약 공녀",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 1104000,
+      "summary": "시즌3 오픈 기념, 대박 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/귀환용사의골목식당",
+      "title": "귀환 용사의 골목식당",
+      "genre": "웹툰",
+      "state": "new",
+      "waitfree": true,
+      "subscriber": 67000,
+      "summary": "신작 런칭 기념 캐시 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/시월드게임",
+      "title": "시월드 게임",
+      "genre": "웹툰",
+      "state": "new",
+      "waitfree": true,
+      "subscriber": 746000,
+      "summary": "이 결혼과 시댁은 내가 지배한다!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/이벤트",
+      "title": "오늘의 핫픽 보면<br/>최대 2000캐시 선물!",
+      "state": "event",
+      "waitfree": false,
+      "summary": "핫픽 보고 매일 캐시 선물 받자!"
+    }
+  ],
+  "요일연재": [
+    {
+      "previewCoverPath": "./assets/data/preview/나쁜색기",
+      "title": "나쁜 색기",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 69000,
+      "summary": "우리 이렇게 엮여도 괜찮은 거야?"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/업데이터",
+      "title": "업데이터",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": false,
+      "subscriber": 350000,
+      "summary": "영구삭제 NPC, 관리자로 부활"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/샬롯에게는다섯명의제자가있다",
+      "title": "샬롯에게는 다섯명의 제자가 있다",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": false,
+      "subscriber": 1087000,
+      "summary": "대마법사 샬롯의 제자들이 이상하다?"
+    }
+  ],
+  "웹툰": [
+    {
+      "previewCoverPath": "./assets/data/preview/내가죽였다",
+      "title": "내가 죽였다",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 221000,
+      "summary": "자살 아니야. 사실 내가 죽였어"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/귀환용사의골목식당",
+      "title": "귀환 용사의 골목식당",
+      "genre": "웹툰",
+      "state": "new",
+      "waitfree": true,
+      "subscriber": 69000,
+      "summary": "마계로부터 지구를 지킬 수 있을까?"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/마탄의사수",
+      "title": "마탄의 사수",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 612000,
+      "summary": "백발백중의 사수가 강림했다!"
+    }
+  ],
+  "소년": [
+    {
+      "previewCoverPath": "./assets/data/preview/롱리브더킹",
+      "title": "롱리브더킹",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 221002,
+      "summary": "슬라이드 이미지 1개"
+    }
+  ],
+  "드라마": [
+    {
+      "previewCoverPath": "./assets/data/preview/선택",
+      "title": "선택",
+      "genre": "웹툰",
+      "state": "new",
+      "waitfree": false,
+      "subscriber": 210000,
+      "summary": "슬라이드 이미지 2개"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/빙과",
+      "title": "빙과",
+      "genre": "웹툰",
+      "state": "hot",
+      "waitfree": false,
+      "subscriber": 111000,
+      "summary": "슬라이드 이미지 2개"
+    }
+  ],
+  "로맨스": [
+    {
+      "previewCoverPath": "./assets/data/preview/사장님의특별지시",
+      "title": "사장님의 특별지시",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": true,
+      "subscriber": 409581,
+      "summary": "발렌타인기념, 한시한편+경품 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/크레이지가드너",
+      "title": "크레이지 가드너",
+      "genre": "웹툰",
+      "state": "hot",
+      "waitfree": false,
+      "subscriber": 202000,
+      "summary": "넌 이미 미쳐 있다"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
+      "title": "따봉으로 레벨업",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 151002,
+      "summary": "따봉으로 강해지는 최강헌터 엄지척!"
+    }
+  ],
+  "로판": [
+    {
+      "previewCoverPath": "./assets/data/preview/남편님다시결혼해주세요",
+      "title": "남편님, 다시 결혼해 주세요!",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 220501,
+      "summary": "웹툰 런칭 기념, 이벤트 중!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/지옥에서독식",
+      "title": "지옥에서 독식",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": false,
+      "subscriber": 36501,
+      "summary": "난이도: 지옥 종말의 별에 진입합니다"
+    }
+  ],
+  "액션무협": [
+    {
+      "previewCoverPath": "./assets/data/preview/황성독보천하컬렉션",
+      "title": "황성 독보천하 컬렉션",
+      "genre": "웹툰",
+      "state": "hot",
+      "waitfree": true,
+      "subscriber": 16000,
+      "summary": "부잣집 도련님, 개방파 입문?"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/환생요마뎐",
+      "title": "환생요마뎐",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 19000,
+      "summary": "요괴를 길들이고 복수를 다짐하다!"
+    }
+  ],
+  "BL": [
+    {
+      "previewCoverPath": "./assets/data/preview/봄의에스프레소",
+      "title": "봄의<br/>에스프레소",
+      "genre": "웹툰",
+      "state": "event",
+      "waitfree": true,
+      "subscriber": 497000,
+      "summary": "완결, 1일 기무+캐시 이벤트!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/플러그인",
+      "title": "플러그 인",
+      "genre": "웹툰",
+      "state": "new",
+      "waitfree": false,
+      "subscriber": 54099,
+      "summary": "수학여행에서 본 여자애가, 너라고?!"
+    },
+    {
+      "previewCoverPath": "./assets/data/preview/대놓고사내연애",
+      "title": "대놓고 사내연애",
+      "genre": "웹툰",
+      "state": "update",
+      "waitfree": true,
+      "subscriber": 376000,
+      "summary": "난 비밀 연애는 싫습니다."
+    }
+  ]
+}
