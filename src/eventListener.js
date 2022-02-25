@@ -31,8 +31,9 @@ const renderAccordingMainBannerButton = (targetClass, mainBannersData) => {
             parmToRenderFun: ['next-slide', 'beforeend']
         };
     }
+    moveMainBanner(parmToMoveMainBanner.newMainBannerData, parmToMoveMainBanner);
     setInterval(() => {
-        moveMainBanner(parmToMoveMainBanner.newMainBannerData, parmToMoveMainBanner)
+        moveMainBanner(mainBannersData[MAIN_BANNER_INFO.currentIdx + 1], parmToMoveMainBanner);
     }, MAIN_BANNER_INFO.slideTime);
 }
 
@@ -57,7 +58,7 @@ export const addClickEvent = (currentPageData) => {
         if(targetClass.contains('main-banners__slide-button')) {
             if(MAIN_BANNER_INFO.throttling) return false;
             clearInterval(MAIN_BANNER_INFO.mainBannerTimer);
-            throttleMainBannerEvent();
+            // throttleMainBannerEvent();
             renderAccordingMainBannerButton(targetClass, currentPageData["mainBanner"]);
         }
     });
