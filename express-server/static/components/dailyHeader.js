@@ -1,8 +1,8 @@
-import {AddEvent, getWebtoonData, jsonRoute, renderGrid} from "../utils.js";
+import {addEvent, getWebtoonData, jsonRoute, myFetch, renderGrid, select} from "../utils.js";
 import {comicItem} from "./comicsGrid.js";
 
 
-export const dailyHeader = async (target, position, infographic)=>{
+export const dailyHeader = (target, position, comics, infographic)=>{
     const template =  `
       <ul class="dailyHeader">
         ${["월", "화", "수", "목", "금","토","일","완결"].map((day,index)=> `<li ${(new Date().getDay()+6)%7===index?"class='selected'":""} data-key=${index}>${day}</li>`).join('')}
@@ -22,15 +22,15 @@ export const dailyHeader = async (target, position, infographic)=>{
         </div>
     `;
     target.insertAdjacentHTML(position,template);
-    const grid = target.querySelector('.comicsGrid')
-    const key = target.querySelector('.dailyHeader>.selected').dataset.key
-    await renderGrid(grid, key);
-    AddEvent(target, 'click', 'li', async ({target:eventTarget})=>{
-        target.querySelector('.dailyHeader>.selected').classList.remove('selected');
+    const grid = select(target, '.comicsGrid')
+    const jsonKey = select(target, '.dailyHeader>.selected').dataset.key
+    renderGrid(comics, infographic, grid, jsonKey);
+    addEvent(target, 'click', 'li', ({target:eventTarget})=>{
+        select(target, '.dailyHeader>.selected').classList.remove('selected');
         const li = eventTarget.closest('li[data-key]');
         eventTarget.classList.add('selected');
         grid.innerHTML = '';
-        await renderGrid(grid, li.dataset.key);
+        renderGrid(comics, infographic, grid, li.dataset.key);
     })
 }
 //new 어쩌구는 return this로 객체를 생성해준다.

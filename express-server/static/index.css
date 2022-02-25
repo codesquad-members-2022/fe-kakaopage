@@ -3,6 +3,11 @@
 @import "styles/AdBanner.css";
 @import "styles/reset.css";
 @import "styles/comicsGrid.css";
+@import "styles/HomeHeader.css";
+@import "styles/BannerBox.css";
+@import "styles/GrayCube.css";
+@import "styles/dailyHeader.css";
+@import "styles/menuNav.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 body{
     background: #eee;
