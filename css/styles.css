@@ -1,3 +1,5 @@
+@import "reset.css";
+
 /*components */
 @import "./components/nav-box.css";
 @import "./components/image-box.css";
@@ -5,9 +7,10 @@
 @import "./components/translateX.css";
 @import "./components/transition.css";
 
-@import "reset.css";
+/*screens */
+@import "./screens/webtoon-weekly.css";
+
 @import "header.css";
-@import "main.css";
 @import "footer.css";
 
 body {
