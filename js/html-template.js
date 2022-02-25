@@ -1,18 +1,16 @@
 class Contents {
   makeImageSection(list) {
     return `
-    <section class="image_section mg-t-20 pos-rel">
+    <li class="image_element">
       <img src="${list.url}" / alt="${list.title}" 이미지">
-      <div class="back pos-abs">🔙</div>
-      <div class="next pos-abs">🔜</div>
       <div class="image_text pos-abs">
       <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">${list.title}</h2>
-      <span class="image_event pd-5">${list.status}</span>
+      <span class="image_event ">${list.status}</span>
         <span class="image_span">🕔웹툰 |</span>
         <span class="image_span">👤${list.people}만명</span>
       </div>
       <div class="image_footer pos-abs pd-10">${list.message}</div>
-    </section>
+      </li>
     `;
   }
 
