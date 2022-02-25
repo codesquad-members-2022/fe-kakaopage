@@ -1,10 +1,13 @@
-import {containerInfo} from './data/containerInfoData.js'
-import {todayWebtoonsData} from './data/todayWebtoons.js'
-import {renderHome, renderDaily} from './render.js'
-import {dailyTopData} from './data/scrape/dailyTopData.js'
-import {makeWebtoonList} from './components/webtoonList.js'
-import {eventMainBanner} from './slideEvent.js'
-import {$, $all} from './utility.js'
+import dailyTopData from './data/json/dailyTopData.json' assert { type: "json"} ;
+import {renderMain} from './render.js';
+import {makeWebtoonList} from './components/webtoonList.js';
+import {eventMainBanner} from './slider.js';
+import {$, $all} from './utility.js';
+
+const startSlide = () => {
+  const list = $('.main__banner .banner__list')
+  eventMainBanner(list);
+}
 
 const setFocus = (target, className) => {
   const focused = $(`.${className}`);
@@ -18,7 +21,12 @@ const clickGenresList = () => {
     item.addEventListener('click', (event) => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
+      
+      // clearInterval 수정필요
+      clearInterval(startSlide);
+      resetMain();
       moveGenreNav(event.target);
+      startSlide();
     })
   });
 }
@@ -26,22 +34,26 @@ const clickGenresList = () => {
 const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
-      resetMain();
-      renderHome('홈', containerInfo, 'reRender', todayWebtoonsData);
+      renderMain('home');
       eventHome();
       break;
     case 'daily':
-      resetMain();
-      renderDaily(todayWebtoonsData);
+      renderMain('daily');
       clickDailyTopList(dailyTopData);
       break;
+    case 'webtoon':
+      renderMain('webtoon');
+      break;  
+    case 'boy':
+      renderMain('boy');
+      break; 
   }
 }
 
 const resetMain = () =>{
   const main = $('.main');
-
-  while (main.children.length > 2) {
+  const GENRES_LIST = 1;
+  while (main.children.length > GENRES_LIST) {
     main.removeChild(main.lastChild);
   }
 }
@@ -50,6 +62,8 @@ const clickDailyTopList = (data) => {
   const selectDay = $all('.day');
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
+      if (!event.target.classList.contains('day__btn')) return false
+
       const parentNode = event.target.parentNode;
       const focusedClass = 'day--focused';
       setFocus(parentNode, focusedClass);
@@ -57,22 +71,13 @@ const clickDailyTopList = (data) => {
       const topContainer = event.target.closest('.select__day').parentNode;
       topContainer.removeChild($('.webtoons__list'));
 
-      const filterData = selectDailyWebtoonData(parentNode, data);
       const DAILY_ITEMS = 10; 
-      const newList = makeWebtoonList(DAILY_ITEMS, filterData);
+      const targetDay = event.target.parentNode.dataset.day;
+      const newList = makeWebtoonList(DAILY_ITEMS, data[targetDay]);
       
       topContainer.appendChild(newList);
     })
   })
-}
-
-const selectDailyWebtoonData = (parentNode, data) => {
-  const select = parentNode.dataset.day;
-  const filterData = (select === 'end')
-    ? data
-    : data.filter((el) => el.day.includes(select) && !(el.review.includes('위')));
-
-  return filterData;
 }
 
 const clickBannerPrevBtn = () => {
@@ -115,17 +120,13 @@ const clickPromotionBanner = () => {
 }
 
 const eventHome = () => {
+  clickGenresList();
   clickPromotionBanner();
   clickDailyTopList(dailyTopData);
 }
 
-const loadHome = () => {
-  renderHome('홈', containerInfo, 'firstRender', todayWebtoonsData);
-  eventHome();
-  clickGenresList();
-}
-
 window.addEventListener('load', () => {
-  loadHome();
-  eventMainBanner();
+  renderMain('home');
+  eventHome();
+  startSlide();
 });

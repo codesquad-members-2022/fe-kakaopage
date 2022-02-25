@@ -1,0 +1,72 @@
+{
+  "home": [
+    {
+      "rank":"1",
+      "title":"남편님, 다시 결혼해 주세요!",
+      "viewer":"31.8만명",
+      "author":"미우,파라구,Rana",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=tiNdF/hzp2kKX00t/KlYYVXjccU6Crr6NCxTKvK&filename=th2",
+      "img_alt":"남편님, 다시 결혼해 주세요!",
+      "genre":"기다무웹툰로판",
+      "day":"금 연재"
+    },
+    {
+      "rank":"2",
+      "title":"병약한? 남편의 계약 아내",
+      "viewer":"27.1만명",
+      "author":"지은설,연홍,세리안",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=cKb15m/hzb7xx5Gbu/swDYCNVU9nElhCRzTWJrK0&filename=th2",
+      "img_alt":"병약한? 남편의 계약 아내",
+      "genre":"기다무웹툰로판",
+      "day":"화 연재"
+    },
+    {
+      "rank":"3",
+      "title":"막내 황녀님",
+      "viewer":"118만명",
+      "author":"돌대 [악어스튜디오],사하",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=bxZgfW/hzhOjAWIkc/W6ngPs1TUSSfuOQ1MzpH70&filename=th2",
+      "img_alt":"막내 황녀님",
+      "genre":"기다무웹툰로판",
+      "day":"화 연재"
+    }
+  ],
+  "daily": [
+    {}
+  ],
+  "webtoon": [
+    {}
+  ],
+  "boy": [
+    {
+      "rank":"1",
+      "title":"도굴왕",
+      "viewer":"201.9만명",
+      "author":"윤쓰(REDICE STUDIO),쓰리비투에스,산지직송",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=NFDyw/hzb7v7UXak/sIRlf04F2kfYD9FnlKPry0&filename=th2",
+      "img_alt":"도굴왕",
+      "genre":"기다무웹툰 소년",
+      "day":"화, 금 연재"
+    },
+    {
+      "rank":"2",
+      "title":"부서진 성좌의 회귀",
+      "viewer":"18.2만명",
+      "author":"양경일(플렉시마인드),사도연",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=n9CHy/hzb7BtsQ3u/77tn9kRmkK4oUk1tQ2uYLK&filename=th2",
+      "img_alt":"부서진 성좌의 회귀",
+      "genre":"기다무웹툰 소년",
+      "day":"화 연재"
+    },
+    {
+      "rank":"3",
+      "title":"묵향 다크레이디",
+      "viewer":"132.1만명",
+      "author":"이재헌,구깃,전동조",
+      "img_url":"https://dn-img-page.kakao.com/download/resource?kid=fJhlQ/hzhOmjpFzJ/QqTh7BYmWBWkiRXoHLQ0wK&filename=th2",
+      "img_alt":"묵향 다크레이디",
+      "genre":"기다무웹툰 소년",
+      "day":"월 연재"
+    }
+  ]
+}

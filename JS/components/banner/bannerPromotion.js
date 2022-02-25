@@ -1,20 +1,19 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {promotionBannerData} from '../../data/scrape/promotionBannerData.js'
 import {$, $all} from '../../utility.js'
 
 // ========== promotionBanner ==========
-function renderPromotionBanner(focus) {
+function renderPromotionBanner(data) {
   const main = $('.main');
-  const newDiv = makePromotionLayout(focus);
+  const newDiv = makePromotionLayout(data);
   main.appendChild(newDiv);
 }
 
-function makePromotionLayout(focus) {
+function makePromotionLayout(data) {
   const newDiv = document.createElement('div');
   newDiv.classList.add('promotion__banner');
 
   const btns = makeBannerBtns();
-  const newList = makePromotionList(focus);
+  const newList = makePromotionList(data);
 
   newDiv.appendChild(btns);
   newDiv.appendChild(newList);
@@ -22,27 +21,24 @@ function makePromotionLayout(focus) {
   return newDiv;
 }
 
-function makePromotionList(focus) {
+function makePromotionList(data) {
   const newList = document.createElement("ul");
   newList.classList.add('promotion__list');
-  makePromotionItem(newList, focus);
+  makePromotionItem(newList, data);
   return newList;
 }
 
-function makePromotionItem(list, focus) {
-  const promotionData = promotionBannerData;
-
-  promotionData.forEach((el, index) => {
+function makePromotionItem(list, data) {
+  data.forEach((el, index) => {
     const item = document.createElement('li');
-
-    item.classList.add('promotion__item');
-    promotionData[index].genre === focus
-    ? item.classList.add('focused')
-    : item.classList.add('none')
-
+    const firstChild = 0;
+    index === firstChild 
+    ? item.classList.add('focused', 'promotion__item')
+    : item.classList.add('none', 'promotion__item');
+    
     item.innerHTML = `<a href="#">
-    <img src="${promotionData[index].img_url}" alt="${promotionData[index].img_alt}">
-  </a>`
+    <img src="${el.img_url}" alt="${el.img_alt}">
+  </a>`;
 
   list.appendChild(item);
   });
