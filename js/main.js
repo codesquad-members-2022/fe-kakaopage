@@ -5,6 +5,7 @@ import {weeklyWebtoonList} from "./data.js";
 let previousSubCategory = document.createElement("div");
 let previousWeekdayCategory = document.createElement("div");
 let clickButtonCount = 0;
+let isMovable = true;
 
 init();
 
@@ -34,6 +35,7 @@ function delegateEventListener(parentElement, func) {
 function attachButtonHandler() {
   const slideButtonDiv = document.querySelector(".slide_button");
   slideButtonDiv.addEventListener("click", ({target}) => {
+    isMovable = false;
     if (target.closest(".next_button")) {
       clickButtonCount++;
       moveWebtoonSlide();
@@ -55,17 +57,34 @@ function moveWebtoonSlide() {
   if (clickButtonCount < 0) {
     clickButtonCount = promotionWebtoons.length;
     promotionWebtoonSlide.style.transform = `translateX(${- slideSize * (promotionWebtoons.length - 1)}px)`;
+    isMovable = true;
     return;
   }
   if (clickButtonCount >= promotionWebtoons.length) {
     promotionWebtoonSlide.style.transform = "";
     clickButtonCount = 0;
+    isMovable = true;
     return;
   }
   promotionWebtoonSlide.style.translate = "transform 0.3s ease-in-out";
   promotionWebtoonSlide.style.transform = `translateX(${-slideSize * clickButtonCount}px)`;
+  isMovable = true;
 }
 
+function excuteAutoSlide() {
+  const delayTime = 3000;
+  setInterval(() => {
+    if (!isMovable) {
+      return;
+    }
+    autoWebtoonSlide();
+  }, delayTime);
+}
+
+function autoWebtoonSlide() {
+  clickButtonCount++;
+  moveWebtoonSlide();
+}
 
 function clickSubCategoryNav(subCategoryNav) {
   previousSubCategory.classList.remove("bold");
@@ -81,10 +100,12 @@ function renderSubCategory(subCategory) {
       subCategorySection.innerHTML = weeklyPublicationTemplate;
       attachWebtoonBoardHandler();
       attachButtonHandler();
+      excuteAutoSlide();
       break;
     case "홈":
       subCategorySection.innerHTML = homeTemplate;
       attachButtonHandler();
+      excuteAutoSlide();
       break;
     case "웹툰": case "소년": case "드라마": case "로맨스": case "로판": case "액션무협": case "BL":
       subCategorySection.innerHTML = "";
