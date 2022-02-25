@@ -24,6 +24,7 @@ export const getpageNumTemplate = (parent, currNum, totalNum) => {
     `
 }
 
+//추천이벤트의 버튼은 위의 일반적인 경우와 달라서 따로 함수 분리
 export const getRecommendEventControllerTemplate = (parent, currNum, totalNum) => {
     const pageNumTemplate = getpageNumTemplate(parent, currNum, totalNum)
     return `
@@ -78,6 +79,7 @@ const moveSlide = (slideElement, direction) => {
     container.style.transition = `${SLIDE_DELAY} ease-out`;
     container.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
 }
+
 
 export const activateSlide = (parent, contentData, slideMakingFunction) => {
     const container = parent.querySelector('ul');
