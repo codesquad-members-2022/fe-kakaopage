@@ -1,55 +1,49 @@
-export const martialArtsData = [
-  {
-    url: 'https://dn-img-page.kakao.com/download/resource?kid=fK7X9/hzhOgcggkT/AHKP8zDsUABstUU49go5f1',
-    title: '학사귀환',
-    status: '이벤트',
-    people: '50.3',
-    message: '학사 마현, 중원으로 돌아오다!',
-  },
-  {
+// 액션 / 무협 데이터
+export const martialArtsData = {
+  threeMenu: {
     infoLt: '독점 신작🔥',
     infoCnt: '이벤트로 달리자',
     infoRgh: '기다무 플러스',
   },
-  {
+  todayRcmnd: {
     title: '오늘의 추천!',
     contents: '더보기👉',
     webtoonNum: '',
   },
-  {
+  firstRcmnd: {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=SKYCW/hzp2fwcBFb/dWOf9IIkKZtdQxlLTlwYwk&filename=th3',
     title: '화타가 된 외과의사',
     icon: 'UP',
     people: '28',
   },
-  {
+  secondRcmnd: {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=SoAFN/hzhOfxGZey/JLhutZaQcqWDkVzM6lXh1K&filename=th3',
     title: '궁귀검신',
     icon: 'UP',
     people: '51.4',
   },
-  {
+  thirdRcmnd: {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=cEWWIA/hzhOfrky00/fYkVB8TDj1xSr2amSN0ndk&filename=th3',
     title: '태상교주 숙수되다',
     icon: 'UP',
     people: '4.7',
   },
-  {
+  fourthRcmnd: {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=cirXb3/hy41G8X9Nz/LATewvg3fGQsKIP7kSEEik&filename=th3',
     title: '절대무신',
     icon: '',
     people: '61.1',
   },
-  {
+  webtoonAdvert: {
     url: 'https://dn-img-page.kakao.com/download/resource?kid=b5s038/hzacc3urG6/zuRGQmUXSpgKHBl90RmXlk',
     title: '의원귀환',
   },
-  {
+  martialArtsTOP: {
     title: '일간 액션/무협 TOP',
     contents: '더보기👉',
     webtoonNum: '',
   },
-  {
+  rank1st: {
     rankingNum: '1',
     url: 'https://dn-img-page.kakao.com/download/resource?kid=Bhw9l/hzhOj1XUfE/zN2Zb5ipGewccBpvp63KY0&filename=th2',
     title: '화산전생',
@@ -59,7 +53,7 @@ export const martialArtsData = [
     writer: '토마씨, 정준',
     date: '토',
   },
-  {
+  rank2st: {
     rankingNum: '2',
     url: 'https://dn-img-page.kakao.com/download/resource?kid=AhRTO/hzhOhiFUfq/cjheTLMAksWb97xpH1k2K0&filename=th2',
     title: '무당기협',
@@ -69,7 +63,7 @@ export const martialArtsData = [
     writer: '화람, 은열',
     date: '일',
   },
-  {
+  rank3st: {
     rankingNum: '3',
     url: 'https://dn-img-page.kakao.com/download/resource?kid=b5pOYZ/hynF2GW0Dv/giPSX0FFbKYKknQT3zQObk&filename=th2',
     title: '학사재생',
@@ -79,4 +73,4 @@ export const martialArtsData = [
     writer: '소유현, 윰짝짝',
     date: '월',
   },
-];
+};

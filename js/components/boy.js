@@ -3,7 +3,15 @@ import { contents } from '../html-template.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${contents.makeImageSection(boyData.mainImage)}
+  <section class="image_section mg-t-20 pos-rel">
+  <div class="image_box">
+    <ul class="image_container">
+    </ul>
+    <div class="back pos-abs">🔙</div>
+    <div class="next pos-abs">🔜</div>
+    <div class= "num_total pos-abs"></div>
+  </div>
+</section>
   ${contents.makeThreeMenu(boyData.threeMenu)}
   ${contents.makeAdvert(boyData.webtoonAdvert)}
   <section class="section dp-flex mg-t-20">
