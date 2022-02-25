@@ -25,7 +25,17 @@ export function setButtonEvent() {
     $right_button.addEventListener('click', buttonClickHandler);
 }
 
+let throttlingTimer = null;
+
 function buttonClickHandler(event){
+    const delay = 400;
+    if (!throttlingTimer) {
+        handleClickEvent(event);
+        throttlingTimer = setTimeout(() => throttlingTimer = null, delay);
+    }
+}
+
+function handleClickEvent(event){
     const $banner__contents = document.querySelector('.banner__contents');
     const $banner_list = document.querySelector('.banner__list');
     const direction = event.target.dataset.direction;
