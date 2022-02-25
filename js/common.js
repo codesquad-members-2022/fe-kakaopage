@@ -1,27 +1,3 @@
-export function calculateWeekday() {
-  const today = new Date();
-  const weekdayIndex = today.getDay();
-  const weekdayList = ["일","월", "화", "수", "목", "금", "토"];
-  const weekday = weekdayList[weekdayIndex];
-  return weekday;
-}
-
-export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
-  let promotionWebtoonTemplate = `<section class="promotion_webtoon_section">
-  <div class="slide_button align_space_between">
-    <img class="previous_button" src="./image/previousButton.svg" alt="previousButton" />
-    <img class="next_button" src="./image/nextButton.svg" alt="nextButton" />
-  </div>
-  <div class="promotion_webtoon_slide">`;
-  const totalSlideNumber = weeklyPromotionWebtoonList.length;
-  weeklyPromotionWebtoonList.forEach((weeklyPromotionWebtoon, slideNumber) => {
-    const promotionWebtoonDiv = createPromotionWebtoonDiv(weeklyPromotionWebtoon, slideNumber, totalSlideNumber);
-    promotionWebtoonTemplate += promotionWebtoonDiv;
-  });
-  promotionWebtoonTemplate += "</div></section>";
-  return promotionWebtoonTemplate;
-}
-
 function createPromotionWebtoonDiv(promotionWebtoon, slideNumber, totalSlideNumber) {
   return `<div class="promotion_webtoon" data-number="${slideNumber}">
     <img class="promotion_webtoon_image" src="${promotionWebtoon.url}">
@@ -40,26 +16,6 @@ function createPromotionWebtoonDiv(promotionWebtoon, slideNumber, totalSlideNumb
       ${promotionWebtoon.phrase}
     </div>
   </div>`;
-}
-
-export function createWeekdayCategoryNav() {
-  const weekdayCategoryList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-  let weekdayCategoryTemplate = `<nav class="weekday_category_navigation align_spce_around">`;
-  weekdayCategoryList.forEach((weekdayCategory) => {
-    weekdayCategoryTemplate += `<div class="weekday_category">${weekdayCategory}</div>`;
-  });
-  weekdayCategoryTemplate += "</nav>";
-  return weekdayCategoryTemplate;
-}
-
-
-export function createWebtoonBoardSection(webtoonList) {
-  let webtoonBoardTemplate = `<section class="webtoon_board">`;
-  webtoonList.forEach((webtoon) => {
-    webtoonBoardTemplate += createWebtoonElement(webtoon);
-  });
-  webtoonBoardTemplate += `</section>`;
-  return webtoonBoardTemplate;
 }
 
 function createWebtoonElement(webtoon) {
@@ -89,6 +45,41 @@ function createWebtoonDetailsDiv(readCount) {
   </div>`;
 }
 
+export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
+  let promotionWebtoonTemplate = `<section class="promotion_webtoon_section">
+  <div class="slide_button align_space_between">
+    <img class="previous_button" src="./image/previousButton.svg" alt="previousButton" />
+    <img class="next_button" src="./image/nextButton.svg" alt="nextButton" />
+  </div>
+  <div class="promotion_webtoon_slide">`;
+  const totalSlideNumber = weeklyPromotionWebtoonList.length;
+  weeklyPromotionWebtoonList.forEach((weeklyPromotionWebtoon, slideNumber) => {
+    const promotionWebtoonDiv = createPromotionWebtoonDiv(weeklyPromotionWebtoon, slideNumber, totalSlideNumber);
+    promotionWebtoonTemplate += promotionWebtoonDiv;
+  });
+  promotionWebtoonTemplate += "</div></section>";
+  return promotionWebtoonTemplate;
+}
+
+export function createWeekdayCategoryNav() {
+  const weekdayCategoryList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
+  let weekdayCategoryTemplate = `<nav class="weekday_category_navigation align_spce_around">`;
+  weekdayCategoryList.forEach((weekdayCategory) => {
+    weekdayCategoryTemplate += `<div class="weekday_category">${weekdayCategory}</div>`;
+  });
+  weekdayCategoryTemplate += "</nav>";
+  return weekdayCategoryTemplate;
+}
+
+export function createWebtoonBoardSection(webtoonList) {
+  let webtoonBoardTemplate = `<section class="webtoon_board">`;
+  webtoonList.forEach((webtoon) => {
+    webtoonBoardTemplate += createWebtoonElement(webtoon);
+  });
+  webtoonBoardTemplate += `</section>`;
+  return webtoonBoardTemplate;
+}
+
 export function createTodayCategorySection(todayCategotyList) {
   let todayCategoryTemplate = `<section class="today_category_container grid_container">`;
   todayCategotyList.forEach((todayCategory) => {
@@ -96,4 +87,12 @@ export function createTodayCategorySection(todayCategotyList) {
   })
   todayCategoryTemplate += "</section>";
   return todayCategoryTemplate;
+}
+
+export function calculateWeekday() {
+  const today = new Date();
+  const weekdayIndex = today.getDay();
+  const weekdayList = ["일","월", "화", "수", "목", "금", "토"];
+  const weekday = weekdayList[weekdayIndex];
+  return weekday;
 }

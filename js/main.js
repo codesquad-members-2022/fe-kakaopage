@@ -66,7 +66,7 @@ function moveWebtoonSlide() {
     isMovable = true;
     return;
   }
-  promotionWebtoonSlide.style.translate = "transform 0.3s ease-in-out";
+  promotionWebtoonSlide.style.translate = "transform 1s ease-in-out";
   promotionWebtoonSlide.style.transform = `translateX(${-slideSize * clickButtonCount}px)`;
   isMovable = true;
 }
