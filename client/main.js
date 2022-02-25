@@ -79,8 +79,11 @@ function makeClone(){
     }
     setInitialPos();
     setTimeout(function(){
-        $banner__container.style.transition="transform 0.5s"
+        $$banner.style.classList='animated';
     },100);
+    // setTimeout(function(){
+    //     $banner__container.style.transition="transform 0.5s"
+    // },100);
 }
 
 function setInitialPos(){
@@ -90,25 +93,30 @@ function setInitialPos(){
 
 makeClone()
 //배너 버튼
-let curIdx=bannerCount;
+
 let curSize=bannerCount*-720;
-const $bannerButton=document.querySelectorAll(".banner__button");
+const $$bannerButtons=document.querySelectorAll(".banner__button");
 
 function bannerClickButton(event) {
     let target= event.target;
     if(target.id==='next'){
         curSize-=720;
         $banner__container.style.transform=`translateX(${curSize}px)`
-        curIdx+=1
     }
 
     if(target.id==='prev'){
         curSize+=720;
         $banner__container.style.transform=`translateX(${curSize}px)`
-        curIdx-=1;
     }
-    console.log(curIdx)
-}
-$bannerButton[curIdx].addEventListener('click',bannerClickButton)
+    if(curSize===0||curSize===bannerCount*-720*(bannerCount-1)){
+        // $banner__container.style.transition=null;
+        
+        curSize=bannerCount*-720
+    }
+    
 
+}
+for(let x of $$bannerButtons){
+    x.addEventListener('click',bannerClickButton)
+}
 
