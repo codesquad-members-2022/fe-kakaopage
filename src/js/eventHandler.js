@@ -58,12 +58,11 @@ const handler = {
       activateTab(target);
       render.contents(category);
       this.daybar();
+      clearInterval(this.intervalId);
       this.mainBannerBtn();
     });
   },
-
   intervalId: null,
-
   mainBannerBtn() {
     const $mainBanner = $('.main-banner');
     const $mainBannerList = $('.main-banner__list');

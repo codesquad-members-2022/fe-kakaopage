@@ -1,4 +1,5 @@
 const DATA_URL = 'data/data.json';
+// const DATA_URL = 'http://localhost:3001/data';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);

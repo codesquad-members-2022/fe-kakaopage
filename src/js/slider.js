@@ -15,25 +15,30 @@ function initSlider(bannerList, bannerCount) {
 }
 
 function transformBanner(bannerList, pixel, second) {
-  console.log(bannerList);
+  console.log(pixel, second);
   console.log(bannerList.style.transform);
   bannerList.style.transform = `translateX(${pixel})px`;
   bannerList.style.transition = `${second}s ease-out`;
 }
 
 function slideBanner(...params) {
+  // console.log(currentIdx);
   const [bannerList, direction, bannerCount] = params;
+
+  if (currentIdx > bannerCount) currentIdx = 0;
+
   const controller = {
     prev() {
       if (currentIdx >= 0) {
         const px = -currentIdx * bannerWidth;
+        // transformBanner(bannerList, px, 0.25);
         bannerList.style.transform = `translateX(${px}px)`;
         bannerList.style.transition = '0.25s ease-out';
-        // transformBanner(bannerList, px, 0.25);
       }
       if (currentIdx === 0) {
         const px = -bannerCount * bannerWidth;
         setTimeout(() => {
+          // transformBanner(bannerList, px, 0);
           bannerList.style.transform = `translateX(${px}px)`;
           bannerList.style.transition = '0s ease-out';
         }, 200);
