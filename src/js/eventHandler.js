@@ -1,6 +1,6 @@
 import { $, activateTab, CL, data } from './util.js';
 import { render } from './render.js';
-import { cloneBanner, initSlider, slideBanner } from './slider.js';
+import { initSlider, slideBanner } from './slider.js';
 
 const $gnb = $('.gnb__list');
 
@@ -36,18 +36,6 @@ function filterWebtoonsByDay(e, data) {
 }
 
 const handler = {
-  daybar() {
-    const $days = $('.day__list');
-    if (!$days) return;
-
-    $days.addEventListener('click', e => {
-      const target = e.target.closest('.day__item');
-      if (!target) return;
-      activateTab(target);
-      filterWebtoonsByDay(e, data);
-    });
-  },
-
   SNB() {
     const $snb = $('.snb__list');
 
@@ -62,12 +50,14 @@ const handler = {
       this.mainBannerBtn();
     });
   },
+
   intervalId: null,
+
   mainBannerBtn() {
     const $mainBanner = $('.main-banner');
-    const $mainBannerList = $('.main-banner__list');
+    const $mainBannerList = $('.main-banner__list', $mainBanner);
     const bannerCount = $mainBannerList.children.length;
-    cloneBanner($mainBannerList);
+
     initSlider($mainBannerList, bannerCount);
 
     let isClicked = false;
@@ -87,12 +77,24 @@ const handler = {
       setTimeout(() => (isClicked = false), 3000);
     });
   },
+
+  daybar() {
+    const $days = $('.day__list');
+    if (!$days) return;
+
+    $days.addEventListener('click', e => {
+      const target = e.target.closest('.day__item');
+      if (!target) return;
+      activateTab(target);
+      filterWebtoonsByDay(e, data);
+    });
+  },
 };
 
 function setEventHandlers() {
-  handler.daybar();
   handler.SNB();
   handler.mainBannerBtn();
+  handler.daybar();
 }
 
 export { addTabFeature };
