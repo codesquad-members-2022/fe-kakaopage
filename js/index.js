@@ -43,7 +43,7 @@ const renderHome = () => {
     html += genreBest.getHtml();
 
     render(html);
-    renderCarousel();
+    renderCarousel(carouselImgs["홈"]);
 };
 
 const renderWeekday = (today = new Date().getDay()) => {
@@ -54,10 +54,11 @@ const renderWeekday = (today = new Date().getDay()) => {
     html += weekday.getHtml();
 
     render(html);
-    renderCarousel();
+    renderCarousel(carouselImgs["요일연재"]);
 };
 
-const renderCarousel = () => {
+const renderCarousel = (data) => {
+    const carouselImgs = data;
     const carousel = new CaroulselItems({ carouselImgs });
 
     let html = "";
