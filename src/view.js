@@ -7,8 +7,8 @@ import { getBookPageTemp } from './render/book.js';
 import { getDayTopContent } from './components/dayTop.js';
 import { getMainBannerTemp } from './components/mainBanners.js';
 
-const getPageTemplete = (INITIAL_PAGE, data, today) => {
-    const pageTemplete = {
+const getPageTemp = (INITIAL_PAGE, data, today) => {
+    const pageTemp = {
         "홈": () => getHomePageTemp(data, today),
         "웹툰": () => getWebtoonPageTemp(data, today),
         "웹소설": () => getWebFictionPageTemp(data, today),
@@ -16,13 +16,13 @@ const getPageTemplete = (INITIAL_PAGE, data, today) => {
         "방송": () => getTVPageTemp(data),
         "책": () => getBookPageTemp(data),
     };
-    const currentPageTemplete = pageTemplete[INITIAL_PAGE]();
+    const currentPageTemp = pageTemp[INITIAL_PAGE]();
 
-    return currentPageTemplete;
+    return currentPageTemp;
 }
 
-const getDayTopContentTemplete = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
+const getDayTopContentTemp = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
 
-const getMainBannerTemplete = (data, className) => getMainBannerTemp(data, className);
+const getMainBannerTemp = (data, className) => getMainBannerTemp(data, className);
 
-export { getPageTemplete, getDayTopContentTemplete, getMainBannerTemplete };
+export { getPageTemp, getDayTopContentTemp, getMainBannerTemp };

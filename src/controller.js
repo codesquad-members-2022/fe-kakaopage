@@ -1,6 +1,6 @@
 import { $, $$, removeAndInsertHTML, getToday } from "./utility.js";
 import { getPageData } from "./data.js";
-import { getPageTemplete, getDayTopContentTemplete, getMainBannerTemplete } from "./view.js";
+import { getPageTemp, getDayTopContentTemp, getMainBannerTemp } from "./view.js";
 import { addClickEvent } from "./eventListener.js";
 
 const activateDayTopTabButton = (gnbTarget, today) => {
@@ -13,20 +13,20 @@ export const renderPage = async (gnbTarget) => {
     const dataUrl = getPageData(gnbTarget);
     const response = await fetch(dataUrl);
     const currentPageData = await response.json();
-    const PageTemplete = getPageTemplete(gnbTarget, currentPageData, today);
-    removeAndInsertHTML('.contents', 'afterbegin', PageTemplete);
+    const PageTemp = getPageTemp(gnbTarget, currentPageData, today);
+    removeAndInsertHTML('.contents', 'afterbegin', PageTemp);
     activateDayTopTabButton(gnbTarget, today);
     return currentPageData;
 }
 
 export const renderDayTop = (dayTopData, currentTabIdx) => {
-    const newDayTopContentTemp = getDayTopContentTemplete(dayTopData, currentTabIdx);
+    const newDayTopContentTemp = getDayTopContentTemp(dayTopData, currentTabIdx);
     const newDayTopContent = newDayTopContentTemp.rankList + newDayTopContentTemp.gradeList;
     removeAndInsertHTML('.day-top-conntent', 'afterbegin', newDayTopContent);
 }
 
 const renderMainBanner = (newMainBannerData, [className, insertPosition]) => {
-    const newMainBannerTemp = getMainBannerTemplete(newMainBannerData, className);
+    const newMainBannerTemp = getMainBannerTemp(newMainBannerData, className);
     $('.main-banners__contents').insertAdjacentHTML(insertPosition, newMainBannerTemp);
 }
 
