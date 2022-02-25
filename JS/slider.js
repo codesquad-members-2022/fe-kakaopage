@@ -22,7 +22,7 @@ const eventMainBanner = (list) => {
 
 const slideMainBanner = (list, items, width, counter) => {
   setInterval(() => {
-    if (counter >= items.length) return;
+    if (counter > items.length) return;
     counter++;
     list.style.transform = `translate(${-width * counter}px)`;
     list.style.transition = 'transform 0.5s';
