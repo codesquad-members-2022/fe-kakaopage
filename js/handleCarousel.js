@@ -1,10 +1,13 @@
 import { $ } from "./utils.js";
+import { CarouselContent } from "../component/CarouselContent.js";
+import { carouselData } from "./dummy.js";
 
 export const handleCarousel = () => {
     const carouselList = $(".carousel__list");
     const leftArrow = $(".carousel_left_arrow");
     const rightArrow = $(".carousel_right_arrow");
     const carouselWidth = 720;
+    const carouselDuration = 400;
     const carouselLen = document.querySelectorAll(".carousel__background").length;
     const carouselCurCount = $('.carousel__count_current');
     const carouselTotalCount = $('.carousel__count_total');
@@ -18,6 +21,7 @@ export const handleCarousel = () => {
 
     carouselList.appendChild(firstChild.cloneNode(true));
     carouselList.insertBefore(lastChild.cloneNode(true), carouselList.firstElementChild);
+    renderDescription(curIndex);
 
     carouselList.style.width = `${carouselWidth * (carouselLen + 2)}px`;
     carouselList.style.transform = `translateX(-${carouselWidth * curIndex}px)`;
@@ -26,7 +30,7 @@ export const handleCarousel = () => {
     const nextBtnClick = () => {
         throttingTimer = null;
         if(curIndex <= carouselLen) {
-            carouselList.style.transition = '400ms';
+            carouselList.style.transition = `${carouselDuration}ms`;
             carouselList.style.transform = `translateX(-${carouselWidth * (curIndex + 1)}px)`;
         }
 
@@ -34,12 +38,14 @@ export const handleCarousel = () => {
             setTimeout(() => {
                 carouselList.style.transition = '0ms';
                 carouselList.style.transform = `translateX(-${carouselWidth}px)`;
-            }, 400);
+            }, carouselDuration);
             curIndex = 1;
             carouselCurCount.innerHTML = curIndex;
+            renderDescription(curIndex);
             return;
         }
         curIndex += 1;
+        renderDescription(curIndex);
         carouselCurCount.innerHTML = curIndex;
     }
 
@@ -54,9 +60,11 @@ export const handleCarousel = () => {
             setTimeout(() => {
                 carouselList.style.transition = '0ms';
                 carouselList.style.transform = `translateX(-${carouselWidth * carouselLen}px)`;
-            }, 400);
+            }, carouselDuration);
             curIndex = carouselLen;
         }
+
+        renderDescription(curIndex);
         carouselCurCount.innerHTML = curIndex;
     }
     
@@ -70,7 +78,7 @@ export const handleCarousel = () => {
             throttingTimer = setTimeout(() => {
                 nextBtnClick();
                 autoPlay();
-            }, 400);
+            }, carouselDuration);
         }
     });
 
@@ -80,9 +88,14 @@ export const handleCarousel = () => {
             throttingTimer = setTimeout(() => {
                 prevBtnClick();
                 autoPlay();
-            }, 400);
+            }, carouselDuration);
         }
     });
 
     autoPlay();
+}
+
+const renderDescription = (curIndex) => {
+    const carouselContent = $('.carousel__content');
+    carouselContent.innerHTML = CarouselContent(carouselData[curIndex - 1]);
 }
