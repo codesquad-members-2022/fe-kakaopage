@@ -13,48 +13,59 @@ const NOTE_CLASSNAME = 'tag-list__note';
 
 const PREVIEW_LIST_SELECTOR = '.preview-list';
 
-const createContainer = () =>
-  createElement('div', TAG_LIST_CONTAINER_CLASSNAME);
+/* 마크업 구조
+$mainContainer (div)
+  $tagListContainer (div)
+    $tagList (ul)
+      $tagListItem (li)
+        $tag (span)
+        $note (span)
+      $tagListItem (li)
+        $tag (span)
+        $note (span)
+      ...
+*/
 
 const createMainContainer = () =>
   createElement('div', MAIN_CONTAINER_CLASSNAME);
 
-const createUl = () =>
-  createElement('ul', TAG_LIST_CLASSNAME);
-
-const createLi = () =>
-  createElement('li', TAG_LIST_ITEM_CLASSNAME);
-
-const createTag = () =>
-  createElement('span', TAG_CLASSNAME);
-
-const createNote = () =>
-  createElement('span', NOTE_CLASSNAME);
-
-const createTagList = (tagList) => {
-  const $ul = createUl();
-  for (let i = 0; i < tagList.length; i++) {
-    const $li = createLi();
-    const $tag = createTag();
-    $tag.textContent = tagList[i].tag;
-    $li.appendChild($tag);
-
-    if (tagList[i].hasOwnProperty('note')) {
-      const $note = createNote();
-      $note.textContent = tagList[i].note;
-      $li.appendChild($note);
-    }
-    $ul.appendChild($li);
-  }
-  return $ul;
-};
-
 const createTagListContainer = (category) => {
   const tagList = tagListsData[category];
-  const $tagListContainer = createContainer();
+  const $tagListContainer = createElement('div', TAG_LIST_CONTAINER_CLASSNAME);
   const $tagList = createTagList(tagList);
   $tagListContainer.appendChild($tagList);
   return $tagListContainer;
+};
+
+const createTagList = (tagList) => {
+  const $tagList = createElement('ul', TAG_LIST_CLASSNAME);
+  tagList.forEach(({ tag, note }) => {
+    const $tagListItem = createTagListItem();
+    const $tag = createTag(tag);
+    $tagListItem.appendChild($tag);
+    if (!note) {
+      $tagList.appendChild($tagListItem);
+      return;
+    }
+    const $note = createNote(note);
+    $tagListItem.appendChild($note);
+    $tagList.appendChild($tagListItem);
+  });
+  return $tagList;
+};
+
+const createTagListItem = () => createElement('li', TAG_LIST_ITEM_CLASSNAME);
+
+const createTag = (tag) => {
+  const $tag = createElement('span', TAG_CLASSNAME);
+  $tag.textContent = tag;
+  return $tag;
+};
+
+const createNote = (note) => {
+  const $note = createElement('span', NOTE_CLASSNAME);
+  $note.textContent = note;
+  return $note;
 };
 
 const drawTagList = (category) => {
