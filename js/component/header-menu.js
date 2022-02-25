@@ -33,7 +33,7 @@ export const headerMenu = (data, list) => {
       .map(
         (v, i) =>
           `<li ${
-            i === 1 ? "class=check" : "class"
+            i === 1 && `class=check`
           }><a data-action=header_${v} ><img src=${data[v]}></a></li>`
       )
       .join("")}  

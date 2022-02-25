@@ -4,6 +4,7 @@ import { Render } from "./render.js";
 Render.fixedHeader();
 Render.header_toon();
 Render.toon_main();
+Render.toonCategory();
 Render.footerContent();
 
 (function addEvent() {
