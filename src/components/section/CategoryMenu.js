@@ -1,9 +1,11 @@
 import { CategoryMenuList } from '../index.js';
+import { convertStringToHTML } from '../../utils.js';
 
 const CategoryMenu = (menuList) => {
-  return `<section class="contents category-menu">
+  return convertStringToHTML(
+          `<section class="contents category-menu">
             ${CategoryMenuList(menuList)}
-          </section>`;
+          </section>`);
 };
 
 export default CategoryMenu;

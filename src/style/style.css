@@ -25,6 +25,12 @@ header {
 .header-wrapper {
   width: 100vw; }
 
+.no-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
 /* Header Top */
 .header-top {
   display: flex;
@@ -140,9 +146,7 @@ header {
     position: absolute;
     bottom: 14%;
     right: 17px;
-    color: #FFF;
-    font-size: 1.25rem;
-    opacity: 0.6; }
+    font-size: 1.25rem; }
 
 .banner-info .genre::after {
   content: '';
@@ -190,6 +194,10 @@ header {
   .banner img {
     width: 100%;
     object-fit: contain; }
+
+.banner-count, .banner-count * {
+  color: #FFF;
+  opacity: 0.6; }
 
 .banner-info {
   position: absolute;
@@ -516,7 +524,8 @@ header {
   overflow: hidden; }
 
 .recommend-event .banner-container {
-  display: flex; }
+  display: flex;
+  transition: all 700ms; }
   .recommend-event .banner-container img {
     width: 100%;
     border-radius: 5px; }

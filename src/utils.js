@@ -27,4 +27,9 @@ const getDay = () => {
 
 const isNew = (serialDate) => serialDate.includes(getDay());
 
-export { $, convertStringToHTML, convertReader, getDay, isNew };
+const setContainerWidth = (section) => {
+  const bannerCount = section.querySelector('.banner-container').childElementCount;
+  section.querySelector('.banner-container').style.width = `${100 * bannerCount}%`;
+};
+
+export { $, convertStringToHTML, convertReader, getDay, isNew, setContainerWidth };

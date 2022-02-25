@@ -22,7 +22,6 @@ import VerticalContentsListItem from './contentsList/VerticalContentsListItem.js
 import VerticalContentsList from './contentsList/VerticalContentsList.js';
 import DailyRanking from './section/DailyRanking.js';
 import EventBannerItem from './banner/EventBannerItem.js';
-import EventBannerList from './banner/EventBannerList.js';
 import RecommendEvent from './section/RecommendEvent.js';
 import AppDownloadLink from './section/AppDownloadLink.js';
 import WebtoonPage from './page/WebtoonPage.js';
@@ -62,7 +61,6 @@ export {
   VerticalContentsList,
   DailyRanking,
   EventBannerItem,
-  EventBannerList,
   RecommendEvent,
   AppDownloadLink,
   WebtoonPage,

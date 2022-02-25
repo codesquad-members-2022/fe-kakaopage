@@ -1,5 +1,6 @@
 import { ContentsHeader, VerticalContentsList } from '../index.js';
 import { Webtoons } from '../../data';
+import { convertStringToHTML } from '../../utils.js';
 
 const DailyRanking = () => {
 
@@ -11,10 +12,11 @@ const DailyRanking = () => {
     return sortedWebtoons.slice(0, 3);
   };
 
-  return `<section class="contents daily-ranking">
+  return convertStringToHTML(
+          `<section class="contents daily-ranking">
             ${ContentsHeader(title)}
             ${VerticalContentsList(filteredWebtoons())}
-          </section>`;
+          </section>`);
 };
 
 export default DailyRanking;

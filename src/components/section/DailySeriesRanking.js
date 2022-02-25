@@ -1,5 +1,6 @@
 import { ContentsNavItems, Webtoons } from '../../data';
 import { ContentsHeader, ContentsNav, ContentsList } from '../index.js';
+import { convertStringToHTML } from '../../utils.js';
 
 const DailySeriesRanking = () => {
 
@@ -8,13 +9,14 @@ const DailySeriesRanking = () => {
   const filteredWebtoon = () => {
     const currentDay = ContentsNavItems.find((item) => item.isSelected).name;
     return Webtoons.filter((webtoon) => webtoon.serialDate.includes(currentDay));
-  }
+  };
 
-  return `<section class="contents daily-series-ranking">
+  return convertStringToHTML(
+          `<section class="contents daily-series-ranking">
             ${ContentsHeader(title)}
             ${ContentsNav(ContentsNavItems)}
             ${ContentsList('small', filteredWebtoon())}
-          </section>`;
+          </section>`);
 };
 
 export default DailySeriesRanking;

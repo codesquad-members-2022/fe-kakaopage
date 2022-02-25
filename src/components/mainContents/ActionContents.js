@@ -2,17 +2,24 @@ import {
   AppDownloadLink,
   GenreTop,
   MainNav,
-  CategoryMenu
+  CategoryMenu,
 } from '../index.js';
 import { Categories } from '../../data';
+import { convertStringToHTML } from '../../utils.js';
 
 const ActionContents = () => {
-  return `<div class="main-contents">
-            ${MainNav()}
-            ${CategoryMenu(Categories.action)}
-            ${GenreTop('액션무협')}
-            ${AppDownloadLink()}
-          </div>`;
-}
+
+  const div = convertStringToHTML('<div class="main-contents"></div>');
+  const components = [
+    MainNav(),
+    CategoryMenu(Categories.action),
+    GenreTop('액션무협'),
+    AppDownloadLink(),
+  ];
+
+  div.append(...components);
+
+  return div;
+};
 
 export default ActionContents;

@@ -1,7 +1,7 @@
 import { convertReader } from '../../utils.js';
 
-const BannerItem = ({ webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
-  return `<li class="banner">
+const BannerItem = (idx, { webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
+  return `<li class="banner" data-count="${idx}">
             <a href="${link}">
               <img src="${bannerImage}" alt="${webtoonInfo.title}" />
               <div class="banner-info">

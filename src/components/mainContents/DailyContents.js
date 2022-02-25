@@ -1,15 +1,24 @@
 import {
   AppDownloadLink,
-  DailySeriesRanking,
+  MainBanner,
   MainNav,
+  SubBanner,
 } from '../index.js';
+import { convertStringToHTML } from '../../utils.js';
 
 const DailyContents = () => {
-  return `<div class="main-contents">
-            ${MainNav()}
-            ${DailySeriesRanking()}
-            ${AppDownloadLink()}
-          </div>`;
-}
+
+  const div = convertStringToHTML('<div class="main-contents"></div>');
+  const components = [
+    MainNav(),
+    MainBanner(),
+    SubBanner(),
+    AppDownloadLink(),
+  ];
+
+  div.append(...components);
+
+  return div;
+};
 
 export default DailyContents;

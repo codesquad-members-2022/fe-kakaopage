@@ -1,8 +1,12 @@
 import { BannerList } from '../index.js';
 import { SubBanners } from '../../data';
+import { convertStringToHTML, setContainerWidth } from '../../utils.js';
+import { bannerCallback, carouselCallback, setCarousel } from '../../js';
 
-const SubBanner = () => {
-  return `<section class="contents sub-banner">
+const SubBanner = (type = 'carousel') => {
+
+  let html = convertStringToHTML(
+          `<section class="contents sub-banner" data-banner="sub">
             <div class="sub-banner-wrapper">
               ${BannerList('sub', SubBanners)}
             </div>
@@ -10,7 +14,20 @@ const SubBanner = () => {
               <button type="button" class="back">이전 배너</button>
               <button type="button" class="next">이후 배너</button>
             </div>
-          </section>`
-}
+          </section>`);
+
+  if (type === 'carousel') {
+    html = setCarousel(html);
+    html.addEventListener('click', carouselCallback);
+  }
+
+  else if (type === 'manual') {
+    html.addEventListener('click', bannerCallback);
+  }
+
+  setContainerWidth(html);
+
+  return html;
+};
 
 export default SubBanner;
