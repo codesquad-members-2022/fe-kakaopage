@@ -11,15 +11,6 @@ import GenreBest from "./views/GenreBest.js";
 import Weekday from "./views/Weekday.js";
 import CaroulselItems from "./views/CaroulselItems.js";
 
-const changeCoverImg = (subMenu) => {
-    const coverImgSection = $(".cover-image");
-    const imgSrc = coverImg.img[subMenu];
-    const title = coverImg.title[subMenu];
-
-    coverImgSection.querySelector("img").src = imgSrc;
-    coverImgSection.querySelector(".title").innerText = title;
-};
-
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;
     Array.from(parentNode.children).forEach((el) =>
@@ -96,10 +87,7 @@ const bindSubMenuEvent = () => {
         const curEl = target.parentNode;
         const targetPage = target.innerText;
 
-        // 서브메뉴 active 클래스 토글
         toggleClass(curEl, "active");
-        // 커버이미지란 변경
-        // changeCoverImg(targetPage);
 
         if (targetPage === "홈") {
             renderHome();
@@ -210,7 +198,7 @@ const toggleWeekDayMenu = (target) => {
     toggleClass(curEl, "active");
 };
 
-const bindEventListener = () => {
+const bindEventListeners = () => {
     bindSubMenuEvent();
     bindCaroulselEvent();
 
@@ -226,7 +214,7 @@ const bindEventListener = () => {
 const init = () => {
     preventDefaults();
     renderHome();
-    bindEventListener();
+    bindEventListeners();
 };
 
 init();
