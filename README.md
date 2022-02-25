@@ -2,7 +2,17 @@
 
 ## ToDo
 
-week2
+week2-2
+
+- 웹 애니메이션 슬라이딩 구현
+  - [x] 수동 슬라이딩 기능
+    - 좌/우 버튼을 눌렀을 때 슬라이딩 가능
+  - [ ] 무한 슬라이딩 기능 (Carousel)
+  - [ ] 자동 슬라이딩 기능
+    - 일정한 시간 간격으로 이동
+  - [ ] 자동 또는 수동 슬라이딩 시 우측 하단에 페이지 번호 표시
+
+week2-1
 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/68533016/155253767-995e99e5-aed1-4883-991c-c399a27615cb.gif)
 

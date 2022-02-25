@@ -148,9 +148,9 @@ const tabContent = [
 ];
 
 const rankBox = document.querySelector(".main__dailyRank__content");
-const tab = document.querySelector(".main__dailyRank__day");
+const dailyRank_tab = document.querySelector(".main__dailyRank__day");
 
-tab.addEventListener("click", (evt) => {
+dailyRank_tab.addEventListener("click", (evt) => {
   const target = evt.target;
   const tabNum = target.getAttribute("data-tabnum");
   changeTab(target, rankBox, tabNum);
@@ -180,7 +180,7 @@ let curIndex = 0;
 const showNext = () => {
   const image = slider;
   const Time = 300;
-  if (curIndex <= sliderContents.length - 2)
+  if (curIndex < sliderContents.length - 1)
     setTimeout(() => {
       image.style.transform = "translateX(-" + (curIndex + 1) * 720 + "px)";
       curIndex++;
