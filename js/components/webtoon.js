@@ -6,11 +6,8 @@ export default function addHTML() {
   ${contents.makeImageSection(webtoonData.mainImage)}
   <section class="section dp-flex pd-10 mg-t-20">
   ${contents.makeDate(webtoonData.data)} 
-  ${contents.makeWebtoonInfo(webtoonData.firstWebtoonInfo)}
-  ${contents.makeWebtoonInfo(webtoonData.secondWebtoonInfo)}
-  ${contents.makeWebtoonInfo(webtoonData.thirdWebtoonInfo)}
-  ${contents.makeWebtoonInfo(webtoonData.fourthWebtoonInfo)}
-  ${contents.makeWebtoonInfo(webtoonData.fifthWebtoonInfo)}
+  <div class="dayWeekWebtoon width-100">
+  </div>
   </section>
   <section class="section dp-flex pd-5 mg-t-20">
   ${contents.makeTitle(webtoonData.hotPromotion)}

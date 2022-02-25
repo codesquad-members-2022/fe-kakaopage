@@ -18,7 +18,7 @@ class Contents {
 
   makeMenu(list) {
     if (list.firstSubInfo === undefined) {
-      return `  
+      return `
       <section class="section dp-flex mg-t-20">
       <ul class="menu_ul pd-10">
           <li class="menu_top_left">
@@ -183,7 +183,9 @@ class Contents {
         <img src="${list.url}" / alt="${list.title} 이미지"
         width="130" height="100">
         <div class="info_contents pos-abs">
-          <div><span>UP</span>${list.title}</div>
+          <div><span>${list.status === undefined ? '' : list.status}</span>${
+        list.title
+      }</div>
           <div>${list.explain}</div>
           <div>👤${list.people}만명 | ${list.writer}</div>
         </div>

@@ -1,6 +1,7 @@
 import home from './components/home.js';
 import serial from './components/serial.js';
 import webtoon from './components/webtoon.js';
+import dataWebtoon from './date-webtoon.js';
 import boy from './components/boy.js';
 import drama from './components/drama.js';
 import romance from './components/romance.js';
@@ -38,6 +39,7 @@ function changeUI(e) {
       break;
     case '웹툰':
       webtoon();
+      dataWebtoon();
       break;
     case '소년':
       boy();
