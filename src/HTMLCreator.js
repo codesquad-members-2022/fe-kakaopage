@@ -28,11 +28,10 @@ export function createTopThumbHTML(comicInfo) {
 }
 
 export function createTopListHTML(type){
-    let listHTML = '';
     const comicData = type in DailyTop ? DailyTop[type] : GenreTop[type];
-    for(const data of comicData){
-        listHTML += createTopThumbHTML(data);
-    }
+    let listHTML = comicData.reduce((listHTML, data) => { 
+        return listHTML + createTopThumbHTML(data)
+    }, '');
     return listHTML;
 }
 
