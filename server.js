@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/static', express.static(path.resolve(__dirname, 'static')));
 
-// mocke데이터를 post로 받아올 예정
 app.post('/*', async (req, res) => {
+  // req.params나 req.query 알아보고 url에서 바로 받아오기
   const { categoryUid, subCategoryUid } = req.body;
   const resultObj = {};
   try {
