@@ -1,16 +1,9 @@
 import { webtoonContents, week } from "./data/contents.js";
+import { createLiListTemplate } from "./util/createTag.js";
 
-const makeWeekTapTemplate = (day) => {
-  return `
-    <li>${day}</li>
-  `;
-};
+const $weekTap = createLiListTemplate(week);
 
-const createdWeekTapTemplate = week.map((day) => makeWeekTapTemplate(day));
-
-const $weekTap = createdWeekTapTemplate.join("");
-
-const makeTuesdayTapTemplate = (imageUrl, title, star, read) => {
+const createTuesdayTapTemplate = (imageUrl, title, star, read) => {
   return `
       <div>
         <div>
@@ -39,44 +32,52 @@ const makeTuesdayTapTemplate = (imageUrl, title, star, read) => {
           <span>${read}</span>
         </div>
       </div>
-`;
+  `;
 };
 
-const createdTuesdayTapTemplate = webtoonContents.map(
-  ({ imageUrl, title, star, read }) =>
-    makeTuesdayTapTemplate(imageUrl, title, star, read)
-);
+const $tuesdayWebtoons = webtoonContents
+  .map(({ imageUrl, title, star, read }) =>
+    createTuesdayTapTemplate(imageUrl, title, star, read)
+  )
+  .join("");
 
-const $tuesdayWebtoons = createdTuesdayTapTemplate.join("");
+const createWeekWebtoons = () => {
+  const weekTapClassName = "week__webtoons";
+  const navConatinerClassName =
+    "main__navigation__menu main__week__menu interval";
+  const filterClassName =
+    "header__container main__toon__category container__space__between";
+  const tuesToonClassName = "main__toon__category toon__grid toons__box";
 
-const $weekWebtoons = `
-  <section>
-    <nav>
-      <ul class="main__navigation__menu main__week__menu interval">
-        ${$weekTap}
-      </ul>
-    </nav>
+  return `
+    <section class="${weekTapClassName}">
+      <nav>
+        <ul class="${navConatinerClassName}">
+          ${$weekTap}
+        </ul>
+      </nav>
 
-    <section
-      class="header__container main__toon__category container__space__between"
-    >
-      <div>
-        <button>전체</button>
-        <span>|</span>
-        <button>웹툰</button>
-        <span>|</span>
-        <button><span>clock</span>웹툰</button>
-      </div>
+      <section class="${filterClassName}">
+        <div>
+          <button>전체</button>
+          <span>|</span>
+          <button>웹툰</button>
+          <span>|</span>
+          <button><span>clock</span>웹툰</button>
+        </div>
 
-      <div>
-        <span>전체 (180)</span>
-        <span>▼</span>
+        <div>
+          <span>전체 (180)</span>
+          <span>▼</span>
+        </div>
+      </section>
+      <div class="${tuesToonClassName}">
+        ${$tuesdayWebtoons}
       </div>
     </section>
-    <div class="main__toon__category toon__grid toons__box">
-      ${$tuesdayWebtoons}
-    </div>
-  </section>
-`;
+  `;
+};
+
+const $weekWebtoons = createWeekWebtoons();
 
 export default $weekWebtoons;

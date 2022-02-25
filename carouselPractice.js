@@ -8,19 +8,17 @@ const findSelectedImgNumber = () => {
   const $selectedImg = document.querySelector(".selected");
   $selectedImg.className = $selectedImg.className.replace(" selected", "");
   const classNames = $selectedImg.className;
+  const numbers = classNames
+    .split("")
+    .filter((className) => Number.isInteger(parseInt(className, 10)));
 
-  const numbers = [];
-  for (const className of classNames.split("")) {
-    if (Number.isInteger(parseInt(className, 10))) {
-      numbers.push(className);
-    }
-  }
   const selectedImgNumber = parseInt(numbers.join(""), 10);
 
   return selectedImgNumber;
 };
 
 $previousIcon.addEventListener("click", (event) => {
+  $slideList.style.transition = "all 0.5s ease-out";
   const selectedImgNumber = findSelectedImgNumber();
   const nextImgNumberRemaindar =
     selectedImgNumber - 1 === 0 ? liCount : (selectedImgNumber - 1) % liCount;
@@ -32,9 +30,19 @@ $previousIcon.addEventListener("click", (event) => {
 $nextIcon.addEventListener("click", (event) => {
   const selectedImgNumber = findSelectedImgNumber();
   const nextImgNumberRemaindar = (selectedImgNumber + 1) % liCount;
-  const currentImgNumber =
-    nextImgNumberRemaindar === 0 ? liCount : nextImgNumberRemaindar;
+  let currentImgNumber = nextImgNumberRemaindar;
   const $selectedImg = document.querySelector(`.slide__img${currentImgNumber}`);
   $selectedImg.className += " selected";
-  $slideList.style.transform = `translateX(-${(currentImgNumber - 1) * 100}%)`;
+
+  if (currentImgNumber === 0) {
+    $selectedImg.style.display = "inline";
+    $slideList.style.transform = "none";
+    $slideList.style.transition = "none";
+    currentImgNumber = 1;
+  } else {
+    $slideList.style.transform = `translateX(-${
+      (currentImgNumber - 1) * 100
+    }%)`;
+    $slideList.style.transition = "all 0.5s ease-out";
+  }
 });

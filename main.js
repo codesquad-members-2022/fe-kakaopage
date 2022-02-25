@@ -9,14 +9,22 @@ const $main__container__copy = $main__container?.cloneNode(true);
 
 $headerNav.addEventListener("click", (event) => {
   const selectedImg = event.target.closest("img");
-  const alt = selectedImg ? selectedImg.alt : null;
-  const $main = document.querySelector(".main");
+  const className = selectedImg?.className;
   const $current__main__container = document.querySelector(".main__container");
-
-  if (alt === "menu home") {
-    $main.replaceChild($main__container__copy, $current__main__container);
-  } else if (alt === "menu toon") {
-    $current__main__container.innerHTML = $weekWebtoons;
+  const $banner__container = document.querySelector(".banner__container");
+  const $week__webtoons = document.querySelector(".week__webtoons");
+  if (className === "nav__home") {
+    $week__webtoons?.parentNode.removeChild($week__webtoons);
+    $banner__container.insertAdjacentElement(
+      "afterend",
+      $main__container__copy
+    );
+  } else if (className === "nav__toon") {
+    $week__webtoons?.parentNode.removeChild($week__webtoons);
+    $current__main__container?.parentNode.removeChild(
+      $current__main__container
+    );
+    $banner__container.insertAdjacentHTML("afterend", $weekWebtoons);
   }
 });
 

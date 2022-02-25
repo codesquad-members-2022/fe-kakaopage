@@ -9,3 +9,7 @@
   display: flex;
   transition: all 0.5s ease-out;
 }
+
+.not__showing {
+  display: none;
+}
