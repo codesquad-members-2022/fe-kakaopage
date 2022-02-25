@@ -1,4 +1,5 @@
 import { daysInfo } from "../data/daysInfo.js";
+import { selectedNav } from "./selectedNav.js";
 
 export const ads =
   /*html*/
@@ -12,15 +13,15 @@ export const webtoonNav =
   /*html*/
   `
   <nav class="webtoon__nav">
-    <span>홈</span>
-    <span class="selected">요일연재</span>
-    <span>웹툰</span>
-    <span>소년</span>
-    <span>드라마</span>
-    <span>로맨스</span>
-    <span>로판</span>
-    <span>액션무협</span>
-    <span>BL</span>
+    <ul>홈</ul>
+    <ul>요일연재</ul>
+    <ul>웹툰</ul>
+    <ul>소년</ul>
+    <ul>드라마</ul>
+    <ul>로맨스</ul>
+    <ul>로판</ul>
+    <ul>액션무협</ul>
+    <ul>BL</ul>
   </nav>
   `;
 
@@ -89,29 +90,31 @@ export const days =
   `
   <section class="days">
     <nav class="days__nav">
-      <span class="selected">월</span>
-      <span>화</span>
-      <span>수</span>
-      <span>목</span>
-      <span>금</span>
-      <span>토</span>
-      <span>일</span>
-      <span>완결</span>
+      <ul>월</ul>
+      <ul>화</ul>
+      <ul>수</ul>
+      <ul>목</ul>
+      <ul>금</ul>
+      <ul>토</ul>
+      <ul>일</ul>
+      <ul>완결</ul>
     </nav>
 
     <div class="days__menu">
-      <div class="days__menu--left">
-        <span>전체</span>
-        <span>웹툰</span>
-        <i class="fas fa-clock"></i>
-      </div>
+      <nav class="days__menu--nav">
+        <ul>전체</ul>
+        <ul>웹툰</ul>
+        <ul>
+          <i class="fas fa-clock"></i>웹툰
+        </ul>
+      </nav>
       <div class="days__menu--right">
         <span>모두 보기</span>
       </div>
     </div>
 
     <div class="column-contents">
-      ${columnContents(daysInfo["mon"])}
+      ${columnContents(daysInfo[selectedNav[".days__nav"]])}
     </div>
   </section>
   `;

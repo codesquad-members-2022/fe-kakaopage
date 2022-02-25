@@ -7,11 +7,17 @@ import {
   dummy,
   webtoonNav,
 } from "./parts.js";
-
+import { selector } from "./utility.js";
 import { daysInfo } from "../data/daysInfo.js";
+import { markAllSelectedNav } from "./selectedNav.js";
 // import name from path assert { type: 'json' };
 
-export const mainAssembly = {
+export const drawWithAssembly = (assembly, type, target = selector("main")) => {
+  assembly[type].forEach((part) => (target.innerHTML += part));
+  markAllSelectedNav();
+};
+
+export const headerAssembly = {
   홈: [ads, newThings, listContents],
   웹툰: [webtoonNav, ads, days],
   웹소설: [dummy],
@@ -33,12 +39,12 @@ export const webtoonAssembly = {
 };
 
 export const daysAssembly = {
-  월: [columnContents(daysInfo["mon"])],
-  화: [columnContents(daysInfo["tue"])],
-  수: [columnContents(daysInfo["wed"])],
-  목: [columnContents(daysInfo["thu"])],
-  금: [columnContents(daysInfo["fri"])],
-  토: [columnContents(daysInfo["sat"])],
-  일: [columnContents(daysInfo["sun"])],
-  완결: [columnContents(daysInfo["fin"])],
+  월: [columnContents(daysInfo["월"])],
+  화: [columnContents(daysInfo["화"])],
+  수: [columnContents(daysInfo["수"])],
+  목: [columnContents(daysInfo["목"])],
+  금: [columnContents(daysInfo["금"])],
+  토: [columnContents(daysInfo["토"])],
+  일: [columnContents(daysInfo["일"])],
+  완결: [columnContents(daysInfo["완결"])],
 };

@@ -1,13 +1,18 @@
-import { mainAssembly, webtoonAssembly, daysAssembly } from "./assembly.js";
-
-const main = document.querySelector("main");
+import {
+  drawWithAssembly,
+  headerAssembly,
+  webtoonAssembly,
+  daysAssembly,
+} from "./assembly.js";
+import { selector, addClass, removeClass } from "./utility.js";
+import { selectedNav } from "./selectedNav.js";
 
 const removeMainPart = () => {
-  main.innerHTML = "";
+  selector("main").innerHTML = "";
 };
 
 const removeWebtoonPart = (name) => {
-  const parts = Array.from(main.children);
+  const parts = Array.from(selector("main").children);
   parts.forEach((part) => {
     if (part.className !== name) part.remove();
   });
@@ -19,20 +24,28 @@ const removeDaysPart = () => {
 };
 
 const removeAndDrawView = (target, name) => {
-  const type = typeof target === "string" ? target : target.innerHTML;
+  let type = typeof target === "string" ? target : target.innerHTML;
   const navPalette = {
     header__nav: () => {
       removeMainPart();
-      drawWithAssembly(mainAssembly, type);
+      drawWithAssembly(headerAssembly, type);
     },
     webtoon__nav: () => {
       removeWebtoonPart(name);
       drawWithAssembly(webtoonAssembly, type);
     },
     days__nav: () => {
-      const target = document.querySelector(".column-contents");
+      const view = document.querySelector(".column-contents");
       removeDaysPart();
-      drawWithAssembly(daysAssembly, type, target);
+      drawWithAssembly(daysAssembly, type, view);
+    },
+    "days__menu--nav": () => {
+      type = document
+        .querySelector(".days__nav")
+        .querySelector(".selected").innerHTML;
+      const view = document.querySelector(".column-contents");
+      removeDaysPart();
+      drawWithAssembly(daysAssembly, type, view);
     },
   };
   const selectedPalette = navPalette[name];
@@ -40,24 +53,22 @@ const removeAndDrawView = (target, name) => {
 };
 
 const markSelectedNav = (target) => {
-  target.parentNode.querySelector(".selected").classList.remove("selected");
-  target.classList.add("selected");
+  const parentNav = target.parentNode;
+  const previousSelectedNav = selector(".selected", parentNav);
+  removeClass(previousSelectedNav, "selected");
+  addClass(target, "selected");
+  selectedNav[`.${parentNav.className}`] = target.innerHTML;
 };
 
-const filterNav = (target, nav) => {
-  if (target.tagName !== "SPAN") return;
-  const name = nav.className;
+const onNavClickHandler = (target, className) => {
   markSelectedNav(target);
-  removeAndDrawView(target, name);
-};
-
-export const drawWithAssembly = (assembly, type, target = main) => {
-  assembly[type].forEach((part) => (target.innerHTML += part));
+  removeAndDrawView(target, className);
 };
 
 export const clickEventHandler = (event) => {
   event.preventDefault();
   const { target } = event;
+  const ul = target.closest("UL");
   const nav = target.closest("nav");
-  if (nav) filterNav(target, nav);
+  if (ul && nav) onNavClickHandler(ul, nav.className);
 };

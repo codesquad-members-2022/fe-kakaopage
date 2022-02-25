@@ -4,7 +4,7 @@ const webtoonData = [
     image: "flower.png",
     rank: 100,
     views: 150.0,
-    day: "월",
+    day: "mon",
     type: "webtoon",
     now: true,
   },
@@ -13,7 +13,7 @@ const webtoonData = [
     image: "boat.png",
     rank: 50,
     views: 150.0,
-    day: "화",
+    day: "tue",
     type: "webtoon",
     now: true,
   },
@@ -22,16 +22,16 @@ const webtoonData = [
     image: "cloud.png",
     rank: 80,
     views: 120.0,
-    day: "수",
+    day: "wed",
     type: "webtoon",
-    now: false,
+    now: true,
   },
   {
     name: "산",
     image: "mountain.png",
     rank: 1,
     views: 10.0,
-    day: "금",
+    day: "fri",
     type: "webtoon",
     now: true,
   },
@@ -40,7 +40,7 @@ const webtoonData = [
     image: "flower.png",
     rank: 100,
     views: 150.0,
-    day: "화",
+    day: "tue",
     type: "webtoon",
     now: true,
   },
@@ -49,29 +49,28 @@ const webtoonData = [
     image: "flower.png",
     rank: 100,
     views: 150.0,
-    day: "월",
+    day: "mon",
     type: "webtoon",
-    now: false,
+    now: true,
   },
   {
     name: "꽃",
     image: "flower.png",
     rank: 87,
     views: 150.0,
-    day: "목",
+    day: "thu",
     type: "webtoon",
-    now: false,
+    now: true,
   },
 ];
 
-export const daysInfo = {};
-
+const daysInformation = {};
 const getDaysInfo = () => {
-  const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-  days.forEach((day) => (daysInfo[`${day}`] = []));
   webtoonData.forEach((webtoon) => {
-    daysInfo[`${webtoon.day}`].push(webtoon);
+    const { day } = webtoon;
+    if (!daysInformation[`${day}`]) daysInformation[`${day}`] = [];
+    daysInformation[`${day}`].push(webtoon);
   });
 };
-
 getDaysInfo();
+console.log(daysInformation);
