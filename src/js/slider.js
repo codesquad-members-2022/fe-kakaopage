@@ -1,6 +1,4 @@
-const CLONENODE_COUNT = 2;
-const bannerWidth = 720;
-let currentIdx = 0;
+import { VAL } from './util.js';
 
 function cloneBanner(parentNode) {
   const firstBanner = parentNode.firstElementChild.cloneNode(true);
@@ -10,16 +8,19 @@ function cloneBanner(parentNode) {
 }
 
 function initSlider(bannerList, bannerCount) {
-  bannerList.style.width = `${bannerWidth * (bannerCount + CLONENODE_COUNT)}px`;
-  bannerList.style.transform = `translateX(${-bannerWidth}px)`;
+  cloneBanner(bannerList);
+  bannerList.style.width = `${
+    VAL.bannerWidth * (bannerCount + VAL.CLONENODE_COUNT)
+  }px`;
+  bannerList.style.transform = `translateX(${-VAL.bannerWidth}px)`;
 }
 
 function transformBanner(bannerList, pixel, second) {
-  console.log(pixel, second);
-  console.log(bannerList.style.transform);
-  bannerList.style.transform = `translateX(${pixel})px`;
+  bannerList.style.transform = `translateX(${pixel}px)`;
   bannerList.style.transition = `${second}s ease-out`;
 }
+
+let currentIdx = 0;
 
 function slideBanner(...params) {
   // console.log(currentIdx);
@@ -30,34 +31,28 @@ function slideBanner(...params) {
   const controller = {
     prev() {
       if (currentIdx >= 0) {
-        const px = -currentIdx * bannerWidth;
-        // transformBanner(bannerList, px, 0.25);
-        bannerList.style.transform = `translateX(${px}px)`;
-        bannerList.style.transition = '0.25s ease-out';
+        const px = -currentIdx * VAL.bannerWidth;
+        transformBanner(bannerList, px, VAL.TRANSITION_TIME);
       }
       if (currentIdx === 0) {
-        const px = -bannerCount * bannerWidth;
+        const px = -bannerCount * VAL.bannerWidth;
         setTimeout(() => {
-          // transformBanner(bannerList, px, 0);
-          bannerList.style.transform = `translateX(${px}px)`;
-          bannerList.style.transition = '0s ease-out';
-        }, 200);
+          transformBanner(bannerList, px, 0);
+        }, VAL.SWICHING_TIME);
         currentIdx = bannerCount;
       }
       currentIdx--;
     },
     next() {
       if (currentIdx <= bannerCount - 1) {
-        const px = -(currentIdx + CLONENODE_COUNT) * bannerWidth;
-        bannerList.style.transform = `translateX(${px}px)`;
-        bannerList.style.transition = '0.25s ease-out';
+        const px = -(currentIdx + VAL.CLONENODE_COUNT) * VAL.bannerWidth;
+        transformBanner(bannerList, px, VAL.TRANSITION_TIME);
       }
       if (currentIdx === bannerCount - 1) {
-        const px = -bannerWidth;
+        const px = -VAL.bannerWidth;
         setTimeout(() => {
-          bannerList.style.transform = `translateX(${px}px)`;
-          bannerList.style.transition = '0s ease-out';
-        }, 200);
+          transformBanner(bannerList, px, 0);
+        }, VAL.SWICHING_TIME);
         currentIdx = -1;
       }
       currentIdx++;
@@ -67,4 +62,4 @@ function slideBanner(...params) {
   controller[direction]();
 }
 
-export { cloneBanner, initSlider, slideBanner };
+export { initSlider, slideBanner };

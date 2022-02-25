@@ -1,8 +1,8 @@
 const DATA_URL = 'data/data.json';
 // const DATA_URL = 'http://localhost:3001/data';
 
-const $ = selector => document.querySelector(selector);
-const $$ = selector => document.querySelectorAll(selector);
+const $ = (selector, base = document) => base.querySelector(selector);
+const $$ = (selector, base = document) => base.querySelectorAll(selector);
 
 const activateTab = target => {
   [...target.parentNode.children].forEach(child => {
@@ -36,4 +36,11 @@ const TITLE = {
   promotion: '🔥HOT 최근 프로모션 진행작',
 };
 
-export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE };
+const VAL = {
+  CLONENODE_COUNT: 2,
+  TRANSITION_TIME: 0.25,
+  SWICHING_TIME: 500,
+  bannerWidth: 720,
+};
+
+export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE, VAL };
