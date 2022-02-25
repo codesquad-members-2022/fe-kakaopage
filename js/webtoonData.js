@@ -27,3 +27,5 @@ export const contentsData = [
     {title: '로드 오브 머니', src:"./images/img-로드오브머니.png", views:49.5, desc:"세상에 없던 꼴통 재벌이 되다!"},
     {title: '딸바보가 되겠습니다', src:"./images/img-딸바보.png", views:55.5, desc:"갑자기 생긴 딸이 너무 귀여워!"}
 ]
+
+export const categoryMenus = ['오늘 UP', '오늘 신작', '오리지널', '완결까지 정주행', '독립운동가 웹툰', '오늘 랭킹'];

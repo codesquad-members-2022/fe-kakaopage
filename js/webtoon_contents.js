@@ -24,37 +24,56 @@ export function createContents() {
 function listenEvent() {
     const $prevButton = select('.contents__prevButton');
     const $nextButton = select('.contents__nextButton');
-    $prevButton.addEventListener('click', (e) => handleClick(e.target));
-    $nextButton.addEventListener('click', (e) => handleClick(e.target))
+    const $viewer = select('.contents__viewer')
+
+    $prevButton.addEventListener('click', (e) => handleClick(e.target, $viewer));
+    $nextButton.addEventListener('click', (e) => handleClick(e.target, $viewer));
+    autoSlide($viewer)
 }
 
-function handleClick(target) {
+// 전역으로 해야만 가능..?
+let current = 0;
+const imageWidth = 647.7
+
+function handleClick(target, $viewer) {
     if(target.className === 'contents__prevButton' ) {
-        moveLeft(target);
+        slideLeft($viewer);
     }
     else if(target.className === 'contents__nextButton') {
-        moveRight(target);
+        slideRight($viewer);
     }
 }
 
-let location = 0;
-
-function moveLeft(target) {
-    //const $wrap = target.closest('div>div')
-    const $viewer = select('.contents__viewer')
-    location -= 647.7
-    $viewer.style.transform = `translateX(${location}px)`
-    $viewer.style.transitionProperty = `transform`
-    $viewer.style.transitionDuration = `2s`
-
+function slideLeft(target) {
+    current -= imageWidth
+    animateTranslateX(target, current)
 }
 
-function moveRight(target) {
-    const $viewer = select('.contents__viewer')
-    location += 647.7
-    $viewer.style.transform = `translateX(${location}px)`
-    $viewer.style.transitionProperty = `transform`
-    $viewer.style.transitionDuration = `2s`
+function slideRight(target) {
+    current += imageWidth
+    animateTranslateX(target, current)
+}
+
+function animateTranslateX(target, distance) {
+    target.style.transform = `translateX(${distance}px)`
+    target.style.transitionProperty = `transform`
+    target.style.transitionDuration = `2s`
+}
+
+function autoSlide(target) {
+    let count = 1;
+    let setTimer = setInterval(function() {
+        console.log(count)
+        slideLeft(target)
+        count += 1;
+        if(count > 2) {
+            return clearTimer(setTimer)
+        }
+        }, 3000)
+}
+
+function clearTimer(timer) {
+    clearInterval(timer)
 }
 
 function getContentsTemplate(object) {
@@ -78,20 +97,4 @@ function getContentsTemplate(object) {
     return template
 }
 
-// createElement 에 innerHTML 을 사용하기 위해서는 HTML 에 위치시켜야한다. (appendChild 등)
-
-export function createCategory() {
-    const $category = document.createElement('div');
-    $category.className = 'category';
-    $category.innerHTML = `<ul class="l-center category__menus"></ul>`
-
-    const $main = select('.main')
-    $main.appendChild($category)
-
-    const $categoryMenus = select('.category__menus')
-    const categoryMenus = ['오늘 UP', '오늘 신작', '오리지널', '완결까지 정주행', '독립운동가 웹툰', '오늘 랭킹']
-    let template = ``;
-    categoryMenus.forEach((menu) => template += `<li class="category__menu">${menu}</li>`)
-    $categoryMenus.innerHTML = template;
-}
 
