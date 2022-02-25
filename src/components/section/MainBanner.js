@@ -1,11 +1,11 @@
 import { BannerList } from '../index.js';
 import { MainBanners } from '../../data';
-import { bannerCallback } from '../../js';
+import { bannerCallback, carouselCallback, setCarousel } from '../../js';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 
-const MainBanner = () => {
+const MainBanner = (type = 'carousel') => {
 
-  const html = convertStringToHTML(
+  let html = convertStringToHTML(
           `<section class="contents main-banner" data-banner="main">
             ${BannerList('main', MainBanners)}
             <p class="banner-count">
@@ -18,7 +18,12 @@ const MainBanner = () => {
             </div>
           </section>`);
 
-  html.addEventListener('click', bannerCallback);
+  if (type === 'carousel') {
+    html = setCarousel(html);
+    html.addEventListener('click', carouselCallback);
+  } else {
+    html.addEventListener('click', bannerCallback);
+  }
   setContainerWidth(html);
 
   return html;

@@ -1,13 +1,13 @@
 import { ContentsHeader, BannerList } from '../index.js';
 import { EventBanners } from '../../data';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
-import { bannerCallback } from '../../js';
+import { bannerCallback, carouselCallback, setCarousel } from '../../js';
 
-const RecommendEvent = () => {
+const RecommendEvent = (type = 'carousel') => {
 
   const title = '추천 이벤트';
 
-  const html = convertStringToHTML(
+  let html = convertStringToHTML(
           `<section class="contents recommend-event">
             ${ContentsHeader(title)}
             <div class="event-banner-wrapper" data-banner="event">
@@ -23,7 +23,12 @@ const RecommendEvent = () => {
             </div>
           </section>`);
 
-  html.addEventListener('click', bannerCallback);
+  if (type === 'carousel') {
+    html = setCarousel(html);
+    html.addEventListener('click', carouselCallback);
+  } else {
+    html.addEventListener('click', bannerCallback);
+  }
   setContainerWidth(html);
 
   return html;
