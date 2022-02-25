@@ -57,6 +57,9 @@
     white-space: nowrap;
     /* transition: transform 0.5s; */
 }
+.banner__container .animated{
+    transition: ease-out 0.5s;;
+}
 
 .banner__content{
     width: 720px;

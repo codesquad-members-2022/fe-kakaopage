@@ -78,12 +78,12 @@ function makeClone(){
         $banner__container.prepend(cloneBanner)
     }
     setInitialPos();
-    setTimeout(function(){
-        $$banner.style.classList='animated';
-    },100);
     // setTimeout(function(){
-    //     $banner__container.style.transition="transform 0.5s"
+    //     $$banner.classList='animated';
     // },100);
+    setTimeout(function(){
+        $banner__container.style.transition="transform 0.5s"
+    },100);
 }
 
 function setInitialPos(){
@@ -109,14 +109,21 @@ function bannerClickButton(event) {
         $banner__container.style.transform=`translateX(${curSize}px)`
     }
     if(curSize===0||curSize===bannerCount*-720*(bannerCount-1)){
-        // $banner__container.style.transition=null;
         
         curSize=bannerCount*-720
     }
-    
 
 }
 for(let x of $$bannerButtons){
     x.addEventListener('click',bannerClickButton)
 }
 
+let cnt = -720;
+function animate() {   
+  setTimeout(() => {
+    $banner__container.style.transform= `translateX(${cnt}px)`
+    cnt-=720;
+    animate();
+  },3000);
+}
+// animate();
