@@ -1,7 +1,6 @@
 function createBannerSection() {
-  const section = document.createElement("section");
-  section.className = "banner-section";
-  section.innerHTML = `
+  const section = `
+  <section class="banner-section">
     <button class="banner-button banner-button-left"></button>
     <div class="banner-wrapper">
         <div class="img-wrapper">
@@ -9,7 +8,8 @@ function createBannerSection() {
         </div>
     </div>
     <button class="banner-button banner-button-right"></button>
-    `;
+  </section>  
+  `;
   return section;
 }
 

@@ -17,3 +17,7 @@ body {
 .app-download img {
   height: auto;
 }
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
