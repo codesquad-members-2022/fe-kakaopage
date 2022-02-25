@@ -171,21 +171,32 @@ header {
     margin: 0.63rem auto;
 }
 
+.slider{
+    width: 45rem;
+    height: 30rem;
+    overflow: hidden;
+}
+
 .banner-main {
     height: 30rem;
     background-color: gray;
+
+    /* transition: ease-in-out 1s; */
+    
 }
 
 .img-with-line {
     position: relative;
+    float: left;
+    width: 45rem;
 }
 
 .line-with {
-    width: 45rem;
+    position: absolute;
+    width: 100%;
     height: 2.5rem;
     background-color: var(--kakao-yellow);
 
-    position: absolute;
     top: 27.5rem;
     text-align: center;
     line-height: 2.5rem;
@@ -196,15 +207,15 @@ header {
 }
 
 .summary {
-    margin-top: 0.63rem;
     padding: 0.94rem 0;
+    margin-top: 0.63rem;
 
     background-color: white;
 
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .summary-btn {
@@ -324,7 +335,7 @@ header {
     font-weight: bold;
 }
 
-.contents-flex-box {
+.contents-box {
     width: 42.5rem;
 
     display: flex;
@@ -496,7 +507,7 @@ header {
     margin-right: 1.88rem;
 }
 
-.contents-flex-box-bigger {
+.contents-box-bigger {
     height: 17.5rem;
 
     display: flex;

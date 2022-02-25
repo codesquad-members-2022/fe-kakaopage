@@ -4,10 +4,10 @@ import { pickFromArr, randomView } from "./util.js";
 
 // 반복되는 컴포넌트들을 생성하는 함수들
 export function createContentForms(num) {
-    let res = '';
+    let contentForm = '';
 
     for(let i = 0; i < num; i++){
-        res += `
+        contentForm += `
         <div class="content-wrap">
             <div class="content-wrap-img-wrap">
                 <img src=${pickFromArr(dummy.contentFormImg)} class="content-wrap-img">
@@ -27,15 +27,15 @@ export function createContentForms(num) {
         </div>`
     }
 
-    return res;
+    return contentForm;
 }
 
 export function createRankingContents(num){
-    let res = '';
+    let rankingContent = '';
     let rank = 1;
 
     for(let i = 0; i < num; i++){
-        res += `
+        rankingContent += `
     <div class="ranking-content">
         <div class="ranking-num">${rank}</div>
         <div class="ranking-img-wrap">
@@ -60,14 +60,14 @@ export function createRankingContents(num){
     rank++
     }
 
-    return res
+    return rankingContent
 }
 
 export function createRankingContentsWithoutNum(num){
-    let res = '';
+    let rankingContentWithoutNum = '';
 
     for(let i = 0; i < num; i++){
-        res += `
+        rankingContentWithoutNum += `
     <div class="ranking-content">
         <div class="ranking-img-wrap">
             <img src=${pickFromArr(dummy.rankingImg)} class="ranking-img">
@@ -89,14 +89,14 @@ export function createRankingContentsWithoutNum(num){
     </div>`
     }
 
-    return res
+    return rankingContentWithoutNum
 }
 
 export function createHorizontalContents(num){
-    let res = '';
+    let horizontalContent = '';
 
     for(let i = 0; i < num; i++){
-        res += `
+        horizontalContent += `
     <div class="ranking-content">
         <div class="horizontal-img-wrap">
             <img src=${pickFromArr(dummy.horizontalImg)} class="horizontal-img">
@@ -114,14 +114,14 @@ export function createHorizontalContents(num){
     </div>`
     }
 
-    return res
+    return horizontalContent
 }
 
 export function createContentFormsBigger(num){
-    let res = '';
+    let contentFormBigger = '';
 
     for(let i = 0; i < num; i++){
-        res += `
+        contentFormBigger += `
     <div class="content-wrap-bigger">
         <div class="content-vertical-img-wrap">
             <img src=${pickFromArr(dummy.contentFormBiggerImg)} class="content-vertical-img">
@@ -137,5 +137,19 @@ export function createContentFormsBigger(num){
     </div>`
     }
 
-    return res
+    return contentFormBigger
+}
+
+export function createBannerMain(){
+    let format = '';
+
+    for(let i = 0; i < 5; i++){
+        format += `
+            <div class="img-with-line">
+                <img class="img-with" src=${dummy.slideBannerMainImg[i]}>
+                <div class="line-with">${pickFromArr(dummy.contentDesc)}</div>
+            </div>`
+    }
+
+    return format
 }
