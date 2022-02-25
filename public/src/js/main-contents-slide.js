@@ -6,7 +6,17 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 let currentIdx = 0;
 
-makeClone();
+initSlide();
+
+function initSlide() {
+  makeClone();
+  updateWidth();
+  setInitialPos();
+  setTimeout(function () {
+    slides.classList.add("animated");
+  }, 100);
+  autoSlide();
+}
 
 function makeClone() {
   for (let i = 0; i < slideCount; i++) {
@@ -20,12 +30,6 @@ function makeClone() {
     cloneSlide.classList.add("clone");
     slides.prepend(cloneSlide);
   }
-
-  updateWidth();
-  setInitialPos();
-  setTimeout(function () {
-    slides.classList.add("animated");
-  }, 100);
 }
 
 function updateWidth() {
@@ -39,14 +43,6 @@ function setInitialPos() {
   const initialTranslateValue = -slideWidth * slideCount;
   slides.style.transform = `translateX(${initialTranslateValue}px)`;
 }
-
-prevBtn.addEventListener("click", function () {
-  moveSlide(currentIdx - 1);
-});
-
-nextBtn.addEventListener("click", function () {
-  moveSlide(currentIdx + 1);
-});
 
 function moveSlide(num) {
   slides.style.left = `${-num * slideWidth}px`;
@@ -62,3 +58,17 @@ function moveSlide(num) {
     }, 600);
   }
 }
+
+function autoSlide() {
+  setInterval(() => {
+    moveSlide(currentIdx + 1);
+  }, 3000);
+}
+
+prevBtn.addEventListener("click", function () {
+  moveSlide(currentIdx - 1);
+});
+
+nextBtn.addEventListener("click", function () {
+  moveSlide(currentIdx + 1);
+});
