@@ -5,7 +5,6 @@ const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
   ELEMENT_ID;
 
 export const Novel = async (subCategoryUid) => {
-  console.log(subCategoryUid);
   return {
     [`${SUB_CATEGORY}`]: renderSubCategory(subCategoryIndexArr),
     [`${CAROUSEL}`]: 'Novel',

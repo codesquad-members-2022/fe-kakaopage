@@ -1,17 +1,31 @@
 const express = require('express');
 const path = require('path');
+const mockDB = require('./db/store');
 
 const PORT = process.env.PORT || 4000;
 const app = express();
+
+const db = mockDB();
+db.initDB();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/static', express.static(path.resolve(__dirname, 'static')));
 
 // mocke데이터를 post로 받아올 예정
-app.post('/*', (req, res) => {
-  const { uid } = req.body;
-  res.send({ uid });
+app.post('/*', async (req, res) => {
+  const { categoryUid, subCategoryUid } = req.body;
+  const resultObj = {};
+  try {
+    const { mainUid, subUid } = await db.findData(categoryUid, subCategoryUid);
+    resultObj.mainUid = mainUid;
+    resultObj.subUid = subUid;
+  } catch (error) {
+    resultObj.mainUid = 0;
+    resultObj.subUid = 0;
+    resultObj.errorMsg = error.message;
+  }
+  res.send(resultObj);
 });
 
 // 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링하기

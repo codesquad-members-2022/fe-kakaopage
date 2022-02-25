@@ -13,14 +13,13 @@ const { MAIN_LAYOUT } = ELEMENT_ID;
 const { MAIN_LAYOUT_CHILDREN } = ELEMENT_CLASS;
 
 // 렌더링하기 전 cateogoryUid에 해당하는 데이터를 서버에서 받아오기
-async function preRender(uid) {
-  const body = { uid };
+async function preRender(uIdObj) {
   const data = await fetch('/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify(uIdObj),
   }).then((response) => response.json());
   return data;
 }
@@ -28,9 +27,11 @@ async function preRender(uid) {
 export async function render() {
   const $mainLayout = $get(MAIN_LAYOUT);
   // 우선 서버 동작 없이 mock데이터로 구현
-  // const uidContent = await preRender(categoryUid);
+
   try {
     const { categoryUid, subCategoryUid } = getParams();
+    const uidContent = await preRender({ categoryUid, subCategoryUid });
+    console.log(uidContent);
     const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid
     );
