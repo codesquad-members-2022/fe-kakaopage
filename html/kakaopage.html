@@ -37,12 +37,12 @@
     <main>
       <section>
         <div class="menubar_tag dp-flex">
-          <button>홈</button>
+          <button class="change-color">홈</button>
           <button>요일연재</button>
           <button>웹툰</button>
           <button>소년</button>
           <button>드라마</button>
-          <button>로멘스</button>
+          <button>로맨스</button>
           <button>로판</button>
           <button>무협</button>
           <button>BL</button>
@@ -50,18 +50,40 @@
       </section>
 
       <div class="changed">
-        <section class="image_section mg-t-20 pos-rel">
-          <img src="../src/image/화산전생2.png" / alt="화산전생 이미지">
-          <div class="back pos-abs">🔙</div>
-          <div class="soon pos-abs">🔜</div>
-          <div class="image_text pos-abs">
-            <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">화산전생</h2>
-            <span class="image_event pd-5">이벤트</span>
-            <span class="image_span">웹툰 |</span>
-            <span class="image_span">👤183.2만명</span>
-          </div>
-          <div class="image_footer pos-abs pd-10">
-            나도 그들처럼 영웅이 되고 싶었다
+        <section class="image_section mg-t-20 pos-rel width-100">
+          <div class="image_box">
+            <ul class="image_container">
+              <li class="image_element">
+                <img src="../src/image/화산전생2.png" / alt="화산전생 이미지">
+                <div class="image_text pos-abs">
+                  <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">
+                    화산전생
+                  </h2>
+                  <span class="image_event pd-5">이벤트</span>
+                  <span class="image_span">웹툰 |</span>
+                  <span class="image_span">👤183.2만명</span>
+                </div>
+                <div class="image_footer pos-abs pd-10">
+                  나도 그들처럼 영웅이 되고 싶었다
+                </div>
+              </li>
+              <li class="image_element">
+                <img src="../src/image/화산전생2.png" / alt="화산전생 이미지">
+                <div class="image_text pos-abs">
+                  <h2 class="image_title mg-l-30 mg-b-5 pd-10 txt-l">
+                    화산전생
+                  </h2>
+                  <span class="image_event pd-5">이벤트</span>
+                  <span class="image_span">웹툰 |</span>
+                  <span class="image_span">👤183.2만명</span>
+                </div>
+                <div class="image_footer pos-abs pd-10">
+                  나도 그들처럼 영웅이 되고 싶었다
+                </div>
+              </li>
+            </ul>
+            <div class="back pos-abs">🔙</div>
+            <div class="next pos-abs">🔜</div>
           </div>
         </section>
 
@@ -92,7 +114,7 @@
           <img src="../src/image/웹툰_화타 광고.png" / alt="화타 광고 이미지"
           width="550" height="100">
           <div class="back pos-abs">🔙</div>
-          <div class="soon pos-abs">🔜</div>
+          <div class="next pos-abs">🔜</div>
         </section>
 
         <section class="section dp-flex mg-t-20">
@@ -600,4 +622,5 @@
     </footer>
   </body>
   <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/slide.js"></script>
 </html>

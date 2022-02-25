@@ -1,25 +1,30 @@
 import { serialData } from '../data/serial-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeDate } from '../function/contents.js';
-import { makeFiveWebtoon } from '../function/contents.js';
+import { contents } from '../html-template.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(serialData[0])}
+  <section class="image_section mg-t-20 pos-rel">
+  <div class="image_box">
+    <ul class="image_container">
+    </ul>
+    <div class="back pos-abs">🔙</div>
+    <div class="next pos-abs">🔜</div>
+    <div class= "num_total pos-abs"></div>
+  </div>
+</section>
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(serialData[1])}
-  ${makeDate(serialData[2])}
-  ${makeFiveWebtoon(serialData[3])}
-  ${makeFiveWebtoon(serialData[4])}
-  ${makeFiveWebtoon(serialData[5])}
-  ${makeFiveWebtoon(serialData[6])}
-  ${makeFiveWebtoon(serialData[7])}
-  ${makeFiveWebtoon(serialData[8])}
-  ${makeFiveWebtoon(serialData[9])} 
-  ${makeFiveWebtoon(serialData[10])} 
-  ${makeFiveWebtoon(serialData[11])}
-  ${makeFiveWebtoon(serialData[12])}
+  ${contents.makeTitle(serialData.webtoonInfo)}
+  ${contents.makeDate(serialData.date)}
+  ${contents.makeFiveWebtoon(serialData.rank1st)}
+  ${contents.makeFiveWebtoon(serialData.rank2st)}
+  ${contents.makeFiveWebtoon(serialData.rank3st)}
+  ${contents.makeFiveWebtoon(serialData.rank4st)}
+  ${contents.makeFiveWebtoon(serialData.rank5st)}
+  ${contents.makeFiveWebtoon(serialData.firstRcmnd)}
+  ${contents.makeFiveWebtoon(serialData.secondRcmnd)}
+  ${contents.makeFiveWebtoon(serialData.thirdRcmnd)}
+  ${contents.makeFiveWebtoon(serialData.fourthRcmnd)}
+  ${contents.makeFiveWebtoon(serialData.fifthRcmnd)}
   </section>
 `;
 }

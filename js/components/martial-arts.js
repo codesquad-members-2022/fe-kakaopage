@@ -1,28 +1,31 @@
 import { martialArtsData } from '../data/martial-arts-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeThreeMenu } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeLongImageWebtoon } from '../function/contents.js';
-import { makeAdvert } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
+import { contents } from '../html-template.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(martialArtsData[0])} 
-  ${makeThreeMenu(martialArtsData[1])}
-  <section class="section dp-flex mg-t-20">
-  ${makeTitle(martialArtsData[2])}
-  ${makeLongImageWebtoon(martialArtsData[3])}
-  ${makeLongImageWebtoon(martialArtsData[4])}
-  ${makeLongImageWebtoon(martialArtsData[5])}
-  ${makeLongImageWebtoon(martialArtsData[6])}
+  <section class="image_section mg-t-20 pos-rel">
+    <div class="image_box">
+      <ul class="image_container">
+      </ul>
+      <div class="back pos-abs">🔙</div>
+      <div class="next pos-abs">🔜</div>
+      <div class= "num_total pos-abs"></div>
+    </div>
   </section>
-  ${makeAdvert(martialArtsData[7])}
+  ${contents.makeThreeMenu(martialArtsData.threeMenu)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(martialArtsData[8])}
-  ${makeRanking(martialArtsData[9])}
-  ${makeRanking(martialArtsData[10])}
-  ${makeRanking(martialArtsData[11])}
+  ${contents.makeTitle(martialArtsData.todayRcmnd)}
+  ${contents.makeLongImageWebtoon(martialArtsData.firstRcmnd)}
+  ${contents.makeLongImageWebtoon(martialArtsData.secondRcmnd)}
+  ${contents.makeLongImageWebtoon(martialArtsData.thirdRcmnd)}
+  ${contents.makeLongImageWebtoon(martialArtsData.fourthRcmnd)}
+  </section>
+  ${contents.makeAdvert(martialArtsData.webtoonAdvert)}
+  <section class="section dp-flex mg-t-20">
+  ${contents.makeTitle(martialArtsData.martialArtsTOP)}
+  ${contents.makeRanking(martialArtsData.rank1st)} 
+  ${contents.makeRanking(martialArtsData.rank2st)}
+  ${contents.makeRanking(martialArtsData.rank3st)}
   </section>;
   `;
 }

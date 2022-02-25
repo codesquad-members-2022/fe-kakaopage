@@ -1,27 +1,31 @@
 import { romanceData } from '../data/romance-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeThreeMenu } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeLongImageWebtoon } from '../function/contents.js';
-import { makeAdvert } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
+import { contents } from '../html-template.js';
+
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(romanceData[0])} 
-  ${makeThreeMenu(romanceData[1])}
-  <section class="section dp-flex mg-t-20">
-  ${makeTitle(romanceData[2])}
-  ${makeLongImageWebtoon(romanceData[3])}
-  ${makeLongImageWebtoon(romanceData[4])}
-  ${makeLongImageWebtoon(romanceData[5])}
-  ${makeLongImageWebtoon(romanceData[6])}
+  <section class="image_section mg-t-20 pos-rel">
+    <div class="image_box">
+      <ul class="image_container">
+      </ul>
+      <div class="back pos-abs">🔙</div>
+      <div class="next pos-abs">🔜</div>
+      <div class= "num_total pos-abs"></div>
+    </div>
   </section>
-  ${makeAdvert(romanceData[7])}
+  ${contents.makeThreeMenu(romanceData.threeMenu)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(romanceData[8])}
-  ${makeRanking(romanceData[9])}
-  ${makeRanking(romanceData[10])}
-  ${makeRanking(romanceData[11])}
+  ${contents.makeTitle(romanceData.todayRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.firstRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.secondRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.thirdRcmnd)}
+  ${contents.makeLongImageWebtoon(romanceData.fourthRcmnd)}
+  </section>
+  ${contents.makeAdvert(romanceData.webtoonAdvert)}
+  <section class="section dp-flex mg-t-20">
+  ${contents.makeTitle(romanceData.romanceTOP)}
+  ${contents.makeRanking(romanceData.rank1st)} 
+  ${contents.makeRanking(romanceData.rank2st)}
+  ${contents.makeRanking(romanceData.rank3st)}
   </section>;
   `;
 }

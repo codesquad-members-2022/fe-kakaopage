@@ -1,66 +1,63 @@
 import { homeData } from '../data/home-data.js';
-import { makeImageSection } from '../function/contents.js';
-import { makeMenu } from '../function/contents.js';
-import { makeAdvert } from '../function/contents.js';
-import { makeTitle } from '../function/contents.js';
-import { makeDate } from '../function/contents.js';
-import { makeNewThings } from '../function/contents.js';
-import { makeFiveWebtoon } from '../function/contents.js';
-import { makeRanking } from '../function/contents.js';
-import { makeEvent } from '../function/contents.js';
+import { contents } from '../html-template.js';
 
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `
-  ${makeImageSection(homeData[0])}
-  ${makeMenu(homeData[1])}
-  ${makeAdvert(homeData[2])}
+  <section class="image_section mg-t-20 pos-rel">
+    <div class="image_box">
+      <ul class="image_container">
+      </ul>
+      <div class="back pos-abs">🔙</div>
+      <div class="next pos-abs">🔜</div>
+      <div class= "num_total pos-abs"></div>
+    </div>
+  </section>
+  ${contents.makeMenu(homeData.sixMenu)}
+  ${contents.makeAdvert(homeData.contestAdvert)}
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(homeData[3])}
-  ${makeDate(homeData[4])}
-  ${makeFiveWebtoon(homeData[5])}
-  ${makeFiveWebtoon(homeData[6])}
-  ${makeFiveWebtoon(homeData[7])}
-  ${makeFiveWebtoon(homeData[8])}
-  ${makeFiveWebtoon(homeData[9])}
-  ${makeFiveWebtoon(homeData[10])}
-  ${makeFiveWebtoon(homeData[11])} 
-  ${makeFiveWebtoon(homeData[12])} 
-  ${makeFiveWebtoon(homeData[13])}
-  ${makeFiveWebtoon(homeData[14])}
+  ${contents.makeTitle(homeData.serialTOP)}
+  ${contents.makeDate(homeData.data)}
+  ${contents.makeFiveWebtoon(homeData.rank1st)}
+  ${contents.makeFiveWebtoon(homeData.rank2st)}
+  ${contents.makeFiveWebtoon(homeData.rank3st)}
+  ${contents.makeFiveWebtoon(homeData.rank4st)}
+  ${contents.makeFiveWebtoon(homeData.rank5st)}
+  ${contents.makeFiveWebtoon(homeData.firstRcmnd)}
+  ${contents.makeFiveWebtoon(homeData.secondRcmnd)} 
+  ${contents.makeFiveWebtoon(homeData.thirdRcmnd)} 
+  ${contents.makeFiveWebtoon(homeData.fourthRcmnd)}
+  ${contents.makeFiveWebtoon(homeData.fifthRcmnd)}
   </section>
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(homeData[15])}
-  ${makeNewThings(homeData[16])}
-  ${makeNewThings(homeData[17])}
+  ${contents.makeTitle(homeData.newWorkTOP)}
+  ${contents.makeNewThings(homeData.firstNewWork)}
+  ${contents.makeNewThings(homeData.secondNewWork)}
   </section>
   <section class="section dp-flex mg-t-20"> 
-  ${makeTitle(homeData[18])}
-  ${makeFiveWebtoon(homeData[19])}  
-  ${makeFiveWebtoon(homeData[20])}  
-  ${makeFiveWebtoon(homeData[21])}  
-  ${makeFiveWebtoon(homeData[22])}  
-  ${makeFiveWebtoon(homeData[23])}  
+  ${contents.makeTitle(homeData.romanceTOP)}
+  ${contents.makeFiveWebtoon(homeData.firstRomance)}
+  ${contents.makeFiveWebtoon(homeData.secondRomance)}
+  ${contents.makeFiveWebtoon(homeData.thirdRomance)}
+  ${contents.makeFiveWebtoon(homeData.fourthRomance)}
+  ${contents.makeFiveWebtoon(homeData.fifthRomance)}
   </section>
-
   <section class="section dp-flex mg-t-20"> 
-  ${makeTitle(homeData[24])}
-  ${makeFiveWebtoon(homeData[25])}  
-  ${makeFiveWebtoon(homeData[26])}  
-  ${makeFiveWebtoon(homeData[27])}  
-  ${makeFiveWebtoon(homeData[28])}  
-  ${makeFiveWebtoon(homeData[29])}
+  ${contents.makeTitle(homeData.fantasyTOP)}
+  ${contents.makeFiveWebtoon(homeData.firstFantasy)}
+  ${contents.makeFiveWebtoon(homeData.secondFantasy)}
+  ${contents.makeFiveWebtoon(homeData.thirdFantasy)}
+  ${contents.makeFiveWebtoon(homeData.fourthFantasy)}
+  ${contents.makeFiveWebtoon(homeData.fifthFantasy)}
   </section>
-
+  <contents.section class="section dp-flex mg-t-20">
+  ${contents.makeTitle(homeData.todayRanking)}
+  ${contents.makeRanking(homeData.ranking1st)}
+  ${contents.makeRanking(homeData.ranking2st)}
+  ${contents.makeRanking(homeData.ranking3st)}
+  </contents.section>
   <section class="section dp-flex mg-t-20">
-  ${makeTitle(homeData[30])}
-  ${makeRanking(homeData[31])}
-  ${makeRanking(homeData[32])}
-  ${makeRanking(homeData[33])}
-  </section>
-
-  <section class="section dp-flex mg-t-20">
-  ${makeTitle(homeData[34])}
-  ${makeEvent(homeData[35])}
+  ${contents.makeTitle(homeData.event)}
+  ${contents.makeEvent(homeData.eventUrl)}
   </section>
   `;
 }
