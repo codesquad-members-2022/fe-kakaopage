@@ -35,11 +35,9 @@ const getEventContentsTemplate = (eventData) => {
 }
 
 const getRecommendEventSlideTemplate = (eventData, currIndex) => {
-    console.log(currIndex)
     const prevIndex = currIndex - 1 < 0 ? eventData.length - 1 : currIndex - 1;
     const nextIndex = currIndex + 1 >= eventData.length ? 0 : currIndex + 1;
     const indexSeries = [prevIndex, currIndex, nextIndex];
-    console.log(indexSeries)
     const recommendEventSlideTemplate = indexSeries.map(index => getEventContentTemplate(eventData[index])).join('');
     return recommendEventSlideTemplate;
 }

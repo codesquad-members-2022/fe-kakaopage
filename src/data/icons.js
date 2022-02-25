@@ -1,4 +1,8 @@
 export const icons = {
+    kakaoLogo: 'https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954',
+    search: 'https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a',
+    stageLogo: 'https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f',
+    stageTooltip:'https://static-page.kakao.com/static/common/stage-tooltip.svg?e37d1bc523d4daad835b7ea0620ec658',
     up: 'https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2',
     recommend: 'https://static-page.kakao.com/static/pc/badge-bigthum-recommend.svg?9cba9a2bf1ae05f840c588da3ed9d37f',
     hot:'	https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3',

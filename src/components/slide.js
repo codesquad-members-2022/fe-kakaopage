@@ -50,7 +50,7 @@ export const activateBtns = (parentElement) => {
 export const activateAutoSlide = (parentElement) => {
     const autoSlide = startAutoSlide(parentElement);
     parentElement.addEventListener('mouseenter', () => {clearInterval(autoSlide)});
-    parentElement.addEventListener('mouseleave', () => {startAutoSlide(parentElement)});
+    parentElement.addEventListener('mouseleave', () => {activateAutoSlide(parentElement)});
 }
 
 const startAutoSlide = (slide) => {
