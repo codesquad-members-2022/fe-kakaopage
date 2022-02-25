@@ -46,7 +46,7 @@ function makeHtml(dayWebToonData){
 // ==================slide
 
 function showSlides(){
-    const slides = document.querySelectorAll('.slider_slide');
+    const slides = document.querySelectorAll('.slideshow_slide');
     const btnLeft = document.querySelector('.slider_btn_left');
     const btnRight = document.querySelector(".slider_btn_right");
     let curSlide = 0;
@@ -59,7 +59,6 @@ function showSlides(){
     }
     moveSlide(0);
     
-    //nextbtn
     function nextSlide(){
         if(curSlide === maxSlide-1){
             curSlide = 0;
@@ -69,7 +68,6 @@ function showSlides(){
         moveSlide(curSlide);
     }
     
-    //prevBtn;
     function prevSlide(){
         if(curSlide === 0){
             curSlide = maxSlide -1;
