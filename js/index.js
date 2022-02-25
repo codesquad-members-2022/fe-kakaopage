@@ -69,8 +69,11 @@ const setCaroulselPager = (carouselImgIdx = 1) => {
 const renderCarousel = (data) => {
     const carouselImgs = data;
     const carousel = new CaroulselItems({ carouselImgs });
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const imageWidth = $(".cover-image").clientWidth;
 
-    $(".carousel-item-wrap").innerHTML = carousel.getHtml();
+    carouselItemWrapper.innerHTML = carousel.getHtml();
+    carouselItemWrapper.style.transform = `translateX(${-imageWidth}px)`;
     setCaroulselPager();
 };
 
