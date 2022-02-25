@@ -18,3 +18,7 @@ export const getRandomString = ({ length }) => {
 export function $(selector) {
   return document.querySelector(selector);
 }
+
+export function draw({ to, el }) {
+  $(to).innerHTML = el;
+}

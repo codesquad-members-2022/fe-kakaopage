@@ -1,22 +1,12 @@
-import { render, setSelectedSNB } from "./render.js";
-<<<<<<< HEAD
-import { addEvent } from "./event.js";
-import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
-
-function init() {
-  render(createTabWebtoonHome());
-  setSelectedSNB();
-  addEvent();
-=======
+import { setSelectedSNB } from "./render.js";
 import { addEventGNB, addEventSNB } from "./event.js";
-import { createTabWebtoonHome } from "../components/tabWebtoonHome/index.js";
+import { tabWebtoonHome } from "../components/tab/global/webtoon.js";
 
 function init() {
-  render({ to: ".contents", el: createTabWebtoonHome() });
+  tabWebtoonHome.render();
   setSelectedSNB();
   addEventGNB();
   addEventSNB();
->>>>>>> step3
 }
 
 init();
