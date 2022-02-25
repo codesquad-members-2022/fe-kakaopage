@@ -22,8 +22,21 @@
 
 ## Step 3. Web animation sliding
 
+- [ ] z-index에 대한 이해 : stacking context
 - tab 클릭 시 레이아웃 변경까지 구현 완료
-- 슬라이더 구현
+- 슬라이더 구현 완료
+  - [ ] 버그 수정하기
+
+## Step 4. Node.js & Express
+
+- [ ] Node.js 개발환경을 만들 줄 알기
+- [ ] HTTP와 back-end 역할에 대해 기본적으로 이해하기
+- [x] 클라이언트 정적인 자원 요청(HTML, CSS, JS, image)에 응답할 수 있는 서버를 구성하기
+- [x] npm project를 이해하고, npm 기반 개발 환경을 만들기
+- [x] Express server를 설치하고, 이를 활용해 server를 띄워서 화면을 볼 수 있도록 하기
+- [ ] Middleware 이해하기
+
+---
 
 ### Event Delegation : `closest()` 활용
 
