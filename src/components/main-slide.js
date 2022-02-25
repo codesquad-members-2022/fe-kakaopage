@@ -9,22 +9,24 @@ function createMainSlide(titles) {
   titles.unshift(titles[itemLength - 1]);
   titles.push(titles[1]);
 
-  const section = document.createElement("div");
-  section.className = "main-slide-section";
-  section.innerHTML = `
-  <div class="main-slide-wrapper" data-current-index="1" style="transform: translateX(-${ITEMWIDTH}px)">
-    ${titles.map((title, index) => createMainSlideItem(title, index)).join("")}
+  const section = `
+  <div class="main-slide-section">
+    <div class="main-slide-wrapper" data-current-index="1" style="transform: translateX(-${ITEMWIDTH}px)">
+      ${titles
+        .map((title, index) => createMainSlideItem(title, index))
+        .join("")}
+    </div>
+    <button class="main-slide-prevBtn" data-direction="${LEFT}">
+      <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56"/>
+    </button>
+    <button class="main-slide-nextBtn" data-direction="${RIGHT}">
+      <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93"/>
+    </button>
+    <div class="index-monitor"> <span>1</span> / ${itemLength}</div>
   </div>
-  <button class="main-slide-prevBtn" data-direction="${LEFT}">
-    <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56"/>
-  </button>
-  <button class="main-slide-nextBtn" data-direction="${RIGHT}">
-    <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93"/>
-  </button>
-  <div class="index-monitor"> <span>1</span> / ${itemLength}</div>
   `;
 
-  function moveSlide(direction) {
+  function moveSlide(section, direction) {
     const wrapper = section.querySelector(".main-slide-wrapper");
     const nextIndex = Number(wrapper.dataset.currentIndex) + direction;
     wrapper.dataset.currentIndex = nextIndex;
@@ -44,16 +46,19 @@ function createMainSlide(titles) {
       }, 500);
     }
   }
-  function setIndex() {
+  function setIndex(section) {
     section.querySelector(".index-monitor > span").innerText = `${
       section.querySelector(".main-slide-wrapper").dataset.currentIndex
     }`;
   }
-  section.addEventListener("click", (e) => {
+  document.querySelector("body").addEventListener("click", (e) => {
+    const slideSection = e.target.closest(".main-slide-section");
+    if (!slideSection) return;
+
     const button = e.target.closest("button");
     if (button) {
-      moveSlide(Number(button.dataset.direction));
-      setIndex();
+      moveSlide(slideSection, Number(button.dataset.direction));
+      setIndex(slideSection);
     }
   });
 

@@ -1,6 +1,6 @@
-function createHomeDayNav() {
-  const dayNav = document.createElement("nav");
-  dayNav.innerHTML = `
+function createDayNav() {
+  const dayNav = `
+  <nav>
     <ul class="day-nav">
         <li class="day-nav__item day-nav__item--selected" data-day="mon">월</li>
         <li class="day-nav__item" data-day="tue">화</li>
@@ -10,8 +10,11 @@ function createHomeDayNav() {
         <li class="day-nav__item" data-day="sat">토</li>
         <li class="day-nav__item" data-day="sun">일</li>
     </ul>
-    `;
-  dayNav.addEventListener("click", (e) => {
+  </nav>
+  `;
+  document.querySelector("body").addEventListener("click", (e) => {
+    const dayNav = e.target.closest(".day-nav");
+    if (!dayNav) return;
     e.target
       .closest("section")
       .querySelector(
@@ -27,4 +30,4 @@ function createHomeDayNav() {
   return dayNav;
 }
 
-export { createHomeDayNav };
+export { createDayNav };

@@ -1,4 +1,6 @@
-function createContentsSection({ id = "", header, contents }) {
+import { createDayNav } from "./day-nav.js";
+
+function createDayTopSection({ id = "", header, contents }) {
   const section = `
   <section class="contents-section" id="${id}">
     <div class="contents-header">
@@ -7,6 +9,7 @@ function createContentsSection({ id = "", header, contents }) {
             <a href="">더보기 ></a>
         </div>
     </div>
+    ${createDayNav()}
     <div class="contents-wrapper">
       ${contents}
     </div>
@@ -15,4 +18,4 @@ function createContentsSection({ id = "", header, contents }) {
   return section;
 }
 
-export { createContentsSection };
+export { createDayTopSection };

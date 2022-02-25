@@ -1,6 +1,6 @@
 function createGenreNav() {
-  const nav = document.createElement("nav");
-  nav.innerHTML = `
+  const nav = `
+  <nav>
     <ul class="genre-nav">
         <li class="genre-nav__item genre-nav__item--selected">
             <button>홈</button>
@@ -30,10 +30,14 @@ function createGenreNav() {
             <button>BL</button>
         </li>
     </ul>
-    `;
-  nav.addEventListener("click", (e) => {
-    const selectedItem = e.target.closest("li");
-    const previousSelectedItem = nav.querySelector(
+  </nav>  
+  `;
+  document.querySelector("body").addEventListener("click", (e) => {
+    const genreNav = e.target.closest(".genre-nav");
+    if (!genreNav) return;
+
+    const selectedItem = e.target.closest(".genre-nav__item");
+    const previousSelectedItem = genreNav.querySelector(
       ".genre-nav__item--selected"
     );
 
