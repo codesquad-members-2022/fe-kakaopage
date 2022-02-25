@@ -1,7 +1,7 @@
-import { handleClickNavigation } from '../router.js';
-import { getParams } from '../utils.js';
+import { handleClickNavigation } from '../../router.js';
+import { getParams } from '../../utils.js';
 
-export function renderSubCategory(subCategoryIndexArr) {
+export function SubCategory(subCategoryIndexArr) {
   const { categoryUid, subCategoryUid } = getParams();
   const $newUl = document.createElement('ul');
   $newUl.classList.add('c-category');

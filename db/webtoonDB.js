@@ -3,6 +3,19 @@ const { ELEMENT_ID } = require('./subCategoryID');
 const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
   ELEMENT_ID;
 
+function webtoonData(subUid) {
+  const tempUid = subUid > 1 ? 0 : subUid;
+  return {
+    [`${SUB_CATEGORY}`]: subCategoryIndexArr,
+    [`${CAROUSEL}`]: carouselElement[tempUid],
+    [`${EVENT_BOX}`]: `Webtoon`,
+    [`${EVENT_CAROUSEL}`]: `Webtoon`,
+    [`${MAIN_CONTENT}`]: `Webtoon`,
+  };
+}
+
+module.exports = webtoonData;
+
 const subCategoryIndexArr = [
   { key: 0, value: '홈' },
   { key: 1, value: '요일연재' },
@@ -71,16 +84,3 @@ const carouselElement = {
     },
   ],
 };
-
-function webtoonData(subUid) {
-  const tempUid = subUid > 1 ? 0 : subUid;
-  return {
-    [`${SUB_CATEGORY}`]: subCategoryIndexArr,
-    [`${CAROUSEL}`]: carouselElement[tempUid],
-    [`${EVENT_BOX}`]: `Webtoon`,
-    [`${EVENT_CAROUSEL}`]: `Webtoon`,
-    [`${MAIN_CONTENT}`]: `Webtoon`,
-  };
-}
-
-module.exports = webtoonData;

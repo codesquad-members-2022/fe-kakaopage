@@ -3,6 +3,18 @@ const { ELEMENT_ID } = require('./subCategoryID');
 const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
   ELEMENT_ID;
 
+function novelData(subUid) {
+  return {
+    [`${SUB_CATEGORY}`]: subCategoryIndexArr,
+    [`${CAROUSEL}`]: 'Novel',
+    [`${EVENT_BOX}`]: `Webtoon`,
+    [`${EVENT_CAROUSEL}`]: `Webtoon`,
+    [`${MAIN_CONTENT}`]: `Webtoon`,
+  };
+}
+
+module.exports = novelData;
+
 const subCategoryIndexArr = [
   { key: 0, value: '홈' },
   { key: 1, value: '요일연재' },
@@ -16,15 +28,3 @@ const subCategoryIndexArr = [
   { key: 9, value: 'BL' },
   { key: 10, value: '단행본' },
 ];
-
-function novelData(subUid) {
-  return {
-    [`${SUB_CATEGORY}`]: subCategoryIndexArr,
-    [`${CAROUSEL}`]: 'Novel',
-    [`${EVENT_BOX}`]: `Webtoon`,
-    [`${EVENT_CAROUSEL}`]: `Webtoon`,
-    [`${MAIN_CONTENT}`]: `Webtoon`,
-  };
-}
-
-module.exports = novelData;

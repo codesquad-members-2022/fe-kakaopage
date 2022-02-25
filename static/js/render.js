@@ -26,10 +26,10 @@ async function preRender(uIdObj) {
 
 export async function render() {
   const $mainLayout = $get(MAIN_LAYOUT);
-  // 우선 서버 동작 없이 mock데이터로 구현
 
   try {
     const { categoryUid, subCategoryUid } = getParams();
+    // 서버에서 데이터 가져오기
     const { content, isSuccess, msg } = await preRender({
       categoryUid,
       subCategoryUid,
@@ -38,16 +38,19 @@ export async function render() {
       throw new Error(msg);
     }
 
+    // 파라미터에 따른 템플릿 가져오기
     const selectedCategory = routes.find(
       (route) => route.categoryUid === categoryUid
     );
     if (!selectedCategory) {
       throw new Error(NOT_FOUND);
     }
-    // 카테코리와 서브 카테고리 아이디에 맞는 내용 렌더링시작
+
+    // 파라미터에에 맞는 템플릿 렌더링 시작
     // mainlayout의 node를 지우고 새로 랜더링
     $mainLayout.innerHTML = ``;
 
+    // 선택된 템플릿에 서버에서 가져온 데이터 넣기
     const contentObj = await selectedCategory.Category(content);
 
     // article순서대로 해당 카테고리 내용을 렌더링
@@ -60,8 +63,8 @@ export async function render() {
       $subLayout.append(articleLayout);
       $mainLayout.append($subLayout);
     });
-    // 선택된 카테고리 표시
 
+    // 선택된 카테고리 표시 및 에러 핸들링
     if (!handleTabActive({ categoryUid, subCategoryUid })) {
       throw new Error('네비게이션 active에 문제 있음');
     }
