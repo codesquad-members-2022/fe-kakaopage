@@ -1,6 +1,7 @@
 import { loader } from './loader.js';
 
 const loaderMap = {
+  홈: loader.home,
   웹툰: {
     홈: loader.webtoonHome,
     요일연재: loader.webtoonWeeky,
