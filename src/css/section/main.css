@@ -151,6 +151,7 @@
   width: 100%;
   font-size: var(--font-size-L);
   font-weight: var(--font-max-bold);
+  cursor: pointer;
 }
 /* 웹툰 5개 소개 */
 .five_webtoon {
