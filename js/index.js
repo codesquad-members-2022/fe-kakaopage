@@ -1,22 +1,14 @@
 import { $ } from "./utils/dom.js";
 import { homeData } from "./data/homeData.js";
-import { coverImg } from "./data/coverImg.js";
 import { romanceTop } from "./data/genreItems.js";
 import { weekdayData } from "./data/weekdayData.js";
+import { carouselImgs } from "./data/carouselImgs.js";
 
 import Category from "./views/Category.js";
 import SlideBanner from "./views/SlideBanner.js";
 import GenreBest from "./views/GenreBest.js";
 import Weekday from "./views/Weekday.js";
-
-const changeCoverImg = (subMenu) => {
-    const coverImgSection = $(".cover-image");
-    const imgSrc = coverImg.img[subMenu];
-    const title = coverImg.title[subMenu];
-
-    coverImgSection.querySelector("img").src = imgSrc;
-    coverImgSection.querySelector(".title").innerText = title;
-};
+import CaroulselItems from "./views/CaroulselItems.js";
 
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;
@@ -41,15 +33,90 @@ const renderHome = () => {
     html += genreBest.getHtml();
 
     render(html);
+    renderCarousel(carouselImgs["홈"]);
 };
 
-const renderWeekday = (today = "월") => {
-    const weekday = new Weekday(weekdayData, today);
+const renderWeekday = (today = new Date().getDay()) => {
+    const days = ["일", "월", "화", "수", "목", "금", "토"];
+    const weekday = new Weekday(weekdayData, days[today]);
 
     let html = "";
     html += weekday.getHtml();
 
     render(html);
+    renderCarousel(carouselImgs["요일연재"]);
+};
+
+const setCaroulselPager = (carouselImgIdx = 1) => {
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const carouselItems = carouselItemWrapper.children;
+    const clonedNodeCnt = [...carouselItems].filter(
+        (el) => el.dataset.clone
+    ).length;
+    const imageCnt = carouselItems.length - clonedNodeCnt;
+    const pager = $(".cover-image").querySelector(".page");
+
+    const firstPageNum = 1;
+    const lastPageNum = imageCnt;
+    let curPage = carouselImgIdx;
+
+    curPage = curPage > lastPageNum ? firstPageNum : curPage;
+    curPage = curPage < firstPageNum ? lastPageNum : curPage;
+
+    pager.innerText = `${curPage} / ${lastPageNum}`;
+};
+
+// FIXME: 전역변수
+// FIXME: 중복된 변수들 삭제
+// FIXME: 캐러셀 관련 - 모듈로 분리
+let carouselImgIdx = 1;
+let isClickable = true;
+
+let isAutoCarouselRunning = false;
+let carouselTimer;
+
+const handleAutoCarousel = () => {
+    if (!isAutoCarouselRunning) return;
+    if (!isClickable) return;
+    const imageWidth = $(".cover-image").clientWidth;
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const transitionDuration = "0.3s";
+    const customTransition = `transform ${transitionDuration} ease-out`;
+
+    carouselImgIdx++;
+    carouselItemWrapper.style.transition = customTransition;
+    carouselItemWrapper.style.transform = `translateX(${
+        -imageWidth * carouselImgIdx
+    }px)`;
+    setCaroulselPager(carouselImgIdx);
+
+    isClickable = false;
+};
+
+const runCarouselTimer = () => {
+    const delayMilliSeconds = 2500;
+    isAutoCarouselRunning = true;
+    carouselTimer = setInterval(handleAutoCarousel, delayMilliSeconds);
+};
+
+const stopCarouselTimer = () => {
+    clearInterval(carouselTimer);
+    isAutoCarouselRunning = false;
+};
+
+const renderCarousel = (data) => {
+    const carouselImgs = data;
+    const carousel = new CaroulselItems({ carouselImgs });
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const imageWidth = $(".cover-image").clientWidth;
+
+    carouselItemWrapper.style.transform = `translateX(${-imageWidth}px)`;
+    carouselItemWrapper.innerHTML = carousel.getHtml();
+    setCaroulselPager();
+    carouselItemWrapper.style.transition = "none";
+    carouselImgIdx = 1;
+    stopCarouselTimer();
+    runCarouselTimer();
 };
 
 const preventDefaults = () => {
@@ -64,10 +131,7 @@ const bindSubMenuEvent = () => {
         const curEl = target.parentNode;
         const targetPage = target.innerText;
 
-        // 서브메뉴 active 클래스 토글
         toggleClass(curEl, "active");
-        // 커버이미지란 변경
-        // changeCoverImg(targetPage);
 
         if (targetPage === "홈") {
             renderHome();
@@ -82,51 +146,80 @@ const bindSubMenuEvent = () => {
 };
 
 const bindCaroulselEvent = () => {
-    let clickCnt = 0;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
-    const clonedNodeCnt = 2;
-    $(".cover-image").addEventListener("click", ({ target }) => {
-        if (!target.classList.contains("button")) return;
-        const customTransition = "transform 0.4s ease-in-out";
+    const clonedNodeCnt = [...carouselItems].filter(
+        (el) => el.dataset.clone
+    ).length;
+    const transitionDuration = "0.3s";
+    const customTransition = `transform ${transitionDuration} ease-out`;
 
+    const setTransition = (transition) => {
+        carouselItemWrapper.style.transition = transition;
+    };
+
+    const setTransform = (carouselImgIdx) => {
+        setCaroulselPager(carouselImgIdx);
+
+        carouselItemWrapper.style.transform = `translateX(${
+            -imageWidth * carouselImgIdx
+        }px)`;
+    };
+
+    const handleCarouselBtnClick = ({ target }) => {
+        if (!target.classList.contains("button")) return;
+        stopCarouselTimer();
+        runCarouselTimer();
+
+        if (!isClickable) return;
         if (target.closest(".btn-left")) {
-            clickCnt--;
-            carouselItemWrapper.style.transition = customTransition;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
+            carouselImgIdx--;
+            setTransition(customTransition);
+            setTransform(carouselImgIdx);
+
+            isClickable = false;
+            return;
         }
         if (target.closest(".btn-right")) {
-            clickCnt++;
-            carouselItemWrapper.style.transition = customTransition;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
-        }
-    });
+            carouselImgIdx++;
 
-    $(".cover-image").addEventListener("transitionend", () => {
-        if (!carouselItems[clickCnt].dataset.clone) return;
-
-        if (carouselItems[clickCnt].dataset.clone === "last") {
-            carouselItemWrapper.style.transition = "none";
-            clickCnt = carouselItems.length - clonedNodeCnt;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
+            setTransition(customTransition);
+            setTransform(carouselImgIdx);
+            isClickable = false;
             return;
         }
-        if (carouselItems[clickCnt].dataset.clone === "first") {
-            carouselItemWrapper.style.transition = "none";
-            clickCnt = carouselItems.length - clickCnt;
-            carouselItemWrapper.style.transform = `translateX(${
-                -imageWidth * clickCnt
-            }px)`;
+    };
+
+    const handleCarouselTransitionEnd = () => {
+        isClickable = true;
+        const maxCnt = carouselItems.length - 1;
+        if (carouselImgIdx > maxCnt) {
+            carouselImgIdx = maxCnt;
+        }
+
+        if (!carouselItems[carouselImgIdx].dataset.clone) return;
+
+        if (carouselItems[carouselImgIdx].dataset.clone === "last") {
+            carouselImgIdx = carouselItems.length - clonedNodeCnt;
+            setTransition("none");
+            setTransform(carouselImgIdx);
             return;
         }
-    });
+        if (carouselItems[carouselImgIdx].dataset.clone === "first") {
+            carouselImgIdx = carouselItems.length - carouselImgIdx;
+            setTransition("none");
+            setTransform(carouselImgIdx);
+            return;
+        }
+    };
+
+    $(".cover-image").addEventListener("click", handleCarouselBtnClick);
+
+    $(".cover-image").addEventListener(
+        "transitionend",
+        handleCarouselTransitionEnd
+    );
 };
 
 const toggleWeekDayMenu = (target) => {
@@ -134,7 +227,7 @@ const toggleWeekDayMenu = (target) => {
     toggleClass(curEl, "active");
 };
 
-const bindEventListener = () => {
+const bindEventListeners = () => {
     bindSubMenuEvent();
     bindCaroulselEvent();
 
@@ -149,8 +242,8 @@ const bindEventListener = () => {
 
 const init = () => {
     preventDefaults();
-    bindEventListener();
     renderHome();
+    bindEventListeners();
 };
 
 init();
