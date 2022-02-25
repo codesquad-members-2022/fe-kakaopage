@@ -1,4 +1,21 @@
+import { dataOfEvent } from "../data/home/event.js";
 import { insertIntoMain } from "../utils.js";
+
+const getEventImg = () => {
+  const imgs = [];
+
+  dataOfEvent.forEach((data) => {
+    const img = `<img
+    class="event-img"
+    src="${data.img}"
+    alt="${data.desc}"
+  />`;
+
+    imgs.push(img);
+  });
+
+  return imgs.join("");
+};
 
 const createEventBlock = () => {
   const eventBlock = `<div class="center container contents-container">
@@ -22,11 +39,9 @@ const createEventBlock = () => {
     </svg>
   </header>
   <div class="event-img-container">
-    <img
-      class="event-img round-container"
-      src="https://dn-img-page.kakao.com/download/resource?kid=FIep1/hzmU3sGhNi/ltEgI1VyEMT2RwQZYdXhqk"
-      alt="왕실교사 하이네 기다무 런칭 기념, 경품 이벤트!"
-    />
+    <div class="round-container side-by-side">
+      ${getEventImg()}
+    </div>
     <div
       class="layout-center event-count-container text-color--transparent-white"
     >
@@ -45,7 +60,7 @@ const createEventBlock = () => {
           d="M15 19l-7-7 7-7"
         />
       </svg>
-      <span class="event-count">1/8</span>
+      <span class="event-count">1/${dataOfEvent.length}</span>
       <svg
         class="arrow-icon"
         xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +79,7 @@ const createEventBlock = () => {
     </div>
   </div>
 </div>`;
+
   insertIntoMain(eventBlock);
 };
 
