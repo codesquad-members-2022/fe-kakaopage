@@ -1,25 +1,40 @@
+export function calculateWeekday() {
+  const today = new Date();
+  const weekdayIndex = today.getDay();
+  const weekdayList = ["일","월", "화", "수", "목", "금", "토"];
+  const weekday = weekdayList[weekdayIndex];
+  return weekday;
+}
+
 export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
-  let promotionWebtoonTemplate = `<section class="promotion_webtoon_section">`;
-  weeklyPromotionWebtoonList.forEach((weeklyPromotionWebtoon) => {
-    const promotionWebtoonDiv = createPromotionWebtoonDiv(weeklyPromotionWebtoon);
+  let promotionWebtoonTemplate = `<section class="promotion_webtoon_section">
+  <div class="slide_button align_space_between">
+    <img class="previous_button" src="./image/previousButton.svg" alt="previousButton" />
+    <img class="next_button" src="./image/nextButton.svg" alt="nextButton" />
+  </div>
+  <div class="promotion_webtoon_slide">`;
+  const totalSlideNumber = weeklyPromotionWebtoonList.length;
+  weeklyPromotionWebtoonList.forEach((weeklyPromotionWebtoon, slideNumber) => {
+    const promotionWebtoonDiv = createPromotionWebtoonDiv(weeklyPromotionWebtoon, slideNumber, totalSlideNumber);
     promotionWebtoonTemplate += promotionWebtoonDiv;
   });
-  promotionWebtoonTemplate += "</section>";
+  promotionWebtoonTemplate += "</div></section>";
   return promotionWebtoonTemplate;
 }
 
-function createPromotionWebtoonDiv(promotionWebtoon) {
-  return `<div class="promotion_webtoon">
+function createPromotionWebtoonDiv(promotionWebtoon, slideNumber, totalSlideNumber) {
+  return `<div class="promotion_webtoon" data-number="${slideNumber}">
     <img class="promotion_webtoon_image" src="${promotionWebtoon.url}">
     <div class="promotion_webtoon_details">
       <div class="promotion_webtoon_title">${promotionWebtoon.title}</div>
       <div>
-        <img src="./image/update_promotion.svg" alt="promotion_update"/>
-        <img src="./image/wait_sign.svg" alt="wait_sign" />
+        <img src="./image/updatePromotion.svg" alt="promotionUpdate"/>
+        <img src="./image/waitSign.svg" alt="waitSign" />
         <span class="font_white">웹툰</span>
-        <img src="./image/read_count.png" alt="read_count_icon" />
+        <img src="./image/readCount.png" alt="readCountIcon" />
         <span class="font_white">${promotionWebtoon.readCount}</span>
       </div>
+      <div class="slide_number">${slideNumber + 1} / ${totalSlideNumber}</div>
     </div>
     <div class="promotion_webtoon_phrase">
       ${promotionWebtoon.phrase}
@@ -29,7 +44,7 @@ function createPromotionWebtoonDiv(promotionWebtoon) {
 
 export function createWeekdayCategoryNav() {
   const weekdayCategoryList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-  let weekdayCategoryTemplate = `<nav class="weekday_category_navigation category_align">`;
+  let weekdayCategoryTemplate = `<nav class="weekday_category_navigation align_spce_around">`;
   weekdayCategoryList.forEach((weekdayCategory) => {
     weekdayCategoryTemplate += `<div class="weekday_category">${weekdayCategory}</div>`;
   });
@@ -61,24 +76,24 @@ function createWebtoonPreviewDiv(imgURL, webtoonScore) {
     <img src="${imgURL}">
     <div class="webtoon_score">
       ${webtoonScore}
-      <img src="./image/wait_sign.svg" alt="wait_sign" />
+      <img src="./image/waitSign.svg" alt="waitSign" />
     </div>
   </div>`;
 }
 
 function createWebtoonDetailsDiv(readCount) {
   return `<div class="webtoon_details">
-    <img src="./image/update_webtoon.svg" alt="update" />
-    <img src="./image/read_count.png" alt="read_count_icon" />
+    <img src="./image/updateWebtoon.svg" alt="update" />
+    <img src="./image/readCount.png" alt="readCountIcon" />
     <span class="read_count">${readCount}</span>
   </div>`;
 }
 
-  export function createTodayCategorySection(todayCategotyList) {
-    let todayCategoryTemplate = `<section class="today_category_container grid_container">`;
-    todayCategotyList.forEach((todayCategory) => {
-      todayCategoryTemplate += `<div class="today_category grid_item">${todayCategory}</div>`;
-    })
-    todayCategoryTemplate += "</section>";
-    return todayCategoryTemplate;
-  }
+export function createTodayCategorySection(todayCategotyList) {
+  let todayCategoryTemplate = `<section class="today_category_container grid_container">`;
+  todayCategotyList.forEach((todayCategory) => {
+    todayCategoryTemplate += `<div class="today_category grid_item">${todayCategory}</div>`;
+  })
+  todayCategoryTemplate += "</section>";
+  return todayCategoryTemplate;
+}

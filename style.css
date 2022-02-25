@@ -12,9 +12,14 @@
   --font-color-deepdark-gray: #333;
 }
 
-.category_align {
+.align_spce_around {
   display: flex;
   justify-content: space-around;
+}
+
+.align_space_between {
+  display: flex;
+  justify-content: space-between;
 }
 
 .grid_container {
@@ -28,6 +33,9 @@
 }
 
 .grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 226px;
   height: 69px;
   background-color: var(--background-color-gray);
@@ -132,8 +140,24 @@ input {
 }
 
 .promotion_webtoon_section {
+  position: relative;
   width: 725px;
   height: 500px;
+  overflow: hidden;
+}
+
+.slide_button {
+  position: absolute;
+  top: 180px;
+  width: 685px;
+  max-height: 50px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.promotion_webtoon_slide {
+  display: flex;
+  position: absolute;
 }
 
 .promotion_webtoon_image {
@@ -143,8 +167,8 @@ input {
 }
 
 .promotion_webtoon_details {
-  position: relative;
-  bottom: -350px;
+  position: absolute;
+  bottom: -370px;
   padding: 0 0 0 20px;
   z-index: 1;
   font-size: 20px;
@@ -152,15 +176,23 @@ input {
 }
 
 .promotion_webtoon_title {
-  font-weight: 500;
   font-size: 28px;
   font-weight: 500;
   color: var(--color-white);
 }
 
+.slide_number {
+  display: flex;
+  justify-content: flex-end;
+  width: 685px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
 .promotion_webtoon_phrase {
-  position: absolute;
-  bottom: -160px;
+  position: relative;
+  bottom: -450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,6 +238,7 @@ input {
 
 .webtoon_genre_filter {
   list-style: none;
+  margin: 10px;
 }
 
 .webtoon_genre_filter > .webtoon_genre {

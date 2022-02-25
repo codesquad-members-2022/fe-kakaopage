@@ -4,7 +4,8 @@ import * as data from "./data.js";
 let HTMLTemplate = "";
 const promotionWebtoonSection = common.createPromotionWebtoonSection(data.weeklyPromotionWebtoonList);
 const webtoonCategorySection = createWebtoonCategorySection();
-const webtoonBoardSection = common.createWebtoonBoardSection(data.weeklyWebtoonList["화"]);
+const weekday = common.calculateWeekday();
+const webtoonBoardSection = common.createWebtoonBoardSection(data.weeklyWebtoonList[weekday]);
 HTMLTemplate += promotionWebtoonSection + webtoonCategorySection + webtoonBoardSection;
 export const weeklyPublicationTemplate = HTMLTemplate;
 
@@ -17,7 +18,7 @@ function createWebtoonCategorySection() {
 }
 
 function createWebtoonTypeCategoryNav() {
-  let webtoonTypeCategoryTemplate = `<nav class="webtoon_type_navigation category_align">`;
+  let webtoonTypeCategoryTemplate = `<nav class="webtoon_type_navigation align_spce_around">`;
   const webtoonTypeFilterNav = createWebtoonTypeFilterNav();
   const webtoonGenreFilterUl = createWebtoonGenreFilterUl();
   webtoonTypeCategoryTemplate += webtoonTypeFilterNav + webtoonGenreFilterUl + "</nav>";
@@ -25,10 +26,10 @@ function createWebtoonTypeCategoryNav() {
 }
 
 function createWebtoonTypeFilterNav() {
-  return `<nav class="webtoon_type_filter category_align">
+  return `<nav class="webtoon_type_filter align_spce_around">
     <div class="webtoon_type">전체</div>
     <div class="webtoon_type">웹툰</div>
-    <div class="webtoon_type"><img src="./image/wait_sign.svg">웹툰</div>
+    <div class="webtoon_type"><img src="./image/waitSign.svg">웹툰</div>
   </nav>`;
 }
 
