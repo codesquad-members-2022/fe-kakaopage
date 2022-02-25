@@ -7,17 +7,20 @@ export const CATEGORIES = {
   BOOK: "책",
 };
 
-export const WEBTOONS = {
-  HOME: "홈",
-  DAY: "요일연재",
-  WEBTOON: "웹툰",
-  BOY: "소년",
-  DRAMA: "드라마",
-  ROMANCE: "로맨스",
-  ROFAN: "로판",
-  ACTION: "액션무협",
-  BL: "BL",
+export const SNB = {
+  WEBTOONS: {
+    HOME: "홈",
+    DAY: "요일연재",
+    WEBTOON: "웹툰",
+    BOY: "소년",
+    DRAMA: "드라마",
+    ROMANCE: "로맨스",
+    ROFAN: "로판",
+    ACTION: "액션무협",
+    BL: "BL",
+  },
 };
+
 export const LIST = {
   CATEGORIES: [
     "홈",

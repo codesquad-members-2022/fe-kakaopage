@@ -5,7 +5,7 @@ import { tabMovie } from "../components/tab/global/movie.js";
 import { tabWebnovel } from "../components/tab/global/webNovel.js";
 import { tabWebtoonHome } from "../components/tab/global/webtoon.js";
 import { createTabWebtoonHome } from "../components/tab/sub/webtoonHome.js";
-import { CATEGORIES } from "./constants.js";
+import { CATEGORIES, LIST, SNB } from "./constants.js";
 import { addEventGNB, addEventSNB } from "./event.js";
 import { setSelectedSNB } from "./render.js";
 import { $ } from "./utils.js";
@@ -62,39 +62,39 @@ export function SNBHandler(e) {
   e.target.classList.add(selected);
 
   // TODO: innerText => dataset으로 변경
-  if (e.target.innerText === "홈") {
+  if (e.target.innerText === SNB.WEBTOONS.HOME) {
     $(".contents").innerHTML = createTabWebtoonHome();
     return;
   }
-  if (e.target.innerText === "요일연재") {
+  if (e.target.innerText === SNB.WEBTOONS.DAY) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "웹툰") {
+  if (e.target.innerText === SNB.WEBTOONS.WEBTOON) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "소년") {
+  if (e.target.innerText === SNB.WEBTOONS.BOY) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "드라마") {
+  if (e.target.innerText === SNB.WEBTOONS.DRAMA) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "로맨스") {
+  if (e.target.innerText === SNB.WEBTOONS.ROMANCE) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "로판") {
+  if (e.target.innerText === SNB.WEBTOONS.ROFAN) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "액션무협") {
+  if (e.target.innerText === SNB.WEBTOONS.ACTION) {
     $(".contents").innerHTML = "";
     return;
   }
-  if (e.target.innerText === "BL") {
+  if (e.target.innerText === SNB.WEBTOONS.BL) {
     $(".contents").innerHTML = "";
     return;
   }
