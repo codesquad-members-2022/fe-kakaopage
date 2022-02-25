@@ -30,7 +30,6 @@ navListsEl.forEach((navList) => {
     })
 })
 
-
 import { renderBase } from './component/base.js';
 import { renderHome } from './pages/home.js';
 import { renderWeekdays } from './pages/weekdays.js';

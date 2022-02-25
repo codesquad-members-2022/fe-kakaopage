@@ -24,6 +24,53 @@ const clasfyData = ['홈', '요일', '웹툰', '소년', '드라마', '로맨스
 // 수정할필요가 없고, 재사용할 필요가 없는 부분.
 function renderBanner() {
     return `    
+    <aside class="aside__banner">
+        <i class="fas fa-chevron-circle-left" id="banner-left-icon"></i>
+        <i class="fas fa-chevron-circle-right" id="banner-right-icon"></i>
+            <div class="aside__banner-slider">
+                <div class="aside__banner-slide-list">
+                    <div class ="aside__banner-slide">
+                        <img src="./img/웹툰 _ 롱리브더킹 7타 _ 10-21.png" alt="image">
+                        <div class="aside__banner-tittle-wrapper">
+                        <br>
+                        <h3 class="aside__banner-tittle">롱리브더킹</h3>
+                    </div>
+                    <div class="aside__banner-lists-wrapper">
+                        <ul class="aside__banner-lists">
+                            <li><i class="fas fa-solid fa-clock">웹툰</i></li>
+                            <li><i class="fas fa-user-alt">30.5만명</i></li>
+                        </ul>
+                    </div>
+                    <div class="aside__banner-footer"><p>어쩌고 저쩌고</p></div>
+                    </div>
+
+                    <div class ="aside__banner-slide">
+                    <img src="./img/웹툰 _ 롱리브더킹 7타 _ 10-21.png" alt="image">
+                    <div class="aside__banner-tittle-wrapper">
+                    <br>
+                    <h3 class="aside__banner-tittle">롱리브더킹</h3>
+                </div>
+                <div class="aside__banner-lists-wrapper">
+                    <ul class="aside__banner-lists">
+                        <li><i class="fas fa-solid fa-clock">웹툰</i></li>
+                        <li><i class="fas fa-user-alt">30.5만명</i></li>
+                    </ul>
+                </div>
+                <div class="aside__banner-footer"><p>어쩌고 저쩌고</p></div>
+                    </div>
+
+
+                </div>
+            </div>
+    </aside>`
+}
+
+function renderMain() {
+    return `<main>
+    </main>`
+}
+function renderBanner2() {
+    return `    
     <div class="aside__banner-wrapper">
     <aside class="aside__banner">
         <i class="fas fa-chevron-circle-left" id="banner-left-icon"></i>
@@ -42,12 +89,6 @@ function renderBanner() {
         <div class="aside__banner-footer"><p>어쩌고 저쩌고</p></div>
     </aside>
 </div>`
-}
-
-// 배너는 추후에 수정이 필요할 수 있음..
-function renderMain() {
-    return `<main>
-    </main>`
 }
 
 // main에 내용 변화를 주려고 하므로 필요한 부분.
