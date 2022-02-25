@@ -15,6 +15,7 @@ function initSlide() {
   setTimeout(function () {
     slides.classList.add("animated");
   }, 100);
+  autoSlide();
 }
 
 function makeClone() {
@@ -43,14 +44,6 @@ function setInitialPos() {
   slides.style.transform = `translateX(${initialTranslateValue}px)`;
 }
 
-prevBtn.addEventListener("click", function () {
-  moveSlide(currentIdx - 1);
-});
-
-nextBtn.addEventListener("click", function () {
-  moveSlide(currentIdx + 1);
-});
-
 function moveSlide(num) {
   slides.style.left = `${-num * slideWidth}px`;
   currentIdx = num;
@@ -65,3 +58,17 @@ function moveSlide(num) {
     }, 600);
   }
 }
+
+function autoSlide() {
+  setInterval(() => {
+    moveSlide(currentIdx + 1);
+  }, 3000);
+}
+
+prevBtn.addEventListener("click", function () {
+  moveSlide(currentIdx - 1);
+});
+
+nextBtn.addEventListener("click", function () {
+  moveSlide(currentIdx + 1);
+});
