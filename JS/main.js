@@ -4,6 +4,11 @@ import {makeWebtoonList} from './components/webtoonList.js';
 import {eventMainBanner} from './slider.js';
 import {$, $all} from './utility.js';
 
+const startSlide = () => {
+  const list = $('.main__banner .banner__list')
+  eventMainBanner(list);
+}
+
 const setFocus = (target, className) => {
   const focused = $(`.${className}`);
   if (focused) focused.classList.remove(className);
@@ -17,10 +22,11 @@ const clickGenresList = () => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
       
-      clearInterval(eventMainBanner);
+      // clearInterval 수정필요
+      clearInterval(startSlide);
       resetMain();
       moveGenreNav(event.target);
-      eventMainBanner();
+      startSlide();
     })
   });
 }
@@ -122,5 +128,5 @@ const eventHome = () => {
 window.addEventListener('load', () => {
   renderMain('home');
   eventHome();
-  eventMainBanner();
+  startSlide();
 });
