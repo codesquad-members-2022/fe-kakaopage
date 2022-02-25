@@ -88,3 +88,74 @@ export function createInstallButtonHTML(){
         </button>
     `;
 }
+
+function createSliderItemHTML(itemData){
+    const title = itemData.title.split('\n').reduce((acc, cur) => { return acc + `<p>${cur}</p>`}, '');
+    return /* html */ `
+        <li class="banner__item">
+            <img class="banner__image" src="${itemData.imageSrc}" alt="메인배너 이미지">
+            <div class="banner__dimmed z-index_1"></div>
+            <div class="banner__contents z-index_1">
+                <div class="banner__info">
+                    <div class="banner__info--title">
+                        ${title}
+                    </div>
+                    <div class="banner__info--detail center">
+                        <img src="${IconSrc.badge_new}" alt="신작 아이콘" class="banner__icon--badge">
+                        <div>
+                            <img src="${IconSrc.badge_wait}" alt="연재 아이콘">
+                            <span>${itemData.category}</span>
+                        </div>
+                        <img src="${IconSrc.division}" alt="구분선" class="banner__info--separator">
+                        <div>
+                            <img src="${IconSrc.badge_person}" alt="사람 아이콘">
+                            <span>${itemData.reader}</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="banner__bottom">${itemData.subTitle}</span>
+            </div>
+        </li>
+    `;
+}
+
+function createSliderListHTML(tabName){
+    const sliderData = SliderBanner[tabName];
+    const listHTML = sliderData.reduce((listHTML, itemData) => { return listHTML + createSliderItemHTML(itemData)}, '');
+    return /* html */ `
+        <div class="banner__contents">
+            <ul class="banner__list">
+                ${listHTML}
+            </ul>
+        </div>
+    `;
+}
+
+function createSliderOrderHTML(){
+    return /* html */ `
+        <div class="banner__order z-index_1">
+            <span class="banner__order--text"></span>
+        </div>
+    `
+}
+
+function createSliderButtonHTML(){
+    return /* html */ `
+        <div class="banner__paging z-index_2">
+            <img src="${IconSrc.banner_paging_back}" alt="메인배너 이전버튼"
+                class="banner__paging--icon banner__paging--left" data-direction="left">
+            <img src="${IconSrc.banner_paging_next}" alt="메인배너 다음버튼"
+                class="banner__paging--icon banner__paging--right" data-direction="right">
+        </div>
+    `
+}
+
+export function createMainBannerHTML(tabName){
+    return /* html */ `
+        <div class="banner">
+            ${createSliderListHTML(tabName)}
+            ${createSliderOrderHTML()}
+            ${createSliderButtonHTML()}
+        </div>
+    `
+}
