@@ -32,18 +32,9 @@ function setDay(doc, root, text) {
 
   day.textContent = text
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:js/webtoon-els.js
-=======
->>>>>>> 60fd4ce (refactor: 크롱 피드백 수정)
 
 export function setTitleUserCntDay(doc, root, text) {
   setTitle(doc, root, text)
   setUserCnt(doc, root, text)
   setDay(doc, root, text)
 }
-<<<<<<< HEAD
-=======
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/dataParse.js
-=======
->>>>>>> 60fd4ce (refactor: 크롱 피드백 수정)
