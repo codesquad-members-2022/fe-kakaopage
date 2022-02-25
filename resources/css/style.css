@@ -171,7 +171,31 @@ main {
     display: flex;
     width: 100%;
     height: 100%;
-    position: relative;
+    position: relative; 
+    overflow: hidden;
+}
+
+.banner__contents {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    height: 100%;
+}
+
+.banner__list {
+    display: flex;
+    width: 720px;
+    flex-grow: 1;
+}
+
+.banner__item {
+    display: flex;
+    width: 720px;
+}
+
+.banner__image {
+    width: 720px;
+    object-fit: cover;
 }
 
 .banner__dimmed {
@@ -179,30 +203,6 @@ main {
     height: 100%;
     background: linear-gradient(transparent 55%, var(--color-black));
     opacity: 40%;
-}
-
-.banner__image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.banner__paging {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    top: 45%;
-}
-
-.banner__paging--icon {
-    margin: 0 20px;
-}
-
-.banner__contents {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
 }
 
 .banner__info {
@@ -273,7 +273,7 @@ main {
     height: 100%;
 }
 
-.banner__order > span {
+.banner__order--text {
     width: 100%;
     margin-top: 400px;
     margin-right: 20px;
@@ -282,6 +282,17 @@ main {
     font-weight: 500;
     text-align: right;
     opacity: 0.6;
+}
+
+.banner__paging {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 45%;
+}
+
+.banner__paging--icon {
+    margin: 0 20px;
 }
 
 .contents_menu {
@@ -454,24 +465,6 @@ main {
     width: 680px;
     height: 223px;
     margin-top: 20px;
-}
-
-.banner__list {
-    width: 680px;
-    height: 223px;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.banner-item {
-    width: 335px;
-    position: relative;
-}
-
-.banner-item > img {
-    width: 335px;
-    position: relative;
-    z-index: 0;
 }
 
 .rank__list {
