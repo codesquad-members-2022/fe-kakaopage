@@ -17,13 +17,13 @@ app.post('/*', async (req, res) => {
   const { categoryUid, subCategoryUid } = req.body;
   const resultObj = {};
   try {
-    const { mainUid, subUid } = await db.findData(categoryUid, subCategoryUid);
-    resultObj.mainUid = mainUid;
-    resultObj.subUid = subUid;
+    const content = await db.findData(categoryUid, subCategoryUid);
+    resultObj.content = content;
+    resultObj.isSuccess = true;
+    resultObj.msg = '성공!';
   } catch (error) {
-    resultObj.mainUid = 0;
-    resultObj.subUid = 0;
-    resultObj.errorMsg = error.message;
+    resultObj.isSuccess = false;
+    resultObj.msg = error.message;
   }
   res.send(resultObj);
 });
