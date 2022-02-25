@@ -33,23 +33,23 @@ function delegateEventListener(parentElement, func) {
 
 function attachButtonHandler() {
   const slideButtonDiv = document.querySelector(".slide_button");
-  const slideSize = slideButtonDiv.clientWidth;
   slideButtonDiv.addEventListener("click", ({target}) => {
     if (target.closest(".next_button")) {
       clickButtonCount++;
-      moveWebtoonSlide(slideSize);
+      moveWebtoonSlide();
       return;
     }
     if (target.closest(".previous_button")) {
       clickButtonCount--;
-      moveWebtoonSlide(slideSize);
+      moveWebtoonSlide();
       return;
     }
   });
 }
 
-function moveWebtoonSlide(slideSize) {
-  console.log(clickButtonCount);
+function moveWebtoonSlide() {
+  const promotionWebtoonSection = document.querySelector(".promotion_webtoon_section");
+  const slideSize = promotionWebtoonSection.clientWidth;
   const promotionWebtoonSlide = document.querySelector(".promotion_webtoon_slide");
   const promotionWebtoons = promotionWebtoonSlide.children;
   if (clickButtonCount < 0) {
@@ -65,6 +65,7 @@ function moveWebtoonSlide(slideSize) {
   promotionWebtoonSlide.style.translate = "transform 0.3s ease-in-out";
   promotionWebtoonSlide.style.transform = `translateX(${-slideSize * clickButtonCount}px)`;
 }
+
 
 function clickSubCategoryNav(subCategoryNav) {
   previousSubCategory.classList.remove("bold");
