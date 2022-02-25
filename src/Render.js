@@ -1,5 +1,6 @@
 import Menu from "./data/Menu.json" assert { type: "json" };
 import * as HTMLCreator from "./HTMLCreator.js"
+import * as SliderController from "./SliderController.js";
 import { setNavEvent } from "./NavEventController.js"
 
 const $body_main = document.querySelector('.custom');
@@ -23,6 +24,7 @@ export function rendering(tabName){
 }
 
 function renderHomePage(tabName){
+    renderSliderBanner(tabName);
     renderMenu(tabName);
     renderSubBanner(tabName);
     renderDailyTop();
@@ -65,6 +67,15 @@ function renderActionPage(){
 function renderBlPage(){
     renderDailyTop();
     renderGenreTop();
+}
+
+function renderSliderBanner(tabName){
+    const $banner_section = document.createElement('section');
+    $banner_section.classList.add('main-banner', 'section');
+    $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(tabName);
+    $body_main.appendChild($banner_section);
+    SliderController.setBannerOrderText();
+    SliderController.setButtonEvent();
 }
 
 function renderMenu(tabName){

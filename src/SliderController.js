@@ -1,4 +1,18 @@
-const getSliderIndex = indexCounter();
+/* 슬라이더 순서 출력 */
+export function setBannerOrderText(maxIndex, currentIndex){
+    const $banner_order = document.querySelector('.banner__order--text');
+
+    if(!maxIndex){
+        initGetSliderIndex();
+        const [_maxIndex, _currentIndex] = getSliderIndex();
+        maxIndex = _maxIndex;
+        currentIndex = _currentIndex;
+    }
+
+    $banner_order.innerText = `${currentIndex + 1} / ${maxIndex + 1}`;
+}
+
+let getSliderIndex = null;
 
 function indexCounter(){
     const $banner_item = document.querySelectorAll('.banner__item');
@@ -18,12 +32,18 @@ function indexCounter(){
     }
 }
 
+function initGetSliderIndex(){
+    if(getSliderIndex === null){
+        getSliderIndex = indexCounter();
+    }
+}
+
+/* 슬라이더 버튼 */
 export function setButtonEvent() {
     const $left_button = document.querySelector('.banner__paging--left');
     const $right_button = document.querySelector('.banner__paging--right');
     $left_button.addEventListener('click', buttonClickHandler);
     $right_button.addEventListener('click', buttonClickHandler);
-    setBannerOrderText(); // 나중에 여기서 말고 랜더링 할때 호출
 }
 
 let throttlingTimer = null;
@@ -44,16 +64,4 @@ function handleClickEvent(event){
     
     $banner_list.style.transform = `translate(-${$banner__contents.clientWidth * currentIndex}px, 0px)`;
     setBannerOrderText(maxIndex, currentIndex);
-}
-
-function setBannerOrderText(maxIndex, currentIndex){
-    const $banner_order = document.querySelector('.banner__order--text');
-
-    if(!maxIndex){
-        const [_maxIndex, _currentIndex] = getSliderIndex();
-        maxIndex = _maxIndex;
-        currentIndex = _currentIndex;
-    }
-
-    $banner_order.innerText = `${currentIndex + 1} / ${maxIndex + 1}`;
 }

@@ -8,6 +8,11 @@
     justify-content: center;
 }
 
+.z-index_2 {
+    position: absolute;
+    z-index: 2;
+}
+
 .z-index_1 {
     position: absolute;
     z-index: 1;
