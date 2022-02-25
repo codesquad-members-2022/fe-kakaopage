@@ -79,3 +79,25 @@ const moveSlide = (slideElement, direction) => {
     container.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
 }
 
+export const activateSlide = (parent, contentData, slideMakingFunction) => {
+    const container = parent.querySelector('ul');
+    container.addEventListener('transitionend', () => {updateSlide(parent, contentData, slideMakingFunction)});
+}
+
+const updateSlide = (parent, contentData, slideMakingFunction) => {
+    const container = parent.querySelector('ul');
+    const currIndex = Number(container.querySelector('.curr-slide').dataset.index);
+    updateContainer(container, contentData, currIndex, slideMakingFunction);
+    updatePageNum(parent, currIndex)
+}
+
+const updateContainer = (container, contentData, currIndex, slideMakingFunction) => {
+    container.style.transition = 'none';
+    container.style.transform = 'translateX(0px)';
+    container.innerHTML = slideMakingFunction(contentData, currIndex);
+}
+
+const updatePageNum = (parent, currIndex) => {
+    const pageNum = parent.querySelector(`.${parent.dataset.name}__page-num--curr`);
+    pageNum.innerText = currIndex + 1;
+}
