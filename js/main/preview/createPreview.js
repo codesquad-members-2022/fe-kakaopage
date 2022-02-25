@@ -1,4 +1,4 @@
-const createPreviewEl = (preview) => {
+const createPreview = (preview) => {
   const isWaitFree = preview.waitfree;
   const previewEl = document.createElement('div');
   previewEl.className = 'preview';
@@ -51,4 +51,4 @@ const createPreviewEl = (preview) => {
   return previewEl;
 };
 
-export default createPreviewEl;
+export default createPreview;

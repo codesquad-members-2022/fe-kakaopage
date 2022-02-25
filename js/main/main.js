@@ -11,7 +11,7 @@ import setDayFilter from './dayFilter/setDayFilter.js';
 import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
-import createPreviewEl from './preview/createPreviewEl.js';
+import createPreview from './preview/createPreview.js';
 // console.dir(webtoonContentsData);
 // console.dir(dayContentsData);
 // console.dir(previewsData);
@@ -55,7 +55,7 @@ const categoryState = {
 const carouselSlider = new CarouselSlider({
   $slider: selector(SLIDER_SELECTOR),
   elementWidth: PREVIEW_WIDTH,
-  createItemElFunc: createPreviewEl,
+  createItemElFunc: createPreview,
   $prevBtn: selector(PREV_BTN_SELECTOR),
   $nextBtn: selector(NEXT_BTN_SELECTOR),
   $slideCurNum: selector(SLIDE_CUR_NUM_SELECTOR),
@@ -103,7 +103,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   setTagList({
     category: categoryName,
     $main: selector(PAGE_MAIN_SELECTOR),
-    $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR)
+    $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
 
   // webtoon contents
