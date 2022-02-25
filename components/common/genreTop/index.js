@@ -1,3 +1,4 @@
+import { GENRE_TOP_EL_NUM } from "../../../js/constants.js";
 import { createBox } from "../box/index.js";
 import { createWorkSmall } from "../workSmall/index.js";
 
@@ -10,5 +11,5 @@ const smallWork = createWorkSmall({
 });
 
 export function createGenreTop({ title }) {
-  return createBox({ title, contents: smallWork.repeat(5) });
+  return createBox({ title, contents: smallWork.repeat(GENRE_TOP_EL_NUM) });
 }

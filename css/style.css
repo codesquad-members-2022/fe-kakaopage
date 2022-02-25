@@ -118,13 +118,20 @@
   color: var(--black);
 }
 
+.container {
+  margin-top: 146px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .contents {
   display: flex;
   flex-direction: column;
   gap: 10px;
   height: fit-content;
   overflow: hidden;
-  margin-top: 146px;
+  padding-top: 10px;
 }
 
 .category {

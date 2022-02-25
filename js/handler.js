@@ -1,5 +1,12 @@
-import { addEvent } from "./event.js";
-import { renderNothing, renderSNB, renderWebtoon } from "./render.js";
+import { tabBook } from "../components/tab/global/book.js";
+import { tabBroadcast } from "../components/tab/global/broadcast.js";
+import { tabHome } from "../components/tab/global/home.js";
+import { tabMovie } from "../components/tab/global/movie.js";
+import { tabWebnovel } from "../components/tab/global/webNovel.js";
+import { tabWebtoonHome } from "../components/tab/global/webtoon.js";
+import { createTabWebtoonHome } from "../components/tab/sub/webtoonHome.js";
+import { CATEGORIES, SNB } from "./constants.js";
+import { setSelectedSNB } from "./render.js";
 import { $ } from "./utils.js";
 
 export function GNBHandler(e) {
@@ -14,34 +21,35 @@ export function GNBHandler(e) {
   $(`.${selected}`).classList.remove(selected);
   parentClass.add(selected);
 
-  if (e.target.dataset.name === "홈") {
-    renderNothing();
+  if (e.target.dataset.name === CATEGORIES.HOME) {
+    tabHome.render();
     return;
   }
-  if (e.target.dataset.name === "웹툰") {
-    renderWebtoon();
-    addEvent();
+  if (e.target.dataset.name === CATEGORIES.WEBTOON) {
+    tabWebtoonHome.render();
+    setSelectedSNB();
+    tabWebtoonHome.addEvent();
     return;
   }
-  if (e.target.dataset.name === "웹소설") {
-    renderNothing();
+  if (e.target.dataset.name === CATEGORIES.WEBNOVEL) {
+    tabWebnovel.render();
     return;
   }
-  if (e.target.dataset.name === "영화") {
-    renderNothing();
+  if (e.target.dataset.name === CATEGORIES.MOVIE) {
+    tabMovie.render();
     return;
   }
-  if (e.target.dataset.name === "방송") {
-    renderNothing();
+  if (e.target.dataset.name === CATEGORIES.BROADCAST) {
+    tabBroadcast.render();
     return;
   }
-  if (e.target.dataset.name === "책") {
-    renderNothing();
+  if (e.target.dataset.name === CATEGORIES.BOOK) {
+    tabBook.render();
     return;
   }
 }
 
-export function SNBHander(e) {
+export function SNBHandler(e) {
   const selected = "snb__selected";
   const isList = e.target.tagName === "LI";
   const isSelected = e.target.classList.contains(selected);
@@ -52,9 +60,41 @@ export function SNBHander(e) {
   $(`.${selected}`).classList.remove(selected);
   e.target.classList.add(selected);
 
-  // if (e.target.dataset.name === "홈") {
-  //   renderWebtoon();
-  //   addEvent();
-  //   return;
-  // }
+  // TODO: innerText => dataset으로 변경
+  if (e.target.innerText === SNB.WEBTOONS.HOME) {
+    $(".contents").innerHTML = createTabWebtoonHome();
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.DAY) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.WEBTOON) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.BOY) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.DRAMA) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.ROMANCE) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.ROFAN) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.ACTION) {
+    $(".contents").innerHTML = "";
+    return;
+  }
+  if (e.target.innerText === SNB.WEBTOONS.BL) {
+    $(".contents").innerHTML = "";
+    return;
+  }
 }

@@ -1,7 +1,10 @@
-import { GNBHandler, SNBHander } from "./handler.js";
+import { GNBHandler, SNBHandler } from "./handler.js";
 import { $ } from "./utils.js";
 
-export function addEvent() {
+export function addEventGNB() {
   $("ul").addEventListener("click", GNBHandler);
-  $(".snb").addEventListener("click", SNBHander);
+}
+
+export function removeEventSNB() {
+  $(".snb").removeEventListener("click", SNBHandler);
 }

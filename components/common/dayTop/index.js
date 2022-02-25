@@ -1,9 +1,9 @@
-import { DAYS } from "../../js/constants.js";
+import { LIST, DAY_TOP_EL_NUM } from "../../../js/constants.js";
 import { createBox } from "../box/index.js";
 import { createCategory } from "../category/index.js";
 import { createWorkSmall } from "../workSmall/index.js";
 
-const category = createCategory(DAYS, "days");
+const category = createCategory(LIST.DAYS, "days");
 const workSmall = createWorkSmall({
   str1: "1",
   str2: "위",
@@ -30,6 +30,6 @@ const el = `
 ${category}
 <style>${style}</style>
 <div class="day-top row">
-  ${Array.from({ length: 10 }).reduce((acc) => acc + workSmall, "")}
+  ${Array.from({ length: DAY_TOP_EL_NUM }).reduce((acc) => acc + workSmall, "")}
 </div>
 `;
