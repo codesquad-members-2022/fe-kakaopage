@@ -14,7 +14,7 @@ import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreview from './preview/createPreview.js';
 // console.dir(webtoonContentsData);
 // console.dir(dayContentsData);
-// console.dir(previewsData);
+console.dir(previewsData);
 
 /* selector */
 const PREV_BTN_SELECTOR = '.prev-btn';

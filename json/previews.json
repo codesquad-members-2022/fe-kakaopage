@@ -9,7 +9,7 @@
     {
       "previewCoverPath": "./assets/data/preview/도사강호",
       "title": "도사 강호",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": true,
       "subscriber": 394000,
@@ -18,7 +18,7 @@
     {
       "previewCoverPath": "./assets/data/preview/네크로맨서학교의소환천재",
       "title": "네크로맨서 학교의 소환 천재",
-      "class": "소설",
+      "genre": "소설",
       "state": "event",
       "waitfree": true,
       "subscriber": 744000,
@@ -53,7 +53,7 @@
     {
       "previewCoverPath": "./assets/data/preview/탑스타의이중생활",
       "title": "탑스타의 이중생활",
-      "class": "소설",
+      "genre": "소설",
       "state": "new",
       "waitfree": false,
       "summary": "런칭 기념 이용권+캐시 이벤트!"
@@ -61,7 +61,7 @@
     {
       "previewCoverPath": "./assets/data/preview/괴물공작가의계약공녀",
       "title": "괴물 공작가의 계약 공녀",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": false,
       "subscriber": 1104000,
@@ -70,7 +70,7 @@
     {
       "previewCoverPath": "./assets/data/preview/귀환용사의골목식당",
       "title": "귀환 용사의 골목식당",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "new",
       "waitfree": true,
       "subscriber": 67000,
@@ -79,7 +79,7 @@
     {
       "previewCoverPath": "./assets/data/preview/시월드게임",
       "title": "시월드 게임",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "new",
       "waitfree": true,
       "subscriber": 746000,
@@ -97,7 +97,7 @@
     {
       "previewCoverPath": "./assets/data/preview/나쁜색기",
       "title": "나쁜 색기",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 69000,
@@ -106,7 +106,7 @@
     {
       "previewCoverPath": "./assets/data/preview/업데이터",
       "title": "업데이터",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": false,
       "subscriber": 350000,
@@ -115,7 +115,7 @@
     {
       "previewCoverPath": "./assets/data/preview/샬롯에게는다섯명의제자가있다",
       "title": "샬롯에게는 다섯명의 제자가 있다",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": false,
       "subscriber": 1087000,
@@ -126,7 +126,7 @@
     {
       "previewCoverPath": "./assets/data/preview/내가죽였다",
       "title": "내가 죽였다",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": false,
       "subscriber": 221000,
@@ -135,7 +135,7 @@
     {
       "previewCoverPath": "./assets/data/preview/귀환용사의골목식당",
       "title": "귀환 용사의 골목식당",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "new",
       "waitfree": true,
       "subscriber": 69000,
@@ -144,7 +144,7 @@
     {
       "previewCoverPath": "./assets/data/preview/마탄의사수",
       "title": "마탄의 사수",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 612000,
@@ -155,7 +155,7 @@
     {
       "previewCoverPath": "./assets/data/preview/롱리브더킹",
       "title": "롱리브더킹",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 221002,
@@ -166,7 +166,7 @@
     {
       "previewCoverPath": "./assets/data/preview/선택",
       "title": "선택",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "new",
       "waitfree": false,
       "subscriber": 210000,
@@ -175,7 +175,7 @@
     {
       "previewCoverPath": "./assets/data/preview/빙과",
       "title": "빙과",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "hot",
       "waitfree": false,
       "subscriber": 111000,
@@ -186,7 +186,7 @@
     {
       "previewCoverPath": "./assets/data/preview/사장님의특별지시",
       "title": "사장님의 특별지시",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": true,
       "subscriber": 409581,
@@ -195,7 +195,7 @@
     {
       "previewCoverPath": "./assets/data/preview/크레이지가드너",
       "title": "크레이지 가드너",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "hot",
       "waitfree": false,
       "subscriber": 202000,
@@ -204,7 +204,7 @@
     {
       "previewCoverPath": "./assets/data/preview/따봉으로레벨업",
       "title": "따봉으로 레벨업",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 151002,
@@ -215,7 +215,7 @@
     {
       "previewCoverPath": "./assets/data/preview/남편님다시결혼해주세요",
       "title": "남편님, 다시 결혼해 주세요!",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": false,
       "subscriber": 220501,
@@ -224,7 +224,7 @@
     {
       "previewCoverPath": "./assets/data/preview/지옥에서독식",
       "title": "지옥에서 독식",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": false,
       "subscriber": 36501,
@@ -235,7 +235,7 @@
     {
       "previewCoverPath": "./assets/data/preview/황성독보천하컬렉션",
       "title": "황성 독보천하 컬렉션",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "hot",
       "waitfree": true,
       "subscriber": 16000,
@@ -244,7 +244,7 @@
     {
       "previewCoverPath": "./assets/data/preview/환생요마뎐",
       "title": "환생요마뎐",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 19000,
@@ -255,7 +255,7 @@
     {
       "previewCoverPath": "./assets/data/preview/봄의에스프레소",
       "title": "봄의<br/>에스프레소",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "event",
       "waitfree": true,
       "subscriber": 497000,
@@ -264,7 +264,7 @@
     {
       "previewCoverPath": "./assets/data/preview/플러그인",
       "title": "플러그 인",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "new",
       "waitfree": false,
       "subscriber": 54099,
@@ -273,7 +273,7 @@
     {
       "previewCoverPath": "./assets/data/preview/대놓고사내연애",
       "title": "대놓고 사내연애",
-      "class": "웹툰",
+      "genre": "웹툰",
       "state": "update",
       "waitfree": true,
       "subscriber": 376000,
