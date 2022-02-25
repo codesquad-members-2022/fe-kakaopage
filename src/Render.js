@@ -113,7 +113,7 @@ function createContentsMain(...children){
     const $main = document.createElement('div');
     $main.classList.add('contents-container__main');
 
-    if(children){
+    if(children.length > 0){
         $main.append(...children);
     }
 
