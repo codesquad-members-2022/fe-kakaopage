@@ -180,11 +180,17 @@ let curIndex = 0;
 const showNext = () => {
   const image = slider;
   const Time = 300;
-  if (curIndex < sliderContents.length - 1)
+  if (curIndex < sliderContents.length - 1) {
     setTimeout(() => {
       image.style.transform = "translateX(-" + (curIndex + 1) * 720 + "px)";
       curIndex++;
     }, Time);
+  } else {
+    setTimeout(() => {
+      image.style.transform = "translateX(0px)";
+      curIndex = -1;
+    }, Time);
+  }
 };
 
 const showPrev = () => {
