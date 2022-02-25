@@ -84,7 +84,7 @@ function renderMenu(tabName){
     $menu_section.classList.add('contents_menu', 'section');
     $menu_section.appendChild($menu_div);
     $body_main.appendChild($menu_section);
-    Menu[tabName].map(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
+    Menu[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
 }
 
 function renderSubBanner(tabName){
@@ -150,7 +150,7 @@ function createWeeklyNavNode(weekData){
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.map( data => {
+    weekData.forEach( data => {
         $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)}
     );
 
@@ -173,7 +173,7 @@ export function renderTopList(listType, dataKey = null){
 function renderGenreTop(){
     const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
     const genreTitle = ['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협'];
-    genreList.map((genre, index) => {
+    genreList.forEach((genre, index) => {
         const $header = createContentsHeader(`${genreTitle[index]} TOP`);
         const $list = createTopList(genre);
         const $main = createContentsMain($list);
