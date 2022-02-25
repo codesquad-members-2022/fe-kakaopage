@@ -17,8 +17,10 @@ const clickGenresList = () => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
       
+      clearInterval(eventMainBanner);
       resetMain();
       moveGenreNav(event.target);
+      eventMainBanner();
     })
   });
 }
@@ -120,5 +122,5 @@ const eventHome = () => {
 window.addEventListener('load', () => {
   renderMain('home');
   eventHome();
-  // eventMainBanner();
+  eventMainBanner();
 });
