@@ -22,6 +22,9 @@
 - [ ] 웹툰 탭의 SNB 탭 이동
 - [ ] 배너 슬라이더 이동
 - [ ] 요일 연재 TOP 탭 이동
+- [ ] Express 서버 구성
+- [ ] dummy data 생성
+- [ ] dummy data 를 가져와서 랜더링
 
 ### 폴더 구조
 
@@ -183,14 +186,89 @@ export function createBanner({ size, title, status, type, views, ad }) {
 - 경로
   - 여러 파일에서 참조되고 있는 파일의 경로를 수정할 때 경로를 자동으로 수정해주는 익스텐션(?)은 없을까?
 
-### 학습 정리
+## 학습 정리
 
-#### Flexbox 사용법
+### Flexbox
+
+- 레이아웃의 구성 방법에는 `display`, `float`, `position` 등이 있지만 구현 방법이 복잡하고 표현하는데 한계가 있다.
+- 장점
+
+  - 크기, 순서를 유연하게 배치할 수 있다.
+  - 뷰포트, 크기가 불명확하고 동적으로 변하는 경우에도 효율적으로 정렬, 배치할 수 있다.
+  - 복잡한 계산 없이 요소의 순서, 크기를 유연하게 배치할 수 있다.
+
+- 부모 요소에 다음과 같은 CSS 속성값을 넣어주면 사용할 수 있다.
+
+```css
+.flex_container {
+  display: flex;
+}
+```
+
+- 부모의 속성
+
+```css
+.flex_container {
+  flex-direction, flex-wrap, justify-content, align-items, align-content
+}
+```
+
+- 자식의 속성
+
+```css
+.flex_item {
+  flex, flex-grow, flex-shrink, flex-basis, order
+}
+```
 
 https://d2.naver.com/helloworld/8540176
 
-#### commit 로그를 작성하는 좋은 사례
+### commit 로그를 작성하는 좋은 사례
 
-#### HTML 시멘틱 태그
+- 커밋 메세지를 왜 잘써야 할까?
 
-#### 웹접근성
+  - 커밋 로그 가독성
+  - 협업, 리뷰 프로세스
+  - 코드 유지보수
+  - 좋은 가독성과 나은 협업, 결국에는 유지보수를 더 쉽게 하기 위함인 것 같다.
+
+- 좋은 커밋메세지를 위한 7가지 약속
+  - 제목과 본문 한 줄 띄워 구분
+  - 제목은 영문 기준 50자 이내
+  - 제목 첫 글자 대문자
+  - 제목 끝에 `.` 금지
+  - 제목은 `명령문`
+  - 본문은 영문 기준 72자마다 줄 바꿈
+  - 본문은 `어떻게`보다 `무엇을`, `왜`에 맞춰 작성
+
+https://meetup.toast.com/posts/106
+
+### HTML 시멘틱 태그
+
+- 태그를 의미에 맞게 사용해야 한다.
+- 예를 들어 헤더를 나타내는 경우에는 `<div>`가 아닌 `<header>` 태그를 사용한다.
+
+### 웹접근성
+
+- 장애 유무에 상관 없이 웹사이트를 이용할 수 있게 하는 방식이다.
+- 다음과 같은 사항들을 고려해야 한다.
+  - 시각
+  - 운동성
+  - 청각
+  - 발작
+  - 인지
+- 웹 브라우징에 쓰이는 보조과학기술
+  - 스크린 리더
+  - 화면 확대 도구
+  - 음성 인식
+  - 키보드 오버레이
+
+https://ko.wikipedia.org/wiki/%EC%9B%B9_%EC%A0%91%EA%B7%BC%EC%84%B1
+
+### Event
+
+#### Event type, Event object
+
+#### Event가 비동기적으로 어떻게 동작하는가?
+
+#### Event delegation
