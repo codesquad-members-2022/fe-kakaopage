@@ -88,7 +88,7 @@ function backToItem(xPercent, delay) {
     setTransformTranslateX(xPercent);
     setTimeout(() => {
         setTransitionSpeed();
-    }, delay);
+    }, 50);
 }
 
 function setTransformTranslateX(xPercent){
