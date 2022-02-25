@@ -1,9 +1,18 @@
-const {
-  weekdayContents,
-  eventContents,
-  sectionContents,
-} = require("./js/data"); // require 인식 안되고 있음 왜일까...
-
+import datas from "./data.js";
+import {
+  renderWebtoonGenreBar,
+  renderEvent,
+  renderEventButtons,
+} from "./section.js";
+const weekdayContents = datas.weekdayContents;
+const eventContents = datas.eventContents;
+const sectionContents = datas.sectionContents;
+function init() {
+  renderWebtoonGenreBar();
+  // renderEvent("웹툰");
+  renderEventButtons();
+}
+init();
 function changeTabsColor(target) {
   const Tabs = target.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {
@@ -39,13 +48,20 @@ function changeDayAndContents(target) {
 }
 function changeEventSlideContents(target) {
   const genre = target.textContent;
-  const slide = document.querySelector("#eventSlideId");
+  const slide = document.querySelector(".eventSlideId");
+  const eventTitle = document.querySelector("#eventTitleId");
+  const eventFollow = document.querySelector("#eventFollowId");
+  let imageUrl, title, follow;
   eventContents.map((content) => {
-    if (genre.trim() === content[0]) {
-      const imageUrl = content[1];
-      slide.style.backgroundImage = `url('${imageUrl}')`;
+    if (genre.trim() === content.genre) {
+      imageUrl = content.imgsrc;
+      title = content.title;
+      follow = content.follow;
     }
   });
+  slide.style.backgroundImage = `url('${imageUrl}')`;
+  eventTitle.textContent = title;
+  eventFollow.textContent = follow;
 }
 function changeSectionContents(target) {
   let navGenre;
@@ -84,4 +100,24 @@ navTabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
     changeBorderColor(e.currentTarget);
   });
+});
+
+const prev = document.querySelector("#eventSlidePrevBtn");
+const next = document.querySelector("#eventSlideNextBtn");
+const eventSlideWrap = document.querySelector("#eventSlideId");
+const itemWidth = 720;
+let currentWidth = 0;
+let curEventPage = document.querySelector("#curEventPage");
+let curPage = 1;
+next.addEventListener("click", function () {
+  currentWidth -= itemWidth;
+  eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
+  curPage += 1;
+  curEventPage.textContent = curPage;
+});
+prev.addEventListener("click", function () {
+  currentWidth += itemWidth;
+  eventSlideWrap.style.transform = `translate(${currentWidth}px)`;
+  curPage -= 1;
+  curEventPage.textContent = curPage;
 });
