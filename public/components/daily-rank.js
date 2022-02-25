@@ -33,13 +33,11 @@ const createDailyRank = (data, i) => {
 
 const getTop3 = () => {
   const TOP3 = 3;
-  const dailyRank = [];
+  const dailyRank = range(TOP3).reduce((acc, i) => {
+    return acc + createDailyRank(dataOfDailyRank[i], i);
+  }, "");
 
-  range(TOP3).forEach((_, idx) => {
-    dailyRank.push(createDailyRank(dataOfDailyRank[idx], idx));
-  });
-
-  return dailyRank.join("");
+  return dailyRank;
 };
 
 const createDailyRankBlock = () => {

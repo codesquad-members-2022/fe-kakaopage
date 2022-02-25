@@ -1,10 +1,8 @@
 import { dataOfEvent } from "../data/home/event.js";
 import { $, $$, insertIntoMain } from "../utils.js";
 
-const getEventImg = () => {
-  const imgs = [];
-
-  dataOfEvent.forEach((data, idx) => {
+const getEventImgs = () => {
+  const imgs = dataOfEvent.reduce((acc, data, idx) => {
     const img = `<img
     class="event-img"
     src="${data.img}"
@@ -12,10 +10,10 @@ const getEventImg = () => {
     data-index="${idx}"
   />`;
 
-    imgs.push(img);
-  });
+    return acc + img;
+  }, "");
 
-  return imgs.join("");
+  return imgs;
 };
 
 const addSlideEvL = () => {
@@ -43,7 +41,6 @@ const addSlideEvL = () => {
 };
 
 const createEventBlock = () => {
-  const currIdx = 0;
   const eventBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">추천 이벤트</h2>
@@ -66,7 +63,7 @@ const createEventBlock = () => {
   </header>
   <div class="position-rel">
     <div class="round-container side-by-side">
-      ${getEventImg()}
+      ${getEventImgs()}
     </div>
     <div
       class="layout-center event-count-container text-color--transparent-white"
@@ -86,9 +83,9 @@ const createEventBlock = () => {
           d="M15 19l-7-7 7-7"
         />
       </svg>
-      <span class="event-count" id="event-count">${
-        currIdx + 1
-      }</span><span class="event-count">/${dataOfEvent.length}</span>
+      <span class="event-count" id="event-count">1</span><span class="event-count">/${
+        dataOfEvent.length
+      }</span>
       <svg
         class="arrow-icon" id="right"
         xmlns="http://www.w3.org/2000/svg"

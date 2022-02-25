@@ -2,10 +2,8 @@ import { insertIntoMain } from "../utils.js";
 import { dataOfsBanner } from "../data/home/smallBanner.js";
 import { dataOfBanner } from "../data/home/banner.js";
 
-const getBannerImg = () => {
-  const imgs = [];
-
-  dataOfBanner.forEach((data) => {
+const getBannerImgs = () => {
+  const imgs = dataOfBanner.reduce((acc, data) => {
     const img = `<div class="position-rel">
     <div class="banner-img-container">
       <img class="banner-img" src="${data.img}" alt="${data.title}"/>
@@ -27,10 +25,10 @@ const getBannerImg = () => {
     </div>
     <p class="banner-bottom-text">${data.desc}</p>
   </div>`;
-    imgs.push(img);
-  });
+    return acc + img;
+  }, "");
 
-  return imgs.join("");
+  return imgs;
 };
 
 const createBanner = () => {
@@ -63,7 +61,7 @@ const createBanner = () => {
   </svg>
   <div>
     <div class="side-by-side overflow-hd">
-    ${getBannerImg()}
+    ${getBannerImgs()}
     </div>
   </div>
   <div class="banner-count-container">

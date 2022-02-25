@@ -1,19 +1,14 @@
 import { insertIntoMain, range, $, getDay } from "../utils.js";
-import { createWebtoonWithGrade, createWebtoonWithRank } from "./webtoon.js";
+import { getNWebtoonsWithGrade, getNWebtoonsWithRank } from "./webtoon.js";
 import { dataOfDays } from "../data/home/days.js";
 
 const getDayWebtoon = (day) => {
   const NUM_OF_WEBTOONS = 5;
-  const webtoons = [];
 
-  range(NUM_OF_WEBTOONS).forEach((_, idx) => {
-    webtoons.push(createWebtoonWithRank(dataOfDays[day], idx));
-  });
-  range(NUM_OF_WEBTOONS).forEach(() => {
-    webtoons.push(createWebtoonWithGrade(dataOfDays[day]));
-  });
+  let webtoons = getNWebtoonsWithRank(NUM_OF_WEBTOONS, dataOfDays[day]);
+  webtoons += getNWebtoonsWithGrade(NUM_OF_WEBTOONS, dataOfDays[day]);
 
-  return webtoons.join("");
+  return webtoons;
 };
 
 const underlineTodayTab = (day) => {
