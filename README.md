@@ -27,47 +27,58 @@
 
 ```
 │  index.html
+│  package.json
 │  README.md
 │
 ├─components
-│  ├─adSlide
-│  │      index.js
+│  ├─common
+│  │  ├─adSlide
+│  │  │      index.js
+│  │  │
+│  │  ├─banner
+│  │  │      index.js
+│  │  │
+│  │  ├─box
+│  │  │      index.js
+│  │  │
+│  │  ├─Button
+│  │  │      index.js
+│  │  │
+│  │  ├─category
+│  │  │      index.js
+│  │  │
+│  │  ├─dayRankingTop
+│  │  │      index.js
+│  │  │
+│  │  ├─dayTop
+│  │  │      index.js
+│  │  │
+│  │  ├─genreTop
+│  │  │      index.js
+│  │  │
+│  │  ├─newTop
+│  │  │      index.js
+│  │  │
+│  │  ├─recommend
+│  │  │      index.js
+│  │  │
+│  │  ├─recommendEvent
+│  │  │      index.js
+│  │  │
+│  │  └─workSmall
+│  │          index.js
 │  │
-│  ├─banner
-│  │      index.js
-│  │
-│  ├─box
-│  │      index.js
-│  │
-│  ├─Button
-│  │      index.js
-│  │
-│  ├─category
-│  │      index.js
-│  │
-│  ├─dayRankingTop
-│  │      index.js
-│  │
-│  ├─dayTop
-│  │      index.js
-│  │
-│  ├─footer
-│  │      index.js
-│  │
-│  ├─genreTop
-│  │      index.js
-│  │
-│  ├─newTop
-│  │      index.js
-│  │
-│  ├─recommend
-│  │      index.js
-│  │
-│  ├─recommendEvent
-│  │      index.js
-│  │
-│  └─workSmall
-│          index.js
+│  └─tab
+│      ├─global
+│      │      book.js
+│      │      broadcast.js
+│      │      home.js
+│      │      movie.js
+│      │      webnovel.js
+│      │      webtoon.js
+│      │
+│      └─sub
+│              webtoonHome.js
 │
 ├─css
 │      common.css
