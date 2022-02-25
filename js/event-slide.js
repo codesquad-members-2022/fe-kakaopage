@@ -2,12 +2,12 @@ import { $ } from "./utils.js";
 const slides = $(".main-ad-banner__img-container");
 const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
 const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
-const slideSpeed = 0.3;
+const slideSpeed = 0.2;
 const sec = 1000;
 const containerWidth = slideWidth * slideImg.length;
 const delay = slideSpeed * sec;
 const initPosition = 0;
-const autoTime = 2 * sec;
+const autoTime = 3 * sec;
 const position = {
   value: -slideWidth,
   setValue(newValue) {
@@ -42,16 +42,21 @@ const returnOriginSlide = () => {
   else if (position.value < -containerWidth) position.setValue(-slideWidth);
 };
 
+let clickFlag = false;
+
 const isEnd = () => {
-  if (position.value < initPosition && position.value > -containerWidth) return;
+  if (position.value < initPosition && position.value > -containerWidth)
+    return (clickFlag = false);
   returnOriginSlide();
   const slideSpeed = initPosition;
   setTimeout(() => {
     moveSlide(position.value, slideSpeed);
+    clickFlag = false;
   }, delay);
 };
 
 const moveSlide = (positionValue, slideSpeed) => {
+  console.log(positionValue);
   slides.style.transition = `${slideSpeed}s ease-out`;
   slides.style.transform = `translateX(${positionValue}px)`;
 };
@@ -71,6 +76,8 @@ const playEvent = (btnEvent) => {
 };
 
 export const slideShow = (e) => {
+  if (clickFlag) return;
+  clickFlag = true;
   autoPlay.stop();
   autoPlay.start();
   const btnEvent = e.target.parentNode.dataset.event;
