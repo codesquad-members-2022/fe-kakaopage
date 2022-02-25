@@ -47,6 +47,17 @@ const topBanner = {
             description : "인간 최초의 성좌가 되는 길!"
         },
         {
+            title : "로드 오브 머니",
+            image : "https://dn-img-page.kakao.com/download/resource?kid=dfYJhT/hyQ9QDRm4Z/czbknk8mnhG2k7X5MZI2s0",
+            badge : {
+                name : "up",
+                src : "https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2",
+            },
+            category : "웹툰",
+            viewer : "49.5만",
+            description : "세상에 없던 꼴통 재벌이 되다!"
+        },
+        {
             title : "딸 바보가<br>되었습니다",
             image : "https://dn-img-page.kakao.com/download/resource?kid=NfO9u/hy41PSMsl2/KOnmIlC3bI2q5Lk46RuLL1",
             badge : {
@@ -56,6 +67,17 @@ const topBanner = {
             category : "웹툰",
             viewer : "55.2만",
             description : "갑자기 생긴 딸이 너무 귀여워?!"
+        },
+        {
+            title : "내가 죽였다",
+            image : "https://dn-img-page.kakao.com/download/resource?kid=bu1cDf/hzp2e5hDx9/kk12ZeaZln5VkyfoC4dfak",
+            badge : {
+                name : "이벤트",
+                src : "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+            },
+            category : "웹툰",
+            viewer : "20.5만",
+            description : "누가 아군이고, 누가 적인가."
         }
     ],
     webtoon : [

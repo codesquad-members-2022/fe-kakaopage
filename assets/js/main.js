@@ -1,4 +1,5 @@
 import {topBanner, webtoonData} from "./data.js";
+import {initSlider, initSliderHandler} from "./slider.js"
 
 function clickMenu() {
     const gnb = document.querySelector(".gnb ul");
@@ -41,10 +42,10 @@ function toActivateNav(target, nav) {
 
 function changeTopBanner(targetLnb) {
     const banner = document.querySelector('.top_banner');
+    const bannerSlider = banner.querySelector('.slider_items');
     const targetBannerData = topBanner[targetLnb];
     const itemHtml = targetBannerData.map(data => creatTopBannerHtml(data));
-    banner.querySelector('.slider_items').innerHTML = itemHtml.join('');
-
+    bannerSlider.innerHTML = itemHtml.join('');
     initSlider(banner);
 }
 
@@ -131,107 +132,8 @@ function createWebtoonDayContents(targetDay) {
     document.querySelector('.day_contents .item_list').innerHTML = items.join('');
 }
 
-function initSlider(sWrapper) {
-    const sliderWrapper = sWrapper;
-    const sliderBox = sliderWrapper.querySelector('.slider_items');
-    const sliderPager = sliderWrapper.querySelector('.slider_pager');
-    const sliderItem = sliderBox.querySelectorAll('.item');
-    const itemLength = sliderItem.length;
-    const firstItem = sliderBox.firstElementChild;
-    const lastItem = sliderBox.lastElementChild;
-    const cloneFirst = firstItem.cloneNode(true);
-    const cloneLast = lastItem.cloneNode(true);
-    cloneFirst.classList.add('clone');
-    cloneLast.classList.add('clone');
-    sliderBox.appendChild(cloneFirst);
-    sliderBox.prepend(cloneLast);
-    const itemWidth = 100;
-    const ZERO = 0;
-    let currentIdx = ZERO;
-    let index = ZERO;
-    updatePager(sliderPager, currentIdx, itemLength)
-    setInitPos(sliderBox, itemWidth);
-    setTimeout(() => {
-        sliderBox.classList.add('animate')
-    }, 0)
-
-    sliderWrapper.addEventListener('click', (e) => {
-        const target = e.target;
-        const prevBtn = sliderWrapper.querySelector('.prev');
-        const nextBtn = sliderWrapper.querySelector('.next');
-    
-        switch (target) {
-            case prevBtn:
-                index = currentIdx - 1;
-                moveSlide(sliderBox, itemWidth, index);
-                currentIdx -= 1
-                break;
-            case nextBtn:
-                index = currentIdx + 1;
-                moveSlide(sliderBox, itemWidth, index)
-                currentIdx += 1
-                break;
-            default :
-                break;
-        }
-        
-        updatePager(sliderPager, currentIdx, itemLength)
-
-        if(currentIdx === itemLength) {
-            currentIdx = ZERO
-        }else if(currentIdx < ZERO) {
-            currentIdx = itemLength - 1
-        }
-    })
-}
-
-function setInitPos(sliderBox, itemWidth) {
-    const initTranslateValue = `-${itemWidth}%` 
-    sliderBox.style.transform = `translateX(${initTranslateValue})`
-}
-
-function moveSlide(sliderBox, itemWidth, idx) {
-    const itemLength = sliderBox.querySelectorAll('.item').length - sliderBox.querySelectorAll('.clone').length;
-    const ZERO = 0;
-    const removeTime = 300;
-    const addTime = 400;
-    const translateValue = -idx * itemWidth;
-    sliderBox.style.marginLeft = `${translateValue}%`
-    
-    if(itemLength === idx) {
-        setTimeout(() => {
-            sliderBox.classList.remove('animate');
-            sliderBox.style.marginLeft = ZERO;
-        }, removeTime)
-        setTimeout(() => {
-            sliderBox.classList.add('animate');
-        }, addTime)
-    } else if(idx < ZERO) {
-        setTimeout(() => {
-            sliderBox.classList.remove('animate');
-            sliderBox.style.marginLeft = `${-itemWidth * (itemLength - 1)}%`;
-        }, removeTime)
-        setTimeout(() => {
-            sliderBox.classList.add('animate');
-        }, addTime)
-    }
-}
-
-function updatePager(pager, currentIdx, itemLength) {
-    const index = currentIdx + 1;
-    const ZERO = 0;
-    const one = 1;
-    const Last = itemLength;
-    
-    if(index > itemLength) {
-        pager.innerText = `${one} / ${itemLength}`;
-    }else if(index === ZERO) {
-        pager.innerText = `${Last} / ${itemLength}`;
-    }else {
-        pager.innerText = `${index} / ${itemLength}`;
-    }
-}
-
-(function() {
+(function(){
     clickMenu();
+    const bannerSlider = document.querySelector('.top_banner');
+    initSliderHandler(bannerSlider);
 }())

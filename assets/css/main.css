@@ -404,6 +404,7 @@
 .banner .slider_items {
     display: flex;
     width: 100%;
+    margin-left: -100%;
 }
 
 .banner .slider_items.animate {
