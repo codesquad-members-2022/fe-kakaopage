@@ -1,3 +1,3 @@
-export function searchSelctor(el) {
-  return document.querySelector(el)
+export function searchSelctor(el, base = document) {
+  return base.querySelector(el)
 }
