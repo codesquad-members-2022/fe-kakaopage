@@ -5,21 +5,21 @@ import { setNavEvent } from "./NavEventController.js"
 
 const $body_main = document.querySelector('.custom');
 
-export function rendering(tabName){
-    const renders = {
-        'home' : renderHomePage,
-        'daily' : renderDailyPage,
-        'webToon' : renderWebToonPage,
-        'boy' : renderBoyPage,
-        'drama' : renderDramaPage,
-        'romance' : renderRomancePage,
-        'rofan' : renderRofanPage,
-        'action' : renderActionPage,
-        'bl' : renderBlPage
-    }
+const tabRenders = {
+    'home' : renderHomePage,
+    'daily' : renderDailyPage,
+    'webToon' : renderWebToonPage,
+    'boy' : renderBoyPage,
+    'drama' : renderDramaPage,
+    'romance' : renderRomancePage,
+    'rofan' : renderRofanPage,
+    'action' : renderActionPage,
+    'bl' : renderBlPage
+}
 
+export function rendering(tabName){
     $body_main.innerHTML = '';
-    renders[tabName](tabName);
+    tabRenders[tabName](tabName);
     setNavEvent('main-nav__list');
 }
 
