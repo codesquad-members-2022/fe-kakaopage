@@ -10,6 +10,7 @@ const $main__container__copy = $main__container?.cloneNode(true);
 $headerNav.addEventListener("click", (event) => {
   const selectedImg = event.target.closest("img");
   const className = selectedImg?.className;
+  const $current__main__container = document.querySelector(".main__container");
   const $banner__container = document.querySelector(".banner__container");
   const $week__webtoons = document.querySelector(".week__webtoons");
   if (className === "nav__home") {
@@ -19,6 +20,10 @@ $headerNav.addEventListener("click", (event) => {
       $main__container__copy
     );
   } else if (className === "nav__toon") {
+    $week__webtoons?.parentNode.removeChild($week__webtoons);
+    $current__main__container?.parentNode.removeChild(
+      $current__main__container
+    );
     $banner__container.insertAdjacentHTML("afterend", $weekWebtoons);
   }
 });

@@ -41,7 +41,7 @@ const $tuesdayWebtoons = webtoonContents
   )
   .join("");
 
-const $weekWebtoons = () => {
+const createWeekWebtoons = () => {
   const weekTapClassName = "week__webtoons";
   const navConatinerClassName =
     "main__navigation__menu main__week__menu interval";
@@ -50,14 +50,14 @@ const $weekWebtoons = () => {
   const tuesToonClassName = "main__toon__category toon__grid toons__box";
 
   return `
-    <section class=${weekTapClassName}>
+    <section class="${weekTapClassName}">
       <nav>
-        <ul class=${navConatinerClassName}>
+        <ul class="${navConatinerClassName}">
           ${$weekTap}
         </ul>
       </nav>
 
-      <section class=${filterClassName}>
+      <section class="${filterClassName}">
         <div>
           <button>전체</button>
           <span>|</span>
@@ -71,11 +71,13 @@ const $weekWebtoons = () => {
           <span>▼</span>
         </div>
       </section>
-      <div class=${tuesToonClassName}>
+      <div class="${tuesToonClassName}">
         ${$tuesdayWebtoons}
       </div>
     </section>
   `;
 };
+
+const $weekWebtoons = createWeekWebtoons();
 
 export default $weekWebtoons;
