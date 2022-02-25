@@ -57,11 +57,11 @@ function buttonClickHandler(event){
 }
 
 function handleClickEvent(event){
-    const $banner__contents = document.querySelector('.banner__contents');
     const $banner_list = document.querySelector('.banner__list');
     const direction = event.target.dataset.direction;
     const [maxIndex, currentIndex] = getSliderIndex(direction);
+    const defaultMovePercent = 100;
     
-    $banner_list.style.transform = `translate(-${$banner__contents.clientWidth * currentIndex}px, 0px)`;
+    $banner_list.style.transform = `translate(-${defaultMovePercent * currentIndex}%, 0px)`;
     setBannerOrderText(maxIndex, currentIndex);
 }
