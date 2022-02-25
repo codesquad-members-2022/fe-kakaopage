@@ -41,34 +41,41 @@ const $tuesdayWebtoons = webtoonContents
   )
   .join("");
 
-const $weekWebtoons = `
-  <section class="week__webtoons">
-    <nav>
-      <ul class="main__navigation__menu main__week__menu interval">
-        ${$weekTap}
-      </ul>
-    </nav>
+const $weekWebtoons = () => {
+  const weekTapClassName = "week__webtoons";
+  const navConatinerClassName =
+    "main__navigation__menu main__week__menu interval";
+  const filterClassName =
+    "header__container main__toon__category container__space__between";
+  const tuesToonClassName = "main__toon__category toon__grid toons__box";
 
-    <section
-      class="header__container main__toon__category container__space__between"
-    >
-      <div>
-        <button>전체</button>
-        <span>|</span>
-        <button>웹툰</button>
-        <span>|</span>
-        <button><span>clock</span>웹툰</button>
-      </div>
+  return `
+    <section class=${weekTapClassName}>
+      <nav>
+        <ul class=${navConatinerClassName}>
+          ${$weekTap}
+        </ul>
+      </nav>
 
-      <div>
-        <span>전체 (180)</span>
-        <span>▼</span>
+      <section class=${filterClassName}>
+        <div>
+          <button>전체</button>
+          <span>|</span>
+          <button>웹툰</button>
+          <span>|</span>
+          <button><span>clock</span>웹툰</button>
+        </div>
+
+        <div>
+          <span>전체 (180)</span>
+          <span>▼</span>
+        </div>
+      </section>
+      <div class=${tuesToonClassName}>
+        ${$tuesdayWebtoons}
       </div>
     </section>
-    <div class="main__toon__category toon__grid toons__box">
-      ${$tuesdayWebtoons}
-    </div>
-  </section>
-`;
+  `;
+};
 
 export default $weekWebtoons;
