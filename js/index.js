@@ -10,9 +10,6 @@ import GenreBest from "./views/GenreBest.js";
 import Weekday from "./views/Weekday.js";
 import CaroulselItems from "./views/CaroulselItems.js";
 
-let currentInterval;
-let carouselImgIdx = 1;
-
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;
     Array.from(parentNode.children).forEach((el) =>
@@ -69,6 +66,44 @@ const setCaroulselPager = (carouselImgIdx = 1) => {
     pager.innerText = `${curPage} / ${lastPageNum}`;
 };
 
+// FIXME: 전역변수
+// FIXME: 중복된 변수들 삭제
+// FIXME: 캐러셀 관련 - 모듈로 분리
+let carouselImgIdx = 1;
+let isClickable = true;
+
+let isAutoCarouselRunning = false;
+let carouselTimer;
+
+const handleAutoCarousel = () => {
+    if (!isAutoCarouselRunning) return;
+    if (!isClickable) return;
+    const imageWidth = $(".cover-image").clientWidth;
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const transitionDuration = "0.3s";
+    const customTransition = `transform ${transitionDuration} ease-out`;
+
+    carouselImgIdx++;
+    carouselItemWrapper.style.transition = customTransition;
+    carouselItemWrapper.style.transform = `translateX(${
+        -imageWidth * carouselImgIdx
+    }px)`;
+    setCaroulselPager(carouselImgIdx);
+
+    isClickable = false;
+};
+
+const runCarouselTimer = () => {
+    const delayMilliSeconds = 2500;
+    isAutoCarouselRunning = true;
+    carouselTimer = setInterval(handleAutoCarousel, delayMilliSeconds);
+};
+
+const stopCarouselTimer = () => {
+    clearInterval(carouselTimer);
+    isAutoCarouselRunning = false;
+};
+
 const renderCarousel = (data) => {
     const carouselImgs = data;
     const carousel = new CaroulselItems({ carouselImgs });
@@ -78,10 +113,10 @@ const renderCarousel = (data) => {
     carouselItemWrapper.style.transform = `translateX(${-imageWidth}px)`;
     carouselItemWrapper.innerHTML = carousel.getHtml();
     setCaroulselPager();
-    if (currentInterval) {
-        carouselItemWrapper.style.transition = "none";
-        carouselImgIdx = 1;
-    }
+    carouselItemWrapper.style.transition = "none";
+    carouselImgIdx = 1;
+    stopCarouselTimer();
+    runCarouselTimer();
 };
 
 const preventDefaults = () => {
@@ -111,8 +146,6 @@ const bindSubMenuEvent = () => {
 };
 
 const bindCaroulselEvent = () => {
-    // let carouselImgIdx = 1;
-    let isClickable = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
@@ -120,7 +153,6 @@ const bindCaroulselEvent = () => {
         (el) => el.dataset.clone
     ).length;
     const transitionDuration = "0.3s";
-    const autoCarouselDelay = 2500;
     const customTransition = `transform ${transitionDuration} ease-out`;
 
     const setTransition = (transition) => {
@@ -135,22 +167,10 @@ const bindCaroulselEvent = () => {
         }px)`;
     };
 
-    const handleAutoCarousel = () => {
-        if (!isClickable) return;
-
-        carouselImgIdx++;
-        setTransition(customTransition);
-        setTransform(carouselImgIdx);
-
-        isClickable = false;
-    };
-
-    currentInterval = setInterval(handleAutoCarousel, autoCarouselDelay);
-
     const handleCarouselBtnClick = ({ target }) => {
         if (!target.classList.contains("button")) return;
-        clearInterval(currentInterval);
-        currentInterval = setInterval(handleAutoCarousel, autoCarouselDelay);
+        stopCarouselTimer();
+        runCarouselTimer();
 
         if (!isClickable) return;
         if (target.closest(".btn-left")) {
