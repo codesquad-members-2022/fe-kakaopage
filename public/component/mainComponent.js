@@ -1,10 +1,15 @@
-import { $, createEl } from "../eventJS/util.js";
+import { domUtil } from "../eventJS/util.js";
 import { data } from "./data.js";
 
-const createMainNav = (data) => {
-  const nav = createEl("nav");
-  nav.classList.add("main__nav__dow");
-  nav.innerHTML = `
+const createDomEl = (tagType, className, innerHTML) => {
+  const domElement = domUtil.createEl(tagType);
+  domElement.classList.add(className);
+  domElement.innerHTML = innerHTML;
+  return domElement;
+};
+
+const getMainNavHtml = (data) => {
+  return `
       <ul class="main__nav__dow--ul">
       ${data.week.reduce(
         (listHtml, day) => (listHtml += `<li>${day}</li>`),
@@ -12,34 +17,24 @@ const createMainNav = (data) => {
       )}
       </ul>
   `;
-
-  return nav;
 };
 
-const createMaincontainer = (toggleinfo, imgInfo) => {
-  const containter = createEl("section");
-  containter.classList.add("main");
-  containter.innerHTML = `
-  <nav class="main__nav--toggle">
-    <ul class="main--toggle--left">
-      <li>${toggleinfo.left}</li>
-    </ul>
-    <div class="main--toggle--right">${toggleinfo.right}</div>
-  </nav>
+const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
+  return `
+  ${hasWeekNav(weekNav, weekNavinfo) ?? ""}
+  ${hasToggleNav(toggleNav, toggleinfo) ?? ""}
   <ul class="main__cartoonZone">
     ${imgInfo.reduce(
-      (imgHtml, imgData) => (imgHtml += createImgCard(imgData)),
+      (imgHtml, imgData) => (imgHtml += getImgCardHtml(imgData)),
       ""
     )}
   </ul>
 `;
-
-  return containter;
 };
 
-const createImgCard = (data) => {
+const getImgCardHtml = (data, test) => {
   return `
-  <li class="main__cartoonZone__cell">
+  <li class="main__cartoonZone__cell${test ?? ""}">
     <div class="main__cartoonZone--imageWrapper">
       <img
         src=${data.imgUrl}
@@ -60,30 +55,45 @@ const createImgCard = (data) => {
 `;
 };
 
-const createlist = (data, className) => {
-  const UL = createEl("ul");
-  UL.classList.add(className);
-  UL.innerHTML = `${data.reduce(
-    (listHtml, toggleData) => (listHtml += `<li>${toggleData}</li>`),
-    ""
-  )}`;
-  return UL;
-};
-
-const toonGenreChecker = (toonGenre) =>
+const getToonGenre = (toonGenre) =>
   data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
 
-const multiAppend = (data, parent, className, creatingFunc) => {
-  data.forEach((el) => {
-    parent.querySelector(className).appendChild(creatingFunc(el));
-  });
+const getIsHot = (isTrue) =>
+  data.toonData.filter((toonInfo) => toonInfo.hot === isTrue);
+
+const hasToggleNav = (isTrue, toggleInfo) => {
+  if (isTrue) {
+    return `<nav class="main__nav--toggle">
+      <ul class="main--toggle--left">
+        ${toggleInfo.left.reduce(
+          (html, font) => (html += `<li>${font}</li>`),
+          ""
+        )}
+      </ul>
+      <div class="main--toggle--right">${toggleInfo.right}</div>
+    </nav>`;
+  }
+};
+
+const hasWeekNav = (isTrue, weekNavinfo) => {
+  if (isTrue) {
+    return `<nav class="main__nav__dow">
+      <ul class="main__nav__dow--ul">
+      ${weekNavinfo.reduce(
+        (listHtml, day) => (listHtml += `<li>${day}</li>`),
+        ""
+      )}
+      </ul>
+    </nav>
+    `;
+  }
 };
 
 export {
-  createMainNav,
-  createMaincontainer,
-  createImgCard,
-  createlist,
-  toonGenreChecker,
-  multiAppend,
+  createDomEl,
+  getMainNavHtml,
+  getMainHtml,
+  getToonGenre,
+  getImgCardHtml,
+  getIsHot,
 };

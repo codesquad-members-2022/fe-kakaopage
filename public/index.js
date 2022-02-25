@@ -1,20 +1,17 @@
-import {
-  createEl,
-  $,
-  remove,
-  replaceInner,
-  cloneAndDsiplay,
-} from "./eventJS/util.js";
+import { domUtil } from "./eventJS/util.js";
 
 import { renderMainSecHome, renderMainSecWoD } from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
 import { renderToonbyDay } from "./eventJS/mainEvent.js";
-
-$(".prev").addEventListener("click", () => {});
+import { onClickBannerController } from "./eventJS/slider.js";
 
 renderMainSecHome();
 
-$(".recommand__nav--ul").addEventListener("click", function (event) {
+domUtil
+  .$(".recommand__image--controller")
+  .addEventListener("click", onClickBannerController);
+
+domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
   if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
     renderMainSecHome();
@@ -22,6 +19,10 @@ $(".recommand__nav--ul").addEventListener("click", function (event) {
     renderMainSecWoD();
   }
 });
+
+domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
+  domUtil.$(".recommand__image--wrapper").offsetWidth
+}px)`; // 화면 조정을 위해
 
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {

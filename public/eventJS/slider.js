@@ -1,24 +1,64 @@
-function onclickPrev(target) {
-  const maxPage = $(".recommand__image--wrapper").childElementCount - 1;
+import { domUtil } from "./util.js";
 
+// prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
+let pageCount = -1;
+const img = domUtil.$(".recommand__image--wrapper");
+const imgWidth = img.offsetWidth;
+const maxPage = domUtil.$(".recommand__image--wrapper").childElementCount - 1;
+const imgPage = domUtil.$(".recommand__image--pageCount");
+
+function onClickBannerController(event) {
+  if (event.target.className === "next") {
+    onclickNext();
+  } else if (event.target.className === "prev") {
+    onclickPrev();
+  }
+}
+
+function onclickNext() {
+  img.style.transition = `${0.5}s`;
   if (maxPage > -pageCount) {
     pageCount--;
   }
-  const pixel = 1000 * pageCount;
-  $(".recommand__image--wrapper").style.transform = `translate(${pixel}px)`;
-
-  //이부분 수정하면 될것같은데
-  $(".recommand__image--pageCount").firstChildNode;
+  img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  imgPage.innerHTML = `${-pageCount} / ${maxPage - 1} `;
+  if (pageCount === -maxPage) {
+    loop2first();
+  }
 }
 
-$(".next").addEventListener("click", onclicknext);
-
-function onclicknext() {
+function onclickPrev() {
+  img.style.transition = `${0.5}s`;
   if (0 > pageCount) {
     pageCount++;
   }
-  const pixel = pageCount * 1000;
-  document.querySelector(
-    ".recommand__image--wrapper"
-  ).style.transform = `translate(${pixel}px)`;
+  img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  imgPage.innerHTML = `${-pageCount} / ${maxPage - 1} `;
+  if (pageCount === 0) {
+    loop2end();
+  }
 }
+
+const loop2first = () => {
+  imgPage.innerHTML = `${1} / ${maxPage - 1} `;
+  setTimeout(() => {
+    pageCount = -1;
+    img.style.transition = `${0}s`;
+    img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  }, 500);
+};
+
+const loop2end = () => {
+  imgPage.innerHTML = `${maxPage - 1} / ${maxPage - 1} `;
+  setTimeout(() => {
+    pageCount = -(maxPage - 1);
+    img.style.transition = `${0}s`;
+    img.style.transform = `translate(${pageCount * imgWidth}px)`;
+  }, 500);
+};
+
+const imageloop = setInterval(() => {
+  onclickNext();
+}, 2000);
+
+export { onClickBannerController };
