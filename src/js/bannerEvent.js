@@ -18,7 +18,6 @@ const Slide = {
   },
 };
 
-// Carousel 구현을 위해 슬라이드 추가
 const setCarousel = (html) => {
   const ul = html.querySelector('.banner-container');
   const length = ul.childElementCount;
@@ -32,6 +31,19 @@ const setCarousel = (html) => {
 
   return html;
 };
+
+const changeSlide = (type, ul, bannerType) => {
+  const width = ul.querySelector('.banner').clientWidth
+  if (type === 'next') {
+    Slide[bannerType].pos = -width;
+    ul.style.transform = `translateX(${Slide[bannerType].pos}px)`;
+  }
+
+  else {
+    Slide[bannerType].pos = `-${width * Slide[bannerType].total}`;
+    ul.style.transform = `translateX(${Slide[bannerType].pos}px)`;
+  }
+}
 
 const carouselClickHandler = (e) => {
   const button = e.target;
@@ -52,19 +64,23 @@ const carouselClickHandler = (e) => {
   ul.style.transform = `translateX(${Slide[bannerType].pos}px)`;
 
   if (Slide[bannerType].current > Slide[bannerType].total) {
-    ul.style.transition = 'none';
-    Slide[bannerType].pos = -width;
     Slide[bannerType].current = 1;
-    ul.style.transform = `translateX(${Slide[bannerType].pos}px)`;
-    ul.style.transition = 'all 700ms';
+    setTimeout(() => {
+      ul.classList.add('no-transition')
+      changeSlide('next', ul, bannerType);
+      ul.offsetHeight;
+      ul.classList.remove('no-transition');
+    }, 700);
   }
 
   else if (Slide[bannerType].current === 0) {
-    ul.style.transition = 'none';
-    Slide[bannerType].pos = `-${width * Slide[bannerType].total}`;
     Slide[bannerType].current = Slide[bannerType].total;
-    ul.style.transform = `translateX(${Slide[bannerType].pos}px)`;
-    ul.style.transition = 'all 700ms';
+    setTimeout(() => {
+      ul.classList.add('no-transition')
+      changeSlide('back', ul, bannerType);
+      ul.offsetHeight;
+      ul.classList.remove('no-transition');
+    }, 700)
   }
 
   if (bannerType !== 'sub') {
