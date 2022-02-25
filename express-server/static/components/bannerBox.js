@@ -40,5 +40,6 @@ export const BannerBox = (target,images, infographic )=>{
         </div>
               `
     target.innerHTML = template;
-    carouselSlider(target, idx);
+    carouselSlider(target);
+
 }

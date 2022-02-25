@@ -1,6 +1,8 @@
 import {select, selectAll} from "../utils.js";
 const INTERVAL = 3000;
-export const carouselSlider= (target, idx) =>{
+
+export const carouselSlider= (  target ) =>{
+    let idx = 1
     let timeoutId;
     const box = select(target, '.BannerBox');
     const carousel = select(target, '.carousel');
