@@ -109,7 +109,7 @@ function createSliderItemHTML(itemData){
                         <img src="${IconSrc.division}" alt="구분선" class="banner__info--separator">
                         <div>
                             <img src="${IconSrc.badge_person}" alt="사람 아이콘">
-                            <span>${itemData.reader}</span>
+                            <span>${itemData.reader}만명</span>
                         </div>
                     </div>
                 </div>
