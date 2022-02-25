@@ -4,7 +4,8 @@
   "description": "CodeSquad FE Mission 1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch server.js server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
     "url": "https://github.com/jaypedia/fe-kakaopage/issues"
   },
   "homepage": "https://github.com/jaypedia/fe-kakaopage#readme",
-  "type": "module"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "http": "^0.0.1-security"
+  }
 }
