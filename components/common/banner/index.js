@@ -1,5 +1,5 @@
-import { CSS_NAME_LENGTH } from "../../js/constants.js";
-import { getRandomString } from "../../js/utils.js";
+import { CSS_NAME_LENGTH } from "../../../js/constants.js";
+import { getRandomString } from "../../../js/utils.js";
 
 // TODO: status로 아이콘 구분해서 랜더링
 export function createBanner({ size, title, status, type, views, ad }) {

@@ -1,4 +1,4 @@
-import { LIST, DAY_TOP_EL_NUM } from "../../js/constants.js";
+import { LIST, DAY_TOP_EL_NUM } from "../../../js/constants.js";
 import { createBox } from "../box/index.js";
 import { createCategory } from "../category/index.js";
 import { createWorkSmall } from "../workSmall/index.js";

@@ -1,12 +1,12 @@
-import { createBanner } from "../../banner/index.js";
-import { createButton } from "../../Button/index.js";
-import { createDayRankingTop } from "../../dayRankingTop/index.js";
-import { createDayTop } from "../../dayTop/index.js";
-import { createGenreTop } from "../../genreTop/index.js";
-import { createNewTop } from "../../newTop/index.js";
-import { createRecommend } from "../../recommend/index.js";
-import { createRecommendEvent } from "../../recommendEvent/index.js";
-import { createAdSlide } from "../../adSlide/index.js";
+import { createBanner } from "../../common/banner/index.js";
+import { createButton } from "../../common/Button/index.js";
+import { createDayRankingTop } from "../../common/dayRankingTop/index.js";
+import { createDayTop } from "../../common/dayTop/index.js";
+import { createGenreTop } from "../../common/genreTop/index.js";
+import { createNewTop } from "../../common/newTop/index.js";
+import { createRecommend } from "../../common/recommend/index.js";
+import { createRecommendEvent } from "../../common/recommendEvent/index.js";
+import { createAdSlide } from "../../common/adSlide/index.js";
 import { BANNER, GENRE_TOP, RECOMMEND_BUTTONS } from "../../../js/constants.js";
 
 export function createTabWebtoonHome() {

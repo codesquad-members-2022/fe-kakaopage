@@ -5,8 +5,7 @@ import { tabMovie } from "../components/tab/global/movie.js";
 import { tabWebnovel } from "../components/tab/global/webNovel.js";
 import { tabWebtoonHome } from "../components/tab/global/webtoon.js";
 import { createTabWebtoonHome } from "../components/tab/sub/webtoonHome.js";
-import { CATEGORIES, LIST, SNB } from "./constants.js";
-import { addEventGNB, addEventSNB } from "./event.js";
+import { CATEGORIES, SNB } from "./constants.js";
 import { setSelectedSNB } from "./render.js";
 import { $ } from "./utils.js";
 
@@ -29,7 +28,7 @@ export function GNBHandler(e) {
   if (e.target.dataset.name === CATEGORIES.WEBTOON) {
     tabWebtoonHome.render();
     setSelectedSNB();
-    addEventSNB();
+    tabWebtoonHome.addEvent();
     return;
   }
   if (e.target.dataset.name === CATEGORIES.WEBNOVEL) {

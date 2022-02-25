@@ -1,4 +1,4 @@
-import { GENRE_TOP_EL_NUM } from "../../js/constants.js";
+import { GENRE_TOP_EL_NUM } from "../../../js/constants.js";
 import { createBox } from "../box/index.js";
 import { createWorkSmall } from "../workSmall/index.js";
 
