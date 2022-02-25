@@ -1,8 +1,8 @@
-import { ELEMENT_ID } from '../constants/variable.js';
+const { ELEMENT_ID } = require('./subCategoryID');
 
 const { CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } = ELEMENT_ID;
 
-export default function Main(content) {
+function homeData() {
   return {
     [`${CAROUSEL}`]: 'Main',
     [`${EVENT_BOX}`]: `Main`,
@@ -10,3 +10,5 @@ export default function Main(content) {
     [`${MAIN_CONTENT}`]: `Main`,
   };
 }
+
+module.exports = homeData;
