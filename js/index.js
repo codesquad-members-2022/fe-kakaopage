@@ -10,6 +10,9 @@ import GenreBest from "./views/GenreBest.js";
 import Weekday from "./views/Weekday.js";
 import CaroulselItems from "./views/CaroulselItems.js";
 
+let currentInterval;
+let carouselImgIdx = 1;
+
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;
     Array.from(parentNode.children).forEach((el) =>
@@ -72,9 +75,13 @@ const renderCarousel = (data) => {
     const carouselItemWrapper = $(".carousel-item-wrap");
     const imageWidth = $(".cover-image").clientWidth;
 
-    carouselItemWrapper.innerHTML = carousel.getHtml();
     carouselItemWrapper.style.transform = `translateX(${-imageWidth}px)`;
+    carouselItemWrapper.innerHTML = carousel.getHtml();
     setCaroulselPager();
+    if (currentInterval) {
+        carouselItemWrapper.style.transition = "none";
+        carouselImgIdx = 1;
+    }
 };
 
 const preventDefaults = () => {
@@ -104,7 +111,7 @@ const bindSubMenuEvent = () => {
 };
 
 const bindCaroulselEvent = () => {
-    let carouselImgIdx = 1;
+    // let carouselImgIdx = 1;
     let isClickable = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
@@ -138,12 +145,12 @@ const bindCaroulselEvent = () => {
         isClickable = false;
     };
 
-    let autoCarousel = setInterval(handleAutoCarousel, autoCarouselDelay);
+    currentInterval = setInterval(handleAutoCarousel, autoCarouselDelay);
 
     const handleCarouselBtnClick = ({ target }) => {
         if (!target.classList.contains("button")) return;
-        clearInterval(autoCarousel);
-        autoCarousel = setInterval(handleAutoCarousel, autoCarouselDelay);
+        clearInterval(currentInterval);
+        currentInterval = setInterval(handleAutoCarousel, autoCarouselDelay);
 
         if (!isClickable) return;
         if (target.closest(".btn-left")) {
