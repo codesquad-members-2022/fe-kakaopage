@@ -122,7 +122,6 @@ const bindCaroulselEvent = () => {
     const clonedNodeCnt = [...carouselItems].filter(
         (el) => el.dataset.clone
     ).length;
-    const imageCnt = carouselItems.length - clonedNodeCnt;
     const transitionDuration = "0.3s";
     const autoCarouselDelay = 2500;
     const customTransition = `transform ${transitionDuration} ease-out`;
@@ -139,7 +138,7 @@ const bindCaroulselEvent = () => {
         }px)`;
     };
 
-    const autoCarouselHandler = () => {
+    const handleAutoCarousel = () => {
         if (!isClickable) return;
 
         carouselImgIdx++;
@@ -149,12 +148,12 @@ const bindCaroulselEvent = () => {
         isClickable = false;
     };
 
-    let autoCarousel = setInterval(autoCarouselHandler, autoCarouselDelay);
+    let autoCarousel = setInterval(handleAutoCarousel, autoCarouselDelay);
 
-    $(".cover-image").addEventListener("click", ({ target }) => {
+    const handleCarouselBtnClick = ({ target }) => {
         if (!target.classList.contains("button")) return;
         clearInterval(autoCarousel);
-        autoCarousel = setInterval(autoCarouselHandler, autoCarouselDelay);
+        autoCarousel = setInterval(handleAutoCarousel, autoCarouselDelay);
 
         if (!isClickable) return;
         if (target.closest(".btn-left")) {
@@ -173,9 +172,9 @@ const bindCaroulselEvent = () => {
             isClickable = false;
             return;
         }
-    });
+    };
 
-    $(".cover-image").addEventListener("transitionend", () => {
+    const handleCarouselTransitionEnd = () => {
         isClickable = true;
         const maxCnt = carouselItems.length - 1;
         if (carouselImgIdx > maxCnt) {
@@ -196,7 +195,14 @@ const bindCaroulselEvent = () => {
             setTransform(carouselImgIdx);
             return;
         }
-    });
+    };
+
+    $(".cover-image").addEventListener("click", handleCarouselBtnClick);
+
+    $(".cover-image").addEventListener(
+        "transitionend",
+        handleCarouselTransitionEnd
+    );
 };
 
 const toggleWeekDayMenu = (target) => {
