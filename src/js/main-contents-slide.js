@@ -6,7 +6,16 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 let currentIdx = 0;
 
-makeClone();
+initSlide();
+
+function initSlide() {
+  makeClone();
+  updateWidth();
+  setInitialPos();
+  setTimeout(function () {
+    slides.classList.add("animated");
+  }, 100);
+}
 
 function makeClone() {
   for (let i = 0; i < slideCount; i++) {
@@ -20,12 +29,6 @@ function makeClone() {
     cloneSlide.classList.add("clone");
     slides.prepend(cloneSlide);
   }
-
-  updateWidth();
-  setInitialPos();
-  setTimeout(function () {
-    slides.classList.add("animated");
-  }, 100);
 }
 
 function updateWidth() {

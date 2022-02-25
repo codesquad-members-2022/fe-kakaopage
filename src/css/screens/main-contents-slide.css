@@ -17,7 +17,7 @@
 }
 
 .slides.animated {
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .slides li {
