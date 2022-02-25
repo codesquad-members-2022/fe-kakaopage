@@ -7,7 +7,7 @@ function setSliderVariable(sliderWrapper) {
     const lastItem = sliderBox.lastElementChild;
     const slideItem = sliderBox.querySelectorAll('.item');
     const slideCloneItem = sliderBox.querySelectorAll('.clone');
-    
+
     const sliderInfo = {
         sliderBox,
         cloneFirst : firstItem.cloneNode(true),
@@ -34,19 +34,19 @@ function initSlider(sliderWrapper) {
     sliderBox.classList.remove('animate');
     sliderBox.style.transform = `translateX(0)`;
 
-    updatePager(sliderInfo, currentIdx)
+    updatePager(sliderInfo, currentIdx);
 }
 
 function initSliderHandler(sliderWrapper) {
-    const prevBtn = sliderWrapper.querySelector('.prev')
-    const nextBtn = sliderWrapper.querySelector('.next')
+    const prevBtn = sliderWrapper.querySelector('.prev');
+    const nextBtn = sliderWrapper.querySelector('.next');
 
     sliderWrapper.addEventListener('click', (e) => {
         const target = e.target;
         const newBanner = target.closest('.banner');
         const sliderInfo = setSliderVariable(newBanner);
         const sliderItemCount = sliderInfo.itemCount;
-        
+
         switch (target) {
             case prevBtn:
                 currentIdx -= 1;
@@ -54,7 +54,7 @@ function initSliderHandler(sliderWrapper) {
             case nextBtn:
                 currentIdx += 1;
                 break;
-            default :
+            default:
                 break;
         }
 
@@ -65,11 +65,10 @@ function initSliderHandler(sliderWrapper) {
 }
 
 function checkCurrentIdx(currentIdx, itemCount) {
-    const FIRST_INDEX = 0;
     let updateIdx = currentIdx;
-    if(currentIdx === itemCount) {
+    if (currentIdx === itemCount) {
         updateIdx = FIRST_INDEX;
-    }else if(currentIdx < FIRST_INDEX) {
+    } else if (currentIdx < FIRST_INDEX) {
         updateIdx = itemCount - 1;
     }
 
@@ -85,29 +84,26 @@ function moveSlide(sliderInfo, currentIdx) {
     sliderBox.classList.add('animate');
     sliderBox.style.transform = transformValue;
 
-    if(currentIdx === itemCount) {
-        transformValue = `translateX(0)`
-        replaceSlideItem(sliderBox, transformValue)
-    }else if(currentIdx < FIRST_INDEX) {
-        transformValue = `translateX(${-(itemCount-1) * itemWidth}px)`
-        replaceSlideItem(sliderBox, transformValue)
+    if (currentIdx === itemCount) {
+        transformValue = `translateX(0)`;
+        replaceSlideItem(sliderBox, transformValue);
+    } else if (currentIdx < FIRST_INDEX) {
+        transformValue = `translateX(${-(itemCount-1) * itemWidth}px)`;
+        replaceSlideItem(sliderBox, transformValue);
     }
 }
 
 function replaceSlideItem(sliderBox, transformValue) {
     const TIME = 300;
-    setTimeout(()=>{
-        sliderBox.classList.remove('animate');        
+    setTimeout(() => {
+        sliderBox.classList.remove('animate');
         sliderBox.style.transform = transformValue;
     }, TIME)
 }
 
 function updatePager(sliderInfo, currentIdx) {
     let printCurIdx = currentIdx + 1;
-    sliderInfo.pager.innerText = `${printCurIdx} / ${sliderInfo.itemCount}`
+    sliderInfo.pager.innerText = `${printCurIdx} / ${sliderInfo.itemCount}`;
 }
 
-export {
-    initSlider,
-    initSliderHandler,
-}
+export { initSlider, initSliderHandler }
