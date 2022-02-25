@@ -44,10 +44,10 @@ webtoon
     width: calc(var(--max-width) - 170px);
     margin: 0 auto;
 }
-.section-event-banner .slide-button.prev {
+.section-event-banner .slide-button--prev {
     background-image: url('../images/common/slide-previous-button_light.svg');
 }
-.section-event-banner .slide-button.next {
+.section-event-banner .slide-button--next {
     background-image: url('../images/common/slide-next-button_light.svg');
 }
 

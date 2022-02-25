@@ -2,7 +2,7 @@ import { getSildeButton } from "./sildeButton.js";
 
 const getEventBannerTemp = (dataEl, className) => {
     return (
-        `<li class="event-banner ${className}">
+        `<li class="event-banner slide ${className}">
             <a href="${dataEl.link}" class="event-banners__link">
                 <div class="event-banners__img-wrap">
                     <img src="${dataEl.imgUrl}" alt="${dataEl.imgDescription}">
@@ -24,7 +24,7 @@ const getEventBannersTemp = (data) => {
                     ${eventBannerList}
                 </ul>
             </div>
-            ${getSildeButton()}
+            ${getSildeButton('event-banners__slide-button')}
         </div>`
 );
 }
