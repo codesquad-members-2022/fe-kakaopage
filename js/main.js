@@ -49,8 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dayTab = searchSelctor('.serial__list')
   const slides = searchSelctor('.webtoon-slide__imgs')
+<<<<<<< HEAD
   const slideEl = searchSelctor('.webtoon-slide__img')
 >>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
+=======
+  const slideEl = searchSelctor('.webtoon-slide__img', slides)
+>>>>>>> f09cddd (refactor: util 함수 base 추가)
 
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
