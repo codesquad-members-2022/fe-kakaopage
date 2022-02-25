@@ -5,6 +5,7 @@ import { getMoviePage } from './render/movie.js';
 import { getTVPage } from './render/tv.js';
 import { getBookPage } from './render/book.js';
 import { getDayTopContent } from './components/dayTop.js';
+import { getMainBannerTemp } from './components/mainBanners.js';
 
 const getPageTemplete = (INITIAL_PAGE, data, today) => {
     const pageTemplete = {
@@ -20,6 +21,8 @@ const getPageTemplete = (INITIAL_PAGE, data, today) => {
     return currentPageTemplete;
 }
 
-const getNewDayTopContent = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
+const getDayTopContentTemplete = (dayTopData, currentTabIdx) => getDayTopContent(dayTopData, currentTabIdx);
 
-export { getPageTemplete, getNewDayTopContent };
+const getMainBannerTemplete = (data, className) => getMainBannerTemp(data, className);
+
+export { getPageTemplete, getDayTopContentTemplete, getMainBannerTemplete };
