@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:js/webtoon-list.js
 import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
 import { data } from './webtoon-datas.js'
-=======
-import {
-  setThumbnail,
-  setTitle,
-  setIcon,
-  setUserCnt,
-  setDay,
-<<<<<<< HEAD
-} from './dataParse.js'
-import { data } from './datas.js'
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/webtoonList.js
-=======
-} from './webtoon-els.js'
-=======
-import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
->>>>>>> 60fd4ce (refactor: 크롱 피드백 수정)
-import { data } from './webtoon-datas.js'
->>>>>>> 32023a9 (refactor: 불필요한 코드, 파일 구조 정리)
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
@@ -44,13 +24,6 @@ export function setWebtoonList() {
       data[i].thumbnail__src,
       data[i].thumbnail__alt
     )
-<<<<<<< HEAD
-<<<<<<< HEAD:js/webtoon-list.js
-=======
-    setTitle(wentoonCopy, data[i].title__class, data[i].title__text)
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/webtoonList.js
-=======
->>>>>>> 60fd4ce (refactor: 크롱 피드백 수정)
     if (i === iconDays[0] || i === iconDays[1] || i === iconDays[2])
       setIcon(
         wentoonCopy,
@@ -58,16 +31,7 @@ export function setWebtoonList() {
         data[i].icon__src,
         data[i].icon__alt
       )
-<<<<<<< HEAD
-<<<<<<< HEAD:js/webtoon-list.js
     setTitleUserCntDay(wentoonCopy, data[i].user__class, data[i].user__text)
-=======
-    setUserCnt(wentoonCopy, data[i].user__class, data[i].user__text)
-    setDay(wentoonCopy, data[i].day__class, data[i].day__text)
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가):js/webtoonList.js
-=======
-    setTitleUserCntDay(wentoonCopy, data[i].user__class, data[i].user__text)
->>>>>>> 60fd4ce (refactor: 크롱 피드백 수정)
   }
 }
 

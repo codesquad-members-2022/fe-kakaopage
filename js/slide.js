@@ -2,19 +2,11 @@ import { searchSelctor } from './utility.js'
 
 let sNum = 1
 let pos = 0
-<<<<<<< HEAD
 
 let manualNum = 0
 let manualRrafId
 let manualLrafId
 
-=======
-
-let manualNum = 0
-let manualRrafId
-let manualLrafId
-
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 export function setSlideImgStart(root, el, data) {
   const USER_UI_POS = 1
   const elCopy = el.cloneNode(true)
@@ -133,21 +125,10 @@ function moveManualSlideLeft() {
   const FRAME_CNT = 1
   const END_POS = -2880
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
 
   manualLrafId = requestAnimationFrame(moveManualSlideLeft)
   manualNum += FRAME_CNT
-<<<<<<< HEAD
-=======
-  manualLafId = requestAnimationFrame(moveManualSlideLeft)
-  manualNum += 1
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
-=======
->>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
   if (manualNum > ANIMATION_SEC) {
     slideImgs.style.transition = 'all 0.5s'
     manualNum = START_POS
@@ -159,18 +140,8 @@ function moveManualSlideLeft() {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function moveAutoSlideStartPos() {
   const slideNum = document.querySelector('.webtoon-slide__number')
-  const slideImgs = searchSelctor('.webtoon-slide__imgs')
-=======
-export function moveAutoSlide() {
-  const ANIMATION_SEC = 60 * 0.5
-=======
-function moveAutoSlideStartPos() {
-  const slideNum = document.querySelector('.webtoon-slide__number')
->>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
   const slideImgs = searchSelctor('.webtoon-slide__imgs')
 
   const SLIDE_START_NUM = 1
@@ -207,47 +178,6 @@ function moveAutoSlideStartPos() {
   slideNum.textContent = `${sNum} / ${SLIDE_END_NUM}`
 }
 
-<<<<<<< HEAD
-// function moveAutoSlide() {
-//   const ANIMATION_SEC = 180
-//   const slideImgs = document.querySelector('.webtoon-slide__imgs')
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
-
-  const SLIDE_START_NUM = 1
-  const SLIDE_END_NUM = 5
-  const SLIDE_CNT = 1
-  const IMG_WIDTH = 720
-  const S_HALF_MS = 500
-  const START_POS = 0
-
-  const start = new Date().getTime()
-
-  if (sNum < SLIDE_END_NUM) {
-    sNum += SLIDE_CNT
-    pos -= IMG_WIDTH
-    slideImgs.style.transition = 'all 0.5s'
-    slideImgs.style.transform = `translate3d(${pos}px, 0px, 0px)`
-  } else if (sNum === SLIDE_END_NUM) {
-    sNum = SLIDE_START_NUM
-    pos -= IMG_WIDTH
-    slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
-
-    function rafCallback() {
-      const resetRafId = requestAnimationFrame(rafCallback)
-      if (new Date().getTime() > start + S_HALF_MS) {
-        slideImgs.style.transition = 'all 0s'
-        pos = START_POS
-        slideImgs.style.transform = `translate3d(${pos}px ,0px, 0px)`
-        cancelAnimationFrame(resetRafId)
-      }
-    }
-    rafCallback()
-  }
-
-  slideNum.textContent = `${sNum} / ${SLIDE_END_NUM}`
-}
-
-<<<<<<< HEAD
 export function moveAutoSlide() {
   const MS = 1000
 
@@ -256,16 +186,6 @@ export function moveAutoSlide() {
   function rafCallback() {
     requestAnimationFrame(rafCallback)
 
-=======
-export function moveAutoSlide() {
-  const MS = 1000
-
-  let start = new Date().getTime()
-
-  function rafCallback() {
-    requestAnimationFrame(rafCallback)
-
->>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
     if (new Date().getTime() > start + MS) {
       start = new Date().getTime()
       moveAutoSlideStartPos()
@@ -273,10 +193,3 @@ export function moveAutoSlide() {
   }
   rafCallback()
 }
-<<<<<<< HEAD
-=======
-// export default { setSlideImgStart, setSlideImg, setSlideBtn, moveAutoSlide }
-// export default { setSlideImgStart, setSlideImg, setSlideBtn }
->>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
-=======
->>>>>>> 8bc673e (feat: 자동 슬라이드 기능 구현)
