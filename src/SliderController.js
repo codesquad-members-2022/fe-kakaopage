@@ -1,44 +1,52 @@
+/* 슬라이더 초기 세팅 */
+export function init(){
+    setButtonEvent();
+    setTransitionSpeed();
+    initIndexCounter(); 
+    setBannerOrderText();
+}
+
 /* 슬라이더 순서 출력 */
+let countSliderIndex = null;
+
 export function setBannerOrderText(maxIndex, currentIndex){
     const $banner_order = document.querySelector('.banner__order--text');
 
     if(!maxIndex){
-        initGetSliderIndex();
-        const [_maxIndex, _currentIndex] = getSliderIndex();
+        const [_maxIndex, _currentIndex] = countSliderIndex();
         maxIndex = _maxIndex;
         currentIndex = _currentIndex;
     }
 
-    $banner_order.innerText = `${currentIndex + 1} / ${maxIndex + 1}`;
+    $banner_order.innerText = `${currentIndex} / ${maxIndex - 1}`;
 }
-
-let getSliderIndex = null;
 
 function indexCounter(){
     const $banner_item = document.querySelectorAll('.banner__item');
     const maxIndex = $banner_item.length - 1;
-    let index = 0;
+    const firstIndex = 1;
+    let index = firstIndex;
 
     return (direction) => {
         if(direction === 'left'){
-            index = --index < 0 ? 0 : index;
+            index = --index < 0 ? maxIndex - firstIndex : index;
         }
 
         if(direction === 'right'){
-            index = ++index > maxIndex ? maxIndex : index;
+            index = ++index > maxIndex ? firstIndex : index;
         }
 
         return [maxIndex, index];
     }
 }
 
-function initGetSliderIndex(){
-    if(getSliderIndex === null){
-        getSliderIndex = indexCounter();
+function initIndexCounter(){
+    if(countSliderIndex === null){
+        countSliderIndex = indexCounter();
     }
 }
 
-/* 슬라이더 버튼 */
+/* 슬라이더 버튼 이벤트 */
 export function setButtonEvent() {
     const $left_button = document.querySelector('.banner__paging--left');
     const $right_button = document.querySelector('.banner__paging--right');
@@ -57,11 +65,39 @@ function buttonClickHandler(event){
 }
 
 function handleClickEvent(event){
-    const $banner_list = document.querySelector('.banner__list');
     const direction = event.target.dataset.direction;
-    const [maxIndex, currentIndex] = getSliderIndex(direction);
+    let [maxIndex, currentIndex] = countSliderIndex(direction);
     const defaultMovePercent = 100;
-    
-    $banner_list.style.transform = `translate(-${defaultMovePercent * currentIndex}%, 0px)`;
+
+    setTransformTranslateX(defaultMovePercent * currentIndex);
+
+    if(currentIndex === 0 || currentIndex === maxIndex){
+        const movementDelay = 350;
+        [maxIndex, currentIndex] = countSliderIndex(direction);
+        setTimeout(() => { 
+            backToItem(defaultMovePercent * currentIndex, movementDelay) 
+        }, movementDelay);
+    }
+
     setBannerOrderText(maxIndex, currentIndex);
+}
+
+/* 무한 슬라이드 처리 */
+function backToItem(xPercent, delay) {
+    setTransitionSpeed(0);
+    setTransformTranslateX(xPercent);
+    setTimeout(() => {
+        setTransitionSpeed();
+    }, delay);
+}
+
+function setTransformTranslateX(xPercent){
+    const $banner_list = document.querySelector('.banner__list');
+    $banner_list.style.transform = `translate(-${xPercent}%, 0px)`;
+}
+
+function setTransitionSpeed(speed = null){
+    const defaultSpeed = 0.3;
+    const $banner_list = document.querySelector('.banner__list');
+    $banner_list.style.transition = `transform ${speed != null ? speed : defaultSpeed}s`;
 }

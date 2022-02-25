@@ -74,8 +74,7 @@ function renderSliderBanner(tabName){
     $banner_section.classList.add('main-banner', 'section');
     $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(tabName);
     $body_main.appendChild($banner_section);
-    SliderController.setBannerOrderText();
-    SliderController.setButtonEvent();
+    SliderController.init();
 }
 
 function renderMenu(tabName){

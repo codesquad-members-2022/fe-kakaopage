@@ -185,7 +185,7 @@ main {
 .banner__list {
     display: flex;
     width: 720px;
-    transition: transform 0.3s;
+    transform: translate(-100%, 0px);
 }
 
 .banner__item {

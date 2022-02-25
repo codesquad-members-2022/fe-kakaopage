@@ -90,7 +90,7 @@ export function createInstallButtonHTML(){
 }
 
 function createSliderItemHTML(itemData){
-    const title = itemData.title.split('\n').reduce((acc, cur) => { return acc + `<p>${cur}</p>`}, '');
+    const title = itemData.title.split('\n').reduce((title, contents) => { return title + `<p>${contents}</p>`}, '');
     return /* html */ `
         <li class="banner__item">
             <img class="banner__image" src="${itemData.imageSrc}" alt="메인배너 이미지">
@@ -121,11 +121,22 @@ function createSliderItemHTML(itemData){
 
 function createSliderListHTML(tabName){
     const sliderData = SliderBanner[tabName];
-    const listHTML = sliderData.reduce((listHTML, itemData) => { return listHTML + createSliderItemHTML(itemData)}, '');
+    let firstItem = 0;
+    let endItem = sliderData.length - 1;
+    const listHTML = sliderData.reduce((listHTML, itemData, index) => { 
+        const itemHTML = createSliderItemHTML(itemData);
+        
+        if(index === firstItem) firstItem = itemHTML;
+        if(index === endItem) endItem = itemHTML;
+
+        return listHTML + itemHTML;
+    }, '');
     return /* html */ `
         <div class="banner__contents">
             <ul class="banner__list">
+                ${endItem}
                 ${listHTML}
+                ${firstItem}
             </ul>
         </div>
     `;
