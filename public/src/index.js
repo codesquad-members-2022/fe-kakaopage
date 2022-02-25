@@ -1,14 +1,14 @@
 import CategoryList from "./screens/Components/CategoryList.js";
 import Category from "./screens/Components/Category.js";
-import { getJson } from "./utils.js";
+import { getJsons } from "./utils.js";
 import GenreList from "./screens/Components/GenreList.js";
 import HomeGenre from "./screens/Webtoon/genre/HomeGenre.js";
-import DaysGenre from "./screens/Webtoon/genre/DaysGenre.js";
 
 const init = async () => {
-  const { results: categories } = await getJson("categories");
-  const { results: genres } = await getJson("genres");
-  const { results: webtoons } = await getJson("webtoon");
+  const paths = ["categories", "genres", "webtoons"];
+
+  const [{ results: categories }, { results: genres }, { results: webtoons }] =
+    await getJsons(paths);
 
   localStorage.setItem("genres", JSON.stringify(genres));
   localStorage.setItem("webtoons", JSON.stringify(webtoons));

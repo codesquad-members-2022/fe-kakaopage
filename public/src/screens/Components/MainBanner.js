@@ -34,14 +34,14 @@ function MainBanner(target, state) {
                         </span>
                     </div>
                 </div>
-                <div class="imgBox__order">
-                    <span class="orderNum">1</span>
-                    <span class="orderBar">/</span>
-                    <span class="orderNum">3</span>
-                </div>
             </div>
             <div class="banner__message">
                 <span>${webtoon.mainDesc}</span>
+            </div>
+            <div class="imgBox__order">
+                <span class="orderNum">1</span>
+                <span class="orderBar">/</span>
+                <span class="orderNum">3</span>
             </div>
         </li>
         `;

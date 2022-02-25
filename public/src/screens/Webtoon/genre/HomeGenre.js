@@ -7,7 +7,11 @@ import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../Component.js";
-import { createExtendsRelation, updateNodeClasses } from "../../../utils.js";
+import {
+  createExtendsRelation,
+  updateNodeClasses,
+  getComponentsTemplate,
+} from "../../../utils.js";
 import DaysList from "../../Components/DaysList.js";
 import ContentsBox from "../../Components/ContentsBox.js";
 import FullButton from "../../Components/FullButton.js";
@@ -15,23 +19,34 @@ import FullButton from "../../Components/FullButton.js";
 function HomeGenre(target) {
   Component.call(this, target);
 
+  const WEBTOONS_TOTAL_COUNT = 1318;
+  const DAYS_TOP_WEBTOON_PER_PAGE = 10;
+
   this.setEvent = function () {
     this.addEvent("click", ".daysNav-item", ({ target }) => {
       const eventTarget = target.closest(".daysNav-item");
       updateNodeClasses(eventTarget, "selected");
       const koreaDay = eventTarget.textContent;
-      const daysTopBox = this.state.contents.find(
-        (content) =>
-          content.constructor.name === "ContentsBox" &&
-          content.state.contents === "daysTop"
+
+      const isDaysTopBox = (content) =>
+        content.constructor.name === "ContentsBox" &&
+        content.state.contents === "daysTop";
+
+      const daysTopBox = this.state.contents.find((content) =>
+        isDaysTopBox(content)
       );
-      daysTopBox.state.contentsBody.setState({
+
+      const { contentsBodyDiv, contentsBody } = daysTopBox.state;
+      const daysList = new DaysList(contentsBodyDiv, {
         koreaDay,
-        daysList: new DaysList(daysTopBox.state.contentsBodyDiv, {
-          koreaDay,
-          count: 10,
-        }),
+        count: DAYS_TOP_WEBTOON_PER_PAGE,
       });
+
+      contentsBody.setState({
+        koreaDay,
+        daysList,
+      });
+
       this.render();
     });
   };
@@ -51,13 +66,15 @@ function HomeGenre(target) {
   const daysTopBox = new ContentsBox(target, {
     title: "요일 연재 TOP",
     contents: "daysTop",
-    titleNum: 1318,
+    titleNum: WEBTOONS_TOTAL_COUNT,
   });
-  const daysList = new DaysList(daysTopBox.state.contentsBodyDiv, {
+  const daysTopBoxTarget = daysTopBox.state.contentsBodyDiv;
+
+  const daysList = new DaysList(daysTopBoxTarget, {
     koreaDay,
-    count: 10,
+    count: DAYS_TOP_WEBTOON_PER_PAGE,
   });
-  const daysTop = new DaysTop(daysTopBox.state.contentsBodyDiv, {
+  const daysTop = new DaysTop(daysTopBoxTarget, {
     days,
     koreaDay,
     daysList,
@@ -111,13 +128,11 @@ function HomeGenre(target) {
       new FullButton(),
     ],
   });
+
   this.template = function () {
-    const { contents } = this.state;
-    return `${contents?.reduce((tags, content) => {
-      tags += content.template();
-      return tags;
-    }, "")}`;
+    return getComponentsTemplate(this.state.contents);
   };
+
   this.render();
 }
 

@@ -1,71 +1,136 @@
 # fe-kakaopage
 
-### 2주차
+### 2주차 - 금요일PR
 
-## 생각해본점
+### 🧐 어떤 생각으로?
 
-### 이벤트 위임
+- `front` - `back` 폴더 구조 나누었던 것을 back 폴더를 따로 Repository 를 둬서 API 서버처럼 활용하고자 하였음
+  - <a href="https://github.com/healtheloper/fe-kakaopage-back" target="_blank">fe-kakaopage-back</a>
+  - heroku 를 사용해서 간이 api 서버를 만들었다.
 
-- 기존에 이벤트를 등록하던 방식( render 할 때, 요소 하나하나에 이벤트를 등록)이 맘에 들지 않았었다.
-- 때마침 미션내용으로 `이벤트 위임` 이라는 키워드로 이 부분을 개선할 수 있겠다는 생각을 했다.
+### 🥲 아쉬웠던 || 어려웠던 점?
 
-### Node 개발 환경 적용
+### 👍 잘했던 || 좋았던점
 
-- front, back 을 나누어 볼까?
-  - back 은 api url 을 통해서 데이터를 받는 간단한 서버로만
+### 🧑‍💻 알아볼점
 
-## Task List
+### PR 리뷰로 개선한 점
 
-### Node 개발 환경 적용
+1. getJson 함수
 
-- [x] 기존에 VSC Extension 의 `Live server` 를 사용하던 개발 방식에서 Node 환경으로 변경
-  - HTML을 로드하는 방법? (`fs.readfile` vs `response.sendFile`)
-- [ ] 기존에 사용하던 모듈화 방식 (브라우저 모듈) 을 그대로 사용하면 오류날 것 같은데 고치기
-  - 오류 안났음.. 왠지 이유 찾아보기
+<img width="534" alt="스크린샷 2022-02-24 오후 8 24 17" src="https://user-images.githubusercontent.com/58503584/155515299-1e37b9a5-b644-4631-85a3-fee34724e852.png">
 
-### 동적 기능 개발 - 이벤트 위임
+```js
+// Before
+const getJson = (dataName) => {
+  return new Promise((resolve, reject) => {
+    try {
+      fetch(`${HEROKU_SERVER_URL}${dataName}`)
+        .then((response) => response.json())
+        .then((json) => resolve(json));
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
+```
 
-- [x] 이벤트 등록방식 bubbling 적용하기
-- [x] Render 방식 Navigation 별로 등록해놓은 것 추상화
+- async 로 함수를 선언하면 Promise 를 반환한다는 점을 사용하지 않았다.
 
-### 추가로 적용해본 것
+```js
+// After
+const getJson = async (dataName) => {
+  try {
+    const response = await fetch(`${HEROKU_SERVER_URL}${dataName}`);
+    return response.json();
+  } catch (error) {
+    console.error(error);
+  }
+};
+```
 
-- [x] front, back 나눠서 두 개의 서버 띄워서 사용해보기
-- [ ] back -> api 형태로만 사용, heroku 등을 사용해봐서 데모링크도 띄워보자.
-- [x] localStorage 이용해서 fetch 한번만 하기
+2. `getJson` 으로 데이터를 불러오는 과정 - 병렬처리
 
-## 문제가 생겼던 점
+크롱이 피드백을 주신 부분에 대한 내용이다.
+<img width="651" alt="스크린샷 2022-02-24 오후 4 49 20" src="https://user-images.githubusercontent.com/58503584/155480982-9b44500e-2eab-40b4-84f7-9ce3c17c393f.png">
 
-- 상대경로 적용문제
+실제로 내 페이지를 처음 로드하면 아래와같이 Waterfall 이 순차적으로 이루어지는 것을 볼 수 있었다.
 
-  - index.html 과 js 파일 등의 경로를 마음대로 정하고 상대경로로 지정하려다 보니 경로지정에 문제가 생겼었다.
+<img width="1122" alt="스크린샷 2022-02-24 오후 4 51 22" src="https://user-images.githubusercontent.com/58503584/155481303-b6aa5659-30d1-418e-9388-6519707d9d92.png">
 
-  - 파일 구조를 어떻게 짜는게 좋을까
-    - app.js 에서 static 으로 보내니까 public 안으로 넣으면 해결될 것이라고 생각했다.
-    - 서버에서 실행할 때 + 로컬에서 실행할 때 모두 경로 정상적용됨
+- 위 데이터를 순차적으로 받아와야 하는지? -> 아니다.
+- 그렇다면 어떻게 병렬처리를 할 수 있을지?
+  - Promise.all
+  - 도리가 공유해주신 사이트의 방법
 
-- appendHTML 사용
+```js
+// Before
+const { results: categories } = await getJson("categories");
+const { results: genres } = await getJson("genres");
+const { results: webtoons } = await getJson("webtoons");
+```
 
-  - 사용했던 이유 -> header 태그에 추가하면 정적으로 쓰이던 태그들이 innerHTML 때문에 다 날아갔다.
-  - 없앤이유 -> setState 로 계속 state 를 관리해줘야 하는데 appendHTML 하면 태그가 계속 중복되어 생성되어서
-    - 예를들어 CategoryList 에는 어떤 Genre Navigation State 을 갖고있는지 state 로 관리해야하니 CategoryList State 안에 Navigation 정보를 갖도록 setState 하려고 GenreList 를 추가하고 setState 했는데 CategoryList 가 += 로 두개가 생김
+<img width="936" alt="스크린샷 2022-02-24 오후 7 59 27" src="https://user-images.githubusercontent.com/58503584/155511838-0f52236a-6810-4ea0-8329-20029631dd2e.png">
 
-- 이벤트 버블링 방식 채택하니 문제
+기존에 사용하던 코드는 await await await 이기 때문에 Waterfall 이 순차적으로 이루어지고 최종적으로 응답된 시간이 `709ms` 인것을 볼 수 있었다.
 
-  - render 를 새로하면 원래 이벤트 리스너들이 다 삭제됐었는데 상위태그(this.target)가 남아있다보니 그대로 남아있게됨
-  - remove 해줘야하나?
+```js
+// After
+const paths = ["categories", "genres", "webtoons"];
+const [{ results: categories }, { results: genres }, { results: webtoons }] =
+  await Promise.all(paths.map((path) => getJson(path)));
+```
 
-- 컴포넌트에 state 초기값을 넣는 방식
+<img width="936" alt="스크린샷 2022-02-24 오후 7 56 05" src="https://user-images.githubusercontent.com/58503584/155511318-488f5f8c-2ec9-43c2-a8f2-942732da3abb.png">
 
-  - index.js 같은 위치에서 데이터를 생성하고 setState 로 넣어주는 게 좋을까
-  - 한번만 쓰일거라면 컴포넌트 안에서 데이터를 불러오는게 좋을까
+- Waterfall 이 병렬적으로 이루어지고 있고, `453ms` 로 Finish 되었다.
 
-- 클릭 이벤트마다 genres.json 요청?
+3. utility - 선택한 Target node 의 selected 클래스 추가
 
-  - cache 활용할 수 있는 방법? (localStorage?)
+<img width="527" alt="스크린샷 2022-02-24 오후 8 37 58" src="https://user-images.githubusercontent.com/58503584/155517146-8c056c67-0260-4e57-b8f8-bf28643f2729.png">
 
-- 태그 생성방식 통일하는거
+```js
+// Before
+const updateSelectedNode = (nodeList, target) => {
+  [...nodeList.children].forEach((node) => {
+    node.classList.remove("selected");
+  });
+  target.classList.add("selected");
+};
+```
 
-- 렌더링 이후 원하는 태그 가져오기가 어렵다
+- utility 함수니까 좀 더 범용적으로 쓰이면 좋겠다는 피드백이 있었다.
+- 생각해보니 클래스명을 selected 뿐만 아니라 다른 클래스명을 추가/삭제하는 경우도 있을 것 같아 클래스명을 인수로 받아 좀 더 범용적으로 쓰이게 했다.
+- 또한 nodeList 는 target 의 부모를 받는 경우가 대부분일 것으로 생각이 들어 nodeList 인자는 삭제하고 target 의 parentNode 를 찾아 쓰도록 변경했다.
 
-- setState 하면 target 을 기반으로 해서 새롭게 rendering 하는 데, innerHTML 을 사용하기 때문에 wrapper 를 새로 설정을 해줘야 하나 생각이 들었다.
+```js
+// After
+const updateNodeClasses = (target, className) => {
+  [...target.parentNode.children].forEach((node) => {
+    node.classList.remove(className);
+  });
+  target.classList.add(className);
+};
+```
+
+### ❗️문제발생 then 해결한 방법
+
+1. heroku 를 사용해서 서버를 만드니 CORS 문제가 발생하였다.
+
+- CORS 해결을 위한 Response 의 헤더설정을 Back 서버쪽에서 해주었다.
+- 모든 Router 마다 헤더를 달아주는건 비효율적이라고 생각이 들어서 찾아보니 미들웨어를 활용하면 되겠다는 생각을 해서 CORS 헤더설정을 위해 미들웨어로 사용할 함수를 작성했다.
+- 다양한 origin 에서 사용하지만, 모든 곳(\*)에서 사용하게 하고싶진 않아서 아래와 같은 방법을 사용했다.
+
+```js
+app.use((req, res, next) => {
+  const origins = [
+    "http://localhost:3030",
+    "http://127.0.0.1:5500",
+    "https://codesquard-fe-park.github.io",
+  ];
+  if (origins.includes(req.headers.origin)) {
+    res.setHeader("Access-Control-Allow-Origin", req.headers.origin);
+  }
+  next();
+});
+```

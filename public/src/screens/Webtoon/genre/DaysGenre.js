@@ -1,7 +1,10 @@
 import Component from "../../Component.js";
 import MainBanner from "../../Components/MainBanner.js";
 import FullButton from "../../Components/FullButton.js";
-import { createExtendsRelation } from "../../../utils.js";
+import {
+  createExtendsRelation,
+  getComponentsTemplate,
+} from "../../../utils.js";
 
 function DaysGenre(target) {
   Component.call(this, target);
@@ -13,11 +16,7 @@ function DaysGenre(target) {
   });
 
   this.template = function () {
-    const { contents } = this.state;
-    return `${contents?.reduce((tags, content) => {
-      tags += content.template();
-      return tags;
-    }, "")}`;
+    return getComponentsTemplate(this.state.contents);
   };
   this.render();
 }

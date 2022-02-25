@@ -1,4 +1,4 @@
-import { createExtendsRelation } from "../../utils.js";
+import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
 import Component from "../Component.js";
 import Card from "./Card.js";
 
@@ -8,12 +8,12 @@ function GenreTop(target, state) {
   const webtoons = JSON.parse(localStorage.getItem("webtoons"));
   const genreCards = webtoons
     .filter((wt) => wt.genre.includes(this.state.genre))
-    .map((cardInfo) => new Card("_", cardInfo).template());
+    .map((cardInfo) => new Card("_", cardInfo));
 
   this.template = function () {
     return `
         <ul class="contentsCard">
-          ${genreCards.join("")}
+          ${getComponentsTemplate(genreCards)}
         </ul>`;
   };
 }

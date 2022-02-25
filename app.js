@@ -18,5 +18,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`✅ Front Server Listening on port ${port}`);
+  console.log(`✅ Front Server Listening on localhost:${port}`);
 });

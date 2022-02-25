@@ -1,5 +1,5 @@
 import CardInfoRow from "./CardInfoRow.js";
-import { createExtendsRelation } from "../../utils.js";
+import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
 import Component from "../Component.js";
 
 function DateTop(target, state) {
@@ -10,16 +10,15 @@ function DateTop(target, state) {
   const dateTopCards = webtoons
     .filter((wt) => wt.days.includes(koreaDay))
     .sort((wt1, wt2) => wt2.rank - wt1.rank)
-    .slice(0, 3);
+    .slice(0, 3)
+    .map(
+      (card, index) => new CardInfoRow("_", { ...card, ranking: index + 1 })
+    );
 
   this.template = function () {
     return `
       <ul class="contents__date">
-        ${dateTopCards
-          .map((card, index) =>
-            new CardInfoRow("_", { ...card, ranking: index + 1 }).template()
-          )
-          .join("")}
+        ${getComponentsTemplate(dateTopCards)}
       </ul>`;
   };
 }
