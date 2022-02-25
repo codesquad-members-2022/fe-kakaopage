@@ -19,10 +19,25 @@ const getEventImg = () => {
 };
 
 const addSlideEvL = () => {
-  $("#right").addEventListener("click", () => {
-    console.log("right button clicked");
+  $("#left").addEventListener("click", () => {
+    const curIdx = Number($("#event-count").textContent);
+    if (curIdx === 1) return;
+
+    $("#event-count").textContent = curIdx - 1;
+
     $$(".event-img").forEach((img) => {
-      img.style.transform = "translateX(-670px)";
+      img.style.transform = `translateX(${-670 * (curIdx - 2)}px)`;
+    });
+  });
+
+  $("#right").addEventListener("click", () => {
+    const curIdx = Number($("#event-count").textContent);
+    if (curIdx === dataOfEvent.length) return;
+
+    $("#event-count").textContent = curIdx + 1;
+
+    $$(".event-img").forEach((img) => {
+      img.style.transform = `translateX(${-670 * curIdx}px)`;
     });
   });
 };
@@ -71,7 +86,9 @@ const createEventBlock = () => {
           d="M15 19l-7-7 7-7"
         />
       </svg>
-      <span class="event-count">${currIdx + 1}/${dataOfEvent.length}</span>
+      <span class="event-count" id="event-count">${
+        currIdx + 1
+      }</span><span class="event-count">/${dataOfEvent.length}</span>
       <svg
         class="arrow-icon" id="right"
         xmlns="http://www.w3.org/2000/svg"
