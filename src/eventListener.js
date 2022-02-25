@@ -38,7 +38,6 @@ const renderAccordingMainBannerButton = (targetClass, mainBannersData) => {
 
 const throttleMainBannerEvent = () => {
     MAIN_BANNER_INFO.throttling = setTimeout(() => {
-        console.log(MAIN_BANNER_INFO.throttling)
         MAIN_BANNER_INFO.throttling = null;
     }, MAIN_BANNER_INFO.slideTime);
 }

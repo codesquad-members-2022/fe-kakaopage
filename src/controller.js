@@ -78,8 +78,6 @@ export const startMainBanerTimer = (mainBannersData) => {
     };
 
     MAIN_BANNER_INFO.mainBannerTimer = setInterval(() => {
-        console.log(MAIN_BANNER_INFO.mainBannerTimer)
-
         moveMainBanner(mainBannersData[MAIN_BANNER_INFO.currentIdx + 1], parmToMoveMainBanner);
     }, MAIN_BANNER_INFO.slideTime);
 }
