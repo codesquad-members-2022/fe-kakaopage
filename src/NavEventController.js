@@ -20,7 +20,9 @@ function weekNavClickHandler(event){
     const $nav_item_selected = document.querySelector(`.${selected}`);
     const dataKey = $nav_item.dataset.dataKey;
 
-    if($nav_item === $nav_item_selected) return;
+    if($nav_item === $nav_item_selected) {
+        return;
+    }
 
     $nav_item.classList.add(selected);
     $nav_item_selected.classList.remove(selected);
@@ -42,7 +44,9 @@ function headerNavClickHandler(event){
 
     const dataKey = $nav_item.dataset.dataKey;
 
-    if($nav_item === $nav_item_selected) return;
+    if($nav_item === $nav_item_selected) {
+        return;
+    }
 
     $nav_item.classList.add(selected);
     $nav_item_selected.classList.remove(selected);
