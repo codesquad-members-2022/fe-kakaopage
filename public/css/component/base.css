@@ -102,16 +102,22 @@
     margin-bottom: 0;
 }
 
-.aside__banner-slider{
+.aside__banner-slider {
+    position: absolute;
     width: 720px;
     height: 460px;
-    /* overflow: hidden; */
+    overflow: hidden;
+    /* transform: translateX(-720px); */
 }
 
 .aside__banner-slide-list {
     display: flex;
-    position: relative;
+
+    /* transform: translateX(-500px); */
+    transition: transform 0.3s ease-in-out;
 }
+
+
 
 .aside__banner-tittle-wrapper {
     position: absolute;
