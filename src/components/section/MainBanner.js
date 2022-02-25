@@ -21,9 +21,12 @@ const MainBanner = (type = 'carousel') => {
   if (type === 'carousel') {
     html = setCarousel(html);
     html.addEventListener('click', carouselCallback);
-  } else {
+  }
+
+  else if (type === 'manual') {
     html.addEventListener('click', bannerCallback);
   }
+
   setContainerWidth(html);
 
   return html;
