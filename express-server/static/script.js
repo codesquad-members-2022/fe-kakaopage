@@ -1,8 +1,8 @@
-import {AddEvent} from "./utils.js";
+import {addEvent} from "./utils.js";
 import {menuNav} from "./components/menuNav.js";
 import {headerBar} from "./components/headerBar.js";
-import {home} from "./pages/Home.js";
-import {daily} from "./pages/Daily.js";
+import {home} from "./pages/home.js";
+import {daily} from "./pages/daily.js";
 
 
 const body = document.querySelector('body');
@@ -36,7 +36,7 @@ const App = async (target, position)=>{
     menuNav(target.querySelector('.mainContent>.mainNav'));
     const section = target.querySelector('section')
     await home(section, 'beforeend');
-    AddEvent(target, 'click', '.TopBanner>span', async (e)=>{
+    addEvent(target, 'click', '.TopBanner>span', async (e)=>{
         const cat = e.target.closest('span')
         target.querySelector('.TopBanner>.selected').classList.remove('selected');
         cat.classList.add('selected');

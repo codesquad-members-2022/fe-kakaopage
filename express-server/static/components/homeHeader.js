@@ -1,7 +1,7 @@
-import {AddEvent, jsonRoute, renderGrid} from "../utils.js";
+import {addEvent, jsonRoute, myFetch, renderGrid, select} from "../utils.js";
 import {comicItem} from "./comicsGrid.js";
 
-export const homeHeader = async (target, position)=>{
+export const homeHeader = (target, position, comics, infographic)=>{
     const template = `
     <div class="HomeHeader">
         <div class="ifYouWait">
@@ -16,15 +16,15 @@ export const homeHeader = async (target, position)=>{
     <div class="comicsGrid"></div>
     `
     target.insertAdjacentHTML(position, template)
-    target.querySelector('.comicsGrid').style.paddingTop = '10px';
-    const grid = target.querySelector('.comicsGrid')
-    const key = target.querySelector('.weekdays>.selected').dataset.key
-    await renderGrid(grid, key);
-    AddEvent(target, 'click', 'li', async ({target:eventTarget})=>{
-        target.querySelector('.weekdays>.selected').classList.remove('selected');
+    select(target,'.comicsGrid').style.paddingTop = '10px';
+    const grid = select(target,'.comicsGrid')
+    const jsonKey = select(target,'.weekdays>.selected').dataset.key
+    renderGrid(comics, infographic, grid, jsonKey);
+    addEvent(target, 'click', 'li', ({target:eventTarget})=>{
+        select('target,.weekdays>.selected').classList.remove('selected');
         const li = eventTarget.closest('li');
         li.classList.add('selected');
-        await renderGrid(grid, li.dataset.key)
+        renderGrid(comics, infographic, grid, li.dataset.key)
     });
 
 }

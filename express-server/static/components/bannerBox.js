@@ -1,10 +1,15 @@
-import {randomGen} from "../utils.js";
+import {addEvent, randomGen, select, selectAll} from "../utils.js";
+import {carouselSlider} from "./carousel.js";
 
 
 export const BannerBox = (target,images, infographic )=>{
+
+    let idx = 1;
     const template =
     `<div class="carousel">
-                <img src=${randomGen(images.banner)} />
+            ${images.banner.map((image,idx)=>`
+            <div class="slide">
+                <img src=${image} />
                 <div class="info">
                     <div class="description">
                         <span>짐승같은 남자</span>
@@ -19,16 +24,21 @@ export const BannerBox = (target,images, infographic )=>{
                              alt="Seperator"/>
                         <img src=${infographic.Person}/>
                         <div>81.1만명</div>
-                        <div class="page">3 / 13</div>
+                       
                     </div>
                 </div>
-            </div>
-
-            <button type="button" class="prevBtn">
-                <img src=${infographic.prev}>
-            </button>
-            <button class="nextBtn">
-                <img src=${infographic.next}/>
-            </button>  `
-    target.innerHTML =  template
+            </div>`).join('')}
+        </div>
+         <div class="page"></div>
+        <div class="control">
+        <button type="button" class="prevBtn">
+            <img src=${infographic.prev}>
+        </button>
+        <button class="nextBtn">
+            <img src=${infographic.next}/>
+        </button>
+        </div>
+              `
+    target.innerHTML = template;
+    carouselSlider(target, idx);
 }

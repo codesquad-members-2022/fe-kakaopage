@@ -1,4 +1,4 @@
-import {AddEvent} from "../utils.js";
+import {addEvent} from "../utils.js";
 
 export const menuNav = (target)=>{
     const template =  `
@@ -29,7 +29,7 @@ export const menuNav = (target)=>{
 </ul>`
     let tmp = '';
     target.innerHTML = template;
-    AddEvent(target, 'click', '.menu', ({target:eventTarget})=>{
+    addEvent(target, 'click', '.menu', ({target:eventTarget})=>{
         const section = document.querySelector('section')
         const main = document.querySelector('main');
         if(eventTarget.closest('li.menu').classList.contains('toon')){
