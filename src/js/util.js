@@ -41,6 +41,8 @@ const VAL = {
   TRANSITION_TIME: 0.25,
   SWICHING_TIME: 500,
   bannerWidth: 720,
+  MAX_BANNER_COUNT: 7,
+  MIN_BANNER_COUNT: 2,
 };
 
 export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE, VAL };

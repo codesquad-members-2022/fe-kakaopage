@@ -1,4 +1,4 @@
-import { $, CL, TITLE, today, data } from './util.js';
+import { $, CL, TITLE, today, data, VAL } from './util.js';
 import { SNB } from './components/SNB.js';
 import { MainBanner } from './components/MainBanner.js';
 import { DayBar } from './components/DayBar.js';
@@ -120,10 +120,19 @@ const renderContent = {
 
 const renderComponent = {
   mainBanner() {
-    const randomNum = Math.floor(Math.random() * 9);
     const $mainContents = $('.main-contents');
     $mainContents.innerHTML = '';
-    $mainContents.append(MainBanner([...data].splice(randomNum, 4)));
+    const randomNum = Math.floor(Math.random() * VAL.MAX_BANNER_COUNT);
+    const bannerArr = [...data];
+    const pickedBanner = [];
+
+    while (pickedBanner.length <= randomNum) {
+      pickedBanner.push(
+        bannerArr.splice(Math.floor(Math.random() * bannerArr.length), 1)[0]
+      );
+    }
+
+    $mainContents.append(MainBanner(pickedBanner));
   },
 
   dayBar() {
