@@ -137,22 +137,14 @@ export function createBanner({ size, title, status, type, views, ad }) {
 <body>
   <header></header>
   <nav class="GNB">홈 웹툰 웹소설 영화 방송 책</nav>
+  <nav class="SNB">홈 요일연재 웹툰 소년 드라마 로맨스 로판 액션무협 BL</nav>
   <div class="contents">
-    <nav class="SNB">홈 요일연재 웹툰 소년 드라마 로맨스 로판 액션무협 BL</nav>
     <!-- ... -->
   </div>
   <footer></footer>
 </body>
 ```
 
-<<<<<<< HEAD
-1. contents에 innerHTML 메소드를 활용하여 DOM 교체
-2. 모든 탭을 미리 그려놓고 display: none 으로 숨겨놓기
-   - 페이지의 매우 크다면 문제가 될 것 같기는 한데 그 적정선은 어디일까?
-
-- 위의 2가지 방법 이외에도 다른 방법이 있을까?
-- 지난 주 PR 훑어보고 공통적인 피드백 적용하기.
-=======
 #### snb의 탭 이동
 
 - contents에 innerHTML을 갱신하는 방법으로 랜더링.
@@ -168,17 +160,24 @@ export function createBanner({ size, title, status, type, views, ad }) {
 - 그럼 이벤트 삭제를 언제 왜 해주어야 할까?
   - 일정 조건을 달성하면 더이상 필요없는 이벤트일때?
   - 탭 이동을 구현할 때 필요한가?
->>>>>>> step3
+    클릭하는 해당 엘리먼트에 이벤트를 거는것이 아니라 상위 엘리먼트에 이벤트를 걸고 이벤트 버블링을 사용하는 경우에는 이벤트를 삭제해야 한다.
+    탭을 이동하면 계속 이벤트 리스너가 쌓이기 때문에.
+
+#### 그룹 리뷰
+
+- 실험용 브랜치
+  - 이름은 어떻게 지어야 하나?
+  - git issue를 발급해서 설명을 작성한다?
+    - merge하지 않을 경우에는 issue는 그냥 close?
+- 경로
+  - 여러 파일에서 참조되고 있는 파일의 경로를 수정할 때 경로를 자동으로 수정해주는 익스텐션(?)은 없을까?
 
 ### 학습 정리
 
 #### Flexbox 사용법
 
-<<<<<<< HEAD
-=======
 https://d2.naver.com/helloworld/8540176
 
->>>>>>> step3
 #### commit 로그를 작성하는 좋은 사례
 
 #### HTML 시멘틱 태그
