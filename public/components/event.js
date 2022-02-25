@@ -64,7 +64,7 @@ const createEventBlock = () => {
       />
     </svg>
   </header>
-  <div class="event-img-container">
+  <div class="position-rel">
     <div class="round-container side-by-side">
       ${getEventImg()}
     </div>
