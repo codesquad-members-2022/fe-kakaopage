@@ -4,11 +4,8 @@
 
 week2-2
 
-<<<<<<< HEAD
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/68533016/155644659-21251a4a-2538-407f-98d0-0f096b74d1d8.gif)
 
-=======
->>>>>>> 1ca237b (Refactor: PR 리뷰 관련 사항 수정)
 - 웹 애니메이션 슬라이딩 구현
   - [x] 수동 슬라이딩 기능
     - 좌/우 버튼을 눌렀을 때 슬라이딩 가능
