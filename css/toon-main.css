@@ -26,6 +26,11 @@
   display: flex;
 }
 
+.toon-category li.check {
+  color: #333;
+  font-weight: 500;
+}
+
 .toon-main {
   width: 720px;
   margin: 11px auto 0px auto;
