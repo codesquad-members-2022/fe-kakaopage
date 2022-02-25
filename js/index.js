@@ -57,13 +57,31 @@ const renderWeekday = (today = new Date().getDay()) => {
     renderCarousel(carouselImgs["요일연재"]);
 };
 
+const setCaroulselPager = (carouselImgIdx = 1) => {
+    const carouselItemWrapper = $(".carousel-item-wrap");
+    const carouselItems = carouselItemWrapper.children;
+    const clonedNodeCnt = [...carouselItems].filter(
+        (el) => el.dataset.clone
+    ).length;
+    const imageCnt = carouselItems.length - clonedNodeCnt;
+    const pager = $(".cover-image").querySelector(".page");
+
+    const firstPageNum = 1;
+    const lastPageNum = imageCnt;
+    let curPage = carouselImgIdx;
+
+    curPage = curPage > lastPageNum ? firstPageNum : curPage;
+    curPage = curPage < firstPageNum ? lastPageNum : curPage;
+
+    pager.innerText = `${curPage} / ${lastPageNum}`;
+};
+
 const renderCarousel = (data) => {
     const carouselImgs = data;
     const carousel = new CaroulselItems({ carouselImgs });
 
-    let html = "";
-    html += carousel.getHtml();
-    $(".carousel-item-wrap").innerHTML = html;
+    $(".carousel-item-wrap").innerHTML = carousel.getHtml();
+    setCaroulselPager();
 };
 
 const preventDefaults = () => {
@@ -99,7 +117,6 @@ const bindCaroulselEvent = () => {
     let carouselImgIdx = 1;
     let isClickable = true;
     const carouselItemWrapper = $(".carousel-item-wrap");
-    const pager = $(".cover-image").querySelector(".page");
     const carouselItems = carouselItemWrapper.children;
     const imageWidth = $(".cover-image").clientWidth;
     const clonedNodeCnt = [...carouselItems].filter(
@@ -110,24 +127,12 @@ const bindCaroulselEvent = () => {
     const autoCarouselDelay = 2500;
     const customTransition = `transform ${transitionDuration} ease-out`;
 
-    const setPage = () => {
-        const firstPageNum = 1;
-        const lastPageNum = imageCnt;
-        let curPage = carouselImgIdx;
-
-        curPage = curPage > lastPageNum ? firstPageNum : curPage;
-        curPage = curPage < firstPageNum ? lastPageNum : curPage;
-
-        pager.innerText = `${curPage} / ${lastPageNum}`;
-    };
-    setPage();
-
     const setTransition = (transition) => {
         carouselItemWrapper.style.transition = transition;
     };
 
     const setTransform = (carouselImgIdx) => {
-        setPage();
+        setCaroulselPager(carouselImgIdx);
 
         carouselItemWrapper.style.transform = `translateX(${
             -imageWidth * carouselImgIdx
