@@ -413,7 +413,7 @@ table {
 .webtoon-slide__imgs {
   display: flex;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.5s;
 }
 .webtoon-slide__imgs .webtoon-slide__banner {
   padding: 10px;
@@ -424,6 +424,7 @@ table {
 
 .webtoon-slide__img {
   position: relative;
+  transform: translate3d(-720px, 0, 0);
 }
 .webtoon-slide__img .webtoon-slide__img--item {
   display: block;
@@ -499,6 +500,15 @@ table {
   margin: 1px;
   cursor: pointer;
   background-color: #f3f3f3;
+}
+
+.noti--cnt {
+  padding: 4px 6px;
+  margin-left: 5px;
+  font-size: 13px;
+  background-color: #ffd200;
+  border: 0;
+  border-radius: 10px;
 }
 
 .webtoon-menu__list--top-left {
@@ -727,15 +737,6 @@ table {
 
 .footer__company3 {
   font-weight: 400;
-}
-
-.noti--cnt {
-  padding: 4px 6px;
-  margin-left: 5px;
-  font-size: 13px;
-  background-color: #ffd200;
-  border: 0;
-  border-radius: 10px;
 }
 
 .display__block {

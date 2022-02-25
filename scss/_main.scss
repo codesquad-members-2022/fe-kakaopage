@@ -43,7 +43,7 @@
 .webtoon-slide__imgs {
   display: flex;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.5s;
 
   .webtoon-slide__banner {
     padding: 10px;
@@ -55,6 +55,7 @@
 
 .webtoon-slide__img {
   position: relative;
+  transform: translate3d(-720px, 0, 0);
 
   .webtoon-slide__img--item {
     display: block;
@@ -138,6 +139,15 @@
     cursor: pointer;
     background-color: $menu-gray;
   }
+}
+
+.noti--cnt {
+  padding: 4px 6px;
+  margin-left: 5px;
+  font-size: 13px;
+  background-color: $yellow;
+  border: 0;
+  border-radius: 10px;
 }
 
 .webtoon-menu__list--top-left {

@@ -1,9 +1,9 @@
-import dataParse from './dataParse.js'
-import data from './datas.js'
+import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
+import { data } from './webtoon-datas.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
-function setWebtoonList() {
+export function setWebtoonList() {
   const container = document.querySelector('#container')
   const serial = container.querySelector('.serial')
   const webtoon = container.querySelector('.serial__webtoons')
@@ -18,26 +18,24 @@ function setWebtoonList() {
     wentoonCopy.classList.replace('display__flex', 'display__none')
     wentoonCopy.setAttribute('data-day', days[i])
     serial.appendChild(wentoonCopy)
-    dataParse.setThumbnail(
+    setThumbnail(
       wentoonCopy,
       data[i].thumbnail__class,
       data[i].thumbnail__src,
       data[i].thumbnail__alt
     )
-    dataParse.setTitle(wentoonCopy, data[i].title__class, data[i].title__text)
     if (i === iconDays[0] || i === iconDays[1] || i === iconDays[2])
-      dataParse.setIcon(
+      setIcon(
         wentoonCopy,
         data[i].icon__class,
         data[i].icon__src,
         data[i].icon__alt
       )
-    dataParse.setUserCnt(wentoonCopy, data[i].user__class, data[i].user__text)
-    dataParse.setDay(wentoonCopy, data[i].day__class, data[i].day__text)
+    setTitleUserCntDay(wentoonCopy, data[i].user__class, data[i].user__text)
   }
 }
 
-function toggleActiveWebtoonTab(e) {
+export function toggleActiveWebtoonTab(e) {
   if (e.target.tagName === this.tagName) return
   const container = document.querySelector('#container')
   const webtoonTabList = container.querySelectorAll('.serial__webtoons')
@@ -55,7 +53,7 @@ function toggleActiveWebtoonTab(e) {
   })
 }
 
-function toggleActiveTab(e) {
+export function toggleActiveTab(e) {
   // 2. 현재 클릭한 메뉴
   const tabItem = e.target
   if (e.target.tagName === this.tagName) return
@@ -68,10 +66,4 @@ function toggleActiveTab(e) {
     // 5. 현재 focus에 클릭한 메뉴로 초기화
     currentActiveTab = tabItem
   }
-}
-
-export default {
-  setWebtoonList,
-  toggleActiveWebtoonTab,
-  toggleActiveTab,
 }

@@ -1,4 +1,4 @@
-function setThumbnail(doc, root, src, alt) {
+export function setThumbnail(doc, root, src, alt) {
   const thumbnail = doc.querySelector(root)
 
   thumbnail.src = src
@@ -11,7 +11,7 @@ function setTitle(doc, root, text) {
   title.textContent = text
 }
 
-function setIcon(doc, root, src, alt) {
+export function setIcon(doc, root, src, alt) {
   const icon = doc.querySelector(root)
   const imgSize = '13px'
 
@@ -33,4 +33,8 @@ function setDay(doc, root, text) {
   day.textContent = text
 }
 
-export default { setThumbnail, setTitle, setIcon, setUserCnt, setDay }
+export function setTitleUserCntDay(doc, root, text) {
+  setTitle(doc, root, text)
+  setUserCnt(doc, root, text)
+  setDay(doc, root, text)
+}
