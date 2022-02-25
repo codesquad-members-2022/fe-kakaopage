@@ -1,45 +1,53 @@
+// 일회성 json data 받기
 let data;
 const DATA_URL = "data/data.json";
 
-// 1회성 json data 받기
 await (async function getJson() {
   const res = await fetch(DATA_URL);
   data = await res.json();
 })();
 
-function $(selector) {
-  return document.querySelector(selector);
-}
+export const $ = (selector, base = document) => base.querySelector(selector);
 
-function getStrTag(tagName, className) {
-  return `<${tagName} class="${className || ""}"></${tagName}`;
-}
+export const $$ = (selector, base = document) =>
+  base.querySelectorAll(selector);
 
-/**
- * @param {string} selector
- * @param {string} className
- * @param {string} imagePath
- * @param {boolean} position true: 자식 앞 | false: 자식 뒤
- *
- * 문제있음.. 기능을 더 작게 분해하자.
- */
-function addImg(selector, className, imagePath, position) {
-  $(`.${selector}`).insertAdjacentHTML(
-    position ? "afterbegin" : "beforeend",
-    getStrTag("img", className)
-  );
-  $(`.${className}`).src = imagePath;
-}
+export const getStrTag = (tagName, className) =>
+  `<${tagName} class="${className || ""}"></${tagName}`;
 
-function addTag(selector, tagName, className, position) {
+export const addTag = (selector, tagName, className, position) => {
   $(selector).insertAdjacentHTML(
     position ? "afterbegin" : "beforeend",
     getStrTag(tagName, className)
   );
-}
+};
 
-function setProperty(selector, property, value) {
+export const setProperty = (selector, property, value) =>
   $(selector).setAttribute(property, value);
-}
 
-export { $, getStrTag, addImg, addTag, setProperty, data };
+export const addComponent = (selector, string = "", position = false) => {
+  $(selector).innerHTML = "";
+  if (selector === ".toon-main") {
+    $(selector).innerHTML = `
+  <div class="toon-jumbotron"></div>
+  <div class="toon-todaymenu"></div>
+  <div class="toon-ad-banner-1"></div>
+  <div class="toon-daytop"></div>`;
+  }
+  $(selector).insertAdjacentHTML(position ? "afterbegin" : "beforeend", string);
+};
+
+export const toggleList = (target = false, className) => {
+  if (!target) return;
+  const list = target.closest("ul").children;
+  [...list].forEach((v) => v.classList.remove(className));
+  target.closest("li").classList.add(className);
+};
+
+export const getToday = () => {
+  const week = ["일", "월", "화", "수", "목", "금", "토"];
+  const day = new Date().getDay();
+  return week[day];
+};
+
+export { data };
