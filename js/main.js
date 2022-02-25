@@ -2,15 +2,23 @@ import {
   toggleActiveTab,
   toggleActiveWebtoonTab,
   setWebtoonList,
+<<<<<<< HEAD
 } from './webtoon-list.js'
+=======
+} from './webtoonList.js'
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 import {
   setSlideImgStart,
   setSlideImg,
   setSlideBtn,
   moveAutoSlide,
 } from './slide.js'
+<<<<<<< HEAD
 import { data } from './slide-datas.js'
 import { searchSelctor } from './utility.js'
+=======
+import { data } from './slideDatas.js'
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 
 document.addEventListener('DOMContentLoaded', () => {
 <<<<<<< HEAD
@@ -29,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   setSlideImgStart(slides, slideEl, data[SLIDE_IMG_FIRST])
   data.forEach((e) => {
     setSlideImg(slides, slideEl, e)
@@ -45,6 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
   slide.setSlideBtn()
   // slide.moveAutoSlide()
 >>>>>>> 3fb7482 (refactor:  수동 슬라이드 코드 수정)
+=======
+  setSlideImgStart(slides, slideEl, data[3])
+  data.forEach((e) => {
+    setSlideImg(slides, slideEl, e)
+  })
+  slides.appendChild(slideEl.cloneNode(true))
+  setSlideBtn()
+  moveAutoSlide()
+>>>>>>> 37d60f0 (refactor: js import, export 부분 수정, utility.js 추가)
 
   setWebtoonList()
 })
