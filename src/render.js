@@ -7,6 +7,7 @@ import { renderMainBanner } from './components/mainBanner.js';
 import { renderCategoryGrid } from './components/categoryGrid.js';
 import { renderEventBanner } from './components/eventBanner.js';
 import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
+import { renderRecommendEvent } from './components/recommendEvent.js';
 
 export const initRender = () => {
     renderHeader();
@@ -14,48 +15,6 @@ export const initRender = () => {
     renderGenreTab(DEFAULT_PAGE);
     renderByGenre(DEFAULT_GENRE);
     activateAll();
-}
-
-
-const renderByGenre = (genre) => {
-    const renderList = genreRenderList[genre];
-    document.querySelector('.tab-contents').innerHTML = '';
-    renderList.forEach(component => render(component, genre));
-    activateDayTab();
-}
-
-const render = (component, genre) => {
-    const funcs = {
-        'mainBanner': renderMainBanner,
-        'categoryGrid': renderCategoryGrid,
-        'eventBanner': renderEventBanner,
-        'dayRanking': renderWorkSection.bind(null, 'small', component),
-        'newTop' : renderWorkSection.bind(null, 'banner', component),
-        'dailyRanking': renderWorkSection.bind(null, 'horizontal', component)
-    }
-    funcs[component](genre);
-}
-
-
-const activateAll = () => {
-    activateGnb();
-    activateGenreTab();
-    activateDayTab();
-}
-
-const handleTabClick = (event, type) => {
-    const selectionMark = `${type}-tab__item--selected`;
-    const prevSelected = document.querySelector(`.${selectionMark}`);
-    const newSelected = event.target.closest('li');
-    if (prevSelected === newSelected) return;
-    moveSelectionMark(prevSelected, newSelected, type);
-    reRender(newSelected, type);
-}
-
-const moveSelectionMark = (prevSelected, newSelected, type) => {
-    const selectionMark = `${type}-tab__item--selected`;
-    prevSelected.classList.remove(selectionMark);
-    newSelected.classList.add(selectionMark);
 }
 
 const reRender = (newSelected, type) => {
@@ -73,6 +32,33 @@ const reRender = (newSelected, type) => {
     }
 }
 
+const renderByGenre = (genre) => {
+    const renderList = genreRenderList[genre];
+    document.querySelector('.tab-contents').innerHTML = '';
+    renderList.forEach(component => render(component, genre));
+    activateDayTab();
+}
+
+const render = (component, genre) => {
+    const funcs = {
+        'mainBanner': renderMainBanner,
+        'categoryGrid': renderCategoryGrid,
+        'eventBanner': renderEventBanner,
+        'dayRanking': renderWorkSection.bind(null, 'small', component),
+        'newTop' : renderWorkSection.bind(null, 'banner', component),
+        'dailyRanking': renderWorkSection.bind(null, 'horizontal', component),
+        'recommendEvent': renderRecommendEvent
+    }
+    funcs[component](genre);
+}
+
+
+
+const activateAll = () => {
+    activateGnb();
+    activateGenreTab();
+    activateDayTab();
+}
 
 const activateGnb = () => {  
     const gnb = document.querySelector('.gnb');
@@ -88,3 +74,21 @@ const activateDayTab = () => {
     const dayTab = document.querySelector('.day-tab__container');
     dayTab.addEventListener('click', (e) => handleTabClick(e,'day'));
 }
+
+const handleTabClick = (event, type) => {
+    const selectionMark = `${type}-tab__item--selected`;
+    const prevSelected = document.querySelector(`.${selectionMark}`);
+    const newSelected = event.target.closest('li');
+    if (prevSelected === newSelected) return;
+    moveSelectionMark(prevSelected, newSelected, type);
+    reRender(newSelected, type);
+}
+
+const moveSelectionMark = (prevSelected, newSelected, type) => {
+    const selectionMark = `${type}-tab__item--selected`;
+    prevSelected.classList.remove(selectionMark);
+    newSelected.classList.add(selectionMark);
+}
+
+
+

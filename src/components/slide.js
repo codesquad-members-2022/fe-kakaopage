@@ -24,6 +24,21 @@ export const getpageNumTemplate = (parent, currNum, totalNum) => {
     `
 }
 
+export const getRecommendEventControllerTemplate = (parent, currNum, totalNum) => {
+    const pageNumTemplate = getpageNumTemplate(parent, currNum, totalNum)
+    return `
+        <div class='recommend-event__controller'>
+            <button class='slide__btn--prev'>
+              <img src=${icons.leftArrow} alt='이전 슬라이드 버튼' />
+            </button>
+            ${pageNumTemplate}
+            <button class='slide__btn--next'>
+              <img src=${icons.rightArrow} alt='다음 슬라이드 버튼' />
+            </button>
+        </div>
+    `
+}
+
 export const activateBtns = (parentElement) => {
     const prevBtn = parentElement.querySelector('.slide__btn--prev');
     const nextBtn = parentElement.querySelector('.slide__btn--next');
@@ -33,8 +48,8 @@ export const activateBtns = (parentElement) => {
 
 export const activateAutoSlide = (parentElement) => {
     const autoSlide = startAutoSlide(parentElement);
-    parentElement.addEventListener('mouseover', () => {clearInterval(autoSlide)});
-    parentElement.addEventListener('mouseleave', () => {activateAutoSlide(parentElement)});
+    parentElement.addEventListener('mouseenter', () => {clearInterval(autoSlide)});
+    parentElement.addEventListener('mouseleave', () => {startAutoSlide(parentElement)});
 }
 
 const startAutoSlide = (slide) => {

@@ -11,7 +11,7 @@ const workSections = {
 }
 
 export const genreRenderList = {
-    'home' : ['mainBanner', 'categoryGrid', 'eventBanner',...workSections.home],
+    'home' : ['mainBanner', 'categoryGrid', 'eventBanner',...workSections.home, 'recommendEvent'],
     'daily' :  ['mainBanner', ...workSections.daily],
     'webtoon' :  ['mainBanner', ...workSections.webtoon],
     'boy' :  ['mainBanner', 'categoryGrid', 'eventBanner', ...workSections.boy],

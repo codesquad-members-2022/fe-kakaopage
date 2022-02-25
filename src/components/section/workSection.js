@@ -1,6 +1,6 @@
 import { dayRankingData } from '../../data/works/dayRankingData.js';
 import { newTopData } from '../../data/works/newTopData.js';
-import { dailyRankingData } from '../../data/works/dailyRanking.js';
+import { dailyRankingData } from '../../data/works/dailyRankingData.js';
 import { makeWorkContainer } from './workContainer.js';
 import { icons } from '../../data/icons.js';
 import { DEFAULT_DAY } from '../../constant.js';
@@ -14,7 +14,8 @@ const dataDic = {
 const sectionTitleDic = {
   'dayRanking': '요일 연재',
   'newTop': '기대신작',
-  'dailyRanking': '일간 랭킹'
+  'dailyRanking': '일간 랭킹',
+  'recommendEvent': '추천 이벤트'
 }
 
 export const renderWorkSection = (layout, contents, genre) => {
@@ -27,7 +28,7 @@ export const renderWorkSection = (layout, contents, genre) => {
   document.querySelector('.tab-contents').appendChild(workSection);
 }
 
-const getHeaderTemplate = (contents) => {
+export const getHeaderTemplate = (contents) => {
     return  `
     <div class='section__header'>
           <div class='section__title-box'>
@@ -35,7 +36,7 @@ const getHeaderTemplate = (contents) => {
           </div>
           <div class='section__more-btn'>
             <span>더보기</span>
-            <img src=${icons.rightArrow} />
+            <img src=${icons.moreArrow} />
           </div>
         </div>`
 }

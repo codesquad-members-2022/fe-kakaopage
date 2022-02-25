@@ -65,11 +65,9 @@ const makeBannerType = (workData) => {
   return getBannerContentTemplate('new-top', workData);
 }
 
-
 const layoutDic = { 
   small: makeSmallType, 
   horizontal: makeHorizontalType, 
   vertical: makeVerticalType,
   banner: makeBannerType,
-
 };

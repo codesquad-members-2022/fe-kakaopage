@@ -546,22 +546,39 @@ header {
 }
 
 /* event */
-.recommend-event__banner {
-    width: 95%;
+.recommend-event-section {
+    padding-bottom: 20px;
+}
+
+.recommend-event-wrapper {
+    box-sizing: border-box;
     position: relative;
-    margin: 0 auto 20px auto;
+    width: 95%;
+    height: calc(360px * 0.95);
+    margin-top: 10px; 
+    margin-left: calc(5% / 2);  
     border-radius: 10px;
     overflow: hidden;
+}
+
+.recommend-event__contents {
+    width: calc(100% * 3);
+    position: absolute;
+    left: calc(100% * -1);
+    display: flex;
 }
 
 .recommend-event__controller {
     position: absolute;
     bottom: 20px;
     left: 30px;
-    width: 60px;
+    width: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
+    color: var(--color-gray);
+    font-weight: 500;
+    font-size: 1.25rem;
 }
 
 /* app-link */
