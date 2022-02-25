@@ -38,7 +38,7 @@ function makeTodayEvent(dayIdx, today) {
   const toonListArr = document.querySelectorAll('.navbar-second-content');
   webtoons.innerHTML = makeTodayList(day);
   if(dayIdx === today) toonList.parentElement.classList.add("makeBold", "makeBackgroundImg");
-  toonList.addEventListener('mousedown', function (el) {
+  toonList.addEventListener('click', function (el) {
     toonListArr.forEach((el, idx) => {
       el.classList.remove("makeBold", "makeBackgroundImg");
     })
