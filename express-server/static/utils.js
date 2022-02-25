@@ -8,7 +8,6 @@ export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
 export const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
 export const shuffled = (array, n) => array.sort(() => 0.5 - Math.random()).slice(0, n);
 
-export const getWebtoonData = async (day) => await (await fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/week?day=${day}`)).json();
 export const addEvent = (target, eventType, selector, callback) => {
     const children = [...target.querySelectorAll(selector)]
     const ok = (eventTarget) => children.includes(eventTarget) || eventTarget.closest(selector)
@@ -32,7 +31,6 @@ export const jsonRoute =(function(){
         "6": "sun",
         "7": "completed",
     }
-
   return function(key){
         return route[key]
   }
@@ -42,5 +40,9 @@ export const renderGrid = (data, infographic, target,key)=>{
 }
 export const myFetch = async (key)=>{
     const url = `http://127.0.0.1:3000/data/${key}.json`
-    return await(await fetch(url)).json();
+    try {
+        return await (await fetch(url)).json();
+    }catch(e){
+        console.log(e);
+    }
 }

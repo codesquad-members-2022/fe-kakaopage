@@ -3,8 +3,6 @@ import {carouselSlider} from "./carousel.js";
 
 
 export const BannerBox = (target,images, infographic )=>{
-
-    let idx = 1;
     const template =
     `<div class="carousel">
             ${images.banner.map((image,idx)=>`
@@ -40,5 +38,5 @@ export const BannerBox = (target,images, infographic )=>{
         </div>
               `
     target.innerHTML = template;
-    carouselSlider(target, idx);
+    carouselSlider(target);
 }
