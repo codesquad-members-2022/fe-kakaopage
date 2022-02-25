@@ -5,3 +5,4 @@ import {maketopItems} from '/client/module/topWebtoon.js'
 document.querySelector(".banner__container").innerHTML += slideBanner();
 document.querySelector(".webtoon__contents").innerHTML += makeWebtoonItems();
 document.querySelector(".daily__contents").innerHTML += maketopItems();
+

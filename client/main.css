@@ -52,10 +52,10 @@
 
 .banner__container{
     height: 35rem;
-    width: 2160px;
+    width: 100vw;
     display: flex;
     white-space: nowrap;
-    transform: translateX(-1040px);
+    /* transition: transform 0.5s; */
 }
 
 .banner__content{
@@ -75,7 +75,6 @@
     z-index: 3;
     display: flex;
     margin-top: -16rem;
-
     justify-content: space-between;
 }
 .banner__button button{
