@@ -1,9 +1,11 @@
+import { tabBook } from "../components/tab/global/book.js";
 import { tabBroadcast } from "../components/tab/global/broadcast.js";
 import { tabHome } from "../components/tab/global/home.js";
 import { tabMovie } from "../components/tab/global/movie.js";
 import { tabWebnovel } from "../components/tab/global/webNovel.js";
 import { tabWebtoonHome } from "../components/tab/global/webtoon.js";
 import { createTabWebtoonHome } from "../components/tab/sub/webtoonHome.js";
+import { CATEGORIES } from "./constants.js";
 import { addEventGNB, addEventSNB } from "./event.js";
 import { setSelectedSNB } from "./render.js";
 import { $ } from "./utils.js";
@@ -20,30 +22,30 @@ export function GNBHandler(e) {
   $(`.${selected}`).classList.remove(selected);
   parentClass.add(selected);
 
-  if (e.target.dataset.name === "홈") {
+  if (e.target.dataset.name === CATEGORIES.HOME) {
     tabHome.render();
     return;
   }
-  if (e.target.dataset.name === "웹툰") {
+  if (e.target.dataset.name === CATEGORIES.WEBTOON) {
     tabWebtoonHome.render();
     setSelectedSNB();
     addEventSNB();
     return;
   }
-  if (e.target.dataset.name === "웹소설") {
+  if (e.target.dataset.name === CATEGORIES.WEBNOVEL) {
     tabWebnovel.render();
     return;
   }
-  if (e.target.dataset.name === "영화") {
+  if (e.target.dataset.name === CATEGORIES.MOVIE) {
     tabMovie.render();
     return;
   }
-  if (e.target.dataset.name === "방송") {
+  if (e.target.dataset.name === CATEGORIES.BROADCAST) {
     tabBroadcast.render();
     return;
   }
-  if (e.target.dataset.name === "책") {
-    render({ to: ".contents", el: "책" });
+  if (e.target.dataset.name === CATEGORIES.BOOK) {
+    tabBook.render();
     return;
   }
 }
