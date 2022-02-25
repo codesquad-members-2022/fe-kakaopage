@@ -1,4 +1,6 @@
 import { $ } from "./utils.js";
+import { CarouselContent } from "../component/CarouselContent.js";
+import { carouselData } from "./dummy.js";
 
 export const handleCarousel = () => {
     const carouselList = $(".carousel__list");
@@ -19,6 +21,7 @@ export const handleCarousel = () => {
 
     carouselList.appendChild(firstChild.cloneNode(true));
     carouselList.insertBefore(lastChild.cloneNode(true), carouselList.firstElementChild);
+    renderDescription(curIndex);
 
     carouselList.style.width = `${carouselWidth * (carouselLen + 2)}px`;
     carouselList.style.transform = `translateX(-${carouselWidth * curIndex}px)`;
@@ -38,9 +41,11 @@ export const handleCarousel = () => {
             }, carouselDuration);
             curIndex = 1;
             carouselCurCount.innerHTML = curIndex;
+            renderDescription(curIndex);
             return;
         }
         curIndex += 1;
+        renderDescription(curIndex);
         carouselCurCount.innerHTML = curIndex;
     }
 
@@ -58,6 +63,8 @@ export const handleCarousel = () => {
             }, carouselDuration);
             curIndex = carouselLen;
         }
+
+        renderDescription(curIndex);
         carouselCurCount.innerHTML = curIndex;
     }
     
@@ -86,4 +93,9 @@ export const handleCarousel = () => {
     });
 
     autoPlay();
+}
+
+const renderDescription = (curIndex) => {
+    const carouselContent = $('.carousel__content');
+    carouselContent.innerHTML = CarouselContent(carouselData[curIndex - 1]);
 }

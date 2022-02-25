@@ -49,6 +49,7 @@
 }
 
 .carousel__detail .carousel_img {
+    margin: 0 5px;
     color: var(--color-white);
 }
 
@@ -59,7 +60,6 @@
 }
 
 .carousel__detail {
-    width: 200px;
     display: flex;
     justify-content: space-between;
 }

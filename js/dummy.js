@@ -403,3 +403,39 @@ export const WebtoonData = [
         "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
     },
   ];
+
+export const carouselData = [
+  {
+    _id: 1,
+    menu: "웹툰1",
+    title: "아빠가 너무 강함",
+    subscriptions: 48.5,
+    status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    _id: 2,
+    menu: "웹툰2",
+    title: "악녀는 마리오네트",
+    subscriptions: 15.8,
+    status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },
+  {
+    _id: 3,
+    menu: "웹툰3",
+    title: "도굴왕",
+    subscriptions: 209.4,
+    status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },  {
+    _id: 4,
+    menu: "웹툰4",
+    title: "킹덤",
+    subscriptions: 36.1,
+    status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  },  {
+    _id: 5,
+    menu: "웹툰5",
+    title: "귀한용사의 골목식당",
+    subscriptions: 23.4,
+    status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
+  }
+]
