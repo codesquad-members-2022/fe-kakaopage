@@ -1,4 +1,4 @@
-const currentIndex = indexCounter();
+const getSliderIndex = indexCounter();
 
 function indexCounter(){
     const $banner_item = document.querySelectorAll('.banner__item');
@@ -14,7 +14,7 @@ function indexCounter(){
             index = ++index > maxIndex ? maxIndex : index;
         }
 
-        return index;
+        return [maxIndex, index];
     }
 }
 
@@ -23,6 +23,7 @@ export function setButtonEvent() {
     const $right_button = document.querySelector('.banner__paging--right');
     $left_button.addEventListener('click', buttonClickHandler);
     $right_button.addEventListener('click', buttonClickHandler);
+    setBannerOrderText(); // 나중에 여기서 말고 랜더링 할때 호출
 }
 
 let throttlingTimer = null;
@@ -39,6 +40,20 @@ function handleClickEvent(event){
     const $banner__contents = document.querySelector('.banner__contents');
     const $banner_list = document.querySelector('.banner__list');
     const direction = event.target.dataset.direction;
-    const index = currentIndex(direction);
-    $banner_list.style.transform = `translate(-${$banner__contents.clientWidth * index}px, 0px)`;
+    const [maxIndex, currentIndex] = getSliderIndex(direction);
+    
+    $banner_list.style.transform = `translate(-${$banner__contents.clientWidth * currentIndex}px, 0px)`;
+    setBannerOrderText(maxIndex, currentIndex);
+}
+
+function setBannerOrderText(maxIndex, currentIndex){
+    const $banner_order = document.querySelector('.banner__order--text');
+
+    if(!maxIndex){
+        const [_maxIndex, _currentIndex] = getSliderIndex();
+        maxIndex = _maxIndex;
+        currentIndex = _currentIndex;
+    }
+
+    $banner_order.innerText = `${currentIndex + 1} / ${maxIndex + 1}`;
 }
