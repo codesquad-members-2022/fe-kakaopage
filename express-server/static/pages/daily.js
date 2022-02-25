@@ -14,9 +14,7 @@ export const daily = async (target, position)=>{
     const header= target.firstElementChild;
     target.innerHTML = template;
     target.insertAdjacentElement('afterbegin', header);
-    const comics = await myFetch('comics');
-    const images = await myFetch('images');
-    const infographic = await myFetch('infographic');
+    const [comics, images, infographic] = await Promise.all([myFetch('comics'), myFetch('images'), myFetch('infographic')])
     BannerBox(select(target, '.BannerBox'), images, infographic);
     dailyHeader( target, 'beforeend', comics, infographic);
 }

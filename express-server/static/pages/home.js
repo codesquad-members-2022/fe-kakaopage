@@ -24,9 +24,7 @@ export const home = async(target, position)=>{
     target.innerHTML = template;
     target.insertAdjacentElement('afterbegin', header);
     const bannerBox = select(target,'.BannerBox');
-    const images = await myFetch('images');
-    const infographic = await myFetch('infographic');
-    const comics = await myFetch('comics');
+    const [comics, images, infographic] = await Promise.all([myFetch('comics'), myFetch('images'), myFetch('infographic')])
     BannerBox(bannerBox, images, infographic);
     GrayCube(select(target,'.catchphrase'), 'afterend');
     AdBanner( select(target,'.catchphrase'), 'afterend', images, infographic);
