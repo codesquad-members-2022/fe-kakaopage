@@ -178,16 +178,17 @@ header {
 }
 
 .banner-main {
-    width: 135rem;
     height: 30rem;
     background-color: gray;
 
-    display: flex;
-    transition: ease-in-out 1s;
+    /* transition: ease-in-out 1s; */
+    
 }
 
 .img-with-line {
     position: relative;
+    float: left;
+    width: 45rem;
 }
 
 .line-with {
