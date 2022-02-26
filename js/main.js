@@ -6,6 +6,7 @@ let previousSubCategory = document.createElement("div");
 let previousWeekdayCategory = document.createElement("div");
 let clickButtonCount = 0;
 let isMovable = true;
+let timer = null;
 
 init();
 
@@ -73,10 +74,10 @@ function moveWebtoonSlide() {
 
 function excuteAutoSlide() {
   const delayTime = 3000;
-  setInterval(() => {
-    if (!isMovable) {
-      return;
-    }
+  if (!isMovable || timer) {
+    return;
+  }
+  timer = setTimeout(() => {
     autoWebtoonSlide();
   }, delayTime);
 }
@@ -84,6 +85,8 @@ function excuteAutoSlide() {
 function autoWebtoonSlide() {
   clickButtonCount++;
   moveWebtoonSlide();
+  timer = null;
+  excuteAutoSlide();
 }
 
 function clickSubCategoryNav(subCategoryNav) {
