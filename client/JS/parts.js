@@ -1,4 +1,18 @@
-export const ads =
+import { daysInfo } from "../data/webtoon.js";
+import {
+  webtoonNavItems,
+  daysNavItems,
+  selectedNav,
+  daysMenuNavItems,
+} from "./nav.js";
+
+const getNav = (navItems) => {
+  let result = "";
+  navItems.forEach((item) => (result += `<ul>${item}</ul>\n`));
+  return result;
+};
+
+const ads =
   /*html*/
   `
   <section class="ads">
@@ -6,23 +20,15 @@ export const ads =
   </section>
   `;
 
-export const webtoonNav =
+const webtoonNav =
   /*html*/
   `
   <nav class="webtoon__nav">
-    <span>홈</span>
-    <span class="selected">요일연재</span>
-    <span>웹툰</span>
-    <span>소년</span>
-    <span>드라마</span>
-    <span>로맨스</span>
-    <span>로판</span>
-    <span>액션무협</span>
-    <span>BL</span>
+    ${getNav(webtoonNavItems)}
   </nav>
   `;
 
-export const dummy =
+const dummy =
   /*html */
   `
   <section class="dummy">
@@ -30,7 +36,7 @@ export const dummy =
   </section>
   `;
 
-export const newThings =
+const newThings =
   /*html*/
   `
   <section class="new-things">
@@ -40,56 +46,98 @@ export const newThings =
   </section>
   `;
 
-export const days =
+const columnContent = (contentInfo) => {
+  const { name, image, rank, views } = contentInfo;
+  if (name === "") return /*html*/ `<div class="column-contents__empty"></div>`;
+  const content =
+    /*html*/
+    `
+      <div class="column-contents__content">
+        <div class="column-contents__content--image">
+          <div class="column-contents__content--picture">
+            <img src="../IMG/${image}" alt="content image">
+          </div>
+          <div class="column-contents__content--info">
+            <div class="column-contents__content--rank">${rank}위</div>
+            <div class="column-contents__content--clock">
+              <i class="fas fa-history"></i>
+            </div>
+          </div>
+        </div>
+        <div class="column-contents__content--name">${name}</div>
+        <div class="column-contents__content--views">
+          <i class="fas fa-user-circle"></i>
+          <span>${views}만 명</span>
+        </div>
+      </div>
+      `;
+  return content;
+};
+
+const getEmptyColumnContents = (columnCount, targetDay) => {
+  const emptyContentInfo = { name: "", image: "", rank: "", views: "" };
+  const emptyContent = columnContent(emptyContentInfo);
+  let result = "";
+  let count = columnCount;
+  let emptyCount = count - (targetDay.length % count);
+  while (emptyCount !== 0 && emptyCount !== count) {
+    result += emptyContent;
+    emptyCount--;
+  }
+  return result;
+};
+
+const getColumContentsByDayMenu = (contentInfo, dayMenuNav) => {
+  if (dayMenuNav === "전체") return columnContent(contentInfo);
+  if (dayMenuNav === "웹툰" && contentInfo.type === "웹툰")
+    return columnContent(contentInfo);
+  if (
+    !["전체", "웹툰"].includes(dayMenuNav) &&
+    contentInfo.now &&
+    contentInfo.type === "웹툰"
+  )
+    return columnContent(contentInfo);
+  return "";
+};
+
+const getColumnContents = (targetDay) => {
+  const dayMenuNav = selectedNav[".days__menu--nav"];
+  const columnCount = 5;
+  let result = "";
+  targetDay.forEach(
+    (contentInfo) =>
+      (result += getColumContentsByDayMenu(contentInfo, dayMenuNav))
+  );
+  result += getEmptyColumnContents(columnCount, targetDay);
+  return result;
+};
+
+const days =
   /*html*/
   `
   <section class="days">
+
     <nav class="days__nav">
-      <span class="selected">월</span>
-      <span>화</span>
-      <span>수</span>
-      <span>목</span>
-      <span>금</span>
-      <span>토</span>
-      <span>일</span>
-      <span>완결</span>
+      ${getNav(daysNavItems)}
     </nav>
 
     <div class="days__menu">
-      <div class="days__menu--left">
-        <span>전체</span>
-        <span>웹툰</span>
-        <i class="fas fa-clock"></i>
-      </div>
+      <nav class="days__menu--nav">
+        ${getNav(daysMenuNavItems)}
+      </nav>
       <div class="days__menu--right">
         <span>모두 보기</span>
       </div>
     </div>
 
     <div class="column-contents">
-      <div class="column-contents__content">
-        <div class="column-contents__content--image">
-          <div class="column-contents__content--picture">
-            <img src="../IMG/flower.png" alt="content image">
-          </div>
-          <div class="column-contents__content--info">
-            <div class="column-contents__content--rank">100위</div>
-            <div class="column-contents__content--clock">
-              <i class="fas fa-history"></i>
-            </div>
-          </div>
-        </div>
-        <div class="column-contents__content--name">무늬</div>
-        <div class="column-contents__content--views">
-          <i class="fas fa-user-circle"></i>
-          <span>150.0만명</span>
-        </div>
-      </div>
+      ${getColumnContents(daysInfo[selectedNav[".days__nav"]])}
     </div>
+    
   </section>
   `;
 
-export const listContents =
+const listContents =
   /*html*/
   `
   <section class="list-contents">
@@ -113,3 +161,14 @@ export const listContents =
     </div>
   </section>
   `;
+
+export {
+  ads,
+  webtoonNav,
+  dummy,
+  newThings,
+  columnContent,
+  getColumnContents,
+  days,
+  listContents,
+};

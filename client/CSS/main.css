@@ -22,10 +22,8 @@ main > * {
   width: var(--width-main);
   padding-top: var(--padding-main-top-bottom);
   padding-bottom: var(--padding-main-top-bottom);
-}
-
-.webtoon__nav {
   color: var(--color-grey-main);
+  align-items: center;
 }
 
 .webtoon__nav > .selected {
@@ -77,21 +75,36 @@ main > * {
 
 .days__menu {
   height: calc(var(--width-main) / 10);
-  padding-left: var(--padding-main-left-right);
-  padding-right: var(--padding-main-left-right);
   display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.days__menu > * {
+  padding: 1rem;
+}
+
+.days__menu--nav {
   align-items: center;
   justify-content: center;
 }
 
-.days__menu--left > * {
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+.days__menu--nav > * {
+  flex: unset;
+  padding: 1rem;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-main);
+}
+
+.days__menu--nav > .selected {
+  color: var(--color-black-main);
 }
 
 .days__menu--right {
   font-size: 0.8rem;
-  color: var(--color-grey3);
+  color: var(--color-grey-main);
   margin-left: auto;
 }
 
@@ -104,6 +117,10 @@ main > * {
   justify-content: space-between;
 }
 
+.column-contents__empty {
+  width: calc(var(--width-content) + 0.1rem * 2);
+}
+
 .column-contents__content {
   padding-bottom: 0.4rem;
 }
@@ -113,19 +130,24 @@ main > * {
 }
 
 .column-contents__content--picture {
+  position: relative;
   width: var(--width-content);
+  height: var(--width-content);
   border: solid 0.1rem var(--color-grey3);
   border-bottom: var(--color-grey-sub);
   border-top-left-radius: var(--border-radius1);
   border-top-right-radius: var(--border-radius1);
+  overflow: hidden;
 }
 
 .column-contents__content--picture > img {
-  width: var(--width-content);
-  height: var(--width-content);
+  position: absolute;
+  display: block;
+  width: 100%;
   border-bottom: var(--color-grey-sub);
-  border-top-left-radius: var(--border-radius1);
-  border-top-right-radius: var(--border-radius1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .column-contents__content--info {
