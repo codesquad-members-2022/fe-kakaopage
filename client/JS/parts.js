@@ -46,8 +46,7 @@ const newThings =
   </section>
   `;
 
-const columnContent = (contentInfo) => {
-  const { name, image, rank, views } = contentInfo;
+const columnContent = ({ name, image, rank, views }) => {
   if (name === "") return /*html*/ `<div class="column-contents__empty"></div>`;
   const content =
     /*html*/
@@ -133,7 +132,7 @@ const days =
     <div class="column-contents">
       ${getColumnContents(daysInfo[selectedNav[".days__nav"]])}
     </div>
-    
+
   </section>
   `;
 

@@ -7,50 +7,36 @@ import {
 import { selector, addClass, removeClass } from "./utility.js";
 import { selectedNav } from "./nav.js";
 
-const removeMainPart = () => {
-  selector("main").innerHTML = "";
-};
-
-const removeWebtoonPart = (name) => {
-  const parts = Array.from(selector("main").children);
-  parts.forEach((part) => {
-    if (part.className !== name) part.remove();
-  });
-};
-
-const removeDaysPart = () => {
-  const columncontents = selector(".column-contents");
-  columncontents.innerHTML = "";
+const removePart = (part, remain) => {
+  const remainedPart = selector(`.${remain}`);
+  selector(part).innerHTML = "";
+  if (remainedPart) selector(part).append(remainedPart);
 };
 
 const removeAndDrawView = (target, name) => {
   let type = typeof target === "string" ? target : target.innerHTML;
-  const navPalette = {
-    header__nav: () => {
-      removeMainPart();
+  let view = "main";
+  switch (name) {
+    case "header__nav":
+      removePart("main");
       drawWithAssembly(headerAssembly, type);
-    },
-    webtoon__nav: () => {
-      removeWebtoonPart(name);
+      break;
+    case "webtoon__nav":
+      removePart("main", name);
       drawWithAssembly(webtoonAssembly, type);
-    },
-    days__nav: () => {
-      const view = selector(".column-contents");
-      removeDaysPart();
+      break;
+    case "days__nav":
+      view = selector(".column-contents");
+      removePart(".column-contents");
       drawWithAssembly(daysAssembly, type, view);
-    },
-    "days__menu--nav": () => {
-      // type = selector("selected", selector(".days__nav"));
-      type = document
-        .querySelector(".days__nav")
-        .querySelector(".selected").innerHTML;
-      const view = selector(".column-contents");
-      removeDaysPart();
+      break;
+    case "days__menu--nav":
+      type = selectedNav[".days__nav"];
+      view = selector(".column-contents");
+      removePart(".column-contents");
       drawWithAssembly(daysAssembly, type, view);
-    },
-  };
-  const selectedPalette = navPalette[name];
-  selectedPalette();
+      break;
+  }
 };
 
 const markSelectedNav = (target) => {

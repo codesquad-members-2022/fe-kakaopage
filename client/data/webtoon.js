@@ -1,4 +1,4 @@
-import { daysNavItems } from "../JS/nav";
+import { daysNavItems } from "../JS/nav.js";
 
 const webtoonData = [
   {
