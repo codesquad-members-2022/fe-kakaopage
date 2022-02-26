@@ -9,7 +9,7 @@ const loaderMap = {
     드라마: loader.webtoonDrama,
     로맨스: loader.webtoonRomance,
     로판: loader.webtoonRomanceFantasy,
-    액션: loader.webtoonAction,
+    액션무협: loader.webtoonActionWuxia,
     BL: loader.webtoonBl,
   },
   웹소설: {
@@ -29,8 +29,22 @@ const loaderMap = {
     애니메이션: loader.movieAnimation,
     장르전체: loader.movieAll,
   },
-  방송: {},
-  책: {},
+  방송: {
+    홈: loader.broadcastHome,
+    예능: loader.broadcastVarietyshow,
+    드라마: loader.broadcastDrama,
+    애니메이션: loader.broadcastAnimation,
+    해외시리즈: loader.broadcastForeign,
+    장르전체: loader.broadcastAll,
+  },
+  책: {
+    홈: loader.bookHome,
+    연재: loader.bookSeries,
+    베스트셀러: loader.bookBestseller,
+    랭킹: loader.bookRanking,
+    스릴러: loader.bookThriller,
+    자기계발: loader.bookSelfimprovement,
+  },
 };
 
 export { loaderMap };
