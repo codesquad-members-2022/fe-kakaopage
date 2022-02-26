@@ -1,4 +1,9 @@
-import { wideCover, bigCover, normalCover, smallCover } from './cover.js';
+import {
+  wideCover,
+  bigCover,
+  normalCover,
+  smallCover,
+} from './coverTemplete.js';
 
 const getComponentType = (coverType) => {
   if (coverType === 'big') return 'big-component';
@@ -14,7 +19,7 @@ const getHTML = (coverType, webtoonData) => {
   if (coverType === 'small') return smallCover(webtoonData);
 };
 
-const webtoonComponent = (coverType, webtoonData) => {
+const component = (coverType, webtoonData) => {
   const article = document.createElement('article');
 
   article.className = `webtoon-component ${getComponentType(coverType)}`;
@@ -26,4 +31,4 @@ const webtoonComponent = (coverType, webtoonData) => {
   return article;
 };
 
-export default webtoonComponent;
+export default component;

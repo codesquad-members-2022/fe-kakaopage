@@ -1,4 +1,4 @@
-import webtoonComponent from './webtoonComponent.js';
+import component from './createComponent.js';
 
 const createMainContainer = () => {
   const mainContainer = document.createElement('div');
@@ -27,13 +27,13 @@ const createContentsContainer = (title) => {
 };
 
 // type = "normalCover", "bigCover", "smallCover", "wideCover"
-const drawWebtoonContents = ({ webtoonArr, coverType, contentsTitle }) => {
+const drawWebtoons = ({ webtoonArr, coverType, contentsTitle }) => {
   const container = createContentsContainer(contentsTitle);
   const webtoonComponentContainer = container.querySelector(
     '.webtoon-component-container'
   );
   for (let i = 0; i < webtoonArr.length; i++) {
-    const webtoonEl = webtoonComponent(coverType, webtoonArr[i]);
+    const webtoonEl = component(coverType, webtoonArr[i]);
     webtoonComponentContainer.appendChild(webtoonEl);
   }
   const mainContainer = createMainContainer();
@@ -45,4 +45,4 @@ const drawWebtoonContents = ({ webtoonArr, coverType, contentsTitle }) => {
     .insertAdjacentElement('beforebegin', mainContainer);
 };
 
-export default drawWebtoonContents;
+export default drawWebtoons;

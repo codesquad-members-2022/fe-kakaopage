@@ -6,7 +6,7 @@ import previewsData from '../../json/previews.json' assert { type: 'json' };
 
 import setTagList from './tagList/setTagList.js';
 import setPreviews from './preview/setPreviews.js';
-import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
+import setWebtoons from './webtoon/setWebtoons.js';
 import setDayFilter from './dayFilter/setDayFilter.js';
 import initCategoryCurDay from './category/initCategoryCurDay.js';
 
@@ -107,7 +107,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   });
 
   // webtoon contents
-  setWebtoonContents({ dayContentsArr, webtoonContentsArr });
+  setWebtoons({ dayContentsArr, webtoonContentsArr });
 
   // day filter
   setDayFilter({ categoryEl: $category, dayContentsMap });
