@@ -4,18 +4,17 @@ import {makeEventSection} from './eventSection.js'
 import {makeWebtoonList} from './webtoonList.js'
 import {$, $all} from '../utility.js'
 
-function renderContainer(selector, title, num, options, data, tab) {
+function renderContainer(containerInfo, tab) {
   const main = $('.main');
-  const newContainer = makeContainer(selector, title);
-
+  const newContainer = makeContainer(containerInfo.class, containerInfo.title);
+  makeLayout(containerInfo, newContainer, tab);
   main.appendChild(newContainer);
-  makeLayout(selector, num, options, newContainer, data, tab)
 }
 
 // ========== Container ==========
-function makeContainer(selector, title) {
+function makeContainer(className, title) {
   const newContainer = document.createElement("div");
-  newContainer.classList.add('container', selector);
+  newContainer.classList.add('container', className);
   newContainer.innerHTML = makeContainerTitle(title);
 
   return newContainer;
@@ -34,21 +33,21 @@ function makeContainerTitle(title) {
 }
 
 // ==================== layout ====================
-function makeLayout(selector, num, options, container, data, tab) {
+function makeLayout(containerInfo, container, tab) {
   let newList = null;
-  switch (options) {
+  switch (containerInfo.layout) {
     case 'SMALL_CARD':
-      if (selector === 'daily__top') {
+      if (containerInfo.class === 'daily__top') {
         const newDailyList = makeSelectDayHomeList();
         container.appendChild(newDailyList);
       }
-      newList = makeWebtoonList(num, data);
+      newList = makeWebtoonList(containerInfo.items, containerInfo.data);
       break;
     case 'RANKING':
-      newList = makeRankingList(data, tab);
+      newList = makeRankingList(containerInfo.data, tab);
       break;
     case 'EVENT': 
-      newList = makeEventSection(selector);
+      newList = makeEventSection(containerInfo.class);
       break;
   }
 

@@ -36,13 +36,13 @@ function renderMain(tab) {
   tabInfo[tab].func(tab, tabInfo[tab].data);
 }
 
-function renderHome(tab, homeInfo) {
+function renderHome(tab, homeContainerInfo) {
   renderMainBanner(mainBannerData[tab]);
   renderThemeMenu(themeMenuData[tab]);
   renderPromotionBanner(promotionBannerData[tab]);
 
-  for (let i in homeInfo) {
-    renderContainer(homeInfo[i].class, homeInfo[i].title, homeInfo[i].items, homeInfo[i].layout, homeInfo[i].data, tab);
+  for (let i in homeContainerInfo) {
+    renderContainer(homeContainerInfo[i], tab);
   }
 
   renderMoveApp();
@@ -61,7 +61,6 @@ function renderBoy(tab) {
   renderMainBanner(mainBannerData[tab]);
   renderThemeMenu(themeMenuData[tab]);
   renderPromotionBanner(promotionBannerData[tab]);
-
 }
 
 export {renderMain}
