@@ -10,12 +10,16 @@ import {
 import { selector } from "./utility.js";
 import { daysInfo } from "../data/webtoon.js";
 import { markAllSelectedNav } from "./nav.js";
-// import name from path assert { type: 'json' };
 
-const drawWithAssembly = (assembly, type, target = selector("main")) => {
-  typeof assembly === "object"
-    ? assembly[type].forEach((part) => (target.innerHTML += part))
-    : (target.innerHTML += assembly(type));
+const drawWithAssembly = (assembly, target, view = selector("main")) => {
+  switch (typeof assembly) {
+    case "object":
+      assembly[target].forEach((part) => (view.innerHTML += part));
+      break;
+    case "function":
+      view.innerHTML += assembly(target);
+      break;
+  }
   markAllSelectedNav();
 };
 

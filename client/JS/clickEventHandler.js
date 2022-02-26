@@ -14,29 +14,27 @@ const removePart = (part, remain) => {
 };
 
 const removeAndDrawView = (target, name) => {
-  let type = typeof target === "string" ? target : target.innerHTML;
-  let view = "main";
+  let _target = typeof target === "string" ? target : target.innerHTML;
+  let view = selector("main");
+  let assembly;
   switch (name) {
-    case "header__nav":
-      removePart("main");
-      drawWithAssembly(headerAssembly, type);
-      break;
-    case "webtoon__nav":
-      removePart("main", name);
-      drawWithAssembly(webtoonAssembly, type);
-      break;
+    case "days__menu--nav":
+      _target = selectedNav[".days__nav"];
     case "days__nav":
       view = selector(".column-contents");
+      assembly = daysAssembly;
       removePart(".column-contents");
-      drawWithAssembly(daysAssembly, type, view);
       break;
-    case "days__menu--nav":
-      type = selectedNav[".days__nav"];
-      view = selector(".column-contents");
-      removePart(".column-contents");
-      drawWithAssembly(daysAssembly, type, view);
+    case "webtoon__nav":
+      assembly = webtoonAssembly;
+      removePart("main", name);
+      break;
+    case "header__nav":
+      assembly = headerAssembly;
+      removePart("main");
       break;
   }
+  drawWithAssembly(assembly, _target, view);
 };
 
 const markSelectedNav = (target) => {

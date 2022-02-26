@@ -7,9 +7,9 @@ import {
 } from "./nav.js";
 
 const getNav = (navItems) => {
-  let result = "";
-  navItems.forEach((item) => (result += `<ul>${item}</ul>\n`));
-  return result;
+  return navItems.reduce((preItem, postItem) => {
+    return preItem + `<ul>${postItem}</ul>\n`;
+  }, "");
 };
 
 const ads =
