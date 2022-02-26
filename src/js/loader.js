@@ -38,8 +38,8 @@ const loader = {
     renderer.mainBanner(DATA.mainBanner);
     renderer.gridMenu(DATA.gridMenu);
   },
-  // 액션 - 웹툰
-  webtoonAction(DATA) {
+  // 액션무협 - 웹툰
+  webtoonActionWuxia(DATA) {
     renderer.mainBanner(DATA.mainBanner);
     renderer.gridMenu(DATA.gridMenu);
   },
