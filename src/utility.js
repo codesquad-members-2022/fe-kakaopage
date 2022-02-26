@@ -1,10 +1,19 @@
-const $ = (el) => document.querySelector(el);
-const $$ = (el) => document.querySelectorAll(el);
+export const $ = (el) => document.querySelector(el);
+export const $$ = (el) => document.querySelectorAll(el);
 
-const getToday = () => {
-    const date = new Date();
-    let today = date === -1 ? 6 : date.getDay() - 1;
-    return today;
+export const removeAndInsertHTML = (target, position, templete) => {
+    $(target).innerHTML = '';
+    $(target).insertAdjacentHTML(position, templete);
 }
 
-export { $, $$, getToday };
+export const activateButton = (removeSelector, addSelector, className) => {
+    removeSelector.classList.remove(className);
+    addSelector.classList.add(className);
+}
+
+export const getToday = () => {
+    const date = new Date();
+    let today = date.getDay() - 1;
+    if(today === -1) today = 6;
+    return today;
+}

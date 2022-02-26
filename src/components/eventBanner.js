@@ -1,9 +1,8 @@
-import { SLIDE_LENGTH } from "../constant.js";
-import { getSildeButton } from "./sildeButton.js";
+import { getSildeButtonTemp } from "./sildeButton.js";
 
-const getEventBannerTemp = (dataEl) => {
+const getEventBannerTemp = (dataEl, className) => {
     return (
-        `<li class="event-banner event-banner1">
+        `<li class="event-banner slide ${className}">
             <a href="${dataEl.link}" class="event-banners__link">
                 <div class="event-banners__img-wrap">
                     <img src="${dataEl.imgUrl}" alt="${dataEl.imgDescription}">
@@ -13,11 +12,11 @@ const getEventBannerTemp = (dataEl) => {
     );
   }
   
-  const getEventBannersTemp = (data) => {
-    let eventBannerList = '';
-    for (let i = 0; i < SLIDE_LENGTH; i++) {
-        eventBannerList += `${getEventBannerTemp(data[i] || data[i - data.length])}`
-    }
+const getEventBannersTemp = (data) => {
+    let eventBannerList =
+    getEventBannerTemp(data[data.length - 1], 'prev-slide')
+    + getEventBannerTemp(data[0], 'current-slide')
+    + getEventBannerTemp(data[1], 'next-slide');
     return (
         `<div class="section section-event-banner">
             <div class="event-banner slider">
@@ -25,9 +24,9 @@ const getEventBannerTemp = (dataEl) => {
                     ${eventBannerList}
                 </ul>
             </div>
-            ${getSildeButton()}
+            ${getSildeButtonTemp('event-banners__slide-button')}
         </div>`
-    );
-  }
+);
+}
   
-  export { getEventBannersTemp };
+export { getEventBannersTemp };

@@ -3,13 +3,12 @@ import { getMainBannersTemp } from '../components/mainBanners.js';
 import { getSubCategoriesTemp } from '../components/subCategorise.js';
 import { getEventBannersTemp } from '../components/eventBanner.js';
 
-const getTVPage = (props) => {
-    return (
-        getCategoriesTemp(props["categories"])
-        + getMainBannersTemp(props["mainBanner"])
-        + getSubCategoriesTemp(props["subCategories"])
-        + getEventBannersTemp(props["eventBanner"])
-    );
+const getTVPageTemp = (props) => {
+    const tvPageTemp = getCategoriesTemp(props["categories"])
+    + getMainBannersTemp(props["mainBanner"])
+    + getSubCategoriesTemp(props["subCategories"])
+    + getEventBannersTemp(props["eventBanner"]);
+    return tvPageTemp;
 }
 
-export { getTVPage };
+export { getTVPageTemp };

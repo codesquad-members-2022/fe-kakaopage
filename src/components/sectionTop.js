@@ -1,4 +1,4 @@
-const getSectionTop = (data) => {
+const getSectionTopTemp = (data) => {
     const worksNum = data.worksLength ?
     `<span class="section__work-number"> (${data.worksLength})</span>`
     : '';
@@ -10,4 +10,4 @@ const getSectionTop = (data) => {
     );
 }
 
-export { getSectionTop };
+export { getSectionTopTemp };
