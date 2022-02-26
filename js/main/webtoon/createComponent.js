@@ -5,7 +5,7 @@ import {
   smallCover,
 } from './componentTemplete.js';
 
-import { createElement, addClass } from '../../util/util.js';
+import { createElement, addClass, selector } from '../../util/util.js';
 
 const coverTypeMap = {
   BIG: 'big',
@@ -18,13 +18,15 @@ const { BIG, SMALL, WIDE, NORMAL } = coverTypeMap;
 const COMPONENT_CLASSNAME = 'webtoon-component';
 const BIG_COMPONENT_CLASSNAME = 'big-component';
 const HORIZONTAL_COMPONENT_CLASSNAME = 'horizontal-component';
-const EMPTY_STRING = 'normal-component';
+const NORMAL_COMPONENT_CLASSNAME = 'normal-component';
+
+const WEBTOON_COVER_SELECTOR = '.webtoon-cover';
 
 const getComponentType = (coverType) => {
   if (coverType === BIG) return BIG_COMPONENT_CLASSNAME;
   if (coverType === SMALL || coverType === WIDE)
     return HORIZONTAL_COMPONENT_CLASSNAME;
-  return EMPTY_STRING;
+  return NORMAL_COMPONENT_CLASSNAME;
 };
 
 const getComponentHTML = (coverType, webtoonData) => {
@@ -34,16 +36,16 @@ const getComponentHTML = (coverType, webtoonData) => {
   if (coverType === SMALL) return smallCover(webtoonData);
 };
 
-const component = (coverType, webtoonData) => {
+const createComponent = (coverType, webtoonData) => {
   const $article = createElement('article', COMPONENT_CLASSNAME);
 
   addClass(getComponentType(coverType), $article);
-  const HTML = getComponentHTML(coverType, webtoonData);
-  $article.innerHTML = HTML;
-  const cover = $article.querySelector('.webtoon-cover');
-  if (cover) cover.style.backgroundImage = `url(${webtoonData.coverSrc})`;
+  const componentHTML = getComponentHTML(coverType, webtoonData);
+  $article.innerHTML = componentHTML;
+  const $cover = selector(WEBTOON_COVER_SELECTOR, $article);
+  if ($cover) $cover.style.backgroundImage = `url(${webtoonData.coverSrc})`;
 
   return $article;
 };
 
-export default component;
+export default createComponent;

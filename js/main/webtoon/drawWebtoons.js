@@ -1,4 +1,4 @@
-import component from './createComponent.js';
+import createComponent from './createComponent.js';
 import { addClass, selector, createElement } from '../../util/util.js';
 
 const PAGE_MAIN_CONTAINER_CLASSNAME = 'page-main__container';
@@ -44,7 +44,7 @@ const drawWebtoons = ({ webtoonArr, coverType, contentsTitle }) => {
     $container
   );
   for (let i = 0; i < webtoonArr.length; i++) {
-    const $webtoonComponent = component(coverType, webtoonArr[i]);
+    const $webtoonComponent = createComponent(coverType, webtoonArr[i]);
     webtoonComponentContainer.appendChild($webtoonComponent);
   }
   const $mainContainer = createWebtoonsContainer();
