@@ -2,60 +2,109 @@ import { $, $$, insertIntoMain } from "../utils.js";
 import { dataOfsBanner } from "../data/home/smallBanner.js";
 import { dataOfBanner } from "../data/home/banner.js";
 
+const getBannerImg = (data, idx) => {
+  const img = `<div class="position-rel banner" data-index="${idx + 1}">
+  <div class="banner-img-container">
+    <img class="banner-img" src="${data.img}" alt="${data.title}"/>
+  </div>
+  <div class="banner-detail-container text-color--white">
+    <h3 class="banner-title">${data.title}</h3>
+    <div class="layout-center banner-detail-text-container">
+      <img class="banner-detail-img" src="${data.tag}"/>
+      <span class="layout-center banner-detail-text">
+        <img class="banner-detail-icon"
+        src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"/>
+      ${data.category}</span>
+      <span>|</span>
+      <span class="layout-center banner-detail-text">
+        <img class="banner-detail-icon"
+        src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"/>
+      ${data.readers}만명</span>
+    </div>
+  </div>
+  <p class="banner-bottom-text">${data.desc}</p>
+</div>`;
+
+  return img;
+};
+
 const getBannerImgs = () => {
-  const imgs = dataOfBanner.reduce((acc, data) => {
-    const img = `<div class="position-rel banner">
-    <div class="banner-img-container">
-      <img class="banner-img" src="${data.img}" alt="${data.title}"/>
-    </div>
-    <div class="banner-detail-container text-color--white">
-      <h3 class="banner-title">${data.title}</h3>
-      <div class="layout-center banner-detail-text-container">
-        <img class="banner-detail-img" src="${data.tag}"/>
-        <span class="layout-center banner-detail-text">
-          <img class="banner-detail-icon"
-          src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"/>
-        ${data.category}</span>
-        <span>|</span>
-        <span class="layout-center banner-detail-text">
-          <img class="banner-detail-icon"
-          src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"/>
-        ${data.readers}만명</span>
-      </div>
-    </div>
-    <p class="banner-bottom-text">${data.desc}</p>
-  </div>`;
+  let imgs = getBannerImg(dataOfBanner[dataOfBanner.length - 1], -1);
+  imgs += dataOfBanner.reduce((acc, data, idx) => {
+    const img = getBannerImg(data, idx);
     return acc + img;
   }, "");
+  imgs += getBannerImg(dataOfBanner[0], dataOfBanner.length);
 
   return imgs;
 };
 
 const addSlideEvL = () => {
+  let curBanner = 1;
+
   $("#banner-left").addEventListener("click", () => {
+    onAnimation();
     let curIdx = Number($("#banner-count").textContent);
+    curBanner -= 1;
+
+    $$(".banner").forEach((banner) => {
+      banner.style.transform = `translate(${-700 * (curIdx - 1)}px)`;
+    });
+
     if (curIdx === 1) {
       curIdx = dataOfBanner.length + 1;
     }
 
     $("#banner-count").textContent = curIdx - 1;
 
-    $$(".banner").forEach((banner) => {
-      banner.style.transform = `translate(${-700 * (curIdx - 2)}px)`;
-    });
+    if (curBanner === 0) {
+      setTimeout(() => {
+        offAnimation();
+        initBannersLoc(dataOfBanner.length);
+        curBanner = dataOfBanner.length;
+      }, 300);
+    }
   });
 
   $("#banner-right").addEventListener("click", () => {
+    onAnimation();
     let curIdx = Number($("#banner-count").textContent);
+    curBanner += 1;
+
+    $$(".banner").forEach((banner) => {
+      banner.style.transform = `translateX(${-700 * (curIdx + 1)}px)`;
+    });
+
     if (curIdx === dataOfBanner.length) {
       curIdx = 0;
     }
-
     $("#banner-count").textContent = curIdx + 1;
 
-    $$(".banner").forEach((banner) => {
-      banner.style.transform = `translateX(${-700 * curIdx}px)`;
-    });
+    if (curBanner === dataOfBanner.length + 1) {
+      setTimeout(() => {
+        offAnimation();
+        initBannersLoc();
+        curBanner = 1;
+      }, 300);
+    }
+  });
+};
+
+const initBannersLoc = (loc = 1) => {
+  $$(".banner").forEach((banner) => {
+    banner.style.transform = `translateX(${-700 * loc}px)`;
+  });
+};
+
+const onAnimation = () => {
+  $$(".banner").forEach((banner) => {
+    banner.style.transitionDuration = "0.3s";
+  });
+};
+
+const offAnimation = () => {
+  $$(".banner").forEach((banner) => {
+    banner.style.transitionDuration = "";
   });
 };
 
@@ -102,6 +151,7 @@ const createBanner = () => {
 </div>`;
 
   insertIntoMain(banner);
+  initBannersLoc();
   addSlideEvL();
 };
 
