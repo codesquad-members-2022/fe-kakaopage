@@ -8,8 +8,13 @@ import {
   webtoonNav,
 } from "./parts.js";
 import { selector } from "./utility.js";
-import { daysInfo } from "../data/webtoon.js";
 import { markAllSelectedNav } from "./nav.js";
+
+const removePart = (part, remain) => {
+  const remainedPart = selector(`.${remain}`);
+  selector(part).innerHTML = "";
+  if (remainedPart) selector(part).append(remainedPart);
+};
 
 const drawWithAssembly = (assembly, target, view = selector("main")) => {
   switch (typeof assembly) {
@@ -45,7 +50,13 @@ const webtoonAssembly = {
 };
 
 const daysAssembly = (target) => {
-  return getColumnContents(daysInfo[target]);
+  return getColumnContents(target);
 };
 
-export { daysAssembly, webtoonAssembly, headerAssembly, drawWithAssembly };
+export {
+  removePart,
+  drawWithAssembly,
+  daysAssembly,
+  webtoonAssembly,
+  headerAssembly,
+};

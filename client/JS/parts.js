@@ -101,14 +101,13 @@ const getColumContentsByDayMenu = (dayMenuNav, contentInfo) => {
   }
 };
 
-const getColumnContents = (targetDay) => {
+const getColumnContents = (target) => {
+  const targetDay = daysInfo[target];
   const dayMenuNav = selectedNav[".days__menu--nav"];
   const columnCount = 5;
-  let result = "";
-  targetDay.forEach(
-    (contentInfo) =>
-      (result += getColumContentsByDayMenu(dayMenuNav, contentInfo))
-  );
+  let result = targetDay.reduce((preInfo, postInfo) => {
+    return preInfo + getColumContentsByDayMenu(dayMenuNav, postInfo);
+  }, "");
   result += getEmptyColumnContents(columnCount, targetDay);
   return result;
 };
@@ -132,7 +131,7 @@ const days =
     </div>
 
     <div class="column-contents">
-      ${getColumnContents(daysInfo[selectedNav[".days__nav"]])}
+      ${getColumnContents(selectedNav[".days__nav"])}
     </div>
 
   </section>
