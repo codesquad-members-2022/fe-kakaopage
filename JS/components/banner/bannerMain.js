@@ -1,66 +1,52 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {$, $all} from '../../utility.js'
+import {$} from '../../utility.js'
 
-// ========== mainBanner ==========
-function renderMainBanner(data) {
-  const main = $('.main');
-  const newDiv = makeMainBannerLayout(data);
-  main.appendChild(newDiv);
+const renderMainBanner = (data) => {
+  const mainBanner = `
+    <article class="main__banner banner">
+      ${makeBannerBtns()}
+      <ul class="banner__list">
+        ${makeMainBannerItems(data)}
+      </ul>
+      ${makeMainBannerCounter(data)}
+    </article>
+  `;
+
+  $('.main').insertAdjacentHTML('beforeend', mainBanner);
 }
 
-function makeMainBannerLayout(data) {
-  const newDiv = document.createElement('article');
-  newDiv.classList.add('main__banner', 'banner');
-
-  const btns = makeBannerBtns();
-  const newList = makeMainBannerList(data);
-  const counter = makeMainBannerCounter(data);
-  
-  newDiv.appendChild(btns);
-  newDiv.appendChild(newList);
-  newDiv.appendChild(counter);
-
-  return newDiv;
-}
-
-function makeMainBannerList(data) {
-  const newList = document.createElement("ul");
-  newList.classList.add('banner__list');
-  makeMainBannerItems(newList, data);
-  
-  return newList;
-}
-
-function makeMainBannerItems(list, data) {
+const makeMainBannerItems = (data) => {
+  let result = '';
   data.forEach((el, index) => {
-    const item = document.createElement('li');
-    item.classList.add('banner__item');
-    item.dataset.index = index + 1;
-    item.innerHTML = `<a href="#"><img src="${el.img_url}" alt="${el.img_alt}" class="banner__img"/></a>
-    <div class="banner__info">
-      <h3 class="banner__title">${el.title}</h3>
-      <div class="banner__viewer">
-        <p><i class="fas fa-clock"></i> 웹툰</p>
-        <div class="divider"></div>
-        <p><i class="fas fa-user"></i> ${el.viewer}</p>
-      </div>
-      <div class="banner__summary">
-        <span>${el.desc}</span>
-      </div>
-    </div>`
-
-    list.appendChild(item);
+    result += `
+      <li class="banner__item" data-index="${index + 1}">
+        <a href="#"><img src="${el.img_url}" alt="${el.img_alt}" class="banner__img"/></a>
+        <div class="banner__info">
+          <h3 class="banner__title">${el.title}</h3>
+          <div class="banner__viewer">
+            <p><i class="fas fa-clock"></i> 웹툰</p>
+            <div class="divider"></div>
+            <p><i class="fas fa-user"></i> ${el.viewer}</p>
+          </div>
+          <div class="banner__summary">
+            <span>${el.desc}</span>
+          </div>
+        </div>
+      </li>
+    `
   });
+
+  return result
 }
 
-function makeMainBannerCounter(data) {
-  const newList = document.createElement("div");
-  newList.classList.add('banner__count');
-  newList.innerHTML = `<span class="now">1</span>
-  <span>/</span>
-  <span class="total">${data.length}</span>`
-
-  return newList;
+const makeMainBannerCounter = (data) => {
+  return `
+    <div class="banner__count">
+      <span class="now">1</span>
+      <span>/</span>
+      <span class="total">${data.length}</span>
+    </div>
+  `
 }
 
 export {renderMainBanner} 

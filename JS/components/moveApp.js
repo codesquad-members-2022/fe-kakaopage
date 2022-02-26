@@ -1,24 +1,17 @@
-import {$, $all} from '../utility.js'
+import {$} from '../utility.js'
 
 // ========== makeMoveApp ==========
 function renderMoveApp() {
-  const main = $('.main');
-  const newList = makeMoveApp();
-  main.appendChild(newList);
+  const moveApp = `
+    <div class="move-app">
+      <a href="#">
+        <span><strong>코코아페이지</strong> 앱으로 보기</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  `;
 
-  return newList;
-}
-
-function makeMoveApp() {
-  const newList = document.createElement("div");
-  newList.classList.add('move-app');
-  newList.innerHTML = `
-  <a href="#">
-    <span><strong>코코아페이지</strong> 앱으로 보기</span>
-    <i class="fas fa-chevron-right"></i>
-  </a>`;
-
-  return newList;
+  $('.main').insertAdjacentHTML('beforeend', moveApp);
 }
 
 export {renderMoveApp}
