@@ -1,6 +1,8 @@
-import { $, $$, insertIntoMain } from "../utils.js";
+import { $, insertIntoMain } from "../utils.js";
 import { dataOfsBanner } from "../data/home/smallBanner.js";
 import { dataOfBanner } from "../data/home/banner.js";
+
+const BANNER_WIDTH = 700;
 
 const getBannerImg = (data, idx) => {
   const img = `<div class="position-rel banner" data-index="${idx + 1}">
@@ -39,73 +41,87 @@ const getBannerImgs = () => {
   return imgs;
 };
 
+const slideLeft2Right = () => {
+  onAnimation();
+  let curIdx = Number($("#banner-count").textContent);
+
+  $("#banners-container").style.transform = `translate(${
+    -BANNER_WIDTH * (curIdx - 1)
+  }px)`;
+
+  if (curIdx === 1) {
+    curIdx = dataOfBanner.length + 1;
+  }
+
+  $("#banner-count").textContent = curIdx - 1;
+};
+
+const slideRight2Left = () => {
+  onAnimation();
+  let curIdx = Number($("#banner-count").textContent);
+
+  $("#banners-container").style.transform = `translateX(${
+    -BANNER_WIDTH * (curIdx + 1)
+  }px)`;
+
+  if (curIdx === dataOfBanner.length) {
+    curIdx = 0;
+  }
+
+  $("#banner-count").textContent = curIdx + 1;
+};
+
 const addSlideEvL = () => {
   let curBanner = 1;
+  let timer;
 
   $("#banner-left").addEventListener("click", () => {
-    onAnimation();
-    let curIdx = Number($("#banner-count").textContent);
-    curBanner -= 1;
-
-    $$(".banner").forEach((banner) => {
-      banner.style.transform = `translate(${-700 * (curIdx - 1)}px)`;
-    });
-
-    if (curIdx === 1) {
-      curIdx = dataOfBanner.length + 1;
-    }
-
-    $("#banner-count").textContent = curIdx - 1;
-
-    if (curBanner === 0) {
-      setTimeout(() => {
-        offAnimation();
-        initBannersLoc(dataOfBanner.length);
-        curBanner = dataOfBanner.length;
-      }, 300);
+    if (!timer) {
+      timer = setTimeout(() => {
+        timer = null;
+        slideLeft2Right();
+        curBanner -= 1;
+      }, 200);
     }
   });
 
   $("#banner-right").addEventListener("click", () => {
-    onAnimation();
-    let curIdx = Number($("#banner-count").textContent);
-    curBanner += 1;
-
-    $$(".banner").forEach((banner) => {
-      banner.style.transform = `translateX(${-700 * (curIdx + 1)}px)`;
-    });
-
-    if (curIdx === dataOfBanner.length) {
-      curIdx = 0;
+    if (!timer) {
+      timer = setTimeout(() => {
+        timer = null;
+        slideRight2Left();
+        curBanner += 1;
+      }, 200);
     }
-    $("#banner-count").textContent = curIdx + 1;
+  });
 
+  $("#banners-container").addEventListener("transitionend", () => {
     if (curBanner === dataOfBanner.length + 1) {
-      setTimeout(() => {
-        offAnimation();
-        initBannersLoc();
-        curBanner = 1;
-      }, 300);
+      offAnimation();
+      initBannersLoc();
+      curBanner = 1;
+    }
+
+    if (curBanner === 0) {
+      offAnimation();
+      initBannersLoc(dataOfBanner.length);
+      curBanner = dataOfBanner.length;
     }
   });
 };
 
 const initBannersLoc = (loc = 1) => {
-  $$(".banner").forEach((banner) => {
-    banner.style.transform = `translateX(${-700 * loc}px)`;
-  });
+  $("#banners-container").style.transform = `translateX(${
+    -BANNER_WIDTH * loc
+  }px)`;
 };
 
 const onAnimation = () => {
-  $$(".banner").forEach((banner) => {
-    banner.style.transitionDuration = "0.3s";
-  });
+  $("#banners-container").style.transitionDuration = "0.2s";
 };
 
 const offAnimation = () => {
-  $$(".banner").forEach((banner) => {
-    banner.style.transitionDuration = "";
-  });
+  $("#banners-container").style.transitionDuration = "0s";
 };
 
 const createBanner = () => {
@@ -137,8 +153,11 @@ const createBanner = () => {
       d="M9 5l7 7-7 7"/>
   </svg>
   <div>
-    <div class="side-by-side overflow-hd">
-    ${getBannerImgs()}
+    <div class="overflow-hd">
+      <div class="side-by-side" id="banners-container">
+      ${getBannerImgs()}
+      </div>
+    
     </div>
   </div>
   <div class="banner-count-container">
