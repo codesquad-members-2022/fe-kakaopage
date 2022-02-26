@@ -4,8 +4,7 @@ import { addHandlerOnBanner } from './bannerHandler.js';
 const loader = {
   // 홈
   home() {
-    const mainEl = document.querySelector('.main');
-    mainEl.innerHTML = `<p style="text-align:center;padding:100px 0;">홈 탭은 준비 중입니다.</p>`;
+    renderer.preparing();
   },
   // 홈 - 웹툰
   webtoonHome(DATA) {
