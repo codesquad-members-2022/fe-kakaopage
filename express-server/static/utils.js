@@ -9,17 +9,9 @@ export const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
 export const shuffled = (array, n) => array.sort(() => 0.5 - Math.random()).slice(0, n);
 
 
-export const addEvent = (target, eventType, selector, callback) => {
-    const children = [...target.querySelectorAll(selector)]
-    const ok = (eventTarget) => children.includes(eventTarget) || eventTarget.closest(selector)
-    target.addEventListener(eventType, event => {
-        if (!ok(event.target)) return false;
-        callback(event);
-    })
-}
 
-export const select = (target, selector)=>target.querySelector(selector);
-export const selectAll = (target, selector)=>target.querySelectorAll(selector);
+
+
 
 export const jsonRoute =(function(){
     const route = {
@@ -32,10 +24,6 @@ export const jsonRoute =(function(){
         "6": "sun",
         "7": "completed",
     }
-<<<<<<< HEAD:express-server/static/utils.js
-
-=======
->>>>>>> step4:utils.js
   return function(key){
         return route[key]
   }
@@ -45,13 +33,9 @@ export const renderGrid = (data, infographic, target,key)=>{
 }
 export const myFetch = async (key)=>{
     const url = `http://127.0.0.1:3000/data/${key}.json`
-<<<<<<< HEAD:express-server/static/utils.js
-    return await(await fetch(url)).json();
-=======
     try {
         return await (await fetch(url)).json();
     }catch(e){
-        console.log(e);
+        throw e;
     }
->>>>>>> step4:utils.js
 }

@@ -1,14 +1,17 @@
 
 import {BannerBox} from "../components/bannerBox.js";
-import {myFetch, select} from "../utils.js";
+import {myFetch} from "../utils.js";
 import {AdBanner} from "../components/adBanner.js";
-import {GrayCube} from "../components/grayCube.js";
-import {comicItem} from "../components/comicsGrid.js";
-import {homeHeader} from "../components/homeHeader.js";
+import {GrayCube,} from "../components/grayCube.js";
+import {ComicItem} from "../components/comicsGrid.js";
+import {HomeHeader} from "../components/homeHeader.js";
+import {Component} from "../Core/Component.js";
 
 
-export const home = async(target, position)=>{
-    const template = `
+// export const home = async(target, position)=>{
+export const Home = class extends Component{
+    template(){
+        return `
          <div class="listContentBox BannerBox">
         </div>
         <div class="catchphrase">
@@ -20,13 +23,18 @@ export const home = async(target, position)=>{
             
         </div>
     `
-    const header= target.firstElementChild;
-    target.innerHTML = template;
-    target.insertAdjacentElement('afterbegin', header);
-    const bannerBox = select(target,'.BannerBox');
-    const [comics, images, infographic] = await Promise.all([myFetch('comics'), myFetch('images'), myFetch('infographic')])
-    BannerBox(bannerBox, images, infographic);
-    GrayCube(select(target,'.catchphrase'), 'afterend');
-    AdBanner( select(target,'.catchphrase'), 'afterend', images, infographic);
-    homeHeader(select(target,'.freeComics'), 'afterbegin', comics,infographic);
+    }
+    render(){
+        const header= this.$target.firstElementChild;
+        this.$target.innerHTML = this.template();
+        this.$target.insertAdjacentElement('afterbegin', header);
+    }
+    mounted(){
+        new BannerBox(this.select(".BannerBox"));
+        new GrayCube(this.select('.catchphrase'), 'afterend');
+        new AdBanner( this.select('.catchphrase'), 'afterend');
+        new HomeHeader(this.select('.freeComics'), 'afterbegin');
+    }
+
+
 }

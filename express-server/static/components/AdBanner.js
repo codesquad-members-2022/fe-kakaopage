@@ -1,8 +1,12 @@
 import {randomGen} from '../utils.js';
+import {store} from "../Core/Store";
+import {Component} from "../Core/Component";
 
-export const AdBanner = (target, position, images, infographic)=>{
-
-        const template =  `
+// export const AdBanner = (target, position, images, infographic)=>{
+export const AdBanner = class extends Component {
+    template() {
+        const {infographic, images} = store;
+        return `
      <div class="listContentBox AdBanner">
             <button type="button" class="prevBtn">
                 <img src=${infographic.prev}>
@@ -15,5 +19,8 @@ export const AdBanner = (target, position, images, infographic)=>{
             </button>
         </div>
     `;
-     target.insertAdjacentHTML(position, template );
     }
+    render() {
+        this.$target.insertAdjacentHTML('afterend', this.template() );
+    }
+}

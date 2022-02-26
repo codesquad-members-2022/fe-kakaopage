@@ -1,17 +1,17 @@
-import {observable, observe} from "./store";
-import {myFetch} from "../utils";
+import {observable, observe} from "./observer.js";
+import {myFetch} from "../utils.js";
 
-class Component{
-    #target;
-    #state;
-    #props;
+export class Component{
+    $target;
+    $state;
+    $props;
     constructor(target,props) {
-        this.#target = target;
-        this.#props = props;
+        this.$target = target;
+        this.$props = props;
         this.setup();
     }
     setup(){
-        this.#state = observable(this.initState())
+        this.$state = observable(this.initState())
         observe(()=>{
             this.render();
             this.setEvent();
@@ -19,17 +19,25 @@ class Component{
         })
     }
     async initState(){
-        const [comics, infographic, images] = await Promise.all([myFetch('comics'),myFetch('infographic'),myFetch('images')])
-        return {comics, infographic, images}
+
     }
     mounted(){}
     render(){
-        this.#target.innerHTML =this.template();
+        this.$target.innerHTML =this.template();
     }
     template(){
         return ``;
     }
     setEvent(){}
-    setState(newState){this.#state = {...this.#state, ...newState};}
-
+    setState(newState){this.$state = {...this.$state, ...newState};}
+    addEvent = ( eventType, selector, callback) => {
+        const children = [...this.$target.querySelectorAll(selector)]
+        const ok = (eventTarget) => children.includes(eventTarget) || eventTarget.closest(selector)
+        this.$target.addEventListener(eventType, event => {
+            if (!ok(event.target)) return false;
+            callback(event);
+        })
+    }
+    select = ( selector)=>this.$target.querySelector(selector);
+    selectAll = ( selector)=>this.$target.querySelectorAll(selector);
 }

@@ -1,7 +1,11 @@
 
 
-export const headerBar = (target)=>{
-    const template =  `
+// export const headerBar = (target)=>{
+import {Component} from "../Core/Component.js";
+
+export const HeaderBar = class extends Component{
+    template(){
+    return`
     <div class="headerBar">
         <h1 class="HomeLink">
             <img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"/>
@@ -29,5 +33,6 @@ export const headerBar = (target)=>{
         </div>
     </div>
     `
-    target.innerHTML = template;
+    }
+
 }

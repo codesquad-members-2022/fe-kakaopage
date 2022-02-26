@@ -1,13 +1,24 @@
 import {addEvent} from "./utils.js";
-import {menuNav} from "./components/menuNav.js";
-import {headerBar} from "./components/headerBar.js";
-import {home} from "./pages/home.js";
-import {daily} from "./pages/daily.js";
+import {MenuNav, menuNav} from "./components/menuNav.js";
+import {HeaderBar, headerBar} from "./components/headerBar.js";
+import {Home, home} from "./pages/home.js";
+import {Daily, daily} from "./pages/daily.js";
+import {Component} from "./Core/Component.js";
 
 
 const body = document.querySelector('body');
-const App = async (target, position)=>{
-    target.innerHTML = `
+
+// const App = async (target, position)=>{
+const App = class extends Component{
+    async initState() {
+        return {
+            page:'toon',
+            cat:'home'
+        }
+    }
+
+    template(){
+        return`
     <header>
         </header>
         <main class="mainContent">
@@ -15,15 +26,9 @@ const App = async (target, position)=>{
             </nav>
             <section>
                 <div class="listContentBox TopBanner">
-                <span class="home selected">홈</span>
-                <span class="daily">요일연재</span>
-                <span class="toon">웹툰</span>
-                <span>소년</span>
-                <span>드라마</span>
-                <span>로맨스</span>
-                <span>로판</span>
-                <span>액션무협</span>
-                <span>BL</span>
+                ${renderRoute.CATS.map((cat,index)=>`
+                    <span data-idx=${index}>${cat}</span>
+                `)}
                 </div>
             </div>
             <div></div>
@@ -32,19 +37,31 @@ const App = async (target, position)=>{
             <footer>
     </footer>
     `;
-    headerBar(target.querySelector('header'));
-    menuNav(target.querySelector('.mainContent>.mainNav'));
-    const section = target.querySelector('section')
-    await home(section, 'beforeend');
-    addEvent(target, 'click', '.TopBanner>span', async (e)=>{
-        const cat = e.target.closest('span')
-        target.querySelector('.TopBanner>.selected').classList.remove('selected');
-        cat.classList.add('selected');
-        cat.classList.contains('home')? await home(section, 'beforeend'): await daily(section, 'beforeend');
-    })
+    }
+    mounted(){
+        new HeaderBar(this.select('header'));
+        new MenuNav(this.select('.mainContent>.mainNav'));
+        new Home(this.select('section'));
 
+    }
+   setEvent() {
+       this.addEvent('click', '.TopBanner>span', async (e)=>{
+           const cat = e.target.closest('span')
+           this.select('.TopBanner>.selected').classList.remove('selected');
+           cat.classList.add('selected');
+           const section = this.select('section');
+           renderRoute[cat.dataset.idx](section);
+       })
+   }
 }
-await App(body,'afterbegin')
+const dummy = `<span>This is Dummy Page</span>`
+const renderRoute = {
+    CATS : ["홈", "요일연재", "웹툰", "소년", "드라마", "로맨스", "로판", "액션무협", "BL"],
+    0:(target)=>new Home(target),
+    1:(target)=>new Daily(target),
+}
+
+new App(body)
 
 
 
