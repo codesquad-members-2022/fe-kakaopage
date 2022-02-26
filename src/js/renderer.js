@@ -59,6 +59,11 @@ const renderer = {
     const sectionBasicEl = createSectionBasic(title, content);
     categoryContentEl.insertAdjacentHTML('beforeend', sectionBasicEl);
   },
+
+  preparing() {
+    const categoryContentEl = document.querySelector('.category-content');
+    categoryContentEl.innerHTML = `<p style="text-align:center;padding:100px 0;">이 탭은 준비 중입니다.</p>`;
+  },
 };
 
 export { renderer };
