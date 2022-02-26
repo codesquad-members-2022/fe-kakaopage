@@ -2,11 +2,11 @@ import { createBannerMain, createContentForms, createContentFormsBigger, createH
 import { dummy } from "./sources.js"
 import { pickFromArr } from "./util.js"
 
-export const createFormatBannerMain = () => {
+export const createFormatBannerMain = (imgArr) => {
     const formatBannerMain = `
 <div class="slider">
     <div class="banner-main">
-        ${createBannerMain()}
+        ${createBannerMain(imgArr)}
     </div>
 </div>`
 

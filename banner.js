@@ -1,38 +1,26 @@
-import { dummy } from "./sources.js";
+export function createCarouselSlider(elementName, imgArr, widthRem, sliderIntervalMs, transitionTimeMs) {
+    const element = document.querySelector(elementName)
+    const imgNum = imgArr.length;
+    const maxWidth = widthRem * (imgNum);
+    element.style.width = `${maxWidth+widthRem}rem`
 
-
-export function transformBannerMain(widthRem) {
-    const bannerMain = document.querySelector(".banner-main")
-    // const imgNum = dummy.slideBannerMainImg.length;
-    const imgNum = 5;
-    const maxWidth = widthRem * (imgNum+1);
-    bannerMain.style.width = `${maxWidth}rem`
+    const first = element.firstElementChild;
+    const copied = first.cloneNode(true)
+    element.appendChild(copied)
 
     let xPos = 0;
 
-    let lastChild = bannerMain.lastElementChild;
-    let clonedLast = lastChild.cloneNode(true);
-    bannerMain.insertBefore(clonedLast, bannerMain.firstElementChild);
+    setInterval(() => {
+        xPos -= widthRem
+        element.style.transition = `ease-in-out ${transitionTimeMs}ms`
+        element.style.transform = `translateX(${xPos}rem)`
 
-    bannerMain.style.transform = `translateX(${widthRem*(-1)}rem)`
-
-    xPos -= widthRem *2;
-    const timeout = () => setTimeout(() => {
-        if(xPos === maxWidth*(-1)) {
-            bannerMain.style.transition = '0ms'
-            xPos = 0;
-            bannerMain.style.transform = `translateX(${xPos}rem)`
-            xPos -= widthRem;
-
-            clearTimeout(timeout)
-            timeout();
-        } else {
-            bannerMain.style.transition = 'ease-in-out 1s';
-            bannerMain.style.transform = `translateX(${xPos}rem)`
-            xPos -= widthRem;
-            timeout();
+        if(xPos === maxWidth*(-1)){
+            xPos = 0
+            setTimeout(() => {
+                element.style.transition = "0s"
+                element.style.transform = `translateX(${xPos}rem)`
+            }, transitionTimeMs+1)
         }
-    }, 2000)
-
-    timeout();
+    }, sliderIntervalMs)
 }

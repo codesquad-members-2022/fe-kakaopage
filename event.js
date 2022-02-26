@@ -31,11 +31,11 @@ export function genreNavEventHandler (e) {
     }
 }
 
-export function resetFlexbox(target){
+export function resetContentsbox(target){
     if(target.classList[0] === 'day'){
-        const flexBox = document.getElementById('contents-box')
+        const contentsBox = document.getElementById('contents-box')
     
-        flexBox.innerHTML = '';
-        flexBox.innerHTML += `${createContentForms(10)}`;
+        contentsBox.innerHTML = '';
+        contentsBox.innerHTML += `${createContentForms(10)}`;
     }
 }
