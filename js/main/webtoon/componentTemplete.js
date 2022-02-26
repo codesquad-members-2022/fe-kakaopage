@@ -2,15 +2,19 @@ export const wideCover = (webtoonData) => {
   const { title, state, subscriberCount, badge, summary, tags } = webtoonData;
   let tagElements = '';
   tags.forEach(
-    (tag) => (tagElements += `<span class="webtoon-tag">${tag}</span>`)
+    (tag) =>
+      (tagElements += `
+    <span class="webtoon-tag">${tag}</span>`)
   );
 
-  return `<div class="webtoon-cover wide-cover">
+  return `
+  <div class="webtoon-cover wide-cover">
   ${
     !badge
       ? ''
       : `<img class="webtoon-badge" src="./assets/data/contents/${badge}.png" alt="" />`
-  }</div>
+  }
+  </div>
 
   <div class="webtoon-info">
     <div class="webtoon-title">

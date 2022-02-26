@@ -13,9 +13,11 @@ const html = `
   </ul>
 `;
 
-const drawDayFilter = (categoryEl, dayContentsMap) => {
-  let curday = categoryEl.dataset.curday;
-  let category = categoryEl.textContent;
+const WEBTOONS_CONTAINER_SELECTOR = '.webtoons-container';
+
+const drawDayFilter = ($category, dayWebtoonsMap) => {
+  let curday = $category.dataset.curday;
+  let category = $category.textContent;
 
   if (!['홈', '요일연재', '웹툰'].includes(category)) return;
 
@@ -27,7 +29,9 @@ const drawDayFilter = (categoryEl, dayContentsMap) => {
     const previewList = document.querySelector('.preview-list');
     previewList.insertAdjacentElement('afterend', filter);
   } else {
-    const firstMainContents = document.querySelector('.main-contents');
+    const firstMainContents = document.querySelector(
+      WEBTOONS_CONTAINER_SELECTOR
+    );
     firstMainContents.insertAdjacentElement('beforebegin', filter);
   }
 
@@ -37,7 +41,7 @@ const drawDayFilter = (categoryEl, dayContentsMap) => {
   todayEl.classList.add('circle');
 
   // ---
-  addClickEvent(categoryEl, dayContentsMap);
+  addClickEvent($category, dayWebtoonsMap);
 };
 
 export default drawDayFilter;

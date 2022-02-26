@@ -1,13 +1,13 @@
 import drawWebtoons from './drawWebtoons.js';
 import clearWebtoons from './clearWebtoons.js';
 
-const setWebtoons = ({ dayContentsArr, webtoonContentsArr }) => {
+const setWebtoons = ({ dayWebtoonsArr, webtoonsArr }) => {
   clearWebtoons();
-  dayContentsArr?.forEach((dayContents) => {
-    drawWebtoons(dayContents);
+  dayWebtoonsArr?.forEach((dayWebtoons) => {
+    drawWebtoons(dayWebtoons);
   });
-  webtoonContentsArr.forEach((webtoonContents) => {
-    drawWebtoons(webtoonContents);
+  webtoonsArr.forEach((webtoons) => {
+    drawWebtoons(webtoons);
   });
 };
 

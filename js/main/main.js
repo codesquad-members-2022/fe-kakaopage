@@ -1,7 +1,7 @@
 import { selector, selectorAll, toggleClass, addClass } from '../util/util.js';
 
-import webtoonContentsData from '../../json/webtoonContents.json' assert { type: 'json' };
-import dayContentsData from '../../json/dayContents.json' assert { type: 'json' };
+import webtoonsData from '../../json/webtoons.json' assert { type: 'json' };
+import dayWebtoonsData from '../../json/dayWebtoons.json' assert { type: 'json' };
 import previewsData from '../../json/previews.json' assert { type: 'json' };
 
 import setTagList from './tagList/setTagList.js';
@@ -12,9 +12,9 @@ import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreview from './preview/createPreview.js';
-// console.dir(webtoonContentsData);
-// console.dir(dayContentsData);
-console.dir(previewsData);
+// console.dir(webtoonsData);
+// console.dir(dayWebtoonsData);
+// console.dir(previewsData);
 
 /* selector */
 const PREV_BTN_SELECTOR = '.prev-btn';
@@ -88,9 +88,9 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   const categoryName = $category.textContent;
   const selectedDay = days[$category.dataset.curday];
   const previews = previewsData[categoryName];
-  const dayContentsMap = dayContentsData[categoryName];
-  const dayContentsArr = dayContentsMap?.[selectedDay];
-  const webtoonContentsArr = webtoonContentsData[categoryName];
+  const dayWebtoonsMap = dayWebtoonsData[categoryName];
+  const dayWebtoonsArr = dayWebtoonsMap?.[selectedDay];
+  const webtoonsArr = webtoonsData[categoryName];
   categoryState.setUserIdx(selectedIdx);
 
   // highlight
@@ -107,10 +107,10 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   });
 
   // webtoon contents
-  setWebtoons({ dayContentsArr, webtoonContentsArr });
+  setWebtoons({ dayWebtoonsArr, webtoonsArr });
 
   // day filter
-  setDayFilter({ categoryEl: $category, dayContentsMap });
+  setDayFilter({ $category, dayWebtoonsMap });
 };
 
 const addListener = ($category, selectedIdx, $$category) => {

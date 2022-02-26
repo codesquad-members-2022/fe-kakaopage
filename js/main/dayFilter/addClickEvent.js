@@ -20,7 +20,7 @@ const offHighLight = (element) => {
 
 // li 사이를 빠르게 클릭하면 target이 ul이 되서 오류가 발생함
 // 메인 카테고리의 data-curday에 마지막으로 클릭한 dayfilter번호 write -> highlight 토글 ->
-const addClickEvent = (categoryEl, dayContentsMap) => {
+const addClickEvent = (categoryEl, dayWebtoonsMap) => {
   const dayFilter = document.querySelector('.day-filter');
 
   dayFilter.addEventListener('click', (event) => {
@@ -37,7 +37,7 @@ const addClickEvent = (categoryEl, dayContentsMap) => {
     onHighLight(curDayFilterEl);
     offHighLight(prevDayFilterEl);
 
-    const { webtoonArr, coverType } = dayContentsMap[days[curday]][0];
+    const { webtoonArr, coverType } = dayWebtoonsMap[days[curday]][0];
     replaceDayContents({ webtoonArr, coverType });
   });
 };

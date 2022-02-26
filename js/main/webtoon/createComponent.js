@@ -3,32 +3,47 @@ import {
   bigCover,
   normalCover,
   smallCover,
-} from './coverTemplete.js';
+} from './componentTemplete.js';
+
+import { createElement, addClass } from '../../util/util.js';
+
+const coverTypeMap = {
+  BIG: 'big',
+  SMALL: 'small',
+  WIDE: 'wide',
+  NORMAL: 'normal',
+};
+const { BIG, SMALL, WIDE, NORMAL } = coverTypeMap;
+
+const COMPONENT_CLASSNAME = 'webtoon-component';
+const BIG_COMPONENT_CLASSNAME = 'big-component';
+const HORIZONTAL_COMPONENT_CLASSNAME = 'horizontal-component';
+const EMPTY_STRING = 'normal-component';
 
 const getComponentType = (coverType) => {
-  if (coverType === 'big') return 'big-component';
-  if (coverType === 'small' || coverType === 'wide')
-    return 'horizontal-component';
-  return '';
+  if (coverType === BIG) return BIG_COMPONENT_CLASSNAME;
+  if (coverType === SMALL || coverType === WIDE)
+    return HORIZONTAL_COMPONENT_CLASSNAME;
+  return EMPTY_STRING;
 };
 
-const getHTML = (coverType, webtoonData) => {
-  if (coverType === 'big') return bigCover(webtoonData);
-  if (coverType === 'normal') return normalCover(webtoonData);
-  if (coverType === 'wide') return wideCover(webtoonData);
-  if (coverType === 'small') return smallCover(webtoonData);
+const getComponentHTML = (coverType, webtoonData) => {
+  if (coverType === BIG) return bigCover(webtoonData);
+  if (coverType === NORMAL) return normalCover(webtoonData);
+  if (coverType === WIDE) return wideCover(webtoonData);
+  if (coverType === SMALL) return smallCover(webtoonData);
 };
 
 const component = (coverType, webtoonData) => {
-  const article = document.createElement('article');
+  const $article = createElement('article', COMPONENT_CLASSNAME);
 
-  article.className = `webtoon-component ${getComponentType(coverType)}`;
-  const HTML = getHTML(coverType, webtoonData);
-  article.innerHTML = HTML;
-  const cover = article.querySelector('.webtoon-cover');
+  addClass(getComponentType(coverType), $article);
+  const HTML = getComponentHTML(coverType, webtoonData);
+  $article.innerHTML = HTML;
+  const cover = $article.querySelector('.webtoon-cover');
   if (cover) cover.style.backgroundImage = `url(${webtoonData.coverSrc})`;
 
-  return article;
+  return $article;
 };
 
 export default component;

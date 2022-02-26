@@ -1,9 +1,9 @@
 import drawDayFilter from './drawDayFilter.js';
 import clearDayFilter from './clearDayFilter.js';
 
-const setDayFilter = ({ categoryEl, dayContentsMap }) => {
+const setDayFilter = ({ $category, dayWebtoonsMap }) => {
   clearDayFilter();
-  drawDayFilter(categoryEl, dayContentsMap);
+  drawDayFilter($category, dayWebtoonsMap);
 };
 
 export default setDayFilter;
