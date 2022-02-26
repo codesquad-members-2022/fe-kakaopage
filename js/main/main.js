@@ -101,7 +101,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
 
   // tag list
   setTagList({
-    category: categoryName,
+    categoryName: categoryName,
     $main: selector(PAGE_MAIN_SELECTOR),
     $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
