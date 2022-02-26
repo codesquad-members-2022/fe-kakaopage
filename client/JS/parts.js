@@ -86,17 +86,19 @@ const getEmptyColumnContents = (columnCount, targetDay) => {
   return result;
 };
 
-const getColumContentsByDayMenu = (contentInfo, dayMenuNav) => {
-  if (dayMenuNav === "전체") return columnContent(contentInfo);
-  if (dayMenuNav === "웹툰" && contentInfo.type === "웹툰")
-    return columnContent(contentInfo);
-  if (
-    !["전체", "웹툰"].includes(dayMenuNav) &&
-    contentInfo.now &&
-    contentInfo.type === "웹툰"
-  )
-    return columnContent(contentInfo);
-  return "";
+const getColumContentsByDayMenu = (dayMenuNav, contentInfo) => {
+  const content = columnContent(contentInfo);
+  const nav = dayMenuNav.includes("fas fa") ? "아이콘" : dayMenuNav;
+  switch (nav) {
+    case "전체":
+      return content;
+    case "웹툰":
+      if (contentInfo.type === "웹툰") return content;
+    case "아이콘":
+      if (contentInfo.type === "웹툰" && contentInfo.now) return content;
+    default:
+      return "";
+  }
 };
 
 const getColumnContents = (targetDay) => {
@@ -105,7 +107,7 @@ const getColumnContents = (targetDay) => {
   let result = "";
   targetDay.forEach(
     (contentInfo) =>
-      (result += getColumContentsByDayMenu(contentInfo, dayMenuNav))
+      (result += getColumContentsByDayMenu(dayMenuNav, contentInfo))
   );
   result += getEmptyColumnContents(columnCount, targetDay);
   return result;
