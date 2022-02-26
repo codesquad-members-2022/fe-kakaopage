@@ -66,7 +66,12 @@ const loadCategoryContent = (globalCategory, subCategory) => {
   updateDocumentTitle(globalCategory);
 };
 
-const isAlreadyClicked = (eventTarget) => eventTarget.dataset.active == 'on';
+const isAlreadyClicked = (eventTarget) => {
+  if (eventTarget.dataset.active === 'on') {
+    window.scrollTo(0, 0);
+    return true;
+  }
+};
 
 const getData = (globalCategory) => dataMap[globalCategory];
 
