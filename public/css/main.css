@@ -83,6 +83,10 @@ main {
 
 /*========== banner ==========*/
 
+.banner {
+  transition-duration: 0.5s;
+}
+
 .banner-img-container {
   width: var(--main-width);
 }

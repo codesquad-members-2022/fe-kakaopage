@@ -1,10 +1,10 @@
-import { insertIntoMain } from "../utils.js";
+import { $, $$, insertIntoMain } from "../utils.js";
 import { dataOfsBanner } from "../data/home/smallBanner.js";
 import { dataOfBanner } from "../data/home/banner.js";
 
 const getBannerImgs = () => {
   const imgs = dataOfBanner.reduce((acc, data) => {
-    const img = `<div class="position-rel">
+    const img = `<div class="position-rel banner">
     <div class="banner-img-container">
       <img class="banner-img" src="${data.img}" alt="${data.title}"/>
     </div>
@@ -29,6 +29,34 @@ const getBannerImgs = () => {
   }, "");
 
   return imgs;
+};
+
+const addSlideEvL = () => {
+  $("#banner-left").addEventListener("click", () => {
+    let curIdx = Number($("#banner-count").textContent);
+    if (curIdx === 1) {
+      curIdx = dataOfBanner.length + 1;
+    }
+
+    $("#banner-count").textContent = curIdx - 1;
+
+    $$(".banner").forEach((banner) => {
+      banner.style.transform = `translate(${-700 * (curIdx - 2)}px)`;
+    });
+  });
+
+  $("#banner-right").addEventListener("click", () => {
+    let curIdx = Number($("#banner-count").textContent);
+    if (curIdx === dataOfBanner.length) {
+      curIdx = 0;
+    }
+
+    $("#banner-count").textContent = curIdx + 1;
+
+    $$(".banner").forEach((banner) => {
+      banner.style.transform = `translateX(${-700 * curIdx}px)`;
+    });
+  });
 };
 
 const createBanner = () => {
@@ -65,13 +93,16 @@ const createBanner = () => {
     </div>
   </div>
   <div class="banner-count-container">
-    <span class="banner-count text-color--light-gray">
-      1/${dataOfBanner.length}
+    <span class="banner-count text-color--light-gray" id="banner-count">
+      1</span><span class="banner-count text-color--light-gray">/${
+        dataOfBanner.length
+      }
     </span>
   </div>
 </div>`;
 
   insertIntoMain(banner);
+  addSlideEvL();
 };
 
 const createSmallBanner = (data) => {
