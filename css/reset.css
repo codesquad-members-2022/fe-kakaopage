@@ -125,8 +125,48 @@ table {
 input:focus {
   outline: none;
 }
+
+/* custom 전역 */
+
+* {
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+img,
+image {
+  cursor: pointer;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
 }

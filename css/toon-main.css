@@ -13,6 +13,7 @@
   box-sizing: border-box;
   background-color: #fff;
   margin: 0px auto;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .toon-category li {
@@ -23,6 +24,11 @@
   padding: 22px 0px;
   font-size: 20px;
   display: flex;
+}
+
+.toon-category li.check {
+  color: #333;
+  font-weight: 500;
 }
 
 .toon-main {
@@ -75,11 +81,14 @@
   color: #ffffff;
   font-weight: 400;
   font-size: 20px;
+  vertical-align: middle;
 }
 
-:is(.toon-jumbotron__category__image, .toon-jumbotron__view__image) {
-  margin: 0 5px 0 10px;
+:is(.toon-jumbotron__category img, .toon-jumbotron__view img) {
+  margin: 0 0 0 10px;
   padding-top: 0px;
+  line-height: 1.4;
+  vertical-align: middle;
 }
 
 .toon-jumbotron__intro span {
@@ -127,10 +136,11 @@
   font-weight: normal;
 }
 
-.toon-todaymenu a:nth-child(1) {
+.toon-todaymenu a:first-child {
   border-top-left-radius: 10px;
 }
 
+/* ⚠️ 매직넘버 3,4 */
 .toon-todaymenu a:nth-child(3) {
   border-top-right-radius: 10px;
 }
@@ -139,7 +149,7 @@
   border-bottom-left-radius: 10px;
 }
 
-.toon-todaymenu a:nth-child(6) {
+.toon-todaymenu a:last-child {
   border-bottom-right-radius: 10px;
 }
 
@@ -152,9 +162,10 @@
   width: 100%;
   height: 140px;
   background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
 }
 
-.toon-ad-banner-1_banner__image {
+.toon-ad-banner-1_banner img {
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -182,6 +193,7 @@
   height: 607px;
   background-color: #fff;
   color: #bbb;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .toon-daytop_header {
@@ -213,12 +225,12 @@
   cursor: pointer;
 }
 
-.toon-daytop ul {
+.ul-day {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
-.toon-daytop li {
+.ul-day li {
   width: 100%;
   text-align: center;
   padding-top: 15px;
@@ -229,8 +241,6 @@
 }
 
 .toon-daytop_album {
-  position: relative;
-  margin-top: 22px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -239,9 +249,71 @@
 
 .toon-daytop_frame {
   width: 120.6px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.toon-daytop_frame_image-1 {
-  width: 120.2px;
-  height: 120.2px;
+.toon-daytop_frame_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.toon-daytop_frame__image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toon-daytop_frame_box__rank {
+  color: #ffd200;
+  background-color: #242526;
+  font-weight: 400;
+  height: 30px;
+  padding: 0 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.toon-daytop_frame__title {
+  color: #333;
+  line-height: 1.5;
+  margin: 9px 0 7px;
+}
+
+.toon-daytop_frame__detail {
+  white-space: nowrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 450;
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+.toon-daytop_frame__detail img {
+  margin-right: 2px;
+}
+
+.timer-image {
+  width: 16px;
+  height: 16px;
+}
+.man-image {
+  width: 11px;
+  height: 11px;
+  margin-left: 2px;
+}
+.redNew-image {
+  height: 13px;
+}
+.blueUp-image {
+  height: 13px;
+}
+.rated15-image {
+  height: 13px;
 }
