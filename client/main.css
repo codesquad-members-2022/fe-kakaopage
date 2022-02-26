@@ -22,7 +22,6 @@
     padding-left:0; margin-left:0;
 }
 /* 2. 네비바 세팅 */
-
 .navbar__menu button{
     padding: 2rem 1.5rem 0 1.5rem;
     font-size: var(--largefont);
@@ -34,6 +33,9 @@
 }
 
 /*3. 장르 */
+.contents__genre{
+    margin-top: 11rem;
+}
 .contents__genre button{
     color: var(--dark-grey);
 }
@@ -44,41 +46,53 @@
 
 /* 4. 배너 */
 .banner{
-    height: 35rem;
-    position: relative;
-    z-index: -5;
     margin-top: 1rem;
+    overflow: hidden;
+}
+
+.banner__container{
+    height: 35rem;
+    width: 100vw;
+    display: flex;
+    white-space: nowrap;
+    /* transition: transform 0.5s; */
+}
+.banner__container .animated{
+    transition: ease-out 0.5s;;
+}
+
+.banner__content{
+    width: 720px;
+    height: 100%;
 }
 
 .banner__image{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
+    width: 720px;
+    height: 520px;
+    z-index: 1;
 }
 
 .banner__button{
     padding: 0 1rem;
-    width: 100%;
-    margin-top: 15rem;
+    width: 720px;
     z-index: 3;
     display: flex;
-    position: absolute;
+    margin-top: -16rem;
     justify-content: space-between;
 }
 .banner__button button{
     background-color:transparent;
     border: none;
+
 }
 
 .underbtn{
-    width: 100%;
+    width: 720px;
     display: flex;
     justify-content: space-between;
     z-index: 2;
     color: var(--main-white);
-    margin-top: 28rem;
-    position: absolute;
+    margin-top: 9rem;
     padding: 0 5%;
 }
 
@@ -88,13 +102,13 @@
 }  
 
 .comment{
-    position: absolute;
-    width: 100%;
-    margin-top: 31.6rem;
+    width: 720px;
     padding: 1rem;
     background-color: var(--accent-color);
-    z-index: 1;
+    margin-top: 0.5rem;
+    z-index: 5;
     text-align: center;
+ 
 } 
 
 /*5. 카테고리 */
