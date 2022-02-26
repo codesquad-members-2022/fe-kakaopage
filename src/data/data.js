@@ -1,3 +1,8 @@
+// 홈
+const DATA_HOME = {
+  subCategory: null,
+};
+
 // 웹툰
 const DATA_WEBTOON = {
   subCategory: ['홈', '요일연재', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL'],
@@ -246,4 +251,4 @@ const DATA_BOOK = {
   자기계발: {},
 };
 
-export { DATA_WEBTOON, DATA_WEBNOVEL, DATA_MOVIE, DATA_BROADCAST, DATA_BOOK };
+export { DATA_HOME, DATA_WEBTOON, DATA_WEBNOVEL, DATA_MOVIE, DATA_BROADCAST, DATA_BOOK };
