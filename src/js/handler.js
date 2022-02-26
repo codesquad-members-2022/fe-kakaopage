@@ -1,7 +1,8 @@
+import { select, initElement, updateDocumentTitle } from './util.js';
+
 import { renderer } from './renderer.js';
 import { loaderMap } from './loaderMap.js';
 import { dataMap } from '../data/dataMap.js';
-import { select, initElement, updateDocumentTitle } from './util.js';
 
 const addHandlerOnGnb = () =>
   select(`.gnb__list`).addEventListener('click', (event) => handleNav(event, 'gnb'));
