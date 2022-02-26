@@ -1,28 +1,30 @@
 import Menu from "./data/Menu.json" assert { type: "json" };
 import * as HTMLCreator from "./HTMLCreator.js"
+import * as SliderController from "./SliderController.js";
 import { setNavEvent } from "./NavEventController.js"
 
 const $body_main = document.querySelector('.custom');
 
-export function rendering(tabName){
-    const renders = {
-        'home' : renderHomePage,
-        'daily' : renderDailyPage,
-        'webToon' : renderWebToonPage,
-        'boy' : renderBoyPage,
-        'drama' : renderDramaPage,
-        'romance' : renderRomancePage,
-        'rofan' : renderRofanPage,
-        'action' : renderActionPage,
-        'bl' : renderBlPage
-    }
+const tabRenders = {
+    'home' : renderHomePage,
+    'daily' : renderDailyPage,
+    'webToon' : renderWebToonPage,
+    'boy' : renderBoyPage,
+    'drama' : renderDramaPage,
+    'romance' : renderRomancePage,
+    'rofan' : renderRofanPage,
+    'action' : renderActionPage,
+    'bl' : renderBlPage
+}
 
+export function rendering(tabName){
     $body_main.innerHTML = '';
-    renders[tabName](tabName);
+    tabRenders[tabName](tabName);
     setNavEvent('main-nav__list');
 }
 
 function renderHomePage(tabName){
+    renderSliderBanner(tabName);
     renderMenu(tabName);
     renderSubBanner(tabName);
     renderDailyTop();
@@ -67,6 +69,14 @@ function renderBlPage(){
     renderGenreTop();
 }
 
+function renderSliderBanner(tabName){
+    const $banner_section = document.createElement('section');
+    $banner_section.classList.add('main-banner', 'section');
+    $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(tabName);
+    $body_main.appendChild($banner_section);
+    SliderController.init();
+}
+
 function renderMenu(tabName){
     const $menu_section = document.createElement('section');
     const $menu_div = document.createElement('div');
@@ -74,7 +84,7 @@ function renderMenu(tabName){
     $menu_section.classList.add('contents_menu', 'section');
     $menu_section.appendChild($menu_div);
     $body_main.appendChild($menu_section);
-    Menu[tabName].map(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
+    Menu[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
 }
 
 function renderSubBanner(tabName){
@@ -103,7 +113,7 @@ function createContentsMain(...children){
     const $main = document.createElement('div');
     $main.classList.add('contents-container__main');
 
-    if(children){
+    if(children.length > 0){
         $main.append(...children);
     }
 
@@ -140,7 +150,7 @@ function createWeeklyNavNode(weekData){
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.map( data => {
+    weekData.forEach( data => {
         $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)}
     );
 
@@ -163,7 +173,7 @@ export function renderTopList(listType, dataKey = null){
 function renderGenreTop(){
     const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
     const genreTitle = ['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협'];
-    genreList.map((genre, index) => {
+    genreList.forEach((genre, index) => {
         const $header = createContentsHeader(`${genreTitle[index]} TOP`);
         const $list = createTopList(genre);
         const $main = createContentsMain($list);
