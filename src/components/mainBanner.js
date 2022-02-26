@@ -1,34 +1,43 @@
-import { mainBaneerData } from "../data/mainBannerData.js";
-import { START_SLIDE_PAGE } from "../constant.js";
-import { getBannerTemplate, getBannerContentTemplate} from "./banner.js";
-import { getSlideBtnTemplate, getpageNumTemplate } from "./slide.js";
+import { mainBannerData } from '../data/mainBannerData.js';
+import { START_SLIDE_INDEX } from '../constant.js';
+import { getBannerContentTemplate} from './banner.js';
+import { getSlideBtnTemplate, getpageNumTemplate, activateBtns, activateAutoSlide, activateSlide} from './slide.js';
 
 export const renderMainBanner = (genre) => {
     const mainBanner = document.createElement('div');
+    const bannerData = mainBannerData[genre];
+    mainBanner.dataset.name = 'main-banner';
     mainBanner.classList.add('main-banner', 'slides')
-    mainBanner.innerHTML = getMainBannerTemplate(genre);
+    mainBanner.innerHTML = getMainBannerTemplate(bannerData);
     document.querySelector('.tab-contents').appendChild(mainBanner);
-    setMainBannerSlide(genre);
+    activateMainBanner(mainBanner, bannerData);
 }
 
-const getMainBannerTemplate = (currGenre) => {
-    const bannerData = mainBaneerData[currGenre];
-    const bannerTemplate = getBannerTemplate('main-banner', bannerData[START_SLIDE_PAGE - 1]);
+const getMainBannerTemplate = (bannerData) => {
+    const mainBannerContentsTemplate = getMainBannerContentsTemplate(bannerData);
     const slideBtnTemplate = getSlideBtnTemplate();
-    const pageNumTemplate = getpageNumTemplate('main-banner', START_SLIDE_PAGE, bannerData.length);
-    return bannerTemplate + slideBtnTemplate + pageNumTemplate;
+    const pageNumTemplate = getpageNumTemplate('main-banner', START_SLIDE_INDEX + 1, bannerData.length);
+    return mainBannerContentsTemplate + slideBtnTemplate + pageNumTemplate;
 }
 
-const setMainBannerSlide = (currGenre) => {
-    const bannerData = mainBaneerData[currGenre];
-    const container = document.querySelector('.main-banner__contents');
-    const currPage = container.querySelector('li');
-    currPage.classList.add('slide--curr');
+const getMainBannerContentsTemplate = (bannerData) => {
+    return `
+        <ul class='main-banner__contents'>
+            ${getMainBannerSlidesTemplate(bannerData, START_SLIDE_INDEX)}
+        </ul>
+    `
+}
 
-    const prevSlide = getBannerContentTemplate('main-banner', bannerData[bannerData.length - 1]);
-    const nextSlide = getBannerContentTemplate('main-banner', bannerData[START_SLIDE_PAGE]);
-    currPage.insertAdjacentHTML('beforebegin', prevSlide);
-    currPage.insertAdjacentHTML('afterend', nextSlide);
-    currPage.previousElementSibling.classList.add('slide--prev');
-    currPage.nextElementSibling.classList.add('slide--next');
+const getMainBannerSlidesTemplate = (bannerData, currIndex) => {
+    const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;
+    const nextIndex = currIndex + 1 >= bannerData.length ? 0 : currIndex + 1;
+    const indexSeries = [prevIndex, currIndex, nextIndex];
+    const mainBannerSlidesTemplate = indexSeries.map(index => getBannerContentTemplate('main-banner', bannerData[index])).join('');
+    return mainBannerSlidesTemplate;
+}
+
+const activateMainBanner = (mainBanner, bannerData) => {
+    activateSlide(mainBanner, bannerData, getMainBannerSlidesTemplate);
+    activateBtns(mainBanner);
+    activateAutoSlide(mainBanner);
 }

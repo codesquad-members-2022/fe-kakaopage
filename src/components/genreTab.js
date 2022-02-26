@@ -1,5 +1,5 @@
-import { genreTabData } from "../data/genreTabData.js";
-import { DEFAULT_GENRE_INDEX } from "../constant.js";
+import { genreTabData } from '../data/genreTabData.js';
+import { DEFAULT_GENRE_INDEX } from '../constant.js';
 
 const genreTab = document.querySelector('.genre-tab');
 
@@ -15,9 +15,9 @@ const renderGenreTab = (currPage) => {
 
 const getTemplate = (currPage) => {
     return `
-        <ul class="tab__container vertical-center">
+        <ul class='tab__container vertical-center'>
             ${genreTabData[currPage].map(data => `
-                <li class="genre-tab__item center" data-genre=${data.genre}><a href="#">${data.text}</a></li>`
+                <li class='genre-tab__item center' data-genre=${data.genre}><a href='#'>${data.text}</a></li>`
             ).join('')}
         </ul>
     `

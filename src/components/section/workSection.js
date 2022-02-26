@@ -1,34 +1,42 @@
-import { dayRankingData } from "../../data/works/dayRanking.js";
-import { makeWorkContainer } from "./workContainer.js";
-import { icons } from "../../data/icons.js";
-import { DEFAULT_DAY } from "../../constant.js";
+import { dayRankingData } from '../../data/works/dayRankingData.js';
+import { newTopData } from '../../data/works/newTopData.js';
+import { dailyRankingData } from '../../data/works/dailyRankingData.js';
+import { makeWorkContainer } from './workContainer.js';
+import { icons } from '../../data/icons.js';
+import { DEFAULT_DAY } from '../../constant.js';
 
 const dataDic = {
-  "dayRanking": dayRankingData,
+  'dayRanking': dayRankingData,
+  'newTop': newTopData,
+  'dailyRanking': dailyRankingData,
+}
+
+const sectionTitleDic = {
+  'dayRanking': '요일 연재',
+  'newTop': '기대신작',
+  'dailyRanking': '일간 랭킹',
+  'recommendEvent': '추천 이벤트'
 }
 
 export const renderWorkSection = (layout, contents, genre) => {
   const workSection = document.createElement('section');
-  workSection.insertAdjacentHTML('beforeend', getHeaderTemplate());
-  if (contents === 'dayRanking') {
-    workSection.insertAdjacentHTML('beforeend', getDayTabTemplate());
-    setDefault(workSection.querySelector(`li[data-day='${DEFAULT_DAY}']`));
-  }
-  
-  workSection.insertAdjacentElement('beforeend', getWorkContainerTemplate(layout, contents, genre));
+  let workSectionTemplate = '';
+  workSectionTemplate += getHeaderTemplate(contents)
+  if (contents === 'dayRanking') workSectionTemplate += getDayTabTemplate();
+  workSectionTemplate += getWorkContainerTemplate(layout, contents, genre);
+  workSection.innerHTML = workSectionTemplate;
   document.querySelector('.tab-contents').appendChild(workSection);
 }
 
-const getHeaderTemplate = () => {
+export const getHeaderTemplate = (contents) => {
     return  `
-    <div class="section__header">
-          <div class="section__title-box">
-            <span class="section__title">요일 연재 TOP</span>
-            <span class="section__title-num">(1,622)</span>
+    <div class='section__header'>
+          <div class='section__title-box'>
+            <span class='section__title'>${sectionTitleDic[contents]} TOP</span>
           </div>
-          <div class="section__more-btn">
+          <div class='section__more-btn'>
             <span>더보기</span>
-            <img src=${icons.rightArrow} />
+            <img src=${icons.moreArrow} />
           </div>
         </div>`
 }
@@ -39,28 +47,31 @@ const getWorkContainerTemplate = (layout, contents, genre, day = DEFAULT_DAY) =>
 }
 
 const getDayTabTemplate = () => {
+  const weekWords = [
+    { 'en': 'mon', 'ko': '월' }, 
+    { 'en': 'tue', 'ko': '화' }, 
+    { 'en': 'wed', 'ko': '수' }, 
+    { 'en': 'thr', 'ko': '목' }, 
+    { 'en': 'fri', 'ko': '금' }, 
+    { 'en': 'sat', 'ko': '토' }, 
+    { 'en': 'sun', 'ko': '일' }, 
+    { 'en': 'end', 'ko': '완결'}
+  ];
   return `
-    <ul class="day-tab__container tab__container">
-      <li class="day-tab__item center" data-day="mon">월</li>
-      <li class="day-tab__item center" data-day="tue">화</li>
-      <li class="day-tab__item center" data-day="wed">수</li>
-      <li class="day-tab__item center" data-day="thr">목</li>
-      <li class="day-tab__item center" data-day="fri">금</li>
-      <li class="day-tab__item center" data-day="sat">토</li>
-      <li class="day-tab__item center" data-day="sun">일</li>
-      <li class="day-tab__item center" data-day="end">완결</li>
+    <ul class='day-tab__container tab__container'>
+      ${weekWords.map(day => `<li class='day-tab__item center${markDefault(day.en)}' data-day='${day.en}'>${day.ko}</li>`).join('')}
     </ul>
   `
 }
 
-const setDefault = (item) => {
-  item.classList.add('day-tab__item--selected' ,'tab__item--selected');
+const markDefault = (day) => {
+  return day === DEFAULT_DAY ? ' day-tab__item--selected' : '';
 }
 
 export const changeContentsByDay = (dayRankSection, day) => {
   const oldContainer = dayRankSection.querySelector('.work-container');
   const currGenre = oldContainer.dataset.genre;
-  const newContainer = getWorkContainerTemplate('small', 'dayRanking', currGenre, day);
-  
-  dayRankSection.replaceChild(newContainer, oldContainer)
+  const newContainerTemplate = getWorkContainerTemplate('small', 'dayRanking', currGenre, day);
+  dayRankSection.removeChild(oldContainer);
+  dayRankSection.insertAdjacentHTML('beforeend', newContainerTemplate);
 }

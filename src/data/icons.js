@@ -1,9 +1,14 @@
 export const icons = {
+    kakaoLogo: 'https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954',
+    search: 'https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a',
+    stageLogo: 'https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f',
+    stageTooltip:'https://static-page.kakao.com/static/common/stage-tooltip.svg?e37d1bc523d4daad835b7ea0620ec658',
     up: 'https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2',
     recommend: 'https://static-page.kakao.com/static/pc/badge-bigthum-recommend.svg?9cba9a2bf1ae05f840c588da3ed9d37f',
     hot:'	https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3',
     free: 'https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858',
     grayClock: 'https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a',
+    yellowClock: 'https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a',
     whitePerson: 'https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e',
     grayPerson:'https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871',
     star: '	https://static-page.kakao.com/static/common/badge-…umbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac',
@@ -11,7 +16,9 @@ export const icons = {
     prevBtn: 'https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56',
     nextBtn: 'https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93',
     fifteen: 'https://static-page.kakao.com/static/common/icon_15.png?ccf202bf79001052f43af077a0947e74',
-    new: "https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9",
+    new: 'https://static-page.kakao.com/static/common/icon_new.svg?4ae84a0f972e30119fb6fcfbb2f59bf9',
     downArrow: 'https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345',
-    rightArrow: 'https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e'
+    moreArrow: 'https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e',
+    leftArrow: 'https://static-page.kakao.com/static/pc/icon_topBanner_prev.png?99ff1dd99254e675a8a9d50e8da55753',
+    rightArrow: 'https://static-page.kakao.com/static/pc/icon_topBanner_next.png?83092704b1e76d136244e4d55c16694f'
 }

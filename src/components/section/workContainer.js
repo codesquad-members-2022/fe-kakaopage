@@ -1,43 +1,73 @@
-import { icons } from "../../data/icons.js"
+import { icons } from '../../data/icons.js'
+import { getBannerContentTemplate } from '../banner.js'
 
 export const makeWorkContainer = (genre, workDataArr, type) => {
-    const func = { small : makeSmallType, horizontal: makeHorizontalType, vertical: makeVerticalType};
-    const worksTemplate = workDataArr.map(workData => func[type](workData)).join(''); 
-    const workContainer = document.createElement('ul');
-    workContainer.className = 'work-container';
-    workContainer.dataset.genre = genre;
-    workContainer.innerHTML = worksTemplate;
-    return workContainer;
+    const worksTemplate = workDataArr.map(workData => layoutDic[type](workData)).join(''); 
+    return `
+      <ul class='work-container' data-genre='${genre}'>
+        ${worksTemplate}
+      </ul>
+    `
 }
-
 
 const makeSmallType = (workData) => {
     return `
-        <li class="work--small">
-            <div class="work--small-thumbnail-box">
-              <div class="work--small-img-wrapper">
+        <li class='work--small'>
+            <div class='work--small-thumbnail-box'>
+              <div class='work--small-img-wrapper'>
                 <img src=${workData.src} />
               </div>
-              <div class="work--small-label">
+              <div class='work--small-label'>
                 <span>${workData.label}</span
-                ><img class="small-icon" src=${icons[workData.labelIcon]} />
+                ><img class='small-icon' src=${icons[workData.labelIcon]} />
               </div>
             </div>
-            <div class="work--small-info">
-              <div class="work--small-title">${workData.title}</div>
-              <div class="work--small-details">
-                ${workData.tagIcons ? `${workData.tagIcons.map(icon => `<img class='small-icon' src=${icons[icon]} />`).join('')}` : "" }
-                <img class="small-icon" src=${icons.grayPerson} /><span>${workData.view}</span>
+            <div class='work--small-info'>
+              <div class='work--small-title'>${workData.title}</div>
+              <div class='work--small-details'>
+                ${workData.tagIcons ? `${workData.tagIcons.map(icon => `<img class='small-icon' src=${icons[icon]} />`).join('')}` : '' }
+                <img class='small-icon' src=${icons.grayPerson} /><span>${workData.view}</span>
               </div>
             </div>
         </li>
     `
 }
 
-const makeHorizontalType = () => {
-
+const makeHorizontalType = (workData) => {
+    return `
+      <li class='work--horizontal'>
+          ${workData.ranking ? `<div class='work--horizontal-ranking'>${workData.ranking}</div>` : ''}
+          <div class='work--horizontal-thumbnail-box'>
+            <div class='work--horizontal-img-wrapper'>
+              <img src=${workData.src} />
+            </div>
+            <div class='work--horizontal-label'>
+              <img class='horizontal-icon' src=${icons.yellowClock} />
+            </div>
+          </div>
+          <div class='work--horizontal-info'>
+            <div class='work--horizontal-title'>${workData.titleIcon ? `<img class='small-icon' src=${icons[workData.titleIcon]}/>` : ''} ${workData.title}</div>
+            <div class='work--horizontal-details'>
+              <img class='small-icon' src=${icons.grayPerson} />
+              ${workData.tags.map(tag => `<span>${tag}</span>`).join(`<div class='divider'></div>`)}     
+            </div>
+            <div class='work--horizontal-update-day'>${workData.updateDay} 연재</div>
+          </div>
+      </li>
+    `
 }
 
 const makeVerticalType = () => {
 
 }
+
+const makeBannerType = (workData) => {
+  return getBannerContentTemplate('new-top', workData);
+}
+
+const layoutDic = { 
+  small: makeSmallType, 
+  horizontal: makeHorizontalType, 
+  vertical: makeVerticalType,
+  banner: makeBannerType,
+};
