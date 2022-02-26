@@ -1,6 +1,5 @@
-# test file
-test.html
-index_original.html
+# Dependency directories
+node_modules/
 
-# temporarily removed features
+# test directory
 temp/
