@@ -1,7 +1,18 @@
-import { daysInfo } from "../data/daysInfo.js";
-import { selectedNav } from "./selectedNav.js";
+import { daysInfo } from "../data/webtoon.js";
+import {
+  webtoonNavItems,
+  daysNavItems,
+  selectedNav,
+  daysMenuNavItems,
+} from "./nav.js";
 
-export const ads =
+const getNav = (navItems) => {
+  let result = "";
+  navItems.forEach((item) => (result += `<ul>${item}</ul>\n`));
+  return result;
+};
+
+const ads =
   /*html*/
   `
   <section class="ads">
@@ -9,23 +20,15 @@ export const ads =
   </section>
   `;
 
-export const webtoonNav =
+const webtoonNav =
   /*html*/
   `
   <nav class="webtoon__nav">
-    <ul>홈</ul>
-    <ul>요일연재</ul>
-    <ul>웹툰</ul>
-    <ul>소년</ul>
-    <ul>드라마</ul>
-    <ul>로맨스</ul>
-    <ul>로판</ul>
-    <ul>액션무협</ul>
-    <ul>BL</ul>
+    ${getNav(webtoonNavItems)}
   </nav>
   `;
 
-export const dummy =
+const dummy =
   /*html */
   `
   <section class="dummy">
@@ -33,7 +36,7 @@ export const dummy =
   </section>
   `;
 
-export const newThings =
+const newThings =
   /*html*/
   `
   <section class="new-things">
@@ -43,7 +46,7 @@ export const newThings =
   </section>
   `;
 
-export const columnContent = (contentInfo) => {
+const columnContent = (contentInfo) => {
   const { name, image, rank, views } = contentInfo;
   if (name === "") return /*html*/ `<div class="column-contents__empty"></div>`;
   const content =
@@ -71,42 +74,56 @@ export const columnContent = (contentInfo) => {
   return content;
 };
 
-export const columnContents = (targetDay) => {
+const getEmptyColumnContents = (columnCount, targetDay) => {
   const emptyContentInfo = { name: "", image: "", rank: "", views: "" };
   const emptyContent = columnContent(emptyContentInfo);
-  const columnCount = 5;
-  let emptyCount = columnCount - (targetDay.length % columnCount);
   let result = "";
-  targetDay.forEach((contentInfo) => (result += columnContent(contentInfo)));
-  while (emptyCount !== 0 && emptyCount !== columnCount) {
+  let count = columnCount;
+  let emptyCount = count - (targetDay.length % count);
+  while (emptyCount !== 0 && emptyCount !== count) {
     result += emptyContent;
     emptyCount--;
   }
   return result;
 };
 
-export const days =
+const getColumContentsByDayMenu = (contentInfo, dayMenuNav) => {
+  if (dayMenuNav === "전체") return columnContent(contentInfo);
+  if (dayMenuNav === "웹툰" && contentInfo.type === "웹툰")
+    return columnContent(contentInfo);
+  if (
+    !["전체", "웹툰"].includes(dayMenuNav) &&
+    contentInfo.now &&
+    contentInfo.type === "웹툰"
+  )
+    return columnContent(contentInfo);
+  return "";
+};
+
+const getColumnContents = (targetDay) => {
+  const dayMenuNav = selectedNav[".days__menu--nav"];
+  const columnCount = 5;
+  let result = "";
+  targetDay.forEach(
+    (contentInfo) =>
+      (result += getColumContentsByDayMenu(contentInfo, dayMenuNav))
+  );
+  result += getEmptyColumnContents(columnCount, targetDay);
+  return result;
+};
+
+const days =
   /*html*/
   `
   <section class="days">
+
     <nav class="days__nav">
-      <ul>월</ul>
-      <ul>화</ul>
-      <ul>수</ul>
-      <ul>목</ul>
-      <ul>금</ul>
-      <ul>토</ul>
-      <ul>일</ul>
-      <ul>완결</ul>
+      ${getNav(daysNavItems)}
     </nav>
 
     <div class="days__menu">
       <nav class="days__menu--nav">
-        <ul>전체</ul>
-        <ul>웹툰</ul>
-        <ul>
-          <i class="fas fa-clock"></i>웹툰
-        </ul>
+        ${getNav(daysMenuNavItems)}
       </nav>
       <div class="days__menu--right">
         <span>모두 보기</span>
@@ -114,12 +131,13 @@ export const days =
     </div>
 
     <div class="column-contents">
-      ${columnContents(daysInfo[selectedNav[".days__nav"]])}
+      ${getColumnContents(daysInfo[selectedNav[".days__nav"]])}
     </div>
+    
   </section>
   `;
 
-export const listContents =
+const listContents =
   /*html*/
   `
   <section class="list-contents">
@@ -143,3 +161,14 @@ export const listContents =
     </div>
   </section>
   `;
+
+export {
+  ads,
+  webtoonNav,
+  dummy,
+  newThings,
+  columnContent,
+  getColumnContents,
+  days,
+  listContents,
+};

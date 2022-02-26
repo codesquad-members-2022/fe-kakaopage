@@ -1,3 +1,5 @@
+import { daysNavItems } from "../JS/nav";
+
 const webtoonData = [
   {
     name: "꽃",
@@ -5,7 +7,7 @@ const webtoonData = [
     rank: 100,
     views: 150.0,
     day: "월",
-    type: "webtoon",
+    type: "없음",
     now: true,
   },
   {
@@ -14,7 +16,7 @@ const webtoonData = [
     rank: 50,
     views: 150.0,
     day: "화",
-    type: "webtoon",
+    type: "웹툰",
     now: true,
   },
   {
@@ -23,7 +25,7 @@ const webtoonData = [
     rank: 80,
     views: 120.0,
     day: "수",
-    type: "webtoon",
+    type: "없음",
     now: false,
   },
   {
@@ -32,7 +34,7 @@ const webtoonData = [
     rank: 1,
     views: 10.0,
     day: "금",
-    type: "webtoon",
+    type: "웹툰",
     now: true,
   },
   {
@@ -41,7 +43,7 @@ const webtoonData = [
     rank: 100,
     views: 150.0,
     day: "화",
-    type: "webtoon",
+    type: "웹툰",
     now: true,
   },
   {
@@ -50,28 +52,47 @@ const webtoonData = [
     rank: 100,
     views: 150.0,
     day: "월",
-    type: "webtoon",
+    type: "웹툰",
     now: false,
   },
   {
-    name: "꽃",
+    name: "꽃333",
     image: "flower.png",
     rank: 87,
     views: 150.0,
     day: "목",
-    type: "webtoon",
+    type: "웹툰",
     now: false,
+  },
+  {
+    name: "구름!!!!!",
+    image: "cloud.png",
+    rank: 80,
+    views: 120.0,
+    day: "금",
+    type: "없음",
+    now: true,
+  },
+  {
+    name: "산2",
+    image: "mountain.png",
+    rank: 15,
+    views: 9.0,
+    day: "완결",
+    type: "없음",
+    now: true,
   },
 ];
 
-export const daysInfo = {};
+const daysInfo = {};
 
 const getDaysInfo = () => {
-  const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-  days.forEach((day) => (daysInfo[`${day}`] = []));
+  daysNavItems.forEach((day) => (daysInfo[`${day}`] = []));
   webtoonData.forEach((webtoon) => {
     daysInfo[`${webtoon.day}`].push(webtoon);
   });
 };
 
 getDaysInfo();
+
+export { daysInfo };

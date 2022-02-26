@@ -5,7 +5,7 @@ import {
   daysAssembly,
 } from "./assembly.js";
 import { selector, addClass, removeClass } from "./utility.js";
-import { selectedNav } from "./selectedNav.js";
+import { selectedNav } from "./nav.js";
 
 const removeMainPart = () => {
   selector("main").innerHTML = "";
@@ -19,7 +19,7 @@ const removeWebtoonPart = (name) => {
 };
 
 const removeDaysPart = () => {
-  const columncontents = document.querySelector(".column-contents");
+  const columncontents = selector(".column-contents");
   columncontents.innerHTML = "";
 };
 
@@ -35,15 +35,16 @@ const removeAndDrawView = (target, name) => {
       drawWithAssembly(webtoonAssembly, type);
     },
     days__nav: () => {
-      const view = document.querySelector(".column-contents");
+      const view = selector(".column-contents");
       removeDaysPart();
       drawWithAssembly(daysAssembly, type, view);
     },
     "days__menu--nav": () => {
+      // type = selector("selected", selector(".days__nav"));
       type = document
         .querySelector(".days__nav")
         .querySelector(".selected").innerHTML;
-      const view = document.querySelector(".column-contents");
+      const view = selector(".column-contents");
       removeDaysPart();
       drawWithAssembly(daysAssembly, type, view);
     },
@@ -65,10 +66,12 @@ const onNavClickHandler = (target, className) => {
   removeAndDrawView(target, className);
 };
 
-export const clickEventHandler = (event) => {
+const clickEventHandler = (event) => {
   event.preventDefault();
   const { target } = event;
   const ul = target.closest("UL");
   const nav = target.closest("nav");
   if (ul && nav) onNavClickHandler(ul, nav.className);
 };
+
+export { clickEventHandler };

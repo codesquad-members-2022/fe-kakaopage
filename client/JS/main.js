@@ -1,6 +1,6 @@
 import { drawWithAssembly, headerAssembly } from "./assembly.js";
-import { markAllSelectedNav, selectedNav } from "./selectedNav.js";
-import { selector, addClass, addEvent } from "./utility.js";
+import { markAllSelectedNav, selectedNav } from "./nav.js";
+import { addEvent } from "./utility.js";
 import { clickEventHandler } from "./clickEventHandler.js";
 
 const startPage = selectedNav[".header__nav"];
