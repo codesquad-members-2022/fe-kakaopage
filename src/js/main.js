@@ -1,5 +1,5 @@
 import { renderer } from './renderer.js';
-import { loadMain } from './handler.js';
+import { loadMain } from './handler/handler.js';
 
 const init = () => {
   renderer.header();
