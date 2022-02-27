@@ -6,6 +6,13 @@ const BANNER_WIDTH = 700;
 let curBanner;
 let autoSlideTimer;
 
+const resetSlideTimer = () => {
+  curBanner = 1;
+  if (autoSlideTimer) {
+    clearTimeout(autoSlideTimer);
+  }
+};
+
 const getBannerImg = (data, idx) => {
   const img = `<div class="position-rel banner" data-index="${idx + 1}">
   <div class="banner-img-container">
@@ -85,7 +92,6 @@ const slideRight2Left = () => {
   }
 
   $("#banner-count").textContent = curIdx + 1;
-  console.log(curBanner);
 };
 
 const startAutoSlide = () => {
@@ -190,7 +196,7 @@ const createBanner = () => {
   </div>
 </div>`;
 
-  curBanner = 1;
+  resetSlideTimer();
   insertIntoMain(banner);
   insertBannerImgs();
   moveBanners();
