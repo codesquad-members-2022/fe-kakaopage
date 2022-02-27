@@ -1,5 +1,5 @@
-import { setCarouselTo } from "./banner.js";
-import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
+import { setBannerBtnLeft, setSlideBanner } from "./banner.js";
+import { genreNavEventHandler, headNavEventHandler, addSelected, bannerBtnEventHandler } from "./event.js";
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
 import { dummy } from "./sources.js";
 import { addClickEventToElement, addToContents, combineFormats } from "./util.js";
@@ -15,6 +15,7 @@ export const renderPageInit = () => {
     addClickEventToElement('body', addSelected);
     addClickEventToElement('body', genreNavEventHandler);
     addClickEventToElement('body', headNavEventHandler);
+    // addClickEventToElement('body', bannerBtnEventHandler);
 }
 
 export const renderPageHome = () => {
@@ -30,7 +31,7 @@ export const renderPageHome = () => {
     addToContents(contents);
     addSelectedToday();
     document.getElementById('genre-home').classList.add('selected');
-    setCarouselTo(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageDaily = () => {
@@ -42,7 +43,7 @@ export const renderPageDaily = () => {
     initPage();
     addToContents(contents);
     addSelectedToday();
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageWebtoon = () => {
@@ -53,7 +54,7 @@ export const renderPageWebtoon = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageTeen = () => {
@@ -70,7 +71,7 @@ export const renderPageTeen = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageDrama = () => {
@@ -92,7 +93,7 @@ export const renderPageDrama = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageRomance = () => {
@@ -113,7 +114,7 @@ export const renderPageRomance = () => {
     
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageRofan = () => {
@@ -131,7 +132,7 @@ export const renderPageRofan = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageAction = () => {
@@ -148,7 +149,7 @@ export const renderPageAction = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageBL = () => {
@@ -165,7 +166,7 @@ export const renderPageBL = () => {
 
     initPage();
     addToContents(contents);
-    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageNotYet = () => {
@@ -195,7 +196,7 @@ export const headerFunction = {
 }
 
 export const bannerFunction = {
-    // mainLeft: () =>
+    mainLeft: () => setBannerBtnLeft('.banner-main')
 }
 
 function addSelectedToday(){
