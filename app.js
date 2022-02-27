@@ -4,7 +4,7 @@ const port = 3030;
 const path = require("path");
 const fs = require("fs");
 
-app.use(express.static("public"));
+app.use(express.static("dist"));
 
 app.get("/", (req, res) => {
   fs.readFile(path.join(__dirname, "/index.html"), (error, data) => {
