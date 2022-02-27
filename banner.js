@@ -1,4 +1,6 @@
-export function setSlideBanner(slideElement, imgArr, widthRem, carouselBoolean=false, sliderIntervalMs=0, transitionTimeMs=0) {
+import { addClickEventToElement } from "./util.js";
+
+export function setSlideBanner(slideElement, imgArr, widthRem, transitionTimeMs, carouselBoolean=false, sliderIntervalMs=null) {
     const element = document.querySelector(slideElement);
     const imgNum = imgArr.length;
     const maxWidth = widthRem*(imgNum) + widthRem*2;
@@ -11,7 +13,7 @@ export function setSlideBanner(slideElement, imgArr, widthRem, carouselBoolean=f
     element.style.transform = `translateX(${xPos}rem)`;
 
     if(carouselBoolean) {
-        setInterval(() => {
+        let carousel = setInterval(() => {
             xPos -= widthRem;
             element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
             element.style.transform = `translateX(${xPos}rem)`;
@@ -24,6 +26,64 @@ export function setSlideBanner(slideElement, imgArr, widthRem, carouselBoolean=f
                 }, transitionTimeMs+1);
             }
         }, sliderIntervalMs);
+
+        addClickEventToElement('#mainRight', () => {
+            clearInterval(carousel);
+            carousel = setInterval(() => {
+                xPos -= widthRem;
+                element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+                element.style.transform = `translateX(${xPos}rem)`;
+        
+                if(xPos === maxWidth*(-1) + widthRem){
+                    xPos = widthRem*(-1);
+                    setTimeout(() => {
+                        element.style.transition = "0s";
+                        element.style.transform = `translateX(${xPos}rem)`;
+                    }, transitionTimeMs+1);
+                }
+            }, sliderIntervalMs);
+    
+            xPos -= widthRem;
+            element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+            element.style.transform = `translateX(${xPos}rem)`;
+    
+            if(xPos === maxWidth*(-1) + widthRem){
+                xPos = widthRem*(-1);
+                setTimeout(() => {
+                    element.style.transition = "0s";
+                    element.style.transform = `translateX(${xPos}rem)`;
+                }, transitionTimeMs+1);
+            }
+        })
+    
+        addClickEventToElement('#mainLeft', () => {
+            clearInterval(carousel);
+            carousel = setInterval(() => {
+                xPos -= widthRem;
+                element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+                element.style.transform = `translateX(${xPos}rem)`;
+        
+                if(xPos === maxWidth*(-1) + widthRem){
+                    xPos = widthRem*(-1);
+                    setTimeout(() => {
+                        element.style.transition = "0s";
+                        element.style.transform = `translateX(${xPos}rem)`;
+                    }, transitionTimeMs+1);
+                }
+            }, sliderIntervalMs);
+            
+            xPos += widthRem;
+            element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+            element.style.transform = `translateX(${xPos}rem)`;
+    
+            if(xPos === 0){
+                xPos = maxWidth*(-1) + widthRem*2;
+                setTimeout(() => {
+                    element.style.transition = "0s";
+                    element.style.transform = `translateX(${xPos}rem)`;
+                }, transitionTimeMs+1);
+            }
+        })
     }
 
 }

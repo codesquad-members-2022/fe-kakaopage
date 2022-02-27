@@ -31,7 +31,7 @@ export const renderPageHome = () => {
     addToContents(contents);
     addSelectedToday();
     document.getElementById('genre-home').classList.add('selected');
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageDaily = () => {
@@ -43,7 +43,7 @@ export const renderPageDaily = () => {
     initPage();
     addToContents(contents);
     addSelectedToday();
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageWebtoon = () => {
@@ -54,7 +54,7 @@ export const renderPageWebtoon = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageTeen = () => {
@@ -71,7 +71,7 @@ export const renderPageTeen = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageDrama = () => {
@@ -93,7 +93,7 @@ export const renderPageDrama = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageRomance = () => {
@@ -114,7 +114,7 @@ export const renderPageRomance = () => {
     
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageRofan = () => {
@@ -132,7 +132,7 @@ export const renderPageRofan = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageAction = () => {
@@ -149,7 +149,7 @@ export const renderPageAction = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageBL = () => {
@@ -166,7 +166,7 @@ export const renderPageBL = () => {
 
     initPage();
     addToContents(contents);
-    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageNotYet = () => {
