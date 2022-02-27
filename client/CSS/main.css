@@ -43,11 +43,15 @@ main > * {
 
 .ads__image {
   position: absolute;
-  display: block;
-  height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.ads__image > img {
+  width: 100%;
 }
 
 /* days ======================================================= */
@@ -60,7 +64,7 @@ main > * {
   color: var(--color-grey-main);
 }
 
-.days__nav > * {
+.days__nav > ul {
   margin: 0.6rem 1rem;
   display: flex;
   align-items: center;
@@ -77,7 +81,6 @@ main > * {
   height: calc(var(--width-main) / 10);
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .days__menu > * {
@@ -86,16 +89,31 @@ main > * {
 
 .days__menu--nav {
   align-items: center;
-  justify-content: center;
 }
 
-.days__menu--nav > * {
+.days__menu--nav > ul {
+  color: var(--color-grey-main);
   flex: unset;
-  padding: 1rem;
+  padding: 0.4rem;
   padding-left: 0;
   display: flex;
   align-items: center;
+}
+
+.days__menu--nav > ul::after {
   color: var(--color-grey-main);
+  content: "|";
+  font-size: 0.8rem;
+  padding-left: 0.4rem;
+}
+
+.days__menu--nav > ul:last-child:after {
+  content: "";
+}
+
+.days__menu--nav > :last-child > :first-child {
+  /* font-size: 0.9em;
+  margin-top: 0.1em; */
 }
 
 .days__menu--nav > .selected {
@@ -103,8 +121,8 @@ main > * {
 }
 
 .days__menu--right {
-  font-size: 0.8rem;
   color: var(--color-grey-main);
+  font-size: 0.8rem;
   margin-left: auto;
 }
 

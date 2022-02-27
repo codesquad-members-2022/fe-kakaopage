@@ -1,4 +1,4 @@
-import { daysInfo } from "../data/webtoon.js";
+import { daysInfo, adsInfo } from "../data/webtoonData.js";
 import {
   webtoonNavItems,
   daysNavItems,
@@ -12,11 +12,25 @@ const getNav = (navItems) => {
   }, "");
 };
 
+const getAds = (info) => {
+  let target = info;
+  let result = "";
+  let count = target.number;
+  while (count !== 0) {
+    result += /*html*/ `<img src="../IMG/${target.adImage}" alt="ads image">`;
+    target = target.pre;
+    count--;
+  }
+  return result;
+};
+
 const ads =
   /*html*/
   `
   <section class="ads">
-    <img class="ads__image" src="../IMG/2.jpg" alt="ads image">
+    <div class="ads__image">
+      ${getAds(adsInfo)}
+    </div>
   </section>
   `;
 
@@ -63,13 +77,12 @@ const columnContent = ({ name, image, rank, views }) => {
             </div>
           </div>
         </div>
-        <div class="column-contents__content--name">${name}</div>
-        <div class="column-contents__content--views">
-          <i class="fas fa-user-circle"></i>
-          <span>${views}만 명</span>
+          <div class="column-contents__content--name">${name}</div>
+          <div class="column-contents__content--views">
+            <span><i class="fas fa-user-circle"></i>${views}만 명</span>
+          </div>
         </div>
-      </div>
-      `;
+        `;
   return content;
 };
 

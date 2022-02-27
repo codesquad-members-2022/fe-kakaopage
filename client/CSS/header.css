@@ -22,10 +22,16 @@ header {
   padding: 0.2rem;
   border: var(--border-main) var(--color-yellow-main);
   border-radius: 0.5rem;
-  width: 10rem;
+  width: 12rem;
+  align-items: center;
+  text-align: center;
 }
 .search-form input {
   all: unset;
+  flex-grow: 4;
+}
+.search-form_icon {
+  flex-grow: 1;
 }
 
 .header__contents,

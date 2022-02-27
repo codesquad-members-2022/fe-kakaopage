@@ -9,6 +9,8 @@ const webtoonData = [
     day: "월",
     type: "없음",
     now: true,
+    ad: true,
+    adImage: "1.jpg",
   },
   {
     name: "배",
@@ -18,6 +20,7 @@ const webtoonData = [
     day: "화",
     type: "웹툰",
     now: true,
+    ad: false,
   },
   {
     name: "구름",
@@ -27,6 +30,7 @@ const webtoonData = [
     day: "수",
     type: "없음",
     now: false,
+    ad: false,
   },
   {
     name: "산",
@@ -36,6 +40,7 @@ const webtoonData = [
     day: "금",
     type: "웹툰",
     now: true,
+    ad: false,
   },
   {
     name: "꽃!!!",
@@ -45,6 +50,7 @@ const webtoonData = [
     day: "화",
     type: "웹툰",
     now: true,
+    ad: false,
   },
   {
     name: "꽃???",
@@ -54,6 +60,8 @@ const webtoonData = [
     day: "월",
     type: "웹툰",
     now: false,
+    ad: true,
+    adImage: "2.jpg",
   },
   {
     name: "꽃333",
@@ -63,6 +71,7 @@ const webtoonData = [
     day: "목",
     type: "웹툰",
     now: false,
+    ad: false,
   },
   {
     name: "구름!!!!!",
@@ -72,6 +81,8 @@ const webtoonData = [
     day: "금",
     type: "없음",
     now: true,
+    ad: true,
+    adImage: "3.jpg",
   },
   {
     name: "산2",
@@ -81,10 +92,12 @@ const webtoonData = [
     day: "완결",
     type: "없음",
     now: true,
+    ad: false,
   },
 ];
 
 const daysInfo = {};
+let adsInfo = {};
 
 const getDaysInfo = () => {
   daysNavItems.forEach((day) => (daysInfo[`${day}`] = []));
@@ -93,6 +106,42 @@ const getDaysInfo = () => {
   });
 };
 
-getDaysInfo();
+const getAdInfoForm = (data) => {
+  const { name, adImage, now, views } = data;
+  return {
+    name,
+    adImage,
+    now,
+    views,
+    pre: null,
+    post: null,
+    number: null,
+  };
+};
 
-export { daysInfo };
+const getAdsInfo = () => {
+  webtoonData.forEach((data) => {
+    if (!data.ad) return;
+
+    const info = getAdInfoForm(data);
+    const firstInfo = adsInfo.post;
+    if (!firstInfo) {
+      adsInfo = info;
+      adsInfo.pre = adsInfo;
+      adsInfo.post = adsInfo;
+      adsInfo.number = 1;
+    } else {
+      info.pre = adsInfo;
+      info.post = adsInfo.post;
+      info.number = adsInfo.number + 1;
+      adsInfo.post = info;
+      adsInfo = info;
+    }
+  });
+};
+// use linked list
+
+getDaysInfo();
+getAdsInfo();
+
+export { daysInfo, adsInfo };
