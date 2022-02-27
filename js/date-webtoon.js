@@ -1,6 +1,13 @@
 import { webtoonData } from './data/webtoon-data/data.js';
 import { contents } from './html-template.js';
 
+export default function init() {
+  document.querySelector('.date').addEventListener('click', changeDate);
+
+  paintTodayList();
+  changeWebtoonContents();
+}
+
 function getDayOfTheWeek() {
   const dayWeek = ['일', '월', '화', '수', '목', '금', '토', '전체'];
   return dayWeek;
@@ -10,21 +17,20 @@ function selectedList() {
   return document.querySelectorAll('.date ul li');
 }
 
-export default function init() {
-  document.querySelector('.date').addEventListener('click', changeDate);
-
-  paintTodayList();
-  changeWebtoonContents();
-}
-
 function paintTodayList() {
   const dayWeek = getDayOfTheWeek();
   const todayNum = new Date().getDay();
   const additionalList = selectedList();
-  additionalList.forEach((list) => {
-    if (list.innerText === dayWeek[todayNum])
-      return list.classList.add('border-color');
-  });
+
+  // additionalList.forEach((list) => {
+  //   if (list.innerText === dayWeek[todayNum])
+  //     list.classList.add('border-color');
+  // });
+
+  let today = [...additionalList].filter(
+    (list) => list.innerText === dayWeek[todayNum]
+  );
+  today[0].classList.add('border-color');
 }
 
 function findTodayData(day = false) {
@@ -57,7 +63,7 @@ function removeClass() {
 }
 
 function changeDate(e) {
-  if (!e.target.closest('li')) return false;
+  if (!e.target.closest('li')) return;
   removeClass();
   e.target.closest('li').classList.add('border-color');
 
