@@ -1,4 +1,4 @@
-import { HEROKU_SERVER_URL } from "./constants.js";
+import { HEROKU_SERVER_URL, SERVER_FETCH_URL } from "./constants.js";
 
 const createExtendsRelation = (Child, Parent) => {
   Child.prototype = Object.create(Parent.prototype);
@@ -25,7 +25,9 @@ const formatUserCount = (userCount) => {
 
 const getJson = async (dataName) => {
   try {
-    const response = await fetch(`${HEROKU_SERVER_URL}${dataName}`);
+    const response = await fetch(
+      `${DEPLOY ? HEROKU_SERVER_URL : SERVER_FETCH_URL}${dataName}`
+    );
     return response.json();
   } catch (error) {
     console.error(error);

@@ -1,11 +1,17 @@
 {
+  "hompage": "https://healtheloper.github.io/fe-kakaopage",
   "name": "front",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run build:dev",
     "start": "nodemon app.js --delay 1",
-    "build": "webpack -w"
+    "build:dev": "webpack --env DEPLOY=false",
+    "build:deploy": "webpack --env DEPLOY=true",
+    "build:watch": "webpack -w --env DEPLOY=false",
+    "predeploy": "npm run build:deploy",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +26,8 @@
     "@babel/runtime": "^7.17.2",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
+    "gh-pages": "^3.2.3",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
