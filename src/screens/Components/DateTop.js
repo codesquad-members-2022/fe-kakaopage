@@ -4,7 +4,11 @@ import Component from "../Component.js";
 
 function DateTop(target, state) {
   Component.call(this, target, state);
+}
 
+createExtendsRelation(DateTop, Component);
+
+DateTop.prototype.template = function () {
   const { koreaDay } = this.state;
   const webtoons = JSON.parse(localStorage.getItem("webtoons"));
   const dateTopCards = webtoons
@@ -14,15 +18,10 @@ function DateTop(target, state) {
     .map(
       (card, index) => new CardInfoRow("_", { ...card, ranking: index + 1 })
     );
-
-  this.template = function () {
-    return `
-      <ul class="contents__date">
-        ${getComponentsTemplate(dateTopCards)}
-      </ul>`;
-  };
-}
-
-createExtendsRelation(DateTop, Component);
+  return `
+  <ul class="contents__date">
+    ${getComponentsTemplate(dateTopCards)}
+  </ul>`;
+};
 
 export default DateTop;

@@ -3,13 +3,13 @@ import { createExtendsRelation } from "../../../utils.js";
 
 function DramaGenre(target) {
   Component.call(this, target);
-
-  this.template = function () {
-    return `<div>DramaGenre</div>`;
-  };
   this.render();
 }
 
 createExtendsRelation(DramaGenre, Component);
+
+DramaGenre.prototype.template = function () {
+  return `<div>DramaGenre</div>`;
+};
 
 export default DramaGenre;

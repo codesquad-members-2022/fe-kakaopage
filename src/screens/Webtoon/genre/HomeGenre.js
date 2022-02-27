@@ -22,35 +22,6 @@ function HomeGenre(target) {
   const WEBTOONS_TOTAL_COUNT = 1318;
   const DAYS_TOP_WEBTOON_PER_PAGE = 10;
 
-  this.setEvent = function () {
-    this.addEvent("click", ".daysNav-item", ({ target }) => {
-      const eventTarget = target.closest(".daysNav-item");
-      updateNodeClasses(eventTarget, "selected");
-      const koreaDay = eventTarget.textContent;
-
-      const isDaysTopBox = (content) =>
-        content.constructor.name === "ContentsBox" &&
-        content.state.contents === "daysTop";
-
-      const daysTopBox = this.state.contents.find((content) =>
-        isDaysTopBox(content)
-      );
-
-      const { contentsBodyDiv, contentsBody } = daysTopBox.state;
-      const daysList = new DaysList(contentsBodyDiv, {
-        koreaDay,
-        count: DAYS_TOP_WEBTOON_PER_PAGE,
-      });
-
-      contentsBody.setState({
-        koreaDay,
-        daysList,
-      });
-
-      this.render();
-    });
-  };
-
   /* 메인 배너 Component */
   const mainBanner = new MainBanner(target, { genre: "home" });
   /* Nav Detail (Webtoon Status Nav) Component */
@@ -127,14 +98,41 @@ function HomeGenre(target) {
       new FullButton(),
     ],
   });
-
-  this.template = function () {
-    return getComponentsTemplate(this.state.contents);
-  };
-
-  this.render();
 }
 
 createExtendsRelation(HomeGenre, Component);
+
+HomeGenre.prototype.setEvent = function () {
+  this.addEvent("click", ".daysNav-item", ({ target }) => {
+    const eventTarget = target.closest(".daysNav-item");
+    updateNodeClasses(eventTarget, "selected");
+    const koreaDay = eventTarget.textContent;
+
+    const isDaysTopBox = (content) =>
+      content.constructor.name === "ContentsBox" &&
+      content.state.contents === "daysTop";
+
+    const daysTopBox = this.state.contents.find((content) =>
+      isDaysTopBox(content)
+    );
+
+    const { contentsBodyDiv, contentsBody } = daysTopBox.state;
+    const daysList = new DaysList(contentsBodyDiv, {
+      koreaDay,
+      count: DAYS_TOP_WEBTOON_PER_PAGE,
+    });
+
+    contentsBody.setState({
+      koreaDay,
+      daysList,
+    });
+
+    this.render();
+  });
+};
+
+HomeGenre.prototype.template = function () {
+  return getComponentsTemplate(this.state.contents);
+};
 
 export default HomeGenre;

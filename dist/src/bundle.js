@@ -209,19 +209,20 @@ __webpack_require__.r(__webpack_exports__);
 
 function BannerImage(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    var _this$state = this.state,
-        title = _this$state.title,
-        userCount = _this$state.userCount,
-        waitForFree = _this$state.waitForFree,
-        mainDesc = _this$state.mainDesc,
-        imageHorizontalUrl = _this$state.imageHorizontalUrl;
-    return "\n      <div class=\"banner__imgBox\">\n        <img src=\"".concat(imageHorizontalUrl, "\" alt=").concat(title, " />\n        <div class=\"imgBox__info\">\n          <div class=\"infoTitle\">\n            <span>").concat(title, "</span>\n          </div>\n          <div class=\"infoBody\">\n            <span class=\"info-event\">NEW</span>\n            <span class=\"info-category\">\n              ").concat(waitForFree ? '<i class="fas fa-clock"></i>' : "", " \uC6F9\uD230\n            </span>\n            <span class=\"span-bar\"> | </span>\n            <span class=\"info-users\">\n              <i class=\"fas fa-user\"></i> ").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(userCount), "\n            </span>\n          </div>\n        </div>\n      </div>\n      <div class=\"banner__message\">\n        <span>").concat(mainDesc, "</span>\n      </div>\n  ");
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(BannerImage, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+BannerImage.prototype.template = function () {
+  var _this$state = this.state,
+      title = _this$state.title,
+      userCount = _this$state.userCount,
+      waitForFree = _this$state.waitForFree,
+      mainDesc = _this$state.mainDesc,
+      imageHorizontalUrl = _this$state.imageHorizontalUrl;
+  return "\n    <div class=\"banner__imgBox\">\n      <img src=\"".concat(imageHorizontalUrl, "\" alt=").concat(title, " />\n      <div class=\"imgBox__info\">\n        <div class=\"infoTitle\">\n          <span>").concat(title, "</span>\n        </div>\n        <div class=\"infoBody\">\n          <span class=\"info-event\">NEW</span>\n          <span class=\"info-category\">\n            ").concat(waitForFree ? '<i class="fas fa-clock"></i>' : "", " \uC6F9\uD230\n          </span>\n          <span class=\"span-bar\"> | </span>\n          <span class=\"info-users\">\n            <i class=\"fas fa-user\"></i> ").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(userCount), "\n          </span>\n        </div>\n      </div>\n    </div>\n    <div class=\"banner__message\">\n      <span>").concat(mainDesc, "</span>\n    </div>\n");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BannerImage);
 
 /***/ }),
@@ -244,7 +245,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function BigCardList() {
+function BigCardList() {}
+
+(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(BigCardList, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+BigCardList.prototype.template = function () {
   var webtoons = JSON.parse(localStorage.getItem("webtoons"));
   var wtForBigCard = webtoons.filter(function (wt) {
     return wt.status === "N" && wt.imageHorizontalUrl;
@@ -256,13 +261,9 @@ function BigCardList() {
   }).map(function (bannerImage) {
     return "<li class=\"bigCard\">".concat(bannerImage.template(), "</li>");
   });
+  return "\n  <ul class=\"contentsBigCard\">\n    ".concat(bigCardsTemplates.join(""), "\n  </ul>");
+};
 
-  this.template = function () {
-    return "\n      <ul class=\"contentsBigCard\">\n        ".concat(bigCardsTemplates.join(""), "\n      </ul>");
-  };
-}
-
-(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(BigCardList, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BigCardList);
 
 /***/ }),
@@ -286,21 +287,22 @@ __webpack_require__.r(__webpack_exports__);
 
 function Card(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    var _this$state = this.state,
-        title = _this$state.title,
-        imageVerticalUrl = _this$state.imageVerticalUrl,
-        rank = _this$state.rank,
-        adult = _this$state.adult,
-        status = _this$state.status,
-        userCount = _this$state.userCount,
-        waitForFree = _this$state.waitForFree;
-    return "<li class=\"card\">\n    <div class=\"card__imgBox\">\n      <img\n        class=\"cardImg\"\n        src=\"".concat(imageVerticalUrl, "\"\n        alt=\"").concat(title, "\"\n      />\n      <div class=\"imgInfo\">\n        <span class=\"rank\">\u272D ").concat(rank, "</span>\n        ").concat(waitForFree ? '<span><i class="fas fa-clock"></i></span>' : "<span>웹툰</span>", "\n      </div>\n    </div>\n    <div class=\"card__title\">\n      <span>").concat(title, "</span>\n    </div>\n    <div class=\"card__info\">\n      ").concat(status ? "<span class=\"info-status ".concat(status === "N" ? "red" : "blue", "\">").concat(status, "</span>") : "", "\n      ").concat(adult ? "<span class=\"info-age\">15</span>" : "", "\n      <span class=\"info-user\">\n        <i class=\"fas fa-user\"></i>\n        <span>").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(userCount), "</span>\n      </span>\n    </div>\n  </li>");
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(Card, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+Card.prototype.template = function () {
+  var _this$state = this.state,
+      title = _this$state.title,
+      imageVerticalUrl = _this$state.imageVerticalUrl,
+      rank = _this$state.rank,
+      adult = _this$state.adult,
+      status = _this$state.status,
+      userCount = _this$state.userCount,
+      waitForFree = _this$state.waitForFree;
+  return "<li class=\"card\">\n    <div class=\"card__imgBox\">\n      <img\n        class=\"cardImg\"\n        src=\"".concat(imageVerticalUrl, "\"\n        alt=\"").concat(title, "\"\n      />\n      <div class=\"imgInfo\">\n        <span class=\"rank\">\u272D ").concat(rank, "</span>\n        ").concat(waitForFree ? '<span><i class="fas fa-clock"></i></span>' : "<span>웹툰</span>", "\n      </div>\n    </div>\n    <div class=\"card__title\">\n      <span>").concat(title, "</span>\n    </div>\n    <div class=\"card__info\">\n      ").concat(status ? "<span class=\"info-status ".concat(status === "N" ? "red" : "blue", "\">").concat(status, "</span>") : "", "\n      ").concat(adult ? "<span class=\"info-age\">15</span>" : "", "\n      <span class=\"info-user\">\n        <i class=\"fas fa-user\"></i>\n        <span>").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(userCount), "</span>\n      </span>\n    </div>\n  </li>");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);
 
 /***/ }),
@@ -323,14 +325,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function CardInfoRow(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    var info = this.state;
-    return "\n    <li class=\"dateContent\">\n      <div class=\"contentRow\">\n        <div class=\"dateRank\">".concat(info.ranking, "</div>\n        <div class=\"contentImgBox\">\n          ").concat(info.waitForFree ? "<span class='content-waitFreeIcon'><i class='fas fa-clock'></i></span>" : "<span>웹툰</span>", "\n          <img\n            src=\"").concat(info.imagePosterUrl, "\"\n            alt=\"").concat(info.title, "\"\n          />\n        </div>\n        <div class=\"contentInfo\">\n          <div class=\"info__titleInfo\">\n            ").concat(info.status ? "<span class=\"info__title-status ".concat(info.status === "N" ? "red" : "blue", "\">").concat(info.status, "</span>") : "", "\n            ").concat(info.age ? '<span class="info__title-age info-age">15</span>' : "", "\n            <span class=\"info__title\">").concat(info.title, "</span>\n          </div>\n          <div class=\"infoBody\">\n            <i class=\"fas fa-user\"></i>\n            <span>").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(info.userCount), "</span>\n            <span class=\"span-bar\">|</span>\n            ").concat(info.waitForFree ? '<span>기다무웹툰</span><span class="span-bar"> | </span>' : "", "\n            <span>").concat(info.genre.join(","), "</span>\n            <span class=\"span-bar\">|</span>\n            <span>").concat(info.write ? info.write + "," : "", "\n            ").concat(info.paint ? info.paint + "," : "").concat(info.originalAuthor, "\n            </span>\n          </div>\n          <div class=\"info-footer\">\n            <span>").concat(info.days.join(","), " \uC5F0\uC7AC</span>\n          </div>\n        </div>\n      </div>\n    </li>");
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(CardInfoRow, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+CardInfoRow.prototype.template = function () {
+  var info = this.state;
+  return "\n  <li class=\"dateContent\">\n    <div class=\"contentRow\">\n      <div class=\"dateRank\">".concat(info.ranking, "</div>\n      <div class=\"contentImgBox\">\n        ").concat(info.waitForFree ? "<span class='content-waitFreeIcon'><i class='fas fa-clock'></i></span>" : "<span>웹툰</span>", "\n        <img\n          src=\"").concat(info.imagePosterUrl, "\"\n          alt=\"").concat(info.title, "\"\n        />\n      </div>\n      <div class=\"contentInfo\">\n        <div class=\"info__titleInfo\">\n          ").concat(info.status ? "<span class=\"info__title-status ".concat(info.status === "N" ? "red" : "blue", "\">").concat(info.status, "</span>") : "", "\n          ").concat(info.age ? '<span class="info__title-age info-age">15</span>' : "", "\n          <span class=\"info__title\">").concat(info.title, "</span>\n        </div>\n        <div class=\"infoBody\">\n          <i class=\"fas fa-user\"></i>\n          <span>").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(info.userCount), "</span>\n          <span class=\"span-bar\">|</span>\n          ").concat(info.waitForFree ? '<span>기다무웹툰</span><span class="span-bar"> | </span>' : "", "\n          <span>").concat(info.genre.join(","), "</span>\n          <span class=\"span-bar\">|</span>\n          <span>").concat(info.write ? info.write + "," : "", "\n          ").concat(info.paint ? info.paint + "," : "").concat(info.originalAuthor, "\n          </span>\n        </div>\n        <div class=\"info-footer\">\n          <span>").concat(info.days.join(","), " \uC5F0\uC7AC</span>\n        </div>\n      </div>\n    </div>\n  </li>");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CardInfoRow);
 
 /***/ }),
@@ -353,19 +356,20 @@ __webpack_require__.r(__webpack_exports__);
 
 function Category(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    var _this$state = this.state,
-        name = _this$state.name,
-        category = _this$state.category,
-        waitForFree = _this$state.waitForFree,
-        newAlert = _this$state.newAlert,
-        selected = _this$state.selected;
-    return "\n        <li class=\"header__nav-item \n        ".concat(selected ? "selected" : "", "\" data-category=\"").concat(category, "\">\n          <span>\n            ").concat(name, "\n            ").concat(waitForFree ? ' ・ <i class="fas fa-clock"></i>' : "", "\n          </span>\n          ").concat(newAlert ? '<span class="yellow-dot"></span>' : "", "\n        </li>");
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(Category, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+Category.prototype.template = function () {
+  var _this$state = this.state,
+      name = _this$state.name,
+      category = _this$state.category,
+      waitForFree = _this$state.waitForFree,
+      newAlert = _this$state.newAlert,
+      selected = _this$state.selected;
+  return "\n      <li class=\"header__nav-item \n      ".concat(selected ? "selected" : "", "\" data-category=\"").concat(category, "\">\n        <span>\n          ").concat(name, "\n          ").concat(waitForFree ? ' ・ <i class="fas fa-clock"></i>' : "", "\n        </span>\n        ").concat(newAlert ? '<span class="yellow-dot"></span>' : "", "\n      </li>");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Category);
 
 /***/ }),
@@ -388,33 +392,33 @@ __webpack_require__.r(__webpack_exports__);
 
 function CategoryList(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.setEvent = function () {
-    var _this = this;
-
-    this.addEvent("click", ".header__nav-item", function (_ref) {
-      var target = _ref.target;
-      var eventTarget = target.closest(".header__nav-item");
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.updateNodeClasses)(eventTarget, "selected");
-      var category = eventTarget.dataset.category;
-      var genres = JSON.parse(localStorage.getItem("genres"));
-
-      _this.state.genreList.setState({
-        category: category,
-        genres: genres[category],
-        genre: "home"
-      });
-    });
-  };
-
-  this.template = function () {
-    return (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.getComponentsTemplate)(this.state.categories);
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(CategoryList, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+CategoryList.prototype.setEvent = function () {
+  var _this = this;
+
+  this.addEvent("click", ".header__nav-item", function (_ref) {
+    var target = _ref.target;
+    var eventTarget = target.closest(".header__nav-item");
+    (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.updateNodeClasses)(eventTarget, "selected");
+    var category = eventTarget.dataset.category;
+    var genres = JSON.parse(localStorage.getItem("genres"));
+
+    _this.state.genreList.setState({
+      category: category,
+      genres: genres[category],
+      genre: "home"
+    });
+  });
+};
+
+CategoryList.prototype.template = function () {
+  return (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.getComponentsTemplate)(this.state.categories);
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CategoryList);
 
 /***/ }),
@@ -501,6 +505,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function DateTop(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_3__["default"].call(this, target, state);
+}
+
+(0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.createExtendsRelation)(DateTop, _Component_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+DateTop.prototype.template = function () {
   var koreaDay = this.state.koreaDay;
   var webtoons = JSON.parse(localStorage.getItem("webtoons"));
   var dateTopCards = webtoons.filter(function (wt) {
@@ -512,13 +521,9 @@ function DateTop(target, state) {
       ranking: index + 1
     }));
   });
+  return "\n  <ul class=\"contents__date\">\n    ".concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.getComponentsTemplate)(dateTopCards), "\n  </ul>");
+};
 
-  this.template = function () {
-    return "\n      <ul class=\"contents__date\">\n        ".concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.getComponentsTemplate)(dateTopCards), "\n      </ul>");
-  };
-}
-
-(0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.createExtendsRelation)(DateTop, _Component_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DateTop);
 
 /***/ }),
@@ -543,23 +548,24 @@ __webpack_require__.r(__webpack_exports__);
 
 function DaysList(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    var _this = this;
-
-    var webtoons = JSON.parse(localStorage.getItem("webtoons"));
-    var cardList = webtoons.filter(function (webtoon) {
-      return webtoon.days.includes(_this.state.koreaDay);
-    });
-    var sliceCardList = cardList.slice(0, this.state.count ? this.state.count : cardList.length);
-    var cards = sliceCardList.map(function (cardInfo) {
-      return new _Card_js__WEBPACK_IMPORTED_MODULE_0__["default"]("_", cardInfo);
-    });
-    return (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.getComponentsTemplate)(cards);
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.createExtendsRelation)(DaysList, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+DaysList.prototype.template = function () {
+  var _this = this;
+
+  var webtoons = JSON.parse(localStorage.getItem("webtoons"));
+  var cardList = webtoons.filter(function (webtoon) {
+    return webtoon.days.includes(_this.state.koreaDay);
+  });
+  var sliceCardList = cardList.slice(0, this.state.count ? this.state.count : cardList.length);
+  var cards = sliceCardList.map(function (cardInfo) {
+    return new _Card_js__WEBPACK_IMPORTED_MODULE_0__["default"]("_", cardInfo);
+  });
+  return (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.getComponentsTemplate)(cards);
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DaysList);
 
 /***/ }),
@@ -582,21 +588,21 @@ __webpack_require__.r(__webpack_exports__);
 
 function DaysTop(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    var _this$state = this.state,
-        days = _this$state.days,
-        koreaDay = _this$state.koreaDay,
-        daysList = _this$state.daysList;
-    return "\n      <ul class=\"contents__daysNav\">\n      ".concat(days.map(function (day) {
-      return "<li class='daysNav-item ".concat(koreaDay === day ? " selected" : "", "'>\n              ").concat(day, "\n            </li>");
-    }).join(""), "\n          </ul>\n          <ul class=\"contentsCard\">\n            ").concat(daysList === null || daysList === void 0 ? void 0 : daysList.template(), "\n          </ul>");
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(DaysTop, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+DaysTop.prototype.template = function () {
+  var _this$state = this.state,
+      days = _this$state.days,
+      koreaDay = _this$state.koreaDay,
+      daysList = _this$state.daysList;
+  return "\n      <ul class=\"contents__daysNav\">\n      ".concat(days.map(function (day) {
+    return "<li class='daysNav-item ".concat(koreaDay === day ? " selected" : "", "'>\n              ").concat(day, "\n            </li>");
+  }).join(""), "\n          </ul>\n          <ul class=\"contentsCard\">\n            ").concat(daysList === null || daysList === void 0 ? void 0 : daysList.template(), "\n          </ul>");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DaysTop);
 
 /***/ }),
@@ -619,13 +625,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function FullButton(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target);
-
-  this.template = function () {
-    return "\n    <div class=\"main__button\">\n      <button>\n        <span><b>\uCE74\uCE74\uC624\uD398\uC774\uC9C0</b> \uC571\uC73C\uB85C \uBCF4\uAE30 ></span>\n      </button>\n    </div>";
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(FullButton, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+FullButton.prototype.template = function () {
+  return "\n  <div class=\"main__button\">\n    <button>\n      <span><b>\uCE74\uCE74\uC624\uD398\uC774\uC9C0</b> \uC571\uC73C\uB85C \uBCF4\uAE30 ></span>\n    </button>\n  </div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FullButton);
 
 /***/ }),
@@ -650,44 +657,45 @@ __webpack_require__.r(__webpack_exports__);
 
 function GenreList(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.render = function () {
-    var _this$state = this.state,
-        category = _this$state.category,
-        genre = _this$state.genre;
-    this.target.innerHTML = this.template();
-    var contentsBox = document.querySelector(".main__contentsBox");
-    new _categories_js__WEBPACK_IMPORTED_MODULE_2__["default"][category][genre](contentsBox);
-    this.removeEvent();
-    this.setEvent();
-  };
-
-  this.setEvent = function () {
-    var _this = this;
-
-    this.addEvent("click", ".navGenre-item", function (_ref) {
-      var target = _ref.target;
-      var eventTarget = target.closest(".navGenre-item");
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.updateNodeClasses)(eventTarget, "selected");
-
-      _this.setState({
-        genre: eventTarget.dataset.genre
-      });
-    });
-  };
-
-  this.template = function () {
-    var _this$state2 = this.state,
-        genres = _this$state2.genres,
-        genre = _this$state2.genre;
-    return "\n      <ul class=\"".concat(genres.length ? "mainBox mainNav" : "", " main__navGenre\">\n        ").concat(genres.reduce(function (tags, gInfo) {
-      tags += "\n            <li class=\"navGenre-item ".concat(gInfo.genre === genre ? "selected" : "", "\" \n            data-genre=\"").concat(gInfo.genre, "\">\n                ").concat(gInfo.name, "\n            </li>");
-      return tags;
-    }, ""), "\n      </ul>\n      <ul class=\"main__contentsBox\"></ul>\n    ");
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(GenreList, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+GenreList.prototype.render = function () {
+  var _this$state = this.state,
+      category = _this$state.category,
+      genre = _this$state.genre;
+  this.target.innerHTML = this.template();
+  var contentsBox = document.querySelector(".main__contentsBox");
+  new _categories_js__WEBPACK_IMPORTED_MODULE_2__["default"][category][genre](contentsBox);
+  this.removeEvent();
+  this.setEvent();
+};
+
+GenreList.prototype.setEvent = function () {
+  var _this = this;
+
+  this.addEvent("click", ".navGenre-item", function (_ref) {
+    var target = _ref.target;
+    var eventTarget = target.closest(".navGenre-item");
+    (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.updateNodeClasses)(eventTarget, "selected");
+
+    _this.setState({
+      genre: eventTarget.dataset.genre
+    });
+  });
+};
+
+GenreList.prototype.template = function () {
+  var _this$state2 = this.state,
+      genres = _this$state2.genres,
+      genre = _this$state2.genre;
+  return "\n    <ul class=\"".concat(genres.length ? "mainBox mainNav" : "", " main__navGenre\">\n      ").concat(genres.reduce(function (tags, gInfo) {
+    tags += "\n          <li class=\"navGenre-item ".concat(gInfo.genre === genre ? "selected" : "", "\" \n          data-genre=\"").concat(gInfo.genre, "\">\n              ").concat(gInfo.name, "\n          </li>");
+    return tags;
+  }, ""), "\n    </ul>\n    <ul class=\"main__contentsBox\"></ul>\n  ");
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GenreList);
 
 /***/ }),
@@ -711,22 +719,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function GenreTop(target, state) {
+  _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
+}
+
+(0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(GenreTop, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+GenreTop.prototype.template = function () {
   var _this = this;
 
-  _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
   var webtoons = JSON.parse(localStorage.getItem("webtoons"));
   var genreCards = webtoons.filter(function (wt) {
     return wt.genre.includes(_this.state.genre);
   }).map(function (cardInfo) {
     return new _Card_js__WEBPACK_IMPORTED_MODULE_2__["default"]("_", cardInfo);
   });
+  return "\n        <ul class=\"contentsCard\">\n          ".concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getComponentsTemplate)(genreCards), "\n        </ul>");
+};
 
-  this.template = function () {
-    return "\n        <ul class=\"contentsCard\">\n          ".concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getComponentsTemplate)(genreCards), "\n        </ul>");
-  };
-}
-
-(0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(GenreTop, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GenreTop);
 
 /***/ }),
@@ -748,19 +757,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function MainBanner(target, state) {
+  _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
+}
+
+(0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(MainBanner, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+MainBanner.prototype.template = function () {
   var _this = this;
 
-  _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
   var webtoon = JSON.parse(localStorage.getItem("webtoons")).filter(function (wt) {
     return wt.isMain[_this.state.genre];
   })[0]; // 일단 한개만, 나중에 슬라이더
 
-  this.template = function () {
-    return "\n        <li class=\"mainBox main__mainBanner\">\n            <div class=\"banner__imgBox\">\n                <img src=\"".concat(webtoon.imageHorizontalUrl, "\" />\n                <div class=\"imgBox__info\">\n                    <div class=\"infoTitle\">\n                        <span>").concat(webtoon.title, "</span>\n                    </div>\n                    <div class=\"infoBody\">\n                        <span class=\"info-event\">").concat(webtoon.event, "</span>\n                        <span class=\"info-category\">\n                            ").concat(webtoon.waitForFree ? "<i class='fas fa-clock'></i>" : "", " \uC6F9\uD230\n                        </span>\n                        <span class=\"span-bar\"> | </span>\n                        <span class=\"info-users\">\n                            <i class=\"fas fa-user\"></i> ").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(webtoon.userCount), "\n                        </span>\n                    </div>\n                </div>\n            </div>\n            <div class=\"banner__message\">\n                <span>").concat(webtoon.mainDesc, "</span>\n            </div>\n            <div class=\"imgBox__order\">\n                <span class=\"orderNum\">1</span>\n                <span class=\"orderBar\">/</span>\n                <span class=\"orderNum\">3</span>\n            </div>\n        </li>\n        ");
-  };
-}
+  return "\n    <li class=\"mainBox main__mainBanner\">\n        <div class=\"banner__imgBox\">\n            <img src=\"".concat(webtoon.imageHorizontalUrl, "\" />\n            <div class=\"imgBox__info\">\n                <div class=\"infoTitle\">\n                    <span>").concat(webtoon.title, "</span>\n                </div>\n                <div class=\"infoBody\">\n                    <span class=\"info-event\">").concat(webtoon.event, "</span>\n                    <span class=\"info-category\">\n                        ").concat(webtoon.waitForFree ? "<i class='fas fa-clock'></i>" : "", " \uC6F9\uD230\n                    </span>\n                    <span class=\"span-bar\"> | </span>\n                    <span class=\"info-users\">\n                        <i class=\"fas fa-user\"></i> ").concat((0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.formatUserCount)(webtoon.userCount), "\n                    </span>\n                </div>\n            </div>\n        </div>\n        <div class=\"banner__message\">\n            <span>").concat(webtoon.mainDesc, "</span>\n        </div>\n        <div class=\"imgBox__order\">\n            <span class=\"orderNum\">1</span>\n            <span class=\"orderBar\">/</span>\n            <span class=\"orderNum\">3</span>\n        </div>\n    </li>\n    ");
+};
 
-(0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(MainBanner, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MainBanner);
 
 /***/ }),
@@ -783,13 +794,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function NavDetail(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target);
-
-  this.template = function () {
-    return "<li class=\"mainBox main__navDetail\">\n    <div class=\"nav_detailBox\">\n      <div class=\"detailBox border-top-left\">\n        <span class=\"detailName\">\uC624\uB298 UP</span>\n        <span class=\"detailNum\">208</span>\n      </div>\n      <div class=\"detailBox\">\n        <span class=\"detailName\">\uC624\uB298 \uC2E0\uC791</span>\n        <span class=\"detailNum\">4</span>\n      </div>\n      <div class=\"detailBox border-top-right\">\n        <span class=\"detailName\">\uC624\uB9AC\uC9C0\uB110</span>\n        <span class=\"detailNum\">2,328</span>\n      </div>\n    </div>\n    <div class=\"nav_detailBox\">\n      <div class=\"detailBox border-bottom-left\">\n        <span class=\"detailName\">\uC644\uACB0\uAE4C\uC9C0 \uC815\uC8FC\uD589</span>\n      </div>\n      <div class=\"detailBox\">\n        <span class=\"detailName\">\uB3C5\uB9BD\uC6B4\uB3D9\uAC00 \uC6F9\uD230</span>\n      </div>\n      <div class=\"detailBox border-bottom-right\">\n        <span class=\"detailName\">\uC624\uB298 \uB7AD\uD0B9</span>\n        <span class=\"detailNum\">1\uC704</span>\n      </div>\n    </div>\n  </li>";
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(NavDetail, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+NavDetail.prototype.template = function () {
+  return "<li class=\"mainBox main__navDetail\">\n  <div class=\"nav_detailBox\">\n    <div class=\"detailBox border-top-left\">\n      <span class=\"detailName\">\uC624\uB298 UP</span>\n      <span class=\"detailNum\">208</span>\n    </div>\n    <div class=\"detailBox\">\n      <span class=\"detailName\">\uC624\uB298 \uC2E0\uC791</span>\n      <span class=\"detailNum\">4</span>\n    </div>\n    <div class=\"detailBox border-top-right\">\n      <span class=\"detailName\">\uC624\uB9AC\uC9C0\uB110</span>\n      <span class=\"detailNum\">2,328</span>\n    </div>\n  </div>\n  <div class=\"nav_detailBox\">\n    <div class=\"detailBox border-bottom-left\">\n      <span class=\"detailName\">\uC644\uACB0\uAE4C\uC9C0 \uC815\uC8FC\uD589</span>\n    </div>\n    <div class=\"detailBox\">\n      <span class=\"detailName\">\uB3C5\uB9BD\uC6B4\uB3D9\uAC00 \uC6F9\uD230</span>\n    </div>\n    <div class=\"detailBox border-bottom-right\">\n      <span class=\"detailName\">\uC624\uB298 \uB7AD\uD0B9</span>\n      <span class=\"detailNum\">1\uC704</span>\n    </div>\n  </div>\n</li>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavDetail);
 
 /***/ }),
@@ -812,13 +824,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function RecommendEvent(target, state) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target, state);
-
-  this.template = function () {
-    return "\n        <div class=\"banner__imgBox\">\n          <img src=\"https://dn-img-page.kakao.com/download/resource?kid=E8yMN/hzp2nOI0PT/XjH8y8XBKB7K53kSq88HKk\" alt=\"\uC774\uADF8\uB808\uD2B8\" />\n          <div class=\"imgBox__order\">\n            <span class=\"orderArrow\"><</span>\n            <span class=\"orderNum\">1</span>\n            <span class=\"orderBar\">/</span>\n            <span class=\"orderNum\">8</span>\n            <span class=\"orderArrow\">></span>\n          </div>\n        </div>";
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(RecommendEvent, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+RecommendEvent.prototype.template = function () {
+  return "\n      <div class=\"banner__imgBox\">\n        <img src=\"https://dn-img-page.kakao.com/download/resource?kid=E8yMN/hzp2nOI0PT/XjH8y8XBKB7K53kSq88HKk\" alt=\"\uC774\uADF8\uB808\uD2B8\" />\n        <div class=\"imgBox__order\">\n          <span class=\"orderArrow\"><</span>\n          <span class=\"orderNum\">1</span>\n          <span class=\"orderBar\">/</span>\n          <span class=\"orderNum\">8</span>\n          <span class=\"orderArrow\">></span>\n        </div>\n      </div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RecommendEvent);
 
 /***/ }),
@@ -841,13 +854,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function SubBanner(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"].call(this, target);
-
-  this.template = function () {
-    return "<li class=\"mainBox main__subBanner\">\n    <div class=\"arrow\">\n      <span><</span>\n    </div>\n    <img\n      class=\"subImg\"\n      src=\"https://dn-img-page.kakao.com/download/resource?kid=cOMNfP/hzp2fXqtDJ/Tswxss4NFzkbDtL6gdvBSK\"\n      alt=\"\uBBF8\uC290\uB7AD\uC2A4\uD0C0\"\n    />\n    <div class=\"arrow\">\n      <span>></span>\n    </div>\n  </li>";
-  };
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.createExtendsRelation)(SubBanner, _Component_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+SubBanner.prototype.template = function () {
+  return "<li class=\"mainBox main__subBanner\">\n  <div class=\"arrow\">\n    <span><</span>\n  </div>\n  <img\n    class=\"subImg\"\n    src=\"https://dn-img-page.kakao.com/download/resource?kid=cOMNfP/hzp2fXqtDJ/Tswxss4NFzkbDtL6gdvBSK\"\n    alt=\"\uBBF8\uC290\uB7AD\uC2A4\uD0C0\"\n  />\n  <div class=\"arrow\">\n    <span>></span>\n  </div>\n</li>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubBanner);
 
 /***/ }),
@@ -870,15 +884,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function Dummy(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>\uB354\uBBF8 \uD398\uC774\uC9C0</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(Dummy, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+Dummy.prototype.template = function () {
+  return "<div>\uB354\uBBF8 \uD398\uC774\uC9C0</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dummy);
 
 /***/ }),
@@ -976,15 +990,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function ActionGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>ActionGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(ActionGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+ActionGenre.prototype.template = function () {
+  return "<div>ActionGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ActionGenre);
 
 /***/ }),
@@ -1007,15 +1021,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function BLGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>BLGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(BLGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+BLGenre.prototype.template = function () {
+  return "<div>BLGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BLGenre);
 
 /***/ }),
@@ -1038,15 +1052,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function BoyGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>BoyGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(BoyGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+BoyGenre.prototype.template = function () {
+  return "<div>BoyGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BoyGenre);
 
 /***/ }),
@@ -1079,13 +1093,12 @@ function DaysGenre(target) {
   this.setState({
     contents: [mainBanner, new _Components_FullButton_js__WEBPACK_IMPORTED_MODULE_2__["default"]()]
   });
-
-  this.template = function () {
-    return (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.getComponentsTemplate)(this.state.contents);
-  };
-
   this.render();
 }
+
+DaysGenre.prototype.template = function () {
+  return (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.getComponentsTemplate)(this.state.contents);
+};
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.createExtendsRelation)(DaysGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DaysGenre);
@@ -1110,15 +1123,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function DramaGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>DramaGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(DramaGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+DramaGenre.prototype.template = function () {
+  return "<div>DramaGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DramaGenre);
 
 /***/ }),
@@ -1165,41 +1178,7 @@ function HomeGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_8__["default"].call(this, target);
   var WEBTOONS_TOTAL_COUNT = 1318;
   var DAYS_TOP_WEBTOON_PER_PAGE = 10;
-
-  this.setEvent = function () {
-    var _this = this;
-
-    this.addEvent("click", ".daysNav-item", function (_ref) {
-      var target = _ref.target;
-      var eventTarget = target.closest(".daysNav-item");
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_9__.updateNodeClasses)(eventTarget, "selected");
-      var koreaDay = eventTarget.textContent;
-
-      var isDaysTopBox = function isDaysTopBox(content) {
-        return content.constructor.name === "ContentsBox" && content.state.contents === "daysTop";
-      };
-
-      var daysTopBox = _this.state.contents.find(function (content) {
-        return isDaysTopBox(content);
-      });
-
-      var _daysTopBox$state = daysTopBox.state,
-          contentsBodyDiv = _daysTopBox$state.contentsBodyDiv,
-          contentsBody = _daysTopBox$state.contentsBody;
-      var daysList = new _Components_DaysList_js__WEBPACK_IMPORTED_MODULE_10__["default"](contentsBodyDiv, {
-        koreaDay: koreaDay,
-        count: DAYS_TOP_WEBTOON_PER_PAGE
-      });
-      contentsBody.setState({
-        koreaDay: koreaDay,
-        daysList: daysList
-      });
-
-      _this.render();
-    });
-  };
   /* 메인 배너 Component */
-
 
   var mainBanner = new _Components_MainBanner_js__WEBPACK_IMPORTED_MODULE_4__["default"](target, {
     genre: "home"
@@ -1278,15 +1257,47 @@ function HomeGenre(target) {
   this.setState({
     contents: [mainBanner, navDetail, subBanner, daysTopBox, bigCardListBox, rofanTopBox, dramaTopBox, dateTopBox, recommendEventBox, new _Components_FullButton_js__WEBPACK_IMPORTED_MODULE_12__["default"]()]
   });
-
-  this.template = function () {
-    return (0,_utils_js__WEBPACK_IMPORTED_MODULE_9__.getComponentsTemplate)(this.state.contents);
-  };
-
-  this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_9__.createExtendsRelation)(HomeGenre, _Component_js__WEBPACK_IMPORTED_MODULE_8__["default"]);
+
+HomeGenre.prototype.setEvent = function () {
+  var _this = this;
+
+  this.addEvent("click", ".daysNav-item", function (_ref) {
+    var target = _ref.target;
+    var eventTarget = target.closest(".daysNav-item");
+    (0,_utils_js__WEBPACK_IMPORTED_MODULE_9__.updateNodeClasses)(eventTarget, "selected");
+    var koreaDay = eventTarget.textContent;
+
+    var isDaysTopBox = function isDaysTopBox(content) {
+      return content.constructor.name === "ContentsBox" && content.state.contents === "daysTop";
+    };
+
+    var daysTopBox = _this.state.contents.find(function (content) {
+      return isDaysTopBox(content);
+    });
+
+    var _daysTopBox$state = daysTopBox.state,
+        contentsBodyDiv = _daysTopBox$state.contentsBodyDiv,
+        contentsBody = _daysTopBox$state.contentsBody;
+    var daysList = new _Components_DaysList_js__WEBPACK_IMPORTED_MODULE_10__["default"](contentsBodyDiv, {
+      koreaDay: koreaDay,
+      count: DAYS_TOP_WEBTOON_PER_PAGE
+    });
+    contentsBody.setState({
+      koreaDay: koreaDay,
+      daysList: daysList
+    });
+
+    _this.render();
+  });
+};
+
+HomeGenre.prototype.template = function () {
+  return (0,_utils_js__WEBPACK_IMPORTED_MODULE_9__.getComponentsTemplate)(this.state.contents);
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeGenre);
 
 /***/ }),
@@ -1309,15 +1320,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function RofanGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>RofanGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(RofanGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+RofanGenre.prototype.template = function () {
+  return "<div>RofanGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RofanGenre);
 
 /***/ }),
@@ -1340,15 +1351,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function RomanceGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>RomanceGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(RomanceGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+RomanceGenre.prototype.template = function () {
+  return "<div>RomanceGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RomanceGenre);
 
 /***/ }),
@@ -1371,15 +1382,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function WebtoonGenre(target) {
   _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"].call(this, target);
-
-  this.template = function () {
-    return "<div>WebtoonGenre</div>";
-  };
-
   this.render();
 }
 
 (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.createExtendsRelation)(WebtoonGenre, _Component_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+WebtoonGenre.prototype.template = function () {
+  return "<div>WebtoonGenre</div>";
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WebtoonGenre);
 
 /***/ }),

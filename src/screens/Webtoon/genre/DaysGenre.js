@@ -8,18 +8,16 @@ import {
 
 function DaysGenre(target) {
   Component.call(this, target);
-
   const mainBanner = new MainBanner(target, { genre: "days" });
-
   this.setState({
     contents: [mainBanner, new FullButton()],
   });
-
-  this.template = function () {
-    return getComponentsTemplate(this.state.contents);
-  };
   this.render();
 }
+
+DaysGenre.prototype.template = function () {
+  return getComponentsTemplate(this.state.contents);
+};
 
 createExtendsRelation(DaysGenre, Component);
 

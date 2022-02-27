@@ -4,19 +4,22 @@ import Component from "../Component.js";
 
 function Card(target, state) {
   Component.call(this, target, state);
+}
 
-  this.template = function () {
-    const {
-      title,
-      imageVerticalUrl,
-      rank,
-      adult,
-      status,
-      userCount,
-      waitForFree,
-    } = this.state;
+createExtendsRelation(Card, Component);
 
-    return `<li class="card">
+Card.prototype.template = function () {
+  const {
+    title,
+    imageVerticalUrl,
+    rank,
+    adult,
+    status,
+    userCount,
+    waitForFree,
+  } = this.state;
+
+  return `<li class="card">
     <div class="card__imgBox">
       <img
         class="cardImg"
@@ -50,9 +53,6 @@ function Card(target, state) {
       </span>
     </div>
   </li>`;
-  };
-}
-
-createExtendsRelation(Card, Component);
+};
 
 export default Card;

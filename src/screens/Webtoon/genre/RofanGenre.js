@@ -3,13 +3,13 @@ import { createExtendsRelation } from "../../../utils.js";
 
 function RofanGenre(target) {
   Component.call(this, target);
-
-  this.template = function () {
-    return `<div>RofanGenre</div>`;
-  };
   this.render();
 }
 
 createExtendsRelation(RofanGenre, Component);
+
+RofanGenre.prototype.template = function () {
+  return `<div>RofanGenre</div>`;
+};
 
 export default RofanGenre;

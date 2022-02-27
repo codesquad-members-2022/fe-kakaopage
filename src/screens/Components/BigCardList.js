@@ -2,7 +2,11 @@ import Component from "../Component.js";
 import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
 import BannerImage from "./BannerImage.js";
 
-function BigCardList() {
+function BigCardList() {}
+
+createExtendsRelation(BigCardList, Component);
+
+BigCardList.prototype.template = function () {
   const webtoons = JSON.parse(localStorage.getItem("webtoons"));
   const wtForBigCard = webtoons.filter(
     (wt) => wt.status === "N" && wt.imageHorizontalUrl
@@ -13,14 +17,10 @@ function BigCardList() {
     .map((bigCardInfo) => new BannerImage("_", bigCardInfo))
     .map((bannerImage) => `<li class="bigCard">${bannerImage.template()}</li>`);
 
-  this.template = function () {
-    return `
-      <ul class="contentsBigCard">
-        ${bigCardsTemplates.join("")}
-      </ul>`;
-  };
-}
-
-createExtendsRelation(BigCardList, Component);
+  return `
+  <ul class="contentsBigCard">
+    ${bigCardsTemplates.join("")}
+  </ul>`;
+};
 
 export default BigCardList;
