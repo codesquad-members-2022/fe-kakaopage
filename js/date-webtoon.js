@@ -22,11 +22,6 @@ function paintTodayList() {
   const todayNum = new Date().getDay();
   const additionalList = selectedList();
 
-  // additionalList.forEach((list) => {
-  //   if (list.innerText === dayWeek[todayNum])
-  //     list.classList.add('border-color');
-  // });
-
   let today = [...additionalList].filter(
     (list) => list.innerText === dayWeek[todayNum]
   );
