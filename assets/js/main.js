@@ -1,5 +1,5 @@
 import { topBanner, webtoonData } from './data.js';
-import { initSlider, initSliderHandler } from './slider.js';
+import { initSlider, initSliderHandler, startAutoSlide } from './slider.js';
 
 function clickMenu() {
     const gnb = document.querySelector('.gnb ul');
@@ -131,4 +131,5 @@ function createItemType3Horizontal(data) {
     clickMenu();
     const bannerSlider = document.querySelector('.top_banner');
     initSliderHandler(bannerSlider);
+    startAutoSlide(bannerSlider);
 })();

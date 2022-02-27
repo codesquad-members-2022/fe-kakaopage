@@ -1,5 +1,7 @@
 const FIRST_INDEX = 0;
 let currentIdx = FIRST_INDEX;
+let autoPlay = undefined;
+let clickSlideControl = false;
 
 function setSliderVariable(sliderWrapper) {
     const sliderBox = sliderWrapper.querySelector('.slider_items');
@@ -35,6 +37,11 @@ function initSlider(sliderWrapper) {
     sliderBox.style.transform = `translateX(0)`;
 
     updatePager(sliderInfo, currentIdx);
+    if (autoPlay) {
+        stopAutoSlide();
+        autoPlay = undefined;
+        startAutoSlide(sliderWrapper);
+    }
 }
 
 function initSliderHandler(sliderWrapper) {
@@ -46,6 +53,7 @@ function initSliderHandler(sliderWrapper) {
         const newBanner = target.closest('.banner');
         const sliderInfo = setSliderVariable(newBanner);
         const sliderItemCount = sliderInfo.itemCount;
+        clickSlideControl = true;
 
         switch (target) {
             case prevBtn:
@@ -58,6 +66,7 @@ function initSliderHandler(sliderWrapper) {
                 break;
         }
 
+        stopAutoSlide();
         moveSlide(sliderInfo, currentIdx);
         currentIdx = checkCurrentIdx(currentIdx, sliderItemCount);
         updatePager(sliderInfo, currentIdx);
@@ -80,6 +89,7 @@ function moveSlide(sliderInfo, currentIdx) {
     const itemCount = sliderInfo.itemCount;
     const itemWidth = sliderInfo.itemWidth;
     let transformValue = `translateX(${-currentIdx * itemWidth}px)`;
+    isSlideClick(sliderBox);
 
     sliderBox.classList.add('animate');
     sliderBox.style.transform = transformValue;
@@ -106,4 +116,29 @@ function updatePager(sliderInfo, currentIdx) {
     sliderInfo.pager.innerText = `${printCurIdx} / ${sliderInfo.itemCount}`;
 }
 
-export { initSlider, initSliderHandler };
+function isSlideClick(sliderBox) {
+    if (!clickSlideControl) return;
+    const sliderWrapper = sliderBox.closest('.banner');
+    clickSlideControl = false;
+    startAutoSlide(sliderWrapper);
+}
+
+function startAutoSlide(sliderWrapper) {
+    const TIME = 3000;
+    const targetSlide = setSliderVariable(sliderWrapper);
+    autoPlay = setInterval(() => {
+        currentIdx++;
+        moveSlide(targetSlide, currentIdx);
+        if (currentIdx === targetSlide.itemCount) {
+            currentIdx = FIRST_INDEX;
+        }
+        updatePager(targetSlide, currentIdx);
+    }, TIME);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoPlay);
+    autoPlay = undefined;
+}
+
+export { initSlider, initSliderHandler, startAutoSlide };
