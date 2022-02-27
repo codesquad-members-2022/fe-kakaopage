@@ -9,7 +9,7 @@ const createDomEl = (tagType, className, innerHTML) => {
 };
 
 const getMainNavHtml = (data) => {
-  return `
+  return /* html */ `
       <ul class="main__nav__dow--ul">
       ${data.week.reduce(
         (listHtml, day) => (listHtml += `<li>${day}</li>`),
@@ -32,12 +32,12 @@ const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
 `;
 };
 
-const getImgCardHtml = (data, test) => {
-  return `
+const getImgCardHtml = ({ imgUrl, title, info } = data, test) => {
+  return /* html */ `
   <li class="main__cartoonZone__cell${test ?? ""}">
     <div class="main__cartoonZone--imageWrapper">
       <img
-        src=${data.imgUrl}
+        src=${imgUrl}
         class="main__cartoonZone--image"
       />
       <div class="main__cartoonZone--imgTag">
@@ -46,9 +46,9 @@ const getImgCardHtml = (data, test) => {
       </div>
     </div>
     <div class="main__cartoonZone--info">
-      <span class="main__cartoonZone--title">${data.title}</span>
+      <span class="main__cartoonZone--title">${title}</span>
       <span class="main__cartoonZone--description">
-        ${data.info}
+        ${info}
       </span>
     </div>
   </li>
@@ -61,23 +61,20 @@ const getToonGenre = (toonGenre) =>
 const getIsHot = (isTrue) =>
   data.toonData.filter((toonInfo) => toonInfo.hot === isTrue);
 
-const hasToggleNav = (isTrue, toggleInfo) => {
+const hasToggleNav = (isTrue, { left, right } = toggleInfo) => {
   if (isTrue) {
-    return `<nav class="main__nav--toggle">
+    return /* html */ `<nav class="main__nav--toggle">
       <ul class="main--toggle--left">
-        ${toggleInfo.left.reduce(
-          (html, font) => (html += `<li>${font}</li>`),
-          ""
-        )}
+        ${left.reduce((html, font) => (html += `<li>${font}</li>`), "")}
       </ul>
-      <div class="main--toggle--right">${toggleInfo.right}</div>
+      <div class="main--toggle--right">${right}</div>
     </nav>`;
   }
 };
 
 const hasWeekNav = (isTrue, weekNavinfo) => {
   if (isTrue) {
-    return `<nav class="main__nav__dow">
+    return /* html */ `<nav class="main__nav__dow">
       <ul class="main__nav__dow--ul">
       ${weekNavinfo.reduce(
         (listHtml, day) => (listHtml += `<li>${day}</li>`),

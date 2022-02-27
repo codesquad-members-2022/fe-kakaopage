@@ -1,15 +1,19 @@
 import { domUtil } from "./eventJS/util.js";
 
-import { renderMainSecHome, renderMainSecWoD } from "./eventJS/recEvent.js";
+import {
+  renderMainSecHome,
+  renderMainSecWoD,
+  renderBanner,
+} from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
 import { renderToonbyDay } from "./eventJS/mainEvent.js";
 import { onClickBannerController } from "./eventJS/slider.js";
 
 renderMainSecHome();
-
-domUtil
-  .$(".recommand__image--controller")
-  .addEventListener("click", onClickBannerController);
+renderBanner();
+// domUtil
+//   .$(".recommand__image--controller")
+//   .addEventListener("click", onClickBannerController);
 
 domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
