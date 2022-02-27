@@ -15,10 +15,10 @@ const getNav = (navItems) => {
 const getAds = (info) => {
   let target = info;
   let result = "";
-  let count = target.number;
+  let count = 3;
   while (count !== 0) {
     result += /*html*/ `<img src="../IMG/${target.adImage}" alt="ads image">`;
-    target = target.pre;
+    target = target.post;
     count--;
   }
   return result;

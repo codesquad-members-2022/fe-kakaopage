@@ -46,7 +46,7 @@ main > * {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-150%, -50%);
   display: flex;
 }
 
@@ -109,11 +109,6 @@ main > * {
 
 .days__menu--nav > ul:last-child:after {
   content: "";
-}
-
-.days__menu--nav > :last-child > :first-child {
-  /* font-size: 0.9em;
-  margin-top: 0.1em; */
 }
 
 .days__menu--nav > .selected {
