@@ -3,6 +3,8 @@ import { dataOfsBanner } from "../data/home/smallBanner.js";
 import { dataOfBanner } from "../data/home/banner.js";
 
 const BANNER_WIDTH = 700;
+let curBanner;
+let autoSlideTimer;
 
 const getBannerImg = (data, idx) => {
   const img = `<div class="position-rel banner" data-index="${idx + 1}">
@@ -59,6 +61,7 @@ const insertBannerImgs = () => {
 
 const slideLeft2Right = () => {
   onAnimation();
+  curBanner -= 1;
   let curIdx = Number($("#banner-count").textContent);
 
   moveBanners(curIdx - 1);
@@ -72,6 +75,7 @@ const slideLeft2Right = () => {
 
 const slideRight2Left = () => {
   onAnimation();
+  curBanner += 1;
   let curIdx = Number($("#banner-count").textContent);
 
   moveBanners(curIdx + 1);
@@ -81,16 +85,24 @@ const slideRight2Left = () => {
   }
 
   $("#banner-count").textContent = curIdx + 1;
+  console.log(curBanner);
+};
+
+const startAutoSlide = () => {
+  autoSlideTimer = setTimeout(() => {
+    slideRight2Left();
+    startAutoSlide();
+  }, 3000);
 };
 
 const addSlideEvL = () => {
-  let curBanner = 1;
   let timer;
 
   $("#banner-left").addEventListener("click", () => {
+    clearTimeout(autoSlideTimer);
+    startAutoSlide();
     if (!timer) {
       slideLeft2Right();
-      curBanner -= 1;
       timer = setTimeout(() => {
         timer = null;
       }, 300);
@@ -98,9 +110,10 @@ const addSlideEvL = () => {
   });
 
   $("#banner-right").addEventListener("click", () => {
+    clearTimeout(autoSlideTimer);
+    startAutoSlide();
     if (!timer) {
       slideRight2Left();
-      curBanner += 1;
       timer = setTimeout(() => {
         timer = null;
       }, 300);
@@ -177,10 +190,12 @@ const createBanner = () => {
   </div>
 </div>`;
 
+  curBanner = 1;
   insertIntoMain(banner);
   insertBannerImgs();
   moveBanners();
   addSlideEvL();
+  startAutoSlide();
 };
 
 const createSmallBanner = (data) => {
