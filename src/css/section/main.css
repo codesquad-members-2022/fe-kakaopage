@@ -69,7 +69,8 @@
   top: 83%;
   right: 2%;
   font-size: var(--font-size-XL);
-  color: #808080;
+  font-weight: var(--font-max-bold);
+  color: var(--red-color);
   z-index: 10;
 }
 /* 박스 메뉴 */
