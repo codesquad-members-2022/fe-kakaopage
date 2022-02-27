@@ -37,16 +37,11 @@ const loadMain = (globalCategory, subCategory) => {
   const data = getData(globalCategory);
 
   if (data.subCategory) {
-    loadSnb(globalCategory);
+    renderer.snb(data.subCategory);
     loadCategoryContent(globalCategory, subCategory);
     return;
   }
   loadCategoryContent(globalCategory, subCategory);
-};
-
-const loadSnb = (globalCategory) => {
-  const data = getData(globalCategory);
-  renderer.snb(data.subCategory);
 };
 
 const loadCategoryContent = (globalCategory, subCategory) => {
