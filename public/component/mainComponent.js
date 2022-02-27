@@ -32,7 +32,7 @@ const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
 `;
 };
 
-const getImgCardHtml = ({ imgUrl, title, info } = data, test) => {
+const getImgCardHtml = ({ imgUrl, title, info }, test) => {
   return /* html */ `
   <li class="main__cartoonZone__cell${test ?? ""}">
     <div class="main__cartoonZone--imageWrapper">
@@ -61,7 +61,7 @@ const getToonGenre = (toonGenre) =>
 const getIsHot = (isTrue) =>
   data.toonData.filter((toonInfo) => toonInfo.hot === isTrue);
 
-const hasToggleNav = (isTrue, { left, right } = toggleInfo) => {
+const hasToggleNav = (isTrue, { left, right }) => {
   if (isTrue) {
     return /* html */ `<nav class="main__nav--toggle">
       <ul class="main--toggle--left">
