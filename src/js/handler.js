@@ -4,15 +4,13 @@ import { renderer } from './renderer.js';
 import { loaderMap } from './loaderMap.js';
 import { dataMap } from '../data/dataMap.js';
 
-const addHandlerOnGnb = () =>
-  select(`.gnb__list`).addEventListener('click', (event) => handleNav(event, 'gnb'));
+const addHandlerOnGnb = () => select(`.gnb__list`).addEventListener('click', handleNav);
 
-const addHandlerOnSnb = () =>
-  select(`.snb__list`).addEventListener('click', (event) => handleNav(event, 'snb'));
+const addHandlerOnSnb = () => select(`.snb__list`).addEventListener('click', handleNav);
 
-const handleNav = (event, nav) => {
+const handleNav = (event) => {
   if (!event.target.dataset.category || isAlreadyClicked(event.target)) return;
-
+  const nav = event.currentTarget.dataset.navtype;
   nav === 'gnb' && handleGnb(event);
   nav === 'snb' && handleSnb(event);
 };
@@ -49,7 +47,6 @@ const loadMain = (globalCategory, subCategory) => {
 const loadSnb = (globalCategory) => {
   const data = getData(globalCategory);
   renderer.snb(data.subCategory);
-  addHandlerOnSnb();
 };
 
 const loadCategoryContent = (globalCategory, subCategory) => {

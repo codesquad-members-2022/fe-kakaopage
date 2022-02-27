@@ -1,5 +1,5 @@
 import { select } from './util.js';
-
+import { addHandlerOnGnb, addHandlerOnSnb } from './handler.js';
 import { createHeader } from './components/header.js';
 import { createFooter } from './components/footer.js';
 import { createGnb } from './components/gnb.js';
@@ -20,10 +20,12 @@ const renderer = {
 
   gnb() {
     select('.gnb').insertAdjacentHTML('afterbegin', createGnb());
+    addHandlerOnGnb();
   },
 
   snb(subCategorys) {
     select('.main').insertAdjacentHTML('afterbegin', createSnb(subCategorys));
+    addHandlerOnSnb();
   },
 
   gridMenu(menuItemLabels) {
