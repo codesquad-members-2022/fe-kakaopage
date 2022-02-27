@@ -3,5 +3,10 @@
   "type": "module",
   "description": "kakao page clone",
   "main": "./src/app.js",
-  "author": "dony"
+  "author": "dony",
+  "devDependencies": {
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  }
 }
