@@ -31,23 +31,37 @@ const getBannerImg = (data, idx) => {
 };
 
 const getBannerImgs = () => {
-  let imgs = getBannerImg(dataOfBanner[dataOfBanner.length - 1], -1);
-  imgs += dataOfBanner.reduce((acc, data, idx) => {
+  const imgs = dataOfBanner.reduce((acc, data, idx) => {
     const img = getBannerImg(data, idx);
     return acc + img;
   }, "");
-  imgs += getBannerImg(dataOfBanner[0], dataOfBanner.length);
 
   return imgs;
+};
+
+const insertBannerImgs = () => {
+  const imgs = getBannerImgs();
+
+  const bannersContainer = $("#banners-container");
+  bannersContainer.innerHTML = imgs;
+
+  const firstBanner = bannersContainer.firstChild;
+  const firstBannerClone = firstBanner.cloneNode(true);
+  firstBannerClone.dataset.index = dataOfBanner.length + 1;
+
+  const lastBanner = bannersContainer.lastChild;
+  const lastBannerClone = lastBanner.cloneNode(true);
+  lastBannerClone.dataset.index = 0;
+
+  bannersContainer.insertBefore(lastBannerClone, firstBanner);
+  bannersContainer.appendChild(firstBannerClone);
 };
 
 const slideLeft2Right = () => {
   onAnimation();
   let curIdx = Number($("#banner-count").textContent);
 
-  $("#banners-container").style.transform = `translate(${
-    -BANNER_WIDTH * (curIdx - 1)
-  }px)`;
+  moveBanners(curIdx - 1);
 
   if (curIdx === 1) {
     curIdx = dataOfBanner.length + 1;
@@ -60,9 +74,7 @@ const slideRight2Left = () => {
   onAnimation();
   let curIdx = Number($("#banner-count").textContent);
 
-  $("#banners-container").style.transform = `translateX(${
-    -BANNER_WIDTH * (curIdx + 1)
-  }px)`;
+  moveBanners(curIdx + 1);
 
   if (curIdx === dataOfBanner.length) {
     curIdx = 0;
@@ -77,47 +89,47 @@ const addSlideEvL = () => {
 
   $("#banner-left").addEventListener("click", () => {
     if (!timer) {
+      slideLeft2Right();
+      curBanner -= 1;
       timer = setTimeout(() => {
         timer = null;
-        slideLeft2Right();
-        curBanner -= 1;
-      }, 200);
+      }, 300);
     }
   });
 
   $("#banner-right").addEventListener("click", () => {
     if (!timer) {
+      slideRight2Left();
+      curBanner += 1;
       timer = setTimeout(() => {
         timer = null;
-        slideRight2Left();
-        curBanner += 1;
-      }, 200);
+      }, 300);
     }
   });
 
   $("#banners-container").addEventListener("transitionend", () => {
     if (curBanner === dataOfBanner.length + 1) {
       offAnimation();
-      initBannersLoc();
+      moveBanners();
       curBanner = 1;
     }
 
     if (curBanner === 0) {
       offAnimation();
-      initBannersLoc(dataOfBanner.length);
+      moveBanners(dataOfBanner.length);
       curBanner = dataOfBanner.length;
     }
   });
 };
 
-const initBannersLoc = (loc = 1) => {
+const moveBanners = (loc = 1) => {
   $("#banners-container").style.transform = `translateX(${
     -BANNER_WIDTH * loc
   }px)`;
 };
 
 const onAnimation = () => {
-  $("#banners-container").style.transitionDuration = "0.2s";
+  $("#banners-container").style.transitionDuration = "0.3s";
 };
 
 const offAnimation = () => {
@@ -155,22 +167,19 @@ const createBanner = () => {
   <div>
     <div class="overflow-hd">
       <div class="side-by-side" id="banners-container">
-      ${getBannerImgs()}
       </div>
-    
     </div>
   </div>
   <div class="banner-count-container">
     <span class="banner-count text-color--light-gray" id="banner-count">
-      1</span><span class="banner-count text-color--light-gray">/${
-        dataOfBanner.length
-      }
+      1</span><span class="banner-count text-color--light-gray">/${dataOfBanner.length}
     </span>
   </div>
 </div>`;
 
   insertIntoMain(banner);
-  initBannersLoc();
+  insertBannerImgs();
+  moveBanners();
   addSlideEvL();
 };
 
