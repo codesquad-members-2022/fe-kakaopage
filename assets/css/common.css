@@ -8,6 +8,7 @@
 body {
     background-color: #eee;
 }
+
 .inner {
     max-width: 720px;
     width: 100%;
@@ -78,7 +79,6 @@ header .search_box button {
 header .header_nav {
     display: flex;
     align-items: center;
-
 }
 
 header .header_nav .stage_box {
@@ -110,7 +110,7 @@ header .header_nav .user_nav button {
     color: #999;
 }
 
-header .header_nav .user_nav button+button::before {
+header .header_nav .user_nav button + button::before {
     display: inline-block;
     content: '';
     width: 1px;
@@ -167,7 +167,7 @@ footer .inner {
     margin-right: 3px;
 }
 
-.fnb li+li::before {
+.fnb li + li::before {
     content: '• ';
     display: inline-block;
 }
@@ -207,7 +207,7 @@ footer .company_info .info_main span.underline {
     text-decoration: underline;
 }
 
-footer .company_info .info_main span+span::before {
+footer .company_info .info_main span + span::before {
     content: '|';
     display: inline-block;
     margin: 0 10px;

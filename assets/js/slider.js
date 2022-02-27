@@ -10,20 +10,20 @@ function setSliderVariable(sliderWrapper) {
 
     const sliderInfo = {
         sliderBox,
-        cloneFirst : firstItem.cloneNode(true),
-        cloneLast : lastItem.cloneNode(true),
-        itemCount : slideItem.length - slideCloneItem.length,
-        itemWidth : slideItem[0].offsetWidth,
-        pager : sliderWrapper.querySelector('.slider_pager'),
-        firstIdx : FIRST_INDEX
-    }
-    return sliderInfo
+        cloneFirst: firstItem.cloneNode(true),
+        cloneLast: lastItem.cloneNode(true),
+        itemCount: slideItem.length - slideCloneItem.length,
+        itemWidth: slideItem[0].offsetWidth,
+        pager: sliderWrapper.querySelector('.slider_pager'),
+        firstIdx: FIRST_INDEX,
+    };
+    return sliderInfo;
 }
 
 function initSlider(sliderWrapper) {
     currentIdx = FIRST_INDEX;
     const sliderInfo = setSliderVariable(sliderWrapper);
-    const sliderBox = sliderInfo.sliderBox
+    const sliderBox = sliderInfo.sliderBox;
     const cloneFirst = sliderInfo.cloneFirst;
     const cloneLast = sliderInfo.cloneLast;
 
@@ -61,7 +61,7 @@ function initSliderHandler(sliderWrapper) {
         moveSlide(sliderInfo, currentIdx);
         currentIdx = checkCurrentIdx(currentIdx, sliderItemCount);
         updatePager(sliderInfo, currentIdx);
-    })
+    });
 }
 
 function checkCurrentIdx(currentIdx, itemCount) {
@@ -72,7 +72,7 @@ function checkCurrentIdx(currentIdx, itemCount) {
         updateIdx = itemCount - 1;
     }
 
-    return updateIdx
+    return updateIdx;
 }
 
 function moveSlide(sliderInfo, currentIdx) {
@@ -88,7 +88,7 @@ function moveSlide(sliderInfo, currentIdx) {
         transformValue = `translateX(0)`;
         replaceSlideItem(sliderBox, transformValue);
     } else if (currentIdx < FIRST_INDEX) {
-        transformValue = `translateX(${-(itemCount-1) * itemWidth}px)`;
+        transformValue = `translateX(${-(itemCount - 1) * itemWidth}px)`;
         replaceSlideItem(sliderBox, transformValue);
     }
 }
@@ -98,7 +98,7 @@ function replaceSlideItem(sliderBox, transformValue) {
     setTimeout(() => {
         sliderBox.classList.remove('animate');
         sliderBox.style.transform = transformValue;
-    }, TIME)
+    }, TIME);
 }
 
 function updatePager(sliderInfo, currentIdx) {
@@ -106,4 +106,4 @@ function updatePager(sliderInfo, currentIdx) {
     sliderInfo.pager.innerText = `${printCurIdx} / ${sliderInfo.itemCount}`;
 }
 
-export { initSlider, initSliderHandler }
+export { initSlider, initSliderHandler };

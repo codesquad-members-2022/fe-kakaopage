@@ -9,19 +9,19 @@ function clickMenu() {
     const dayNavDefault = 'mon';
 
     gnb.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
+        if (e.target.closest('li').classList.contains('active')) return;
         toActivateNav(e.target, gnb);
     });
 
     lnb.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
+        if (e.target.closest('li').classList.contains('active')) return;
         toActivateNav(e.target, lnb);
         const targetLnb = e.target.closest('li').getAttribute('data-lnb');
         changeTopBanner(targetLnb);
     });
 
     dayNav.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
+        if (e.target.closest('li').classList.contains('active')) return;
         toActivateNav(e.target, dayNav);
         const targetDay = e.target.closest('li').getAttribute('data-day');
         createWebtoonDayContents(targetDay);
@@ -68,13 +68,13 @@ function getBadge(data) {
             }
         }
     });
-    return badge
+    return badge;
 }
 
 function createWebtoonDayContents(targetDay) {
     const items = webtoonData.map((data) => {
         if (data.week === targetDay || targetDay === 'all') {
-            return createItemType3Horizontal(data)
+            return createItemType3Horizontal(data);
         }
     });
     document.querySelector('.day_contents .item_list').innerHTML = items.join('');
@@ -99,11 +99,11 @@ function creatTopBannerHtml(data) {
                 </div>
                 <p class="desc">${data.description}</p>
             </div>
-        </div>`
+        </div>`;
 }
 
 function creatBadgeHtml(badgeName, src) {
-    return `<img src="./assets/images/ico/${src}" alt="${badgeName}">`
+    return `<img src="./assets/images/ico/${src}" alt="${badgeName}">`;
 }
 
 function createItemType3Horizontal(data) {
@@ -127,7 +127,7 @@ function createItemType3Horizontal(data) {
                 </div>
             </div>
         </a>
-    </li>`
+    </li>`;
 }
 (function () {
     clickMenu();
