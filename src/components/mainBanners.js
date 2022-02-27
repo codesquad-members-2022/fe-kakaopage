@@ -1,4 +1,4 @@
-import { getSildeButtonTemp } from "./sildeButton.js";
+import { getSildeButtonTemplate } from "./sildeButton.js";
 
 const checkMainBannerTags = (dataEl) => {
     const status = dataEl.status ? `<span class="main-banner__status banner__status">${dataEl.status}</span>` : '';
@@ -7,7 +7,7 @@ const checkMainBannerTags = (dataEl) => {
     return status + category + readerNum;
 }
 
-const getMainBannerTemp = (dataEl, className) => {
+const getMainBannerTemplate = (dataEl, className) => {
     return (
         `<li class="main-banner slide ${className}">
             <a href="${dataEl.link}" class="main-banners__link">
@@ -26,17 +26,17 @@ const getMainBannerTemp = (dataEl, className) => {
     );
 }
 
-const getMainBannersTemp = (data) => {
+const getMainBannersTemplate = (data) => {
     let mainBannerList =
-    getMainBannerTemp(data[data.length - 1], 'prev-slide')
-    + getMainBannerTemp(data[0], 'current-slide')
-    + getMainBannerTemp(data[1], 'next-slide');
+    getMainBannerTemplate(data[data.length - 1], 'prev-slide')
+    + getMainBannerTemplate(data[0], 'current-slide')
+    + getMainBannerTemplate(data[1], 'next-slide');
     return (
         `<div class="main-banners slider">
             <ul class="main-banners__contents slide-wrap">
                 ${mainBannerList}
             </ul>
-            ${getSildeButtonTemp('main-banners__slide-button')}
+            ${getSildeButtonTemplate('main-banners__slide-button')}
             <div class="slide-paging-number">
                 <span class="slide-paging-number__current">1</span>
                 <span class="slide-paging-number__all">${data.length}</span>
@@ -45,4 +45,4 @@ const getMainBannersTemp = (data) => {
     );
 }
 
-export { getMainBannerTemp, getMainBannersTemp };
+export { getMainBannerTemplate, getMainBannersTemplate };

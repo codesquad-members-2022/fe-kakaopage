@@ -1,16 +1,16 @@
-import { getCategoriesTemp } from '../components/categorise.js';
-import { getMainBannersTemp } from '../components/mainBanners.js';
-import { getSubCategoriesTemp } from '../components/subCategorise.js';
-import { getEventBannersTemp } from '../components/eventBanner.js';
+import { getCategoriesTemplate } from '../components/categorise.js';
+import { getMainBannersTemplate } from '../components/mainBanners.js';
+import { getSubCategoriesTemplate } from '../components/subCategorise.js';
+import { getEventBannersTemplate } from '../components/eventBanner.js';
 import { getDayTop } from '../components/dayTop.js';
 
-const getWebFictionPageTemp = (props, today) => {
-    const webFictionPageTemp = getCategoriesTemp(props["categories"])
-    + getMainBannersTemp(props["mainBanner"])
-    + getSubCategoriesTemp(props["subCategories"])
-    + getEventBannersTemp(props["eventBanner"])
+const getWebFictionPageTemplate = (props, today) => {
+    const webFictionPageTemplate = getCategoriesTemplate(props["categories"])
+    + getMainBannersTemplate(props["mainBanner"])
+    + getSubCategoriesTemplate(props["subCategories"])
+    + getEventBannersTemplate(props["eventBanner"])
     + getDayTop(props["dayTop"], today);
-    return webFictionPageTemp;
+    return webFictionPageTemplate;
 }
 
-export { getWebFictionPageTemp };
+export { getWebFictionPageTemplate };

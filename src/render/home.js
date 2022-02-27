@@ -1,12 +1,12 @@
-import { getMainBannersTemp } from '../components/mainBanners.js';
-import { getSubCategoriesTemp } from '../components/subCategorise.js';
-import { getEventBannersTemp } from '../components/eventBanner.js';
+import { getMainBannersTemplate } from '../components/mainBanners.js';
+import { getSubCategoriesTemplate } from '../components/subCategorise.js';
+import { getEventBannersTemplate } from '../components/eventBanner.js';
 
-const getHomePageTemp = (props, today) => {
-    const homePageTemp = getMainBannersTemp(props["mainBanner"])
-    + getSubCategoriesTemp(props["subCategories"])
-    + getEventBannersTemp(props["eventBanner"])
-    return homePageTemp;
+const getHomePageTemplate = (props, today) => {
+    const homePageTemplate = getMainBannersTemplate(props["mainBanner"])
+    + getSubCategoriesTemplate(props["subCategories"])
+    + getEventBannersTemplate(props["eventBanner"])
+    return homePageTemplate;
 }
 
-export { getHomePageTemp };
+export { getHomePageTemplate };

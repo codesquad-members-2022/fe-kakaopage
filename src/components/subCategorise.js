@@ -1,4 +1,4 @@
-const getSubCategoryTemp = (dataEl) => {
+const getSubCategoryTemplate = (dataEl) => {
     const updateNum = dataEl.updateNum ?
     ` <spn class="sub-category__number">${dataEl.updateNum}</spn>`
     : '';
@@ -9,8 +9,8 @@ const getSubCategoryTemp = (dataEl) => {
     );
 }
 
-const getSubCategoriesTemp = (data) => {
-    const subCategoryList = data.reduce((acc, cur) => acc += getSubCategoryTemp(cur), '');
+const getSubCategoriesTemplate = (data) => {
+    const subCategoryList = data.reduce((acc, cur) => acc += getSubCategoryTemplate(cur), '');
     return (
         `<div class="section section-sub-categorise">
             <ul class="sub-categories">
@@ -20,4 +20,4 @@ const getSubCategoriesTemp = (data) => {
     );
 }
 
-export { getSubCategoriesTemp };
+export { getSubCategoriesTemplate };

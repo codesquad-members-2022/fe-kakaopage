@@ -1,6 +1,6 @@
 import { $, $$, removeAndInsertHTML, getToday } from "./utility.js";
 import { getPageData } from "./data.js";
-import { getPageTemp, getNewDayTopContentTemp, getNewMainBannerTemp } from "./view.js";
+import { getPageTemplate, getNewDayTopContentTemplate, getNewMainBannerTemplate } from "./view.js";
 import { addClickEvent } from "./eventListener.js";
 
 export const MAIN_BANNER_INFO = {
@@ -33,23 +33,23 @@ export const renderPage = async (gnbTarget) => {
     const dataUrl = getPageData(gnbTarget);
     const response = await fetch(dataUrl);
     const currentPageData = await response.json();
-    const pageTemp = getPageTemp(gnbTarget, currentPageData, today);
+    const pageTemplate = getPageTemplate(gnbTarget, currentPageData, today);
     MAIN_BANNER_INFO.currentIdx = 1;
     MAIN_BANNER_INFO.viewIdx = 1;
-    removeAndInsertHTML('.contents', 'afterbegin', pageTemp);
+    removeAndInsertHTML('.contents', 'afterbegin', pageTemplate);
     activateDayTopTabButton(gnbTarget, today);
     return currentPageData;
 }
 
 export const renderDayTop = (dayTopData, currentTabIdx) => {
-    const newDayTopContentTemp = getNewDayTopContentTemp(dayTopData, currentTabIdx);
-    const newDayTopContent = newDayTopContentTemp.rankList + newDayTopContentTemp.gradeList;
+    const newDayTopContentTemplate = getNewDayTopContentTemplate(dayTopData, currentTabIdx);
+    const newDayTopContent = newDayTopContentTemplate.rankList + newDayTopContentTemplate.gradeList;
     removeAndInsertHTML('.day-top-conntent', 'afterbegin', newDayTopContent);
 }
 
 const renderMainBanner = (newMainBannerData, [className, insertPosition]) => {
-    const newMainBannerTemp = getNewMainBannerTemp(newMainBannerData, className);
-    $('.main-banners__contents').insertAdjacentHTML(insertPosition, newMainBannerTemp);
+    const newMainBannerTemplate = getNewMainBannerTemplate(newMainBannerData, className);
+    $('.main-banners__contents').insertAdjacentHTML(insertPosition, newMainBannerTemplate);
 }
 
 const moveSlide = (slideName, [oldSlide, newSlide]) => {

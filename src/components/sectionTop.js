@@ -1,4 +1,4 @@
-const getSectionTopTemp = (data) => {
+const getSectionTopTemplate = (data) => {
     const worksNum = data.worksLength ?
     `<span class="section__work-number"> (${data.worksLength})</span>`
     : '';
@@ -10,4 +10,4 @@ const getSectionTopTemp = (data) => {
     );
 }
 
-export { getSectionTopTemp };
+export { getSectionTopTemplate };

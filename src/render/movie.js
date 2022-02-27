@@ -1,14 +1,14 @@
-import { getCategoriesTemp } from '../components/categorise.js';
-import { getMainBannersTemp } from '../components/mainBanners.js';
-import { getSubCategoriesTemp } from '../components/subCategorise.js';
-import { getEventBannersTemp } from '../components/eventBanner.js';
+import { getCategoriesTemplate } from '../components/categorise.js';
+import { getMainBannersTemplate } from '../components/mainBanners.js';
+import { getSubCategoriesTemplate } from '../components/subCategorise.js';
+import { getEventBannersTemplate } from '../components/eventBanner.js';
 
-const getMoviePageTemp = (props) => {
-    const moviePageTemp = getCategoriesTemp(props["categories"])
-    + getMainBannersTemp(props["mainBanner"])
-    + getSubCategoriesTemp(props["subCategories"])
-    + getEventBannersTemp(props["eventBanner"]);
-    return moviePageTemp;
+const getMoviePageTemplate = (props) => {
+    const moviePageTemplate = getCategoriesTemplate(props["categories"])
+    + getMainBannersTemplate(props["mainBanner"])
+    + getSubCategoriesTemplate(props["subCategories"])
+    + getEventBannersTemplate(props["eventBanner"]);
+    return moviePageTemplate;
 }
 
-export { getMoviePageTemp };
+export { getMoviePageTemplate };

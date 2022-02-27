@@ -1,28 +1,28 @@
-import { getHomePageTemp } from './render/home.js';
-import { getWebtoonPageTemp } from './render/webtoon.js';
-import { getWebFictionPageTemp } from './render/webFiction.js';
-import { getMoviePageTemp } from './render/movie.js';
-import { getTVPageTemp } from './render/tv.js';
-import { getBookPageTemp } from './render/book.js';
-import { getDayTopContentTemp } from './components/dayTop.js';
-import { getMainBannerTemp } from './components/mainBanners.js';
+import { getHomePageTemplate } from './render/home.js';
+import { getWebtoonPageTemplate } from './render/webtoon.js';
+import { getWebFictionPageTemplate } from './render/webFiction.js';
+import { getMoviePageTemplate } from './render/movie.js';
+import { getTVPageTemplate } from './render/tv.js';
+import { getBookPageTemplate } from './render/book.js';
+import { getDayTopContentTemplate } from './components/dayTop.js';
+import { getMainBannerTemplate } from './components/mainBanners.js';
 
-const getPageTemp = (INITIAL_PAGE, data, today) => {
-    const pageTemp = {
-        "홈": () => getHomePageTemp(data, today),
-        "웹툰": () => getWebtoonPageTemp(data, today),
-        "웹소설": () => getWebFictionPageTemp(data, today),
-        "영화": () => getMoviePageTemp(data),
-        "방송": () => getTVPageTemp(data),
-        "책": () => getBookPageTemp(data),
+const getPageTemplate = (INITIAL_PAGE, data, today) => {
+    const pageTemplate = {
+        "홈": () => getHomePageTemplate(data, today),
+        "웹툰": () => getWebtoonPageTemplate(data, today),
+        "웹소설": () => getWebFictionPageTemplate(data, today),
+        "영화": () => getMoviePageTemplate(data),
+        "방송": () => getTVPageTemplate(data),
+        "책": () => getBookPageTemplate(data),
     };
-    const currentPageTemp = pageTemp[INITIAL_PAGE]();
+    const currentPageTemplate = pageTemplate[INITIAL_PAGE]();
 
-    return currentPageTemp;
+    return currentPageTemplate;
 }
 
-const getNewDayTopContentTemp = (dayTopData, currentTabIdx) => getDayTopContentTemp(dayTopData, currentTabIdx);
+const getNewDayTopContentTemplate = (dayTopData, currentTabIdx) => getDayTopContentTemplate(dayTopData, currentTabIdx);
 
-const getNewMainBannerTemp = (data, className) => getMainBannerTemp(data, className);
+const getNewMainBannerTemplate = (data, className) => getMainBannerTemplate(data, className);
 
-export { getPageTemp, getNewDayTopContentTemp, getNewMainBannerTemp };
+export { getPageTemplate, getNewDayTopContentTemplate, getNewMainBannerTemplate };

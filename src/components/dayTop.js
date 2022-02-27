@@ -1,20 +1,20 @@
-import { getSectionTopTemp } from '../components/sectionTop.js';
-import { getGradeListTemp } from '../components/gradeList.js';
+import { getSectionTopTemplate } from '../components/sectionTop.js';
+import { getGradeListTemplate } from '../components/gradeList.js';
 
-const getDayTopContentTemp = (data, dayIdx) => {
+const getDayTopContentTemplate = (data, dayIdx) => {
     const rankRowData = data['rankRow'][dayIdx];
-    const rankList = getGradeListTemp(rankRowData);
+    const rankList = getGradeListTemplate(rankRowData);
     const gradeRowData = data['gradeRow'][dayIdx];
-    const gradeList = getGradeListTemp(gradeRowData);
+    const gradeList = getGradeListTemplate(gradeRowData);
     return { rankList, gradeList };
 }
 
 const getDayTop = (data, dayIdx) => {
-    const dayTopContent = getDayTopContentTemp(data, dayIdx);
+    const dayTopContent = getDayTopContentTemplate(data, dayIdx);
     const dateArr = ["월", "화", "수", "목", "금", "토", "일", "완결"];
     return (
         `<section class="section">
-            ${getSectionTopTemp(data)}
+            ${getSectionTopTemplate(data)}
             <ul class="section__day-top-tabs">
                 ${dateArr.reduce((acc, cur, idx) => acc += `<li class="section__day-top-tab"><button type="button" class="day-top-tab__button" data-index="${idx}">${cur}</button></li>`, '')}
             </ul>
@@ -26,4 +26,4 @@ const getDayTop = (data, dayIdx) => {
     );
 }
 
-export { getDayTopContentTemp, getDayTop };
+export { getDayTopContentTemplate, getDayTop };

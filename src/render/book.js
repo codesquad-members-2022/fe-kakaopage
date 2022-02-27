@@ -1,12 +1,12 @@
-import { getCategoriesTemp } from '../components/categorise.js';
-import { getMainBannersTemp } from '../components/mainBanners.js';
-import { getSubCategoriesTemp } from '../components/subCategorise.js';
+import { getCategoriesTemplate } from '../components/categorise.js';
+import { getMainBannersTemplate } from '../components/mainBanners.js';
+import { getSubCategoriesTemplate } from '../components/subCategorise.js';
 
-const getBookPageTemp = (props) => {
-    const bookPageTemp = getCategoriesTemp(props["categories"])
-    + getMainBannersTemp(props["mainBanner"])
-    + getSubCategoriesTemp(props["subCategories"]);
-    return bookPageTemp;
+const getBookPageTemplate = (props) => {
+    const bookPageTemplate = getCategoriesTemplate(props["categories"])
+    + getMainBannersTemplate(props["mainBanner"])
+    + getSubCategoriesTemplate(props["subCategories"]);
+    return bookPageTemplate;
 }
 
-export { getBookPageTemp };
+export { getBookPageTemplate };
