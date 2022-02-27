@@ -55,17 +55,15 @@ function getBadge(data) {
             switch (key) {
                 case 'up':
                     badgeSrc = 'badge_up_blue.svg';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'new':
                     badgeSrc = 'badge_new_red.svg';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'age15':
                     badgeSrc = 'badge_15.png';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
             }
+            badge += creatBadgeHtml(key, badgeSrc);
         }
     });
     return badge;
