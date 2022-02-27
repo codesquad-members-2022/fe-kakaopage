@@ -1,5 +1,7 @@
 import { addClickEventToElement } from "./util.js";
 
+let xPos = 0;
+
 export function setSlideBanner(slideElement, imgArr, widthRem, transitionTimeMs, carouselBoolean=false, sliderIntervalMs=null) {
     const element = document.querySelector(slideElement);
     const imgNum = imgArr.length;
@@ -8,84 +10,40 @@ export function setSlideBanner(slideElement, imgArr, widthRem, transitionTimeMs,
 
     copyFirstAndLastElement(element);
 
-    let xPos = 0;
     xPos -= widthRem;
     element.style.transform = `translateX(${xPos}rem)`;
 
     if(carouselBoolean) {
         let carousel = setInterval(() => {
-            xPos -= widthRem;
-            element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
-            element.style.transform = `translateX(${xPos}rem)`;
-    
-            if(xPos === maxWidth*(-1) + widthRem){
-                xPos = widthRem*(-1);
-                setTimeout(() => {
-                    element.style.transition = "0s";
-                    element.style.transform = `translateX(${xPos}rem)`;
-                }, transitionTimeMs+1);
-            }
+            moveSlideRight (widthRem, element, transitionTimeMs, maxWidth)
         }, sliderIntervalMs);
 
-        addClickEventToElement('#mainRight', () => {
+        addClickEventToElement(`${slideElement}-btn.right`, () => {
             clearInterval(carousel);
             carousel = setInterval(() => {
-                xPos -= widthRem;
-                element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
-                element.style.transform = `translateX(${xPos}rem)`;
-        
-                if(xPos === maxWidth*(-1) + widthRem){
-                    xPos = widthRem*(-1);
-                    setTimeout(() => {
-                        element.style.transition = "0s";
-                        element.style.transform = `translateX(${xPos}rem)`;
-                    }, transitionTimeMs+1);
-                }
+                moveSlideRight (widthRem, element, transitionTimeMs, maxWidth)
             }, sliderIntervalMs);
     
-            xPos -= widthRem;
-            element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
-            element.style.transform = `translateX(${xPos}rem)`;
-    
-            if(xPos === maxWidth*(-1) + widthRem){
-                xPos = widthRem*(-1);
-                setTimeout(() => {
-                    element.style.transition = "0s";
-                    element.style.transform = `translateX(${xPos}rem)`;
-                }, transitionTimeMs+1);
-            }
+            moveSlideRight (widthRem, element, transitionTimeMs, maxWidth)
         })
     
-        addClickEventToElement('#mainLeft', () => {
+        addClickEventToElement(`${slideElement}-btn.left`, () => {
             clearInterval(carousel);
             carousel = setInterval(() => {
-                xPos -= widthRem;
-                element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
-                element.style.transform = `translateX(${xPos}rem)`;
-        
-                if(xPos === maxWidth*(-1) + widthRem){
-                    xPos = widthRem*(-1);
-                    setTimeout(() => {
-                        element.style.transition = "0s";
-                        element.style.transform = `translateX(${xPos}rem)`;
-                    }, transitionTimeMs+1);
-                }
+                moveSlideRight (widthRem, element, transitionTimeMs, maxWidth)
             }, sliderIntervalMs);
             
-            xPos += widthRem;
-            element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
-            element.style.transform = `translateX(${xPos}rem)`;
-    
-            if(xPos === 0){
-                xPos = maxWidth*(-1) + widthRem*2;
-                setTimeout(() => {
-                    element.style.transition = "0s";
-                    element.style.transform = `translateX(${xPos}rem)`;
-                }, transitionTimeMs+1);
-            }
+            moveSlideLeft (widthRem, element, transitionTimeMs, maxWidth)
+        })
+    } else {
+        addClickEventToElement(`${slideElement}-btn.right`, () => {
+            moveSlideRight (widthRem, element, transitionTimeMs, maxWidth)
+        })
+
+        addClickEventToElement(`${slideElement}-btn.left`, () => {
+            moveSlideLeft (widthRem, element, transitionTimeMs, maxWidth)
         })
     }
-
 }
 
 export function copyFirstAndLastElement (element) {
@@ -97,9 +55,30 @@ export function copyFirstAndLastElement (element) {
     element.insertBefore(copiedLast, element.firstChild);
 }
 
-export function setBannerBtnLeft (element) {
-    const bannerMain = document.querySelector(element);
-    const widthRem = Number(bannerMain.style.width.replace('rem', '')) / bannerMain.childElementCount;
+export function moveSlideRight (widthRem, element, transitionTimeMs, maxWidth) {
+    xPos -= widthRem;
+    element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+    element.style.transform = `translateX(${xPos}rem)`;
 
-    bannerMain.transform = `translateX(${widthRem}rem)`;
+    if(xPos === maxWidth*(-1) + widthRem){
+        xPos = widthRem*(-1);
+        setTimeout(() => {
+            element.style.transition = "0s";
+            element.style.transform = `translateX(${xPos}rem)`;
+        }, transitionTimeMs+1);
+    }
+}
+
+export function moveSlideLeft (widthRem, element, transitionTimeMs, maxWidth) {
+    xPos += widthRem;
+    element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
+    element.style.transform = `translateX(${xPos}rem)`;
+
+    if(xPos === 0){
+        xPos = maxWidth*(-1) + widthRem*2;
+        setTimeout(() => {
+            element.style.transition = "0s";
+            element.style.transform = `translateX(${xPos}rem)`;
+        }, transitionTimeMs+1);
+    }
 }

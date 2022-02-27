@@ -1,5 +1,5 @@
 import { createContentForms } from "./loop.js";
-import { bannerFunction, genreFunction, headerFunction } from "./render.js";
+import { genreFunction, headerFunction } from "./render.js";
 
 export function selectedInit(target){
     target.parentNode.childNodes.forEach(el => {
@@ -37,13 +37,5 @@ export function genreNavEventHandler (e) {
 
     if (genre) {
         genreFunction[genre]();
-    }
-}
-
-export function bannerBtnEventHandler(e) {
-    const bannerBtn = e.target.dataset.banner;
-
-    if (bannerBtn) {
-        bannerFunction[bannerBtn]();
     }
 }

@@ -178,7 +178,7 @@ header {
     position: relative;
 }
 
-.banner-btn {
+.banner-main-btn {
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
@@ -187,12 +187,12 @@ header {
     z-index: 10;
 }
 
-.banner-btn.left {
+.banner-main-btn.left {
     left: 0;
     margin-left: 1.5rem;
 }
 
-.banner-btn.right {
+.banner-main-btn.right {
     right: 0;
     margin-right: 1.5rem;
 }
