@@ -1,4 +1,4 @@
-import { frameHeader } from "../components/frame-header.js";
+import { frameHeader } from "./frame-header.js";
 
 const eventBannerContents = () => {
   return `<img

@@ -1,5 +1,5 @@
-import { handleCategory } from "./handle-cateogry.js";
-import { scrollDowSerialization } from "./blocks/dow-serialization.js";
+import { handleCategory } from "../handle-cateogry.js";
+import { scrollDowSerialization } from "../blocks/dow-serialization.js";
 import { slideShow } from "./event-slide.js";
 
 const initEventListener = () => {

@@ -1,6 +1,6 @@
-import { $ } from "./utils.js";
-import { initEventListener } from "./event-listener.js";
-import { dowTopContents } from "./blocks/dow-top.js";
+import { $ } from "../utils.js";
+import { initEventListener } from "../event/event-listener.js";
+import { dowTopContents } from "../blocks/dow-top.js";
 
 export const renderingContents = (selectedValue, navContents, navRendering) => {
   const renderingData =

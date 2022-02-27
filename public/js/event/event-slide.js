@@ -1,4 +1,4 @@
-import { $ } from "./utils.js";
+import { $ } from "../utils.js";
 const slides = $(".main-ad-banner__img-container");
 const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
 const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
@@ -56,7 +56,6 @@ const isEnd = () => {
 };
 
 const moveSlide = (positionValue, slideSpeed) => {
-  console.log(positionValue);
   slides.style.transition = `${slideSpeed}s ease-out`;
   slides.style.transform = `translateX(${positionValue}px)`;
 };

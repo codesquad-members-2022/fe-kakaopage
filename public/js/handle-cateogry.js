@@ -1,4 +1,4 @@
-import { renderingNav } from "./rendering-nav.js";
+import { renderingNav } from "./rendering/nav.js";
 import { settingContents } from "./setting-contents.js";
 
 export const handleCategory = (e) => {
