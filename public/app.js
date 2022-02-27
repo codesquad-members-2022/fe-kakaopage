@@ -29,6 +29,7 @@ navListsEl.forEach((navList) => {
         }
     })
 })
+
 bannerClickEventHandler();
 function bannerClickEventHandler() {
     const leftButton = document.querySelector('#banner-left-icon');
