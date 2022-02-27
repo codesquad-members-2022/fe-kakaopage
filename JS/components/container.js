@@ -1,23 +1,19 @@
-import {makeSelectDayHomeList} from './selectDay/selectDayHome.js'
+import {makeSelectDayHomeList} from './selectDay/selectDayList.js'
 import {makeRankingList} from './rankingList.js'
 import {makeEventSection} from './eventSection.js'
 import {makeWebtoonList} from './webtoonList.js'
-import {$, $all} from '../utility.js'
+import {$} from '../utility.js'
+
 
 function renderContainer(containerInfo, tab) {
-  const main = $('.main');
-  const newContainer = makeContainer(containerInfo.class, containerInfo.title);
-  makeLayout(containerInfo, newContainer, tab);
-  main.appendChild(newContainer);
-}
+  const newContainer = `
+    <div class="container ${containerInfo.class}">
+      ${makeContainerTitle(containerInfo.title)}
+      ${makeContainerLayout(containerInfo, tab)}
+    </div>
+  `;
 
-// ========== Container ==========
-function makeContainer(className, title) {
-  const newContainer = document.createElement("div");
-  newContainer.classList.add('container', className);
-  newContainer.innerHTML = makeContainerTitle(title);
-
-  return newContainer;
+  $('.main').insertAdjacentHTML('beforeend', newContainer);
 }
 
 function makeContainerTitle(title) {
@@ -33,25 +29,25 @@ function makeContainerTitle(title) {
 }
 
 // ==================== layout ====================
-function makeLayout(containerInfo, container, tab) {
-  let newList = null;
+function makeContainerLayout(containerInfo, tab) {
+  let innerHTML = '';
   switch (containerInfo.layout) {
     case 'SMALL_CARD':
       if (containerInfo.class === 'daily__top') {
-        const newDailyList = makeSelectDayHomeList();
-        container.appendChild(newDailyList);
+        innerHTML += makeSelectDayHomeList(containerInfo.items, containerInfo.data);
       }
-      newList = makeWebtoonList(containerInfo.items, containerInfo.data);
+      
+      innerHTML += makeWebtoonList(containerInfo.items, containerInfo.data);
       break;
     case 'RANKING':
-      newList = makeRankingList(containerInfo.data, tab);
+      innerHTML += makeRankingList(containerInfo.data, tab);
       break;
     case 'EVENT': 
-      newList = makeEventSection(containerInfo.class);
+      innerHTML += makeEventSection(containerInfo.class);
       break;
   }
 
-  return container.appendChild(newList);
+  return innerHTML;
 }
 
 export {renderContainer}

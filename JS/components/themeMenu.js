@@ -1,6 +1,6 @@
 import {$} from '../utility.js'
 
-const renderThemeMenu = (data) => {
+function renderThemeMenu(data) {
   const themeMenu = `
     <div class="theme">
       <ul class="theme__list">
@@ -12,7 +12,7 @@ const renderThemeMenu = (data) => {
   $('.main').insertAdjacentHTML('beforeend', themeMenu);
 }
 
-const makeThemeItems = (data) => {
+function makeThemeItems(data) {
   let result = '';
   data.forEach(el => {
     const checkHighlight = el.highlight ? `<span class="item__highlight">${el.highlight}</span>` : '';

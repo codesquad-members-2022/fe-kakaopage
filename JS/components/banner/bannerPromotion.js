@@ -2,7 +2,7 @@ import {makeBannerBtns} from './bannerBtn.js';
 import {$} from '../../utility.js'
 
 // ========== promotionBanner ==========
-const renderPromotionBanner = (data) => {
+function renderPromotionBanner(data) {
   const promotionBanner = `
     <div class="promotion__banner">
       ${makeBannerBtns()}

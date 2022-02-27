@@ -1,7 +1,7 @@
 import {makeBannerBtns} from './bannerBtn.js';
 import {$} from '../../utility.js'
 
-const renderMainBanner = (data) => {
+function renderMainBanner(data) {
   const mainBanner = `
     <article class="main__banner banner">
       ${makeBannerBtns()}
@@ -15,7 +15,7 @@ const renderMainBanner = (data) => {
   $('.main').insertAdjacentHTML('beforeend', mainBanner);
 }
 
-const makeMainBannerItems = (data) => {
+function makeMainBannerItems(data) {
   let result = '';
   data.forEach((el, index) => {
     result += `
@@ -39,7 +39,7 @@ const makeMainBannerItems = (data) => {
   return result
 }
 
-const makeMainBannerCounter = (data) => {
+function makeMainBannerCounter(data) {
   return `
     <div class="banner__count">
       <span class="now">1</span>

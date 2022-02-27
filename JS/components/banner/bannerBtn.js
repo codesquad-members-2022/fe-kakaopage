@@ -1,5 +1,5 @@
 // ========== banner__btns ==========
-export const makeBannerBtns = () => {
+export function makeBannerBtns() {
   return `
   <div class="banner__btns">
     <button type="button" class="banner__prev"><i class="fas fa-chevron-left"></i></button>

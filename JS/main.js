@@ -9,6 +9,15 @@ const startSlide = () => {
   eventMainBanner(list);
 }
 
+const todayFocus = () => {
+  const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+  const today = new Date().getDay();
+  const selectDay = $all('.select__day .day');
+  selectDay.forEach(el => {
+    if (el.dataset.day === day[today]) el.classList.add('day--focused');
+  });
+}
+
 const setFocus = (target, className) => {
   const focused = $(`.${className}`);
   if (focused) focused.classList.remove(className);
@@ -39,6 +48,7 @@ const moveGenreNav = (target) => {
       break;
     case 'daily':
       renderMain('daily');
+      todayFocus();
       clickDailyTopList(dailyTopData);
       break;
     case 'webtoon':
@@ -63,7 +73,6 @@ const clickDailyTopList = (data) => {
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
       if (!event.target.classList.contains('day__btn')) return false
-
       const parentNode = event.target.parentNode;
       const focusedClass = 'day--focused';
       setFocus(parentNode, focusedClass);
@@ -75,7 +84,7 @@ const clickDailyTopList = (data) => {
       const targetDay = event.target.parentNode.dataset.day;
       const newList = makeWebtoonList(DAILY_ITEMS, data[targetDay]);
       
-      topContainer.appendChild(newList);
+      topContainer.insertAdjacentHTML('beforeend', newList)
     })
   })
 }
@@ -120,6 +129,7 @@ const clickPromotionBanner = () => {
 }
 
 const eventHome = () => {
+  todayFocus();
   clickGenresList();
   clickPromotionBanner();
   clickDailyTopList(dailyTopData);
