@@ -3,8 +3,9 @@ import { select } from "./util.js";
 import { contentsData } from "./webtoonData.js";
 
 // 전역변수를 사용하지 않는 방법은 뭘까..?
-let index = 1;
+let index;
 let setTimer;
+const startIndex = 1;
 
 export function initContents() {
     createContents();
@@ -16,19 +17,20 @@ export function initContents() {
 function listenEvent() {
     const $contents = select('.contents');
     const $viewer = select('.contents__viewer')
-    animateReset($viewer, index) // 초기 슬라이더 위치 잡아주기
+    index = startIndex
+    animateReset($viewer, index)
     $contents.addEventListener('click', (e) => handleClick(e.target, $viewer));
 }
 
 function handleClick(target, $viewer) {
     const $$contentsWrap = [...$viewer.children];
-    const maxIndex = $$contentsWrap.length - 1 // first clone node index
-    const minIndex = 0 // last clone node index
+    const FirstNodeCloneIndex = $$contentsWrap.length - 1
+    const LastNodeCloneIndex = 0
     const realLastIndex = $$contentsWrap.length -2;
     const realFirstIndex = 1;
 
     if(target.className === 'contents__prevButton') {
-        if(index <= minIndex) {
+        if(index <= LastNodeCloneIndex) {
             index = realLastIndex
             animateReset($viewer, index)
         }
@@ -37,7 +39,7 @@ function handleClick(target, $viewer) {
         controlAuto();
     }
     else if(target.className === 'contents__nextButton') {
-        if(index >= maxIndex) {
+        if(index >= FirstNodeCloneIndex) {
             index = realFirstIndex
             animateReset($viewer, index)
         }
@@ -75,12 +77,8 @@ function autoSlide() {
     }, 3000)
 }
 
-function clearTimer(timer) {
-    clearInterval(timer)
-}
-
 function controlAuto() {
-    clearTimer(setTimer)
+    clearInterval(setTimer)
     autoSlide();
 }
 
