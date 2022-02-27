@@ -1,6 +1,6 @@
 import Dummy from "../Components/dummy.js";
 
-const bookGernes = {
+const bookGenres = {
   home: Dummy,
   serial: Dummy,
   bestseller: Dummy,
@@ -10,4 +10,4 @@ const bookGernes = {
   learning: Dummy,
 };
 
-export default bookGernes;
+export default bookGenres;

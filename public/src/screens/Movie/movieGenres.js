@@ -1,6 +1,6 @@
 import Dummy from "../Components/dummy.js";
 
-const movieGernes = {
+const movieGenres = {
   home: Dummy,
   ranking: Dummy,
   romance: Dummy,
@@ -9,4 +9,4 @@ const movieGernes = {
   genreAll: Dummy,
 };
 
-export default movieGernes;
+export default movieGenres;

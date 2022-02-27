@@ -1,7 +1,7 @@
 import Dummy from "../Components/dummy.js";
 
-const homeGernes = {
+const homeGenres = {
   home: Dummy,
 };
 
-export default homeGernes;
+export default homeGenres;

@@ -1,17 +1,17 @@
 import webtoonGenres from "./screens/Webtoon/webtoonGenres.js";
 import webnovelGenres from "./screens/Webnovel/webnovelGenres.js";
-import homeGernes from "./screens/Home/homeGenres.js";
-import movieGernes from "./screens/Movie/movieGenres.js";
-import broadcastGernes from "./screens/Broadcast/broadcastGenres.js";
-import bookGernes from "./screens/Book/bookGenres.js";
+import homeGenres from "./screens/Home/homeGenres.js";
+import movieGenres from "./screens/Movie/movieGenres.js";
+import broadcastGenres from "./screens/Broadcast/broadcastGenres.js";
+import bookGenres from "./screens/Book/bookGenres.js";
 
 const categories = {
-  home: homeGernes,
+  home: homeGenres,
   webtoon: webtoonGenres,
   webnovel: webnovelGenres,
-  movie: movieGernes,
-  broadcast: broadcastGernes,
-  book: bookGernes,
+  movie: movieGenres,
+  broadcast: broadcastGenres,
+  book: bookGenres,
 };
 
 export default categories;

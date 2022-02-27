@@ -1,6 +1,6 @@
 import Dummy from "../Components/dummy.js";
 
-const broadcastGernes = {
+const broadcastGenres = {
   home: Dummy,
   entertain: Dummy,
   drama: Dummy,
@@ -10,4 +10,4 @@ const broadcastGernes = {
   genreAll: Dummy,
 };
 
-export default broadcastGernes;
+export default broadcastGenres;
