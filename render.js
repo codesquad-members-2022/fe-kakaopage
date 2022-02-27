@@ -1,4 +1,4 @@
-import { createCarouselSlider } from "./banner.js";
+import { setCarouselTo } from "./banner.js";
 import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
 import { dummy } from "./sources.js";
@@ -30,30 +30,30 @@ export const renderPageHome = () => {
     addToContents(contents);
     addSelectedToday();
     document.getElementById('genre-home').classList.add('selected');
-    createCarouselSlider(".banner-main", dummy.slideBannerMainImg, 45, 2000, 500);
+    setCarouselTo(".banner-main", dummy.slideBannerMainImg, 45, true, 2000, 500);
 }
 
 export const renderPageDaily = () => {
     const formats = [
         createFormatBannerMain(dummy.slideBannerMainImg), createFormatDailyWebtoon()
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
     addSelectedToday();
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageWebtoon = () => {
     const formats = [
         createFormatBannerMain(dummy.slideBannerMainImg), createFormatHotizontalList(), createFormatHorizontalContents('🔥HOT 최근 프로모션 진행작')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageTeen = () => {
@@ -70,7 +70,7 @@ export const renderPageTeen = () => {
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageDrama = () => {
@@ -92,7 +92,7 @@ export const renderPageDrama = () => {
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageRomance = () => {
@@ -109,11 +109,11 @@ export const renderPageRomance = () => {
         createFormatTotal('로맨스 전체')
 
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
     
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageRofan = () => {
@@ -127,11 +127,11 @@ export const renderPageRofan = () => {
         createFormatContentsBoxBigger('#걸크러시: 악녀, 가주, 기사까지 모두 모였다!'), createFormatContentsBoxBigger('#신박한 로판 사전: 이런 소재 찾고 계신가요?'),
         createFormatHorizontalContents('#정주행: 추천 완결작'), createFormatHorizontalContents('베스트 셀러'), createFormatTotal('로판 전체')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageAction = () => {
@@ -148,7 +148,7 @@ export const renderPageAction = () => {
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
 export const renderPageBL = () => {
@@ -161,16 +161,16 @@ export const renderPageBL = () => {
         createFormatContentsBox('기다림은 반, 재미는 두 배? 12시간 무료!'), createFormatHorizontalContents('시대, 판타지'),
         createFormatHorizontalContents('매혹의 성역'), createFormatTotal('BL 전체')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    createCarouselSlider(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
+    setCarouselTo(".banner-main", 45, dummy.slideBannerMainImg, 2000, 500);
 }
 
-export const createPageNotYet = () => {
+export const renderPageNotYet = () => {
     initPage();
-    addToContents(createFormatNotYet())
+    addToContents(createFormatNotYet());
 }
 
 export const genreFunction = {
@@ -186,17 +186,23 @@ export const genreFunction = {
 }
 
 export const headerFunction = {
-    home: () => createPageNotYet(),
+    home: () => renderPageNotYet(),
     webtoon: () => renderPageHome(),
-    webnovel: () => createPageNotYet(),
-    movie: () => createPageNotYet(),
-    broad: () => createPageNotYet(),
-    book: () => createPageNotYet(),
+    webnovel: () => renderPageNotYet(),
+    movie: () => renderPageNotYet(),
+    broad: () => renderPageNotYet(),
+    book: () => renderPageNotYet(),
+}
+
+export const bannerFunction = {
+    // mainLeft: () =>
 }
 
 function addSelectedToday(){
     const days = document.querySelectorAll('.day');
-    const today = new Date().getDay()-1;
+    let today = new Date().getDay()-1;
+
+    if(today === -1) today = 6;
 
     days[today].classList.add('selected');
 }

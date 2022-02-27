@@ -5,8 +5,14 @@ import { pickFromArr } from "./util.js"
 export const createFormatBannerMain = (imgArr) => {
     const formatBannerMain = `
 <div class="slider">
+    <div class="banner-btn left" data-banner="mainLeft">
+        <img src="https://user-images.githubusercontent.com/95198109/155870133-8fadf732-2adf-4fdf-8679-d399f94c17d6.svg" alt="prev-button">
+    </div>
     <div class="banner-main">
         ${createBannerMain(imgArr)}
+    </div>
+    <div class="banner-btn right" data-banner="mainRight">
+    <img src="https://user-images.githubusercontent.com/95198109/155870179-12b75bb8-5c4c-420d-9f56-6928da027daf.svg" alt="next-button">
     </div>
 </div>`
 
