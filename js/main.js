@@ -8,10 +8,12 @@ import romance from './components/romance.js';
 import fantasy from './components/fantasy.js';
 import martialArts from './components/martial-arts.js';
 import bl from './components/bl.js';
-import slide from './slide.js';
+import slide from './slide/slide.js';
 
 (function init() {
   document.querySelector('.menubar_tag').addEventListener('click', changeUI);
+  home();
+  slide();
 })();
 
 function removeClass() {
@@ -25,7 +27,7 @@ function removeClass() {
 }
 
 function changeUI(e) {
-  if (!e.target.closest('button')) return false;
+  if (!e.target.closest('button')) return;
 
   removeClass();
   const title = e.target.closest('button').innerText;
@@ -53,7 +55,7 @@ function changeUI(e) {
       drama();
       slide();
       break;
-    case '로멘스':
+    case '로맨스':
       romance();
       slide();
       break;
