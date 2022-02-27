@@ -3,12 +3,11 @@ import Component from "../Component.js";
 
 function ContentsBox(target, state) {
   Component.call(this, target, state);
-  this.state = {
-    ...state,
-    contentsBodyDiv: this.prototype.createContentBodyDiv(),
-  };
+  this.state.contentsBodyDiv = this.createContentBodyDiv();
   this.render();
 }
+
+createExtendsRelation(ContentsBox, Component);
 
 ContentsBox.prototype.createContentBodyDiv = function () {
   const { classes, contents, contentsBody } = this.state;
@@ -41,7 +40,5 @@ ContentsBox.prototype.template = function () {
    </div>
  </li>`;
 };
-
-createExtendsRelation(ContentsBox, Component);
 
 export default ContentsBox;

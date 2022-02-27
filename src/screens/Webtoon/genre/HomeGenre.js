@@ -58,8 +58,8 @@ function HomeGenre(target) {
   /* 서브 배너 (promotion) Component */
   const subBanner = new SubBanner(target);
 
-  const day = new Date().getDay() - 1;
-  const days = ["월", "화", "수", "목", "금", "토", "일", "완결"];
+  const day = new Date().getDay();
+  const days = ["일", "월", "화", "수", "목", "금", "토", "완결"];
   const koreaDay = days[day];
 
   /* 요일 연재 TOP Component */
@@ -69,8 +69,7 @@ function HomeGenre(target) {
     titleNum: WEBTOONS_TOTAL_COUNT,
   });
   const daysTopBoxTarget = daysTopBox.state.contentsBodyDiv;
-
-  const daysList = new DaysList(daysTopBoxTarget, {
+  const daysList = new DaysList("_", {
     koreaDay,
     count: DAYS_TOP_WEBTOON_PER_PAGE,
   });
