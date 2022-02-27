@@ -6,6 +6,7 @@ import { contentsData } from "./webtoonData.js";
 let index;
 let setTimer;
 const startIndex = 1;
+let transitionCheck = false;
 
 export function initContents() {
     createContents();
@@ -16,70 +17,73 @@ export function initContents() {
 
 function listenEvent() {
     const $contents = select('.contents');
-    const $viewer = select('.contents__viewer')
-    index = startIndex
-    animateReset($viewer, index)
+    const $viewer = select('.contents__viewer');
+    index = startIndex;
+    animateReset($viewer, index);
     $contents.addEventListener('click', (e) => handleClick(e.target, $viewer));
+    $viewer.addEventListener('transitionend', (e) => {
+        console.log(e.target);
+        transitionCheck = false
+    });
 }
 
 function handleClick(target, $viewer) {
     const $$contentsWrap = [...$viewer.children];
-    const FirstNodeCloneIndex = $$contentsWrap.length - 1
-    const LastNodeCloneIndex = 0
+    const FirstNodeCloneIndex = $$contentsWrap.length - 1;
+    const LastNodeCloneIndex = 0;
     const realLastIndex = $$contentsWrap.length -2;
     const realFirstIndex = 1;
 
+    if(transitionCheck) return;
+
     if(target.className === 'contents__prevButton') {
+        transitionCheck = true;
         if(index <= LastNodeCloneIndex) {
             index = realLastIndex
             animateReset($viewer, index)
         }
-        index --
+        index --;
         animateTranslateX($viewer);
-        controlAuto();
     }
     else if(target.className === 'contents__nextButton') {
+        transitionCheck = true;
         if(index >= FirstNodeCloneIndex) {
-            index = realFirstIndex
+            index = realFirstIndex;
             animateReset($viewer, index)
         }
-        index ++
-        animateTranslateX($viewer)
-        controlAuto();
+        index ++;
+        animateTranslateX($viewer);
     }
 }
 
 function animateTranslateX(target)  {
     const width = target.clientWidth * -1;
-    target.style.transform = `translateX(${index * width}px)`
-    target.style.transition = 'transform 0.5s ease-out'
+    target.style.transform = `translateX(${index * width}px)`;
+    target.style.transition = 'transform 0.4s ease-out';
 }
 
 function animateReset(target, index) {
     const width = target.clientWidth * -1;
     target.style.transition = 'none';
-    target.style.transform = `translateX(${index * width}px)`
+    target.style.transform = `translateX(${index * width}px)`;
 }
 
 function autoSlide() {
-    const $viewer = select('.contents__viewer')
+    const $viewer = select('.contents__viewer');
     const $$contentsWrap = [...$viewer.children];
-    const maxIndex = $$contentsWrap.length - 1 // first clone node index
+    const FirstNodeCloneIndex = $$contentsWrap.length - 1;
     const realFirstIndex = 1;
 
     setTimer = setInterval(function() {
-        if (index >= maxIndex) {
+        if(transitionCheck) return;
+        transitionCheck = true;
+        if (index >= FirstNodeCloneIndex) {
             index = realFirstIndex
             animateReset($viewer, index)
         }
         index++
         animateTranslateX($viewer)
-    }, 3000)
-}
-
-function controlAuto() {
-    clearInterval(setTimer)
-    autoSlide();
+    }, 2500)
 }
 
 function createContents() {
