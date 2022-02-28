@@ -1,22 +1,22 @@
 {
-  "name": "kakaopage-clone-fe",
-  "version": "1.0.0",
-  "description": "kakaopage clone(frontend)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BB-choi/fe-kakaopage.git"
-  },
-  "author": "BB-choi",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BB-choi/fe-kakaopage/issues"
-  },
-  "homepage": "https://github.com/BB-choi/fe-kakaopage#readme",
-  "dependencies": {
-    "express": "^4.17.3"
-  }
+    "name": "kakaopage-clone-fe",
+    "version": "1.0.0",
+    "description": "kakaopage clone(frontend)",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BB-choi/fe-kakaopage.git"
+    },
+    "author": "BB-choi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BB-choi/fe-kakaopage/issues"
+    },
+    "homepage": "https://github.com/BB-choi/fe-kakaopage#readme",
+    "dependencies": {
+        "express": "^4.17.3"
+    }
 }
