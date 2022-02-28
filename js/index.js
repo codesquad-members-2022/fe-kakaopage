@@ -47,7 +47,7 @@ const renderWeekday = (today = new Date().getDay()) => {
     renderCarousel(carouselImgs["요일연재"]);
 };
 
-const setCaroulselPager = (carouselImgIdx = 1) => {
+const setCarouselPager = (carouselImgIdx = 1) => {
     const carouselItemWrapper = $(".carousel-item-wrap");
     const carouselItems = carouselItemWrapper.children;
     const clonedNodeCnt = [...carouselItems].filter(
@@ -88,7 +88,7 @@ const handleAutoCarousel = () => {
     carouselItemWrapper.style.transform = `translateX(${
         -imageWidth * carouselImgIdx
     }px)`;
-    setCaroulselPager(carouselImgIdx);
+    setCarouselPager(carouselImgIdx);
 
     isClickable = false;
 };
@@ -112,7 +112,7 @@ const renderCarousel = (data) => {
 
     carouselItemWrapper.style.transform = `translateX(${-imageWidth}px)`;
     carouselItemWrapper.innerHTML = carousel.getHtml();
-    setCaroulselPager();
+    setCarouselPager();
     carouselItemWrapper.style.transition = "none";
     carouselImgIdx = 1;
     stopCarouselTimer();
@@ -160,7 +160,7 @@ const bindCaroulselEvent = () => {
     };
 
     const setTransform = (carouselImgIdx) => {
-        setCaroulselPager(carouselImgIdx);
+        setCarouselPager(carouselImgIdx);
 
         carouselItemWrapper.style.transform = `translateX(${
             -imageWidth * carouselImgIdx
