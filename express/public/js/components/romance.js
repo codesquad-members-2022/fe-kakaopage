@@ -1,4 +1,4 @@
-import { romanceData } from '../data/romance-data.js';
+import { romanceData } from '../data/menu-data.js/romance-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

@@ -1,4 +1,4 @@
-import { boyData } from '../data/boy-data.js';
+import { boyData } from '../data/menu-data.js/boy-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

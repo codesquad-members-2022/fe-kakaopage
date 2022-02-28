@@ -1,4 +1,4 @@
-import { serialData } from '../data/serial-data.js';
+import { serialData } from '../data/menu-data.js/serial-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

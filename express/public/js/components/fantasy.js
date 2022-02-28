@@ -1,4 +1,4 @@
-import { fantasyData } from '../data/fantasy-data.js';
+import { fantasyData } from '../data/menu-data.js/fantasy-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

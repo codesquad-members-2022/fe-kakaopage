@@ -1,4 +1,4 @@
-import { dramaData } from '../data/drama-data.js';
+import { dramaData } from '../data/menu-data.js/drama-data';
 import { contents } from '../html-template.js';
 export default function addHTML() {
   document.querySelector('.changed').innerHTML = `

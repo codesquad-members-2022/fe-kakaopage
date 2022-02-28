@@ -1,4 +1,4 @@
-import { slideData } from '../data/slide-data.js';
+import { slideData } from '../data/slide-data/slide-data.js';
 import { contents } from '../html-template.js';
 
 const $ = (selected) => document.querySelector(selected);
@@ -30,8 +30,6 @@ function addHTML() {
 
   $('.image_container').innerHTML = template;
 }
-
-
 
 function startSlide(direction, container, totalSlide, SECOND) {
   intervalID = setInterval(() => {
