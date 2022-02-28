@@ -6,3 +6,4 @@
 - [x] 요일 연재 TOP 섹션 요일 선택하는 것에 맞춰서 grid-item 바꾸기
 - [ ] footer의 company-info 부분 토글 기능 넣기
 - [ ] gnb의 item 중 현재 페이지에 해당하는 item 아래에 노란색 선 넣기
+- [ ] lnb 탭 클릭 영역 늘리기
