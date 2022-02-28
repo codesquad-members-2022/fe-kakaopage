@@ -1,4 +1,4 @@
-const select = (selector) => document.querySelector(selector);
+const select = (selector, where = document) => where.querySelector(selector);
 
 const initElement = (selector) => (select(selector).innerHTML = '');
 
