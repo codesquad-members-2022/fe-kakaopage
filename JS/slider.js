@@ -1,42 +1,113 @@
-import {$, $all} from './utility.js'
+import {$} from './utility.js';
 
-const makeCloneNode = (list) => {
-  const firstNode = list.firstChild.cloneNode(true);
-  const lastNode = list.lastChild.cloneNode(true);
-  firstNode.classList.add('cloneFirstNode');
-  lastNode.classList.add('cloneLastNode');
+export default class Slider {
+  constructor() {
+    this.list = $('.main__banner .banner__list');
+    this.items = null;
+    this.width = null;
 
-  list.appendChild(firstNode);
-  list.insertBefore(lastNode, list.firstChild);
-}
+    this.counter = 1;
+    this.interval = 3000;
+    this.duration = 0.7;
 
-const eventMainBanner = (list) => {
-  makeCloneNode(list);
-  const items = $all('.main__banner .banner__item');
-  const WIDTH = list.firstChild.offsetWidth;
+    this.autoSlideTimer = false;
+    this.throttleTimer = false;
+  }
 
-  let counter = 1;
-  list.style.transform = `translate(${-WIDTH * counter}px)`;
-  slideMainBanner(list, items, WIDTH, counter);
-}
+  init() {
+    this.makeCloneNode();
+    this.items = this.list.children;
+    this.width = this.list.firstElementChild.offsetWidth;
+    this.list.style.transform = `translate(${-this.width * this.counter}px)`;
 
-const slideMainBanner = (list, items, width, counter) => {
-  setInterval(() => {
-    if (counter > items.length) return;
-    counter++;
-    list.style.transform = `translate(${-width * counter}px)`;
-    list.style.transition = 'transform 0.5s';
+    this.clickSlideBtns();
+    this.transitionEnd();
+    this.startAutoSlide();
+    this.pauseSlide();
+  }
 
-    $('.banner__count .now').innerText = items[counter].dataset.index;
-  }, 3000);
+  makeCloneNode() {
+    const firstNode = this.list.firstElementChild.cloneNode(true);
+    const lastNode = this.list.lastElementChild.cloneNode(true);
+    firstNode.classList.add('cloneFirstNode');
+    lastNode.classList.add('cloneLastNode');
 
-  list.addEventListener('transitionend', () => {
-    if (items[counter].classList.contains("cloneFirstNode"))  {
-      list.style.transition = "none";
-      counter = items.length - counter;
-      list.style.transform = `translate(${-width * counter}px)`;
+    this.list.appendChild(firstNode);
+    this.list.insertBefore(lastNode, this.list.firstChild);
+  }
+
+  startAutoSlide() {
+    this.autoSlideTimer = setTimeout(() => {
+      this.moveNextSlide();
+      this.startAutoSlide();
+    }, this.interval);
+  }
+
+  stopAutoSlide() {
+    clearTimeout(this.autoSlideTimer);
+  }
+
+  throttle(callback, delay) {
+    if (!this.throttleTimer) {
+      this.throttleTimer = setTimeout(() => {
+        this.throttleTimer = false;
+        callback();
+      }, delay);
     }
-  })
-}
+  }
 
-export {eventMainBanner}
+  clickSlideBtns() {
+    const nextBtn = $('.main__banner .banner__next');
+    const prevBtn = $('.main__banner .banner__prev');
+    const DELAY = 700;
+
+    nextBtn.addEventListener('click', () => {
+      this.throttle(() => this.moveNextSlide(), DELAY);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      this.throttle(() => this.movePrevSlide(), DELAY);
+    });
+  }
+
+  movePrevSlide() {
+    if (this.counter < 1) return;
+    this.counter--;
+    this.list.style.transform = `translate(${-this.width * this.counter}px)`;
+    this.list.style.transition = `transform ${this.duration}s`;
+
+    $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
+  }
+
+  moveNextSlide() {
+    if (this.counter > this.items.length - 1) return;
+    this.counter++;
+    this.list.style.transform = `translate(${-this.width * this.counter}px)`;
+    this.list.style.transition = `transform ${this.duration}s`;
+
+    $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
+  }
+
+  transitionEnd() {
+    this.list.addEventListener('transitionend', () => {
+      if (this.items[this.counter].classList.contains('cloneFirstNode')) {
+        this.counter = this.items.length - this.counter;
+        this.list.style.transition = 'none';
+        this.list.style.transform = `translate(${-this.width * this.counter}px)`;
+      }
+
+      if (this.items[this.counter].classList.contains('cloneLastNode')) {
+        const TO_LASTNODE = 2;
+        this.counter = this.items.length - TO_LASTNODE;
+        this.list.style.transition = 'none';
+        this.list.style.transform = `translate(${-this.width * this.counter}px)`;
+      }
+    });
+  }
+
+  pauseSlide() {
+    const mainBanner = $('.main__banner');
+    mainBanner.addEventListener('mouseenter', () => this.stopAutoSlide());
+    mainBanner.addEventListener('mouseleave', () => this.startAutoSlide());
+  }
+}

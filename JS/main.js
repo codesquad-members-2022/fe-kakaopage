@@ -1,12 +1,14 @@
 import dailyTopData from './data/json/dailyTopData.json' assert { type: "json"} ;
 import {renderMain} from './render.js';
 import {makeWebtoonList} from './components/webtoonList.js';
-import {eventMainBanner} from './slider.js';
+import Slider from './slider.js';
 import {$, $all} from './utility.js';
 
-const startSlide = () => {
-  const list = $('.main__banner .banner__list')
-  eventMainBanner(list);
+let slider = null;
+
+const setSlide = () => {
+  slider = new Slider();
+  slider.init();
 }
 
 const todayFocus = () => {
@@ -31,11 +33,10 @@ const clickGenresList = () => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
       
-      // clearInterval 수정필요
-      clearInterval(startSlide);
+      slider.stopAutoSlide();
       resetMain();
       moveGenreNav(event.target);
-      startSlide();
+      setSlide();
     })
   });
 }
@@ -138,5 +139,5 @@ const eventHome = () => {
 window.addEventListener('load', () => {
   renderMain('home');
   eventHome();
-  startSlide();
+  setSlide();
 });
