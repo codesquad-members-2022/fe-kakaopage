@@ -142,7 +142,7 @@ class Contents {
       <img src="${list.url}" / alt="${list.title} 이미지"
       width="95" height="130">
       <img
-    src="../src/image/기다리면 무료.png"
+    src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a"
     alt="시계 이미지"
     width="25"
     height="25"
@@ -229,7 +229,7 @@ class Contents {
     <img src="${list.url}" / alt="${list.title} 이미지"
     width="140" height="200">
     <img
-    src="../src/image/기다리면 무료.png"
+    src="https://static-page.kakao.com/static/common/badge_time.png?4f8e2321988f4826b438a4ab2509e82a"
     alt="시계 이미지"
     width="25"
     height="25"

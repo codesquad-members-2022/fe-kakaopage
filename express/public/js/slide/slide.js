@@ -31,13 +31,7 @@ function addHTML() {
   $('.image_container').innerHTML = template;
 }
 
-function getIndex(ele) {
-  let _i = 1;
-  while ((ele = ele.previousElementSibling) !== null) {
-    _i++;
-  }
-  return _i;
-}
+
 
 function startSlide(direction, container, totalSlide, SECOND) {
   intervalID = setInterval(() => {
@@ -91,4 +85,12 @@ function addCount(totalSlide) {
   let selectedChild = $(`.image_container > li:nth-child(${CHILD_NUMBER})`);
   let nextCount = getIndex(selectedChild);
   $('.num_total').innerHTML = `${nextCount} / ${totalSlide}`;
+}
+
+function getIndex(ele) {
+  let _i = 1;
+  while ((ele = ele.previousElementSibling) !== null) {
+    _i++;
+  }
+  return _i;
 }

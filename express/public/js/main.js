@@ -19,11 +19,11 @@ import slide from './slide/slide.js';
 function removeClass() {
   const removeBtn = document.querySelectorAll('.menubar_tag button');
 
-  removeBtn.forEach((btn) => {
-    if (btn.classList.value === 'change-color') {
-      btn.classList.remove('change-color');
-    }
-  });
+  const colorBtn = [...removeBtn].filter(
+    (btn) => btn.classList.value === 'change-color'
+  );
+
+  colorBtn[0].classList.remove('change-color');
 }
 
 function changeUI(e) {
@@ -36,40 +36,32 @@ function changeUI(e) {
   switch (title) {
     case '홈':
       home();
-      slide();
       break;
     case '요일연재':
       serial();
-      slide();
       break;
     case '웹툰':
       webtoon();
       dataWebtoon();
-      slide();
       break;
     case '소년':
       boy();
-      slide();
       break;
     case '드라마':
       drama();
-      slide();
       break;
     case '로맨스':
       romance();
-      slide();
       break;
     case '로판':
       fantasy();
-      slide();
       break;
     case '무협':
       martialArts();
-      slide();
       break;
     case 'BL':
       bl();
-      slide();
       break;
   }
+  slide();
 }

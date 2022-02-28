@@ -47,7 +47,7 @@ export const fantasyData = {
     rankingNum: '1',
     url: 'https://dn-img-page.kakao.com/download/resource?kid=cTs2kK/hzp2fv90GW/IgXJwOnUlIIkOZOKvKjuzk&filename=th2',
     title: '하필이면 까마귀가 되어버렸다',
-    icon: 'N',
+    icon: 'New',
     people: '35.7',
     genre: '로판',
     writer: '글리, 실베스타',
