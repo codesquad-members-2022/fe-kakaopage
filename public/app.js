@@ -1,3 +1,7 @@
+import { renderBase } from './component/base.js';
+import { renderHome } from './pages/home.js';
+import { renderWeekdays } from './pages/weekdays.js';
+import { renderWebtoon } from './pages/webtoon.js';
 
 function renderBody() {
     const bodyEl = document.querySelector('body');
@@ -56,9 +60,3 @@ function bannerClickEventHandler() {
 
 // 버튼을 누를때만 동작하는 함수
 // 수정해야함.
-
-import { renderBase } from './component/base.js';
-import { renderHome } from './pages/home.js';
-import { renderWeekdays } from './pages/weekdays.js';
-import { renderWebtoon } from './pages/webtoon.js';
-

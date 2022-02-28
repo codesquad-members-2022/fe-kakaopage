@@ -1,3 +1,7 @@
+import { renderNav } from '../component/nav.js'
+import { navClickEventHandler } from '../utils/eventHandler.js';
+import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
+
 const webtoonData = {
     nav: ['월', '화', '수', '목', '금', '토', '일', '전체'],
     parms: [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', ''],
@@ -57,6 +61,3 @@ function renderRowListWrapper(lists) {
 }
 
 export { renderWebtoon };
-import { renderNav } from '../component/nav.js'
-import { navClickEventHandler } from '../utils/eventHandler.js';
-import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';

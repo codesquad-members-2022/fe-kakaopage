@@ -1,3 +1,8 @@
+import { renderNav } from '../component/nav.js'
+import { renderSections, renderSectionWrapper } from '../component/section.js';
+import { navClickEventHandler } from '../utils/eventHandler.js';
+import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
+
 const weekdaysData = {
     nav: ['월', '화', '수', '목', '금', '토', '일', '완결'],
     parms: [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', 'finished'],
@@ -64,7 +69,3 @@ function displayWeekLists(index, sectionNums) {
 }
 
 export { renderWeekdays }
-import { renderNav } from '../component/nav.js'
-import { renderSections, renderSectionWrapper } from '../component/section.js';
-import { navClickEventHandler } from '../utils/eventHandler.js';
-import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
