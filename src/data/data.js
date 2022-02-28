@@ -26,12 +26,12 @@ const DATA_WEBTOON = {
         path: 'static/thumb/main_toon_0_2.png',
       },
       {
-        title: '톱스타, 그 자체',
-        caption: '다시 톱스타가 될 수 있을까?',
+        title: '뒤끝작렬',
+        caption: '재벌가 이사,흙수저 청년으로 환생?!',
         tag: 'event',
         type: '웹툰',
         view: '5',
-        path: '',
+        path: 'static/thumb/main_toon_0_3.png',
       },
     ],
     gridMenu: [
