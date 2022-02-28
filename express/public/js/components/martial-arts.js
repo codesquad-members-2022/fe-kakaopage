@@ -1,4 +1,4 @@
-import { martialArtsData } from '../data/menu-data.js/martial-arts-data.js';
+import { martialArtsData } from '../data/menu-data/martial-arts-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

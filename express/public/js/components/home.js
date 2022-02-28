@@ -1,4 +1,4 @@
-import { homeData } from '../data/menu-data.js/home-data.js';
+import { homeData } from '../data/menu-data/home-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {

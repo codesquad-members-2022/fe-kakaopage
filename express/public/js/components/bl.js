@@ -1,4 +1,4 @@
-import { blData } from '../data/menu-data.js/bl-data.js';
+import { blData } from '../data/menu-data/bl-data.js';
 import { contents } from '../html-template.js';
 
 export default function addHTML() {
