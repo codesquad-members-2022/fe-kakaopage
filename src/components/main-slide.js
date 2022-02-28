@@ -62,6 +62,13 @@ function createMainSlide(titles) {
     }
   });
 
+  setInterval(() => {
+    const slideSection = document.querySelector(".main-slide-section");
+    if (slideSection) {
+      moveSlide(slideSection, RIGHT);
+    }
+  }, 5000);
+
   return section;
 }
 
