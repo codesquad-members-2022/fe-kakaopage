@@ -40,6 +40,14 @@ const makingClone = () => {
   slides.insertBefore(cloneSlide_last, slides.firstElementChild);
 };
 
+const autoPlayStart = () => {
+  autoPlay.start();
+};
+
+const autoPlayStop = () => {
+  autoPlay.stop();
+};
+
 const returnOriginSlide = () => {
   if (position.value >= initPosition) position.setValue(-containerWidth);
   else if (position.value < -containerWidth) position.setValue(-slideWidth);
@@ -80,14 +88,14 @@ const playEvent = (btnEvent) => {
   nonBlockingClick();
 };
 
-export const slideShow = (e) => {
+const slideShow = (e) => {
   if (clickFlag) return;
   clickFlag = true;
-  autoPlay.stop();
-  autoPlay.start();
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
   isEnd();
 };
 
 makingClone();
+
+export { slideShow, autoPlayStart, autoPlayStop };
