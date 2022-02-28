@@ -26,15 +26,7 @@ import RecommendEvent from './section/RecommendEvent.js';
 import AppDownloadLink from './section/AppDownloadLink.js';
 import WebtoonPage from './page/WebtoonPage.js';
 import TempPage from './page/TempPage.js';
-import HomeContents from './mainContents/HomeContents.js';
-import DailyContents from './mainContents/DailyContents.js';
-import WebtoonContents from './mainContents/WebtoonContents.js';
-import ShonenContents from './mainContents/ShonenContents.js';
-import DramaContents from './mainContents/DramaContents.js';
-import RomanceContents from './mainContents/RomanceContents.js';
-import RomanceFantasyContents from './mainContents/RomanceFantasyContents.js';
-import ActionContents from './mainContents/ActionContents.js';
-import BLContents from './mainContents/BLContents.js';
+import MainContents from './mainContents/MainContents.js';
 
 export {
   Nav,
@@ -65,13 +57,5 @@ export {
   AppDownloadLink,
   WebtoonPage,
   TempPage,
-  HomeContents,
-  DailyContents,
-  WebtoonContents,
-  ShonenContents,
-  DramaContents,
-  RomanceContents,
-  RomanceFantasyContents,
-  ActionContents,
-  BLContents,
+  MainContents,
 };

@@ -5,7 +5,7 @@ import Categories from './categories.js';
 import SubBanners from './subBanners.js';
 import AnticipatedWorks from './anticipatedWorks.js';
 import EventBanners from './eventBanners.js';
-import { PageComponent, ContentsComponent } from './components.js';
+import { PageComponent, sectionComponent } from './components.js';
 
 export {
   PageNavItems,
@@ -18,5 +18,5 @@ export {
   AnticipatedWorks,
   EventBanners,
   PageComponent,
-  ContentsComponent,
+  sectionComponent,
 };

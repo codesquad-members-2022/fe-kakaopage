@@ -1,6 +1,6 @@
 import { $ } from './utils.js';
-import { Nav, PageNav, DailySeriesRanking } from './components';
-import { PageNavItems, PageComponent, ContentsComponent } from './data';
+import { Nav, PageNav, DailySeriesRanking, MainContents } from './components';
+import { PageNavItems, PageComponent } from './data';
 
 const renderPageNav = () => {
   if ($('.page-nav') === null) $('.header-wrapper').insertAdjacentHTML('beforeend', PageNav());
@@ -13,7 +13,7 @@ const renderPage = (category = 'home') => {
 };
 
 const renderContents = (category) => {
-  $('.main-contents').replaceWith(ContentsComponent[category]());
+  $('.main-contents').replaceWith(MainContents(category));
 };
 
 const renderDailySeriesRanking = () => {
