@@ -7,13 +7,13 @@ const findSelectedImgNumber = () => {
   $selectedImg.className = $selectedImg.className.replace(" selected", "");
   const classNames = $selectedImg.className;
 
-  const numbers = [];
+  const selectedImgNumbers = [];
   for (const className of classNames.split("")) {
     if (Number.isInteger(parseInt(className, 10))) {
-      numbers.push(className);
+      selectedImgNumbers.push(className);
     }
   }
-  const selectedImgNumber = parseInt(numbers.join(""), 10);
+  const selectedImgNumber = parseInt(selectedImgNumbers.join(""), 10);
 
   return selectedImgNumber;
 };

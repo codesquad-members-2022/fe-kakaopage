@@ -8,11 +8,11 @@ const findSelectedImgNumber = () => {
   const $selectedImg = document.querySelector(".selected");
   $selectedImg.className = $selectedImg.className.replace(" selected", "");
   const classNames = $selectedImg.className;
-  const numbers = classNames
+  const selectedImgNumbers = classNames
     .split("")
     .filter((className) => Number.isInteger(parseInt(className, 10)));
 
-  const selectedImgNumber = parseInt(numbers.join(""), 10);
+  const selectedImgNumber = parseInt(selectedImgNumbers.join(""), 10);
 
   return selectedImgNumber;
 };
