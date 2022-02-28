@@ -25,7 +25,7 @@ export const nav = {
             target.classList.add('week__nav_day_selected');
 
             weeks.remove();
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent('요일연재', target.dataset.id));
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(target.dataset.id));
         });
     },
     removeLinkColor(elements, style) {
