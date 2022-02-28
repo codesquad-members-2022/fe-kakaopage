@@ -1,13 +1,11 @@
 import { selector, selectorAll, toggleClass, addClass } from '../util/util.js';
 
-import webtoonsData from '../../json/webtoons.json' assert { type: 'json' };
-import dayWebtoonsData from '../../json/dayWebtoons.json' assert { type: 'json' };
 import previewsData from '../../json/previews.json' assert { type: 'json' };
 
 import setTagList from './tagList/setTagList.js';
 import setPreviews from './preview/setPreviews.js';
-import setWebtoons from './webtoon/setWebtoons.js';
-import setDayFilter from './dayFilter/setDayFilter.js';
+import setMainContents from './setMainContents.js';
+
 import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
@@ -17,6 +15,11 @@ import createPreview from './preview/createPreview.js';
 // console.dir(previewsData);
 
 /* selector */
+const test = false;
+const apiURL = test
+  ? 'http://localhost:3000/'
+  : 'https://fe-kakaopage-api-server.herokuapp.com/';
+
 const PREV_BTN_SELECTOR = '.prev-btn';
 const NEXT_BTN_SELECTOR = '.next-btn';
 const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';
@@ -87,10 +90,12 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   const $curCategory = event.target;
   const categoryName = $category.textContent;
   const selectedDay = days[$category.dataset.curday];
+
   const previews = previewsData[categoryName];
-  const dayWebtoonsMap = dayWebtoonsData[categoryName];
-  const dayWebtoonsArr = dayWebtoonsMap?.[selectedDay];
-  const webtoonsArr = webtoonsData[categoryName];
+  // const dayWebtoonsMap = dayWebtoonsData[categoryName];
+  // const dayWebtoonsArr = dayWebtoonsMap?.[selectedDay];
+  // const webtoonsArr = webtoonsData[categoryName];
+
   categoryState.setUserIdx(selectedIdx);
 
   // highlight
@@ -106,11 +111,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
     $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
 
-  // webtoon contents
-  setWebtoons({ dayWebtoonsArr, webtoonsArr });
-
-  // day filter
-  setDayFilter({ $category, dayWebtoonsMap });
+  setMainContents({ $category, selectedIdx, selectedDay, apiURL });
 };
 
 const addListener = ($category, selectedIdx, $$category) => {

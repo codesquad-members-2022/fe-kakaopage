@@ -15,7 +15,7 @@ const html = `
 
 const WEBTOONS_CONTAINER_SELECTOR = '.webtoons-container';
 
-const drawDayFilter = ($category, dayWebtoonsMap) => {
+const drawDayFilter = ({ $category, dayWebtoonsMap }) => {
   let curday = $category.dataset.curday;
   let category = $category.textContent;
 
