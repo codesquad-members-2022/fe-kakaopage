@@ -1,1 +1,74 @@
-{"mon":{"tittle":"레벨업 못하는 플레이어","img":"http://dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2","author":"앵무새,박정재,스튜디오 크힛,가빈지","week":[0],"reader":202},"tue":{"tittle":"니니툰즈","img":"http://dn-img-page.kakao.com/download/resource?kid=cP3xne/hy41JytcnI/DkGRRJG64KRAEnKsvIyy8k&filename=th2","author":"니니즈","week":[1],"reader":78.1},"wed":{"tittle":"계모인데, 딸이 너무 귀여워","img":"http://dn-img-page.kakao.com/download/resource?kid=69L0Q/hzmU1OviSo/kt429LkN4AstaG2Rek2Vn1&filename=th2","author":"모구랭,이르","week":[2],"reader":77.5},"thu":{"tittle":"식사하고 가세요!","img":"http://dn-img-page.kakao.com/download/resource?kid=cKiUaf/hzacc2ZdLv/bJPLUhxWQDvbyDhs1XOuvk&filename=th2","author":"스튜디오 웨이브,인기영","week":[3],"reader":10.9},"fri":{"tittle":"내 소설의 악역이 되다","img":"http://dn-img-page.kakao.com/download/resource?kid=d3tbBM/hy41QDM9CI/zhTMjg2dACPJHAXyXAPW51&filename=th2","author":"용불상,maiuncle","week":[4],"reader":8.1},"sat":{"tittle":"죠르디 24시","img":"http://dn-img-page.kakao.com/download/resource?kid=wGVnL/hyCvm4Hptq/Zut5sNgdDTyfXycWIMfkw0&filename=th2","author":"죠르디,김그래","week":[5],"reader":108.6},"sun":{"tittle":"복원가의 집","img":"http://dn-img-page.kakao.com/download/resource?kid=ehNvl/hyATwolg4b/dBMonidOvnPgYyn2EYkOK0&filename=th2","author":"김상엽","week":[6],"reader":28.5},"finished":{"tittle":"반도 프리퀄 631","img":"http://dn-img-page.kakao.com/download/resource?kid=bzCXqd/hyLjga8oaL/JdcgVkSdq35o9YpRMsHD11&filename=th2","author":"연상호,류용재,스튜디오 다다쇼","week":[7],"reader":22.6}}
+{
+    "mon":
+        {
+            "tittle": "레벨업 못하는 플레이어",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=bjInsQ/hyORYE18fc/SHV461YOWiyk8bb1avebP1&filename=th2",
+            "author": "앵무새,박정재,스튜디오 크힛,가빈지",
+            "week": [0],
+            "reader": 202,
+            "text": "탑을 뒤흔들 레벨1의 역대급 반전 능력"
+        },
+    "tue":
+        {
+            "tittle": "니니툰즈",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=cP3xne/hy41JytcnI/DkGRRJG64KRAEnKsvIyy8k&filename=th2",
+            "author": "니니즈",
+            "week": [1],
+            "reader": 78.1,
+            "text": "까면 깔수록 매력적인 니니즈"
+        },
+    "wed":
+        {
+            "tittle": "계모인데, 딸이 너무 귀여워",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=69L0Q/hzmU1OviSo/kt429LkN4AstaG2Rek2Vn1&filename=th2",
+            "author": "모구랭,이르",
+            "week": [2],
+            "reader": 77.5,
+            "text": "귀여운 블량슈"
+        },
+    "thu":
+        {
+            "tittle": "식사하고 가세요!",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=cKiUaf/hzacc2ZdLv/bJPLUhxWQDvbyDhs1XOuvk&filename=th2",
+            "author": "스튜디오 웨이브,인기영",
+            "week": [3],
+            "reader": 10.9,
+            "text": "요리사의 꿈에 다시 도전하는 성장기"
+        },
+    "fri":
+        {
+            "tittle": "내 소설의 악역이 되다",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=d3tbBM/hy41QDM9CI/zhTMjg2dACPJHAXyXAPW51&filename=th2",
+            "author": "용불상,maiuncle",
+            "week": [4],
+            "reader": 8.1,
+            "text": "10년뒤 멸망하는 세계 엔딩 바꾸기"
+        },
+    "sat":
+        {
+            "tittle": "죠르디 24시",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=wGVnL/hyCvm4Hptq/Zut5sNgdDTyfXycWIMfkw0&filename=th2",
+            "author": "죠르디,김그래",
+            "week": [5],
+            "reader": 108.6,
+            "text": "취준공룡 죠르디의 일상다반사"
+        },
+    "sun":
+        {
+            "tittle": "복원가의 집",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=ehNvl/hyATwolg4b/dBMonidOvnPgYyn2EYkOK0&filename=th2",
+            "author": "김상엽",
+            "week": [6],
+            "reader": 28.5,
+            "text": "복원하는 이야기"
+        },
+    "finished":
+        {
+            "tittle": "반도 프리퀄 631",
+            "img": "http://dn-img-page.kakao.com/download/resource?kid=bzCXqd/hyLjga8oaL/JdcgVkSdq35o9YpRMsHD11&filename=th2",
+            "author": "연상호,류용재,스튜디오 다다쇼",
+            "week": [7],
+            "reader":22.6,
+            "text": "탑을 뒤흔들 레벨1의 역대급 반전 능력"
+        }
+}
