@@ -1,14 +1,13 @@
 import { $ } from "./utils/dom.js";
-import { homeData } from "./data/homeData.js";
-import { romanceTop } from "./data/genreItems.js";
-import { weekdayData } from "./data/weekdayData.js";
-import { carouselImgs } from "./data/carouselImgs.js";
+import * as datas from "./data/datas.js";
 
-import Category from "./views/Category.js";
-import SlideBanner from "./views/SlideBanner.js";
-import GenreBest from "./views/GenreBest.js";
-import Weekday from "./views/Weekday.js";
-import CaroulselItems from "./views/CaroulselItems.js";
+import {
+    Category,
+    SlideBanner,
+    GenreBest,
+    Weekday,
+    CaroulselItems,
+} from "./views/views.js";
 
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;
@@ -23,9 +22,12 @@ const render = (html) => {
 };
 
 const renderHome = () => {
-    const category = new Category({ categories: homeData.category });
+    const category = new Category({ categories: datas.homeData.category });
     const slideBanner = new SlideBanner();
-    const genreBest = new GenreBest({ genre: "로맨스", genreItem: romanceTop });
+    const genreBest = new GenreBest({
+        genre: "로맨스",
+        genreItem: datas.romanceTop,
+    });
 
     let html = "";
     html += category.getHtml();
@@ -33,18 +35,21 @@ const renderHome = () => {
     html += genreBest.getHtml();
 
     render(html);
-    renderCarousel(carouselImgs["홈"]);
+    renderCarousel(datas.carouselImgs["홈"]);
 };
 
 const renderWeekday = (today = new Date().getDay()) => {
     const days = ["일", "월", "화", "수", "목", "금", "토"];
-    const weekday = new Weekday(weekdayData, days[today] ? days[today] : today);
+    const weekday = new Weekday(
+        datas.weekdayData,
+        days[today] ? days[today] : today
+    );
 
     let html = "";
     html += weekday.getHtml();
 
     render(html);
-    renderCarousel(carouselImgs["요일연재"]);
+    renderCarousel(datas.carouselImgs["요일연재"]);
 };
 
 const setCarouselPager = (carouselImgIdx = 1) => {
