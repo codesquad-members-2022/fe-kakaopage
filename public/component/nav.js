@@ -1,6 +1,5 @@
 function renderNav(className, textLists) {
-
-    let lists = textLists.reduce((acc,textList) => {
+    const lists = textLists.reduce((acc,textList) => {
         return acc + `<li class="${className}-list">${textList}</li>`;
     }, '')
 
