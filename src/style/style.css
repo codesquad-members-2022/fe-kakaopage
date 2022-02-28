@@ -467,24 +467,23 @@ header {
   color: #9C9C9C;
   font-size: 0.875rem; }
 
-.badge:is(.new, .fifteen) {
+.badge:is(.up, .fifteen) {
   position: relative;
   top: -2px;
   display: inline-block;
   color: #FFF;
-  font-size: 0.675rem;
+  font-size: 0.35rem;
   font-weight: 700;
-  border-radius: 2px; }
+  border-radius: 2px;
+  padding: 1px 2px 2px; }
 
-.badge.new {
+.badge.up {
   line-height: 1;
-  background-color: #EF5350;
-  padding: 2px 4px 3px; }
+  background-color: #7FB4FF; }
 
 .badge.fifteen {
   line-height: 1.1;
-  background-color: #CFCFCF;
-  padding: 2px 3px 3px; }
+  background-color: #CFCFCF; }
 
 .info-area {
   margin-bottom: 20px; }
