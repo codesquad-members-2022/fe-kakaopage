@@ -36,7 +36,7 @@ export const headerMenu = (data, list) => {
             i === 1 && `class=check`
           }><a data-action=header_${v} ><img src=${data[v]}></a></li>`
       )
-      .join("")}  
+      .join("\n")}  
     </ul> 
   </nav>`;
 

@@ -38,9 +38,10 @@ export const toggleList = (target = false, className) => {
 };
 
 export const getToday = () => {
-  const week = ["일", "월", "화", "수", "목", "금", "토"];
-  const day = new Date().getDay();
-  return week[day];
+  // const week = ["일", "월", "화", "수", "목", "금", "토"];
+  let day = new Date().getDay();
+  if (!day) day = 7;
+  return day;
 };
 
 export { data };

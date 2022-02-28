@@ -6,9 +6,9 @@ export const category = (list) => {
         (v, i) =>
           `<li ${
             i === 0 && `class=check`
-          }><a data-action=toonCategory>${v}</a></li>`
+          }><a data-action="toonCategory">${v}</a></li>`
       )
-      .join("")}
+      .join("\n")}
     </ul>`;
 
   return template;

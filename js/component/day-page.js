@@ -8,7 +8,7 @@ export const dayPage = (data, list) => {
   <div class="toon-daytop_title__see-more">더보기 ></div>
 </div>
     <ul class="ul-day">
-    ${list.map((v) => `<li>${v}</li>`).join("")}
+    ${list.map((v) => `<li data-action=toonDaySeriesTop >${v}</li>`).join("")}
     </ul>
     <div class="toon-daytop_album"></div>
 </div>`;

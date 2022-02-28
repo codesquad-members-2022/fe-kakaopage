@@ -240,6 +240,14 @@
   border-bottom: 1px solid #f1f1f1;
 }
 
+.ul-day li.check {
+  color: #333;
+  font-weight: 500;
+  border-bottom-color: #ffd200;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
 .toon-daytop_album {
   width: 100%;
   display: flex;

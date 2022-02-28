@@ -10,32 +10,18 @@ import { dayPage } from "./component/day-page.js";
 import { gridList } from "./component/grid-list.js";
 import { toonMain } from "./component/toon-main.js";
 
-//? ⚠️ 아래 데이터 같은 놈들 고민..
 const menuData = ["home", "toon", "novel", "vod", "broadcast", "book"];
 const dayPageList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-const [categoryData, categoryDataEng] = [
-  [
-    "홈",
-    "요일연재",
-    "웹툰",
-    "소년",
-    "드라마",
-    "로맨스",
-    "로판",
-    "액션무협",
-    "BL",
-  ],
-  [
-    "home",
-    "daySeries",
-    "webtoon",
-    "boy",
-    "drama",
-    "romance",
-    "romanceFantasy",
-    "actionArts",
-    "BL",
-  ],
+const categoryData = [
+  "홈",
+  "요일연재",
+  "웹툰",
+  "소년",
+  "드라마",
+  "로맨스",
+  "로판",
+  "액션무협",
+  "BL",
 ];
 
 /**
@@ -60,7 +46,6 @@ export class Render {
   };
 
   //* active functions
-  //? 첫 번째 방법
   static header_home = (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
@@ -69,7 +54,7 @@ export class Render {
 
   static header_toon = (target) => {
     toggleList(target, "check");
-    addComponent(".toon-category", category(categoryData, categoryDataEng));
+    addComponent(".toon-category", category(categoryData));
     Render.toon_main();
   };
 
@@ -97,18 +82,13 @@ export class Render {
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
   };
 
-  //? 두 번째 방법
   static toonCategory = (target = $(".toon-category a:first-child")) => {
     if (!target) return;
     toggleList(target, "check");
     const click = target.innerHTML;
     const handler = {
-      홈: () => {
-        console.log("toon-home");
-      },
-      요일연재: () => {
-        console.log("toon-daySeries");
-      },
+      홈: () => {},
+      요일연재: () => {},
       웹툰: () => {},
       소년: () => {},
       드라마: () => {},
@@ -116,6 +96,28 @@ export class Render {
       로판: () => {},
       액션무협: () => {},
       BL: () => {},
+    };
+    handler[click]();
+  };
+
+  static toonDaySeriesTop = (
+    target = $(`.ul-day li:nth-child(${getToday()})`)
+  ) => {
+    if (!target) return;
+    console.log("target :>> ", target);
+    toggleList(target, "check");
+    addComponent(".toon-daytop_album", gridList(data, getToday()));
+
+    const click = target.innerHTML;
+    const handler = {
+      월: () => {},
+      화: () => {},
+      수: () => {},
+      목: () => {},
+      금: () => {},
+      토: () => {},
+      일: () => {},
+      완결: () => {},
     };
     handler[click]();
   };
