@@ -22,7 +22,6 @@ function listenEvent() {
     animateReset($viewer, index);
     $contents.addEventListener('click', (e) => handleClick(e.target, $viewer));
     $viewer.addEventListener('transitionend', (e) => {
-        console.log(e.target);
         transitionCheck = false
     });
 }

@@ -30,3 +30,21 @@
         - `import path from 'path'`
         - `const __dirname = path.resolve();`
     - [path module 참고 - 링크](https://p-iknow.netlify.app/node-js/path-moudle/)
+    
+3. Static 파일 설정
+    - Static 파일들은 클라이언트에서 동작하는 자바스크립트나 css, html과 같은 리소스 파일들을 지칭한다.
+    - 일반적으로 아래와 같이 static 파일을 가져올 폴더를 지정해준다. (public : 폴더이름)
+        - `app.use(express.static('public'))`
+        - 이제 html 에서 public 폴더를 기준으로 한 경로에서 css, js 등을 가져올 수 있다.
+    - 위의 방법은 소스파일이 위치한 경로를 기준으로 하기 때문에 사용자가 원하는 경로에 static파일을 지정해주고 싶을 수도 있다.
+    - 나의 경우 express.js 는 js 폴더 하위에 있어 css 나 imgaes 폴더에 접근하기 위해서는 static 폴더를 더 상위 폴더인 fe-kakaopage 로 해야했다.
+        - `app.use(express.static(path.join(__dirname, '..', '..', 'fe-kakaopage')))`
+        - 위의 path.join 경로를 console.log 하면 /Users/juyoungoh/WebstormProjects/bangtae/CodeSquad_Masters_FE/mission/fe-kakaopage 이다.
+    - 이제 index.html 의 ref 경로를 수정해준다.
+        - 변경 전 index.html 현재 위치 기준 상대경로 `<link rel="stylesheet" href="./css/reset.css">`
+        - 변경 후 static 폴더 기준 경로 `<link rel="stylesheet" href="/css/reset.css">`
+    - express.js 실행하니 이미지 및 tab 기능 동작함.
+    - 처음에는 sliding 이 동작하지 않았는데 시간이 지나서 새로고침하니까 동작함.
+    
+4.    
+    
