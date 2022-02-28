@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const path = require("path");
 const fs = require("fs");
+const webtoons = require("./dummyData.json");
 
 
 app.use('/js', express.static(path.join(__dirname, '/js')));
@@ -21,6 +22,11 @@ app.get('/', (req, res) => {
         
         res.status(200).end(data);
       });
+});
+
+app.get('/webtoons', (req, res) => {
+  const resultJSON = webtoons;
+  res.json(resultJSON);
 });
 
 app.listen(port, () => {
