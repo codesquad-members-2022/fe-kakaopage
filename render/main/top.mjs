@@ -22,19 +22,28 @@ const renderTopItems = (info) => {
 };
 
 const renderTopHeader = (headerName) => {
-  $(".main__inner").innerHTML += /* html */ `
-  <div class="main__top">
-    <div class="top__inner">
-      <div class="top__header">
-        <div class="top__title">
-          ${headerName}
+  if (headerName) {
+    $(".main__inner").innerHTML += /* html */ `
+    <div class="main__top">
+      <div class="top__inner">
+        <div class="top__header">
+          <div class="top__title">
+            ${headerName}
+          </div>
+          <div class="flex-blank"></div>
+          <a href="#" class="view-more">더보기 ></a>
         </div>
-        <div class="flex-blank"></div>
-        <a href="#" class="view-more">더보기 ></a>
       </div>
     </div>
-  </div>
-  `;
+    `;
+  } else {
+    $(".main__inner").innerHTML += /* html */ `
+    <div class="main__top">
+      <div class="top__inner">
+      </div>
+    </div>
+    `;
+  }
 };
 
 const renderTopDailyTap = () => {

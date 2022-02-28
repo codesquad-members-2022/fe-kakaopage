@@ -1,7 +1,7 @@
 import { homeData } from "../../newData.js";
 import { weekMap } from "../../util/util.mjs";
 
-const addDailyTabEvent = () => {
+const addDailyTabEvent = (info) => {
   const tabs = document.querySelector(".dailyTop__tabs");
   tabs.addEventListener("click", (e) => {
     document.querySelectorAll(".dailyTop__tab").forEach((val) => {
@@ -9,7 +9,7 @@ const addDailyTabEvent = () => {
     });
     e.target.classList.add("selected-color", "selected-box");
     const dayInfo = weekMap.get(e.target.firstChild.nodeValue);
-    changeContent(homeData[0].data[dayInfo]);
+    changeContent(info[0].data[dayInfo]);
   });
 };
 

@@ -1,14 +1,14 @@
 import { $ } from "../../util/util.mjs";
 
-const renderMainCarousel = (carouselInfo) => {
+const renderMainCarousel = (carouselInfo, num) => {
   renderCarouselFrame();
-  renderCarouselItem(carouselInfo[carouselInfo.length - 1]);
-  carouselInfo.forEach((val) => {
+  renderCarouselItem(carouselInfo[num][carouselInfo[num].length - 1]);
+  carouselInfo[num].forEach((val) => {
     renderCarouselItem(val);
   });
-  renderCarouselItem(carouselInfo[0]);
-  const total = document.querySelector(".carousel__total").firstChild;
-  total.nodeValue = carouselInfo.length;
+  renderCarouselItem(carouselInfo[num][0]);
+  const total = $(".carousel__total").firstChild;
+  total.nodeValue = carouselInfo[num].length;
 };
 
 const renderCarouselFrame = () => {
