@@ -1,1 +1,4 @@
 src/image/
+express/node_modules/
+express/package.json
+express/package-lock.json
