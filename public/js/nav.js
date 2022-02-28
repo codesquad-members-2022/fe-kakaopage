@@ -1,6 +1,7 @@
 import { $ } from "./utils.js";
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 import { ContentListInfos } from "./ContentListInfos.js";
+import { serverURL } from "./constants.js";
 
 export const nav = {
     categoryClick() {
@@ -9,6 +10,7 @@ export const nav = {
             if(target.tagName === 'A') {
                 this.removeLinkColor(categoryElement.children, 'main__nav_link_active');
                 target.classList.add('main__nav_link_active');
+                fetch(`${serverURL}/category/${target.dataset.id}`).then(res => res.json()).then(data => console.log(data));
                 handleCategoryMenu(target.dataset.id);
             }
         });
