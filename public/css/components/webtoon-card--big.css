@@ -8,8 +8,9 @@
 
 .webtoon-card--big__info-bar {
   position: absolute;
-  bottom: 60px;
-  left: 30px;
+  margin-top: -130px;
+  margin-left: 30px;
+  width: 100%;
 }
 
 .webtoon-card--big__details {

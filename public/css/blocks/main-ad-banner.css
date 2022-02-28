@@ -3,12 +3,12 @@
   position: relative;
 }
 
-.main-ad-banner__img-container {
+.event-slider {
   display: flex;
   transform: translateX(-720px);
 }
 
-.main-ad-banner__img-container img {
+.main-ad-banner__img {
   width: 720px;
 }
 
