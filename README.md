@@ -1,59 +1,42 @@
 # fe-kakaopage
 
-# 이론정리계획
+# pr 피드백 수정사항
 
-[ ] 돔 렌더링 과정
-[x] HTML collection 및 돔 탐색 메소드들 별 특징
-[x] 돔 삽입
-[x] DOM 노드 간의 관계 접근 프로퍼티
-[x] 디자인 패턴이란?
-[ ] Dynamic import
-[x] js로 css 접근
-
-# 리팩토링 계획
-
-### main-child마다 폴더를 만들기
-
-- 서브카테고리마다 레이아웃이 조금씩 다르지만 공통되는 요소가 있다.
-- 레이아웃 구성이 블록식으로 되어 있어서 해당 블록별로 폴더별로 나눠 레이아웃을 작성하기
-
-## mock데이터를 서버에서 가져오기
-
-- categoryUid와 subCateogoryUid를 기준으로 db에서 데이터를 가져오기
-- 가져온 데이터를 레이아웃 템플릿에 채워넣은 뒤 렌더링
-
-## mockdb만들기
-
-- 데이터를 요청하고, 해당 데이터를 찾고, 찾은 데이터를 템플릿에 넣는 과정은 동기적으로 작동해야하기 때문에 중간중간 async/await 혹은 promise 잘 사용해보기
-
-# 고민
-
-### carousel 리팩토링
-
-동적기능과 정적인 레이아웃을 구분해서 함수를 나눠봤습니다.
-
-- 동적기능을 담당하는 함수에서 closure를 활용해 변수와 함수를 private하게 관리해봤습니다.
-
-### express: req, res
-
-현재 url에서 파라미터를 프론트에서 따로보내주고 있는데 서버에서 req안에 url관련된 정보가 있을 것 같아서 찾아보고 있습니다.
-
-> req.params, req.query ...
-
-### 동적 import
-
-아래와 같이 동적 import 장점이 뭘까 고민했는데 아직 잘 모르겠습니다.
+- [ ] lazy import 활용과 장점, network탭 확인
+- [ ] 반환 값에 따른 함수이름 db/novelDB.js -> getNovelData
+- [ ] static/js/articles/Carousel/handleMove.js: 아래 initMove는 화살표함수가 아니고.
 
 ```js
-// /db/stores.js
-async function store() {
-  switch (mainUid) {
-    case 0:
-      const homeData = await import('./homeDB.js');
-      break;
-    case 1:
-      const WebtoonData = await import('./webtoonDB.js');
-      break;
-  }
+renderButtons()  {
+},
+initMov() {
 }
 ```
+
+- 중첩된 코드의 표현을 콜백함수를 분리하기
+- 모든 DOM NODE를 JS로 다 동적으로 추가할 필요는 없고, 껍데기와 기본틀은 HTML을 미리 구성해두는 것도 좋아요. 그리고 변경이 되는 부분만 DOM조작을 하는 것으로.
+
+# 이론정리계획
+
+- [ ] 돔 렌더링 과정
+- [ ] Dynamic import
+- [ ] json으로 변환 및 json을 변환 하는 함수들
+- [ ] fetch API 및 HTTP Header 설정
+- [ ] XMLHTTPRequest 는 잘 사용하지 않으나 그 사용법을 알아두자.
+- [ ] 웹 클라와 서버 통신 이해
+- [ ] 탬플릿 렌더링의 장점
+- [ ] http 용어 공부
+- [ ] url 구조 공부
+
+# 요구사항
+
+- url라우팅을 통해 req 분석
+- json 응답 방법: json데이터를 파일로 저장후 export한다. 필요한 곳에서 require 로 가져온다,
+  실제 DB를 통해서 얻어오지 않는다, Json파일이 저장된 파일을 직접 read 하지 않는
+- url 구조: REST API 구조를 따르려고 노력
+- axios같은 통신 라이브러리 금지
+- async함수의 await 보다는 then 매서드 활용
+
+# 목표
+
+하고 싶은 대로 하되, 목표와 그에 따른 이유, 고민과정을 작성하기
