@@ -60,3 +60,7 @@ function bannerClickEventHandler() {
 
 // 버튼을 누를때만 동작하는 함수
 // 수정해야함.
+
+fetch('../data/weekdaysData.json')
+    .then(res => res.json())
+    .then(json => console.log(json))

@@ -50,22 +50,22 @@ function renderWeekdaysArticle() {
 </article>`;
 }
 
-function displayWeekLists(index, sectionNums) {
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${weekdaysData.parms[index]}`)
-    .then(res => res.json())
-    .then(json => {
-        let html ='';
-        for(let i=0; i<sectionNums; i++) {
-            html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
-        }
-        document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
-        return html;
-    })
-    .then(html => {
-        deleteInnerHTML('.article__weekdays');
-        document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
-    })
-;
-}
+// function displayWeekLists(index, sectionNums) {
+//     fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${weekdaysData.parms[index]}`)
+//     .then(res => res.json())
+//     .then(json => {
+//         let html ='';
+//         for(let i=0; i<sectionNums; i++) {
+//             html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
+//         }
+//         document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
+//         return html;
+//     })
+//     .then(html => {
+//         deleteInnerHTML('.article__weekdays');
+//         document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
+//     })
+// ;
+// }
 
 export { renderWeekdays }
