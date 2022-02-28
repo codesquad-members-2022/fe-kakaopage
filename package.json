@@ -5,6 +5,8 @@
   "description": "",
   "main": "./js/index.js",
   "scripts": {
+    "client": "yarn start",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sju02048/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/sju02048/fe-kakaopage#readme"
+  "homepage": "https://github.com/sju02048/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
