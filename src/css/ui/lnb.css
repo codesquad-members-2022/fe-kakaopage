@@ -26,6 +26,10 @@
   color: var(--main-text-color);
 }
 
+[data-section = "daily"] .lnb__item__selected {
+  border-bottom: 1.5px solid var(--sub-color);
+}
+
 .lnb__item__modal {
   display: flex;
   justify-content: end;
