@@ -107,4 +107,5 @@ function renderEventButtons() {
   const event = document.querySelector("#eventId");
   event.insertAdjacentHTML("afterend", eventButtons);
 }
+
 export { renderWebtoonGenreBar, renderEvent, renderEventButtons };

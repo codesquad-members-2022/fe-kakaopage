@@ -62,7 +62,6 @@
 .eventSlideWrap {
   width: 720px;
   display: flex;
-  transition: 0.5s;
 }
 .slideMoveBtn {
   position: absolute;
@@ -101,6 +100,7 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 20px;
+
   /* position: relative; */
 }
 
