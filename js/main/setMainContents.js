@@ -5,7 +5,13 @@ import clearDayFilter from './dayFilter/clearDayFilter.js';
 import drawLoadingSpinner from '../loading/drawLoadingSpinner.js';
 import clearLoadingSpinner from '../loading/clearLoadingSpinner.js';
 
-const setMainContents = ({ $category, selectedIdx, selectedDay, apiURL }) => {
+const setMainContents = ({
+  $category,
+  selectedIdx,
+  selectedDay,
+  apiURL,
+  stopFlag,
+}) => {
   clearWebtoons();
   clearDayFilter();
   drawLoadingSpinner();
@@ -23,6 +29,10 @@ const setMainContents = ({ $category, selectedIdx, selectedDay, apiURL }) => {
 
       // day filter
       drawDayFilter({ $category, dayWebtoonsMap });
+      return;
+    })
+    .then(() => {
+      stopFlag.setFalse();
     });
 };
 

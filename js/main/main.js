@@ -1,5 +1,7 @@
 import { selector, selectorAll, toggleClass, addClass } from '../util/util.js';
 
+import StopFlag from './preview/slider/StopFlag.js';
+
 import previewsData from '../../json/previews.json' assert { type: 'json' };
 
 import setTagList from './tagList/setTagList.js';
@@ -83,8 +85,14 @@ const toggleHighlight = ($prevCategory, $curCategory) => {
 };
 
 /* event listener */
+const stopFlag = new StopFlag();
 const onClick = ($category, selectedIdx, $$category) => (event) => {
   if (categoryState.getUserIdx() === selectedIdx) return;
+  if (stopFlag.isTrue()) {
+    console.log('아직 누를 수 없음');
+    return;
+  }
+  stopFlag.setTrue();
 
   const $prevCategory = $$category[categoryState.getUserIdx()];
   const $curCategory = event.target;
@@ -92,9 +100,6 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
   const selectedDay = days[$category.dataset.curday];
 
   const previews = previewsData[categoryName];
-  // const dayWebtoonsMap = dayWebtoonsData[categoryName];
-  // const dayWebtoonsArr = dayWebtoonsMap?.[selectedDay];
-  // const webtoonsArr = webtoonsData[categoryName];
 
   categoryState.setUserIdx(selectedIdx);
 
@@ -111,7 +116,7 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
     $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
 
-  setMainContents({ $category, selectedIdx, selectedDay, apiURL });
+  setMainContents({ $category, selectedIdx, selectedDay, apiURL, stopFlag });
 };
 
 const addListener = ($category, selectedIdx, $$category) => {
