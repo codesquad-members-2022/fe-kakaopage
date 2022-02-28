@@ -15,21 +15,21 @@ export const handleCategoryMenu = (menu) => {
     contents.insertAdjacentHTML("beforeend", ContentListInfos.addRecommendationComponent(menu) ? ContentListInfos.addRecommendationComponent(menu) : "");
     switch(menu) {
         case '홈':
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addRomanceComponent(menu));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addNobilityComponent(menu));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addDramaComponent(menu));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addDailyRankingComponent(menu));
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addRomanceComponent());
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addNobilityComponent());
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addDramaComponent());
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addDailyRankingComponent());
             break;
         case '요일연재':
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeekComponent(menu));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addFilterComponent(menu));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(menu, today));
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeekComponent());
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addFilterComponent());
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(today));
             break;
         case '웹툰':
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWebToonComponent(menu));
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWebToonComponent());
             break;
         case '소년':
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addBoyComponent(menu));
+            contents.insertAdjacentHTML("beforeend", ContentListInfos.addBoyComponent());
             commonGenreRender(contents, menu);
             break;
         case '드라마':
