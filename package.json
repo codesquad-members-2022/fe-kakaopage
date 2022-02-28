@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bangdler/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/bangdler/fe-kakaopage#readme"
+  "homepage": "https://github.com/bangdler/fe-kakaopage#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
