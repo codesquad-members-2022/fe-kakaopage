@@ -38,7 +38,7 @@
 
 ---
 
-### Event Delegation : `closest()` 활용
+### Event Delegation: `closest()`를 활용하여 개선하기
 
 #### Before & After
 
@@ -54,7 +54,7 @@ const activateTab = ({ target }, parentNode) => {
 };
 ```
 
-#### 기존 로직의 문제점
+#### Before: 기존 로직의 문제점
 
 - 기존에는 target.parentNode의 tagName이 'LI'일 때만 target을 `target.parentNode`로 바꿔 주었다. 그러다 보니 li의 자식 태그 안에 다른 element가 있을 때, 이 element를 클릭했을 때에는 제대로 작동되지 않았다.
 
@@ -67,7 +67,7 @@ const activateTab = ({ target }, parentNode) => {
 
 - 위와 같이 li 태그 안에 a 태그가 있고, 또 그 안에 i 태그 요소가 있는 상황에서 a 태그를 클릭했을 때에는 잘 동작하지만 i 태그를 클릭했을 때에는 `activateTab()`함수가 작동하지 않았다.
 
-#### `closest()` 함수 사용으로 문제점 개선
+#### After: `closest()` 함수 사용으로 문제점 개선
 
 ```js
 target.closest('.gnb__item');

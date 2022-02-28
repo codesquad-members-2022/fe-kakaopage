@@ -35,8 +35,8 @@ function filterWebtoonsByDay(e, data) {
   day === CL.WHOLE ? render.wholeWebtoon(data) : render.dayWebtoon(data, day);
 }
 
-const handler = {
-  SNB() {
+const handlerComponent = {
+  snb() {
     const $snb = $('.snb__list');
 
     $snb.addEventListener('click', e => {
@@ -92,9 +92,9 @@ const handler = {
 };
 
 function setEventHandlers() {
-  handler.SNB();
-  handler.mainBannerBtn();
-  handler.daybar();
+  handlerComponent.snb();
+  handlerComponent.mainBannerBtn();
+  handlerComponent.daybar();
 }
 
 export { addTabFeature };
