@@ -1,13 +1,14 @@
 import { $ } from "../utils.js";
-const slides = $(".main-ad-banner__img-container");
-const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
-const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
-const slideSpeed = 0.2;
+const slides = $(".event-slider");
+const slideImg = document.querySelectorAll(".event-slider li");
+const slideWidth = $(".main-ad-banner__img").clientWidth;
+const slideSpeed = 0.4;
 const sec = 1000;
 const containerWidth = slideWidth * slideImg.length;
 const delay = slideSpeed * sec;
 const initPosition = 0;
 const autoTime = 3 * sec;
+let clickFlag = false;
 const position = {
   value: -slideWidth,
   setValue(newValue) {
@@ -16,6 +17,8 @@ const position = {
 };
 const timerInterval = () => {
   return setInterval(() => {
+    if (clickFlag) return;
+    clickFlag = true;
     playEvent();
     isEnd();
   }, autoTime);
@@ -42,16 +45,18 @@ const returnOriginSlide = () => {
   else if (position.value < -containerWidth) position.setValue(-slideWidth);
 };
 
-let clickFlag = false;
+const nonBlockingClick = () => {
+  setTimeout(() => {
+    clickFlag = false;
+  }, delay);
+};
 
 const isEnd = () => {
-  if (position.value < initPosition && position.value > -containerWidth)
-    return (clickFlag = false);
+  if (position.value < initPosition && position.value > -containerWidth) return;
   returnOriginSlide();
   const slideSpeed = initPosition;
   setTimeout(() => {
     moveSlide(position.value, slideSpeed);
-    clickFlag = false;
   }, delay);
 };
 
@@ -72,6 +77,7 @@ const playEvent = (btnEvent) => {
   changePosition(btnEvent);
   setEvent(btnEvent);
   moveSlide(position.value, slideSpeed);
+  nonBlockingClick();
 };
 
 export const slideShow = (e) => {
