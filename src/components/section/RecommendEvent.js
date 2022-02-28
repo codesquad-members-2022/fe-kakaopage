@@ -1,7 +1,7 @@
 import { ContentsHeader, BannerList } from '../index.js';
 import { EventBanners } from '../../data';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
-import { bannerCallback, carouselCallback, setCarousel } from '../../js';
+import { bannerCallback, carouselCallback, carouselTransitionHandler, setCarousel } from '../../js';
 
 const RecommendEvent = (type = 'carousel') => {
 
@@ -26,6 +26,7 @@ const RecommendEvent = (type = 'carousel') => {
   if (type === 'carousel') {
     html = setCarousel(html);
     html.addEventListener('click', carouselCallback);
+    html.addEventListener('transitionend', carouselTransitionHandler);
   }
 
   else if (type === 'manual') {

@@ -1,6 +1,6 @@
 import { BannerList } from '../index.js';
 import { MainBanners } from '../../data';
-import { bannerCallback, carouselCallback, setCarousel } from '../../js';
+import { bannerCallback, carouselCallback, setCarousel, carouselTransitionHandler } from '../../js';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 
 const MainBanner = (type = 'carousel') => {
@@ -21,6 +21,7 @@ const MainBanner = (type = 'carousel') => {
   if (type === 'carousel') {
     html = setCarousel(html);
     html.addEventListener('click', carouselCallback);
+    html.addEventListener('transitionend', carouselTransitionHandler);
   }
 
   else if (type === 'manual') {
