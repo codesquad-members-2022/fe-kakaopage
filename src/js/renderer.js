@@ -1,5 +1,8 @@
 import { select } from './util.js';
+
 import { addHandlerOnGnb, addHandlerOnSnb } from './handler/navHandler.js';
+import { addHandlerOnBanner } from './handler/bannerHandler.js';
+
 import { createHeader } from './components/header.js';
 import { createFooter } from './components/footer.js';
 import { createGnb } from './components/gnb.js';
@@ -34,6 +37,7 @@ const renderer = {
 
   mainBanner(bannerItems) {
     select('.category-content').insertAdjacentHTML('beforeend', createMainBanner(bannerItems));
+    addHandlerOnBanner('main-banner');
   },
 
   promotionBanner(bannerImgUrls) {
