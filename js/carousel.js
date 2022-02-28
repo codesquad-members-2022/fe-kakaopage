@@ -31,8 +31,8 @@ const handleAutoCarousel = () => {
     if (!isClickable) return;
     const imageWidth = $(".cover-image").clientWidth;
     const carouselItemWrapper = $(".carousel-item-wrap");
-    const transitionDurationSec = "0.3s";
-    const customTransition = `transform ${transitionDurationSec} ease-out`;
+    const transitionDurationSec = 0.3;
+    const customTransition = `transform ${transitionDurationSec}s ease-out`;
 
     carouselImgIdx++;
     carouselItemWrapper.style.transition = customTransition;
