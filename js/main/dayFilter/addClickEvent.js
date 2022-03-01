@@ -1,4 +1,5 @@
 import replaceDayContents from './replaceDayContents.js';
+import { selector } from '../../util/util.js';
 const days = {
   0: '일',
   1: '월',
@@ -10,30 +11,40 @@ const days = {
   '-1': '전체',
 };
 
+/* class name */
+const CATEGORY_HIGHTLIGHT_CLASSNAME = 'circle';
+const DAY_FILTER_CLASSNAME = 'day-filter';
+
+/* data property */
+const DATA_PROP_DAY = 'day';
+const DATA_PROP_CURDAY = 'curday';
+
 const onHighLight = (element) => {
-  element.classList.toggle('circle');
+  element.classList.toggle(CATEGORY_HIGHTLIGHT_CLASSNAME);
 };
-
 const offHighLight = (element) => {
-  element.classList.remove('circle');
+  element.classList.remove(CATEGORY_HIGHTLIGHT_CLASSNAME);
 };
 
-// li 사이를 빠르게 클릭하면 target이 ul이 되서 오류가 발생함
 // 메인 카테고리의 data-curday에 마지막으로 클릭한 dayfilter번호 write -> highlight 토글 ->
-const addClickEvent = (categoryEl, dayWebtoonsMap) => {
-  const dayFilter = document.querySelector('.day-filter');
+const addClickEvent = ($category, dayWebtoonsMap) => {
+  const $dayFilter = selector(`.${DAY_FILTER_CLASSNAME}`);
 
-  dayFilter.addEventListener('click', (event) => {
+  $dayFilter.addEventListener('click', (event) => {
     if (event.target.tagName !== 'LI') return;
-    if (event.target.dataset.day === categoryEl.dataset.curday) return;
+    if (
+      event.target.dataset[DATA_PROP_DAY] ===
+      $category.dataset[DATA_PROP_CURDAY]
+    )
+      return;
 
-    let curday = categoryEl.dataset.curday;
+    let curday = $category.dataset[DATA_PROP_CURDAY];
 
     const curDayFilterEl = event.target;
-    const prevDayFilterEl = dayFilter.querySelector(`[data-day='${curday}']`);
+    const prevDayFilterEl = selector(`[data-day='${curday}']`, $dayFilter);
 
-    categoryEl.dataset.curday = curDayFilterEl.dataset.day;
-    curday = curDayFilterEl.dataset.day;
+    $category.dataset[DATA_PROP_CURDAY] = curDayFilterEl.dataset[DATA_PROP_DAY];
+    curday = curDayFilterEl.dataset[DATA_PROP_DAY];
     onHighLight(curDayFilterEl);
     offHighLight(prevDayFilterEl);
 

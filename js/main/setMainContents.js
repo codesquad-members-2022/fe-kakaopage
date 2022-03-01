@@ -11,6 +11,7 @@ const setMainContents = ({
   selectedDay,
   apiURL,
   stopFlag,
+  categoriesWithDayFilter,
 }) => {
   clearWebtoons();
   clearDayFilter();
@@ -28,7 +29,7 @@ const setMainContents = ({
       setWebtoons({ dayWebtoonsArr, webtoonsArr });
 
       // day filter
-      drawDayFilter({ $category, dayWebtoonsMap });
+      drawDayFilter({ $category, dayWebtoonsMap, categoriesWithDayFilter });
       return;
     })
     .then(() => {

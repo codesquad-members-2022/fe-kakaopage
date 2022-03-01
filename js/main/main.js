@@ -38,7 +38,7 @@ const SLIDER_SELECTOR = '.slider';
 const PREVIEW_WIDTH = 720;
 
 const INTERVAL_TIME = 3; // 초 단위
-const CATEGORIES_WITH_DAY_FILTER = ['홈', '요일연재', '웹툰']; // Day 필터가 있는 카테고리 목록
+const categoriesWithDayFilter = ['홈', '요일연재', '웹툰']; // Day 필터가 있는 카테고리 목록
 
 const categoryState = {
   idx: null,
@@ -116,7 +116,15 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
     $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
 
-  setMainContents({ $category, selectedIdx, selectedDay, apiURL, stopFlag });
+  // webtoons + day filter
+  setMainContents({
+    $category,
+    selectedIdx,
+    selectedDay,
+    apiURL,
+    stopFlag,
+    categoriesWithDayFilter,
+  });
 };
 
 const addListener = ($category, selectedIdx, $$category) => {
@@ -130,7 +138,7 @@ const main = () => {
   const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
   $$category.forEach(addListener);
 
-  initCategoryCurDay(CATEGORIES_WITH_DAY_FILTER);
+  initCategoryCurDay(categoriesWithDayFilter);
 
   const defaultCategoryIdx = categoryState.getDefaultIdx(); // 첫 페이지 접속시 렌더링할 카테고리의 인덱스
   $$category[defaultCategoryIdx].click();
