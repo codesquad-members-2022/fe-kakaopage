@@ -1,4 +1,4 @@
-import { MainBanners, SubBanners, EventBanners } from '../data';
+import { MainBanners, SubBanners, EventBanners } from '../../data';
 
 const Slide = {
   main: {

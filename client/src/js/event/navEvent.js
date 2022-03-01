@@ -1,5 +1,5 @@
-import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../render.js';
-import { MainNavItems, ContentsNavItems, PageNavItems } from '../data';
+import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../../render.js';
+import { MainNavItems, ContentsNavItems, PageNavItems } from '../../data';
 
 const changeSelectedItem = (items, selectedItem) => {
   items.forEach((item) => {
