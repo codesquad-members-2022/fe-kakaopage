@@ -18,7 +18,6 @@ const renderHome = () => {
     html += slideBanner.getHtml();
 
     const renderJSONData = (path) => {
-        // pathsArray.map();
         getJSON(path)
             .then((data) => {
                 html += new GenreBest({
