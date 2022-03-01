@@ -1,13 +1,10 @@
 # fe-kakaopage
 
-- 중첩된 코드의 표현이 많다면 콜백함수를 분리하세요.
-- 모든 DOM NODE를 JS로 다 동적으로 추가할 필요는 없고, 껍데기와 기본틀은 HTML을 미리 구성해두는 것도 좋아요. 그리고 변경이 되는 부분만 DOM조작을 하는 것으로.
-
 # 이론정리계획
 
 - [ ] 클로저에서 반환하는 타입 및 클로저 개념 공부
 - [x] 돔 렌더링 과정-간략히
-- [ ] Dynamic import
+- [ ] Dynamic import in nodeJS
 - [ ] json으로 변환 및 json을 변환 하는 함수들
 - [ ] fetch API 및 HTTP Header 설정
 - [ ] XMLHTTPRequest 는 잘 사용하지 않으나 그 사용법을 알아두자.
@@ -33,7 +30,7 @@
 
 # 고민거리
 
-### 1. closure 반환 함수
+### 1. closure 이해 및 closure의 반환 값들
 
 ### 2. api요청 이해 및 고민
 
