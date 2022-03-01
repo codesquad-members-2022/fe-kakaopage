@@ -11,22 +11,20 @@ import { onClickBannerController } from "./eventJS/slider.js";
 
 renderMainSecHome();
 renderBanner();
-// domUtil
-//   .$(".recommand__image--controller")
-//   .addEventListener("click", onClickBannerController);
 
 domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
   const clickedNav = event.target.textContent;
-  if (clickedNav === "홈" && clickedNav !== data.contentsChecker) {
+  const { contentsChecker } = data;
+  if (clickedNav === "홈" && clickedNav !== contentsChecker) {
     renderMainSecHome();
-  } else if (clickedNav === "요일연재" && clickedNav !== data.contentsChecker) {
+  } else if (clickedNav === "요일연재" && clickedNav !== contentsChecker) {
     renderMainSecWoD();
   }
 });
 
 domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
   domUtil.$(".recommand__image--wrapper").offsetWidth
-}px)`; // 화면 조정을 위해
+}px)`;
 
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {

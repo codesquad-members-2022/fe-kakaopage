@@ -11,35 +11,50 @@ import { renderToonbyDay } from "./mainEvent.js";
 import { getBannerHtml } from "../component/BannerComponent.js";
 import { onClickBannerController } from "./slider.js";
 
-const renderMainSecHome = () => {
-  const newMainHTML = data.genre.reduce((inner, toonGen) => {
-    const filterToonByGen = getToonGenre(toonGen);
-    return (inner += getMainHtml(
-      filterToonByGen,
-      true,
-      { left: [toonGen], right: "더보기" },
-      false
-    ));
-  }, "");
-  domUtil.$(".main").innerHTML = newMainHTML;
+const renderMainSecHome = (genre) => {
+  fetch("/subCategory/home")
+    .then((response) => response.json())
+    .then((homeData) => {
+      const newMainHTML = homeData.reduce((mainHtml, toonGen) => {
+        const filterToonByGen = getToonGenre(toonGen);
+        return (mainHtml += getMainHtml(
+          filterToonByGen,
+          true,
+          { left: [toonGen], right: "더보기" },
+          false
+        ));
+      }, "");
+
+      domUtil.$(".main").innerHTML = newMainHTML;
+    });
 };
 
 const renderMainSecWoD = () => {
-  domUtil.$(".main").innerHTML = getMainHtml(
-    data.toonData,
-    true,
-    { left: data.toggleLeft, right: "전체 (149)" },
-    true,
-    data.week
-  );
-  domUtil.$(".main__nav__dow--ul").addEventListener("click", renderToonbyDay);
+  fetch("/subCategory/week")
+    .then((response) => response.json())
+    .then((weekData) => {
+      domUtil.$(".main").innerHTML = getMainHtml(
+        data.toonData,
+        true,
+        { left: data.toggleLeft, right: "전체 (149)" },
+        true,
+        weekData
+      );
+      domUtil
+        .$(".main__nav__dow--ul")
+        .addEventListener("click", renderToonbyDay);
+    });
 };
 
 const renderBanner = () => {
-  domUtil.$(".recommand__image").innerHTML = getBannerHtml(data.bannerUrl);
-  domUtil
-    .$(".recommand__image--controller")
-    .addEventListener("click", onClickBannerController);
+  fetch("/banner/home")
+    .then((response) => response.json())
+    .then((bannerUrl) => {
+      domUtil.$(".recommand__image").innerHTML = getBannerHtml(bannerUrl);
+      domUtil
+        .$(".recommand__image--controller")
+        .addEventListener("click", onClickBannerController);
+    });
 };
 
 const renderMainSecToon = () => {
