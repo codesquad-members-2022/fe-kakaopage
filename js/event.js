@@ -1,4 +1,4 @@
-import { GNBHandler, SNBHandler } from "./handler.js";
+import { dayHandler, GNBHandler, SNBHandler } from "./handler.js";
 import { $ } from "./utils.js";
 
 export function addEventGNB() {
@@ -7,4 +7,8 @@ export function addEventGNB() {
 
 export function addEventSNB() {
   $(".snb").addEventListener("click", SNBHandler);
+}
+
+export function addEventDay() {
+  $(".days").addEventListener("click", dayHandler);
 }
