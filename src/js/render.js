@@ -2,7 +2,7 @@ import { $, CL, TITLE, today, VAL } from './util.js';
 import { SNB } from './components/SNB.js';
 import { MainBanner } from './components/MainBanner.js';
 import { DayBar } from './components/DayBar.js';
-import { WebtoonList, createWebtoonItem } from './components/WebtoonList.js';
+import { WebtoonList } from './components/WebtoonList.js';
 import { ThemeBox } from './components/ThemeBox.js';
 import { ScrollBanner } from './components/ScrollBanner.js';
 
@@ -22,17 +22,10 @@ const render = {
     $main.innerHTML = `<div style="padding: 30px; text-align: center; font-size: 30px;">${tabName}</div>`;
   },
 
-  wholeWebtoon(data) {
+  webtoonList(data) {
     const $mainContents = $('.main-contents');
     const webtoonBox = $('.webtoon-box');
     $mainContents.replaceChild(WebtoonList(data), webtoonBox);
-  },
-
-  dayWebtoon(data, day) {
-    const webtoonList = $('.webtoon__list');
-    webtoonList.innerHTML = createWebtoonItem(
-      data.filter(v => v.day.includes(day))
-    );
   },
 
   contents(data, category) {

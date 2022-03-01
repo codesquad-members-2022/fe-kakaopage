@@ -1,5 +1,4 @@
-const DATA_URL = 'data/data.json';
-// const DATA_URL = 'http://localhost:3001/data';
+const WEBTOON_URL = 'http://localhost:3001/webtoon/';
 
 const $ = (selector, base = document) => base.querySelector(selector);
 const $$ = (selector, base = document) => base.querySelectorAll(selector);
@@ -10,17 +9,12 @@ const activateTab = target => {
   });
 };
 
-const loadData = async param => {
-  const response = await fetch(DATA_URL);
+const loadData = async url => {
+  const response = await fetch(url);
   const json = await response.json();
-  const data = await json[param];
+  const data = await json;
   return data;
 };
-
-let data = null;
-loadData('webtoon')
-  .then(d => (data = d))
-  .catch(console.log);
 
 const today = new Date()
   .toLocaleString('en-us', { weekday: 'short' })
@@ -45,4 +39,24 @@ const VAL = {
   MIN_BANNER_COUNT: 2,
 };
 
-export { DATA_URL, $, $$, activateTab, data, today, CL, TITLE, VAL };
+function changeTitle(targetId) {
+  document.title = `${targetId} | kakaopage by Millie`;
+}
+
+function removeAlarm(target) {
+  target.classList.remove('alarm');
+}
+
+export {
+  WEBTOON_URL,
+  $,
+  $$,
+  today,
+  CL,
+  TITLE,
+  VAL,
+  loadData,
+  activateTab,
+  changeTitle,
+  removeAlarm,
+};
