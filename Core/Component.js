@@ -1,4 +1,4 @@
-import {observable, observe} from "./observer.js";
+
 import {type} from "../utils.js";
 
 export class Processor {

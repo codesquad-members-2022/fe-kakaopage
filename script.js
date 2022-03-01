@@ -1,4 +1,3 @@
-
 import {MenuNav} from "./components/MenuNav.js";
 import {HeaderBar} from "./components/HeaderBar.js";
 import {Home} from "./pages/home.js";
@@ -23,15 +22,16 @@ const App = class extends Component {
             <nav class="mainNav">
             
             </nav>
-            ${this.$state.tab === tabs.웹툰 ?`
+          
             <section>
+              ${this.$state.tab === tabs.웹툰 ? `
                 <div class="listContentBox TopBanner">
                     ${CATS.map((cat, index) => `
                     <span ${this.$state.category === cat ? "class='selected'" : ""} data-cat=${cat}>${cat}</span>
                 `).join('')}
-                </div>
-               
-            </section>` : `<span>This is Dummy Page</span>`}
+                </div>`
+            : `<span>This is Dummy Page</span>`}
+            </section>
             </main>
             <footer>
     </footer>
@@ -42,11 +42,16 @@ const App = class extends Component {
         const {onClickPage} = this;
         const {tab} = this.$state;
         new HeaderBar(this.select('header'), new InnerHTML());
-        new MenuNav(this.select('.mainContent>.mainNav'), new InnerHTML(),  {onClickPage:onClickPage.bind(this), tab});
-        renderRoute[this.$state.category](this.select('section'));
+        new MenuNav(this.select('.mainContent>.mainNav'), new InnerHTML(), {
+            onClickPage: onClickPage.bind(this),
+            tab
+        });
+        if (tab === tabs.웹툰) {
+            renderRoute[this.$state.category](this.select('section'));
+        }
     }
 
-    onClickPage(name){
+    onClickPage(name) {
         this.setState({tab: name})
     }
 
@@ -59,14 +64,16 @@ const App = class extends Component {
 const dummy = `<span>This is Dummy Page</span>`
 const renderRoute = {
 
-    홈: (target) => new Home(target, new class extends Processor{render(component) {
-        const header= component.$target.firstElementChild;
-        component.$target.innerHTML = component.template();
-        component.$target.insertAdjacentElement('afterbegin', header);
-    }}),
-    요일연재: (target) => new Daily(target,  new class extends Processor{
+    홈: (target) => new Home(target, new class extends Processor {
         render(component) {
-            const header= component.$target.firstElementChild;
+            const header = component.$target.firstElementChild;
+            component.$target.innerHTML = component.template();
+            component.$target.insertAdjacentElement('afterbegin', header);
+        }
+    }),
+    요일연재: (target) => new Daily(target, new class extends Processor {
+        render(component) {
+            const header = component.$target.firstElementChild;
             component.$target.innerHTML = component.template();
             component.$target.insertAdjacentElement('afterbegin', header);
         }

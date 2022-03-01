@@ -19,7 +19,7 @@ export const MenuNav = class extends Component{
     }
     setEvent() {
         const{onClickPage} = this.$props;
-        this.addEvent('click', '.menu', ({target})=>{
+        this.addEvent('click', 'li.menu', ({target})=>{
             onClickPage(target.dataset.name);
         })
     }
