@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dayTab = searchSelector('.serial__list')
   const slides = searchSelector('.webtoon-slide__imgs')
-  const slideEl = searchSelector('.webtoon-slide__img', slides)
+  const slideEl = searchSelector('.webtoon-slide__img')
 
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setSlideImg(slides, slideEl, e)
   })
   slides.appendChild(slideEl.cloneNode(true))
+
   setSlideBtn()
   moveAutoSlide()
 
