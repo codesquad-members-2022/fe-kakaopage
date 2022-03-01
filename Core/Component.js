@@ -41,6 +41,7 @@ export default class Component {
         this.#subjects.add(v);
         if (this.#inited) return;
         this.#inited = true;
+
         const f = _ => {
             this.#subjects.forEach(v => {
                 if (!v.#willRender) return;
