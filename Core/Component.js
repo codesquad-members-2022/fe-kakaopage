@@ -55,3 +55,10 @@ export default class Component{
     select( selector){return this.$target.querySelector(selector);}
     selectAll( selector){return this.$target.querySelectorAll(selector);}
 }
+function debounceFrame (callback) {
+    let nextFrameCallback = -1;
+    return () => {
+        cancelAnimationFrame(nextFrameCallback);
+        nextFrameCallback = requestAnimationFrame(callback)
+    }
+};

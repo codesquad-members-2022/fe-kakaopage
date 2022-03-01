@@ -3,7 +3,6 @@ import {BannerBox} from "../components/BannerBox.js";
 
 import {AdBanner} from "../components/AdBanner.js";
 import {GrayCube,} from "../components/GrayCube.js";
-import {ComicItem} from "../components/ComicsGrid.js";
 import {HomeHeader} from "../components/HomeHeader.js";
 import Component from "../Core/Component.js";
 

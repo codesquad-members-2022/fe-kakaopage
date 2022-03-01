@@ -1,4 +1,4 @@
-import {ComicItem} from "./components/ComicsGrid.js";
+
 
 export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
     typeof el[v[0]] == 'function' ? el[v[0]](v[1]) : (el[v[0]] = v[1])
@@ -36,6 +36,4 @@ export const jsonRoute =(function(){
         return route[key]
   }
 })();
-export const renderGrid = (data, infographic, target,key)=>{
-    data[jsonRoute(key)].map(comic=>new ComicItem(target))
-}
+

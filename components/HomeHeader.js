@@ -1,5 +1,4 @@
-import {jsonRoute, renderGrid, week} from "../utils.js";
-import {ComicItem} from "./ComicsGrid.js";
+import {jsonRoute, week} from "../utils.js";
 import Component from "../Core/Component.js";
 import {store} from "../Core/Store.js";
 

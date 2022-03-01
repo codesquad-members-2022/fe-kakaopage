@@ -25,14 +25,14 @@ export const carouselSlider= (  target, idx ) =>{
         carousel.style.transform = `translateX(${-720 * idx}px)`;
         carousel.style.transition = 'transform 0.7s';
         page.innerText = `${idx-1} / ${slides.length-2}`
-        requestAnimationFrame(startSlide)
+        startSlide();
     }
     const startSlide = ()=> {
         timeoutId = setTimeout(() => {
             move('next');
         }, INTERVAL);
     }
-    requestAnimationFrame(startSlide);
+     startSlide();
     carousel.addEventListener('transitionend', () => {
         if (slides[idx].id === firstClone.id || slides[idx].id ===lastClone.id) {
             carousel.style.transition = 'none';
