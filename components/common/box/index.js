@@ -3,11 +3,15 @@ export function createBox({ title, contents = "" }) {
   <style>${style}</style>
   <div class="box col">
     <div class="box__header row">
-      <div class="box__title">${title}</div>
+      ${
+        title
+          ? `<div class="box__title">${title}</div>
       <div class="box__more row">
         <div class="box__more-text">더보기</div>
         <div class="box__more-icon"></div>
-      </div>
+      </div>`
+          : ""
+      }
     </div>
     <div class="box__contents">${contents}</div>
   </div>

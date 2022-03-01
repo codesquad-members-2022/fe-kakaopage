@@ -114,7 +114,8 @@
   border-bottom-style: solid;
 }
 
-.snb__selected {
+.snb__selected,
+.day__selected {
   color: var(--black);
 }
 

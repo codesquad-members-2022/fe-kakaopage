@@ -5,6 +5,6 @@ export function addEventGNB() {
   $("ul").addEventListener("click", GNBHandler);
 }
 
-export function removeEventSNB() {
-  $(".snb").removeEventListener("click", SNBHandler);
+export function addEventSNB() {
+  $(".snb").addEventListener("click", SNBHandler);
 }
