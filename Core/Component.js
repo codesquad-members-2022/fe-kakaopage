@@ -1,4 +1,5 @@
 import {observable, observe} from "./observer.js";
+import {type} from "../utils.js";
 
 export class Processor {
     render(component) {
@@ -25,13 +26,7 @@ export class InsertAdjacentHTML extends Processor {
     }
 }
 
-export const type = (target, type) => {//
-//typeof 값은 항상 문자열이며, 문자열이 아닌경우 instanceof로 검사해주면 됨
-    if (typeof type == "string") { //문자열끼리 비교하므로 강제현변환이 일어나지 않으므로 ==도 사용가능하며, ===보다 ==이 빨리 작동함
-        if (typeof target != type) throw`invaild type ${target}: ${type}`;
-    } else if (!(target instanceof type)) throw`invaild type ${target}: ${type}`;
-    return target;
-};
+
 
 export default class Component {
     $target;
@@ -64,7 +59,7 @@ export default class Component {
         this.setup();
         this.render();
         this.setEvent();
-        // Component.#notify(this);
+        Component.#notify(this);
     }
 
     setup() {
@@ -88,7 +83,7 @@ export default class Component {
 
     setState(newState) {
         this.$state = {...this.$state, ...newState};
-        this.render();
+        this.#willRender = true;
     }
 
     addEvent(eventType, selector, callback) {

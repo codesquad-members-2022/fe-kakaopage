@@ -13,6 +13,7 @@ export const MenuNav = class extends Component{
         const {tab} = this.$props;
         return`
         <ul class="menuNav">
+      
             ${Object.entries(menuicons).map(([name, src])=>`<li class="menu ${tab===name? 'selected':''}" data-name=${name}><a><img src=${src}/></a></li>`).join('')}
         </ul>`
     }

@@ -3,7 +3,7 @@ import {MenuNav} from "./components/MenuNav.js";
 import {HeaderBar} from "./components/HeaderBar.js";
 import {Home} from "./pages/home.js";
 import {Daily} from "./pages/daily.js";
-import Component, {InnerHTML, Processor, type} from "./Core/Component.js";
+import Component, {InnerHTML, Processor} from "./Core/Component.js";
 import {CATS, tabs} from "./utils.js";
 
 

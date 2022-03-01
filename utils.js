@@ -9,7 +9,13 @@ export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
 // export const shuffled = (array, n) => array.sort(() => 0.5 - Math.random()).slice(0, n);
 
 
-
+export const type = (target, type) => {//
+//typeof 값은 항상 문자열이며, 문자열이 아닌경우 instanceof로 검사해주면 됨
+    if (typeof type == "string") { //문자열끼리 비교하므로 강제현변환이 일어나지 않으므로 ==도 사용가능하며, ===보다 ==이 빨리 작동함
+        if (typeof target != type) throw`invaild type ${target}: ${type}`;
+    } else if (!(target instanceof type)) throw`invaild type ${target}: ${type}`;
+    return target;
+};
 
 export const tabs = {
     홈: "home",
