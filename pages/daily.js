@@ -1,6 +1,6 @@
 import {BannerBox} from "../components/BannerBox.js";
 import {DailyHeader} from "../components/DailyHeader.js";
-import Component from "../Core/Component.js";
+import Component, {InnerHTML, Processor} from "../Core/Component.js";
 
 // export const daily = async (target, position)=>{
 export const Daily = class extends Component{
@@ -16,16 +16,15 @@ export const Daily = class extends Component{
         <div></div>
     `
     }
-    render(){
-        const header= this.$target.firstElementChild;
-        this.$target.innerHTML = this.template();
-        this.$target.insertAdjacentElement('afterbegin', header);
-        this.mounted();
-    }
 
     mounted(){
-        new BannerBox(this.select('.BannerBox'), {});
-        new DailyHeader(this.$target.lastElementChild)
+        new BannerBox(this.select('.BannerBox'),  new InnerHTML(), {});
+        new DailyHeader(this.$target.lastElementChild, new class extends Processor{
+            render(component) {
+                component.$target.innerHTML = component.template();
+                component.select('.comicsGrid').style.paddingTop = "";
+            }
+        })
     }
 
 }

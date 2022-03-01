@@ -4,7 +4,7 @@ import {BannerBox} from "../components/BannerBox.js";
 import {AdBanner} from "../components/AdBanner.js";
 import {GrayCube,} from "../components/GrayCube.js";
 import {HomeHeader} from "../components/HomeHeader.js";
-import Component from "../Core/Component.js";
+import Component, {InnerHTML, InsertAdjacentHTML, Processor} from "../Core/Component.js";
 
 
 // export const home = async(target, position)=>{
@@ -23,18 +23,15 @@ export const Home = class extends Component{
         </div>
     `
     }
-    render(){
-        // this.$target.insertAdjacentHTML('beforeend', this.template())
-        const header= this.$target.firstElementChild;
-        this.$target.innerHTML = this.template();
-        this.$target.insertAdjacentElement('afterbegin', header);
-        this.mounted();
-    }
+
     mounted(){
-        new BannerBox(this.select(".BannerBox"), {});
-        new GrayCube(this.select('.catchphrase'), {});
-        new AdBanner( this.select('.catchphrase'), {});
-        new HomeHeader(this.select('.freeComics'), {});
+        new BannerBox(this.select(".BannerBox"),  new InnerHTML(), {});
+        new GrayCube(this.select('.catchphrase'), new InsertAdjacentHTML('afterend'));
+        new AdBanner( this.select('.catchphrase'), new InsertAdjacentHTML('afterend') );
+        new HomeHeader(this.select('.freeComics'),  new class extends Processor{render(component) {
+            component.$target.innerHTML = component.template();
+            component.select('.comicsGrid').style.paddingTop = '10px';
+        }});
     }
 
 

@@ -29,8 +29,5 @@ export const GrayCube = class extends Component{
             </div>
         </div>`
     }
-    render(){
-        this.$target.insertAdjacentHTML('afterend', this.template());
-        this.mounted();
-    }
+
 }

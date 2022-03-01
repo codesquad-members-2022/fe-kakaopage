@@ -54,18 +54,9 @@ export const DailyHeader = class extends Component {
     `;
     }
 
-    render() {
-        this.$target.innerHTML = this.template();
-        this.select('.comicsGrid').style.paddingTop = "";
-        this.mounted();
-    }
-
-
-
     setEvent() {
         const {comics} = store.state;
         this.addEvent('click', 'li', ({target: eventTarget}) => {
-
             this.setState({day: eventTarget.dataset.key})
         })
     }

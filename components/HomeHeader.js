@@ -24,7 +24,6 @@ export const HomeHeader = class extends Component{
     </ul>
     <div class="comicsGrid">
     ${comics[jsonRoute(this.$state.day)].map(comic=>{
-        
          const { image, title, author, totalView, additional: {adult}} = comic;
         return` <a class="wrapper">
         <div class="thumbnail">
@@ -47,11 +46,7 @@ export const HomeHeader = class extends Component{
 </div>
     `
     }
-    render(){
-        this.$target.innerHTML =  this.template();
-        this.select('.comicsGrid').style.paddingTop = '10px';
-        this.mounted();
-    }
+
 
     setEvent() {
         const {comics, infographic, images} = store.state;

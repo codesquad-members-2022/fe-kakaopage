@@ -1,4 +1,4 @@
-import {randomGen} from "../utils.js";
+
 import {carouselSlider} from "./carousel.js";
 import Component from "../Core/Component.js";
 import {store} from "../Core/Store.js";

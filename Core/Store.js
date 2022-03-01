@@ -15,10 +15,7 @@ export const store = {
     state:{
         comics, images, infographic, menuicons
     },
-    setState(newState){
-        for(const [key, value] of Object.entries(newState)){
-            this.state[key] = value;
-        }
-    }
+
+
 
 }

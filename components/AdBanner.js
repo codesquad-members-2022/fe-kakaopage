@@ -1,4 +1,4 @@
-import {randomGen} from '../utils.js';
+
 import {store} from "../Core/Store.js";
 import Component from "../Core/Component.js";
 
@@ -12,7 +12,7 @@ export const AdBanner = class extends Component {
                 <img src=${infographic.prev}>
             </button>
 
-            <img src=${randomGen(images.ad)}/>
+            <img src=${images.ad[0]}/>
 
             <button class="nextBtn">
                 <img src=${infographic.next}/>
@@ -20,8 +20,5 @@ export const AdBanner = class extends Component {
         </div>
     `;
     }
-    render() {
-        this.$target.insertAdjacentHTML('afterend', this.template() );
-        this.mounted();
-    }
+
 }

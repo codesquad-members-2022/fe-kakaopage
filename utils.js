@@ -5,8 +5,8 @@ export const el = (el, attr = {}) => Object.entries(attr).reduce((el, v) => {
     return el;
 }, el instanceof HTMLElement ?  el :document.createElement(el) );
 
-export const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
-export const shuffled = (array, n) => array.sort(() => 0.5 - Math.random()).slice(0, n);
+// export const randomGen = (arr) => arr[Math.floor(Math.random() * arr.length)];
+// export const shuffled = (array, n) => array.sort(() => 0.5 - Math.random()).slice(0, n);
 
 
 
