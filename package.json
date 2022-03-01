@@ -16,7 +16,7 @@
     "bugs": {
         "url": "https://github.com/BB-choi/fe-kakaopage/issues"
     },
-    "homepage": "https://github.com/BB-choi/fe-kakaopage#readme",
+    "homepage": "https://fe-kakaopage.herokuapp.com",
     "dependencies": {
         "express": "^4.17.3"
     }

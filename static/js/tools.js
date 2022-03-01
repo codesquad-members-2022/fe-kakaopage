@@ -21,9 +21,7 @@ const preventDefaults = () => {
 };
 
 const getJSON = (path) => {
-    return fetch(`//localhost:3000/${path}`).then((response) =>
-        response.json()
-    );
+    return fetch(`/${path}`).then((response) => response.json());
 };
 
 export { toggleClass, toggleWeekDayMenu, preventDefaults, getJSON };
