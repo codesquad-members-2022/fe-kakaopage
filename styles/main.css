@@ -31,6 +31,8 @@
 .main__mainBanner {
   position: relative;
   cursor: pointer;
+  width: 720px;
+  height: 480px;
 }
 .contents .main__mainBanner {
   height: auto;
@@ -66,7 +68,8 @@
   margin-right: 2px;
 }
 .infoTitle {
-  font-size: 22px;
+  font-size: 28px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 .infoBody {

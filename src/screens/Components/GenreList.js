@@ -5,7 +5,6 @@ import categories from "../../categories.js";
 function GenreList(target, state) {
   Component.call(this, target, state);
 }
-
 createExtendsRelation(GenreList, Component);
 
 GenreList.prototype.render = function () {

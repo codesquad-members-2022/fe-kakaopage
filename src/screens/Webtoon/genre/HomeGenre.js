@@ -18,7 +18,6 @@ import FullButton from "../../Components/FullButton.js";
 
 function HomeGenre(target) {
   Component.call(this, target);
-
   const WEBTOONS_TOTAL_COUNT = 1318;
   const DAYS_TOP_WEBTOON_PER_PAGE = 10;
 

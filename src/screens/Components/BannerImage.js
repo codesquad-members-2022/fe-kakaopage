@@ -30,9 +30,9 @@ BannerImage.prototype.template = function () {
           </span>
         </div>
       </div>
-    </div>
-    <div class="banner__message">
-      <span>${mainDesc}</span>
+      <div class="banner__message">
+        <span>${mainDesc}</span>
+      </div>
     </div>
 `;
 };
