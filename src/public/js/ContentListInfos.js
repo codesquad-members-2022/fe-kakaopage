@@ -1,6 +1,6 @@
 import { IssueComponent } from "../component/IssueComponent.js";
 import { BannerComponent } from "../component/BannerComponent.js";
-import { issueObj, rowListTitleObj } from "./constants.js";
+import { rowListTitleObj } from "./constants.js";
 import { RowListContainer } from "../container/RowListContainer.js";
 import { WeekListContainer } from "../container/WeekListContainer.js";
 import { ColumnListContainer } from "../container/ColumnListContainer.js";
@@ -9,17 +9,14 @@ import { WeekComponent } from "../component/WeekComponent.js";
 import { today } from "./utils.js";
 
 export const ContentListInfos = {
-    addBannerComponent() {
-        return BannerComponent();
+    addBannerComponent(bannerData) {
+        return BannerComponent(bannerData);
     },
-    addIssueComponent(menu) {
-        if(Array.isArray(issueObj[menu]) && issueObj[menu].length === 0) return;
-        return IssueComponent(issueObj[menu]);
+    addIssueComponent(issueData) {
+        return IssueComponent(issueData);
     },
-    addRecommendationComponent(menu) {
-        if(menu === '홈' || menu === '요일연재' || menu === '웹툰') return;
-        // const recommendData = WebtoonData.filter(data => data.genre === menu).slice(0, 4);
-        // return RowListContainer(rowListTitleObj.recommendation, recommendData);
+    addRecommendationComponent(recommendData) {
+        return RowListContainer(rowListTitleObj.recommendation, recommendData);
     },
     addFilterComponent() {
         return FilterComponent();
@@ -27,9 +24,8 @@ export const ContentListInfos = {
     addWeekComponent() {
         return WeekComponent(today);
     },
-    addWeeksComponent(today) {
-        // const weeksData = WebtoonData.filter(data => data.week.includes(today)).sort((a, b) => b.rating - a.rating);
-        // return WeekListContainer(rowListTitleObj.weeks, weeksData);
+    addWeeksComponent(weeksData) {
+        return WeekListContainer(rowListTitleObj.weeks, weeksData);
     },
     addRomanceComponent() {
         // const romanceData = WebtoonData.filter(data => data.genre === '로맨스').slice(0, 5);
@@ -47,28 +43,19 @@ export const ContentListInfos = {
         // const boyData = WebtoonData.filter(data => data.genre === '소년').slice(0, 3);
         // return ColumnListContainer(rowListTitleObj.boyTop, boyData);
     },
-    addDailyRankingComponent() {
-        // const dailyRankingData = WebtoonData.sort((a, b) => {
-        //     return b.rating - a.rating;
-        // }).slice(0, 3);
-        // return ColumnListContainer(rowListTitleObj.dailyRankingTop, dailyRankingData);
+    addDailyRankingComponent(topData) {
+        return ColumnListContainer(rowListTitleObj.dailyRankingTop, topData);
     },
-    addWebToonComponent() {
-        // return ColumnListContainer(rowListTitleObj.webtoons, WebtoonData);
+    addWebToonComponent(WebtoonData) {
+        return ColumnListContainer(rowListTitleObj.webtoons, WebtoonData);
     },
-    addTodayGiftComponent(menu) {
-        if(menu === '홈' || menu === '요일연재' || menu === '웹툰') return;
-        // const todayGiftData = WebtoonData.filter(data => data.genre === menu).slice(0, 4);
-        // return ColumnListContainer(rowListTitleObj.todayGift, todayGiftData);
+    addTodayGiftComponent(todayGiftData) {
+        return ColumnListContainer(rowListTitleObj.todayGift, todayGiftData);
     },
-    addPopularityComponent(menu) {
-        if(menu === '홈' || menu === '요일연재' || menu === '웹툰') return;
-        // const popularityData = WebtoonData.filter(data => data.genre === menu).sort((a, b) => b.rating - a.rating).slice(0, 4);
-        // return ColumnListContainer(rowListTitleObj.popularity, popularityData);
+    addPopularityComponent(popularityData) {
+        return ColumnListContainer(rowListTitleObj.popularity, popularityData);
     },
-    addExclusiveComponent(menu) {
-        if(menu === '홈' || menu === '요일연재' || menu === '웹툰') return;
-        // const exclusiveData = WebtoonData.filter(data => data.genre === menu).sort((a, b) => b.subscriptions - a.subscriptions).slice(0, 4);
-        // return RowListContainer(rowListTitleObj.exclusive, exclusiveData);
+    addExclusiveComponent(exclusiveData) {
+        return RowListContainer(rowListTitleObj.exclusive, exclusiveData);
     }
 }

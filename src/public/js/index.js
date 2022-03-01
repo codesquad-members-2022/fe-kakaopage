@@ -15,7 +15,7 @@ const init = () => {
 
     // footer listener
     footer.detailSlide();
-    getWebtoonData('https://korea-webtoon-api.herokuapp.com/kakao-page/');
+    // getWebtoonData('https://korea-webtoon-api.herokuapp.com/kakao-page/');
 }
 
 init();
