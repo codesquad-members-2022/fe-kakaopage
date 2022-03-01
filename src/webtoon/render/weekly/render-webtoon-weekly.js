@@ -1,5 +1,5 @@
 import { createImageCard } from "../../../components/createImageCard.js";
-import { weeklyWebtoonImageCardInfo } from "../../../data/imageCard-data.js";
+// import { weeklyWebtoonImageCardInfo } from "../../../data/imageCard-data.js";
 
 const weeklyIdxChanger = {
   mon: 0,
@@ -85,17 +85,27 @@ if (nowDay === -1) {
   nowDay = 6;
 }
 
-const createHTMLImageCard = (dayOfTheWeek) => {
+const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
   weeklyWebtoonImageCardInfo[dayOfTheWeek]["card"].forEach((imageCardInfo) => {
     webtoonWeeklyWebtoon.insertAdjacentHTML(
       "beforeend",
       createImageCard(imageCardInfo)
     );
   });
+};
+
+const renderWebtoonWeeklyImageCard = (path, dayOfTheWeek) => {
+  fetch(`//localhost:3000/${path}`)
+    .then((response) => response.json())
+    .then((data) => {
+      insertImageCardsToParent(data, dayOfTheWeek);
+    });
+};
+
+const createHTMLImageCard = (dayOfTheWeek) => {
+  renderWebtoonWeeklyImageCard("webtoon/weekly/imageCard", dayOfTheWeek);
 
   return webtoonWeeklyMain;
 };
-// const renderWeekly = createHTMLImageCard(nowDay);
-// console.log(renderWeekly);
 createHTMLImageCard(nowDay);
 export { webtoonWeeklyContent };
