@@ -1,4 +1,4 @@
-import { $ } from "./selector.js";
+import { $ } from "../components/selector.js";
 
 const imageBoxContainer = $(".image-box-container");
 const containerBox = imageBoxContainer.querySelector(
