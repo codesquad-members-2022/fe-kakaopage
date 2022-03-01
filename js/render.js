@@ -1,4 +1,4 @@
-import { $, addComponent, toggleList, data, getToday } from "./dom-lib.js";
+import { $, addComponent, toggleList, getToday } from "./dom-lib.js";
 import { headerMenu } from "./component/header-menu.js";
 import { category } from "./component/category.js";
 import { empty } from "./component/empty.js";
@@ -24,65 +24,70 @@ const categoryData = [
   "BL",
 ];
 
-/**
- * Naming Rule :>> click noun
- */
-export class Render {
-  static fixedHeader = () => {
+async function getJson(url = "/") {
+  const res = await fetch(`http://localhost:5000${url}`);
+  return await res.json();
+}
+
+const data = await getJson("/api");
+// console.log("/api/toon/100 :>> ", await getJson("/api/toon/100"));
+
+export const Render = {
+  fixedHeader: () => {
     addComponent("header", headerMenu(data.headerImg, menuData));
-  };
+  },
 
-  static footerContent = () => {
+  footerContent: () => {
     addComponent("footer", footerInfo());
-  };
+  },
 
-  static toon_main = () => {
+  toon_main: () => {
     addComponent(".toon-main", toonMain());
     addComponent(".toon-jumbotron", jumbotron(data));
     addComponent(".toon-todaymenu", gridMenu(data));
     addComponent(".toon-ad-banner-1", adBanner(data, "미슐랭스타"));
     addComponent(".toon-daytop", dayPage(data, dayPageList));
     addComponent(".toon-daytop_album", gridList(data, getToday()));
-  };
+  },
 
   //* active functions
-  static header_home = (target) => {
+  header_home: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
-  };
+  },
 
-  static header_toon = (target) => {
+  header_toon: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", category(categoryData));
     Render.toon_main();
-  };
+  },
 
-  static header_novel = (target) => {
+  header_novel: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
-  };
+  },
 
-  static header_vod = (target) => {
+  header_vod: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
-  };
+  },
 
-  static header_broadcast = (target) => {
+  header_broadcast: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
-  };
+  },
 
-  static header_book = (target) => {
+  header_book: (target) => {
     toggleList(target, "check");
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
-  };
+  },
 
-  static toonCategory = (target = $(".toon-category a:first-child")) => {
+  toonCategory: (target = $(".toon-category a:first-child")) => {
     if (!target) return;
     toggleList(target, "check");
     const click = target.innerHTML;
@@ -98,19 +103,18 @@ export class Render {
       BL: () => {},
     };
     handler[click]();
-  };
+  },
 
-  static toonDaySeriesTop = (
-    target = $(`.ul-day li:nth-child(${getToday()})`)
-  ) => {
+  toonDaySeriesTop: (target = $(`.ul-day li:nth-child(${getToday()})`)) => {
     if (!target) return;
-    console.log("target :>> ", target);
     toggleList(target, "check");
     addComponent(".toon-daytop_album", gridList(data, getToday()));
 
     const click = target.innerHTML;
     const handler = {
-      월: () => {},
+      월: () => {
+        addComponent(".toon-daytop_album", gridList(data, getToday()));
+      },
       화: () => {},
       수: () => {},
       목: () => {},
@@ -120,5 +124,5 @@ export class Render {
       완결: () => {},
     };
     handler[click]();
-  };
-}
+  },
+};
