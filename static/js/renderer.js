@@ -17,17 +17,21 @@ const renderHome = () => {
     html += category.getHtml();
     html += slideBanner.getHtml();
 
-    fetch("//localhost:3000/genre/romanceTop")
-        .then((res) => res.json())
-        .then((data) => {
-            html += new GenreBest({
-                genre: "로맨스",
-                genreItem: data,
-            }).getHtml();
+    const renderJSONData = (path) => {
+        // pathsArray.map();
+        getJSON(path)
+            .then((data) => {
+                html += new GenreBest({
+                    genre: "로맨스",
+                    genreItem: data,
+                }).getHtml();
 
-            render(html);
-        })
-        .catch(render(html));
+                render(html);
+            })
+            .catch(render(html));
+    };
+
+    renderJSONData("genre/romanceTop");
 
     renderCarousel(datas.carouselImgs["홈"]);
 };
