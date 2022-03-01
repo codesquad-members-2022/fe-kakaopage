@@ -17,6 +17,7 @@ export default function Carousel(carouselsArr) {
     $carouselContentsWrapper,
     carouselsArr
   );
+  console.log(moveEventHandler);
   // carousel을 움직이게하는 버튼 렌더링
   const $buttonCatainer = moveEventHandler.renderButtons();
   $carouselLayout.append($buttonCatainer);

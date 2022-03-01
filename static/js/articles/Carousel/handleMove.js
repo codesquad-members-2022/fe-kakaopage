@@ -4,7 +4,8 @@ export function handleMove(layout, wrapper, array) {
   let idx = 0;
   let carouselsArrLength = array.length;
 
-  function moveCarousel() {
+  function moveCarousel(type) {
+    type === 'next' ? slideToNext() : slideToPrev();
     $carouselContentsWrapper.style.transition = 'all 0.5s ease-in-out';
     $carouselContentsWrapper.style.transform = `translateX(-${idx * 720}px)`;
     renderCarouselIndex();
@@ -31,7 +32,7 @@ export function handleMove(layout, wrapper, array) {
   }
   return {
     renderCarouselIndex,
-    renderButtons: () => {
+    renderButtons() {
       const $buttonCatainer = document.createElement('div');
       $buttonCatainer.classList.add('c-carousel__buttons');
       $buttonCatainer.innerHTML = `
@@ -45,20 +46,15 @@ export function handleMove(layout, wrapper, array) {
         const $targetBtn = event.target.closest('button');
         if ($targetBtn && $targetBtn.matches('[data-move]')) {
           const moveType = $targetBtn.dataset.move;
-          if (moveType == 'next') {
-            slideToNext();
-          } else {
-            slideToPrev();
-          }
-          moveCarousel();
+          moveCarousel(moveType);
         }
       });
       return $buttonCatainer;
     },
-    initMove: function () {
+    initMove() {
       setInterval(() => {
-        slideToNext();
-        moveCarousel();
+        const moveType = 'next';
+        moveCarousel(moveType);
       }, 3000);
     },
   };

@@ -1,23 +1,11 @@
 # fe-kakaopage
 
-# pr 피드백 수정사항
-
-- [ ] lazy import 활용과 장점, network탭 확인
-- [ ] 반환 값에 따른 함수이름 db/novelDB.js -> getNovelData
-- [ ] static/js/articles/Carousel/handleMove.js: 아래 initMove는 화살표함수가 아니고.
-
-```js
-renderButtons()  {
-},
-initMov() {
-}
-```
-
-- 중첩된 코드의 표현을 콜백함수를 분리하기
+- 중첩된 코드의 표현이 많다면 콜백함수를 분리하세요.
 - 모든 DOM NODE를 JS로 다 동적으로 추가할 필요는 없고, 껍데기와 기본틀은 HTML을 미리 구성해두는 것도 좋아요. 그리고 변경이 되는 부분만 DOM조작을 하는 것으로.
 
 # 이론정리계획
 
+- [ ] 클로저에서 반환하는 타입 및 클로저 개념 공부
 - [x] 돔 렌더링 과정-간략히
 - [ ] Dynamic import
 - [ ] json으로 변환 및 json을 변환 하는 함수들
@@ -45,7 +33,9 @@ initMov() {
 
 # 고민거리
 
-### 1. api요청 이해 및 고민
+### 1. closure 반환 함수
+
+### 2. api요청 이해 및 고민
 
 ssr, scr차이와 배포이후에 프론트와 백앤드가 어떻게 통신하는지 이해하고 적용해봄
 페이지를 라우팅하는 url과 데이터를 요청하는 api를 어떻게 구분할까 고민. 예를 들어, 프로젝트에서는 server.js에서 static폴더에 있는 정적인 리소스들을 아래와 같은 방식으로 관리하고 있음. 그런데 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링도록 설정.
@@ -102,4 +92,4 @@ app.get('/user', (req, res) => {
 
 `이후`
 
-### 2. 탬플릿엔진 활용 여부
+### 3. 탬플릿엔진 활용 여부
