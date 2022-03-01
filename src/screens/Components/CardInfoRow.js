@@ -1,4 +1,5 @@
-import { createExtendsRelation, formatUserCount } from "../../utils.js";
+import { createExtendsRelation } from "../../utils.js";
+import { formatUserCount } from "../../serviceUtils.js";
 import Component from "../Component.js";
 
 function CardInfoRow(target, state) {

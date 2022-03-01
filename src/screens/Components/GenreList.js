@@ -1,4 +1,5 @@
-import { createExtendsRelation, updateNodeClasses } from "../../utils.js";
+import { createExtendsRelation } from "../../utils.js";
+import { updateNodeClasses } from "../../serviceUtils.js";
 import Component from "../Component.js";
 import categories from "../../categories.js";
 

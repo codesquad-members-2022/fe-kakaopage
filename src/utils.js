@@ -5,24 +5,6 @@ const createExtendsRelation = (Child, Parent) => {
   Child.prototype.constructor = Child;
 };
 
-const updateNodeClasses = (target, className) => {
-  [...target.parentNode.children].forEach((node) => {
-    node.classList.remove(className);
-  });
-  target.classList.add(className);
-};
-
-const getComponentsTemplate = (components) => {
-  return components?.reduce((tags, component) => {
-    tags += component.template();
-    return tags;
-  }, "");
-};
-
-const formatUserCount = (userCount) => {
-  return (userCount / 10000).toFixed(1) + "만명";
-};
-
 const getJson = async (dataName) => {
   try {
     const response = await fetch(
@@ -41,7 +23,6 @@ const getJsons = (paths) => {
 export {
   updateNodeClasses,
   getJson,
-  formatUserCount,
   createExtendsRelation,
   getJsons,
   getComponentsTemplate,

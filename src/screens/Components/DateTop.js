@@ -1,5 +1,6 @@
 import CardInfoRow from "./CardInfoRow.js";
-import { createExtendsRelation, getComponentsTemplate } from "../../utils.js";
+import { createExtendsRelation } from "../../utils.js";
+import { getComponentsTemplate } from "../../serviceUtils.js";
 import Component from "../Component.js";
 
 function DateTop(target, state) {

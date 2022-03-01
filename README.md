@@ -10,9 +10,17 @@
   - 개발 환경에서는 localhost 에서 쓰는 백엔드서버를 사용
   - Github pages 에 Deploy 하는 환경에서는 Heroku 에 올린 백엔드서버를 사용
 - [x] Webpack+babel 로 build 된 폴더에 있는 html로 데모링크를 띄우는 방법을 알아보자.
+
   - <a href="https://www.npmjs.com/package/gh-pages">gh-pages</a> 사용
-- [ ] 캐러셀 구현 ....
-  - carousel branch 파서 구현?
+
+- 3주차
+
+- [x] 지난주에 하던 캐러셀 구현 ....
+  - carousel branch 파서 구현? - O
+  - 일단 슬라이더는 구현했음, 클릭이벤트를 달아보자.
+- [ ] fe-kakaopage-back api 만들기?
+  - kakao page 는 탭을 눌렀을 때 query 로 category id 를 지정하여 데이터를 가져옴
+  - 네트워크 탭에서 특정 탭을 눌렀을 때 나오는 데이터구조를 다 긁어서 해당 정보들마다 api 를 만들어볼까.
 
 ### 🥲 아쉬웠던 || 어려웠던 점?
 

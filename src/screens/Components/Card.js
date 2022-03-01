@@ -1,4 +1,4 @@
-import { formatUserCount } from "../../utils.js";
+import { formatUserCount } from "../../serviceUtils.js";
 import { createExtendsRelation } from "../../utils.js";
 import Component from "../Component.js";
 

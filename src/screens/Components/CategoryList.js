@@ -1,10 +1,9 @@
 import Component from "../Component.js";
+import { createExtendsRelation } from "../../utils.js";
 import {
-  createExtendsRelation,
   getComponentsTemplate,
   updateNodeClasses,
-} from "../../utils.js";
-
+} from "../../serviceUtils.js";
 function CategoryList(target) {
   Component.call(this, target);
   this.render();
