@@ -6,24 +6,12 @@ import {
   ELEMENT_CLASS,
   ELEMENT_ID,
   MAIN_CHILD_NODE,
-  NODE_SERVER,
 } from './constants/variable.js';
+import { getUidContent } from './api/getUidContent.js';
 
 const { NOT_FOUND } = ERROR;
 const { MAIN_LAYOUT } = ELEMENT_ID;
 const { MAIN_LAYOUT_CHILDREN } = ELEMENT_CLASS;
-
-// 렌더링하기 전 cateogoryUid에 해당하는 데이터를 서버에서 받아오기
-async function preRender(uIdObj) {
-  const data = await fetch(NODE_SERVER, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(uIdObj),
-  }).then((response) => response.json());
-  return data;
-}
 
 export async function render() {
   const $mainLayout = $get(MAIN_LAYOUT);
@@ -32,7 +20,7 @@ export async function render() {
     const { categoryUid, subCategoryUid } = getParams();
 
     // 서버에서 데이터 가져오기
-    const { content, isSuccess, msg } = await preRender({
+    const { content, isSuccess, msg } = await getUidContent({
       categoryUid,
       subCategoryUid,
     });

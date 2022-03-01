@@ -22,4 +22,4 @@ export const MAIN_CHILD_NODE = [
   { CLASS: 'c-webtoons', ID: 'main-content' },
 ];
 
-export const NODE_SERVER = 'http://localhost:4000/';
+export const NODE_SERVER = 'http://localhost:4000/api';

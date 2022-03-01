@@ -28,7 +28,7 @@
 - [ ] promise, then, async/await 동작 과정 이해
 - [ ] node js의 동작과정
 
-# 고민거리
+# 고민거리 (그룹리뷰용 정리)
 
 ### 1. closure 이해 및 closure의 반환 값들
 
@@ -87,7 +87,34 @@ app.get('/user', (req, res) => {
 
 `이전`
 
+```bash
+fe-kakaopage
+├── static
+│   ├── css
+│   │   └── style.css
+│   ├── js
+│   │   └── init.js
+│   └── index.html
+├── db
+│   └── store.js
+└── server.js
+```
+
 `이후`
+
+```bash
+fe-kakaopage
+├── front
+│   ├── css
+│   │   └── style.css
+│   ├── js
+│   │   └── init.js
+│   └── index.html
+└── server
+    ├── db
+    │   └── store.js
+    └── server.js
+```
 
 ### 렌더링 방식 변경
 

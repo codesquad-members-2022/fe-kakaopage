@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mockDB = require('./db/store.js');
 const cors = require('cors');
+const routes = require('./routes.js');
 
 const PORT = process.env.PORT || 4000;
 const app = express();
@@ -12,11 +13,11 @@ db.initDB();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const corsOption = {
-  origin: 'http://localhost:8080/',
-  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
-  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
-};
+// const corsOption = {
+//   origin: 'http://localhost:8080/',
+//   credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
+//   optionsSuccessStatus: 200, // 응답 상태 200으로 설정
+// };
 
 app.use(cors());
 
@@ -27,11 +28,13 @@ app.use(cors());
 //   next();
 // });
 
-app.post('/', async (req, res, next) => {
-  const { categoryUid, subCategoryUid } = req.body;
+app.get('/api', async (req, res) => {
+  const { categoryUid, subCategoryUid } = req.query;
+  const mainUid = Number(categoryUid);
+  const subUid = Number(subCategoryUid);
   const resultObj = {};
   try {
-    const content = await db.findData(categoryUid, subCategoryUid);
+    const content = await db.findData(mainUid, subUid);
     resultObj.content = content;
     resultObj.isSuccess = true;
     resultObj.msg = '성공!';
@@ -43,6 +46,7 @@ app.post('/', async (req, res, next) => {
 });
 
 app.get('/', (req, res) => {
+  console.log(req.url);
   res.send('프론트와 분리된 서버입니다.');
 });
 
