@@ -40,8 +40,7 @@ const banners = [
 ]
 // 수정할필요가 없고, 재사용할 필요가 없는 부분.
 function renderBanner(url, tittle, subText) {
-    return `
-    <div class ="aside__banner-slide">
+    return `<div class ="aside__banner-slide">
         <img src="${url}" alt="image">
         <div class="aside__banner-tittle-wrapper">
         <br>
@@ -61,14 +60,11 @@ function renderBanners(bannerLists) {
     const banners = bannerLists.reduce((acc, bannerList) => {
         return acc + renderBanner(bannerList.url, bannerList.tittle, bannerList.text)
     }, '');
-    return `    
-    <aside class="aside__banner">
+    return `<aside class="aside__banner">
         <i class="fas fa-chevron-circle-left" id="banner-left-icon"></i>
         <i class="fas fa-chevron-circle-right" id="banner-right-icon"></i>
             <div class="aside__banner-slider">
-                <div class="aside__banner-slide-list">
-                    ${banners}
-                </div>
+                <div class="aside__banner-slide-list">${banners}</div>
             </div>
     </aside>`;
 }
