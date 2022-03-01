@@ -1,7 +1,7 @@
 import { addCarouselEvent } from "../../event/carousel/carouselEvent.js";
 import { addLnbEvent } from "../../event/tab/gnbEvent.mjs";
 import { addDailyTabEvent } from "../../event/tab/tabEvent.mjs";
-import { carouselData, dailySerData, homeData } from "../../newData.js";
+import { carouselData, dailySerData } from "../../newData.js";
 import { renderByApplication } from "../main/app.mjs";
 import { renderMainCarousel } from "../main/carousel.mjs";
 import { renderTopItems } from "../main/top.mjs";

@@ -1,4 +1,3 @@
-import { homeData } from "../../newData.js";
 import { weekMap } from "../../util/util.mjs";
 
 const addDailyTabEvent = (info) => {
