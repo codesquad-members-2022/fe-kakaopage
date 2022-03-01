@@ -1,7 +1,7 @@
 
 
 // export const headerBar = (target)=>{
-import {Component} from "../Core/Component.js";
+import Component from "../Core/Component.js";
 
 export const HeaderBar = class extends Component{
     template(){

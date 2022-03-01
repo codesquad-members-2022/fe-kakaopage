@@ -1,4 +1,3 @@
-import {myFetch} from "../utils.js";
 
 let currentObserver;
 export const observe = fn => {
@@ -43,11 +42,7 @@ export const observable = obj => {
         return new Proxy(obj, handler);
 }
 
-const state = observable(await myFetch('comics'));
-observe(()=>{console.log(`현재 값:${state['mon']}`)})
-observe(()=>{console.log(`현재 값:${state['tue']}`)})
-state['mon'] = 50;
-state['tue'] = 100;
+
 
 
 

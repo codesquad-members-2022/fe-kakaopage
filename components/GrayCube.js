@@ -1,5 +1,5 @@
 // export const GrayCube = ( target, position)=> {
-import {Component} from "../Core/Component";
+import Component from "../Core/Component.js";
 
 export const GrayCube = class extends Component{
     template (){
@@ -30,6 +30,7 @@ export const GrayCube = class extends Component{
         </div>`
     }
     render(){
-        this.$target.insertAdjacentHTML(position, this.template());
+        this.$target.insertAdjacentHTML('afterend', this.template());
+        this.mounted();
     }
 }

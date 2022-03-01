@@ -1,10 +1,15 @@
-
+import { createRequire } from "module"; // Bring in the ability to create the 'require' method
+const require = createRequire(import.meta.url);
 import ejs from 'ejs';
 import  express from 'express';
 import cors from 'cors';
 import * as path from "path";
 import logger from 'morgan';
 import { fileURLToPath } from 'url';
+const comics = require("./static/data/comics.json");
+const images = require("./static/data/images.json");
+const infographic = require("./static/data/infographic.json");
+const menuicons = require("./static/data/menuIcons.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -19,8 +24,16 @@ app.engine('html', ejs.renderFile);
 
 const PORT = 3000;
 
-app.get('/', (req,res)=>{
-    res.render('doc.html');
+app.get('/comics', (req,res)=>{
+    res.json(comics);
 })
-
+app.get('/images', (req,res)=>{
+    res.json(images);
+})
+app.get('/infographic', (req,res)=>{
+    res.json(infographic);
+})
+app.get('/menuicons', (req,res)=>{
+    res.json(menuicons);
+})
 app.listen(PORT, ()=>console.log(`listening to http://localhost:${PORT}`));

@@ -40,6 +40,7 @@ div.ifYouWait>span:last-child{
 }
 .weekdays>.selected{
     border-bottom: 2px solid #ffd200;
+    color:#333333
 }
 .weekdays>.selected>div{
     color:#333333;

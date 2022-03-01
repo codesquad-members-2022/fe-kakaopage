@@ -1,11 +1,13 @@
 // export const comicItem = (comic,target, infographic) => {
-import {Component} from "../Core/Component.js";
+import Component from "../Core/Component.js";
+import {store} from "../Core/Store.js";
 
 export const ComicItem = class extends Component {
 
     template() {
-        const {comics, infographic, images} = store;
-        const {rating, image, title, author, totalView, additional: {adult, rest, up}} = comics;
+        const { infographic, images} = store.state;
+        const { image, title, author, totalView, additional: {adult}} = this.$props;
+
         return `
     <a class="wrapper">
         <div class="thumbnail">
@@ -29,6 +31,7 @@ export const ComicItem = class extends Component {
     }
 
     render() {
-        this.$target.insertAdjacentHTML('afterbegin', template);
+        this.$target.insertAdjacentHTML('afterbegin', this.template());
+        this.mounted();
     }
 }

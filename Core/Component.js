@@ -1,7 +1,7 @@
 import {observable, observe} from "./observer.js";
-import {myFetch} from "../utils.js";
 
-export class Component{
+
+export default class Component{
     $target;
     $state;
     $props;
@@ -9,27 +9,23 @@ export class Component{
         this.$target = target;
         this.$props = props;
         this.setup();
+
+        this.render();
+        this.setEvent();
     }
     setup(){
-        this.$state = observable(this.initState())
-        observe(()=>{
-            this.render();
-            this.setEvent();
-            this.mounted();
-        })
     }
-    async initState(){
 
-    }
     mounted(){}
     render(){
         this.$target.innerHTML =this.template();
+        this.mounted();
     }
     template(){
         return ``;
     }
     setEvent(){}
-    setState(newState){this.$state = {...this.$state, ...newState};}
+    setState(newState){this.$state = {...this.$state, ...newState}; this.render();}
     addEvent = ( eventType, selector, callback) => {
         const children = [...this.$target.querySelectorAll(selector)]
         const ok = (eventTarget) => children.includes(eventTarget) || eventTarget.closest(selector)
@@ -38,6 +34,6 @@ export class Component{
             callback(event);
         })
     }
-    select = ( selector)=>this.$target.querySelector(selector);
-    selectAll = ( selector)=>this.$target.querySelectorAll(selector);
+    select( selector){return this.$target.querySelector(selector);}
+    selectAll( selector){return this.$target.querySelectorAll(selector);}
 }

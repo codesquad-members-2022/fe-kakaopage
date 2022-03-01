@@ -1,16 +1,18 @@
 import {randomGen} from "../utils.js";
 import {carouselSlider} from "./carousel.js";
-import {Component} from "../Core/Component";
+import Component from "../Core/Component.js";
+import {store} from "../Core/Store.js";
 
 
 // export const BannerBox = (target,images, infographic )=>{
-export const BannerBox = class extends Component{
-    async initState(){
-        return {idx: 1};
+export class BannerBox extends Component{
+    setup(){
+        this.$state =  {idx: 1};
     }
 
     template() {
-        const {infographic, images} = store;
+        const {infographic, images} = store.state;
+        console.log('hi');
         return `<div class="carousel">
             ${images.banner.map((image, idx) => `
             <div class="slide">

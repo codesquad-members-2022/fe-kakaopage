@@ -13,10 +13,11 @@
     padding:  21px 0;
     width:100%;
     cursor:pointer;
-    transition: background-color 0.1s linear;
+    transition: all 0.5s linear;
 }
 .dailyHeader>.selected{
     background:url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b11…) 50% 50% / 44px no-repeat rgb(255, 255, 255);
+    color: #333333;
 }
 .dailyCategory{
     padding: 0 5px;

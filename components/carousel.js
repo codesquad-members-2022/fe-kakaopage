@@ -1,28 +1,28 @@
-import {select, selectAll} from "../utils.js";
+
 const INTERVAL = 3000;
 
-export const carouselSlider= (  target ) =>{
-    let idx = 1
+export const carouselSlider= (  target, idx ) =>{
+
     let timeoutId;
-    const box = select(target, '.BannerBox');
-    const carousel = select(target, '.carousel');
-    const nextBtn = select(target, '.nextBtn');
-    const prevBtn = select(target, '.prevBtn');
-    const page = select(target, '.page');
+    const box = target.querySelector( '.BannerBox');
+    const carousel = target.querySelector( '.carousel');
+    const nextBtn = target.querySelector( '.nextBtn');
+    const prevBtn = target.querySelector( '.prevBtn');
+    const page = target.querySelector( '.page');
     const firstClone = carousel.firstElementChild.cloneNode(true);
     const lastClone = carousel.lastElementChild.cloneNode(true);
     firstClone.id = 'first-clone';
     lastClone.id = 'last-clone '
     carousel.append(firstClone);
     carousel.prepend(lastClone)
-    let slides = [...selectAll(target, '.slide')];
-    const slideWidth = slides[idx].clientWidth;
-    carousel.style.transform = `translateX(${-slideWidth * idx}px)`;
+    let slides = [...target.querySelectorAll('.slide')];
+    const slideWidth = slides[idx].offsetWidth;
+    carousel.style.transform = `translateX(${-720 * idx}px)`;
     let start = false
     const move = (direction) => {
         direction==='next'?idx++:idx--;
         start = true;
-        carousel.style.transform = `translateX(${-slideWidth * idx}px)`;
+        carousel.style.transform = `translateX(${-720 * idx}px)`;
         carousel.style.transition = 'transform 0.7s';
         page.innerText = `${idx-1} / ${slides.length-2}`
         requestAnimationFrame(startSlide)
