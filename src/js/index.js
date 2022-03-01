@@ -1,15 +1,13 @@
-import { renderTodayToons, moveDailySectionTab, renderGenreSections } from './grid.js';
-import { toggleCompanyInfo } from './footer.js';
+import { initDailySection, initGenreSections, initFooter } from './sections/index.js';
 
 const init = () => {
-  renderTodayToons();
-  renderGenreSections();
+  initDailySection();
+  initGenreSections();
+  initFooter();
 }
 
 const app = () => {
   init();
-  moveDailySectionTab();
-  toggleCompanyInfo();
 }
 
 app();

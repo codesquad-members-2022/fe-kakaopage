@@ -9,7 +9,7 @@ const GRID = {
   },
 };
 
-export const gridItem = toon => {
+const gridItem = toon => {
   const { title, img, score, reader } = toon;
 
   return `
@@ -51,3 +51,5 @@ const infoBadge = toon => {
 
   return result;
 };
+
+export { gridItem };

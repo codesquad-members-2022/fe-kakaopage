@@ -1,1 +1,1 @@
-export { $, $$, getElementByAttrSelector, getElementsByAttrSelector } from './dom.js';
+export { $, $$, getElementByAttrSelector, getElementsByAttrSelector } from './modules/dom.js';

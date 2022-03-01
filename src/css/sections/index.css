@@ -1,5 +1,5 @@
-@import url(/fe-kakaopage/src/css/sections/footer.css);
-@import url(/fe-kakaopage/src/css/sections/header.css);
-@import url(/fe-kakaopage/src/css/sections/banner.css);
-@import url(/fe-kakaopage/src/css/sections/notice.css);
-@import url(/fe-kakaopage/src/css/sections/content.css);
+@import url(/fe-kakaopage/src/css/sections/modules/footer.css);
+@import url(/fe-kakaopage/src/css/sections/modules/header.css);
+@import url(/fe-kakaopage/src/css/sections/modules/banner.css);
+@import url(/fe-kakaopage/src/css/sections/modules/notice.css);
+@import url(/fe-kakaopage/src/css/sections/modules/content.css);
