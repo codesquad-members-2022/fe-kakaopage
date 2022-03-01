@@ -20,10 +20,4 @@ const getJsons = (paths) => {
   return Promise.all(paths.map((path) => getJson(path)));
 };
 
-export {
-  updateNodeClasses,
-  getJson,
-  createExtendsRelation,
-  getJsons,
-  getComponentsTemplate,
-};
+export { getJson, createExtendsRelation, getJsons };
