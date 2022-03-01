@@ -1,12 +1,3 @@
-// 일회성 json data 받기
-let data;
-const DATA_URL = "data/data.json";
-
-await (async function getJson() {
-  const res = await fetch(DATA_URL);
-  data = await res.json();
-})();
-
 export const $ = (selector, base = document) => base.querySelector(selector);
 
 export const $$ = (selector, base = document) =>
@@ -43,5 +34,3 @@ export const getToday = () => {
   if (!day) day = 7;
   return day;
 };
-
-export { data };
