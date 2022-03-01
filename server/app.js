@@ -1,11 +1,16 @@
 const express = require('express');
-const server = express();
-const port = 3000;
+const cors = require('cors');
+const indexRouter = require('./routes/index');
 
-server.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+const server = express();
+
+const port = 3000;
 
 server.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+server.use(cors());
+server.use('/', indexRouter);
+
+module.exports = server;
