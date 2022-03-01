@@ -1,0 +1,495 @@
+[
+  {
+    "title": "이번 생은 가주가 되겠습니다",
+    "writer": {
+      "writing": "앤트스튜디오",
+      "drawing": "몬, 앤트스튜디오",
+      "original": "김로아"
+    },
+    "readers": 1226000,
+    "genre": "로판",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["월"],
+    "shortDesc": "'…한번 해 보자. 내가 가주가 되는 거야.'",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=eVtdO/hzmU2tEBKW/VuaxFpaYkAsyGg2tUoNJKk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2"
+  },
+  {
+    "title": "도굴왕",
+    "writer": {
+      "writing": "윤쓰(REDICE STUDIO)",
+      "drawing": "쓰리비투에스",
+      "original": "산지직송"
+    },
+    "readers": 2009000,
+    "genre": "소년",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["화", "금"],
+    "shortDesc": "다시 살아난 도굴꾼, 그가 세상 모든 무덤을 접수하기 시작한다!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=NFDyw/hzb7v7UXak/sIRlf04F2kfYD9FnlKPry0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2"
+  },
+  {
+    "title": "일곱번째 배심원",
+    "writer": {
+      "writing": "김펄럭, 용두식",
+      "drawing": "박스",
+      "original": "윤홍기"
+    },
+    "readers": 48000,
+    "genre": "드라마",
+    "waitFree": false,
+    "ageLimit": "All",
+    "serialDate": ["금"],
+    "shortDesc": "진실을 밝히는 자는 누구일까.",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=hGe7Y/hzhOfqLZDd/bHk6x6gExcRjQ46IjwnHe0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=FOBEL/hzb7vUhAb3/hQslarKDqwlOtk4FBKDKJ0&filename=th2"
+  },
+  {
+    "title": "녹지 않는 말",
+    "writer": {
+      "writing": "미치",
+      "drawing": "녹차"
+    },
+    "readers": 48000,
+    "genre": "로맨스",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["완결"],
+    "shortDesc": "서로 대비되는 두 인종의 사랑을 그린 세기말 로맨스",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=moUv2/hywgCzbRae/Y9GC1XOQltqTnOYOHd6lQ0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=buGo1k/hyATxtXdgC/d1XPK9F7cT1P7yWA5yNEAK&filename=th2"
+  },
+  {
+    "title": "화산전생",
+    "writer": {
+      "writing": "토마씨",
+      "drawing": "정준"
+    },
+    "readers": 1832000,
+    "genre": "액션무협",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["토"],
+    "shortDesc": "영웅을 동경했던 한 사내의 악전고투기",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=Bhw9l/hzhOj1XUfE/zN2Zb5ipGewccBpvp63KY0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bmxLRK/hzp2mI0hMJ/NSDWKWoCxLz0qDRXFDrdR0&filename=th2"
+  },
+  {
+    "title": "관계의 고리",
+    "writer": {
+      "writing": "WHAT",
+      "drawing": "첼리아케"
+    },
+    "readers": 63000,
+    "genre": "BL",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["수"],
+    "shortDesc": "운명의 상대와 연결된 붉은 띠-링.",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=cc2EoA/hzhOk0nfIg/VEKK2jyoGoWk6DBkqWRFH1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=WKyz9/hzhOe60YLf/FeyNU55oWxHnFLOuQtvYN1&filename=th2"
+  },
+  {
+    "title": "8클래스 마법사의 회귀",
+    "writer": {
+      "writing": "테스",
+      "drawing": "류송"
+    },
+    "readers": 815000,
+    "genre": "소년",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["월"],
+    "shortDesc": "'내가 원했던 참회란, 모든 것을 되돌려놓는 것.'",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=imfCM/hzmU0W1V6o/0q5JUn4tQIXrhPV98ng4n0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bhe9o7/hzmU3zpvL3/DWRcsmPxJAlrjDw7MkGWwK&filename=th2"
+  },
+  {
+    "title": "화타가 된 외과 의사",
+    "writer": {
+      "writing": "샤이멜",
+      "drawing": "최병익",
+      "original": "박동신"
+    },
+    "readers": 273000,
+    "genre": "액션무협",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["화"],
+    "shortDesc": "'<삼국지연의>속 세상에 떨어진 젊은 외과의사가 펼치는 기상천외한 모험이 시작된다!'",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=SKYCW/hzp2fwcBFb/dWOf9IIkKZtdQxlLTlwYwk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=dwMIuC/hzhOgD8UFe/J6wGhV1I0sWJ4jwJvUYun1&filename=th2"
+  },
+  {
+    "title": "궁귀검신",
+    "writer": {
+      "drawing": "박광진",
+      "original": "조돈형"
+    },
+    "readers": 514000,
+    "genre": "액션무협",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["화", "목"],
+    "shortDesc": "조돈형 작가의 궁귀검신, 만화로 다시 태어나다!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=SoAFN/hzhOfxGZey/JLhutZaQcqWDkVzM6lXh1K&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=biG4Nt/hzb7sXLBzm/Spy2JkLBLu3zUwNl9TaznK&filename=th2"
+  },
+  {
+    "title": "흑막을 버리는 데 실패했다",
+    "writer": {
+      "writing": "ASSAM",
+      "drawing": "쑹늉",
+      "original": "자은향"
+    },
+    "readers": 305000,
+    "genre": "로판",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["수"],
+    "shortDesc": "'자, 이제 너만 남았네. 주인님.'",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=CHb7E/hzmU2NVBFU/3xX6JB8B7kKFohHzH9LJtk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=liDhp/hzp2mPH4pp/avQh3sIi2DG85rCRUegvG0&filename=th2"
+  },
+  {
+    "title": "나 혼자 만렙 귀환자",
+    "writer": {
+      "writing": "이지득",
+      "drawing": "Vertwo",
+      "original": "허니"
+    },
+    "readers": 739000,
+    "genre": "소년",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["수", "일"],
+    "shortDesc": "나 혼자 만렙, 나 혼자 풀템, 나 혼자 사이다!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=Mh0rc/hyF29uyFZ6/Utv5xiKRPvbWywQR9pXtkK&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=jyLnj/hyF26Lplu3/bApeOvk1VyhmRxkZ3whLK0&filename=th2"
+  },
+  {
+    "title": "귀환자의 마법은 특별해야 합니다",
+    "writer": {
+      "writing": "욱작가",
+      "drawing": "욱작가",
+      "original": "유소난"
+    },
+    "readers": 1432000,
+    "genre": "소년",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["일"],
+    "shortDesc": "과거를 바꾸고, 강한 동료를 모아 세상을 구원하라!",
+    "rating": "9.9",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=Mh0rc/hyF29uyFZ6/Utv5xiKRPvbWywQR9pXtkK&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=mxZBP/hzp2k5oxdi/qVgbJYigkWwE8Iktz6pOJk&filename=th2"
+  },
+  {
+    "title": "이그레트",
+    "writer": {
+      "drawing": "진심",
+      "original": "공든탑"
+    },
+    "readers": 588000,
+    "genre": "드라마",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["토"],
+    "shortDesc": "'이제는 포기하고 싶지 않구나, 사람들과 함께 살아가는 것을.'",
+    "rating": "9.9",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=kyo1R/hy41P6cLNV/ySEesUFK682jiKRxaCWxok&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=eeTTkb/hy41PFmNeV/F2COeaw4rI1P2yRnbH2dVk&filename=th2"
+  },
+  {
+    "title": "화홍",
+    "writer": {
+      "writing": "서윤영",
+      "drawing": "서윤영",
+      "original": "이지환"
+    },
+    "readers": 1141000,
+    "genre": "소년",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["금"],
+    "shortDesc": "두 지존마마, 과연 귀한 사랑의 결실을 이룰 수 있을 것인가?",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=ppll5/hy41PyfG8f/Z7WVcaM20ZaukRwXqVGk01&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=rXsr4/hy41LCCbZh/fBVAe3YWcZVU3fOL0tJxPk&filename=th2"
+  },
+  {
+    "title": "악녀 카루나가 작아졌어요",
+    "writer": {
+      "drawing": "덕배",
+      "original": "문이경"
+    },
+    "readers": 449000,
+    "genre": "로판",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["목"],
+    "shortDesc": "난데없이 나타난 늑대가 카루나에게 반려자라며 다가오게 되는데...",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=c3UUSU/hzhOn3p3QG/74FTGzobbtcdATfhSgbjbk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=h8HrT/hzhOkey5Fr/Equw2PcxuzbKFw84qDHCoK&filename=th2"
+  },
+  {
+    "title": "태양의 주인",
+    "writer": {
+      "writing": "동그라미, KONN",
+      "drawing": "송이",
+      "original": "솔땀"
+    },
+    "readers": 616000,
+    "genre": "로맨스",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["수"],
+    "shortDesc": "치유력을 갖지 못한 시요족 바얀과 신의 형벌을 받은 단의 운명적 사랑 이야기",
+    "rating": "9.9",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=c0IjY/hzb7v64IBo/w3zSAvBNuNGpUagoI1BdG1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2"
+  },
+  {
+    "title": "신들의 연애사정",
+    "writer": {
+      "writing": "유수",
+      "drawing": "정아로, 김룸",
+      "original": "민"
+    },
+    "readers": 242000,
+    "genre": "로맨스",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["수"],
+    "shortDesc": "지금, 신과 인간의 금기된 사랑이 펼쳐진다.",
+    "rating": "9.8",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=GyH1F/hzhOnpIHsD/O6aaVm1WKGPvBJgKyXAbJ0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=cHRr3A/hzhOi9MQcq/j2rmD3NgCbMChyT3E6qDxK&filename=th2"
+  },
+  {
+    "title": "사내 맞선",
+    "writer": {
+      "writing": "들깨",
+      "drawing": "NARAK",
+      "original": "해화"
+    },
+    "readers": 2024000,
+    "genre": "로맨스",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["월"],
+    "shortDesc": "스릴 가득(?) 오피스 로맨스",
+    "rating": "9.8",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=cHRr3A/hzhOi9MQcq/j2rmD3NgCbMChyT3E6qDxK&filename=th2",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2"
+  },
+  {
+    "title": "나는 이 집 아이",
+    "writer": {
+      "drawing": "코튼",
+      "original": "시야"
+    },
+    "readers": 2121000,
+    "genre": "로판",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["월"],
+    "shortDesc": "이제 난 어떻게 되는 걸까? 내가 정말 이 집 아이일까?",
+    "rating": "9.8",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=bYGB6O/hy41N8vZ2V/X92uwkKeMxAPKar3MYfxB1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2"
+  },
+  {
+    "title": "뒤끝작렬",
+    "writer": {
+      "drawing": "조석호",
+      "original": "안정혁"
+    },
+    "readers": 580000,
+    "genre": "드라마",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["월", "일"],
+    "shortDesc": "이제 두 마리 토끼를 잡으러 간다. 꼭 두 마리 토끼여야 했다.",
+    "rating": "9.8",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=B4mOE/hzhOhhWg1W/MeesVKdFSmLgZLMFAskmjk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bNhW1e/hzb7AOZqwu/Nvdfc6TfhUnn9CBNuUijq1&filename=th2"
+  },
+  {
+    "title": "악녀를 죽여 줘",
+    "writer": {
+      "drawing": "해기",
+      "original": "사월생"
+    },
+    "readers": 694000,
+    "genre": "로판",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["화"],
+    "shortDesc": "운명을 거부하는 악녀 에리스의 이세계 탈출기!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=buBOcu/hzp2dL2WWg/FZBpokwkEAbr6cSRytg6k1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=duehr/hzp2nAV7j9/tGDMKb1kRIdnO6D50v8E0K&filename=th2"
+  },
+  {
+    "title": "별과 별 사이",
+    "writer": {
+      "writing": "스리",
+      "drawing": "스리"
+    },
+    "readers": 79000,
+    "genre": "BL",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["화"],
+    "shortDesc": "그럼 우리 형은 왜 밀었던 거야?",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=ucypg/hzb7z2GJyO/SSoKxoXqmpKvw9mOXfzBo1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=b7jGx3/hzb7AHxWO1/3IpnHmGTR6iexnGs6tD8u0&filename=th2"
+  },
+  {
+    "title": "니니툰즈",
+    "writer": {
+      "writing": "니니즈",
+      "drawing": "스리"
+    },
+    "readers": 781000,
+    "genre": "드라마",
+    "waitFree": false,
+    "ageLimit": "All",
+    "serialDate": ["월", "화", "수", "목", "금"],
+    "shortDesc": "까면 깔수록 매력적인 니니즈를 니니툰즈에서 만나보자!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=bhcDLH/hyQ9OGFGzt/4MUaD7JjjBO9jXFUEk3jd0&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=cP3xne/hy41JytcnI/DkGRRJG64KRAEnKsvIyy8k&filename=th2"
+  },
+  {
+    "title": "가족이 되는 방법",
+    "writer": {
+      "writing": "모주",
+      "drawing": "모주"
+    },
+    "readers": 208000,
+    "genre": "BL",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["일"],
+    "shortDesc": "몇 년의 세월이 흘러 다시 만난 두 사람",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=bTRGAM/hzb7v1e7CM/WuaZhDXyq5hX3BEifDvXZk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=drGb4/hzhOjGWQak/dE94GJ4Cle0loMEKl7nX0K&filename=th2"
+  },
+  {
+    "title": "일상다정사",
+    "writer": {
+      "writing": "김세영",
+      "drawing": "김세영"
+    },
+    "readers": 555000,
+    "genre": "BL",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["금"],
+    "shortDesc": "지는 걸 죽도록 싫어하는 두 사람이 연애로 묶였다?!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=cLKIY3/hyQ9Nuqcfz/ZAxfzjZS3cI8VoPbZ7fkUk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bcz0qM/hyQ9LJ5euk/fXXDtn8S6TOPYqypfdJ2r0&filename=th2"
+  },
+  {
+    "title": "의원, 다시 살다",
+    "writer": {
+      "drawing": "도빈",
+      "original": "태선"
+    },
+    "readers": 550000,
+    "genre": "액션무협",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["토"],
+    "shortDesc": "강호제일신의가 되는 진천희의 일대기!",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=pIvrR/hzp2iNgXef/MKvR1CB0g6qzBbXoeeEh30&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=7T2N2/hzhOlZMgRH/nhy6W54Le56tq7o9tUO4kK&filename=th2"
+  },
+  {
+    "title": "풍운객잔",
+    "writer": {
+      "writing": "주비",
+      "drawing": "미율",
+      "original": "주비"
+    },
+    "readers": 276000,
+    "genre": "액션무협",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["토"],
+    "shortDesc": "평범한 삶의 최고는 객잔 주인이라구요!",
+    "rating": "9.9",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=o8HaE/hzb7uBjwrJ/cmpb3xnCayi8fpf7GKdwa1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bRHiVe/hzb7yjlGHT/HKQADz19lQkj9Bt6YLUVJK&filename=th2"
+  },
+  {
+    "title": "내 약혼자는 꽃미남 [BL]",
+    "writer": {
+      "writing": "튼튼",
+      "drawing": "곽새"
+    },
+    "readers": 54000,
+    "genre": "BL",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["완결"],
+    "shortDesc": "이우주. 18년 차 게이 인생 꽃이 피다.",
+    "rating": "9.4",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=Rxwsz/hzp2gIBJj9/PPbtRdLZzj65U5gKPqmvj1&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=kh6am/hzhOhwllLE/KQk0V0AK4I6KdrXNdUuF9k&filename=th2"
+  },
+  {
+    "title": "김 비서가 왜 그럴까",
+    "writer": {
+      "writing": "김명미",
+      "drawing": "김명미",
+      "original": "정경윤"
+    },
+    "readers": 6305000,
+    "genre": "로맨스",
+    "waitFree": true,
+    "ageLimit": "All",
+    "serialDate": ["완결"],
+    "shortDesc": "대체 김 비서가 왜 그러지?",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=bwPNJO/hymrftXeP0/VoUKJWehublPKZhKgletTK&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=cNxQJA/hyLjctmZ3A/CJ2JvC4nxwFZ8ndqXvqXrk&filename=th2"
+  },
+  {
+    "title": "케세라세라",
+    "writer": {
+      "writing": "고나리자",
+      "drawing": "수정"
+    },
+    "readers": 241000,
+    "genre": "드라마",
+    "waitFree": true,
+    "ageLimit": "15",
+    "serialDate": ["완결"],
+    "shortDesc": "삼포세대 청춘 성장 로맨스.",
+    "rating": "10.0",
+    "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=OyklG/hyATvXmS7i/A1ck5VnBNhmDlilhZze6kk&filename=th1",
+    "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=QJDjq/hyEdf4jfeg/QfTsKp2LQXaig3FvobYaw1&filename=th2"
+  }
+]
