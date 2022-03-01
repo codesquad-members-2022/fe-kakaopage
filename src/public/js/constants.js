@@ -43,4 +43,4 @@ export const rowListTitleObj = {
   exclusive: { name: "exclusive", title: "[ORIGINAL] 믿고보는 독.점.연.재", imageSize: "large", imageStatus: "clock"}
 };
 
-export const serverURL = 'http://localhost:3000';
+export const serverURL = 'http://localhost:4000';

@@ -1,4 +1,4 @@
-const WebtoonData = [
+export const WebtoonData = [
     {
       _id: 1,
       title: "아빠가 너무 강함",
@@ -404,7 +404,7 @@ const WebtoonData = [
     },
   ];
 
-const carouselData = [
+export const carouselData = [
   {
     _id: 1,
     menu: "웹툰1",
@@ -439,5 +439,3 @@ const carouselData = [
     status: "https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f",
   }
 ]
-
-module.exports = { WebtoonData, carouselData };
