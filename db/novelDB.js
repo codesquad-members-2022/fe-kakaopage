@@ -3,7 +3,7 @@ const { ELEMENT_ID } = require('./subCategoryID');
 const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
   ELEMENT_ID;
 
-function novelData(subUid) {
+function getNovelData(subUid) {
   return {
     [`${SUB_CATEGORY}`]: subCategoryIndexArr,
     [`${CAROUSEL}`]: 'Novel',
@@ -13,7 +13,7 @@ function novelData(subUid) {
   };
 }
 
-module.exports = novelData;
+module.exports = getNovelData;
 
 const subCategoryIndexArr = [
   { key: 0, value: '홈' },

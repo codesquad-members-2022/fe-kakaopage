@@ -3,7 +3,7 @@ const { ELEMENT_ID } = require('./subCategoryID');
 const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
   ELEMENT_ID;
 
-function webtoonData(subUid) {
+function getWebtoonData(subUid) {
   const tempUid = subUid > 1 ? 0 : subUid;
   return {
     [`${SUB_CATEGORY}`]: subCategoryIndexArr,
@@ -14,7 +14,7 @@ function webtoonData(subUid) {
   };
 }
 
-module.exports = webtoonData;
+module.exports = getWebtoonData;
 
 const subCategoryIndexArr = [
   { key: 0, value: '홈' },

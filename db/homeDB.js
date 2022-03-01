@@ -2,7 +2,7 @@ const { ELEMENT_ID } = require('./subCategoryID');
 
 const { CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } = ELEMENT_ID;
 
-function homeData() {
+function getHomeData() {
   return {
     [`${CAROUSEL}`]: 'Main',
     [`${EVENT_BOX}`]: `Main`,
@@ -11,4 +11,4 @@ function homeData() {
   };
 }
 
-module.exports = homeData;
+module.exports = getHomeData;
