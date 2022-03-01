@@ -3,12 +3,14 @@ export default {
     {
       title: "사내 맞선",
       views: 2020000,
-      status: null,
+      status: "new",
+      thumbnail: `//dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2`,
     },
     {
       title: "하필이면 까마귀",
       views: 518000,
       status: null,
+      thumbnail: `//dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2`,
     },
     {
       title: "이번 생은 가주가 되겠습니다",
@@ -28,7 +30,7 @@ export default {
     {
       title: "압도적 그대",
       views: 2020000,
-      status: null,
+      status: "new",
     },
     {
       title: "나는 이 집 아이",
@@ -56,11 +58,12 @@ export default {
       title: "도굴왕",
       views: 2020000,
       status: null,
+      thumbnail: `//dn-img-page.kakao.com/download/resource?kid=cbOcrh/hzhOeyLVuz/o3mzWEkKKAuJOLWv6bYJxK&filename=th2`,
     },
     {
       title: "궁귀검신",
       views: 518000,
-      status: null,
+      status: "up",
     },
     {
       title: "악녀를 죽여 줘",
@@ -95,7 +98,7 @@ export default {
     {
       title: "빈껍데기 공작님",
       views: 272000,
-      status: "up",
+      status: "new",
     },
     {
       title: "로열 셰프 영애님",
@@ -108,11 +111,13 @@ export default {
       title: "황제의 아이를",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=cJUVJ/hzhOnDfM3R/aknNmEK5BpcFO4oDaBHkok&filename=th2",
     },
     {
       title: "인소의 법칙",
       views: 518000,
-      status: null,
+      status: "new",
     },
     {
       title: "잘못된 고백",
@@ -122,7 +127,7 @@ export default {
     {
       title: "봄의 에스프레소",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "시한부라서 흑막의 며느리가 되었는데",
@@ -147,7 +152,7 @@ export default {
     {
       title: "흑막을 버리는 계략",
       views: 272000,
-      status: "up",
+      status: "new",
     },
     {
       title: "계모인데, 딸이 너무 귀여워",
@@ -160,6 +165,8 @@ export default {
       title: "괴물 공작가의 사랑",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=iDcyV/hzp2jZQ65z/gUKbXOsGJDrsT6p7EFHueK&filename=th2",
     },
     {
       title: "대놓고 사내연애",
@@ -169,12 +176,12 @@ export default {
     {
       title: "24분의 1 로맨스",
       views: 699000,
-      status: null,
+      status: "new",
     },
     {
       title: "남편을 내 편으로",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "재앙급 영웅님",
@@ -199,12 +206,12 @@ export default {
     {
       title: "존버닥터",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "궁귀검신",
       views: 292000,
-      status: null,
+      status: "up",
     },
   ],
   FRI: [
@@ -212,6 +219,8 @@ export default {
       title: "백작가의 사생아",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=KWNVT/hzp2f362bW/NWT2ViqCrkIlWJhAlPwQp1&filename=th2",
     },
     {
       title: "남편이 미모에 반했다",
@@ -226,7 +235,7 @@ export default {
     {
       title: "화홍",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "괴물 황태자의 딸",
@@ -236,12 +245,12 @@ export default {
     {
       title: "남편님, 다시 결혼해주세요",
       views: 2020000,
-      status: null,
+      status: "up",
     },
     {
       title: "낙화유수",
       views: 518000,
-      status: null,
+      status: "new",
     },
     {
       title: "비뢰도",
@@ -251,7 +260,7 @@ export default {
     {
       title: "SSS급 죽어야 하는 이유",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "연록흔",
@@ -264,6 +273,8 @@ export default {
       title: "템빨",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=uraBC/hzhOmcyHt8/0dHjJOKDEcCiSmDsh0sWh1&filename=th2",
     },
     {
       title: "악녀는 모래시계",
@@ -278,7 +289,7 @@ export default {
     {
       title: "화산전생",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "토끼와 흑표범의 이야기",
@@ -303,7 +314,7 @@ export default {
     {
       title: "남주의 연적이니까",
       views: 272000,
-      status: "up",
+      status: "new",
     },
     {
       title: "남장 비서",
@@ -316,6 +327,8 @@ export default {
       title: "폭군에게는 악녀가",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=cyoFni/hzp2huin3i/NA0bKLM95DokrbnRvXeKy0&filename=th2",
     },
     {
       title: "뒤끝작렬",
@@ -330,7 +343,7 @@ export default {
     {
       title: "왕도",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "폭군을 길들이자",
@@ -355,12 +368,12 @@ export default {
     {
       title: "무당기협",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "갓 오브 블랙필드",
       views: 292000,
-      status: null,
+      status: "up",
     },
   ],
   FINISH: [
@@ -368,6 +381,8 @@ export default {
       title: "김 비서가 왜 그럴까",
       views: 2020000,
       status: null,
+      thumbnail:
+        "//dn-img-page.kakao.com/download/resource?kid=cNxQJA/hyLjctmZ3A/CJ2JvC4nxwFZ8ndqXvqXrk&filename=th2",
     },
     {
       title: "레이디 투 퀸",
@@ -382,7 +397,7 @@ export default {
     {
       title: "꽃을 문 짐승",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "신이라 불리운 사나이",
@@ -407,7 +422,7 @@ export default {
     {
       title: "궁에는 개꽃이 산다",
       views: 272000,
-      status: "up",
+      status: null,
     },
     {
       title: "외과의사 엘리제",
