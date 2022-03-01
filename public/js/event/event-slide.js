@@ -1,6 +1,5 @@
 import { $ } from "../utils.js";
-
-const slideWidth = $(".main-ad-banner__img").clientWidth;
+const slideWidth = $(".event-slider").clientWidth;
 const slideSpeed = 0.4;
 const sec = 1000;
 const delay = slideSpeed * sec;
@@ -102,7 +101,5 @@ const slideShow = (e) => {
   playEvent(btnEvent);
   isEnd();
 };
-
-makingClone();
 
 export { slideShow, autoPlayStart, autoPlayStop, makingClone, changeTab };
