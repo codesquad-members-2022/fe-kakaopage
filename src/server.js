@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import cors from "cors";
 import categoryRouter from "./routers/categoryRouter";
+import webtoonRouter from "./routers/webtoonRouter";
 
 const app = express();
 const PORT = 4000;
@@ -24,4 +25,5 @@ app.get('/', (req, res) => {
     });
 });
 
+app.use("/webtoon", webtoonRouter);
 app.use("/category", categoryRouter);
