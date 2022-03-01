@@ -5,4 +5,4 @@ const drama = {
   grade: "10.0",
 };
 
-export { drama as dataOfDrama };
+module.exports = drama;

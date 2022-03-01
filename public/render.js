@@ -6,16 +6,17 @@ import { createSmallBannerBlock } from "./components/banner.js";
 import { createGenreBlock } from "./components/webtoon.js";
 import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
-import { dataOfDrama } from "./data/home/drama.js";
 import { createDailyContents } from "./components/daily-contents.js";
 
-const renderHome = () => {
+const renderHome = async () => {
   createBanner();
   createCateBtnBlock();
   createPromotionBlock();
   createDaysBlock();
   createSmallBannerBlock();
-  createGenreBlock(dataOfDrama);
+  await fetch("http://localhost:3000/webtoons/drama/home")
+    .then((res) => res.json())
+    .then((dataOfDrama) => createGenreBlock(dataOfDrama));
   createDailyRankBlock();
   createEventBlock();
 };
