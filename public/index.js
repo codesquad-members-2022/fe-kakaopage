@@ -6,25 +6,9 @@ import {
   renderBanner,
 } from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
-import { renderToonbyDay } from "./eventJS/mainEvent.js";
-import { onClickBannerController } from "./eventJS/slider.js";
+import { init } from "./eventJS/init.js";
 
-renderMainSecHome();
-renderBanner();
-
-domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
-  const clickedNav = event.target.textContent;
-  const { contentsChecker } = data;
-  if (clickedNav === "홈" && clickedNav !== contentsChecker) {
-    renderMainSecHome();
-  } else if (clickedNav === "요일연재" && clickedNav !== contentsChecker) {
-    renderMainSecWoD();
-  }
-});
-
-domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
-  domUtil.$(".recommand__image--wrapper").offsetWidth
-}px)`;
+init();
 
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {

@@ -1,17 +1,11 @@
 import { domUtil } from "./util.js";
-import {
-  createDomEl,
-  getMainNavHtml,
-  getMainHtml,
-  getToonGenre,
-  getIsHot,
-} from "../component/mainComponent.js";
+import { getMainHtml, getToonGenre } from "../component/mainComponent.js";
 import { data } from "../component/data.js";
 import { renderToonbyDay } from "./mainEvent.js";
 import { getBannerHtml } from "../component/BannerComponent.js";
 import { onClickBannerController } from "./slider.js";
 
-const renderMainSecHome = (genre) => {
+const renderMainSecHome = (clickedNav) => {
   fetch("/subCategory/home")
     .then((response) => response.json())
     .then((homeData) => {
@@ -24,30 +18,31 @@ const renderMainSecHome = (genre) => {
           false
         ));
       }, "");
-
       domUtil.$(".main").innerHTML = newMainHTML;
+      renderBanner(clickedNav);
     });
 };
 
-const renderMainSecWoD = () => {
+const renderMainSecWoD = (clickedNav) => {
   fetch("/subCategory/week")
     .then((response) => response.json())
-    .then((weekData) => {
+    .then(({ week, toonItemData, toggleLeft }) => {
       domUtil.$(".main").innerHTML = getMainHtml(
-        data.toonData,
+        toonItemData,
         true,
         { left: data.toggleLeft, right: "전체 (149)" },
         true,
-        weekData
+        week
       );
       domUtil
         .$(".main__nav__dow--ul")
         .addEventListener("click", renderToonbyDay);
+      renderBanner(clickedNav);
     });
 };
 
-const renderBanner = () => {
-  fetch("/banner/home")
+const renderBanner = (clickedNav) => {
+  fetch(`/banner/${clickedNav}`)
     .then((response) => response.json())
     .then((bannerUrl) => {
       domUtil.$(".recommand__image").innerHTML = getBannerHtml(bannerUrl);
