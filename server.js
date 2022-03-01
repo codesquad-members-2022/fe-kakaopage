@@ -1,12 +1,25 @@
 const express = require("express");
+const app = express();
 const api = require("./data/data.json");
 const cors = require("cors");
-const app = express();
-app.use(cors());
 const port = 5000;
 
+app.locals.pretty = true;
+app.set("views", "./views");
+app.set("view engine", "pug");
+
+app.use(cors());
+
 app.get("/", (req, res) => {
-  res.send(`<p>API호출 예제</p>\n<p>/api/*</p>`);
+  res.render("hello", {
+    title: "KakaoPage API",
+    message: "Welcome to kakaoAPI ",
+    fontcolor: "<font color='blue'>font color</font>",
+    desc: `<div style="color: green">
+    <p>/api => toonList</p>
+    <p>/api/toon/:id => 해당하는 id에 맞는 toon 찾기</p>
+    </div>`,
+  });
 });
 
 app.get("/api", (req, res) => {
