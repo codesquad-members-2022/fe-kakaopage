@@ -93,7 +93,7 @@
 .eventSlide {
   height: 440px;
   width: 720px;
-  background-image: url("/FE/FE01-html/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png");
+  background-image: url("../images/소설\ _\ 그\ 악녀가\ 검을\ 든\ 이유\ 2타\ _\ 10-24.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
