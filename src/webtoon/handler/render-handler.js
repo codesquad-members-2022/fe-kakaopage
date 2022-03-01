@@ -7,7 +7,8 @@ import { webtoonRomanceContent } from "../render/romance/render-webtoon-romance.
 import { webtoonRomanceFantasyContent } from "../render/romance-fantasy/render-webtoon-romance-fantasy.js";
 import { webtoonActionContent } from "../render/action/render-webtoon-action.js";
 import { webtoonBlContent } from "../render/bl/render-webtoon-bl.js";
-import { textSelectedPositionChange } from "../../../js/text-selected-position-change.js";
+import { textSelectedPositionChange } from "../../components/text-selected-position-change.js";
+import { changeCirclePosition } from "../../components/change-circle-position.js";
 
 const app = document.querySelector(".app");
 const webtoonUl = document.querySelector(".nav-box__list");
@@ -34,6 +35,7 @@ const tabIdx = {
   액션무협: 7,
   BL: 8,
 };
+const dayOfTheWeeks = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const renderHandler = (tabName) => {
   app.firstElementChild.remove();
   const currentTag = app.firstElementChild;
@@ -51,5 +53,17 @@ const init = () => {
   app.firstElementChild.remove();
   const currentTag = app.firstElementChild;
   app.insertBefore(webtoonWeeklyContent, currentTag);
+  const now = new Date();
+  let nowDay = now.getDay() - 1;
+  if (nowDay === -1) {
+    nowDay = 6;
+  }
+  textSelectedPositionChange(
+    document
+      .querySelector(".webtoon-weekly-content__nav")
+      .querySelectorAll("li"),
+    nowDay
+  );
+  changeCirclePosition(dayOfTheWeeks[nowDay]);
 };
 init();
