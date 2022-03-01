@@ -20,4 +20,10 @@ const preventDefaults = () => {
     });
 };
 
-export { toggleClass, toggleWeekDayMenu, preventDefaults };
+const getJSON = (path) => {
+    return fetch(`//localhost:3000/${path}`).then((response) =>
+        response.json()
+    );
+};
+
+export { toggleClass, toggleWeekDayMenu, preventDefaults, getJSON };

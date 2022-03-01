@@ -1,4 +1,6 @@
 import { $ } from "./utils/dom.js";
+import { getJSON } from "./tools.js";
+
 import * as datas from "./data/datas.js";
 import { renderCarousel } from "./carousel.js";
 
@@ -11,17 +13,22 @@ const render = (html) => {
 const renderHome = () => {
     const category = new Category({ categories: datas.homeData.category });
     const slideBanner = new SlideBanner();
-    const genreBest = new GenreBest({
-        genre: "로맨스",
-        genreItem: datas.romanceTop,
-    });
-
     let html = "";
     html += category.getHtml();
     html += slideBanner.getHtml();
-    html += genreBest.getHtml();
 
-    render(html);
+    fetch("//localhost:3000/genre/romanceTop")
+        .then((res) => res.json())
+        .then((data) => {
+            html += new GenreBest({
+                genre: "로맨스",
+                genreItem: data,
+            }).getHtml();
+
+            render(html);
+        })
+        .catch(render(html));
+
     renderCarousel(datas.carouselImgs["홈"]);
 };
 
