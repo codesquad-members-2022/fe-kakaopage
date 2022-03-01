@@ -1,4 +1,4 @@
-let T, W, F, S, SS;
+const fs = require("fs");
 
 const Mon_imageCardInfo = [
   {
@@ -485,10 +485,19 @@ const sun = {
   dayOfTheWeek: "sun",
 };
 
-export const weeklyWebtoonImageCardInfo = [mon, tue, wed, thu, fri, sat, sun];
+const weeklyWebtoonImageCardInfo = [mon, tue, wed, thu, fri, sat, sun];
 // console.log(weeklyWebtoonImageCardInfo[0]["card"]);
 // let test = 1;
 // weeklyWebtoonImageCardInfo.forEach((a) => console.log(a, "야야야야"));
 // weeklyWebtoonImageCardInfo[0]["card"].forEach((a) =>
 //   console.log(a["url"], test++)
 // );
+
+const json = JSON.stringify(weeklyWebtoonImageCardInfo, null, 2);
+fs.writeFile("imageCard-data.json", json, function (err) {
+  if (err === null) {
+    console.log("success");
+  } else {
+    console.log("fail");
+  }
+});
