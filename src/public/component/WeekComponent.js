@@ -8,8 +8,8 @@ export const WeekComponent = (today) => {
                     prev += `<li class="week__nav_day">`;
 
                     return days[index] === today ?
-                    prev += `<a data-id=${days[index]} class="week__nav_link week__nav_day_selected">${cur}</a></li>` :
-                    prev += `<a data-id=${days[index]} class="week__nav_link">${cur}</a></li>`
+                    prev += `<a data-weekday=${days[index]} class="week__nav_link week__nav_day_selected">${cur}</a></li>` :
+                    prev += `<a data-weekday=${days[index]} class="week__nav_link">${cur}</a></li>`
                 }, "")}
             </ul>
         </nav>`

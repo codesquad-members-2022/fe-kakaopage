@@ -1,6 +1,7 @@
 import { $, days, fetchData } from "./utils.js";
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 import { ContentListInfos } from "./ContentListInfos.js";
+import { LoadingComponent } from "../component/LoadingComponent.js";
 
 export const nav = {
     categoryClick() {
@@ -24,9 +25,17 @@ export const nav = {
             this.removeLinkColor(weekElement.children, 'week__nav_day_selected');
             target.classList.add('week__nav_day_selected');
 
-            weeks.remove();
-            const weeksData = await fetchData('webtoon/weeks', days.indexOf(target.dataset.id));
-            contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(weeksData));
+            weekElement.insertAdjacentHTML("afterend", LoadingComponent());
+            const weeksData = await fetchData('webtoon/weeks', days.indexOf(target.dataset.weekday));
+
+            if(weeksData) {
+                const loadingElement = $('.loading');
+                setTimeout(() => {
+                    loadingElement.remove();
+                    weeks.remove();
+                }, 200);
+                contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(weeksData));
+            }
         });
     },
     removeLinkColor(elements, style) {
