@@ -7,37 +7,24 @@ export const changeImageCardInfo = (inputImageCardInfo) => {
 
   for (let n = 0; n < imageCard.length; n++) {
     let imageCardInfo = [];
-    for (let i = 0; i < imageCard[n].childNodes.length; i++) {
-      if (imageCard[n].childNodes[i].className === "image-card__img")
-        imageCardUrl = imageCard[n].childNodes[i];
-      // imageCardUrl.src = "주소";
-      else if (
-        imageCard[n].childNodes[i].className === "image-card__area__content"
-      ) {
-        imageCardRank = imageCard[n].childNodes[i].children[0];
-        //imageCardRank.innerHTML = "바꾸고싶은거" (별표 표시 있으면 걔도 포함해줘야함)
-      } else if (
-        imageCard[n].childNodes[i].className === "image-card__comment"
-      ) {
-        imageCardComment = imageCard[n].childNodes[i];
-        imageCardTitle = imageCardComment.children[0];
-        // imageCardComment.children[0].innerHTML = 파일명
-        for (let node of imageCardComment.children[1].children)
-          imageCardInfo.push(node);
-        //  imageCardComment.children[1].children : [new, update, years, icon, subscriber ]
-        // node.className = "새로 받은 녀석의 클래스 네임"
-        // 마지막 녀석은 구독자 수로 넣어줘야함 주의
-      }
+    imageCardUrl = imageCard[n].querySelector(".image-card__img");
+    imageCardRank = imageCard[n]
+      .querySelector(".image-card__area__content")
+      .querySelector(".image-card__rank");
+    imageCardComment = imageCard[n].querySelector(".image-card__comment");
+    // 이미지 카드 레이아웃이 이미지 url 아래 제목과 그 밑에 부가설명으로 이루어져 있기 때문에, 부가 설명의 갯수가 달라지거나 클래스 명이 달라질 수 있어서 children을 사용하였음
+    // imageCardComment.children[1].children 대신 imageCardComment.querySelector(".image-card__comment__info").children로 사용해도 무관하지만 레이아웃 형태가 더 잘 보이는 것 같아서 지금 형태 사용
+    imageCardTitle = imageCardComment.children[0];
+    for (let node of imageCardComment.children[1].children) {
+      imageCardInfo.push(node);
     }
-    // console.log(inputImageCardInfo[n]);
     imageCardUrl.src = inputImageCardInfo[n]["url"];
     imageCardRank.innerHTML = inputImageCardInfo[n]["rank"];
     imageCardTitle.innerHTML = inputImageCardInfo[n]["title"];
-
-    for (let j = 0; j < imageCardInfo.length; j++) {
-      imageCardInfo[j].className = inputImageCardInfo[n]["info"][j];
-    }
-    // console.log(imageCardInfo[4]);
-    imageCardInfo[4].innerHTML = inputImageCardInfo[n]["subscriber"];
+    inputImageCardInfo[n]["info"].forEach(
+      (name, idx) => (imageCardInfo[idx].className = name)
+    );
+    imageCardInfo[imageCardInfo.length - 1].innerHTML =
+      inputImageCardInfo[n]["subscriber"];
   }
 };
