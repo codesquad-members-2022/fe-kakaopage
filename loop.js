@@ -153,3 +153,16 @@ export function createBannerMain(imgArr){
 
     return format
 }
+
+export function createBannerAd(imgArr){
+    let format = '';
+
+    for(let i = 0; i < imgArr.length; i++){
+        format += `
+        <div class="banner-ad-img-wrap ">
+            <img src=${imgArr[i]} class="banner-ad-wrap-img">
+        </div>`
+    }
+
+    return format
+}

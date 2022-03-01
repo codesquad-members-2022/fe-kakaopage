@@ -3,6 +3,7 @@ import { addClickEventToElement } from "./util.js";
 let xPos = 0;
 
 export function setSlideBanner(slideElement, imgArr, widthRem, transitionTimeMs, carouselBoolean=false, sliderIntervalMs=null) {
+    xPos = 0;
     const element = document.querySelector(slideElement);
     const imgNum = imgArr.length;
     const maxWidth = widthRem*(imgNum) + widthRem*2;

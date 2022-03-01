@@ -178,21 +178,31 @@ header {
     position: relative;
 }
 
-.banner-main-btn {
+.slider.ad {
+    height: 8.75rem;
+    background-color: white;
+    margin-top: 0.63rem;
+}
+
+.banner-main-btn, .banner-ad-btn {
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    top: 50%;
+    top: 46%;
     cursor: pointer;
     z-index: 10;
 }
 
-.banner-main-btn.left {
+.banner-ad-btn {
+    top: 35%;
+}
+
+.banner-main-btn.left, .banner-ad-btn.left {
     left: 0;
     margin-left: 1.5rem;
 }
 
-.banner-main-btn.right {
+.banner-main-btn.right, .banner-ad-btn.right {
     right: 0;
     margin-right: 1.5rem;
 }
@@ -248,35 +258,21 @@ header {
 }
 
 .banner-ad {
-    height: 8.75rem;
-    margin-top: 0.63rem;
-    background-color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 6.25rem;
+    overflow: hidden;
+    position: absolute;
+    left: 4rem;
+    top: 1.2rem;
 }
 
-.banner-ad-wrap {
+.banner-ad-img-wrap {
     width: 34.38rem;
     height: 6.25rem;
+    float: left;
 
     margin: 0 1.25rem;
     border-radius: 0.5rem;
     overflow: hidden;
-}
-
-.banner-ad-button {
-    width: 2.5rem;
-    height: 2.5rem;
-
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    background-color: transparent;
-
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--font-color-gray);
 }
 
 .menu-form {
