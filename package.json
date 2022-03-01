@@ -8,9 +8,11 @@
   "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "live-server": "^1.2.1"
   },
   "scripts": {
-    "start": "cd express-server && node server.js"
+    "prestart": "cd express-server && node server.js",
+    "start":  "cd .. && live-server doc.html"
   }
 }

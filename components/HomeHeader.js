@@ -6,7 +6,7 @@ import {store} from "../Core/Store.js";
 export const HomeHeader = class extends Component{
     setup (){
        this.$state = {day:(new Date().getDay()+6)%7}
-        console.log(jsonRoute(this.$state.day));
+
     }
 
     template(){

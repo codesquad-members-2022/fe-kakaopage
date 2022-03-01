@@ -12,7 +12,6 @@ export class BannerBox extends Component{
 
     template() {
         const {infographic, images} = store.state;
-        console.log('hi');
         return `<div class="carousel">
             ${images.banner.map((image, idx) => `
             <div class="slide">
