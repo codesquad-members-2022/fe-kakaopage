@@ -65,6 +65,12 @@ app.get('/*', (req, res) =>
 app.get('/user', (req, res) => {
   res.send('user');
 });
+
+//3번: 미들웨어를 사용
+app.use(미들웨어);
+app.get('/*', (req, res) =>
+  res.sendFile(path.resolve(__dirname, 'static/index.html'))
+);
 ```
 
 `그렇다면 서버와 통신할 api주소는 어떻게 관리할까?`
@@ -116,10 +122,22 @@ fe-kakaopage
     └── server.js
 ```
 
-### 렌더링 방식 변경
+### cors() npm 라이브러리 없이 cors문제 해결하기
 
-기존엔 데이터가 있어야 레이아웃을 렌더링하기 시작함
+`이전`
 
-레이아웃을
+```js
+const cors = require('cors');
+const corsOption = {
+  origin: 'http://127.0.0.1:8080',
+  // origin: 'http://localhost:8080',
+  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
+  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
+};
 
-### 템플릿 엔진 활용 여부
+app.use(cors(corsOption));
+
+app.get('/api', cb);
+```
+
+`이후`

@@ -13,20 +13,29 @@ db.initDB();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// const corsOption = {
-//   origin: 'http://localhost:8080/',
-//   credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
-//   optionsSuccessStatus: 200, // 응답 상태 200으로 설정
-// };
-
-app.use(cors());
-
 // app.use((req, res, next) => {
 //   req.header('Access-Control-Allow-Origin', '*');
 //   req.header('Content-Type', 'application/x-www-form-urlencoded');
 //   res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE');
 //   next();
 // });
+
+const allowlist = ['http://127.0.0.1:8080', 'http://localhost:8080'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowlist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
+  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
+};
+
+app.use(cors(corsOptions), (req, res, next) => {
+  next();
+});
 
 app.get('/api', async (req, res) => {
   const { categoryUid, subCategoryUid } = req.query;
