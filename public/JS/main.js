@@ -7,7 +7,9 @@ import {$, $all} from './utility.js';
 let slider = null;
 
 const setSlide = () => {
-  slider = new Slider();
+  const container = '.main__banner'
+  const list = '.banner__list'
+  slider = new Slider(container, list);
   slider.init();
 }
 

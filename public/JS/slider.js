@@ -1,14 +1,15 @@
 import {$} from './utility.js';
 
 export default class Slider {
-  constructor() {
-    this.list = $('.main__banner .banner__list');
+  constructor(container, list) {
+    this.container = $(`${container}`)
+    this.list = $(`${container} ${list}`);
     this.items = null;
     this.width = null;
 
     this.counter = 1;
     this.interval = 3000;
-    this.duration = 0.7;
+    this.duration = 700;
 
     this.autoSlideTimer = false;
     this.throttleTimer = false;
@@ -57,9 +58,9 @@ export default class Slider {
   }
 
   clickSlideBtns() {
-    const nextBtn = $('.main__banner .banner__next');
-    const prevBtn = $('.main__banner .banner__prev');
-    const DELAY = 700;
+    const nextBtn = this.container.querySelector('.banner__next');
+    const prevBtn = this.container.querySelector('.banner__prev');
+    const DELAY = this.duration;
 
     nextBtn.addEventListener('click', () => {
       this.throttle(() => this.moveNextSlide(), DELAY);
@@ -74,7 +75,7 @@ export default class Slider {
     if (this.counter < 1) return;
     this.counter--;
     this.list.style.transform = `translate(${-this.width * this.counter}px)`;
-    this.list.style.transition = `transform ${this.duration}s`;
+    this.list.style.transition = `transform ${this.duration}ms`;
 
     $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
   }
@@ -83,7 +84,7 @@ export default class Slider {
     if (this.counter > this.items.length - 1) return;
     this.counter++;
     this.list.style.transform = `translate(${-this.width * this.counter}px)`;
-    this.list.style.transition = `transform ${this.duration}s`;
+    this.list.style.transition = `transform ${this.duration}ms`;
 
     $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
   }
@@ -106,8 +107,7 @@ export default class Slider {
   }
 
   pauseSlide() {
-    const mainBanner = $('.main__banner');
-    mainBanner.addEventListener('mouseenter', () => this.stopAutoSlide());
-    mainBanner.addEventListener('mouseleave', () => this.startAutoSlide());
+    this.container.addEventListener('mouseenter', () => this.stopAutoSlide());
+    this.container.addEventListener('mouseleave', () => this.startAutoSlide());
   }
 }
