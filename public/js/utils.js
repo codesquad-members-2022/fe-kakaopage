@@ -5,19 +5,4 @@ const getToday = () => {
   return dow[new Date().getDay()];
 };
 
-const throttle = (callback, delay) => {
-  let timerId;
-  return (event) => {
-    if (timerId) return;
-    timerId = setTimeout(
-      () => {
-        callback(event);
-        timerId = null;
-      },
-      delay,
-      event
-    );
-  };
-};
-
-export { $, getToday, throttle };
+export { $, getToday };

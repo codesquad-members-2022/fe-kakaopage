@@ -565,50 +565,6 @@ const webtoons = {
       user: "32.7만명",
     },
   ],
-  mainAdBanner: [
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=exW4A/hzhOdAhKCm/IQCBloBBk7VT9LyoEvInYK",
-      title: "천하제일 표사",
-      user: "167.3만명",
-      subTitle: "최강 표국을 세우기 위해 뭉쳤다!",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=bt0j4l/hzp2kdvInn/HXBWtj9KzR7xILfnSRKZJ0",
-      title: "뒤끝작렬",
-      user: "58.3만명",
-      subTitle: "재벌가 이사, 흙수저 청년으로 환생?!",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=cRdioT/hzp2exBzAd/aUR3M9v32yKkmYZY0okz11",
-      title: "존버닥터",
-      user: "10.5만명",
-      subTitle: "이젠... '존버'만이 살 길이다!",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=ULyKN/hyZ8vj5vsN/8BFKK0vJXdpgCZrgHyehNk",
-      title: "학사재생",
-      user: "167.3만명",
-      subTitle: "천하제일의 사내, 금수저 물고 환생?",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=dgY2zP/hyEdhuoUGd/PJkkh5g0lNTagnBZ88cnSk",
-      title: "서천화원",
-      user: "12.4만명",
-      subTitle: "공주님의 좌충우돌 모험 로맨스!",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=dkmznQ/hyZ8CKd46W/mZyOjEwerULJIamwPtScJk",
-      title: "지독한 릴리",
-      user: "24.4만명",
-      subTitle: "나만을 위해 한없이 지독해지겠어",
-    },
-    {
-      img: "https://dn-img-page.kakao.com/download/resource?kid=3NBce/hzp2dk98F7/yr6xK044vAutfTsBXRyX8K",
-      title: "환골탈태",
-      user: "116.4만명",
-      subTitle: "마계 집사와 아기 냥이의 동거!",
-    },
-  ],
 };
 
 export { webtoons };
