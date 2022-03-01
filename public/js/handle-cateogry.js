@@ -1,6 +1,14 @@
 import { renderingNav } from "./rendering/nav.js";
 import { settingContents } from "./setting-contents.js";
 
+const blockingRerendering = (selectedNav, selectedValue) => {
+  let originalSelected;
+  document.querySelectorAll(`.${selectedNav} li`).forEach((e) => {
+    if (e.id === "selected") originalSelected = e.dataset.value;
+  });
+  return originalSelected === selectedValue;
+};
+
 export const handleCategory = (e) => {
   if (e.target.nodeName !== "LI") return;
   const selectedElement = e.target;
@@ -8,6 +16,7 @@ export const handleCategory = (e) => {
   const selectedNav = e.target.parentNode.parentNode
     .getAttribute("class")
     .split(" ")[0];
+  if (blockingRerendering(selectedNav, selectedValue)) return;
   renderingNav(selectedNav, selectedElement);
   settingContents(selectedNav, selectedValue);
 };
