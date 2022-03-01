@@ -1,9 +1,9 @@
-import { changeCirclePosition } from "./change-circle-position.js";
+import { changeCirclePosition } from "../../components/change-circle-position.js";
 // import {changeImageBoxInfo} from './change-image-box.js';
-import { changeImageCardInfo } from "./change-image-card.js";
-import { weeklyWebtoonDataInfo } from "./data.js";
-import { textSelectedPositionChange } from "./text-selected-position-change.js";
-import { $ } from "./selector.js";
+import { changeImageCardInfo } from "../../components/change-image-card.js";
+import { weeklyWebtoonDataInfo } from "../../data/data.js";
+import { textSelectedPositionChange } from "../../components/text-selected-position-change.js";
+import { $ } from "../../components/selector.js";
 
 const app = $(".app");
 const weeklyIdxChanger = {
