@@ -11,19 +11,20 @@ function convertSlideTransform(node, transfromValue, transitionSpeed) {
     node.style.transform = `translateX(-${transfromValue}px)`;
 }
 
-function slideEventHandler() {
-    const slideLeftButton = document.querySelector('#banner-left-icon');
-    const slideRightButton = document.querySelector('#banner-right-icon');
-    const slides = document.querySelectorAll('.aside__banner-slide');
-    const slideList = document.querySelector('.aside__banner-slide-list');
-    const slideLength = slides.length;
-    const slideWidth =  document.querySelector('.aside__banner-slider').clientWidth;
-    const slideSpeed = 300;
+function setUpSlide() {
     cloneSlideForClickEvent();
-    slideList.style.transform = `translateX(-${slideWidth}px)`;
+    document.querySelector('.aside__banner-slide-list').style.transform = `translateX(-720px)`;
+}
 
-    let curIndex = 0;
-    slideRightButton.addEventListener('click', function() {
+let curIndex = 0;
+
+function slideEvent(direction) {
+    const slideList = document.querySelector('.aside__banner-slide-list');
+    const slideLength = 3;
+    const slideWidth = slideList.clientWidth;
+    const slideSpeed = 300;
+
+    function moveRight() {
         if (curIndex <= slideLength - 1) {
             convertSlideTransform(slideList, slideWidth * (curIndex+2), slideSpeed);
             curIndex++;
@@ -34,9 +35,9 @@ function slideEventHandler() {
                 }, slideSpeed);
             curIndex = 0;
         }
-    });
-
-    slideLeftButton.addEventListener('click', function() {
+    }
+    
+    function moveLeft() {
         if (curIndex >= 0) {
             convertSlideTransform(slideList, slideWidth * curIndex, slideSpeed);
             curIndex--;
@@ -47,7 +48,37 @@ function slideEventHandler() {
                 }, slideSpeed);
             curIndex = slideLength-1;
         }
-    });
+    }
+
+    return direction === 'right' ? moveRight : moveLeft;
 }
 
-export { slideEventHandler };
+function slideEventHandler() {
+    const slideLeftButton = document.querySelector('#banner-left-icon');
+    const slideRightButton = document.querySelector('#banner-right-icon');
+    let isClicked = true;
+
+    const interval = setInterval(() => {
+        if (isClicked) {
+            slideEvent('right')();
+        }
+    }, 3000)
+
+    slideRightButton.addEventListener(('click'), () => {
+        slideEvent('right')();
+        isClicked = false;
+        setTimeout(() => {
+            isClicked = true;
+        }, 1000)
+    })
+
+    slideLeftButton.addEventListener(('click'), () => {
+        slideEvent('left')();
+        isClicked = false;
+        setTimeout(() => {
+            isClicked = true;
+        }, 1000)
+    })
+}
+
+export { setUpSlide, slideEventHandler };

@@ -2,7 +2,7 @@ import { renderBase } from './component/base.js';
 import { renderHome } from './pages/home.js';
 import { renderWeekdays } from './pages/weekdays.js';
 import { renderWebtoon } from './pages/webtoon.js';
-import { slideEventHandler } from './utils/slider.js';
+import { setUpSlide, slideEventHandler } from './utils/slider.js';
 
 function renderBody() {
     const bodyEl = document.querySelector('body');
@@ -10,7 +10,9 @@ function renderBody() {
 }
 
 renderBody();
+setUpSlide();
 slideEventHandler();
+
 
 const navListsEl = document.querySelectorAll('.nav-list');
 const main = document.querySelector('main');
