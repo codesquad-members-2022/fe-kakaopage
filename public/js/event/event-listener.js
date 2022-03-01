@@ -15,7 +15,6 @@ const initEventListener = () => {
   });
 
   $(".main-ad-banner").addEventListener("mouseenter", autoPlayStop);
-
   $(".main-ad-banner").addEventListener("mouseleave", autoPlayStart);
 };
 
