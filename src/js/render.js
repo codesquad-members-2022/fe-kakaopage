@@ -1,4 +1,4 @@
-import { $, CL, TITLE, today, data, VAL } from './util.js';
+import { $, CL, TITLE, today, VAL } from './util.js';
 import { SNB } from './components/SNB.js';
 import { MainBanner } from './components/MainBanner.js';
 import { DayBar } from './components/DayBar.js';
@@ -9,13 +9,13 @@ import { ScrollBanner } from './components/ScrollBanner.js';
 const $main = $('.main');
 
 const render = {
-  webtoonPage() {
+  webtoonPage(data) {
     $main.innerHTML = '';
     $main.append(SNB());
     const $mainContents = document.createElement('div');
     $mainContents.classList.add('main-contents');
     $main.append($mainContents);
-    this.contents('홈');
+    this.contents(data, '홈');
   },
 
   otherPage(tabName) {
@@ -35,91 +35,83 @@ const render = {
     );
   },
 
-  contents(category) {
+  contents(data, category) {
     const content = {
-      홈: () => renderContent.home(),
-      요일연재: () => renderContent.day(),
-      웹툰: () => renderContent.webtoon(),
-      소년: () => renderContent.boy(),
-      드라마: () => renderContent.drama(),
-      로맨스: () => renderContent.romance(),
-      로판: () => renderContent.roFan(),
-      액션무협: () => renderContent.action(),
-      BL: () => renderContent.BL(),
+      홈: data => renderContent.home(data),
+      요일연재: data => renderContent.day(data),
+      웹툰: data => renderContent.webtoon(data),
+      소년: data => renderContent.boy(data),
+      드라마: data => renderContent.drama(data),
+      로맨스: data => renderContent.romance(data),
+      로판: data => renderContent.roFan(data),
+      액션무협: data => renderContent.action(data),
+      BL: data => renderContent.BL(data),
     };
 
-    content[category]();
+    content[category](data);
   },
 };
 
 const renderContent = {
-  home() {
+  home(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-
-  day() {
-    renderComponent.mainBanner();
+  day(data) {
+    renderComponent.mainBanner(data);
     renderComponent.dayBar();
   },
-
-  webtoon() {
+  webtoon(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     renderComponent.dayBar();
     $mainContents.append(displayWebtoon(data));
     $mainContents.append(displayWebtoon(data, 'promotion'));
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  boy() {
+  boy(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  drama() {
+  drama(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  romance() {
+  romance(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  roFan() {
+  roFan(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  action() {
+  action(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
-  action() {
+  BL(data) {
     const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
-    $mainContents.append(ThemeBox());
-    $mainContents.append(ScrollBanner());
-  },
-  BL() {
-    const $mainContents = $('.main-contents');
-    renderComponent.mainBanner();
+    renderComponent.mainBanner(data);
     $mainContents.append(ThemeBox());
     $mainContents.append(ScrollBanner());
   },
 };
 
 const renderComponent = {
-  mainBanner() {
+  mainBanner(data) {
     const $mainContents = $('.main-contents');
     $mainContents.innerHTML = '';
     const randomNum = Math.floor(Math.random() * VAL.MAX_BANNER_COUNT);
@@ -142,8 +134,7 @@ const renderComponent = {
   },
 };
 
-function displayWebtoon(...params) {
-  const [data, header] = params;
+function displayWebtoon(data, header) {
   if (!header) return WebtoonList(data.filter(v => v.day.includes(today)));
   return WebtoonList(
     data.filter(v => v[header]),

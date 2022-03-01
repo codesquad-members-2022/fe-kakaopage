@@ -44,7 +44,7 @@ const handlerComponent = {
       if (e.target !== target) return;
       const category = target.dataset.category;
       activateTab(target);
-      render.contents(category);
+      render.contents(data, category);
       this.daybar();
       clearInterval(this.intervalId);
       this.mainBannerBtn();
