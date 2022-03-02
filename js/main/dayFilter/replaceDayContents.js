@@ -1,22 +1,28 @@
-import webtoonComponent from '../webtoonComponent/webtoonComponent.js';
+import createWebtoonComponent from '../webtoon/createComponent.js';
+import { selector, createElement } from '../../util/util.js';
+
+const WEBTOON_CONTAINER_CLASSNAME = 'webtoon-component-container';
+const CONTAINER_CLASSNAME = 'contents-container';
+const CONTENTS_CLASSNAME = 'contents-main';
 
 const replaceDayContents = ({ webtoonArr, coverType }) => {
-  const contentsContainer = document.querySelector('.contents-container');
-  const contentsMain = contentsContainer.querySelector('.contents-main');
-  contentsContainer.removeChild(contentsMain);
+  const $contentsContainer = selector(`.${CONTAINER_CLASSNAME}`);
+  const $contentsMain = selector(`.${CONTENTS_CLASSNAME}`, $contentsContainer);
+  $contentsContainer.removeChild($contentsMain);
 
-  const dayContentsMain = document.createElement('div');
-  dayContentsMain.className = 'contents-main';
+  const $dayContentsMain = createElement('div', CONTENTS_CLASSNAME);
 
-  const webtoonComponentContainer = document.createElement('div');
-  webtoonComponentContainer.className = 'webtoon-component-container';
+  const $webtoonComponentContainer = createElement(
+    'div',
+    WEBTOON_CONTAINER_CLASSNAME
+  );
 
   for (let i = 0; i < webtoonArr.length; i++) {
-    const webtoonEl = webtoonComponent(coverType, webtoonArr[i]);
-    webtoonComponentContainer.appendChild(webtoonEl);
+    const $webtoonComponent = createWebtoonComponent(coverType, webtoonArr[i]);
+    $webtoonComponentContainer.appendChild($webtoonComponent);
   }
-  dayContentsMain.appendChild(webtoonComponentContainer);
-  contentsContainer.appendChild(dayContentsMain);
+  $dayContentsMain.appendChild($webtoonComponentContainer);
+  $contentsContainer.appendChild($dayContentsMain);
 };
 
 export default replaceDayContents;

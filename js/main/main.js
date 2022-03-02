@@ -1,22 +1,24 @@
 import { selector, selectorAll, toggleClass, addClass } from '../util/util.js';
 
-import webtoonContentsData from '../../json/webtoonContents.json' assert { type: 'json' };
-import dayContentsData from '../../json/dayContents.json' assert { type: 'json' };
+import StopFlag from './preview/slider/StopFlag.js';
+
 import previewsData from '../../json/previews.json' assert { type: 'json' };
 
 import setTagList from './tagList/setTagList.js';
 import setPreviews from './preview/setPreviews.js';
-import setWebtoonContents from './webtoonComponent/setWebtoonContents.js';
-import setDayFilter from './dayFilter/setDayFilter.js';
+import setMainContents from './setMainContents.js';
+
 import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreview from './preview/createPreview.js';
-// console.dir(webtoonContentsData);
-// console.dir(dayContentsData);
-console.dir(previewsData);
 
 /* selector */
+const test = false;
+const apiURL = test
+  ? 'http://localhost:3000/'
+  : 'https://fe-kakaopage-api-server.herokuapp.com/';
+
 const PREV_BTN_SELECTOR = '.prev-btn';
 const NEXT_BTN_SELECTOR = '.next-btn';
 const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';
@@ -33,7 +35,7 @@ const SLIDER_SELECTOR = '.slider';
 const PREVIEW_WIDTH = 720;
 
 const INTERVAL_TIME = 3; // 초 단위
-const CATEGORIES_WITH_DAY_FILTER = ['홈', '요일연재', '웹툰']; // Day 필터가 있는 카테고리 목록
+const categoriesWithDayFilter = ['홈', '요일연재', '웹툰']; // Day 필터가 있는 카테고리 목록
 
 const categoryState = {
   idx: null,
@@ -80,17 +82,22 @@ const toggleHighlight = ($prevCategory, $curCategory) => {
 };
 
 /* event listener */
+const stopFlag = new StopFlag();
 const onClick = ($category, selectedIdx, $$category) => (event) => {
   if (categoryState.getUserIdx() === selectedIdx) return;
+  if (stopFlag.isTrue()) {
+    console.log('아직 누를 수 없음');
+    return;
+  }
+  stopFlag.setTrue();
 
   const $prevCategory = $$category[categoryState.getUserIdx()];
   const $curCategory = event.target;
   const categoryName = $category.textContent;
   const selectedDay = days[$category.dataset.curday];
+
   const previews = previewsData[categoryName];
-  const dayContentsMap = dayContentsData[categoryName];
-  const dayContentsArr = dayContentsMap?.[selectedDay];
-  const webtoonContentsArr = webtoonContentsData[categoryName];
+
   categoryState.setUserIdx(selectedIdx);
 
   // highlight
@@ -101,16 +108,20 @@ const onClick = ($category, selectedIdx, $$category) => (event) => {
 
   // tag list
   setTagList({
-    category: categoryName,
+    categoryName: categoryName,
     $main: selector(PAGE_MAIN_SELECTOR),
     $tagListContainer: selector(TAG_LIST_CONTAINER_SELECTOR),
   });
 
-  // webtoon contents
-  setWebtoonContents({ dayContentsArr, webtoonContentsArr });
-
-  // day filter
-  setDayFilter({ categoryEl: $category, dayContentsMap });
+  // webtoons + day filter
+  setMainContents({
+    $category,
+    selectedIdx,
+    selectedDay,
+    apiURL,
+    stopFlag,
+    categoriesWithDayFilter,
+  });
 };
 
 const addListener = ($category, selectedIdx, $$category) => {
@@ -124,7 +135,7 @@ const main = () => {
   const $$category = selectorAll(CATEGORY_ITEM_SELECTOR);
   $$category.forEach(addListener);
 
-  initCategoryCurDay(CATEGORIES_WITH_DAY_FILTER);
+  initCategoryCurDay(categoriesWithDayFilter);
 
   const defaultCategoryIdx = categoryState.getDefaultIdx(); // 첫 페이지 접속시 렌더링할 카테고리의 인덱스
   $$category[defaultCategoryIdx].click();

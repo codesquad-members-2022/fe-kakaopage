@@ -1,6 +1,8 @@
+import { selector, addClass, createElement } from '../../util/util.js';
+
 // 0 1 2 3 4 5 6 (일 월 화 수 목 금 토)
 import addClickEvent from './addClickEvent.js';
-const html = `
+const dayFilterTemplete = `
   <ul class="day-filter">
     <li data-day="1">월</li>
     <li data-day="2">화</li>
@@ -13,31 +15,42 @@ const html = `
   </ul>
 `;
 
-const drawDayFilter = (categoryEl, dayContentsMap) => {
-  let curday = categoryEl.dataset.curday;
-  let category = categoryEl.textContent;
+const WEBTOONS_CONTAINER_CLASSNAME = 'webtoons-container';
+const FILTER_CLASSNAME = 'filter';
+const CATEGORY_HIGHLIGHT_CLASSNAME = 'circle';
+const DAY_FILTER_CLASSNAME = 'day-filter';
+const PREVIEW_LIST_CLASSNAME = 'preview-list';
 
-  if (!['홈', '요일연재', '웹툰'].includes(category)) return;
+const DATA_PROP_CURDAY = 'curday';
 
-  const filter = document.createElement('div');
-  filter.className = 'filter';
-  filter.innerHTML = html;
+const drawDayFilter = ({
+  $category,
+  dayWebtoonsMap,
+  categoriesWithDayFilter,
+}) => {
+  let curday = $category.dataset[DATA_PROP_CURDAY];
+  let category = $category.textContent;
+  if (!categoriesWithDayFilter.includes(category)) return;
 
-  if (category === '웹툰') {
-    const previewList = document.querySelector('.preview-list');
-    previewList.insertAdjacentElement('afterend', filter);
+  const WEBTOON_CATEGORY_IDX = 2;
+  const WEBTOON_CATEGORY = categoriesWithDayFilter[WEBTOON_CATEGORY_IDX];
+
+  const $filter = createElement('div', FILTER_CLASSNAME);
+  $filter.innerHTML = dayFilterTemplete;
+
+  if (category === WEBTOON_CATEGORY) {
+    const $previewList = selector(`.${PREVIEW_LIST_CLASSNAME}`);
+    $previewList.insertAdjacentElement('afterend', $filter);
   } else {
-    const firstMainContents = document.querySelector('.main-contents');
-    firstMainContents.insertAdjacentElement('beforebegin', filter);
+    const firstMainContents = selector(`.${WEBTOONS_CONTAINER_CLASSNAME}`);
+    firstMainContents.insertAdjacentElement('beforebegin', $filter);
   }
 
-  const todayEl = document.querySelector(
-    `.day-filter li[data-day='${curday}']`
-  );
-  todayEl.classList.add('circle');
+  const $today = selector(`.${DAY_FILTER_CLASSNAME} li[data-day='${curday}']`);
+  addClass(CATEGORY_HIGHLIGHT_CLASSNAME, $today);
 
   // ---
-  addClickEvent(categoryEl, dayContentsMap);
+  addClickEvent($category, dayWebtoonsMap);
 };
 
 export default drawDayFilter;

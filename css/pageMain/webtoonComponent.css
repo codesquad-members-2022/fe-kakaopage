@@ -123,3 +123,11 @@
   align-items: center;
   margin-right: 20px;
 }
+
+.webtoon-tag {
+  transition: color 300ms;
+}
+
+.webtoon-tag::before {
+  content: '🤡';
+}
