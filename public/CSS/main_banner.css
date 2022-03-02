@@ -47,10 +47,6 @@
   overflow: hidden;
 }
 
-.main__banner .banner__list {
-  transition: transform 0.5s;
-}
-
 .main__banner .banner__img {
   width: 720px;
 }
