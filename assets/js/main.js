@@ -1,4 +1,4 @@
-import { topBanner, webtoonData } from './data.js';
+import { /*topBanner,*/ webtoonData } from './data.js';
 import { initSlider, initSliderHandler, startAutoSlide } from './slider.js';
 
 function clickMenu() {
@@ -14,10 +14,14 @@ function clickMenu() {
     });
 
     lnb.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return;
-        toActivateNav(e.target, lnb);
-        const targetLnb = e.target.closest('li').getAttribute('data-lnb');
-        changeTopBanner(targetLnb);
+        fetch(`http://localhost:3000/banner/top`)
+            .then((response) => response.json())
+            .then((data) => {
+                if (e.target.closest('li').classList.contains('active')) return;
+                toActivateNav(e.target, lnb);
+                const targetLnb = e.target.closest('li').getAttribute('data-lnb');
+                changeTopBanner(targetLnb, data);
+            });
     });
 
     dayNav.addEventListener('click', (e) => {
@@ -28,6 +32,7 @@ function clickMenu() {
     });
 
     changeTopBanner(topBannerDefault);
+    ㄴ;
     createWebtoonDayContents(dayNavDefault);
 }
 
@@ -38,10 +43,10 @@ function toActivateNav(target, nav) {
     clickTarget.classList.add('active');
 }
 
-function changeTopBanner(targetLnb) {
+function changeTopBanner(targetLnb, data) {
     const banner = document.querySelector('.top_banner');
     const bannerSlider = banner.querySelector('.slider_items');
-    const targetBannerData = topBanner[targetLnb];
+    const targetBannerData = data[targetLnb];
     const itemHtml = targetBannerData.map((data) => creatTopBannerHtml(data));
     bannerSlider.innerHTML = itemHtml.join('');
     initSlider(banner);
