@@ -1,4 +1,5 @@
-import { $, CL, TITLE, today, VAL } from './util.js';
+import { $ } from './utils/util.js';
+import { CL, TITLE, today, VAL } from './utils/constants.js';
 import { SNB } from './components/SNB.js';
 import { MainBanner } from './components/MainBanner.js';
 import { DayBar } from './components/DayBar.js';

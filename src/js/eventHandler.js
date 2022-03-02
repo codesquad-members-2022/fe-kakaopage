@@ -1,12 +1,11 @@
 import {
   $,
-  CL,
   loadData,
-  WEBTOON_URL,
   activateTab,
   changeTitle,
   removeAlarm,
-} from './util.js';
+} from './utils/util.js';
+import { CL, WEBTOON_URL } from './utils/constants.js';
 import { render } from './render.js';
 import { initSlider, slideBanner } from './slider.js';
 
@@ -52,7 +51,7 @@ const handlerComponent = {
       loadData(WEBTOON_URL)
         .then(wt => {
           activateTab(target);
-          render.contents(wt, category);
+          render.contents(wt, category); // 이때 다보내지 말고 카테고리별로
           this.daybar();
           this.mainBannerBtn();
           clearInterval(this.intervalId);

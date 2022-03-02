@@ -1,4 +1,4 @@
-import { VAL } from './util.js';
+import { VAL } from './utils/constants.js';
 
 function cloneBanner(parentNode) {
   const firstBanner = parentNode.firstElementChild.cloneNode(true);
