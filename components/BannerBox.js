@@ -1,13 +1,19 @@
-import {addEvent, randomGen, select, selectAll} from "../utils.js";
+
 import {carouselSlider} from "./carousel.js";
+import Component from "../Core/Component.js";
+import {store} from "../Core/Store.js";
 
 
-export const BannerBox = (target,images, infographic )=>{
+// export const BannerBox = (target,images, infographic )=>{
+export class BannerBox extends Component{
+    setup(){
+        this.$state =  {idx: 1};
+    }
 
-    let idx = 1;
-    const template =
-    `<div class="carousel">
-            ${images.banner.map((image,idx)=>`
+    template() {
+        const {infographic, images} = store.state;
+        return `<div class="carousel">
+            ${images.banner.map((image, idx) => `
             <div class="slide">
                 <img src=${image} />
                 <div class="info">
@@ -37,8 +43,10 @@ export const BannerBox = (target,images, infographic )=>{
         <button class="nextBtn">
             <img src=${infographic.next}/>
         </button>
-        </div>
-              `
-    target.innerHTML = template;
-    carouselSlider(target, idx);
+        </div>`
+    }
+    setEvent() {
+        carouselSlider(this.$target, this.$state.idx)
+    }
+
 }

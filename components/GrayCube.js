@@ -1,6 +1,9 @@
-export const GrayCube = ( target, position)=> {
+// export const GrayCube = ( target, position)=> {
+import Component from "../Core/Component.js";
 
-    const template = `
+export const GrayCube = class extends Component{
+    template (){
+        return`
          <div class="listContentBox  Cube">
             <div class="grayBox">
                 <a href="">
@@ -24,7 +27,7 @@ export const GrayCube = ( target, position)=> {
                     <div class="yellow">1위</div>
                 </a>
             </div>
-        </div>
-`
-    target.insertAdjacentHTML(position, template);
+        </div>`
+    }
+
 }
