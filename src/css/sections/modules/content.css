@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.grid__item {
+  padding-top: 20px;
+  width: 120px;
+}
+
+.grid__item__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 30px;
+  background-color: #242526;
+  color: var(--identity-color);
+  font-size: var(--16px);
+}
+
+.grid__thumnail {
+  width: 120px;
+  height: 120px;
+}

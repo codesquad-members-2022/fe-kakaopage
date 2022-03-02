@@ -1,0 +1,13 @@
+.notice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3px;
+  column-gap: 3px;
+}
+
+.notice__item {
+  padding: 15px;
+  font-size: var(--18px);
+  font-weight: var(--bold);
+  background-color: var(--main-bg-color);
+}
