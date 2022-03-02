@@ -2,8 +2,8 @@ import { $ } from "./utils/dom.js";
 import { getJSON } from "./tools.js";
 
 import * as datas from "./data/datas.js";
-import { renderCarousel } from "./carousel.js";
 
+import { renderCarousel } from "./carousel.js";
 import { Category, SlideBanner, GenreBest, Weekday } from "./views/views.js";
 
 const render = (html) => {
@@ -31,7 +31,6 @@ const renderHome = () => {
     };
 
     renderJSONData("genre/romanceTop");
-
     renderCarousel(datas.carouselImgs["홈"]);
 };
 
@@ -46,7 +45,6 @@ const renderWeekday = (today = new Date().getDay()) => {
     html += weekday.getHtml();
 
     render(html);
-    renderCarousel(datas.carouselImgs["요일연재"]);
 };
 
 export { render, renderHome, renderWeekday };
