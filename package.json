@@ -2,7 +2,7 @@
   "name": "fe_kakaopage",
   "version": "1.0.0",
   "description": "",
-  "main": "./js/index.js",
+  "main": "server.js",
   "scripts": {
     "client": "",
     "server": "nodemon server.js",

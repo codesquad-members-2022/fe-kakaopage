@@ -1,4 +1,10 @@
-import { $, addComponent, toggleList, getToday } from "./dom-lib.js";
+import {
+  $,
+  addComponent,
+  toggleList,
+  getToday,
+  getJson as getJsons,
+} from "./dom-lib.js";
 import { headerMenu } from "./component/header-menu.js";
 import { category } from "./component/category.js";
 import { empty } from "./component/empty.js";
@@ -23,14 +29,16 @@ const categoryData = [
   "액션무협",
   "BL",
 ];
+const data = await getJson("/api");
 
 async function getJson(url = "/") {
-  const res = await fetch(`http://localhost:5000${url}`);
-  return await res.json();
+  try {
+    const res = await fetch(`http://localhost:5000${url}`);
+    return await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 }
-
-const data = await getJson("/api");
-// console.log("/api/toon/100 :>> ", await getJson("/api/toon/100"));
 
 export const Render = {
   fixedHeader: () => {
@@ -108,21 +116,13 @@ export const Render = {
   toonDaySeriesTop: (target = $(`.ul-day li:nth-child(${getToday()})`)) => {
     if (!target) return;
     toggleList(target, "check");
-    addComponent(".toon-daytop_album", gridList(data, getToday()));
+    let clickDay = target.innerHTML;
 
-    const click = target.innerHTML;
-    const handler = {
-      월: () => {
-        addComponent(".toon-daytop_album", gridList(data, getToday()));
-      },
-      화: () => {},
-      수: () => {},
-      목: () => {},
-      금: () => {},
-      토: () => {},
-      일: () => {},
-      완결: () => {},
-    };
-    handler[click]();
+    // 수목금토일완결 데이터없어서 임시용
+    ["수", "목", "금", "토", "일", "완결"].some((v) => v === clickDay)
+      ? (clickDay = "월")
+      : null;
+
+    addComponent(".toon-daytop_album", gridList(data, clickDay));
   },
 };

@@ -187,6 +187,7 @@
 }
 
 .toon-daytop {
+  overflow: hidden;
   margin-top: 11px;
   padding: 22px 19px 22px 19px;
   width: 100%;
