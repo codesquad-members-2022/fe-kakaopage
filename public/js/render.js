@@ -1,10 +1,4 @@
-import {
-  $,
-  addComponent,
-  toggleList,
-  getToday,
-  getJson as getJsons,
-} from "./dom-lib.js";
+import { $, addComponent, toggleList, getToday } from "./dom-lib.js";
 import { headerMenu } from "./component/header-menu.js";
 import { category } from "./component/category.js";
 import { empty } from "./component/empty.js";
