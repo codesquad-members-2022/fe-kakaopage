@@ -1,11 +1,11 @@
-import { changeCirclePosition } from "./change-circle-position.js";
+import { changeCirclePosition } from "../../components/change-circle-position.js";
 // import {changeImageBoxInfo} from './change-image-box.js';
-import { changeImageCardInfo } from "./change-image-card.js";
-import { weeklyWebtoonDataInfo } from "./data.js";
-import { textSelectedPositionChange } from "./text-selected-position-change.js";
-import { $ } from "./selector.js";
+import { changeImageCardInfo } from "../../components/change-image-card.js";
+import { weeklyWebtoonDataInfo } from "../../data/data.js";
+import { textSelectedPositionChange } from "../../components/text-selected-position-change.js";
+import { $ } from "../../components/selector.js";
 
-const weeklyWebtoonUl = $(".weekly-webtoon-ul");
+const app = $(".app");
 const weeklyIdxChanger = {
   월: 0,
   화: 1,
@@ -28,8 +28,8 @@ const weeklyWebtoonHandler = (weeklyWebtoonUl, weekly) => {
   changeCirclePosition(dayOfTheWeek);
   textSelectedPositionChange(weeklyWebtoonUl.querySelectorAll("li"), i);
 };
-weeklyWebtoonUl.addEventListener("click", (evt) => {
+app.addEventListener("click", (evt) => {
   if (evt.target.nodeName === "LI") {
-    weeklyWebtoonHandler(weeklyWebtoonUl, evt.target);
+    weeklyWebtoonHandler(app, evt.target);
   }
 });

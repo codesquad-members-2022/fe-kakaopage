@@ -8,7 +8,8 @@
 @import "./components/transition.css";
 
 /*screens */
-@import "./screens/webtoon-weekly.css";
+@import "./screens/webtoon.css";
+@import "./webtoon-weekly.css";
 
 @import "header.css";
 @import "footer.css";

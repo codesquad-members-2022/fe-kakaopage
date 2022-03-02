@@ -1,4 +1,4 @@
-import { $ } from "./selector.js";
+import { $ } from "../components/selector.js";
 
 const imageBoxContainer = $(".image-box-container");
 const containerBox = imageBoxContainer.querySelector(
@@ -20,13 +20,22 @@ const resetIntervalTimer = (timer) => {
   }, SLIDER_INTERVAL);
 };
 
-const nextImage = () => {
+const selectContainerBoxRange = (containerBox) => {
   let classArray = containerBox.className.split(" ");
-  let transformRange = Number(classArray[1].split("-")[1]);
+  return Number(classArray[1].split("-")[1]);
+};
+
+const imageBoxCntChangeAndTimerReset = (cnt) => {
+  imageBoxInfo.innerHTML = `${cnt} / ${IMAGE_CNT}`;
+  bannerTimer = resetIntervalTimer(bannerTimer);
+};
+
+const nextImage = () => {
+  let transformRange = selectContainerBoxRange(containerBox);
   containerBox.className = `image-box-container__box translateX-${
     transformRange + TRANSLATE_RANGE
   } transition-ease-in-out-millisecond`;
-  classArray = containerBox.className.split(" ");
+  const classArray = containerBox.className.split(" ");
   if (classArray[1] === `translateX-${lastIdx}`) {
     setTimeout(() => {
       containerBox.className = `image-box-container__box translateX-${TRANSLATE_RANGE}`;
@@ -35,17 +44,15 @@ const nextImage = () => {
   }
   let nextImgCnt = transformRange / TRANSLATE_RANGE + 1;
   if (nextImgCnt > IMAGE_CNT) nextImgCnt = 1;
-  imageBoxInfo.innerHTML = `${nextImgCnt} / ${IMAGE_CNT}`;
-  bannerTimer = resetIntervalTimer(bannerTimer);
+  imageBoxCntChangeAndTimerReset(nextImgCnt);
 };
 
 const prevImage = () => {
-  let classArray = containerBox.className.split(" ");
-  let transformRange = Number(classArray[1].split("-")[1]);
+  let transformRange = selectContainerBoxRange(containerBox);
   containerBox.className = `image-box-container__box translateX-${
     transformRange - TRANSLATE_RANGE
   } transition-ease-in-out-millisecond`;
-  classArray = containerBox.className.split(" ");
+  const classArray = containerBox.className.split(" ");
   if (classArray[1] === `translateX-${firstIdx}`) {
     setTimeout(() => {
       transformRange = lastIdx - TRANSLATE_RANGE;
@@ -54,8 +61,7 @@ const prevImage = () => {
   }
   let prevImgCnt = transformRange / TRANSLATE_RANGE - 1;
   if (prevImgCnt === 0) prevImgCnt = IMAGE_CNT;
-  imageBoxInfo.innerHTML = `${prevImgCnt} / ${IMAGE_CNT}`;
-  bannerTimer = resetIntervalTimer(bannerTimer);
+  imageBoxCntChangeAndTimerReset(prevImgCnt);
 };
 
 let bannerTimer = setInterval(() => {

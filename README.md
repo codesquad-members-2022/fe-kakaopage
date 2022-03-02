@@ -3,37 +3,65 @@
 ## [데모 페이지](https://youryu0212.github.io/clone-kakaopage/)
 
 - 기능 : 월,화,수,목,금,토,일 탭 전환
+- 기능 : 웹툰 탭 하위의 홈 ~ BL 더미페이지 전환 (요일연재만 html-css로 제작)
 - 슬라이딩 배너 구현 ( 3초에 한번씩 or 클릭시 전환 )
+- 데모 페이지에는 json을 생략하였지만, 코드는 express 서버를 열어 json 요청, fetch 받아 사용하는 방식 구현
 
-## STEP4 변경사항 :
+## step5 변경사항:
 
-- 파일 네이밍컨밴션 변경 : handler -> weeklyWebtoonHandler
-- 변수명 네이밍컨벤션 변경 : main -> webtoon-weekly, cardInfo -> weeklyWebtoonImageCard 등
-- 폴더구조 변경 : js파일 별도 폴더로 이동
-- express 서버 구현
+- HTML 부분 하드 코딩 데이터를 js로 동적으로 생성
+- 더미데이터를 추가하여 탭 간 전환 기능 추가
+- JS 폴더 구조 변경 ( 기존 JS파일을 이동하지는 않았지만, 새로 구성한다면 해보고 싶은 폴더 구조로 변경. 좋은 구조는 아닌듯 하지만 기존의 구성보다는 발전된 것 같다. )
+- 함수 단위를 조금 더 작게 수정 (render에서 한번에 구성하지 않고 각각 요소에 필요한 렌더 함수로 나눔 )
+- 이미지 카드 교체 과정에서 불필요한 반복문 제거. (querySelector로 탐색은 진행되기 때문에 시간복잡도는 비슷하겠지만 코드의 가독성 증가)
+- imageCard[n].childNodes.children 등의 코드를 제거하여 html 구조 의존도 감소
 
-## SETP3 이후 피드백 반영 :
+## step5 미션:
 
-- [x] 4가아니고 다른 갯수도 동작하게 한다면?? 어렵겠군요.. :
-  - 매직 넘버 (4) => imageCardInfo.length 로 변경
-- [x] 메서드가 좀 복잡해보이죠? 아주 긴 건 아닌데. 하위함수로 더 분리할 수 있을까? 한번 고민은 해보세요. : image-box-handler.js의 nextImage 함수
-- [x] 하위함수로 분리하고 나서 위 함수랑 중복을 해결할 수 있는 부분도 생길지 모르겠네요. : image-box-handler.js의 prevImage 함수
-  - 두 메소드에서 setInterval 타이머 초기화 로직 중복을 하위함수로 분리
-- [x] 이런걸 써 됩니다. target.parentNode 그런데 DOM구조가 바뀌면 이 코드가 동작하지 않을수도 있어요
-  - 다음, 이전 두 버튼의 이벤트를 분리하여 parentNode 사용을 제거 가능, 이벤트 버블링 구현 연습을 위해 구현은 x
-- [x] 계산에 의해서 이런값을 설정하는 것 좋고요. 100이라는 숫자는 여전히 매직넘버긴하고요. 이름 달아주셔요.
-  - 매직넘버 제거 : const TRANSLATE_RANGE = 100; const SLIDER_INTERVAL = 2000;
+- [x] Express 서버에서 JSON 응답을 받아오기
+- [ ] REST API URL 구성에 대해서 이해
+- [x] fetch API 사용 데이터 통신
+- [x] 비동기 통신의 장점을 이해하고 적용해야 하는 상황을 공부해보기
+
+## PR 피드백 :
+
+- [x] forEach 등 고차함수 활용 (render-webtoon-weekly.js 에서 webtoonWeeklyWebtoon 태그에 이미지 카드를 만들어서 넣는 과정에서 입력받은 이미지 카드양에 따라 만들어서 넣을 수 있도록 forEach 활용 )
+- [x] imageCard[n].childNodes 의 사용 빈도가 5회 이상이어서 imageCardNodes 변수로 저장 -> 사용하는 함수 전부 리팩토링
+- [x] class가 추가된다면 className으로 비교할때 버그가 생길 수 있습니다. -> (change-image-card.js 파일 함수 : className 비교가 아니라 그냥 해당 클래스를 가진 요소를 쿼리셀렉터로 바로 선택 )
+- [x] 여기 함수는 좀 복잡해보이죠? 작은 함수 여러개를 만들어 보세요 -> (image-box-handler.js의 nextImg, prevImg 함수에서 중복을 추출해 selectContainerBoxRange, imageBoxCntChangeAndTimerReset 두 하위함수를 생성 )
 
 ## 학습진행상황
 
-- CSS 경험이 없다보니 새로운 탭 UI를 만드는데 너무 많은 시간이 소요될 것 같아 처음 구현했던 요일연재 탭에서 자바스크립트 연습을 우선했습니다. DOM 조작은 처음이라 구현에 급급하지 않고 학습과의 밸런스를 맞추기 위한 선택이었지만 CSS를 많이 연습하지 못한 것이 아쉽습니다. 오늘과 주말을 이용해 CSS를 연습할 계획입니다.
-- 네이밍 컨벤션이 형편없다는 것을 인지했습니다. 알고리즘풀이로 개발을 시작해서인지 아직도 변수명을 짓는게 생소하고 힘들기만합니다. 지금부터라도 계속 수정해봐야겠는데 저 스스로 읽기에도 코드가 난잡해지고있어서 읽고싶은 마음이 떨어지는게 사실이네요. 앞으로는 처음 코드를 짤 때 부터 변수명에 조금이라도 더 많은 시간을 투입해야겠습니다.
-- 홈, 요일연재 탭을 구현하지 않고 요일연재 내부의 요일 탭 이벤트만 구현하다보니 querySelector과 innerHTML 두 메소드만으로 충분했습니다. createElement, appendChild , insertBefore 등 다양한 메소드를 활용해보라는 요구사항이 있었음에도 스스로 경험의 폭을 줄여버린 느낌이네요. 오늘부터 여러 탭을 만들어보면서 여러 메소드를 경험해보겠습니다.
+- createElement나 insertBefore 등 메소드를 여러 메소드를 경험하기 위해 더미 페이지와의 전환 기능 추가
+- 함수간 중복 코드를 제거하여 작은 단위의 하위 함수를 생성
+- forEach 고차함수 사용
+- js 파일이 늘어날 때 구조를 어떻게 가져가야 할지 고민할 필요성을 느낌
+- 템플릿 리터럴로 html을 동적으로 생성하기 위해서는 기존 함수 로직 (지난번 pr에서 지적받은 배열의 길이만큼 반복하는 등의 구조)는 유효하지 않았음. 해당 부분을 추후 유지 보수가 용이한 형태로 작은 함수로 변경
+- http 프로토콜은 OSI7계층 or TCP/IP (Update 버전 포함) 에서 5계층에 포함되는 프로토콜. 네트워크 계층에 대해 학습
+
+## 현재 구조 문제점
+
+- 초기 레이아웃을 생각하지 않고 구현하면서 수정하다보니 폴더구조가 엉망
+- 클래스 명에 일관성이 떨어지는 부분이 존재.
+- 함수 구성이 html 구조에 의존적인 부분이 있다. (children[1].children 과 같은 구조, 이후 작성 파일에서는 피드백 내용처럼 selector.querySelector() 의 형태로 변경)
+- 더 작은 함수단위로 나눌 수 있는 부분이 있을 것 같다.
+- 리팩토링 과정에서 구조를 완전히 바꿔야하는 경험을 해 본 덕분에 왜 함수를 작게 나눠야 하는지 느낄 수 있었음
 
 ## 질문사항
 
-- 다른 분의 PR을 참고하다가 객체를 for in을 이용해 사용한 것에 대해 reduce나 forEach 등으로 사용해보면서 함수형 프로그래밍을 연습하는 것도 좋은 방법이라는 코맨트를 봤습니다. 그래서 객체를 forEach로 사용하려면 어떻게 해야할지 찾아보다가 entries 메소드를 이용해서 활용하는 방법 등 몇가지 방법을 알 수 있었습니다. 하지만 객체를 굳이 배열로 바꿔 forEach로 사용하는 장점이 와닿지는 않습니다. 저에게 아직 고차함수 활용이 생소해서 그런 것 같기도 합니다. 코드 구현 속도 때문에 고차함수 활용을 피해온 부분도 있는 것 같습니다. 구현이 다소 늦어지더라도 의도적으로 고차함수 활용을 연습하는 것이 좋을것 같은데 어떻게 생각하시나요?
-- 우선 JS 연습이 더 중요하다고 생각해서 CSS는 JS를 활용하기 위한 최소한의 기반지식만 학습했습니다. 꾸준히 연습하겠지만 다음 미션에서도 CSS 영역이 버거워 JS 학습 시간이 부족해 질 것 같으면 똑같이 할 계획입니다. 혹시 저에게는 CSS 공부가 더 필요한 것은 아닐지, 너무 소홀한 것은 아닌지 걱정스럽습니다.
+아래 코드의 insertImageCardsToParent 함수는 만들어진 이미지 카드들을 상위 태그에 insertAdjacentHTML 메소드를 사용해 추가해주려는 의도로 작성했습니다. 동작 과정은 insertImageCardsToParent 함수 내부에서 이미지 카드를 만들어주는 함수 (createImageCard) 를 사용해서 이미지 카드 태그를 만들어 준 뒤 상위 태그에 insertAdjacentHTML 메소드를 이용해서 추가해줍니다.
+'생성 함수는 외부에 정의되어있는 createImageCard함수를 사용한 것이기에 이 함수는 태그를 카드 갯수만큼 forEach로 돌면서 상위 태그에 추가하는 역할만 수행한다' 는 생각이었습니다. 이 경우 insertImageCardsToParent 함수는 하나의 역할만 하는 것이라고 말할 수 있을까요?
+
+```javascript
+const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
+  weeklyWebtoonImageCardInfo[dayOfTheWeek]["card"].forEach((imageCardInfo) => {
+    webtoonWeeklyWebtoon.insertAdjacentHTML(
+      "beforeend",
+      createImageCard(imageCardInfo)
+    );
+  });
+};
+```
 
 ## 카카오페이지 클론 - HTML,CSS,Javascript
 
@@ -79,3 +107,22 @@
 - [x] children[1].children 대신 셀렉터로 표현가능 (imageBoxContainer.querySelector(".image-box\_\_page-info") 등 활용)
 - [x] el,boxInfo 등 변수명 불분명 -> 헝가리안 표기법 확인할 것 ( 헝가리안 표기법은 프로젝트 규모가 큰 현재에는 잘 사용하지 않는 방법이라고 하여 변수명을 좀 더 의미있게 변경 )
 - [x] 변수명이 의도를 담을 수 있게 구체적으로 작성 ( handler -> weeklyWebtoonHandler 처럼 변수에 의미를 부여)
+
+## SETP3 이후 피드백 반영 :
+
+- [x] 4가아니고 다른 갯수도 동작하게 한다면?? 어렵겠군요.. :
+  - 매직 넘버 (4) => imageCardInfo.length 로 변경
+- [x] 메서드가 좀 복잡해보이죠? 아주 긴 건 아닌데. 하위함수로 더 분리할 수 있을까? 한번 고민은 해보세요. : image-box-handler.js의 nextImage 함수
+- [x] 하위함수로 분리하고 나서 위 함수랑 중복을 해결할 수 있는 부분도 생길지 모르겠네요. : image-box-handler.js의 prevImage 함수
+  - 두 메소드에서 setInterval 타이머 초기화 로직 중복을 하위함수로 분리
+- [x] 이런걸 써 됩니다. target.parentNode 그런데 DOM구조가 바뀌면 이 코드가 동작하지 않을수도 있어요
+  - 다음, 이전 두 버튼의 이벤트를 분리하여 parentNode 사용을 제거 가능, 이벤트 버블링 구현 연습을 위해 구현은 x
+- [x] 계산에 의해서 이런값을 설정하는 것 좋고요. 100이라는 숫자는 여전히 매직넘버긴하고요. 이름 달아주셔요.
+  - 매직넘버 제거 : const TRANSLATE_RANGE = 100; const SLIDER_INTERVAL = 2000;
+
+## STEP4 변경사항 :
+
+- 파일 네이밍컨밴션 변경 : handler -> weeklyWebtoonHandler
+- 변수명 네이밍컨벤션 변경 : main -> webtoon-weekly, cardInfo -> weeklyWebtoonImageCard 등
+- 폴더구조 변경 : js파일 별도 폴더로 이동
+- express 서버 구현

@@ -1,9 +1,3 @@
-.webtoon-weekly {
-  margin-top: 180px;
-  display: flex;
-  flex-direction: column;
-}
-
 .webtoon-weekly__image-box {
   margin-top: 10px;
 }
