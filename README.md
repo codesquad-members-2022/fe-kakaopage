@@ -175,6 +175,107 @@ https://user-images.githubusercontent.com/58525009/155653166-96ed9c93-983a-440f-
 
 처음에 requestAnimationFrame를 시도했지만 오류를 해결하지 못하여 setTimeout으로 구현해보았습니다. 리뷰하면서 muffin이 figure라는 태그를 소개해주었습니다. 찾아보니 시맨틱한 마크업 사용을 위하여 img태그를 figure로 감싸고 figure내에 figcaption으로 컨텐츠에 대한 설명을 작성할 수 있음을 알았습니다.
 
+### 3주차 미션
+
+#### 설계
+
+1. server, client로 폴더 나누기
+2. 서버에서 정적 파일 직접 제공하는것(app.use(express.static('folder'));)에서 get 요청에 따라 json파일만 보내주고 frontend 폴더에서 받은 데이터를 이용하여 렌더하는 방식으로 변경
+3. fetch할 대상 고민
+
+![image](https://user-images.githubusercontent.com/58525009/156026527-f13e4ae9-df0f-4ca5-aa91-976d53e19145.png)
+
+헤더의 nav바는 nav에 해당하는 데이터들이 바뀌기 때문에 서버로부터 정보를 얻어와야한다고 생각하였다.
+
+![image](https://user-images.githubusercontent.com/58525009/156026327-2827953d-1b5d-4aa1-b705-642daa7b9ae4.png)
+
+하지만 웹툰>요일연재 하위의 요일별 nav는 실시간으로 자주 바뀌는 정보도 아니고 대량의 데이터도 아니기 때문에 헤더의 nav바에서 받은 데이터 중 일부를 요일별로 클릭할때마다 클라이언트 단에서 보여주어야한다고 생각하였다. 즉, 이 단계에서는 서버로부터 요청을 하지않게 하여 서버로 부터의 요청을 최소화한다.
+
+#### 고민할 점
+
+templating을 서버와 클라이언트 중에서 어디서 하는게 효율적일까? 각각의 장단점은 무엇일까?
+
+get할때 url을 'home/toon', 'home/week'인 경우에 get을 다 만들지 않고 한꺼번에 할 수 있을까?
+
+url 설계
+
+![image](https://user-images.githubusercontent.com/58525009/156026387-12bb2fe0-66a9-45f8-bdad-88a94dc12461.png)
+
+계층구조로 홈은 header/category/1 과 같이 표현하는것이 어떤가 생각해보았다. 여기서 실제 페이지의 URL에서 ‘?&=’와 같은 것들은 언제 사용할지 고민해보아야겠다.
+
+#### 학습정리
+
+##### 비동기 코드 분석
+
+```jsx
+function one() {
+  console.log("one");
+}
+
+function two() {
+  console.log("two");
+}
+
+setTimeout(one, 0);
+
+two();
+```
+
+###### 처음 생각
+
+실행 순서 : two, one
+
+동기로 일단 setTimeout two순서로 실행되는데 one은 비동기 콜백이어서 브라우저에서 등록된 콜백함수가 태스크큐에서 있다가 two가 콜스택에서 비워지는것을 이벤트 루프가 확인하고 실행된다.
+
+###### 학습 후 정리
+
+1. setTimeout 함수가 호출된다. setTimeout함수는 실행 컨텍스트가 생성되고 콜 스택에 푸쉬되어 현재 실행중인 실행 컨텍스트가 된다.
+2. setTimeout 함수가 실행되면 콜백 함수가 호출 스케줄링 되어서 브라우저의 관리로 setTimeout 타이머가 예약되고 setTimeout은콜백함수에서 팝된다.
+3. 브러우저의 관리하에 setTimeout의 지연 시간 이후에 콜백 큐(혹은 태스크 큐)에 콜백함수가 푸쉬된다. 코드에서 지연시간을 0으로 설정되었지만 최소 지연 시간 4ms이 적용된다.
+4. 이벤트 루프가 콜스택이 비어있는지 확인하고 비어있다면 콜백 큐에 대기하는 콜백함수를 콜 스택에 올린다.
+5. 콜백함수가 종료되면 콜 스택에서 팝된다.
+
+###### 학습 후 알게된 사실
+
+- 최소 지연 시간 4ms
+
+지연시간(setTimeout의 2번째 파라미터)을 4ms이하로 설정하는 경우 최소 지연 시간으로 4ms가 지정된다. 콜 스택이 아직 비어있지 않다면 콜백함수가 태스크 큐(콜백 큐)에 대기하다가 콜 스택이 비어야 호출되므로 실제 대기시간은 더 늘어날 수 있다.
+
+- 왜 최소 지연 시간을 설정하고 왜 하필 4ms일까?
+
+궁금증이 생겼었는데 마침 리뷰시간에 최소 지연시간을 설명한 후에 다른 팀원이 질문을 하였다. 처음에는 막연하게 브라우저에게 부담이 되는것인지, 아니면 타이머라는것 자체가 0을 부여하는게 의미가 없어서 인지 라는 이유들을 생각해보았다. 의문점을 가졌지만 답을 찾은것은 아니라 팀원들이 함께 고민하고 찾아보았다.
+
+0ms를 허용하지 않은 이유는 이벤트루프를 과도하게 반복되면 javascript 엔진이 이벤트 루프를 차단한다. 4ms인 이유는 대부분의 컴퓨터 CPU에서 과도한 CPU회전, 전력소비가 일어나지 않기 때문이다.
+
+참고
+
+- 책 자바스크립트 딥다이브 42단원 비동기 프로그래밍
+- [Why does setTimeout have a minimum delay of 4ms?](https://www.mo4tech.com/why-does-settimeout-have-a-minimum-delay-of-4ms.html)
+
+##### REST API란?
+
+http프로토콜에 맞지 않게 디자인하여서 REST API등장하게 되었다. uri, 메소드, data를 함께 보내는데 해당 uri에 data를 메소드의 행위대로 처리하는것이다. get과 delete는 추가하거나 삭제하는것이기 때문에 data를 따로 보내지 않아도 된다.
+
+##### uri와 url의 차이는?
+
+uri는 네트워크상 자원을 말하고, url은 네트워크상 자원이 어디 있는지 구체적인 위치를 말한다.
+
+##### put vs patch
+
+```jsx
+student {
+
+name,
+
+score
+
+}
+```
+
+put은 student전체를 고치는 개념이다.
+
+put은 student.name만 고치는 개념이다.
+
 ## 추후 할 일
 
 - [ ] 웹툰 컨텐츠를 grid가 아닌 flex로 구현해보기
