@@ -1,6 +1,6 @@
-const homeData = require('./homeDB.js');
-const webtoonData = require('./webtoonDB.js');
-const novelData = require('./novelDB.js');
+const getHomeData = require('./homeDB.js');
+const getWebtoonData = require('./webtoonDB.js');
+const getNovelData = require('./novelDB.js');
 
 function mockDB() {
   const initMsg = '✅ Connect with mock DB';
@@ -9,21 +9,21 @@ function mockDB() {
       console.log(initMsg);
     },
     findData: function (mainUid, subUid) {
-      return new Promise(async (resolve, reject) => {
+      return new Promise((resolve, reject) => {
         let state = null;
         try {
           switch (mainUid) {
             case 0:
-              state = homeData(subUid);
+              state = getHomeData(subUid);
               break;
             case 1:
-              state = webtoonData(subUid);
+              state = getWebtoonData(subUid);
               break;
             case 2:
-              state = novelData(subUid);
+              state = getNovelData(subUid);
               break;
             default:
-              state = homeData(subUid);
+              state = getHomeData(subUid);
               break;
           }
           resolve(state);

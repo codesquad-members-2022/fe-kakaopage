@@ -7,30 +7,20 @@ import {
   ELEMENT_ID,
   MAIN_CHILD_NODE,
 } from './constants/variable.js';
+import { getUidContent } from './api/getUidContent.js';
 
 const { NOT_FOUND } = ERROR;
 const { MAIN_LAYOUT } = ELEMENT_ID;
 const { MAIN_LAYOUT_CHILDREN } = ELEMENT_CLASS;
-
-// 렌더링하기 전 cateogoryUid에 해당하는 데이터를 서버에서 받아오기
-async function preRender(uIdObj) {
-  const data = await fetch('/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(uIdObj),
-  }).then((response) => response.json());
-  return data;
-}
 
 export async function render() {
   const $mainLayout = $get(MAIN_LAYOUT);
 
   try {
     const { categoryUid, subCategoryUid } = getParams();
+
     // 서버에서 데이터 가져오기
-    const { content, isSuccess, msg } = await preRender({
+    const { content, isSuccess, msg } = await getUidContent({
       categoryUid,
       subCategoryUid,
     });
@@ -51,7 +41,7 @@ export async function render() {
     $mainLayout.innerHTML = ``;
 
     // 선택된 템플릿에 서버에서 가져온 데이터 넣기
-    const contentObj = await selectedCategory.Category(content);
+    const contentObj = selectedCategory.Category(content);
 
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
