@@ -1,6 +1,6 @@
-import { getSildeButtonTemp } from "./sildeButton.js";
+import { getSildeButtonTemplate } from "./sildeButton.js";
 
-const getEventBannerTemp = (dataEl, className) => {
+const getEventBannerTemplate = (dataEl, className) => {
     return (
         `<li class="event-banner slide ${className}">
             <a href="${dataEl.link}" class="event-banners__link">
@@ -12,11 +12,11 @@ const getEventBannerTemp = (dataEl, className) => {
     );
   }
   
-const getEventBannersTemp = (data) => {
+const getEventBannersTemplate = (data) => {
     let eventBannerList =
-    getEventBannerTemp(data[data.length - 1], 'prev-slide')
-    + getEventBannerTemp(data[0], 'current-slide')
-    + getEventBannerTemp(data[1], 'next-slide');
+    getEventBannerTemplate(data[data.length - 1], 'prev-slide')
+    + getEventBannerTemplate(data[0], 'current-slide')
+    + getEventBannerTemplate(data[1], 'next-slide');
     return (
         `<div class="section section-event-banner">
             <div class="event-banner slider">
@@ -24,9 +24,9 @@ const getEventBannersTemp = (data) => {
                     ${eventBannerList}
                 </ul>
             </div>
-            ${getSildeButtonTemp('event-banners__slide-button')}
+            ${getSildeButtonTemplate('event-banners__slide-button')}
         </div>`
 );
 }
   
-export { getEventBannersTemp };
+export { getEventBannersTemplate };

@@ -1,4 +1,4 @@
-const getGradeRowTemp = (dataEl) => {
+const getGradeRowTemplate = (dataEl) => {
     return (
         `<li class="row">
             <a href="${dataEl.link}">
@@ -13,8 +13,8 @@ const getGradeRowTemp = (dataEl) => {
     );
 }
 
-const getGradeListTemp = (data) => {
-    const gradeList = data.reduce((acc, cur) => acc += getGradeRowTemp(cur), '');
+const getGradeListTemplate = (data) => {
+    const gradeList = data.reduce((acc, cur) => acc += getGradeRowTemplate(cur), '');
     return (
     `<ul class="row-5">
         ${gradeList}
@@ -22,4 +22,4 @@ const getGradeListTemp = (data) => {
     );
 }
 
-export { getGradeListTemp };
+export { getGradeListTemplate };
