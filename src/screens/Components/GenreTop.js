@@ -1,24 +1,31 @@
 import { createExtendsRelation } from "../../utils.js";
-import { getComponentsTemplate } from "../../serviceUtils.js";
-import Component from "../Component.js";
-import Card from "./Card.js";
+import ContentsBox from "./ContentsBox.js";
+import CardList from "./CardList.js";
 
-function GenreTop(target, state) {
-  Component.call(this, target, state);
+function GenreTop(infoObject) {
+  ContentsBox.call(this, infoObject);
 }
 
-createExtendsRelation(GenreTop, Component);
+createExtendsRelation(GenreTop, ContentsBox);
 
-GenreTop.prototype.template = function () {
-  const webtoons = JSON.parse(localStorage.getItem("webtoons"));
-  const genreCards = webtoons
-    .filter((wt) => wt.genre.includes(this.state.genre))
-    .map((cardInfo) => new Card("_", cardInfo));
+GenreTop.prototype.setup = function () {
+  this.state.contentBody = `<ul class="contentsCard"></ul>`;
+};
 
-  return `
-        <ul class="contentsCard">
-          ${getComponentsTemplate(genreCards)}
-        </ul>`;
+GenreTop.prototype.mount = function () {
+  const $contentsCard = this.$target.querySelector(".contentsCard");
+  const { webtoons } = this.state;
+  const MAXIMUM_CARD_COUNT = 5;
+
+  new CardList({
+    $target: $contentsCard,
+    state: {
+      webtoons:
+        webtoons.length === MAXIMUM_CARD_COUNT
+          ? webtoons.slice(0, MAXIMUM_CARD_COUNT)
+          : webtoons,
+    },
+  });
 };
 
 export default GenreTop;

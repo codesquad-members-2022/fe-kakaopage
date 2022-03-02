@@ -9,4 +9,10 @@ const getComponentsTemplate = (components) => {
   }, "");
 };
 
-export { formatUserCount, getComponentsTemplate };
+const getKoreaDay = () => {
+  const day = new Date().getDay();
+  const days = ["일", "월", "화", "수", "목", "금", "토", "완결"];
+  return days[day];
+};
+
+export { formatUserCount, getComponentsTemplate, getKoreaDay };

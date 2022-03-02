@@ -1,4 +1,4 @@
-import Card from "./Card.js";
+import Card from "./CardList.js";
 import Component from "../Component.js";
 import { createExtendsRelation } from "../../utils.js";
 import { getComponentsTemplate } from "../../serviceUtils.js";
