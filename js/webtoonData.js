@@ -1,4 +1,3 @@
-['홈', '요일연재', '웹툰', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL']
 
 export const webtoonData = [
     {day: ['월', '금'], src:"./images/daily-img1.png", title:"악당의 아빠를 꼬셔라", rank:1, rating:4.8, views:159.3, genre:['로맨스', '로판'], additional: {up: true} },
