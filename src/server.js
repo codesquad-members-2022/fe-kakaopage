@@ -6,7 +6,7 @@ import categoryRouter from "./routers/categoryRouter";
 import webtoonRouter from "./routers/webtoonRouter";
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("src/public"));
 app.use(cors());
