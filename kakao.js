@@ -46,12 +46,8 @@ function makeHtml(dayWebToonData){
 
 const getWebtoonData = function(){
     fetch('http://localhost:3000/webtoonData/data')
-    .then(function(response){
-        console.log(response);
-        return response.json();
-    }).then(function(data){
-        console.log(data);
-    })
+    .then(response => response.json())
+    .then(data =>console.log(data))
 };
 
 getWebtoonData();
