@@ -27,7 +27,7 @@ const data = await getJson("/api");
 
 async function getJson(url = "/") {
   try {
-    const res = await fetch(`http://localhost:5000${url}`);
+    const res = await fetch(url);
     return await res.json();
   } catch (error) {
     console.log(error);
