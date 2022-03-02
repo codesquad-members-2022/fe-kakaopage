@@ -29,19 +29,19 @@ const handleSnb = (event) => {
   loadCategoryContent(globalCategory, subCategory);
 };
 
-const loadMain = (globalCategory, subCategory) => {
+const loadMain = (globalCategory) => {
   updateNavStyle('gnb', globalCategory);
   initElement('.main');
   renderer.categoryContentWrap();
 
-  const data = getData(globalCategory);
+  const subCategoryList = getSubCategoryList(globalCategory);
 
-  if (data.subCategory) {
-    renderer.snb(data.subCategory);
-    loadCategoryContent(globalCategory, subCategory);
+  if (!subCategoryList) {
+    loadCategoryContent(globalCategory);
     return;
   }
-  loadCategoryContent(globalCategory, subCategory);
+  renderer.snb(subCategoryList);
+  loadCategoryContent(globalCategory, '홈');
 };
 
 const loadCategoryContent = (globalCategory, subCategory) => {
