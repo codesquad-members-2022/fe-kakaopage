@@ -1,4 +1,4 @@
-import {makeSelectDayHomeList} from './selectDayList.js'
+import {makeSelectDayItems} from './selectDayList.js'
 import {makeWebtoonList} from '../webtoonList.js'
 import {getData} from '../../utility.js'
 
@@ -20,10 +20,18 @@ function selectDayDailyTemplete(data) {
   const DAILY_ITEMS = 10;
   return `
     <section class="daily__webtoons">
-      ${makeSelectDayHomeList()}
+      ${makeSelectDailyList()}
       ${makeSelectDailyOptions()}
       ${makeWebtoonList(DAILY_ITEMS, data)}
     </section>
+  `;
+}
+
+function makeSelectDailyList() {
+  return `
+    <ul class="select__day">
+      ${makeSelectDayItems()}
+    </ul>
   `;
 }
 

@@ -40,4 +40,4 @@ function makeSelectDayItems() {
   return result;
 }
 
-export {renderSelectDayHome, makeSelectDayHomeList, makeSelectDayItems}
+export {renderSelectDayHome, makeSelectDayItems}
