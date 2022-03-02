@@ -18,7 +18,6 @@ export const MAIN_BANNER_INFO = {
     this.viewIdx++;
     if (this.currentIdx >= slideLength - 1) this.currentIdx = -1;
     if (this.viewIdx > slideLength) this.viewIdx = 1;
-    // console.log(slideLength);
   },
   slideTime: 3000,
   throttling: null
