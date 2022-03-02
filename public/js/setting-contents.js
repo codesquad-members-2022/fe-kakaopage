@@ -1,5 +1,5 @@
-import { webtoons } from "./webtoons.js";
-import { renderingContents } from "./rendering-contents.js";
+import { webtoons } from "../../data/webtoons.js";
+import { renderingContents } from "./rendering/contents.js";
 import { promotionBanner } from "./components/promotion-banner.js";
 import { subAdBanner } from "./components/sub-ad-banner.js";
 import { dowTop } from "./blocks/dow-top.js";
@@ -26,6 +26,7 @@ const mainNavContents = {
       frame: "unuse",
     },
   ],
+  웹툰: [],
 };
 
 const nav = [

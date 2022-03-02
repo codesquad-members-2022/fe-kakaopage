@@ -483,13 +483,13 @@ const webtoons = {
   ],
   expectedTop: [
     {
-      img: "img/무인이곽.jpg",
+      img: "https://dn-img-page.kakao.com/download/resource?kid=3NBce/hzp2dk98F7/yr6xK044vAutfTsBXRyX8K",
       title: "무인이곽",
       subTitle: "시즌4 런칭 기념 이벤트 중!",
       user: "68.6만명",
     },
     {
-      img: "img/무인이곽.jpg",
+      img: "https://dn-img-page.kakao.com/download/resource?kid=3NBce/hzp2dk98F7/yr6xK044vAutfTsBXRyX8K",
       title: "무인이곽",
       subTitle: "시즌4 런칭 기념 이벤트 중!",
       user: "68.6만명",

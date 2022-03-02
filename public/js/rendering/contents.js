@@ -1,8 +1,11 @@
-import { $ } from "./utils.js";
-import { initEventListener } from "./event-listener.js";
-import { dowTopContents } from "./blocks/dow-top.js";
+import { $ } from "../utils.js";
+import { handleCategory } from "../handle-cateogry.js";
+import { dowTopContents } from "../blocks/dow-top.js";
+import { renderingMainAd } from "./main-ad-banner.js";
 
 export const renderingContents = (selectedValue, navContents, navRendering) => {
+  renderingMainAd(selectedValue);
+
   const renderingData =
     //렌더링할 곳이 메인이면
     navRendering === "rendering"
@@ -20,5 +23,7 @@ export const renderingContents = (selectedValue, navContents, navRendering) => {
   $(`.${navRendering}`).innerHTML = renderingData;
 
   //렌더링 후 dow__nav에도 이벤트 등록
-  initEventListener();
+  document.querySelectorAll(".nav__list").forEach((e) => {
+    e.addEventListener("click", handleCategory);
+  });
 };

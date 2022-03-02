@@ -59,6 +59,10 @@
   align-items: center;
 }
 
+.dow__nav {
+  margin-top: 10px;
+}
+
 #selected {
   color: black;
 }

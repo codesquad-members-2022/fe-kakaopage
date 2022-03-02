@@ -1,25 +1,28 @@
-import { $ } from "./utils.js";
-const slides = $(".main-ad-banner__img-container");
-const slideImg = document.querySelectorAll(".main-ad-banner__img-container li");
-const slideWidth = $(".main-ad-banner__img-container li img").clientWidth;
-const slideSpeed = 0.2;
+import { $ } from "../utils.js";
+const slideWidth = $(".event-slider").clientWidth;
+const slideSpeed = 0.4;
 const sec = 1000;
-const containerWidth = slideWidth * slideImg.length;
 const delay = slideSpeed * sec;
 const initPosition = 0;
 const autoTime = 3 * sec;
+let clickFlag = false;
+
 const position = {
   value: -slideWidth,
   setValue(newValue) {
     this.value = newValue;
   },
 };
+
 const timerInterval = () => {
   return setInterval(() => {
+    if (clickFlag) return;
+    clickFlag = true;
     playEvent();
     isEnd();
   }, autoTime);
 };
+
 const autoPlay = {
   timer: timerInterval(),
   start() {
@@ -31,32 +34,47 @@ const autoPlay = {
 };
 
 const makingClone = () => {
+  const slides = $(".event-slider");
+  const slideImg = document.querySelectorAll(".event-slider li");
   const cloneSlide_first = slideImg[0].cloneNode(true);
   const cloneSlide_last = slides.lastElementChild.cloneNode(true);
   slides.append(cloneSlide_first);
   slides.insertBefore(cloneSlide_last, slides.firstElementChild);
 };
 
-const returnOriginSlide = () => {
+const autoPlayStart = () => {
+  autoPlay.start();
+};
+
+const autoPlayStop = () => {
+  autoPlay.stop();
+};
+
+const returnOriginSlide = (containerWidth) => {
   if (position.value >= initPosition) position.setValue(-containerWidth);
   else if (position.value < -containerWidth) position.setValue(-slideWidth);
 };
 
-let clickFlag = false;
-
-const isEnd = () => {
-  if (position.value < initPosition && position.value > -containerWidth)
-    return (clickFlag = false);
-  returnOriginSlide();
-  const slideSpeed = initPosition;
+const nonBlockingClick = () => {
   setTimeout(() => {
-    moveSlide(position.value, slideSpeed);
     clickFlag = false;
   }, delay);
 };
 
+const isEnd = () => {
+  const slideLength = document.querySelectorAll(".event-slider li").length;
+  const clonedSlide = 2;
+  const containerWidth = slideWidth * (slideLength - clonedSlide);
+  if (position.value < initPosition && position.value > -containerWidth) return;
+  returnOriginSlide(containerWidth);
+  const slideSpeed = initPosition;
+  setTimeout(() => {
+    moveSlide(position.value, slideSpeed);
+  }, delay);
+};
+
 const moveSlide = (positionValue, slideSpeed) => {
-  console.log(positionValue);
+  const slides = $(".event-slider");
   slides.style.transition = `${slideSpeed}s ease-out`;
   slides.style.transform = `translateX(${positionValue}px)`;
 };
@@ -65,24 +83,23 @@ const changePosition = (btnEvent) => {
   position.value += btnEvent === "prev" ? slideWidth : -slideWidth;
 };
 
-const setEvent = (btnEvent) => {
-  slides.classList.add(`slideshow-${btnEvent}`);
+const changeTab = () => {
+  moveSlide(-slideWidth, 0);
+  position.value = -slideWidth;
 };
 
 const playEvent = (btnEvent) => {
   changePosition(btnEvent);
-  setEvent(btnEvent);
   moveSlide(position.value, slideSpeed);
+  nonBlockingClick();
 };
 
-export const slideShow = (e) => {
+const slideShow = (e) => {
   if (clickFlag) return;
   clickFlag = true;
-  autoPlay.stop();
-  autoPlay.start();
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
   isEnd();
 };
 
-makingClone();
+export { slideShow, autoPlayStart, autoPlayStop, makingClone, changeTab };
