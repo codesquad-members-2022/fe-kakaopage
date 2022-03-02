@@ -1,8 +1,0 @@
-.app__btn {
-  background-color: var(--identity-color);
-}
-
-.btn__toggle:after {
-  content: '▾';
-  margin-left: 5px;
-}
