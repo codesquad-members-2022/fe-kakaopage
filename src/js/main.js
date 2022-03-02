@@ -5,7 +5,7 @@ const init = () => {
   renderer.header();
   renderer.footer();
   renderer.gnb();
-  loadMain('웹툰', '홈');
+  loadMain('웹툰', '홈'); // GlobalCategory: 웹툰 , SubCategory: 홈
 };
 
 window.addEventListener('DOMContentLoaded', init);
