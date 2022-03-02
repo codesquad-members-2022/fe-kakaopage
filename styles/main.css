@@ -42,7 +42,8 @@
   width: 720px;
   height: 480px;
 }
-.contents .main__mainBanner {
+
+.main__contents .main__mainBanner {
   height: auto;
 }
 
@@ -84,14 +85,6 @@
   font-size: 15px;
   margin-bottom: 5px;
 }
-.main__mainBanner .imgBox__order {
-  position: absolute;
-  bottom: 60px;
-  right: 20px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #bbbbbb;
-}
 
 .banner__imgBox img {
   width: 100%;
@@ -124,13 +117,13 @@
   border-radius: 0px 0px 10px 10px;
 }
 
-.main__button {
+.main__fullButton {
   display: flex;
   height: 70px;
   width: 100%;
 }
 
-.main__button button {
+.main__fullButton button {
   cursor: pointer;
   font-size: 19px;
   width: 100%;
@@ -214,11 +207,9 @@
 .main__contents {
   display: flex;
   flex-direction: column;
+  padding: 20px 15px;
 }
 
-.contents {
-  margin: 20px 15px;
-}
 .contents__header {
   display: flex;
   justify-content: space-between;
@@ -416,8 +407,19 @@
   color: #f3f3f3;
   border-radius: 1px;
 }
-.contents .imgBox__order {
+
+.imgBox__order {
+  position: absolute;
+  font-size: 17px;
+  font-weight: 600;
+  color: #bbbbbb;
+}
+.main__mainBanner .imgBox__order {
+  bottom: 60px;
+  right: 20px;
+}
+.main__contents .imgBox__order {
+  bottom: 20px;
   left: 20px;
-  bottom: 30px;
   opacity: 0.6;
 }

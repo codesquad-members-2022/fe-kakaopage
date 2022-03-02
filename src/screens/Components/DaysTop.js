@@ -1,29 +1,29 @@
 import { createExtendsRelation } from "../../utils.js";
 import Component from "../Component.js";
 
-function DaysTop(target, state) {
-  Component.call(this, target, state);
-  this.render();
+function DaysTop(infoObject) {
+  Component.call(this, infoObject);
 }
 
 createExtendsRelation(DaysTop, Component);
 
 DaysTop.prototype.template = function () {
-  const { days, koreaDay, daysList } = this.state;
-  return `
-      <ul class="contents__daysNav">
-      ${days
-        .map(
-          (day) =>
-            `<li class='daysNav-item ${koreaDay === day ? " selected" : ""}'>
-              ${day}
-            </li>`
-        )
-        .join("")}
-          </ul>
-          <ul class="contentsCard">
-            ${daysList?.template()}
-          </ul>`;
+  return ``;
+  // const { days, koreaDay, daysList } = this.state;
+  // return `
+  //     <ul class="contents__daysNav">
+  //     ${days
+  //       .map(
+  //         (day) =>
+  //           `<li class='daysNav-item ${koreaDay === day ? " selected" : ""}'>
+  //             ${day}
+  //           </li>`
+  //       )
+  //       .join("")}
+  //         </ul>
+  //         <ul class="contentsCard">
+  //           ${daysList?.template()}
+  //         </ul>`;
 };
 
 export default DaysTop;
