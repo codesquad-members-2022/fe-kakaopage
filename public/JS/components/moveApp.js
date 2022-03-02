@@ -1,8 +1,5 @@
-import {$} from '../utility.js'
-
-// ========== makeMoveApp ==========
 function renderMoveApp() {
-  const moveApp = `
+  return `
     <div class="move-app">
       <a href="#">
         <span><strong>코코아페이지</strong> 앱으로 보기</span>
@@ -10,8 +7,6 @@ function renderMoveApp() {
       </a>
     </div>
   `;
-
-  $('.main').insertAdjacentHTML('beforeend', moveApp);
 }
 
 export {renderMoveApp}

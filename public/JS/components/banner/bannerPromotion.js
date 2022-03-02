@@ -1,9 +1,16 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {$} from '../../utility.js'
+import {getData} from '../../utility.js'
 
-// ========== promotionBanner ==========
-function renderPromotionBanner(data) {
-  const promotionBanner = `
+const url = 'http://localhost:3000/promotion-banner';
+
+function renderPromotionBanner(tab) {
+  return getData(url)
+    .then(json => json[tab])
+    .then(data => promotionBannerTemplete(data));
+}
+
+function promotionBannerTemplete(data) {
+  return  `
     <div class="promotion__banner">
       ${makeBannerBtns()}
       <ul class="promotion__list">
@@ -11,8 +18,6 @@ function renderPromotionBanner(data) {
       </ul>
     </div>
   `;
-
-  $('.main').insertAdjacentHTML('beforeend', promotionBanner);
 }
 
 function makePromotionItem(data) {

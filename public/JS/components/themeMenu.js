@@ -1,15 +1,21 @@
-import {$} from '../utility.js'
+import {getData} from '../utility.js'
 
-function renderThemeMenu(data) {
-  const themeMenu = `
+const url = 'http://localhost:3000/theme-Menu';
+
+function renderThemeMenu(tab) {
+  return getData(url)
+    .then(json => json[tab])
+    .then(data => themeMenuTemplete(data))
+}
+
+function themeMenuTemplete(data) {
+  return `
     <div class="theme">
       <ul class="theme__list">
         ${makeThemeItems(data)}
       </ul>
-    <div>
+    </div>
   `;
-
-  $('.main').insertAdjacentHTML('beforeend', themeMenu);
 }
 
 function makeThemeItems(data) {

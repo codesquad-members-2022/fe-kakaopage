@@ -1,66 +1,71 @@
-// ============== renderMain 관련 데이터 ==============
-import {homeContainerInfo} from './data/containerInfoData.js'
-import {todayWebtoonsData} from './data/todayWebtoons.js'
-import mainBannerData from './data/json/mainBannerData.json' assert { type: "json"} ;
-import themeMenuData from './data/json/themeMenuData.json' assert { type: "json"} ;
-import promotionBannerData from './data/json/promotionBannerData.json' assert { type: "json"} ;
-// ============== renderHome 관련 모듈 ==============
-import {renderContainer} from './components/container.js'
+// ============== render 관련 모듈 ==============
 import {renderMainBanner} from './components/banner/bannerMain.js'
 import {renderThemeMenu} from './components/themeMenu.js'
 import {renderPromotionBanner} from './components/banner/bannerPromotion.js'
+import {renderContainer} from './components/container.js'
 import {renderMoveApp} from './components/moveApp.js'
-// ============== renderDaily 관련 모듈 ==============
 import {renderSelectDayDaily} from './components/selectDay/selectDayDaily.js'
+// ============== 각 탭의 컨테이너의 정보 ==============
+import {homeContainerInfo} from './containerInfo/home.js'
+// ============== 유틸리티 모듈 ==============
+import {$} from './utility.js';
 
 function renderMain(tab) {
-  const tabInfo = {
-    home: {
-      func: renderHome,
-      data : homeContainerInfo,
-    },
-    daily: {
-      func: renderDaily,
-      data: todayWebtoonsData,
-    },
-    webtoon: {
-      func: renderWebtoon,
-      data: null
-    },
-    boy: {
-      func: renderBoy,
-      data: null
-    }
+  switch (tab) {
+    case 'home':
+      renderHome(tab);
+      break
+    case 'daily':
+      renderDaily(tab);
+      break;
+    case 'webtoon':
+      renderWebtoon(tab);
+      break;
+    case 'boy':
+      renderBoy(tab);
+      break;
   }
-
-  tabInfo[tab].func(tab, tabInfo[tab].data);
 }
 
-function renderHome(tab, homeContainerInfo) {
-  renderMainBanner(mainBannerData[tab]);
-  renderThemeMenu(themeMenuData[tab]);
-  renderPromotionBanner(promotionBannerData[tab]);
+async function renderHome(tab) {
+  const containerInfo = homeContainerInfo;
 
-  for (let i in homeContainerInfo) {
-    renderContainer(homeContainerInfo[i], tab);
-  }
+  const templete = await Promise.all([
+    renderMainBanner(tab), 
+    renderThemeMenu(tab),
+    renderPromotionBanner(tab),
+    renderContainer(containerInfo.dailyTop, tab),
+    renderContainer(containerInfo.romenceTop, tab),
+    renderContainer(containerInfo.dailyRanking, tab),
+    renderMoveApp()
+  ]);
 
-  renderMoveApp();
+  $('.main').insertAdjacentHTML('beforeend', templete.join(''));
 }
 
-function renderDaily(tab, data) {
-  renderMainBanner(mainBannerData[tab]);
-  renderSelectDayDaily(data);
+async function renderDaily(tab) {
+  const templete = await Promise.all([
+    renderMainBanner(tab),
+    renderSelectDayDaily()
+  ]);
+
+  $('.main').insertAdjacentHTML('beforeend', templete.join(''));
 }
 
-function renderWebtoon(tab) {
-  renderMainBanner(mainBannerData[tab]);
+async function renderWebtoon(tab) {
+  const templete = await Promise.all([renderMainBanner(tab)]);
+
+  $('.main').insertAdjacentHTML('beforeend', templete.join(''));
 }
 
-function renderBoy(tab) {
-  renderMainBanner(mainBannerData[tab]);
-  renderThemeMenu(themeMenuData[tab]);
-  renderPromotionBanner(promotionBannerData[tab]);
+async function renderBoy(tab) {
+  const templete = await Promise.all([
+    renderMainBanner(tab), 
+    renderThemeMenu(tab),
+    renderPromotionBanner(tab),
+  ])
+
+  $('.main').insertAdjacentHTML('beforeend', templete.join(''));
 }
 
 export {renderMain}

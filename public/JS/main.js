@@ -1,10 +1,9 @@
-import dailyTopData from './data/json/dailyTopData.json' assert { type: "json"} ;
 import {renderMain} from './render.js';
 import {makeWebtoonList} from './components/webtoonList.js';
 import Slider from './slider.js';
 import {$, $all} from './utility.js';
 
-let slider = null;
+// let slider = null;
 
 const setSlide = () => {
   const container = '.main__banner'
@@ -35,10 +34,10 @@ const clickGenresList = () => {
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
       
-      slider.stopAutoSlide();
+      // slider.stopAutoSlide();
       resetMain();
       moveGenreNav(event.target);
-      setSlide();
+      // setSlide();
     })
   });
 }
@@ -47,12 +46,12 @@ const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       renderMain('home');
-      eventHome();
+      // eventHome();
       break;
     case 'daily':
       renderMain('daily');
-      todayFocus();
-      clickDailyTopList(dailyTopData);
+      // todayFocus();
+      // clickDailyTopList(dailyTopData);
       break;
     case 'webtoon':
       renderMain('webtoon');
@@ -140,6 +139,7 @@ const eventHome = () => {
 
 window.addEventListener('load', () => {
   renderMain('home');
-  eventHome();
-  setSlide();
+  clickGenresList();
+  // eventHome();
+  // setSlide();
 });

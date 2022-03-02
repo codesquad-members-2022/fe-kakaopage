@@ -1,8 +1,16 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {$} from '../../utility.js'
+import {getData} from '../../utility.js'
 
-function renderMainBanner(data) {
-  const mainBanner = `
+const url = 'http://localhost:3000/main-banner';
+
+function renderMainBanner(tab) {
+  return getData(url)
+    .then(json => json[tab])
+    .then(data => mainBannerTemplete(data));
+}
+
+function mainBannerTemplete(data) {
+  return `
     <article class="main__banner banner">
       ${makeBannerBtns()}
       <ul class="banner__list">
@@ -11,8 +19,6 @@ function renderMainBanner(data) {
       ${makeMainBannerCounter(data)}
     </article>
   `;
-
-  $('.main').insertAdjacentHTML('beforeend', mainBanner);
 }
 
 function makeMainBannerItems(data) {

@@ -1,4 +1,13 @@
-// ========== RankingList ==========
+import {getData} from '../utility.js'
+
+const url = 'http://localhost:3000/daily-ranking'
+
+function renderRankingList(tab) {
+  return getData(url)
+    .then(json => json)
+    .then(data => makeRankingList(data, tab));
+}
+
 function makeRankingList(data, tab) {
   return `
     <ol class="ranking__list">
@@ -33,4 +42,4 @@ function makeRankingItems(data, tab) {
   return result;
 }
 
-export {makeRankingList}
+export {renderRankingList, makeRankingList}
