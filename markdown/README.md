@@ -2,9 +2,22 @@
 
 ## ToDo
 
+week3-1
+
+### express 서버 연결
+
+[참고](https://surprisecomputer.tistory.com/33)
+
+- 로컬에서 html 파일을 구동할 때의 static files(css, js, image) 상대 경로와 node.js 서버를 사용하여 구동할 때의 상대 경로가 전혀 다름
+  - `static folder` 지정하여 해결
+  - 서버는 해당 `static folder`에 접근해서 static file을 가져옴
+  - html 파일에서도 해당 static file의 상대 경로를 작성해야 함
+  - `public`이라는 폴더 자체를 `static folder`로 지정하여 내부를 사용
+  - <img width="233" alt="스크린샷 2022-03-02 오후 4 04 33" src="https://user-images.githubusercontent.com/68533016/156311813-cced05c5-ea22-476a-95a5-a689dfc71039.png">
+
 week2-2
 
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/68533016/155644659-21251a4a-2538-407f-98d0-0f096b74d1d8.gif)
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/68533016/155648256-82ed8712-ba3a-486b-bd42-a1f2a30f6d55.gif)
 
 - 웹 애니메이션 슬라이딩 구현
   - [x] 수동 슬라이딩 기능
