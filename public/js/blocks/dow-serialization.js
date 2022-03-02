@@ -4,12 +4,20 @@ import { dowTopWebtoons } from "../fixing-webtoons.js";
 import { webtoonCard } from "../components/webtoon-card.js";
 
 const position = "beforeend";
+const marginTop = 20;
 const paddingTop = 20;
-const cardHeight = 205;
+const cardHeight = 210;
 const navHeight = 65 * 2;
 const webtoonLineLength = 5;
+const mainAdBannerHeight = 480;
 const defaultHeight =
-  document.querySelector(".rendering").offsetTop + navHeight + paddingTop;
+  document.querySelector(".main__nav").offsetTop +
+  document.querySelector(".main__nav").clientHeight +
+  mainAdBannerHeight +
+  navHeight +
+  marginTop +
+  paddingTop;
+
 const index = {
   value: 0,
   initValue() {
