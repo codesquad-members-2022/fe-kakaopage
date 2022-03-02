@@ -15,6 +15,13 @@ const data = {
   week: ["월", "화", "수", "목", "금", "토", "일", "요일완결"],
   genre: ["소년", "드라마", "로맨스", "로판", "액션무협", "BL"],
   toggleLeft: ["전체", "웹툰", "웹툰"],
+  bannerUrl: [
+    // 현재는 배열에 문자열만 넣엇지만 객체로 바꾸고 프로퍼티에 배너 관련 값을 넣어서 배너 클릭마다 화면변화에 적용할 수 있을듯?
+    "./pageImage/katana.jpg",
+    "./pageImage/lisa.jpg",
+    "./pageImage/skul.jpg",
+    "./pageImage/mother.png",
+  ],
   toonData: [
     {
       imgUrl:
@@ -54,7 +61,7 @@ const data = {
     },
     {
       imgUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs0kqqujQgvytqmJW0DLxFdG6xkyoHwNQytQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepL7gPTWNM4kzbEs46TLqkyqOhUrl1bdxYw&usqp=CAU",
       title: "소년 5",
       info: "인포 테스트",
       genre: "소년",
@@ -63,7 +70,8 @@ const data = {
     },
 
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQClfvI9Vy5Go5RhQ1t60nY-iZtKsaFPreH9w&usqp=CAU",
       title: "드라마 1",
       info: "인포 테스트",
       genre: "드라마",
@@ -71,7 +79,8 @@ const data = {
       hot: false,
     },
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS25HQx5bzT38dPRclKGfb5VidKs4jh_Xubg&usqp=CAU",
       title: "드라마 2",
       info: "인포 테스트",
       genre: "드라마",
@@ -79,7 +88,8 @@ const data = {
       hot: false,
     },
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2dRMH8skevQKa3nSw1_fETxkZH_uGxE9CA&usqp=CAU",
       title: "드라마 3",
       info: "인포 테스트",
       genre: "드라마",
@@ -87,14 +97,16 @@ const data = {
       hot: false,
     },
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlsgdrL8CJEdKgiK4kbaHqjV1SqVNimB_qg&usqp=CAU",
       title: "드라마 4",
       info: "인포 테스트",
       genre: "드라마",
       hot: false,
     },
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00Y7cXVP4k6-48Kaku6Sq7uYTvrWslaGOWA&usqp=CAU",
       title: "드라마 5",
       info: "인포 테스트",
       genre: "드라마",
@@ -103,7 +115,8 @@ const data = {
     },
 
     {
-      imgUrl: "./pageImage/madothuki.png",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCvsKKyaMRmZIZv067VXutCGoAEsiOslFTA&usqp=CAU",
       title: "타이틀 테스트",
       info: "인포 테스트",
       genre: "로맨스",

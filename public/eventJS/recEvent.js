@@ -1,38 +1,55 @@
 import { domUtil } from "./util.js";
-import {
-  createDomEl,
-  getMainNavHtml,
-  getMainHtml,
-  getToonGenre,
-  getIsHot,
-} from "../component/mainComponent.js";
+import { getMainHtml, getToonGenre } from "../component/mainComponent.js";
 import { data } from "../component/data.js";
 import { renderToonbyDay } from "./mainEvent.js";
+import { getBannerHtml } from "../component/BannerComponent.js";
+import { onClickBannerController } from "./slider.js";
 
-const renderMainSecHome = () => {
-  domUtil.$(".main").innerHTML = "";
-  const newMainHTML = data.genre.reduce((inner, toonGen) => {
-    const filterToonByGen = getToonGenre(toonGen);
-    return (inner += getMainHtml(
-      filterToonByGen,
-      true,
-      { left: [toonGen], right: "더보기" },
-      false
-    ));
-  }, "");
-  domUtil.$(".main").innerHTML = newMainHTML;
+const renderMainSecHome = (clickedNav) => {
+  fetch("/subCategory/home")
+    .then((response) => response.json())
+    .then((homeData) => {
+      const newMainHTML = homeData.reduce((mainHtml, toonGen) => {
+        const filterToonByGen = getToonGenre(toonGen);
+        return (mainHtml += getMainHtml(
+          filterToonByGen,
+          true,
+          { left: [toonGen], right: "더보기" },
+          false
+        ));
+      }, "");
+      domUtil.$(".main").innerHTML = newMainHTML;
+      renderBanner(clickedNav);
+    });
 };
 
-const renderMainSecWoD = () => {
-  domUtil.$(".main").innerHTML = "";
-  domUtil.$(".main").innerHTML = getMainHtml(
-    data.toonData,
-    true,
-    { left: data.toggleLeft, right: "전체 (149)" },
-    true,
-    data.week
-  );
-  domUtil.$(".main__nav__dow--ul").addEventListener("click", renderToonbyDay);
+const renderMainSecWoD = (clickedNav) => {
+  fetch("/subCategory/week")
+    .then((response) => response.json())
+    .then(({ week, toonItemData, toggleLeft }) => {
+      domUtil.$(".main").innerHTML = getMainHtml(
+        toonItemData,
+        true,
+        { left: data.toggleLeft, right: "전체 (149)" },
+        true,
+        week
+      );
+      domUtil
+        .$(".main__nav__dow--ul")
+        .addEventListener("click", renderToonbyDay);
+      renderBanner(clickedNav);
+    });
+};
+
+const renderBanner = (clickedNav) => {
+  fetch(`/banner/${clickedNav}`)
+    .then((response) => response.json())
+    .then((bannerUrl) => {
+      domUtil.$(".recommand__image").innerHTML = getBannerHtml(bannerUrl);
+      domUtil
+        .$(".recommand__image--controller")
+        .addEventListener("click", onClickBannerController);
+    });
 };
 
 const renderMainSecToon = () => {
@@ -55,33 +72,4 @@ const renderMainSecToon = () => {
   // domUtil.createEl();
 };
 
-export { renderMainSecHome, renderMainSecWoD };
-
-//render main sec Home
-// domUtil.remove(".main");
-// const parentNav = ".main__nav--toggle";
-// const container = createDomEl(
-//   "section",
-//   "main",
-//   getMainHtml({ left: "", right: "전체(test)" }, data.toonData, " test") //!!!!!!!! 이부분 여차 저차 해결!
-// );
-
-// domUtil.$(".containEvery").appendChild(container); // 위로 올린이유: 자식요소 삭제를 실패해서
-
-// const newList = createDomEl(
-//   "ul",
-//   "main--toggle--left",
-//   getlistHtml(data.toggleLeft)
-// );
-// domUtil.remove(".main--toggle--left");
-
-// container
-//   .querySelector(parentNav)
-//   .insertBefore(newList, domUtil.$(".main--toggle--right"));
-
-// const weekendNav = createDomEl("nav", "main__nav__dow", getMainNavHtml(data));
-// weekendNav
-//   .querySelector(".main__nav__dow--ul")
-//   .addEventListener("click", renderToonbyDay);
-
-// container.insertBefore(weekendNav, container.querySelector(parentNav));
+export { renderMainSecHome, renderMainSecWoD, renderBanner };

@@ -13,6 +13,11 @@ const domUtil = {
       this.$All(dom).forEach((el) => el.remove());
     }
   },
+  getData(url, render) {
+    fetch(url)
+      .then((response) => response.json())
+      .then(render);
+  },
 };
 
 export { domUtil };
