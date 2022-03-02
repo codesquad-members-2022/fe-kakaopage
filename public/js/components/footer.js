@@ -22,7 +22,7 @@ const createFooter = () => {
     </details>
 
     <p class="footer__copyright">ⓒ Kakao Entertainment Corp.</p>
-    <div class="footer__ok-mark"><img src="static/icon/okMark.png" alt="" /><p>저작권 ok</p></div>
+    <div class="footer__ok-mark"><img src="images/icon/okMark.png" alt="" /><p>저작권 ok</p></div>
   </div>
   `;
 };

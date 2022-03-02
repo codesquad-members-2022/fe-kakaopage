@@ -15,7 +15,7 @@ const DATA_WEBTOON = {
         tag: 'up',
         type: '웹툰',
         view: '30.5',
-        path: 'static/thumb/main_toon_0_1.png',
+        path: 'images/thumb/main_toon_0_1.png',
       },
       {
         title: '내가 죽였다',
@@ -23,7 +23,7 @@ const DATA_WEBTOON = {
         tag: 'event',
         type: '웹툰',
         view: '20.4',
-        path: 'static/thumb/main_toon_0_2.png',
+        path: 'images/thumb/main_toon_0_2.png',
       },
       {
         title: '뒤끝작렬',
@@ -31,7 +31,7 @@ const DATA_WEBTOON = {
         tag: 'event',
         type: '웹툰',
         view: '5',
-        path: 'static/thumb/main_toon_0_3.png',
+        path: 'images/thumb/main_toon_0_3.png',
       },
     ],
     gridMenu: [
@@ -42,7 +42,7 @@ const DATA_WEBTOON = {
       ['독립운동가 웹툰'],
       ['오늘 랭킹', '1위'],
     ],
-    promotionBanner: ['promo_toon_0_1.png', 'promo_toon_0_2.png'],
+    promotionBanner: ['images/thumb/promo_toon_0_1.png', 'images/thumb/promo_toon_0_2.png'],
   },
 
   요일연재: {

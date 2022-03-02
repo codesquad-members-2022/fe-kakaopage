@@ -20,11 +20,11 @@ const itemTemplete = (item, index, className = '') => {
       <div class="main-banner__desc">
         <p class="main-banner__title">${item.title}</p>
         <p class="main-banner__tags">
-          <img class="main-banner__badge main-banner__badge--tag" src="static/icon/badge-bigthum-${item.tag}.svg"/>
-          <img class="main-banner__badge main-banner__badge--wait" src="static/icon/ico-bigthum-wait.svg"/>
+          <img class="main-banner__badge main-banner__badge--tag" src="images/icon/badge-bigthum-${item.tag}.svg"/>
+          <img class="main-banner__badge main-banner__badge--wait" src="images/icon/ico-bigthum-wait.svg"/>
           <span class="main-banner__type">${item.type}</span>
           <span class="main-banner__tag-divider"></span>
-          <img class="main-banner__badge main-banner__badge--person" src="static/icon/ico-bigthum-person.svg"/>
+          <img class="main-banner__badge main-banner__badge--person" src="images/icon/ico-bigthum-person.svg"/>
           <span class="main-banner__viewer"> ${item.view}만명</span>
         </p>
       </div>
@@ -40,10 +40,10 @@ const ulTemplete = (width, translateX, items, length) => {
         ${items}
       </ul>
       <button class="main-banner__btn main-banner__btn-prev">
-        <img data-direction="prev" src="static/icon/ic-banner-paging-back-nor.svg" />
+        <img data-direction="prev" src="images/icon/ic-banner-paging-back-nor.svg" />
       </button>
       <button class="main-banner__btn main-banner__btn-next">
-        <img data-direction="next" src="static/icon/ic-banner-paging-next-nor.svg" />
+        <img data-direction="next" src="images/icon/ic-banner-paging-next-nor.svg" />
       </button>
       <div class="main-banner__orderinfo">
         <span class="main-banner__curr-order">1</span>
