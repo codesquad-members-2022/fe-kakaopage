@@ -1,5 +1,5 @@
 export const carouselImgs = {
-    홈: [
+    Home: [
         {
             title: "크레이지 가드너",
             subscriber: "20.3만명",
@@ -19,7 +19,7 @@ export const carouselImgs = {
             info: "완결, 1일 기무+캐시 이벤트!",
         },
     ],
-    요일연재: [
+    Weekday: [
         {
             title: "이차원 용병",
             subscriber: "103.1만명",

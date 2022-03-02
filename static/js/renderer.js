@@ -4,10 +4,22 @@ import { getJSON } from "./tools.js";
 import * as datas from "./data/datas.js";
 
 import { renderCarousel } from "./carousel.js";
-import { Category, SlideBanner, GenreBest, Weekday } from "./views/views.js";
+import {
+    Category,
+    SlideBanner,
+    GenreBest,
+    Weekday,
+    SubMenu,
+} from "./views/views.js";
 
 const render = (html) => {
     $("#app").innerHTML = html;
+};
+
+const renderSubMenu = () => {
+    $(".sub-menu").innerHTML = new SubMenu({
+        menus: datas.subMenu.webtoon.menuNames,
+    }).getHtml();
 };
 
 const renderHome = () => {
@@ -30,8 +42,9 @@ const renderHome = () => {
             .catch(render(html));
     };
 
+    renderSubMenu();
     renderJSONData("genre/romanceTop");
-    renderCarousel(datas.carouselImgs["홈"]);
+    renderCarousel(datas.carouselImgs["Home"]);
 };
 
 const renderWeekday = (today = new Date().getDay()) => {
