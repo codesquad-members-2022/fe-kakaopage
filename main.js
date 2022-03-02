@@ -7,6 +7,18 @@ const element = document.querySelector(".main__week__menu");
 const toonsBox = document.querySelector(".toons__box");
 const $main__container__copy = $main__container?.cloneNode(true);
 
+const render = (data) => {
+  //Todo: data를 이용하여 작업
+};
+
+const getData = () => {
+  fetch("/home")
+    .then((response) => response.json())
+    .then(render);
+};
+
+getData();
+
 $headerNav.addEventListener("click", (event) => {
   const selectedImg = event.target.closest("img");
   const className = selectedImg?.className;
