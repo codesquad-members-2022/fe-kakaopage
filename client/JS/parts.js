@@ -1,4 +1,4 @@
-import { daysInfo, adsInfo } from "../data/webtoonData.js";
+import { daysInfo, adsInfo } from "./editData.js";
 import {
   webtoonNavItems,
   daysNavItems,
@@ -6,6 +6,7 @@ import {
   daysMenuNavItems,
 } from "./nav.js";
 
+console.log(daysInfo, adsInfo);
 const getNav = (navItems) => {
   return navItems.reduce((preItem, postItem) => {
     return preItem + `<ul>${postItem}</ul>\n`;
@@ -29,8 +30,10 @@ const ads =
   `
   <section class="ads">
     <div class="ads__image">
-      ${getAds(adsInfo)}
+      ${getAds(adsInfo)}  
     </div>
+    <div class="ads__left"><i class="far fa-arrow-circle-left"></i></div>
+    <div class="ads__right"><i class="far fa-arrow-circle-right"></i></div>
   </section>
   `;
 

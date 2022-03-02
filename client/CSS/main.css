@@ -41,12 +41,23 @@ main > * {
   border-radius: var(--border-radius1);
 }
 
-.ads__image {
+.ads__left {
+  font-size: 1.5rem;
   position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-150%, -50%);
+  color: var(--color-white-main);
+  top: 48%;
+  left: 5%;
+}
+
+.ads__right {
+  font-size: 1.5rem;
+  position: absolute;
+  color: var(--color-white-main);
+  top: 48%;
+  right: 5%;
+}
+
+.ads__image {
   display: flex;
 }
 

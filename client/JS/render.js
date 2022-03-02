@@ -5,10 +5,10 @@ import { clickEventHandler } from "./clickEventHandler.js";
 
 const startPage = selectedNav[".header__nav"];
 
-const init = () => {
+const render = () => {
   drawWithAssembly(headerAssembly, startPage);
   markAllSelectedNav();
   addEvent("click", clickEventHandler);
 };
 
-init();
+export { render };

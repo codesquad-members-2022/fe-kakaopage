@@ -1,4 +1,4 @@
-import { selector, addClass, addEvent } from "./utility.js";
+import { selector, addClass } from "./utility.js";
 
 const webtoonNavItems = [
   "홈",
