@@ -64,27 +64,21 @@ export function createPromotionWebtoonSection(weeklyPromotionWebtoonList) {
 export function createWeekdayCategoryNav() {
   const weekdayCategoryList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
   let weekdayCategoryTemplate = `<nav class="weekday_category_navigation align_spce_around">`;
-  weekdayCategoryList.forEach((weekdayCategory) => {
-    weekdayCategoryTemplate += `<div class="weekday_category">${weekdayCategory}</div>`;
-  });
+  weekdayCategoryTemplate += weekdayCategoryList.map((weekdayCategory) => `<div class="weekday_category">${weekdayCategory}</div>`).join('');
   weekdayCategoryTemplate += "</nav>";
   return weekdayCategoryTemplate;
 }
 
 export function createWebtoonBoardSection(webtoonList) {
   let webtoonBoardTemplate = `<section class="webtoon_board">`;
-  webtoonList.forEach((webtoon) => {
-    webtoonBoardTemplate += createWebtoonElement(webtoon);
-  });
+  webtoonBoardTemplate += webtoonList.map((webtoon) => createWebtoonElement(webtoon)).join('');
   webtoonBoardTemplate += `</section>`;
   return webtoonBoardTemplate;
 }
 
 export function createTodayCategorySection(todayCategotyList) {
   let todayCategoryTemplate = `<section class="today_category_container grid_container">`;
-  todayCategotyList.forEach((todayCategory) => {
-    todayCategoryTemplate += `<div class="today_category grid_item">${todayCategory}</div>`;
-  })
+  todayCategoryTemplate += todayCategotyList.map((todayCategory) => `<div class="today_category grid_item">${todayCategory}</div>`).join('');
   todayCategoryTemplate += "</section>";
   return todayCategoryTemplate;
 }

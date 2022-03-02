@@ -4,9 +4,9 @@ import {createWebtoonBoardSection} from "./common.js";
 import {weeklyWebtoonList} from "./data.js";
 let previousSubCategory = document.createElement("div");
 let previousWeekdayCategory = document.createElement("div");
-let clickButtonCount = 0;
+let webtoonSlideIndex = 0;
 let isMovable = true;
-let timer = null;
+let reservedAutoSlide = null;
 
 init();
 
@@ -38,12 +38,12 @@ function attachButtonHandler() {
   slideButtonDiv.addEventListener("click", ({target}) => {
     isMovable = false;
     if (target.closest(".next_button")) {
-      clickButtonCount++;
+      webtoonSlideIndex++;
       moveWebtoonSlide();
       return;
     }
     if (target.closest(".previous_button")) {
-      clickButtonCount--;
+      webtoonSlideIndex--;
       moveWebtoonSlide();
       return;
     }
@@ -55,38 +55,38 @@ function moveWebtoonSlide() {
   const slideSize = promotionWebtoonSection.clientWidth;
   const promotionWebtoonSlide = document.querySelector(".promotion_webtoon_slide");
   const promotionWebtoons = promotionWebtoonSlide.children;
-  if (clickButtonCount < 0) {
-    clickButtonCount = promotionWebtoons.length;
+  if (webtoonSlideIndex < 0) {
+    webtoonSlideIndex = promotionWebtoons.length;
     promotionWebtoonSlide.style.transform = `translateX(${- slideSize * (promotionWebtoons.length - 1)}px)`;
     isMovable = true;
     return;
   }
-  if (clickButtonCount >= promotionWebtoons.length) {
+  if (webtoonSlideIndex >= promotionWebtoons.length) {
     promotionWebtoonSlide.style.transform = "";
-    clickButtonCount = 0;
+    webtoonSlideIndex = 0;
     isMovable = true;
     return;
   }
   promotionWebtoonSlide.style.translate = "transform 1s ease-in-out";
-  promotionWebtoonSlide.style.transform = `translateX(${-slideSize * clickButtonCount}px)`;
+  promotionWebtoonSlide.style.transform = `translateX(${-slideSize * webtoonSlideIndex}px)`;
   isMovable = true;
 }
 
-function excuteAutoSlide() {
+function executeAutoSlide() {
   const delayTime = 3000;
-  if (!isMovable || timer) {
+  if (!isMovable || reservedAutoSlide) {
     return;
   }
-  timer = setTimeout(() => {
+  reservedAutoSlide = setTimeout(() => {
     autoWebtoonSlide();
   }, delayTime);
 }
 
 function autoWebtoonSlide() {
-  clickButtonCount++;
+  webtoonSlideIndex++;
   moveWebtoonSlide();
-  timer = null;
-  excuteAutoSlide();
+  reservedAutoSlide = null;
+  executeAutoSlide();
 }
 
 function clickSubCategoryNav(subCategoryNav) {
@@ -103,12 +103,12 @@ function renderSubCategory(subCategory) {
       subCategorySection.innerHTML = weeklyPublicationTemplate;
       attachWebtoonBoardHandler();
       attachButtonHandler();
-      excuteAutoSlide();
+      executeAutoSlide();
       break;
     case "홈":
       subCategorySection.innerHTML = homeTemplate;
       attachButtonHandler();
-      excuteAutoSlide();
+      executeAutoSlide();
       break;
     case "웹툰": case "소년": case "드라마": case "로맨스": case "로판": case "액션무협": case "BL":
       subCategorySection.innerHTML = "";
