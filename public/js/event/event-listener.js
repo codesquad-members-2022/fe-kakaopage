@@ -10,10 +10,7 @@ const initEventListener = () => {
 
   window.addEventListener("scroll", scrollDowSerialization);
 
-  document.querySelectorAll(".main-ad-banner button").forEach((e) => {
-    e.addEventListener("click", slideShow);
-  });
-
+  $(".main-ad-banner").addEventListener("click", slideShow);
   $(".main-ad-banner").addEventListener("mouseenter", autoPlayStop);
   $(".main-ad-banner").addEventListener("mouseleave", autoPlayStart);
 };

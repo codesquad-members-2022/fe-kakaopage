@@ -95,7 +95,7 @@ const playEvent = (btnEvent) => {
 };
 
 const slideShow = (e) => {
-  if (clickFlag) return;
+  if (clickFlag || e.target.parentNode.nodeName !== "BUTTON") return;
   clickFlag = true;
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
