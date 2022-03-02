@@ -64,6 +64,7 @@ const handleBanner = (event) => {
       select('.main-banner__curr-order', ulEl.parentNode).textContent = currentOrder;
     }
   };
+  slideList();
 };
 
 export { addHandlerOnBanner };
