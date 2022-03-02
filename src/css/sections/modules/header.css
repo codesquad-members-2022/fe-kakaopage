@@ -17,7 +17,7 @@
 
 .header__logo {
   display: block;
-  background: url(/fe-kakaopage/src/img/logo-kakaopage.svg) no-repeat;
+  background: url(../../../img/logo-kakaopage.svg) no-repeat;
   width: 130px;
   height: 29px;
 }
