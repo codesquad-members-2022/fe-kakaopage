@@ -41,13 +41,28 @@ main > * {
   border-radius: var(--border-radius1);
 }
 
-.ads__image {
+.ads__left {
+  font-size: 1.5rem;
   position: absolute;
-  display: block;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  color: var(--color-white-main);
+  top: 48%;
+  left: 5%;
+}
+
+.ads__right {
+  font-size: 1.5rem;
+  position: absolute;
+  color: var(--color-white-main);
+  top: 48%;
+  right: 5%;
+}
+
+.ads__image {
+  display: flex;
+}
+
+.ads__image > img {
+  width: 100%;
 }
 
 /* days ======================================================= */
@@ -60,7 +75,7 @@ main > * {
   color: var(--color-grey-main);
 }
 
-.days__nav > * {
+.days__nav > ul {
   margin: 0.6rem 1rem;
   display: flex;
   align-items: center;
@@ -77,7 +92,6 @@ main > * {
   height: calc(var(--width-main) / 10);
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .days__menu > * {
@@ -86,16 +100,26 @@ main > * {
 
 .days__menu--nav {
   align-items: center;
-  justify-content: center;
 }
 
-.days__menu--nav > * {
+.days__menu--nav > ul {
+  color: var(--color-grey-main);
   flex: unset;
-  padding: 1rem;
+  padding: 0.4rem;
   padding-left: 0;
   display: flex;
   align-items: center;
+}
+
+.days__menu--nav > ul::after {
   color: var(--color-grey-main);
+  content: "|";
+  font-size: 0.8rem;
+  padding-left: 0.4rem;
+}
+
+.days__menu--nav > ul:last-child:after {
+  content: "";
 }
 
 .days__menu--nav > .selected {
@@ -103,8 +127,8 @@ main > * {
 }
 
 .days__menu--right {
-  font-size: 0.8rem;
   color: var(--color-grey-main);
+  font-size: 0.8rem;
   margin-left: auto;
 }
 

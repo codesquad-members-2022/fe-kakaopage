@@ -1,4 +1,4 @@
-import { daysInfo } from "../data/webtoon.js";
+import { daysInfo, adsInfo } from "./editData.js";
 import {
   webtoonNavItems,
   daysNavItems,
@@ -7,8 +7,20 @@ import {
 } from "./nav.js";
 
 const getNav = (navItems) => {
+  return navItems.reduce((preItem, postItem) => {
+    return preItem + `<ul>${postItem}</ul>\n`;
+  }, "");
+};
+
+const getAds = (info) => {
+  let target = info;
   let result = "";
-  navItems.forEach((item) => (result += `<ul>${item}</ul>\n`));
+  let count = 3;
+  while (count !== 0) {
+    result += /*html*/ `<img src="../IMG/${target.adImage}" alt="ads image">`;
+    target = target.post;
+    count--;
+  }
   return result;
 };
 
@@ -16,7 +28,11 @@ const ads =
   /*html*/
   `
   <section class="ads">
-    <img class="ads__image" src="../IMG/2.jpg" alt="ads image">
+    <div class="ads__image">
+      ${getAds(adsInfo)}  
+    </div>
+    <div class="ads__left"><i class="far fa-arrow-circle-left"></i></div>
+    <div class="ads__right"><i class="far fa-arrow-circle-right"></i></div>
   </section>
   `;
 
@@ -46,8 +62,7 @@ const newThings =
   </section>
   `;
 
-const columnContent = (contentInfo) => {
-  const { name, image, rank, views } = contentInfo;
+const columnContent = ({ name, image, rank, views }) => {
   if (name === "") return /*html*/ `<div class="column-contents__empty"></div>`;
   const content =
     /*html*/
@@ -64,13 +79,12 @@ const columnContent = (contentInfo) => {
             </div>
           </div>
         </div>
-        <div class="column-contents__content--name">${name}</div>
-        <div class="column-contents__content--views">
-          <i class="fas fa-user-circle"></i>
-          <span>${views}만 명</span>
+          <div class="column-contents__content--name">${name}</div>
+          <div class="column-contents__content--views">
+            <span><i class="fas fa-user-circle"></i>${views}만 명</span>
+          </div>
         </div>
-      </div>
-      `;
+        `;
   return content;
 };
 
@@ -87,27 +101,28 @@ const getEmptyColumnContents = (columnCount, targetDay) => {
   return result;
 };
 
-const getColumContentsByDayMenu = (contentInfo, dayMenuNav) => {
-  if (dayMenuNav === "전체") return columnContent(contentInfo);
-  if (dayMenuNav === "웹툰" && contentInfo.type === "웹툰")
-    return columnContent(contentInfo);
-  if (
-    !["전체", "웹툰"].includes(dayMenuNav) &&
-    contentInfo.now &&
-    contentInfo.type === "웹툰"
-  )
-    return columnContent(contentInfo);
-  return "";
+const getColumContentsByDayMenu = (dayMenuNav, contentInfo) => {
+  const content = columnContent(contentInfo);
+  const nav = dayMenuNav.includes("fas fa") ? "아이콘" : dayMenuNav;
+  switch (nav) {
+    case "전체":
+      return content;
+    case "웹툰":
+      if (contentInfo.type === "웹툰") return content;
+    case "아이콘":
+      if (contentInfo.type === "웹툰" && contentInfo.now) return content;
+    default:
+      return "";
+  }
 };
 
-const getColumnContents = (targetDay) => {
+const getColumnContents = (target) => {
+  const targetDay = daysInfo[target];
   const dayMenuNav = selectedNav[".days__menu--nav"];
   const columnCount = 5;
-  let result = "";
-  targetDay.forEach(
-    (contentInfo) =>
-      (result += getColumContentsByDayMenu(contentInfo, dayMenuNav))
-  );
+  let result = targetDay.reduce((preInfo, postInfo) => {
+    return preInfo + getColumContentsByDayMenu(dayMenuNav, postInfo);
+  }, "");
   result += getEmptyColumnContents(columnCount, targetDay);
   return result;
 };
@@ -131,9 +146,9 @@ const days =
     </div>
 
     <div class="column-contents">
-      ${getColumnContents(daysInfo[selectedNav[".days__nav"]])}
+      ${getColumnContents(selectedNav[".days__nav"])}
     </div>
-    
+
   </section>
   `;
 

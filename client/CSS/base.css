@@ -14,7 +14,7 @@ nav {
   display: flex;
 }
 
-nav > * {
+nav > ul {
   flex: 1 1 0;
 }
 
