@@ -19,8 +19,8 @@ const clickEventHandler = (event) => {
   const section = target.closest("section");
   const ul = target.closest("UL");
   const nav = target.closest("nav");
-  if (ul && nav) onNavClickHandler(ul, nav.className);
-  if (section.className === "ads") onAdsClickHandler(target);
+  if (ul && nav) return onNavClickHandler(ul, nav.className);
+  if (section.className === "ads") return onAdsClickHandler(target);
 };
 
 export { clickEventHandler };

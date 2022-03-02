@@ -6,7 +6,6 @@ import {
   daysMenuNavItems,
 } from "./nav.js";
 
-console.log(daysInfo, adsInfo);
 const getNav = (navItems) => {
   return navItems.reduce((preItem, postItem) => {
     return preItem + `<ul>${postItem}</ul>\n`;
