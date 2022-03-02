@@ -17,9 +17,8 @@ const handleNav = (event) => {
 
 const handleGnb = (event) => {
   const globalCategory = event.target.dataset.category;
-  const defaultSubCategory = '홈';
 
-  loadMain(globalCategory, defaultSubCategory);
+  loadMain(globalCategory);
 };
 
 const handleSnb = (event) => {
