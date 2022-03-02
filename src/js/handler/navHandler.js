@@ -43,19 +43,20 @@ const loadMain = (globalCategory) => {
   loadCategoryContent(globalCategory, '홈');
 };
 
-const loadCategoryContent = (globalCategory, subCategory) => {
+const loadCategoryContent = (globalCategory, subCategory = null) => {
   initElement('.category-content');
-  const data = getData(globalCategory);
 
-  if (data.subCategory) {
-    updateNavStyle('snb', subCategory);
-    loaderMap[globalCategory][subCategory](data[subCategory]);
-    updateDocumentTitle(`${subCategory} - ${globalCategory}`);
+  if (!subCategory) {
+    updateDocumentTitle(globalCategory);
+    loaderMap[globalCategory]();
     return;
   }
 
-  loaderMap[globalCategory]();
-  updateDocumentTitle(globalCategory);
+  const subCategoryData = getSubCategoryData(globalCategory, subCategory);
+
+  updateNavStyle('snb', subCategory);
+  updateDocumentTitle(`${subCategory} - ${globalCategory}`);
+  loaderMap[globalCategory][subCategory](subCategoryData);
 };
 
 const getSubCategoryList = (globalCategory) => dataMap[globalCategory].subCategory;
