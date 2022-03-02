@@ -32,7 +32,7 @@ li {
   padding-top: 17px; 
 }
 
-.navbar-second-1 {
+.navbar-second-1, .navbar-second-2 {
   background-color: white;
   width: 720px;
   padding: 0px;
@@ -40,7 +40,7 @@ li {
   display: flex;
 }
 
-.navbar-second-content {
+.navbar-second-content, .navbar-second-content-2 {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -54,12 +54,13 @@ li {
   line-height: 1.15;
 }
 
-.navbar-second-content-link {
+.navbar-second-content-2 > a {
   text-decoration: none;
   color: rgb(187, 187, 187);
   font-weight: 350;
   line-height: 1.15;
 }
+
 
 
 .navbar-week {

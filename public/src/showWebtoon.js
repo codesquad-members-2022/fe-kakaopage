@@ -1,4 +1,5 @@
 import { makeTodayEvent } from "./main.js"
+import { makeSlideEvent } from "./mainNav.js"
 function init() {
   const date = new Date();
   const today = date.getDay() - 1;
@@ -10,4 +11,4 @@ function init() {
 };
 
 init();
-
+makeSlideEvent();
