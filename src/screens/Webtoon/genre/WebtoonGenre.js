@@ -37,6 +37,9 @@ WebtoonGenre.prototype.mount = function () {
     new components[className]({
       $target: $content,
       state: { ...state, webtoons: filteredWebtoons },
+      $props: {
+        sortRanking: this.sortRanking,
+      },
     });
   });
 };

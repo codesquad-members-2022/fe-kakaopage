@@ -9,11 +9,11 @@ function GenreTop(infoObject) {
 createExtendsRelation(GenreTop, ContentsBox);
 
 GenreTop.prototype.setup = function () {
-  this.state.contentBody = `<ul class="contentsCard"></ul>`;
+  this.state.contentBody = `<ul id="wtGenreTop" class="contents__card"></ul>`;
 };
 
 GenreTop.prototype.mount = function () {
-  const $contentsCard = this.$target.querySelector(".contentsCard");
+  const $contentsCard = this.$target.querySelector("#wtGenreTop");
   const { webtoons } = this.state;
   const MAXIMUM_CARD_COUNT = 5;
 

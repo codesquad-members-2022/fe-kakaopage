@@ -255,12 +255,12 @@
   color: #333333;
   border-bottom: 2px solid #ffd200;
 }
-.contentsCard {
+.contents__card {
   display: flex;
   flex-wrap: wrap;
   margin-top: 15px;
 }
-.contentsCard .card {
+.contents__card .card {
   cursor: pointer;
   width: 18%;
   height: 190px;
