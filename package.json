@@ -1,9 +1,8 @@
 {
   "name": "fe-kakaopage",
   "version": "1.0.0",
-  "type": "module",
   "description": "## __⚙️ 구현 과정__ ### __1. HTML, CSS 개발 → [정리](doc/html_css.md)__ ### __2. 동적 기능(탭) 구현 → [정리](doc/tab.md)__",
-  "main": "./src/main.js",
+  "main": "./server.js",
   "directories": {
     "doc": "doc"
   },
@@ -19,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/hemudi/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/hemudi/fe-kakaopage#readme"
+  "homepage": "https://github.com/hemudi/fe-kakaopage#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  }
 }

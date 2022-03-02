@@ -1,7 +1,7 @@
-import Menu from "./data/Menu.json" assert { type: "json" };
 import * as HTMLCreator from "./HTMLCreator.js"
 import * as SliderController from "./SliderController.js";
 import { setNavEvent } from "./NavEventController.js"
+import * as Utils from "./Utils.js";
 
 const $body_main = document.querySelector('.custom');
 
@@ -84,7 +84,12 @@ function renderMenu(tabName){
     $menu_section.classList.add('contents_menu', 'section');
     $menu_section.appendChild($menu_div);
     $body_main.appendChild($menu_section);
-    Menu[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
+    Utils.getData('data', 'menu').then((menuData) => menuData[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data)));
+}
+
+function createMenu(dataObject, tabName, $menu_div){
+    console.log('createMenu : ' + dataObject);
+    dataObject[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
 }
 
 function renderSubBanner(tabName){
@@ -113,7 +118,7 @@ function createContentsMain(...children){
     const $main = document.createElement('div');
     $main.classList.add('contents-container__main');
 
-    if(children.length > 0){
+    if(children.length){
         $main.append(...children);
     }
 
@@ -150,9 +155,7 @@ function createWeeklyNavNode(weekData){
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.forEach( data => {
-        $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)}
-    );
+    weekData.forEach( data => $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected));
 
     return $nav;
 }
