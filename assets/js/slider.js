@@ -1,5 +1,7 @@
 const FIRST_INDEX = 0;
 let currentIdx = FIRST_INDEX;
+let autoPlay = undefined;
+let clickSlideControl = false;
 
 function setSliderVariable(sliderWrapper) {
     const sliderBox = sliderWrapper.querySelector('.slider_items');
@@ -10,20 +12,20 @@ function setSliderVariable(sliderWrapper) {
 
     const sliderInfo = {
         sliderBox,
-        cloneFirst : firstItem.cloneNode(true),
-        cloneLast : lastItem.cloneNode(true),
-        itemCount : slideItem.length - slideCloneItem.length,
-        itemWidth : slideItem[0].offsetWidth,
-        pager : sliderWrapper.querySelector('.slider_pager'),
-        firstIdx : FIRST_INDEX
-    }
-    return sliderInfo
+        cloneFirst: firstItem.cloneNode(true),
+        cloneLast: lastItem.cloneNode(true),
+        itemCount: slideItem.length - slideCloneItem.length,
+        itemWidth: slideItem[0].offsetWidth,
+        pager: sliderWrapper.querySelector('.slider_pager'),
+        firstIdx: FIRST_INDEX,
+    };
+    return sliderInfo;
 }
 
 function initSlider(sliderWrapper) {
     currentIdx = FIRST_INDEX;
     const sliderInfo = setSliderVariable(sliderWrapper);
-    const sliderBox = sliderInfo.sliderBox
+    const sliderBox = sliderInfo.sliderBox;
     const cloneFirst = sliderInfo.cloneFirst;
     const cloneLast = sliderInfo.cloneLast;
 
@@ -35,6 +37,11 @@ function initSlider(sliderWrapper) {
     sliderBox.style.transform = `translateX(0)`;
 
     updatePager(sliderInfo, currentIdx);
+    if (autoPlay) {
+        stopAutoSlide();
+        autoPlay = undefined;
+        startAutoSlide(sliderWrapper);
+    }
 }
 
 function initSliderHandler(sliderWrapper) {
@@ -46,6 +53,7 @@ function initSliderHandler(sliderWrapper) {
         const newBanner = target.closest('.banner');
         const sliderInfo = setSliderVariable(newBanner);
         const sliderItemCount = sliderInfo.itemCount;
+        clickSlideControl = true;
 
         switch (target) {
             case prevBtn:
@@ -58,10 +66,11 @@ function initSliderHandler(sliderWrapper) {
                 break;
         }
 
+        stopAutoSlide();
         moveSlide(sliderInfo, currentIdx);
         currentIdx = checkCurrentIdx(currentIdx, sliderItemCount);
         updatePager(sliderInfo, currentIdx);
-    })
+    });
 }
 
 function checkCurrentIdx(currentIdx, itemCount) {
@@ -72,7 +81,7 @@ function checkCurrentIdx(currentIdx, itemCount) {
         updateIdx = itemCount - 1;
     }
 
-    return updateIdx
+    return updateIdx;
 }
 
 function moveSlide(sliderInfo, currentIdx) {
@@ -80,6 +89,7 @@ function moveSlide(sliderInfo, currentIdx) {
     const itemCount = sliderInfo.itemCount;
     const itemWidth = sliderInfo.itemWidth;
     let transformValue = `translateX(${-currentIdx * itemWidth}px)`;
+    isSlideClick(sliderBox);
 
     sliderBox.classList.add('animate');
     sliderBox.style.transform = transformValue;
@@ -88,7 +98,7 @@ function moveSlide(sliderInfo, currentIdx) {
         transformValue = `translateX(0)`;
         replaceSlideItem(sliderBox, transformValue);
     } else if (currentIdx < FIRST_INDEX) {
-        transformValue = `translateX(${-(itemCount-1) * itemWidth}px)`;
+        transformValue = `translateX(${-(itemCount - 1) * itemWidth}px)`;
         replaceSlideItem(sliderBox, transformValue);
     }
 }
@@ -98,7 +108,7 @@ function replaceSlideItem(sliderBox, transformValue) {
     setTimeout(() => {
         sliderBox.classList.remove('animate');
         sliderBox.style.transform = transformValue;
-    }, TIME)
+    }, TIME);
 }
 
 function updatePager(sliderInfo, currentIdx) {
@@ -106,4 +116,29 @@ function updatePager(sliderInfo, currentIdx) {
     sliderInfo.pager.innerText = `${printCurIdx} / ${sliderInfo.itemCount}`;
 }
 
-export { initSlider, initSliderHandler }
+function isSlideClick(sliderBox) {
+    if (!clickSlideControl) return;
+    const sliderWrapper = sliderBox.closest('.banner');
+    clickSlideControl = false;
+    startAutoSlide(sliderWrapper);
+}
+
+function startAutoSlide(sliderWrapper) {
+    const TIME = 3000;
+    const targetSlide = setSliderVariable(sliderWrapper);
+    autoPlay = setInterval(() => {
+        currentIdx++;
+        moveSlide(targetSlide, currentIdx);
+        if (currentIdx === targetSlide.itemCount) {
+            currentIdx = FIRST_INDEX;
+        }
+        updatePager(targetSlide, currentIdx);
+    }, TIME);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoPlay);
+    autoPlay = undefined;
+}
+
+export { initSlider, initSliderHandler, startAutoSlide };

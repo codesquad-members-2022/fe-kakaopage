@@ -1,5 +1,5 @@
-import { topBanner, webtoonData } from './data.js';
-import { initSlider, initSliderHandler } from './slider.js';
+import { /*topBanner,*/ webtoonData } from './data.js';
+import { initSlider, initSliderHandler, startAutoSlide } from './slider.js';
 
 function clickMenu() {
     const gnb = document.querySelector('.gnb ul');
@@ -9,25 +9,30 @@ function clickMenu() {
     const dayNavDefault = 'mon';
 
     gnb.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
+        if (e.target.closest('li').classList.contains('active')) return;
         toActivateNav(e.target, gnb);
     });
 
     lnb.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
-        toActivateNav(e.target, lnb);
-        const targetLnb = e.target.closest('li').getAttribute('data-lnb');
-        changeTopBanner(targetLnb);
+        fetch(`http://localhost:3000/banner/top`)
+            .then((response) => response.json())
+            .then((data) => {
+                if (e.target.closest('li').classList.contains('active')) return;
+                toActivateNav(e.target, lnb);
+                const targetLnb = e.target.closest('li').getAttribute('data-lnb');
+                changeTopBanner(targetLnb, data);
+            });
     });
 
     dayNav.addEventListener('click', (e) => {
-        if (e.target.closest('li').classList.contains('active')) return
+        if (e.target.closest('li').classList.contains('active')) return;
         toActivateNav(e.target, dayNav);
         const targetDay = e.target.closest('li').getAttribute('data-day');
         createWebtoonDayContents(targetDay);
     });
 
     changeTopBanner(topBannerDefault);
+    ㄴ;
     createWebtoonDayContents(dayNavDefault);
 }
 
@@ -38,10 +43,10 @@ function toActivateNav(target, nav) {
     clickTarget.classList.add('active');
 }
 
-function changeTopBanner(targetLnb) {
+function changeTopBanner(targetLnb, data) {
     const banner = document.querySelector('.top_banner');
     const bannerSlider = banner.querySelector('.slider_items');
-    const targetBannerData = topBanner[targetLnb];
+    const targetBannerData = data[targetLnb];
     const itemHtml = targetBannerData.map((data) => creatTopBannerHtml(data));
     bannerSlider.innerHTML = itemHtml.join('');
     initSlider(banner);
@@ -55,26 +60,24 @@ function getBadge(data) {
             switch (key) {
                 case 'up':
                     badgeSrc = 'badge_up_blue.svg';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'new':
                     badgeSrc = 'badge_new_red.svg';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
                 case 'age15':
                     badgeSrc = 'badge_15.png';
-                    badge += creatBadgeHtml(key, badgeSrc);
                     break;
             }
+            badge += creatBadgeHtml(key, badgeSrc);
         }
     });
-    return badge
+    return badge;
 }
 
 function createWebtoonDayContents(targetDay) {
     const items = webtoonData.map((data) => {
         if (data.week === targetDay || targetDay === 'all') {
-            return createItemType3Horizontal(data)
+            return createItemType3Horizontal(data);
         }
     });
     document.querySelector('.day_contents .item_list').innerHTML = items.join('');
@@ -99,11 +102,11 @@ function creatTopBannerHtml(data) {
                 </div>
                 <p class="desc">${data.description}</p>
             </div>
-        </div>`
+        </div>`;
 }
 
 function creatBadgeHtml(badgeName, src) {
-    return `<img src="./assets/images/ico/${src}" alt="${badgeName}">`
+    return `<img src="./assets/images/ico/${src}" alt="${badgeName}">`;
 }
 
 function createItemType3Horizontal(data) {
@@ -127,10 +130,11 @@ function createItemType3Horizontal(data) {
                 </div>
             </div>
         </a>
-    </li>`
+    </li>`;
 }
 (function () {
     clickMenu();
     const bannerSlider = document.querySelector('.top_banner');
     initSliderHandler(bannerSlider);
+    startAutoSlide(bannerSlider);
 })();
