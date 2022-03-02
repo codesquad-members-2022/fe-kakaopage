@@ -1,4 +1,4 @@
-import { IconSrc } from "./data/IconSrc.js"
+import IconSrc from "./data/IconSrc.json" assert { type: "json" };
 import DailyTop from "./data/DailyTop.json" assert { type: "json" };
 import GenreTop from "./data/GenreTop.json" assert { type: "json" };
 import SliderBanner from "./data/SliderBanner.json" assert { type: "json" };
@@ -29,9 +29,7 @@ export function createTopThumbHTML(comicInfo) {
 
 export function createTopListHTML(type){
     const comicData = type in DailyTop ? DailyTop[type] : GenreTop[type];
-    let listHTML = comicData.reduce((listHTML, data) => { 
-        return listHTML + createTopThumbHTML(data)
-    }, '');
+    let listHTML = comicData.reduce((listHTML, data) => listHTML + createTopThumbHTML(data), '');
     return listHTML;
 }
 
@@ -89,7 +87,7 @@ export function createInstallButtonHTML(){
 }
 
 function createSliderItemHTML(itemData){
-    const title = itemData.title.split('\n').reduce((title, contents) => { return title + `<p>${contents}</p>`}, '');
+    const title = itemData.title.split('\n').reduce((title, contents) => title + `<p>${contents}</p>`, '');
     return /* html */ `
         <li class="banner__item">
             <img class="banner__image" src="${itemData.imageSrc}" alt="메인배너 이미지">

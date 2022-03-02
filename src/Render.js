@@ -155,9 +155,7 @@ function createWeeklyNavNode(weekData){
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.forEach( data => {
-        $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)}
-    );
+    weekData.forEach( data => $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected));
 
     return $nav;
 }
