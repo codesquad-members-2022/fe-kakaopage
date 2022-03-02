@@ -1,9 +1,13 @@
+// 홈
+const DATA_HOME = {
+  subCategory: null,
+};
+
 // 웹툰
 const DATA_WEBTOON = {
-  category: ['홈', '요일연재', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL'],
+  subCategory: ['홈', '요일연재', '소년', '드라마', '로맨스', '로판', '액션무협', 'BL'],
 
-  // 0: 홈
-  0: {
+  홈: {
     mainBanner: [
       {
         title: '도사강호',
@@ -22,12 +26,12 @@ const DATA_WEBTOON = {
         path: 'static/thumb/main_toon_0_2.png',
       },
       {
-        title: '톱스타, 그 자체',
-        caption: '다시 톱스타가 될 수 있을까?',
+        title: '뒤끝작렬',
+        caption: '재벌가 이사,흙수저 청년으로 환생?!',
         tag: 'event',
         type: '웹툰',
         view: '5',
-        path: '',
+        path: 'static/thumb/main_toon_0_3.png',
       },
     ],
     gridMenu: [
@@ -41,8 +45,7 @@ const DATA_WEBTOON = {
     promotionBanner: ['promo_toon_0_1.png', 'promo_toon_0_2.png'],
   },
 
-  // 1: 요일연재
-  1: {
+  요일연재: {
     mainBanner: [
       {
         title: '화산전생',
@@ -63,8 +66,7 @@ const DATA_WEBTOON = {
     ],
   },
 
-  // 2: 소년
-  2: {
+  소년: {
     mainBanner: [
       {
         title: '도굴왕',
@@ -86,8 +88,7 @@ const DATA_WEBTOON = {
     gridMenu: [['독점 신작'], ['이벤트로 달리자'], ['ㄷㄱㅇ이벤트🎉']],
   },
 
-  // 3: 드라마
-  3: {
+  드라마: {
     mainBanner: [
       {
         title: '미슐랭스타',
@@ -109,8 +110,7 @@ const DATA_WEBTOON = {
     gridMenu: [['월간베스트#20'], ['#이벤트로 달리자'], ['완결까지#정주행']],
   },
 
-  // 4: 로맨스
-  4: {
+  로맨스: {
     mainBanner: [
       {
         title: '화홍',
@@ -132,8 +132,7 @@ const DATA_WEBTOON = {
     gridMenu: [['완결까지 정주행'], ['인기완결작'], ['기다무 플러스']],
   },
 
-  // 5: 로판
-  5: {
+  로판: {
     mainBanner: [
       {
         title: '프린세스',
@@ -155,8 +154,7 @@ const DATA_WEBTOON = {
     gridMenu: [['월간 베스트'], ['스테디셀러정주행'], ['기다무 플러스']],
   },
 
-  // 6: 액션무협
-  6: {
+  액션무협: {
     mainBanner: [
       {
         title: '무림제왕의 은퇴생활',
@@ -178,8 +176,7 @@ const DATA_WEBTOON = {
     gridMenu: [['독점 신작🔥'], ['이벤트로 달리자'], ['기다무 플러스']],
   },
 
-  // 7. BL
-  7: {
+  BL: {
     mainBanner: [
       {
         title: '낯선 농담',
@@ -211,47 +208,47 @@ const DATA_WEBTOON = {
 
 // 웹소설
 const DATA_WEBNOVEL = {
-  category: ['홈', '요일연재', '판타지', '로맨스', '로판', '무협', '판드', 'BL'],
-  0: {}, // 0: 홈
-  1: {}, // 1: 요일연재
-  2: {}, // 2: 판타지
-  3: {}, // 3: 로맨스
-  4: {}, // 4: 로판
-  5: {}, // 5: 무협
-  6: {}, // 6: 판드
-  7: {}, // 7: BL
+  subCategory: ['홈', '요일연재', '판타지', '로맨스', '로판', '무협', '판드', 'BL'],
+  홈: {},
+  요일연재: {},
+  판타지: {},
+  로맨스: {},
+  로판: {},
+  무협: {},
+  판드: {},
+  BL: {},
 };
 
 // 영화
 const DATA_MOVIE = {
-  category: ['홈', '랭킹', '액션', '애니메이션', '장르전체'],
-  0: {}, // 0: 홈
-  1: {}, // 1: 랭킹
-  2: {}, // 2: 액션
-  3: {}, // 3: 애니메이션
-  4: {}, // 4: 장르전체
+  subCategory: ['홈', '랭킹', '액션', '애니메이션', '장르전체'],
+  홈: {},
+  랭킹: {},
+  액션: {},
+  애니메이션: {},
+  장르전체: {},
 };
 
 // 방송
 const DATA_BROADCAST = {
-  category: ['홈', '예능', '드라마', '애니메이션', '해외시리즈', '장르전체'],
-  0: {}, // 0: 홈
-  1: {}, // 1: 예능
-  2: {}, // 2: 드라마
-  3: {}, // 3: 애니메이션
-  4: {}, // 4: 해외시리즈
-  5: {}, // 5: 장르전체
+  subCategory: ['홈', '예능', '드라마', '애니메이션', '해외시리즈', '장르전체'],
+  홈: {},
+  예능: {},
+  드라마: {},
+  애니메이션: {},
+  해외시리즈: {},
+  장르전체: {},
 };
 
 // 책
 const DATA_BOOK = {
-  category: ['홈', '연재', '베스트셀러', '랭킹', '스릴러', '자기계발'],
-  0: {}, // 0: 홈
-  1: {}, // 1: 연재
-  2: {}, // 2: 베스트셀러
-  3: {}, // 3: 랭킹
-  4: {}, // 4: 스릴러
-  5: {}, // 5: 자기계발
+  subCategory: ['홈', '연재', '베스트셀러', '랭킹', '스릴러', '자기계발'],
+  홈: {},
+  연재: {},
+  베스트셀러: {},
+  랭킹: {},
+  스릴러: {},
+  자기계발: {},
 };
 
-export { DATA_WEBTOON, DATA_WEBNOVEL, DATA_MOVIE, DATA_BROADCAST, DATA_BOOK };
+export { DATA_HOME, DATA_WEBTOON, DATA_WEBNOVEL, DATA_MOVIE, DATA_BROADCAST, DATA_BOOK };

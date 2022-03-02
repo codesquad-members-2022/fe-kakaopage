@@ -1,11 +1,13 @@
 import { renderer } from './renderer.js';
-import { addHandlerOnBanner } from './bannerHandler.js';
 
 const loader = {
+  // 홈
+  home() {
+    renderer.preparing();
+  },
   // 홈 - 웹툰
   webtoonHome(DATA) {
     renderer.mainBanner(DATA.mainBanner);
-    addHandlerOnBanner('main-banner');
     renderer.gridMenu(DATA.gridMenu);
     renderer.promotionBanner(DATA.promotionBanner);
   },
@@ -33,8 +35,8 @@ const loader = {
     renderer.mainBanner(DATA.mainBanner);
     renderer.gridMenu(DATA.gridMenu);
   },
-  // 액션 - 웹툰
-  webtoonAction(DATA) {
+  // 액션무협 - 웹툰
+  webtoonActionWuxia(DATA) {
     renderer.mainBanner(DATA.mainBanner);
     renderer.gridMenu(DATA.gridMenu);
   },
