@@ -1,0 +1,23 @@
+{
+    "name": "kakaopage-clone-fe",
+    "version": "1.0.0",
+    "description": "kakaopage clone(frontend)",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BB-choi/fe-kakaopage.git"
+    },
+    "author": "BB-choi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BB-choi/fe-kakaopage/issues"
+    },
+    "homepage": "https://fe-kakaopage.herokuapp.com",
+    "dependencies": {
+        "express": "^4.17.3"
+    }
+}
