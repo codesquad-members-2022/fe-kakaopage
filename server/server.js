@@ -33,9 +33,7 @@ const corsOptions = {
   optionsSuccessStatus: 200, // 응답 상태 200으로 설정
 };
 
-app.use(cors(corsOptions), (req, res, next) => {
-  next();
-});
+app.use(cors(corsOptions));
 
 app.get('/api', async (req, res) => {
   const { categoryUid, subCategoryUid } = req.query;

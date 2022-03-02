@@ -9,7 +9,7 @@
 - [ ] fetch API 및 HTTP Header 설정
 - [ ] XMLHTTPRequest 는 잘 사용하지 않으나 그 사용법을 알아두자.
 - [x] 웹 클라와 서버 통신 이해 및 csr, ssr
-- [ ] 탬플릿 렌더링의 장점
+- [x] 탬플릿 렌더링의 장점
 - [ ] http 용어 공부
 - [x] url 구조 공부
 
@@ -43,7 +43,7 @@ app.get('/*', (req, res) =>
 );
 ```
 
-위와 같이 하면 url에 임의 대로 (http://localhost:4000/asdfasasjkf) 아무 의미 없는 url을 입력해도 정상적으로 작동함. 혹은 app.get("/user", cb)과 같이 서버에서 데이터를 가져오려고 만든 uri인데 클라이언트에서 라우팅이 작동함.
+위와 같이 하면 url에 임의 대로 (http://localhost:4000/asdfasasjkf) 아무 의미 없는 url을 입력해도 정상적으로 작동함. 혹은 app.get("/user", cb)과 같이 서버에서 데이터를 가져오려고 만든 uri인데 클라이언트에서 라우팅이 작동함. (아래 예시)
 
 ```js
 // 1번: app.get("/user", cb)가 먼저 작동해 index.html을 렌더링 하지 않음
@@ -66,8 +66,8 @@ app.get('/user', (req, res) => {
   res.send('user');
 });
 
-//3번: 미들웨어를 사용
-app.use(미들웨어);
+//3번: /api로 시작하는 데이터만 요청하는 uri구분
+app.get('/api', apiRouter);
 app.get('/*', (req, res) =>
   res.sendFile(path.resolve(__dirname, 'static/index.html'))
 );
@@ -75,9 +75,7 @@ app.get('/*', (req, res) =>
 
 `그렇다면 서버와 통신할 api주소는 어떻게 관리할까?`
 
-1.  api를 처리하는 미들웨어를 사용해 uri주소가 /api로 시작하면 해당 작업 후 app.get("/\*")으로 정적파일과 함께 데이터를 보내기
-
-- 해당 방법으로 하면 데이터만 요청하는 api도 정적파일을 다시 렌더링해서 비효율적일 것 같음(어떤 요청을 하든 매번 index.html을 하게 되서)
+1. uri주소가 /api로 시작할 때 데이터만 전달하는 라우터 만들기
 
 2. 클라이언트를 렌더링하는 서버와 데이터를 처리하는 서버를 분리
 
@@ -122,21 +120,24 @@ fe-kakaopage
     └── server.js
 ```
 
-### cors() npm 라이브러리 없이 cors문제 해결하기
+### 진행중... cors() 미들웨어 없이 header 설정으로 cors origin 문제해결해보기
 
 `이전`
 
 ```js
-const cors = require('cors');
-const corsOption = {
-  origin: 'http://127.0.0.1:8080',
-  // origin: 'http://localhost:8080',
+const allowlist = ['http://127.0.0.1:8080', 'http://localhost:8080'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowlist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
   optionsSuccessStatus: 200, // 응답 상태 200으로 설정
 };
-
-app.use(cors(corsOption));
-
+app.use(cors(corsOptions));
 app.get('/api', cb);
 ```
 
