@@ -19,7 +19,7 @@ const timerInterval = () => {
     if (clickFlag) return;
     clickFlag = true;
     playEvent();
-    isEnd();
+    checkingSlideEnd();
   }, autoTime);
 };
 
@@ -61,7 +61,7 @@ const nonBlockingClick = () => {
   }, delay);
 };
 
-const isEnd = () => {
+const checkingSlideEnd = () => {
   const slideLength = document.querySelectorAll(".event-slider li").length;
   const clonedSlide = 2;
   const containerWidth = slideWidth * (slideLength - clonedSlide);
@@ -99,7 +99,7 @@ const slideShow = (e) => {
   clickFlag = true;
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
-  isEnd();
+  checkingSlideEnd();
 };
 
 export { slideShow, autoPlayStart, autoPlayStop, makingClone, changeTab };
