@@ -210,6 +210,9 @@ header {
 .banner-main {
     height: 30rem;
     background-color: gray;
+
+    /* transition: ease-in-out 1s; */
+    
 }
 
 .img-with-line {

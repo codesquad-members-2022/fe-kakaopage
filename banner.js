@@ -82,4 +82,3 @@ export function moveSlideLeft (widthRem, element, transitionTimeMs, maxWidth) {
             element.style.transform = `translateX(${xPos}rem)`;
         }, transitionTimeMs+1);
     }
-}
