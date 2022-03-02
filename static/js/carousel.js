@@ -77,8 +77,8 @@ const bindCaroulselEvent = () => {
     const clonedNodeCnt = [...carouselItems].filter(
         (el) => el.dataset.clone
     ).length;
-    const transitionDuration = "0.3s";
-    const customTransition = `transform ${transitionDuration} ease-out`;
+    const transitionDurationSec = 0.3;
+    const customTransition = `transform ${transitionDurationSec}s ease-out`;
 
     const setTransition = (transition) => {
         carouselItemWrapper.style.transition = transition;
