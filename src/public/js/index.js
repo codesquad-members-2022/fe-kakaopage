@@ -2,6 +2,7 @@ import { footer } from "./footer.js";
 import { nav } from "./nav.js"
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 import { handleCarousel } from "./handleCarousel.js";
+import { getWebtoonData } from "./utils.js";
 
 const init = () => {
     // 처음에 로드될 메뉴
@@ -14,6 +15,7 @@ const init = () => {
 
     // footer listener
     footer.detailSlide();
+    // getWebtoonData('https://korea-webtoon-api.herokuapp.com/kakao-page/');
 }
 
 init();

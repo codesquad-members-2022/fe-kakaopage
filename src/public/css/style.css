@@ -11,6 +11,8 @@
 @import 'topic.css';
 @import 'imagePoster.css';
 @import 'week.css';
+@import 'loading.css';
+@import 'nav.css';
 
 * {
     box-sizing: border-box;

@@ -1,6 +1,45 @@
+export const issueObj = {
+  1: [
+    "오늘 UP",
+    "오늘 신작",
+    "오리지널",
+    "완결까지 정주행",
+    "독립운동가 웹툰",
+    "오늘 랭킹",
+  ],
+  2: [],
+  3: [],
+  4: ["독점 신작", "이벤트로 달리자", "ㄸㅂㅇㄹ ㄹㅂㅇ"],
+  5: ["월간 베스트#20", "#이벤트로달리자", "완결까지#정주행"],
+  6: ["완결까지 정주행", "인기완결작", "기다무플러스"],
+  7: ["월간 베스트", "스테디셀러정주행", "기다무플러스"],
+  8: ["독점 신작", "이벤트로 달리자", "기다무 플러스"],
+  9: [
+    "지난달의 BL",
+    "인기 완결작",
+    "기다무 플러스",
+    "오늘도 선물",
+    "BL 소설",
+    "오늘의 이벤트",
+  ],
+};
+
+export const bannerObj = {
+  1: ["https://dn-img-page.kakao.com/download/resource?kid=6bplv/hzp2lQ1uLc/LmJGfStlg0XsKkdyKnl9S0"],
+  2: [],
+  3: [],
+  4: ["https://dn-img-page.kakao.com/download/resource?kid=3Np6h/hzmU1Pjzv1/0K8zMpa7vL0MRSvwsPeCrk"],
+  5: ["https://dn-img-page.kakao.com/download/resource?kid=gG3X4/hzmU3NbtxC/mjt0wetXU8Lk5SJRnJv9B1"],
+  6: ["https://dn-img-page.kakao.com/download/resource?kid=wDyww/hzp2d6uPwA/SgTyUdYJ6My0wEjXWz2W01"],
+  7: ["https://dn-img-page.kakao.com/download/resource?kid=zjKSo/hzhOlrWnde/l1Xf4DULjd2sXPrkJUs4n0"],
+  8: ["https://dn-img-page.kakao.com/download/resource?kid=bniO2F/hzb7wZb18D/YRTJQZ6XYjHeKlKvGXSuz1"],
+  9: ["https://dn-img-page.kakao.com/download/resource?kid=cdIyfJ/hzp2kYSfIv/FNzg6qKr9TCdjyUAOzeK80"]
+}
+
 export const WebtoonData = [
     {
       _id: 1,
+      categoryId: 4,
       title: "아빠가 너무 강함",
       img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
       subscriptions: "48.5",
@@ -14,6 +53,7 @@ export const WebtoonData = [
     },
     {
       _id: 2,
+      categoryId: 4,
       title: "천인의 신부",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bjVdJy/hyZ8tUUZ5V/skLruhRdIujVH996Dzxvw1&filename=th2",
       subscriptions: "48.5",
@@ -27,6 +67,7 @@ export const WebtoonData = [
     },
     {
       _id: 3,
+      categoryId: 4,
       title: "꼬마 영애님은 주연들을 길들인다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bQvfe8/hzb7yjh2WP/did3KdCAAbDrS0mgPk4tW0&filename=th2",
       subscriptions: "48.5",
@@ -40,6 +81,7 @@ export const WebtoonData = [
     },
     {
       _id: 4,
+      categoryId: 4,
       title: "아빠가 너무 강함",
       img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
       subscriptions: "48.5",
@@ -53,6 +95,7 @@ export const WebtoonData = [
     },
     {
       _id: 5,
+      categoryId: 4,
       title: "이차원 용병",
       img: "http://dn-img-page.kakao.com/download/resource?kid=qklnd/hyCvm4LfZf/xUw9OCkXIPkU5eNV5nuMb0&filename=th2",
       subscriptions: "103",
@@ -66,6 +109,7 @@ export const WebtoonData = [
     },
     {
       _id: 6,
+      categoryId: 4,
       title: "SSS급 죽어야 사는 헌터",
       img: "http://dn-img-page.kakao.com/download/resource?kid=2XcHF/hzacfyyDaP/AQvywUuQOQ9bmwXoyvCKbK&filename=th2",
       subscriptions: "91.9",
@@ -79,6 +123,7 @@ export const WebtoonData = [
     },
     {
       _id: 7,
+      categoryId: 6,
       title: "아빠가 너무 강함",
       img: "http://dn-img-page.kakao.com/download/resource?kid=P06x9/hzacbXZru0/w5BMgYBYL4pp9Rj1c4jaF0&filename=th2",
       subscriptions: "48.5",
@@ -92,6 +137,7 @@ export const WebtoonData = [
     },
     {
       _id: 8,
+      categoryId: 6,
       title: "1레벨 플레이어",
       img: "http://dn-img-page.kakao.com/download/resource?kid=6iJrN/hzmU1aifCt/9kruzeXja6oBtgyFLycHK1&filename=th2",
       subscriptions: "19.6",
@@ -105,6 +151,7 @@ export const WebtoonData = [
     },
     {
       _id: 9,
+      categoryId: 7,
       title: "어딜 봐요 매니저님",
       img: "http://dn-img-page.kakao.com/download/resource?kid=cqZA0V/hzacd84mNX/s3PtIZmocIWK7ABeG0ac31&filename=th2",
       subscriptions: "18.4",
@@ -118,6 +165,7 @@ export const WebtoonData = [
     },
     {
       _id: 10,
+      categoryId: 7,
       title: "경계인",
       img: "http://dn-img-page.kakao.com/download/resource?kid=c3xG5E/hzhOohQOpW/KoaGkWzM6mK9TPOIb2wbE0&filename=th2",
       subscriptions: "9.4",
@@ -131,6 +179,7 @@ export const WebtoonData = [
     },
     {
       _id: 11,
+      categoryId: 7,
       title: "백작가의 망나니가 되었다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=cbjtkI/hzacgYFTkq/PSAiujZt9kOXMOPj1XT7LK&filename=th2",
       subscriptions: "131",
@@ -144,6 +193,7 @@ export const WebtoonData = [
     },
     {
       _id: 12,
+      categoryId: 9,
       title: "정령왕의 딸",
       img: "http://dn-img-page.kakao.com/download/resource?kid=22qoX/hyCvmRQDSL/5JDKyDHkJgBOI69lg4qdJ1&filename=th2",
       subscriptions: "75",
@@ -157,6 +207,7 @@ export const WebtoonData = [
     },
     {
       _id: 13,
+      categoryId: 9,
       title: "옷소매 붉은 끝동",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bdXfpL/hzb7sQkGfQ/NT4fYxdUKZWbW7v9Sj4D81&filename=th2",
       subscriptions: "58.4",
@@ -170,6 +221,7 @@ export const WebtoonData = [
     },
     {
       _id: 14,
+      categoryId: 3,
       title: "미필적 고의에 의한 관계",
       img: "http://dn-img-page.kakao.com/download/resource?kid=b60gs5/hyQ9S2BUwT/Vv2RtbZab85B2G8UKpaxX0&filename=th2",
       subscriptions: "35.2",
@@ -183,6 +235,7 @@ export const WebtoonData = [
     },
     {
       _id: 15,
+      categoryId: 3,
       title: "내일의 으뜸",
       img: "http://dn-img-page.kakao.com/download/resource?kid=coktW/hzb7AOnehU/IcN3VcXjLBdbTpRPv8sqQK&filename=th2",
       subscriptions: "23.4",
@@ -196,6 +249,7 @@ export const WebtoonData = [
     },
     {
       _id: 16,
+      categoryId: 4,
       title: "오라버니가 너무 순해서 걱정이다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=9AhFq/hzb7v7qYBA/VfbltpT4NcWVRRvBSo7ySK&filename=th2",
       subscriptions: "54.1",
@@ -209,6 +263,7 @@ export const WebtoonData = [
     },
     {
       _id: 17,
+      categoryId: 5,
       title: "왜 이러세요, 공작님!",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bpui9e/hyVkMY297U/x6PEfl4IECW7Fi2AkBXL31&filename=th2",
       subscriptions: "131.7",
@@ -222,6 +277,7 @@ export const WebtoonData = [
     },
     {
       _id: 18,
+      categoryId: 4,
       title: "2회차는 레드카펫으로",
       img: "http://dn-img-page.kakao.com/download/resource?kid=jiR4L/hzb7s4AGjp/rSkNu0yVQGFTB3vcnA7Yd1&filename=th2",
       subscriptions: "35.5",
@@ -236,6 +292,7 @@ export const WebtoonData = [
     },
     {
       _id: 19,
+      categoryId: 5,
       title: "흑막을 버리는 데 실패했다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=liDhp/hzp2mPH4pp/avQh3sIi2DG85rCRUegvG0&filename=th2",
       subscriptions: "29.9",
@@ -250,6 +307,7 @@ export const WebtoonData = [
     },
     {
       _id: 20,
+      categoryId: 7,
       title: "절대무신",
       img: "http://dn-img-page.kakao.com/download/resource?kid=d7xIJb/hy41GOLe3P/buSZKwUMyLBtvX0KxkWSik&filename=th2",
       subscriptions: "61.1",
@@ -264,6 +322,7 @@ export const WebtoonData = [
     },
     {
       _id: 21,
+      categoryId: 7,
       title: "비뢰도",
       img: "http://dn-img-page.kakao.com/download/resource?kid=cyq0ma/hzb7yDg2ke/bIzebxQnLC3RJj7mkrwcUK&filename=th2",
       subscriptions: "104.1",
@@ -278,6 +337,7 @@ export const WebtoonData = [
     },
     {
       _id: 22,
+      categoryId: 7,
       title: "호위무사",
       img: "http://dn-img-page.kakao.com/download/resource?kid=O2gvI/hy41MPonM0/exDflmPQEKmkXbFHoWjRsk&filename=th2",
       subscriptions: "23.5",
@@ -292,6 +352,7 @@ export const WebtoonData = [
     },
     {
       _id: 23,
+      categoryId: 6,
       title: "마검왕",
       img: "http://dn-img-page.kakao.com/download/resource?kid=L1YaG/hyCvfFupwI/RKKFw4IwDhfsppjUQooOY1&filename=th2",
       subscriptions: "229.8",
@@ -306,6 +367,7 @@ export const WebtoonData = [
     },
     {
       _id: 24,
+      categoryId: 8,
       title: "나쁜 색기 [개정판]",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bhEjzw/hzhOfkJ4Le/Qk9yTzliowfFfy7i3lSYfK&filename=th2",
       subscriptions: "6.8",
@@ -320,6 +382,7 @@ export const WebtoonData = [
     },
     {
       _id: 25,
+      categoryId: 4,
       title: "우연한 친구",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bWRnqq/hy41LwsibS/tFl0ThHhYEwCWrTjyk2U2k&filename=th2",
       subscriptions: "8.9",
@@ -334,6 +397,7 @@ export const WebtoonData = [
     },
     {
       _id: 26,
+      categoryId: 4,
       title: "비선실세 레이디",
       img: "http://dn-img-page.kakao.com/download/resource?kid=JSFp0/hzhOek32wE/p5mq0enZgZ8cgPrEHFit5k&filename=th2",
       subscriptions: "8.9",
@@ -348,6 +412,7 @@ export const WebtoonData = [
     },
     {
       _id: 27,
+      categoryId: 4,
       title: "이계 검왕 생존기",
       img: "http://dn-img-page.kakao.com/download/resource?kid=BMO62/hy41I0Dsag/kamDTkurP02yHHrzcZG2S0&filename=th2",
       subscriptions: "8.9",
@@ -362,6 +427,7 @@ export const WebtoonData = [
     },
     {
       _id: 28,
+      categoryId: 4,
       title: "아 하세요, 금수저 들어갑니다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=lerKD/hyZ8tgaoFo/lqMwFKStxEtUCXNQLitEaK&filename=th2",
       subscriptions: "8.1",
@@ -376,6 +442,7 @@ export const WebtoonData = [
     },
     {
       _id: 29,
+      categoryId: 4,
       title: "폭군의 보호자는 악역 마녀입니다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=bOh4De/hy41MhgW8I/UWsfQmQX6Ril8JxTxMXbw0&filename=th2",
       subscriptions: "7.2",
@@ -390,6 +457,7 @@ export const WebtoonData = [
     },
     {
       _id: 30,
+      categoryId: 4,
       title: "해골병사는 던전을 지키지 못했다",
       img: "http://dn-img-page.kakao.com/download/resource?kid=b7MEYH/hyZ8tNwRHb/pCS6ElNU0zioYLDFfjZkR1&filename=th2",
       subscriptions: "5.2",
