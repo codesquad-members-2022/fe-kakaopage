@@ -30,9 +30,59 @@
 
 # 고민거리 (그룹리뷰용 정리)
 
-### 1. closure 이해 및 closure의 반환 값들
+### 진행중.... 1. closure 이해 및 closure의 반환 값들
 
-### 2. api요청 이해 및 고민
+# closure 반환 함수
+
+1번에서 2번으로 pr 피드백에 따라 수정했지만, 명확한 차이를 모르겠다.
+
+### 1번 함수 그 자체를 반환
+
+```js
+export function handleMove() {
+  let idx = 0;
+
+  function renderCarouselIndex() {
+    // 생략
+  }
+  return {
+    renderCarouselIndex,
+    renderButtons() {
+      // 생략
+    },
+    initMove() {
+      // 생략
+    },
+  };
+}
+```
+
+<img width="704" alt="클로저 바로 함수" src="https://user-images.githubusercontent.com/71386219/156111129-fe9c0a9b-123f-4453-b23a-c790ed9f4284.png">
+
+### 2번 객체 형태로 반환
+
+```js
+export function handleMove() {
+  let idx = 0;
+
+  function renderCarouselIndex() {
+    // 생략
+  }
+  return {
+    renderCarouselIndex,
+    renderButtons: () => {
+      // 생략
+    },
+    initMove: function () {
+      // 생략
+    },
+  };
+}
+```
+
+<img width="434" alt="클로져 화살표함수 사용" src="https://user-images.githubusercontent.com/71386219/156111119-0ad7afcc-f1c9-46ab-afab-ad6e9e8bd5b5.png">
+
+### 해결: 2. api요청 이해 및 고민
 
 ssr, scr차이와 배포이후에 프론트와 백앤드가 어떻게 통신하는지 이해하고 적용해봄
 페이지를 라우팅하는 url과 데이터를 요청하는 api를 어떻게 구분할까 고민. 예를 들어, 프로젝트에서는 server.js에서 static폴더에 있는 정적인 리소스들을 아래와 같은 방식으로 관리하고 있음. 그런데 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링도록 설정.
