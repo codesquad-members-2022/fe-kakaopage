@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const data = require('./data/data.json');
 
 const app = express();
@@ -27,7 +28,7 @@ app.get('/webtoon/:day', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/express.html');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(process.env.PORT || PORT, () => {
