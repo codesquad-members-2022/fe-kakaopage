@@ -2,13 +2,13 @@ export const gridList = (data, day) => {
   // 컴포넌트 파일에 이러한 데이터 조건이 들어가면 안되지 않을까
   // 그렇다고 앞에다 두면 너무 더럽지만, 직관적인긴 함
   // 매직넘버 10
-  const UNTILDATA = 10;
   const { icon, toonTest } = data;
+  const UNTIL_DATA = 10;
 
   const filterTopView = toonTest
-    .filter((toon, i) => toon.day === day)
+    .filter((toon) => toon.day === day)
     .sort((a, b) => b.view - a.view)
-    .slice(0, UNTILDATA);
+    .slice(0, UNTIL_DATA);
 
   const template = filterTopView
     .map(
