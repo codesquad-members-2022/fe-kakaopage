@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./util.css);
+@import url(./section/index.css);
+
+:root {
+  /*color*/
+  --main-color: rgb(227, 241, 253);
+  --white-color: #fff;
+  --yellow-color: #f1c164;
+  --block-color: #000;
+  --red-color: #ff0000;
+  --blue-color: #0000cd;
+  --orange-color : #ff5722
+  
+  /*font-size*/
+  --font-size-XXL: 1.375rem;
+  --font-size-XL: 1.25rem;
+  --font-size-L: 1.125rem;
+  --font-size-M: 1rem;
+  --font-size-S: 0.875rem;
+  --font-size-XS: 0.75rem;
+  --font-size-XXS: 0.75rem;
+
+  /*font-weight*/
+  --font-max-bold : 900;
+  --font-bold: 700;
+  --font-semi-bold: 500;
+  /*size*/
+  --page-width: 660px;
+  --border-radius: 10px;
+}
