@@ -23,19 +23,13 @@ export function setBannerOrderText(maxIndex, currentIndex){
 
 function indexCounter(){
     const $banner_item = document.querySelectorAll('.banner__item');
+    const firstIndex = 0;
     const maxIndex = $banner_item.length - 1;
-    const firstIndex = 1;
     let index = firstIndex;
 
     return (direction) => {
-        if(direction === 'left'){
-            index = --index < 0 ? maxIndex - firstIndex : index;
-        }
-
-        if(direction === 'right'){
-            index = ++index > maxIndex ? firstIndex : index;
-        }
-
+        index = ( ( direction === 'left' ? index - 1 : index + 1 ) + maxIndex ) % maxIndex;
+        index = direction === 'right' && index === 0 ? maxIndex : index;
         return [maxIndex, index];
     }
 }
@@ -74,21 +68,17 @@ function handleClickEvent(event){
     if(currentIndex === 0 || currentIndex === maxIndex){
         const movementDelay = 350;
         [maxIndex, currentIndex] = countSliderIndex(direction);
-        setTimeout(() => { 
-            backToItem(defaultMovePercent * currentIndex, movementDelay) 
-        }, movementDelay);
+        setTimeout(() => backToItem(defaultMovePercent * currentIndex), movementDelay);
     }
 
     setBannerOrderText(maxIndex, currentIndex);
 }
 
 /* 무한 슬라이드 처리 */
-function backToItem(xPercent, delay) {
+function backToItem(xPercent) {
     setTransitionSpeed(0);
     setTransformTranslateX(xPercent);
-    setTimeout(() => {
-        setTransitionSpeed();
-    }, 50);
+    setTimeout(() => setTransitionSpeed(), 50);
 }
 
 function setTransformTranslateX(xPercent){
