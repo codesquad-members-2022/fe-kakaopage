@@ -70,8 +70,6 @@ const isAlreadyClicked = (eventTarget) => {
   }
 };
 
-const getData = (globalCategory) => dataMap[globalCategory];
-
 const getCurrentCategory = (nav) =>
   select(`.${nav}__item--active`) ? select(`.${nav}__item--active`).dataset.category : null;
 
