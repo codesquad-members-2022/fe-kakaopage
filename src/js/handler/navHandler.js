@@ -59,6 +59,10 @@ const loadCategoryContent = (globalCategory, subCategory) => {
   updateDocumentTitle(globalCategory);
 };
 
+const getSubCategoryList = (globalCategory) => dataMap[globalCategory].subCategory;
+
+const getSubCategoryData = (globalCategory, subCategory) => dataMap[globalCategory][subCategory];
+
 const isAlreadyClicked = (eventTarget) => {
   if (eventTarget.dataset.active === 'on') {
     window.scrollTo(0, 0);
