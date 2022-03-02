@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.static('src'));
 
 app.get('/data', (req, res) => {
-  res.send(data);
+  res.json(data);
 });
 
 app.get('/webtoon', (req, res) => {
@@ -30,6 +30,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/express.html');
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Example server listening on port ${PORT}`);
 });
