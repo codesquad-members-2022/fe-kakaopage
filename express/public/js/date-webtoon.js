@@ -1,4 +1,4 @@
-import { webtoonData } from './data/webtoon-data/data.js';
+import { webtoonData } from './data/webtoon-data/webtoon-data.js';
 import { contents } from './html-template.js';
 
 export default function init() {
