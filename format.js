@@ -1,12 +1,18 @@
-import { createBannerMain, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
+import { createBannerAd, createBannerMain, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
 import { dummy } from "./sources.js"
 import { pickFromArr } from "./util.js"
 
-export const createFormatBannerMain = () => {
+export const createFormatBannerMain = (imgArr) => {
     const formatBannerMain = `
 <div class="slider">
+    <div class="banner-main-btn left">
+        <img src="https://user-images.githubusercontent.com/95198109/155870133-8fadf732-2adf-4fdf-8679-d399f94c17d6.svg" alt="prev-button">
+    </div>
     <div class="banner-main">
-        ${createBannerMain()}
+        ${createBannerMain(imgArr)}
+    </div>
+    <div class="banner-main-btn right">
+        <img src="https://user-images.githubusercontent.com/95198109/155870179-12b75bb8-5c4c-420d-9f56-6928da027daf.svg" alt="next-button">
     </div>
 </div>`
 
@@ -40,12 +46,17 @@ export const createFormatSummaryB= (a, b, c) => {
 
 export const createFormatBannerAd = () => {
     const FormatBannerAd = `
-<div class="banner-ad">
-    <button class="banner-ad-button"><</button>
-    <div class="banner-ad-wrap ">
-        <img src=${pickFromArr(dummy.slideBannerEventImg)} class="banner-ad-wrap-img">
+<div class="slider ad">
+    <div class="banner-ad-btn left">
+        <img src="https://user-images.githubusercontent.com/95198109/155870133-8fadf732-2adf-4fdf-8679-d399f94c17d6.svg" alt="prev-button">
     </div>
-    <button class="banner-ad-button">></button>
+    <div class="banner-ad">
+        ${createBannerAd(dummy.slideBannerEventImg)}
+    </div>
+    <div class="banner-ad-btn right">
+        <img src="https://user-images.githubusercontent.com/95198109/155870179-12b75bb8-5c4c-420d-9f56-6928da027daf.svg" alt="next-button">
+    </div>
+
 </div>`
 
     return FormatBannerAd

@@ -140,15 +140,28 @@ export function createContentFormsBigger(num){
     return contentFormBigger
 }
 
-export function createBannerMain(){
+export function createBannerMain(imgArr){
     let format = '';
 
-    for(let i = 0; i < 5; i++){
+    for(let i = 0; i < imgArr.length; i++){
         format += `
             <div class="img-with-line">
-                <img class="img-with" src=${dummy.slideBannerMainImg[i]}>
+                <img class="img-with" src=${imgArr[i]}>
                 <div class="line-with">${pickFromArr(dummy.contentDesc)}</div>
             </div>`
+    }
+
+    return format
+}
+
+export function createBannerAd(imgArr){
+    let format = '';
+
+    for(let i = 0; i < imgArr.length; i++){
+        format += `
+        <div class="banner-ad-img-wrap ">
+            <img src=${imgArr[i]} class="banner-ad-wrap-img">
+        </div>`
     }
 
     return format

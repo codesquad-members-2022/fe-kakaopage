@@ -1,6 +1,7 @@
-import { transformBannerMain } from "./banner.js";
+import { setSlideBanner } from "./banner.js";
 import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
 import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
+import { dummy } from "./sources.js";
 import { addClickEventToElement, addToContents, combineFormats } from "./util.js";
 
 export function initPage(){
@@ -18,7 +19,7 @@ export const renderPageInit = () => {
 
 export const renderPageHome = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryA(), createFormatBannerAd(), createFormatDailyTop(),
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryA(), createFormatBannerAd(), createFormatDailyTop(),
         createFormatImgWithLine(), createFormatContentsBox('로맨스 TOP'), createFormatContentsBox('로판 TOP'), createFormatContentsBox('드라마 TOP'),
         createFormatContentsBox('BL/GL TOP'), createFormatContentsBox('소년 TOP'), createFormatContentsBox('액션무협 TOP'),
         createFormatRanking('일간 랭킹 TOP'), createFormatBannerSub()
@@ -29,35 +30,33 @@ export const renderPageHome = () => {
     addToContents(contents);
     addSelectedToday();
     document.getElementById('genre-home').classList.add('selected');
-    transformBannerMain(45);
+    setSlideBanner(".banner-main", dummy.slideBannerMainImg, 45, 500, true, 2000);
 }
 
 export const renderPageDaily = () => {
     const formats = [
-        createFormatBannerMain(), createFormatDailyWebtoon()
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatDailyWebtoon()
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
     addSelectedToday();
-    transformBannerMain(45);
 }
 
 export const renderPageWebtoon = () => {
     const formats = [
-        createFormatBannerMain(), createFormatHotizontalList(), createFormatHorizontalContents('🔥HOT 최근 프로모션 진행작')
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatHotizontalList(), createFormatHorizontalContents('🔥HOT 최근 프로모션 진행작')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageTeen = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryB('독점 신작', '이벤트로 달리자', 'ㄸㅂㅇㄹ ㄹㅂㅇ'), 
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryB('독점 신작', '이벤트로 달리자', 'ㄸㅂㅇㄹ ㄹㅂㅇ'), 
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 소년 TOP'),
         createFormatContentsBoxBigger('[ORIGINAL] 믿고보는 독.점.연.재'), createFormatHorizontalContents('[GIFT] 오늘의 선물🎁'),
         createFormatHorizontalContents('[HOT] 지금 뜨는 인기작'), createFormatHorizontalContents('[PICK] 요일 웹툰 추천작'),
@@ -69,12 +68,11 @@ export const renderPageTeen = () => {
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageDrama = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryB('월간베스트#20', '#이벤트로달리자', '완결까지#정주행'),
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryB('월간베스트#20', '#이벤트로달리자', '완결까지#정주행'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 드라마 TOP'),
         createFormatContentsBox('믿고 보는 독점/선연재!'), createFormatHorizontalContents('지금 UP 뜬 추천작'),
         createFormatHorizontalContents('오늘의 선물🎁 대여권 받자!'), createFormatHorizontalContents('지금 뜨는 인기작'),
@@ -91,12 +89,11 @@ export const renderPageDrama = () => {
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageRomance = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryB('완결까지 정주행', '인기완결작', '기다무플러스'),
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryB('완결까지 정주행', '인기완결작', '기다무플러스'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 로맨스 TOP'),
         createFormatHorizontalContents('믿고보는 독!점!'), createFormatContentsBoxBigger('어디에도 없는 오리지널 추천작'),
         createFormatHorizontalContents('지금뜨는 인기작'), createFormatContentsBoxBigger('더 많이, 더 빠르게! 기다리면무료+'),
@@ -108,16 +105,15 @@ export const renderPageRomance = () => {
         createFormatTotal('로맨스 전체')
 
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
     
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageRofan = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryB('월간 베스트', '스테디셀러정주행', '기다무 플러스'),
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryB('월간 베스트', '스테디셀러정주행', '기다무 플러스'),
         createFormatContentsBoxBigger('오늘의 추천'), createFormatBannerAd(), createFormatRanking('일간 로맨스판타지 TOP'),
         createFormatContentsBoxBigger('금요일, 믿고 보는 독.점.연.재'), createFormatHorizontalContents('기다림은 반, 재미는 두배? 12시간 무료!'),
         createFormatHorizontalContents('지금 뜨는 인기작'), createFormatHorizontalContents('최신 연재작'), createFormatHorizontalContents('요일 웹툰 추천작!'),
@@ -126,16 +122,15 @@ export const renderPageRofan = () => {
         createFormatContentsBoxBigger('#걸크러시: 악녀, 가주, 기사까지 모두 모였다!'), createFormatContentsBoxBigger('#신박한 로판 사전: 이런 소재 찾고 계신가요?'),
         createFormatHorizontalContents('#정주행: 추천 완결작'), createFormatHorizontalContents('베스트 셀러'), createFormatTotal('로판 전체')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageAction = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryB('독점 신작🔥', '이벤트로 달리자', '기다무 플러스'), 
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryB('독점 신작🔥', '이벤트로 달리자', '기다무 플러스'), 
         createFormatContentsBoxBigger('오늘의 추천!'), createFormatBannerAd(), createFormatContentsBox('일간 액션/무협 TOP'),
         createFormatContentsBoxBigger('ORIGINAL 독점 연재'), createFormatHorizontalContents('지금 뜨는 인기작'),
         createFormatHorizontalContents('혜택함🎁 시간 삭제 버튼!'), createFormatContentsBoxBigger('더 많이, 더 빠르게 기다리면 무료 플러스'),
@@ -147,12 +142,11 @@ export const renderPageAction = () => {
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
 export const renderPageBL = () => {
     const formats = [
-        createFormatBannerMain(), createFormatSummaryA(), createFormatHorizontalContents('오늘의 추천!'), createFormatRanking('일간 BL TOP'),
+        createFormatBannerMain(dummy.slideBannerMainImg), createFormatSummaryA(), createFormatHorizontalContents('오늘의 추천!'), createFormatRanking('일간 BL TOP'),
         createFormatBannerAd(), createFormatHorizontalContents('믿고보는 독점/선연재'), createFormatHorizontalContents('취향저격 추천작'),
         createFormatHorizontalContents('지금뜨는 인기작'), createFormatHorizontalContents('스테디셀러: 완결까지 정주행'),
         createFormatHorizontalContents('더 많이, 더 빠르게! 기다리면무료+'), createFormatContentsBox('#성공적으로 연애하는 방법'),
@@ -160,16 +154,15 @@ export const renderPageBL = () => {
         createFormatContentsBox('기다림은 반, 재미는 두 배? 12시간 무료!'), createFormatHorizontalContents('시대, 판타지'),
         createFormatHorizontalContents('매혹의 성역'), createFormatTotal('BL 전체')
     ];
-    const contents = combineFormats(formats)
+    const contents = combineFormats(formats);
 
     initPage();
     addToContents(contents);
-    transformBannerMain(45);
 }
 
-export const createPageNotYet = () => {
+export const renderPageNotYet = () => {
     initPage();
-    addToContents(createFormatNotYet())
+    addToContents(createFormatNotYet());
 }
 
 export const genreFunction = {
@@ -185,17 +178,19 @@ export const genreFunction = {
 }
 
 export const headerFunction = {
-    home: () => createPageNotYet(),
+    home: () => renderPageNotYet(),
     webtoon: () => renderPageHome(),
-    webnovel: () => createPageNotYet(),
-    movie: () => createPageNotYet(),
-    broad: () => createPageNotYet(),
-    book: () => createPageNotYet(),
+    webnovel: () => renderPageNotYet(),
+    movie: () => renderPageNotYet(),
+    broad: () => renderPageNotYet(),
+    book: () => renderPageNotYet(),
 }
 
 function addSelectedToday(){
     const days = document.querySelectorAll('.day');
-    const today = new Date().getDay()-1;
+    let today = new Date().getDay()-1;
+
+    if(today === -1) today = 6;
 
     days[today].classList.add('selected');
 }
