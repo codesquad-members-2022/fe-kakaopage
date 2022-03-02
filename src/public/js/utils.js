@@ -31,13 +31,11 @@ export const scrollMove = (moveY) => {
         } else {
             scrollY = Math.max(moveY, window.pageYOffset + vy);
         }
-    window.scrollTo(0, scrollY);
+        window.scrollTo(0, scrollY);
 
 
-    if(scrollY >= moveY && direction > 0) {
-        clearInterval(loop);
-    } else if(scrollY <= moveY && direction < 0) {
-        clearInterval(loop);
-    }
+        if(scrollY >= moveY && direction > 0 || scrollY <= moveY && direction < 0) {
+            clearInterval(loop);
+        }
     }, 10);
 }
