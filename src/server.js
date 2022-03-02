@@ -12,7 +12,7 @@ app.use(express.static("src/public"));
 app.use(cors());
 
 app.listen(PORT, () => {
-  console.log(`✅ Server listenting on http://localhost:${PORT} 🚀`);
+  console.log(`✅ Server listenting on http://0.0.0.0:${PORT} 🚀`);
 });
 
 app.get('/', (req, res) => {
