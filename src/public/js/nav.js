@@ -1,4 +1,4 @@
-import { $, days, fetchData } from "./utils.js";
+import { $, days, fetchData, scrollMove } from "./utils.js";
 import { handleCategoryMenu } from "./handleCategoryMenu.js";
 import { ContentListInfos } from "./ContentListInfos.js";
 import { LoadingComponent } from "../component/LoadingComponent.js";
@@ -8,6 +8,9 @@ export const nav = {
         const categoryElement = $(".main__nav-ul");
         categoryElement.addEventListener("click", ({ target }) => {
             if(target.tagName === 'A') {
+                const navList = $('.nav-list');
+                navList?.remove();
+
                 this.removeLinkColor(categoryElement.children, 'main__nav_link_active');
                 target.classList.add('main__nav_link_active');
                 handleCategoryMenu(target.dataset.id);
@@ -30,11 +33,24 @@ export const nav = {
 
             if(weeksData) {
                 const loadingElement = $('.loading');
+                weeks.remove();
                 setTimeout(() => {
                     loadingElement.remove();
-                    weeks.remove();
                 }, 200);
                 contents.insertAdjacentHTML("beforeend", ContentListInfos.addWeeksComponent(weeksData));
+            }
+        });
+    },
+    remoteClick() {
+        const navList = $('.nav-list');
+        navList.addEventListener("click", (e) => {
+            if(e.target.className !== 'nav-list_link') return;
+            e.preventDefault();
+
+            const component = document.querySelector(e.target.hash);
+            if(component) {
+                const offTop = component.getBoundingClientRect().top + window.pageYOffset - 170;
+                scrollMove(offTop);
             }
         });
     },

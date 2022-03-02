@@ -5,7 +5,7 @@ const IssueBox = (text) => {
 }
 
 export const IssueComponent = (issues) => {
-    return /* html */ `<article class="issue">
+    return /* html */ `<article id="issue" class="issue">
                 <div class="issue__inner">
                     ${issues.length ? 
                         issues.reduce((prev, cur) => prev += IssueBox(cur), '') : ''}
