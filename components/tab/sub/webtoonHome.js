@@ -8,9 +8,10 @@ import { createRecommend } from "../../common/recommend/index.js";
 import { createRecommendEvent } from "../../common/recommendEvent/index.js";
 import { createAdSlide } from "../../common/adSlide/index.js";
 import { BANNER, GENRE_TOP, RECOMMEND_BUTTONS } from "../../../js/constants.js";
+import { createCarousel } from "../../common/carousel/index.js";
 
 export function createTabWebtoonHome() {
-  const largeBanner = createBanner(BANNER.LARGE);
+  const carousel = createCarousel(BANNER.LARGE);
   const recommend = createRecommend(RECOMMEND_BUTTONS);
   const adSlide = createAdSlide();
   const dayTop = createDayTop();
@@ -25,7 +26,7 @@ export function createTabWebtoonHome() {
   const button = createButton();
 
   const nodes = [
-    largeBanner,
+    carousel,
     recommend,
     adSlide,
     dayTop,

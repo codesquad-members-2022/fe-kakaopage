@@ -1,4 +1,3 @@
-import { CSS_NAME_LENGTH } from "../../../js/constants.js";
 import { getRandomString } from "../../../js/utils.js";
 
 // TODO: status로 아이콘 구분해서 랜더링
@@ -44,24 +43,24 @@ let banner,
 
 function getStyle(size) {
   const isSizeLarge = size === "large";
-  banner = getRandomString({ length: CSS_NAME_LENGTH });
-  img = getRandomString({ length: CSS_NAME_LENGTH });
-  list = getRandomString({ length: CSS_NAME_LENGTH });
-  bannerTitle = getRandomString({ length: CSS_NAME_LENGTH });
-  icon = getRandomString({ length: CSS_NAME_LENGTH });
-  icon2 = getRandomString({ length: CSS_NAME_LENGTH });
-  category = getRandomString({ length: CSS_NAME_LENGTH });
-  blockIcon = getRandomString({ length: CSS_NAME_LENGTH });
-  viewIcon = getRandomString({ length: CSS_NAME_LENGTH });
-  viewsNumber = getRandomString({ length: CSS_NAME_LENGTH });
-  description = getRandomString({ length: CSS_NAME_LENGTH });
-  text = getRandomString({ length: CSS_NAME_LENGTH });
-  container = getRandomString({ length: CSS_NAME_LENGTH });
+  banner = getRandomString();
+  img = getRandomString();
+  list = getRandomString();
+  bannerTitle = getRandomString();
+  icon = getRandomString();
+  icon2 = getRandomString();
+  category = getRandomString();
+  blockIcon = getRandomString();
+  viewIcon = getRandomString();
+  viewsNumber = getRandomString();
+  description = getRandomString();
+  text = getRandomString();
+  container = getRandomString();
 
   return `
 .${banner} {
   margin: auto;
-  width: ${isSizeLarge ? "720px" : "335px"};
+  min-width: ${isSizeLarge ? "720px" : "335px"};
   height: ${isSizeLarge ? "480px" : "225px"};
   border-radius: ${isSizeLarge ? "0px" : "10px"};
   overflow: hidden;
@@ -153,26 +152,3 @@ function getStyle(size) {
 }
 `;
 }
-
-// TODO: 배너를 불러서 사용하는 컨테이너에서 버튼, progress 그리기
-// .banner__btn-prev {
-//   width: 40px;
-//   height: 40px;
-//   position: relative;
-//   bottom: 230px;
-//   left: 20px;
-//   background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56");
-//   background-size: cover;
-//   cursor: pointer;
-// }
-
-// .banner__btn-next {
-//   width: 40px;
-//   height: 40px;
-//   position: relative;
-//   bottom: 270px;
-//   left: 660px;
-//   background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93");
-//   background-size: cover;
-//   cursor: pointer;
-// }
