@@ -43,15 +43,6 @@ export const Render = {
     addComponent("footer", footerInfo());
   },
 
-  toon_main: () => {
-    addComponent(".toon-main", toonMain());
-    addComponent(".toon-jumbotron", jumbotron(data));
-    addComponent(".toon-todaymenu", gridMenu(data));
-    addComponent(".toon-ad-banner-1", adBanner(data, "미슐랭스타"));
-    addComponent(".toon-daytop", dayPage(data, dayPageList));
-    addComponent(".toon-daytop_album", gridList(data, getToday()));
-  },
-
   //* active functions
   header_home: (target) => {
     toggleList(target, "check");
@@ -63,6 +54,7 @@ export const Render = {
     toggleList(target, "check");
     addComponent(".toon-category", category(categoryData));
     Render.toon_main();
+    Render.toonDaySeriesTop();
   },
 
   header_novel: (target) => {
@@ -89,6 +81,20 @@ export const Render = {
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
   },
 
+  // home_main:
+  // novel_main:
+  // movie_main:
+  // broadcast_main:
+  // book_main:
+  toon_main: () => {
+    addComponent(".toon-main", toonMain());
+    addComponent(".toon-jumbotron", jumbotron(data));
+    addComponent(".toon-todaymenu", gridMenu(data));
+    addComponent(".toon-ad-banner-1", adBanner(data, "미슐랭스타"));
+    addComponent(".toon-daytop", dayPage(data, dayPageList));
+    addComponent(".toon-daytop_album", gridList(data, getToday()));
+  },
+
   toonCategory: (target = $(".toon-category a:first-child")) => {
     if (!target) return;
     toggleList(target, "check");
@@ -112,10 +118,10 @@ export const Render = {
     toggleList(target, "check");
     let clickDay = target.innerHTML;
 
-    // 수목금토일완결 데이터없어서 임시용
-    ["수", "목", "금", "토", "일", "완결"].some((v) => v === clickDay)
-      ? (clickDay = "월")
-      : null;
+    // [수목금토일완결] 데이터 없어서 임시용
+    clickDay = ["월", "수", "금", "일"].some((v) => v === clickDay)
+      ? "월"
+      : "화";
 
     addComponent(".toon-daytop_album", gridList(data, clickDay));
   },
