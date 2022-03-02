@@ -7,7 +7,7 @@ const $$ = (selecotr) => {
 };
 
 const range = (n) => {
-  return [...Array(n)];
+  return [...Array(n)].map((_, idx) => idx);
 };
 
 const insertIntoMain = (component) => {

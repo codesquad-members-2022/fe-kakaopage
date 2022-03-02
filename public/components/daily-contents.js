@@ -15,13 +15,13 @@ const addDaysEvL = () => {
   $(".nav-days").addEventListener("click", ({ target }) => {
     const days = target.closest("ul").childNodes;
 
-    days.forEach((node) => {
-      if (node.nodeType === 1) {
+    [...days]
+      .filter((node) => node.nodeType === 1)
+      .forEach((node) => {
         const tab = node.firstChild;
 
         tab.classList.remove("current-tab--round", "text-color--black");
-      }
-    });
+      });
 
     if (target.tagName === "LI") {
       target = target.firstChild;

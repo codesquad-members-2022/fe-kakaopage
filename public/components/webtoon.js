@@ -1,5 +1,21 @@
 import { insertIntoMain, range } from "../utils.js";
 
+const getNWebtoonsWithRank = (n, data) => {
+  let webtoons = range(n).reduce((acc, i) => {
+    return acc + createWebtoonWithRank(data, i);
+  }, "");
+
+  return webtoons;
+};
+
+const getNWebtoonsWithGrade = (n, data) => {
+  const webtoons = range(n).reduce((acc) => {
+    return acc + createWebtoonWithGrade(data);
+  }, "");
+
+  return webtoons;
+};
+
 const createWebtoonWithGrade = (data) => {
   const webtoon = `<div class="webtoon-container">
     <div class="webtoon-img-container round-container">
@@ -74,11 +90,9 @@ const createWebtoonWithRank = (data, i) => {
   return webtoon;
 };
 
-const createGenreBlock = (genre) => {
-  const webtoons = [];
-  range(5).forEach(() => {
-    webtoons.push(createWebtoonWithGrade(genre));
-  });
+const createGenreBlock = (dataOfGenre) => {
+  const NUM_OF_WEBTOONS = 5;
+  const webtoons = getNWebtoonsWithGrade(NUM_OF_WEBTOONS, dataOfGenre);
 
   const genreBlock = `<div class="center container contents-container">
   <header class="header-container">
@@ -101,11 +115,11 @@ const createGenreBlock = (genre) => {
     </svg>
   </header>
   <div class="grid-5col mt--m">
-  ${webtoons.join("")}
+  ${webtoons}
   </div>
 </div>`;
 
   insertIntoMain(genreBlock);
 };
 
-export { createWebtoonWithGrade, createWebtoonWithRank, createGenreBlock };
+export { getNWebtoonsWithRank, getNWebtoonsWithGrade, createGenreBlock };
