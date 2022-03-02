@@ -19,25 +19,38 @@ const getData = () => {
 
 getData();
 
-$headerNav.addEventListener("click", (event) => {
-  const selectedImg = event.target.closest("img");
-  const className = selectedImg?.className;
+const renderHome = () => {
+  const $banner__container = document.querySelector(".banner__container");
+  const $week__webtoons = document.querySelector(".week__webtoons");
+
+  $week__webtoons?.parentNode.removeChild($week__webtoons);
+  $banner__container.insertAdjacentElement("afterend", $main__container__copy);
+};
+
+const renderToon = () => {
   const $current__main__container = document.querySelector(".main__container");
   const $banner__container = document.querySelector(".banner__container");
   const $week__webtoons = document.querySelector(".week__webtoons");
-  if (className === "nav__home") {
-    $week__webtoons?.parentNode.removeChild($week__webtoons);
-    $banner__container.insertAdjacentElement(
-      "afterend",
-      $main__container__copy
-    );
-  } else if (className === "nav__toon") {
-    $week__webtoons?.parentNode.removeChild($week__webtoons);
-    $current__main__container?.parentNode.removeChild(
-      $current__main__container
-    );
-    $banner__container.insertAdjacentHTML("afterend", $weekWebtoons);
-  }
+
+  $week__webtoons?.parentNode.removeChild($week__webtoons);
+  $current__main__container?.parentNode.removeChild($current__main__container);
+  $banner__container.insertAdjacentHTML("afterend", $weekWebtoons);
+};
+
+const renderTapContents = (className) => {
+  const taps = {
+    nav__home: renderHome,
+    nav__toon: renderToon,
+  };
+
+  taps[className]();
+};
+
+$headerNav.addEventListener("click", (event) => {
+  const selectedImg = event.target.closest("img");
+  const className = selectedImg?.className;
+
+  renderTapContents(className);
 });
 
 element.addEventListener("click", (event) => {
