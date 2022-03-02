@@ -126,15 +126,13 @@ input:focus {
   display: flex;
 }
 
-.lnb__ul > li {
+.lnb__li {
   padding: 1.5rem 1rem;
   font-size: 1.3rem;
   flex-grow: 1;
   background-color: white;
-}
-
-.lnb__link {
   color: #bbb;
+  cursor: pointer;
 }
 
 .main__carousel {
