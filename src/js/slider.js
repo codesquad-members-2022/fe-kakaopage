@@ -1,4 +1,4 @@
-import { VAL } from './util.js';
+import { VAL } from './utils/constants.js';
 
 function cloneBanner(parentNode) {
   const firstBanner = parentNode.firstElementChild.cloneNode(true);
@@ -22,44 +22,39 @@ function transformBanner(bannerList, pixel, second) {
 
 let currentIdx = 0;
 
-function slideBanner(...params) {
-  // console.log(currentIdx);
-  const [bannerList, direction, bannerCount] = params;
-
+function slideBanner(bannerList, direction, bannerCount) {
   if (currentIdx > bannerCount) currentIdx = 0;
 
-  const controller = {
-    prev() {
-      if (currentIdx >= 0) {
-        const px = -currentIdx * VAL.bannerWidth;
-        transformBanner(bannerList, px, VAL.TRANSITION_TIME);
-      }
-      if (currentIdx === 0) {
-        const px = -bannerCount * VAL.bannerWidth;
-        setTimeout(() => {
-          transformBanner(bannerList, px, 0);
-        }, VAL.SWICHING_TIME);
-        currentIdx = bannerCount;
-      }
-      currentIdx--;
-    },
-    next() {
-      if (currentIdx <= bannerCount - 1) {
-        const px = -(currentIdx + VAL.CLONENODE_COUNT) * VAL.bannerWidth;
-        transformBanner(bannerList, px, VAL.TRANSITION_TIME);
-      }
-      if (currentIdx === bannerCount - 1) {
-        const px = -VAL.bannerWidth;
-        setTimeout(() => {
-          transformBanner(bannerList, px, 0);
-        }, VAL.SWICHING_TIME);
-        currentIdx = -1;
-      }
-      currentIdx++;
-    },
-  };
+  function prev() {
+    if (currentIdx >= 0) {
+      const px = -currentIdx * VAL.bannerWidth;
+      transformBanner(bannerList, px, VAL.TRANSITION_TIME);
+    }
+    if (currentIdx === 0) {
+      const px = -bannerCount * VAL.bannerWidth;
+      setTimeout(() => {
+        transformBanner(bannerList, px, 0);
+      }, VAL.SWICHING_TIME);
+      currentIdx = bannerCount;
+    }
+    currentIdx--;
+  }
+  function next() {
+    if (currentIdx <= bannerCount - 1) {
+      const px = -(currentIdx + VAL.CLONENODE_COUNT) * VAL.bannerWidth;
+      transformBanner(bannerList, px, VAL.TRANSITION_TIME);
+    }
+    if (currentIdx === bannerCount - 1) {
+      const px = -VAL.bannerWidth;
+      setTimeout(() => {
+        transformBanner(bannerList, px, 0);
+      }, VAL.SWICHING_TIME);
+      currentIdx = -1;
+    }
+    currentIdx++;
+  }
 
-  controller[direction]();
+  direction === 'prev' ? prev() : next();
 }
 
 export { initSlider, slideBanner };

@@ -1,4 +1,11 @@
-import { $, activateTab, CL, data } from './util.js';
+import {
+  $,
+  loadData,
+  activateTab,
+  changeTitle,
+  removeAlarm,
+} from './utils/util.js';
+import { CL, WEBTOON_URL } from './utils/constants.js';
 import { render } from './render.js';
 import { initSlider, slideBanner } from './slider.js';
 
@@ -13,41 +20,43 @@ function gnbHandler(e) {
   const target = e.target.closest('.gnb__item');
   removeAlarm(target);
   activateTab(target);
-  changeTitleByGNB(target.id);
+  changeTitle(target.id);
   if (target.id !== 'webtoon') {
     render.otherPage(target.id);
     return;
   }
-  render.webtoonPage(data);
-  setEventHandlers();
+  loadData(WEBTOON_URL)
+    .then(wt => {
+      render.webtoonPage(wt);
+      setEventHandlers();
+    })
+    .catch(console.log);
 }
 
-function changeTitleByGNB(targetId) {
-  document.title = `${targetId} | kakaopage by Millie`;
+function setEventHandlers() {
+  handlerComponent.snb();
+  handlerComponent.mainBannerBtn();
+  handlerComponent.daybar();
 }
 
-function removeAlarm(target) {
-  target.classList.remove('alarm');
-}
-
-function filterWebtoonsByDay(e, data) {
-  const day = e.target.id;
-  day === CL.WHOLE ? render.wholeWebtoon(data) : render.dayWebtoon(data, day);
-}
-
-const handler = {
-  SNB() {
+const handlerComponent = {
+  snb() {
     const $snb = $('.snb__list');
 
     $snb.addEventListener('click', e => {
       const target = e.target.closest('.snb__item');
       if (e.target !== target) return;
       const category = target.dataset.category;
-      activateTab(target);
-      render.contents(category);
-      this.daybar();
-      clearInterval(this.intervalId);
-      this.mainBannerBtn();
+
+      loadData(WEBTOON_URL)
+        .then(wt => {
+          activateTab(target);
+          render.contents(wt, category); // 이때 다보내지 말고 카테고리별로
+          this.daybar();
+          this.mainBannerBtn();
+          clearInterval(this.intervalId);
+        })
+        .catch(console.log);
     });
   },
 
@@ -85,16 +94,18 @@ const handler = {
     $days.addEventListener('click', e => {
       const target = e.target.closest('.day__item');
       if (!target) return;
-      activateTab(target);
-      filterWebtoonsByDay(e, data);
+
+      let day = e.target.id;
+      if (day === CL.WHOLE) day = '';
+
+      loadData(WEBTOON_URL + day)
+        .then(wt => {
+          activateTab(target);
+          render.webtoonList(wt);
+        })
+        .catch(console.log);
     });
   },
 };
-
-function setEventHandlers() {
-  handler.SNB();
-  handler.mainBannerBtn();
-  handler.daybar();
-}
 
 export { addTabFeature };

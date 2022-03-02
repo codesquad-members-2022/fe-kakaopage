@@ -1,83 +1,60 @@
-# FE Mission week2. Kakaopage Clone
+# FE Mission week3. Kakaopage Clone
 
-##### Feb 21 ~ 25, 2022
+##### Feb 28 ~ Mar 4, 2022
 
-##### [🟡 Demo Link](https://jaypedia.github.io/fe-kakaopage/)
-
----
-
-## Step 1. HTML & CSS
-
-- BEM 방식 이용한 class 네이밍
-- semantic tag 사용
-- CSS 파일 분리를 통해 모듈화
-- 가상 클래스 `:root`와 CSS variable 활용
-
-## Step 2. DOM, Event, Templating
-
-- 요일 탭 클릭 시 웹툰이 바뀌도록 구현
-  - data.json 파일을 만들고, 데이터를 fetch로 불러옴
-- header의 navbar 버튼 클릭 시 banner 이미지가 바뀌도록 구현
-- 레이아웃 변경은 구현하지 못함
-
-## Step 3. Web animation sliding
-
-- [ ] z-index에 대한 이해 : stacking context
-- tab 클릭 시 레이아웃 변경까지 구현 완료
-- 슬라이더 구현 완료
-  - [ ] 버그 수정하기
-
-## Step 4. Node.js & Express
-
-- [ ] Node.js 개발환경을 만들 줄 알기
-- [ ] HTTP와 back-end 역할에 대해 기본적으로 이해하기
-- [x] 클라이언트 정적인 자원 요청(HTML, CSS, JS, image)에 응답할 수 있는 서버를 구성하기
-- [x] npm project를 이해하고, npm 기반 개발 환경을 만들기
-- [x] Express server를 설치하고, 이를 활용해 server를 띄워서 화면을 볼 수 있도록 하기
-- [ ] Middleware 이해하기
+##### [🟡 Demo Link](https://millie-kakaopage.herokuapp.com/)
 
 ---
 
-### Event Delegation : `closest()` 활용
+## Step 5. API Server
 
-#### Before & After
+- [ ] Express server에서 JSON 응답하는 방법 이해하기
+- [ ] REST API URL 구성 이해하기
+- [ ] router 이해하고 활용해보기
 
-```js
-const activateTab = ({ target }, parentNode) => {
-  // if (target.parentNode.tagName === 'LI') target = target.parentNode; --- Before
+---
 
-  target = target.closest('.gnb__item'); // --- After
+### 커밋 진행상황
 
-  [...parentNode.children].forEach(child => {
-    child.classList.toggle(CL.SELECTED, child === target);
-  });
-};
-```
+> 기능이 추가된 부분은 없고, 리팩토링 위주로 진행했습니다.
 
-#### 기존 로직의 문제점
+#### 1. Reflect feedbacks
 
-- 기존에는 target.parentNode의 tagName이 'LI'일 때만 target을 `target.parentNode`로 바꿔 주었다. 그러다 보니 li의 자식 태그 안에 다른 element가 있을 때, 이 element를 클릭했을 때에는 제대로 작동되지 않았다.
+- namse님의 피드백을 반영하여 수정하였습니다.
+- [Feedback-step4.md](Feedback-step4.md)에 구체적인 내용을 정리해 보았습니다.
 
-```html
-...
-<li class="gnb__item alarm" id="webtoon">
-  <a href="#">웹툰 • <i class="fas fa-clock"></i></a>
-</li>
-```
+#### 2. Refactor: modify data flow
 
-- 위와 같이 li 태그 안에 a 태그가 있고, 또 그 안에 i 태그 요소가 있는 상황에서 a 태그를 클릭했을 때에는 잘 동작하지만 i 태그를 클릭했을 때에는 `activateTab()`함수가 작동하지 않았다.
+- render.js 로직에서 웹툰 데이터를 직접적으로 쓰지 않고 인자로 받아서 쓸 수 있도록 수정했습니다.
 
-#### `closest()` 함수 사용으로 문제점 개선
+#### 3. Add: filter webtoons using default route parameter
 
-```js
-target.closest('.gnb__item');
-```
+- default parameter를 활용해서 요일별로 웹툰이 필터링될 수 있도록 로직을 작성해 보았습니다.
 
-- target의 상위 요소 중 클래스가 `.gnb__item`과 일치하는 가장 근접한 조상 요소를 찾는다. 즉 이벤트가 발생한 요소부터 시작해서 위로 올라가면서, 가장 가까운 `.gnb__item` 요소를 찾는 것이다.
-- 이 방법으로 target을 li 태그로 설정할 수 있게 된다.
+#### 4. Refactor: load webtoon data asynchronously
+
+- 기존 util.js에서 데이터를 비동기적으로 불러와 data 변수를 export 하는 대신, eventHandler.js에서 데이터가 필요할 때마다 그에 맞는 데이터를 비동기적으로 불러울 수 있도록 수정하였습니다.
+  - util.js에 있던 전역변수 data가 필요없어져 삭제했습니다.
+- 데이터를 필터링하는 로직을 server.js에 놓고, 그 외에 있었던 것은 삭제했습니다.
+
+#### 5. Add: utils folder
+
+- 기존에는 util.js 안에 유틸 함수와 하드코딩 방지를 위한 상수들이 섞여 있었는데 이를 분리하고자 utils라는 폴더를 만들고, 그 안에 utils.js와 constants.js를 생성해 각각 분리해 주었습니다.
+
+#### 6. Deploy: using heroku
+
+- heroku를 이용하여 배포하였습니다.
+- 서버를 매번 켤 필요가 없어져서 편리해졌습니다.
+
+### 고민
+
+- 지금까지 구현한 로직에서 무엇을 더 해나가면 좋을지 고민이 됩니다. 미션은 어느정도 구현했지만 부족하다는 생각은 드는데, 그게 무엇인지 구체적으로 보이지는 않아서 답답한 느낌도 듭니다.
+  - 상태관리가 가능한 컴포넌트를 만드는 식으로 리팩토링을 해 보는 시도는 어떻게 생각하시나요?
+  - 혹은 여기서 더 개선하면 좋을 점, 추가하면 좋겠는 점이 있을까요?
 
 ---
 
 ## 📓 What I Learned / What I have to learn
 
-[JavaScript.info | Event Delegation](https://ko.javascript.info/event-delegation)
+- [Express로 REST API 구성하기](https://darrengwon.tistory.com/312)
+- [Express res.json과 res.send 비교](https://haeguri.github.io/2018/12/30/compare-response-json-send-func/)
