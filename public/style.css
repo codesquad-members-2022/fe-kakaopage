@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-white: #fff;
+  --color-yellow: #FFD220;
+  --background-color-gray: #eee;
+  --font-color-light-gray: #bbb;
+  --font-color-dark-gray: #999;
+  --font-color-deepdark-gray: #333;
+}
+
+.align_spce_around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.align_space_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  width: 685px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 226px;
+  height: 69px;
+  background-color: var(--background-color-gray);
+}
+
+.font_white {
+  color: var(--color-white);
+}
+
+.none {
+  display: hidden;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.paint_yellow {
+  background-image: url("https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color-gray);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 5;
+  background-color: var(--color-white);
+}
+
+input {
+  align-items: center;
+  border: none;
+  width: 130px;
+  height: 20px;
+}
+
+.search_button {
+  border: none;
+  background-color: var(--color-white);
+  background-size: cover;
+}
+
+.search_button > img {
+  height: 20px;
+  width: 20px;
+}
+
+.search_box {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border: black 1px solid;
+  border-radius: 30px;
+  width: 165px;
+  height: 35px;
+}
+
+.main_menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 590px;
+  height: 80px;
+}
+
+.main_menu_container > .main_menu {
+  height: 25px;
+  margin: 0 5px;
+  color: var(--font-color-dark-gray);
+}
+
+.main_category_navigation {
+  align-items: center;
+  width: 725px;
+  height: 70px;
+}
+
+.main_category_navigation > .main_category {
+  margin: 0 39px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.sub_category_navigation {
+  align-items: center;
+  width: 725px;
+  height: 67px;
+  margin: 15px 0 10px 0;
+  background-color: var(--color-white);
+}
+
+.promotion_webtoon_section {
+  position: relative;
+  width: 725px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide_button {
+  position: absolute;
+  top: 180px;
+  width: 685px;
+  max-height: 50px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.promotion_webtoon_slide {
+  display: flex;
+  position: absolute;
+}
+
+.promotion_webtoon_image {
+  position: absolute;
+  width: 725px;
+  height: 450px;
+}
+
+.promotion_webtoon_details {
+  position: absolute;
+  bottom: -370px;
+  padding: 0 0 0 20px;
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.promotion_webtoon_title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.slide_number {
+  display: flex;
+  justify-content: flex-end;
+  width: 685px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.promotion_webtoon_phrase {
+  position: relative;
+  bottom: -450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 725px;
+  height: 40px;
+  background-color: var(--color-yellow);
+}
+
+.weekday_category_navigation {
+  flex: 1;
+  align-items: center;
+  width: 725px;
+  height: 67px;
+  border-bottom: 1px solid var(--background-color-gray);
+  background-color: var(--color-white);
+}
+
+.weekday_category {
+  box-sizing: border-box;
+  width: 90px;
+  height: 70px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.webtoon_type_navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 725px;
+  height: 67px;
+  border-bottom: 1px solid var(--background-color-gray);
+  background-color: var(--color-white);
+}
+.webtoon_type_filter {
+  display: flex;
+  width: fit-content;
+}
+
+.webtoon_type_filter > .webtoon_type {
+  margin: 10px;
+}
+
+.webtoon_genre_filter {
+  list-style: none;
+  margin: 10px;
+}
+
+.webtoon_genre_filter > .webtoon_genre {
+  display: none;
+}
+
+.webtoon_board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.webtoon {
+  box-sizing: border-box;
+  width: 120px;
+  height: 215px;
+  margin: 10px;
+}
+
+.webtoon_preview > img {
+  max-width: 120px;
+  max-height: 120px;
+  margin-bottom: 0;
+}
+
+.webtoon_score {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-yellow);
+  background-color: black;
+}
+
+.webtoon_title {
+  width: 120px;
+  height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.webtoon_details > img {
+  max-height: 13px;
+  margin-right: 4px;
+}
+
+.webtoon_details > .read_count {
+  font-size: 13px;
+}

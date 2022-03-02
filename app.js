@@ -1,10 +1,22 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+const logger = require("morgan");
 const app = express();
 const port = 3000;
 
-app.use(express.static(__dirname + "/"));
+app.use(logger("dev"));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+app.use("/weeklyPromotionWebtoonList", function(req, res, next) {
+  const weeklyPromotionWebtoonList = require("./public/data/weeklyPromotionWebtoonList.json");
+  res.json(weeklyPromotionWebtoonList);
+  next();
+});
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
