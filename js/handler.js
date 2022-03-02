@@ -9,7 +9,7 @@ import { createTabWebtoonHome } from "../components/tab/sub/webtoonHome.js";
 import { CATEGORIES, SNB } from "./constants.js";
 import { addEventDay } from "./event.js";
 import { setSelectedSNB } from "./render.js";
-import { $ } from "./utils.js";
+import { $, getTransformX } from "./utils.js";
 
 export function GNBHandler(e) {
   const parentClass = e.target.parentNode.classList;
@@ -149,4 +149,20 @@ export function dayHandler(e) {
   }
 }
 
-export function carouselHandler(e) {}
+export function carouselHandler(e) {
+  const target = e.target.dataset.button;
+  const bannersEl = $(".caraousel__banners");
+
+  if (target === "prev") {
+    console.log("prev");
+    return;
+  }
+  if (target === "next") {
+    const transformX = getTransformX(bannersEl);
+    console.log(transformX);
+
+    bannersEl.style.transform = "translateX(-720px)";
+    console.log("next");
+    return;
+  }
+}

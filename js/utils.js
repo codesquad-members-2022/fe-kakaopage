@@ -22,3 +22,11 @@ export function $(selector) {
 export function draw({ to, el }) {
   $(to).innerHTML = el;
 }
+
+export function getTransformX(el) {
+  const style = getComputedStyle(el).transform;
+  if (style === "none") {
+    return 0;
+  }
+  return +style.split(",")[4];
+}
