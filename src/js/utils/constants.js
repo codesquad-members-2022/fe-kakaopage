@@ -1,4 +1,4 @@
-const WEBTOON_URL = 'http://localhost:3001/webtoon/';
+const WEBTOON_URL = 'https://millie-kakaopage.herokuapp.com/webtoon/';
 
 const CL = {
   SELECTED: 'selected',

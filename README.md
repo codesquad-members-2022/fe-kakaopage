@@ -2,6 +2,8 @@
 
 ##### Feb 28 ~ Mar 4, 2022
 
+##### [🟡 Demo Link](https://millie-kakaopage.herokuapp.com/)
+
 ---
 
 ## Step 5. API Server
@@ -34,6 +36,15 @@
 - 기존 util.js에서 데이터를 비동기적으로 불러와 data 변수를 export 하는 대신, eventHandler.js에서 데이터가 필요할 때마다 그에 맞는 데이터를 비동기적으로 불러울 수 있도록 수정하였습니다.
   - util.js에 있던 전역변수 data가 필요없어져 삭제했습니다.
 - 데이터를 필터링하는 로직을 server.js에 놓고, 그 외에 있었던 것은 삭제했습니다.
+
+#### 5. Add: utils folder
+
+- 기존에는 util.js 안에 유틸 함수와 하드코딩 방지를 위한 상수들이 섞여 있었는데 이를 분리하고자 utils라는 폴더를 만들고, 그 안에 utils.js와 constants.js를 생성해 각각 분리해 주었습니다.
+
+#### 6. Deploy: using heroku
+
+- heroku를 이용하여 배포하였습니다.
+- 서버를 매번 켤 필요가 없어져서 편리해졌습니다.
 
 ### 고민
 
