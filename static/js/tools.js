@@ -13,7 +13,7 @@ const toggleWeekDayMenu = (target) => {
     toggleClass(curEl, "active");
 };
 
-const preventDefaults = () => {
+const preventHyperLinks = () => {
     $("body").addEventListener("click", (e) => {
         if (!e.target.matches("[data-link]")) return;
         e.preventDefault();
@@ -24,4 +24,4 @@ const getJSON = (path) => {
     return fetch(`/${path}`).then((response) => response.json());
 };
 
-export { toggleClass, toggleWeekDayMenu, preventDefaults, getJSON };
+export { toggleClass, toggleWeekDayMenu, preventHyperLinks, getJSON };

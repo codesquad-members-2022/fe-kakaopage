@@ -1,5 +1,5 @@
 import { $ } from "./utils/dom.js";
-import { toggleWeekDayMenu, preventDefaults } from "./tools.js";
+import { toggleWeekDayMenu, preventHyperLinks } from "./tools.js";
 import { bindSubMenuEvent } from "./submenu.js";
 import { bindCaroulselEvent } from "./carousel.js";
 import { renderHome, renderWeekday } from "./renderer.js";
@@ -18,7 +18,7 @@ const bindEventListeners = () => {
 };
 
 const init = () => {
-    preventDefaults();
+    preventHyperLinks();
     renderHome();
     bindEventListeners();
 };
