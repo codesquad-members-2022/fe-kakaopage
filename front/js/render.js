@@ -41,7 +41,7 @@ export async function render() {
     $mainLayout.innerHTML = ``;
 
     // 선택된 템플릿에 서버에서 가져온 데이터 넣기
-    const contentObj = await selectedCategory.Category(content);
+    const contentObj = selectedCategory.Category(content);
 
     // article순서대로 해당 카테고리 내용을 렌더링
     MAIN_CHILD_NODE.forEach(({ CLASS, ID }) => {
