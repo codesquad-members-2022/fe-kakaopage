@@ -1,4 +1,4 @@
-import { selector, addClass } from '../../util/util.js';
+import { selector, addClass, createElement } from '../../util/util.js';
 
 // 0 1 2 3 4 5 6 (일 월 화 수 목 금 토)
 import addClickEvent from './addClickEvent.js';
@@ -32,13 +32,13 @@ const drawDayFilter = ({
   let category = $category.textContent;
   if (!categoriesWithDayFilter.includes(category)) return;
 
-  const dnpqxns = categoriesWithDayFilter[2];
+  const WEBTOON_CATEGORY_IDX = 2;
+  const WEBTOON_CATEGORY = categoriesWithDayFilter[WEBTOON_CATEGORY_IDX];
 
-  const $filter = document.createElement('div');
-  $filter.className = FILTER_CLASSNAME;
+  const $filter = createElement('div', FILTER_CLASSNAME);
   $filter.innerHTML = dayFilterTemplete;
 
-  if (category === dnpqxns) {
+  if (category === WEBTOON_CATEGORY) {
     const $previewList = selector(`.${PREVIEW_LIST_CLASSNAME}`);
     $previewList.insertAdjacentElement('afterend', $filter);
   } else {

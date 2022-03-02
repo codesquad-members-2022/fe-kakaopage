@@ -12,9 +12,6 @@ import initCategoryCurDay from './category/initCategoryCurDay.js';
 
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreview from './preview/createPreview.js';
-// console.dir(webtoonsData);
-// console.dir(dayWebtoonsData);
-// console.dir(previewsData);
 
 /* selector */
 const test = false;

@@ -1,5 +1,9 @@
+import { selector } from '../../util/util.js';
+
+const FILTER_CLASSNAME = 'filter';
+
 const clearDayFilter = () => {
-  const dayFilter = document.querySelector('.filter');
+  const dayFilter = selector(`.${FILTER_CLASSNAME}`);
   if (!dayFilter) return;
   dayFilter.parentElement.removeChild(dayFilter);
 };
