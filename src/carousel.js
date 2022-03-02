@@ -50,7 +50,8 @@ const createCarouselElems = (elems) => {
  */
 const carousel = (...elems) => {
   if (elems.length === 1) {
-    return elems[0];
+    const ONLY_ONE_SCREEN = elems[0];
+    return ONLY_ONE_SCREEN;
   }
   const newElems = [
     elems[elems.length - 1],

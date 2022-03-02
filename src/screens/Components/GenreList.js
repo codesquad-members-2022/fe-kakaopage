@@ -8,10 +8,13 @@ createExtendsRelation(GenreList, Component);
 
 GenreList.prototype.setEvent = function () {
   const { updateGenre } = this.$props;
-  this.addEvent("click", ".navGenre-item", ({ target }) => {
+
+  const handleAddEvent = ({ target }) => {
     const $eventTarget = target.closest(".navGenre-item");
     updateGenre($eventTarget.dataset.genre);
-  });
+  };
+
+  this.addEvent("click", ".navGenre-item", handleAddEvent);
 };
 
 GenreList.prototype.template = function () {

@@ -9,13 +9,15 @@ function Header(infoObject) {
 createExtendsRelation(Header, Component);
 
 Header.prototype.setEvent = function () {
-  this.addEvent("click", ".header__nav-item", ({ target }) => {
+  const handleAddEvent = ({ target }) => {
     const { updateCategory } = this.$props;
     const $eventTarget = target.closest(".header__nav-item");
     const category = $eventTarget.dataset.category;
     updateCategory(category);
     this.setState({ selected: category });
-  });
+  };
+
+  this.addEvent("click", ".header__nav-item", handleAddEvent);
 };
 
 Header.prototype.mount = function () {
