@@ -1,4 +1,4 @@
-import slideData from "./tabData/slideData.js"
+import slideData from "../tabData/slideData.js"
 function makeSlide(tabName) {  //홈 요일연재 등등 list이므로 인덱스숫자로
   let curSlide = slideData[tabName];
   return    `
