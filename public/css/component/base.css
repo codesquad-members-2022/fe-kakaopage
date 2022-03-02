@@ -112,7 +112,6 @@
 
 .aside__banner-slide-list {
     display: flex;
-
     /* transform: translateX(-500px); */
     transition: transform 0.3s ease-in-out;
 }

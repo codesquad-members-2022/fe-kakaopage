@@ -1,3 +1,8 @@
+import { renderNav } from '../component/nav.js'
+import { renderSections, renderSectionWrapper } from '../component/section.js';
+import { navClickEventHandler } from '../utils/eventHandler.js';
+import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';
+
 const weekdaysData = {
     nav: ['월', '화', '수', '목', '금', '토', '일', '완결'],
     parms: [ 'week?day=0', 'week?day=1', 'week?day=2', 'week?day=3', 'week?day=4', 'week?day=5', 'week?day=6', 'finished'],
@@ -45,26 +50,22 @@ function renderWeekdaysArticle() {
 </article>`;
 }
 
-function displayWeekLists(index, sectionNums) {
-    fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${weekdaysData.parms[index]}`)
-    .then(res => res.json())
-    .then(json => {
-        let html ='';
-        for(let i=0; i<sectionNums; i++) {
-            html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
-        }
-        document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
-        return html;
-    })
-    .then(html => {
-        deleteInnerHTML('.article__weekdays');
-        document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
-    })
-;
-}
+// function displayWeekLists(index, sectionNums) {
+//     fetch(`https://korea-webtoon-api.herokuapp.com/kakao-page/${weekdaysData.parms[index]}`)
+//     .then(res => res.json())
+//     .then(json => {
+//         let html ='';
+//         for(let i=0; i<sectionNums; i++) {
+//             html += renderSections(json[i].title, json[i].img, json[i].url, i+1);
+//         }
+//         document.querySelector('.nav__clasify-toggle').innerHTML = `전체 (${json.length})   <i class="fas fa-solid fa-arrow-down"></i>`;
+//         return html;
+//     })
+//     .then(html => {
+//         deleteInnerHTML('.article__weekdays');
+//         document.querySelector('.article__weekdays').innerHTML += renderSectionWrapper(html);
+//     })
+// ;
+// }
 
 export { renderWeekdays }
-import { renderNav } from '../component/nav.js'
-import { renderSections, renderSectionWrapper } from '../component/section.js';
-import { navClickEventHandler } from '../utils/eventHandler.js';
-import { deleteInnerHTML } from '../utils/deleteInnerHTML.js';

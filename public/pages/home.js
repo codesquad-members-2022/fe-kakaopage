@@ -1,3 +1,8 @@
+import { renderMidButton } from '../component/midButton.js';
+import { renderNav } from '../component/nav.js';
+import { renderArticle } from '../component/article.js';
+import { renderSections, renderSectionWrapper } from '../component/section.js';
+import { renderPromotionBanner, renderRecommandBanner } from '../component/banner.js';
 
 const homeData = {
     'midButton' : ['오늘 UP', '오늘 신작', '오리지널', '완결가지 정주행', '독립운동가 웹툰', '오늘 랭킹'],
@@ -83,8 +88,3 @@ function displayBooks5(tittle, type, id, sectionNums) {
 }
 
 export { renderHome };
-import { renderMidButton } from '../component/midButton.js';
-import { renderNav } from '../component/nav.js';
-import { renderArticle } from '../component/article.js';
-import { renderSections, renderSectionWrapper } from '../component/section.js';
-import { renderPromotionBanner, renderRecommandBanner } from '../component/banner.js';
