@@ -1,4 +1,9 @@
-import { dayHandler, GNBHandler, SNBHandler } from "./handler.js";
+import {
+  carouselHandler,
+  dayHandler,
+  GNBHandler,
+  SNBHandler,
+} from "./handler.js";
 import { $ } from "./utils.js";
 
 export function addEventGNB() {
@@ -11,4 +16,8 @@ export function addEventSNB() {
 
 export function addEventDay() {
   $(".days").addEventListener("click", dayHandler);
+}
+
+export function addEventCarousel() {
+  $(".carousel__btn-container").addEventListener("click", carouselHandler);
 }

@@ -1,0 +1,42 @@
+.carousel__wrapper {
+  height: 480px;
+}
+
+.carousel__container {
+  width: 720px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  display: flex;
+  transition: 1s;
+}
+
+.caraousel__banners {
+  transition: 1s;
+  display: flex;
+}
+
+.carousel__btn-container {
+  width: 720px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  gap: 560px;
+  position: relative;
+  bottom: 290px;
+}
+
+.carousel__btn-prev {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.carousel__btn-next {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93");
+  background-size: cover;
+  cursor: pointer;
+}

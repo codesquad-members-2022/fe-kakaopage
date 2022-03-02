@@ -148,3 +148,5 @@ export function dayHandler(e) {
     return;
   }
 }
+
+export function carouselHandler(e) {}
