@@ -13,7 +13,6 @@
     - [ ] URL 구조 : REST API 구조를 따르려고 노력한다.
           
 
-
 #### 구현과정
 
 1. express 설치 및 Start
@@ -54,6 +53,31 @@
     - 처음에는 sliding 이 동작하지 않았는데 시간이 지나서 새로고침하니까 동작함.
     
 4. URL 라우팅
-    - 특정 URL 경로로 요청이 왔을 경우, JSON 형태의 데이터를 줄 수 있도록 구현한다?
-    - 어떤 경로로 왔을 때 어떤 데이터를 줄 것 인지.
+    - 특정 URL 경로로 요청이 왔을 경우, JSON 형태의 데이터를 줄 수 있도록 구현한다.
+    - 어떤 경로로 왔을 때 어떤 데이터를 줄 것 인지. => 지금으 크게 신경쓰지 말자.
+    - 리뷰를 하면서 깨달은 점
+        - 특정 URL 로 라우팅을 하는 경우 데이터를 보냄과 동시에 페이지 렌더링을 해줘야 한다고 생각했는데 아니었다.
+        - API 를 보낸다는 건 그 경로로 json 을 주는 것 그 자체인 듯 하다.
+    - fetch 를 사용하여 라우팅을 한 경로에서 JSON 형식 데이터를 받는다.
+    - 우선 홈, 요일연재, 웹툰 탭 클릭 시 발생하는 dailyNav 및 dailyContents 영역 렌더링을 Fetch 로 데이터를 받도록 수정
+        - fetch 를 어느 단계에서 하는 게 맞을까? 
+            - initWebtoonDaily 가 실행되는 시점
+            - listenEvent 실행 후 해당 요일 클릭으로 인해 template 변경이 일어나는 시점
+            
+        - ```javascript
+            // 전역변수로 선언하여 하위 함수에서 template 구성 시 webtoonData 를 사용할 수 있도록 한다.
+            // 전역변수로 한 이유 : 각 하위 함수에 포함된 하위 함수에서 data가 사용되어서 매개변수로 전달할 시 코드 변경이 여러 곳에서 필요함. 초기 설계가 중요하다...
+            let webtoonData;
+            export function initWebtoonDaily() {
+                fetch('http://localhost:3000/webtoon/data')
+                    .then(response => response.json()) //parser ?
+                    .then(data => {
+                        webtoonData = data;
+                        createDailyNav();
+                        createTodayContent();
+                        listenEvent();
+                    })
+            }
+          ```     
+     
     

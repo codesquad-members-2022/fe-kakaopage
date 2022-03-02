@@ -1,6 +1,8 @@
 
 import { select, addClass, removeClass } from "./util.js";
-import { webtoonData } from "./webtoonData.js"
+//import { webtoonData } from "./webtoonData.js"
+
+let webtoonData;
 
 function createDailyDiv() {
     const dailyDiv = document.createElement('div');
@@ -49,14 +51,14 @@ function handleClick(e) {
 
 function createDailyContent(target) {
     const clickedDay = target.innerText;
-    let template = getDailyTemplate(clickedDay)
-    const $dailyContents = select('.daily__contents')
-    template = template.repeat(5)
-    $dailyContents.innerHTML = template
+    let template = getDailyTemplate(clickedDay);
+    const $dailyContents = select('.daily__contents');
+    template = template.repeat(5);
+    $dailyContents.innerHTML = template;
 }
 
 function getDailyTemplate(day) {
-    let template = ''
+    let template = '';
     webtoonData.forEach(function(data) {
         if(day === '전체' || data.day.includes(day)) {
             if(data.rank < 6) {
@@ -84,7 +86,6 @@ function getDailyTemplate(day) {
                         <div class="daily__views">${data.views}만명</div>
                     </div>`
             }
-
         }
     })
     return template;
@@ -92,9 +93,9 @@ function getDailyTemplate(day) {
 
 function createTodayContent() {
     const date = new Date();
-    const week = ['일', '월', '화', '수', '목', '금', '토']
+    const week = ['일', '월', '화', '수', '목', '금', '토'];
     const today = week[date.getDay()];
-    const $$daily__button = document.querySelectorAll('.daily__button')
+    const $$daily__button = document.querySelectorAll('.daily__button');
     $$daily__button.forEach((node) => {
         if(node.innerText === today) {
             addClass(node, 'daily__button-on');
@@ -103,8 +104,17 @@ function createTodayContent() {
     })
 }
 
+let count = 0;
 export function initWebtoonDaily() {
-    createDailyNav()
-    createTodayContent()
-    listenEvent()
+    fetch('http://localhost:3000/webtoon/data')
+        .then(response => response.json()) //parser ?
+        .then(data => {
+            console.log(data)
+            console.log('count:', count)
+            count ++
+            webtoonData = data;
+            createDailyNav();
+            createTodayContent();
+            listenEvent();
+        })
 }
