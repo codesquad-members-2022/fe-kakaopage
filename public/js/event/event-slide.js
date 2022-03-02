@@ -36,10 +36,10 @@ const autoPlay = {
 const makingClone = () => {
   const slides = $(".event-slider");
   const slideImg = document.querySelectorAll(".event-slider li");
-  const cloneSlide_first = slideImg[0].cloneNode(true);
-  const cloneSlide_last = slides.lastElementChild.cloneNode(true);
-  slides.append(cloneSlide_first);
-  slides.insertBefore(cloneSlide_last, slides.firstElementChild);
+  const cloneSlideFirst = slideImg[0].cloneNode(true);
+  const cloneSlideLast = slideImg[slideImg.length - 1].cloneNode(true);
+  slides.append(cloneSlideFirst);
+  slides.insertBefore(cloneSlideLast, $(".event-slider li"));
 };
 
 const autoPlayStart = () => {
