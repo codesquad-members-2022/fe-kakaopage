@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const api = require("./public/data/data.json");
 const cors = require("cors");
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.locals.pretty = true;
 app.set("view engine", "pug");
