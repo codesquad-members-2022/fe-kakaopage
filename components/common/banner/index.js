@@ -1,4 +1,3 @@
-import { CSS_NAME_LENGTH } from "../../../js/constants.js";
 import { getRandomString } from "../../../js/utils.js";
 
 // TODO: status로 아이콘 구분해서 랜더링
@@ -44,19 +43,19 @@ let banner,
 
 function getStyle(size) {
   const isSizeLarge = size === "large";
-  banner = getRandomString({ length: CSS_NAME_LENGTH });
-  img = getRandomString({ length: CSS_NAME_LENGTH });
-  list = getRandomString({ length: CSS_NAME_LENGTH });
-  bannerTitle = getRandomString({ length: CSS_NAME_LENGTH });
-  icon = getRandomString({ length: CSS_NAME_LENGTH });
-  icon2 = getRandomString({ length: CSS_NAME_LENGTH });
-  category = getRandomString({ length: CSS_NAME_LENGTH });
-  blockIcon = getRandomString({ length: CSS_NAME_LENGTH });
-  viewIcon = getRandomString({ length: CSS_NAME_LENGTH });
-  viewsNumber = getRandomString({ length: CSS_NAME_LENGTH });
-  description = getRandomString({ length: CSS_NAME_LENGTH });
-  text = getRandomString({ length: CSS_NAME_LENGTH });
-  container = getRandomString({ length: CSS_NAME_LENGTH });
+  banner = getRandomString();
+  img = getRandomString();
+  list = getRandomString();
+  bannerTitle = getRandomString();
+  icon = getRandomString();
+  icon2 = getRandomString();
+  category = getRandomString();
+  blockIcon = getRandomString();
+  viewIcon = getRandomString();
+  viewsNumber = getRandomString();
+  description = getRandomString();
+  text = getRandomString();
+  container = getRandomString();
 
   return `
 .${banner} {

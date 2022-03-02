@@ -86,8 +86,6 @@ export function createWorkSmall({
   }
   `;
 
-  console.log(thumbnail);
-
   return `
   <style>${style}</style>
   <div class="work-small col">

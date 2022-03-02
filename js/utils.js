@@ -1,13 +1,13 @@
-import { STRING } from "./constants.js";
+import { CSS_NAME_LENGTH, STRING } from "./constants.js";
 
 export const getRandomNumber = ({ min, max }) => {
   return Math.floor(min + Math.random() * (max - min + 1));
 };
 
-export const getRandomString = ({ length }) => {
+export const getRandomString = () => {
   return (
     "css-" +
-    [...Array(length)]
+    [...Array(CSS_NAME_LENGTH)]
       .map(() => {
         return STRING[getRandomNumber({ min: 0, max: 35 })];
       })
