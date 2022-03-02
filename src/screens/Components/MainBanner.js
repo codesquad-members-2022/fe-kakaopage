@@ -20,7 +20,8 @@ function MainBanner(target, state) {
     });
   const { $carousel, getInterval } = carousel(...banners);
   this.state.banners = $carousel;
-  this.state.interval = getInterval();
+  this.state.getInterval = getInterval;
+  this.render();
 }
 
 createExtendsRelation(MainBanner, Component);
@@ -29,9 +30,19 @@ MainBanner.prototype.template = function () {
   const { banners } = this.state;
   return `
     <li class="mainBox main__mainBanner">
-        ${banners.outerHTML}
+        ${banners?.outerHTML}
     </li>
     `;
+};
+
+MainBanner.prototype.render = function () {
+  this.target.innerHTML = this.template();
+  if (this.state.interval) {
+    clearInterval(this.state.interval);
+  }
+  this.state = { ...this.state, interval: this.state.getInterval() };
+  this.removeEvent();
+  this.setEvent();
 };
 
 export default MainBanner;

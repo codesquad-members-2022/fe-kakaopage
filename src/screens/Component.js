@@ -1,25 +1,25 @@
-function Component(target, state) {
-  this.target = target;
+function Component({ $target, state, $props }) {
+  this.$target = $target;
+  this.$props = $props;
   this.state = state || {};
   this.eventTypes = [];
+  this.setup();
+  this.render();
+  this.setEvent();
 }
 
 Component.prototype = {
+  setup() {},
+  mount() {},
   render() {
-    this.target.innerHTML = this.template();
-    this.removeEvent();
-    this.setEvent();
+    this.$target.innerHTML = this.template();
+    this.mount();
   },
   template() {
     return ``;
   },
-  removeEvent() {
-    this.eventTypes.forEach(({ type, listener }) => {
-      this.target.removeEventListener(type, listener);
-    });
-  },
   addEvent(eventType, selector, callback) {
-    const children = [...this.target.querySelectorAll(selector)];
+    const children = [...this.$target.querySelectorAll(selector)];
     const isTarget = (target) =>
       children.includes(target) || target.closest(selector);
 
@@ -28,7 +28,7 @@ Component.prototype = {
       callback(event);
     };
     this.eventTypes.push({ type: eventType, listener: handleEventListener });
-    this.target.addEventListener(eventType, handleEventListener);
+    this.$target.addEventListener(eventType, handleEventListener);
   },
   setEvent() {},
   setState(newState) {

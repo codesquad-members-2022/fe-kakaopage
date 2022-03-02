@@ -32,6 +32,12 @@
 
 ### ❗️문제발생 then 해결한 방법
 
+- node ID 를 만들어야겠다. 왜?
+  - Component 를 만들었을 때, 그 해당 Component 의 template 뿐 아니라 dom 에서 쓰일 node type 도 필요했음
+  - 왜 필요했나? -> 만든 컴포넌트의 하위태그를 지정할 때
+  - node ID 로 어떻게 할건데? -> target 에서 querySelectorById 로 찾으면 될 듯
+  - node Id 여러개 넣어야할때는? 랜덤함수넣자
+
 ### ✅ PR 리뷰에서 개선한 점
 
 ### 👋 다음 PR엔?

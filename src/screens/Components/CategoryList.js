@@ -1,32 +1,28 @@
 import Component from "../Component.js";
 import { createExtendsRelation } from "../../utils.js";
-import {
-  getComponentsTemplate,
-  updateNodeClasses,
-} from "../../serviceUtils.js";
-function CategoryList(target) {
-  Component.call(this, target);
-  this.render();
+
+function CategoryList(infoObject) {
+  Component.call(this, infoObject);
 }
 
 createExtendsRelation(CategoryList, Component);
 
-CategoryList.prototype.setEvent = function () {
-  this.addEvent("click", ".header__nav-item", ({ target }) => {
-    const eventTarget = target.closest(".header__nav-item");
-    updateNodeClasses(eventTarget, "selected");
-    const category = eventTarget.dataset.category;
-    const genres = JSON.parse(localStorage.getItem("genres"));
-    this.state.genreList.setState({
-      category,
-      genres: genres[category],
-      genre: "home",
-    });
-  });
-};
-
 CategoryList.prototype.template = function () {
-  return getComponentsTemplate(this.state.categories);
+  const { categories, selected } = this.state;
+  return categories
+    ?.map((cInfo) => {
+      const { name, category, waitForFree, newAlert } = cInfo;
+      return `
+        <li class="header__nav-item 
+        ${selected === category ? "selected" : ""}" data-category="${category}">
+          <span>
+            ${name}
+            ${waitForFree ? ' ・ <i class="fas fa-clock"></i>' : ""}
+          </span>
+          ${newAlert ? '<span class="yellow-dot"></span>' : ""}
+        </li>`;
+    })
+    .join("");
 };
 
 export default CategoryList;

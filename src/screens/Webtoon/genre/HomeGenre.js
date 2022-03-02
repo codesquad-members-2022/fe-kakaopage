@@ -8,10 +8,7 @@ import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../Component.js";
 import { createExtendsRelation } from "../../../utils.js";
-import {
-  updateNodeClasses,
-  getComponentsTemplate,
-} from "../../../serviceUtils.js";
+import { getComponentsTemplate } from "../../../serviceUtils.js";
 import DaysList from "../../Components/DaysList.js";
 import ContentsBox from "../../Components/ContentsBox.js";
 import FullButton from "../../Components/FullButton.js";

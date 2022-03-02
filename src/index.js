@@ -1,37 +1,16 @@
-import CategoryList from "./screens/Components/CategoryList.js";
-import Category from "./screens/Components/Category.js";
 import { getJsons } from "./utils.js";
-import GenreList from "./screens/Components/GenreList.js";
+import App from "./screens/App.js";
 
 const init = async () => {
-  const paths = ["categories", "genres", "webtoons"];
+  const paths = ["categories", "genres"];
+  const [{ results: categories }, { results: genres }] = await getJsons(paths);
 
-  const [{ results: categories }, { results: genres }, { results: webtoons }] =
-    await getJsons(paths);
+  const $app = document.querySelector(".app");
 
-  localStorage.setItem("genres", JSON.stringify(genres));
-  localStorage.setItem("webtoons", JSON.stringify(webtoons));
-
-  const main = document.querySelector(".main");
-  const headerNav = document.querySelector(".header__nav");
-
-  const categoryList = new CategoryList(headerNav);
-  const genreList = new GenreList(main, { genre: "home" });
-
-  categoryList.setState({
-    categories: categories.map((cInfo) => {
-      const category = new Category(headerNav);
-      category.setState({ ...cInfo });
-      return category;
-    }),
+  new App({
+    $target: $app,
+    state: { categories, genres, category: "webtoon" },
   });
-
-  const category = categoryList.state.categories.find(
-    ({ state: { selected } }) => selected
-  ).state.category;
-
-  genreList.setState({ genres: genres[category], category });
-  categoryList.setState({ genreList });
 };
 
 init();

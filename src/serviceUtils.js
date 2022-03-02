@@ -9,11 +9,4 @@ const getComponentsTemplate = (components) => {
   }, "");
 };
 
-const updateNodeClasses = (target, className) => {
-  [...target.parentNode.children].forEach((node) => {
-    node.classList.remove(className);
-  });
-  target.classList.add(className);
-};
-
-export { formatUserCount, getComponentsTemplate, updateNodeClasses };
+export { formatUserCount, getComponentsTemplate };
