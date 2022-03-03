@@ -1,12 +1,3 @@
-// 일회성 json data 받기
-let data;
-const DATA_URL = "data/data.json";
-
-await (async function getJson() {
-  const res = await fetch(DATA_URL);
-  data = await res.json();
-})();
-
 export const $ = (selector, base = document) => base.querySelector(selector);
 
 export const $$ = (selector, base = document) =>
@@ -38,9 +29,8 @@ export const toggleList = (target = false, className) => {
 };
 
 export const getToday = () => {
-  const week = ["일", "월", "화", "수", "목", "금", "토"];
-  const day = new Date().getDay();
-  return week[day];
+  // const week = ["일", "월", "화", "수", "목", "금", "토"];
+  let day = new Date().getDay();
+  if (!day) day = 7;
+  return day;
 };
-
-export { data };

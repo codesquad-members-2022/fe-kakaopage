@@ -1,10 +1,10 @@
 {
   "name": "fe_kakaopage",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "./js/index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/sju02048/fe-kakaopage/issues"
   },
-  "homepage": "https://github.com/sju02048/fe-kakaopage#readme"
+  "engines": {
+    "node": "14.17.6",
+    "npm": "6.14.15"
+  },
+  "homepage": "https://github.com/sju02048/fe-kakaopage#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.0",
+    "pug": "^3.0.2"
+  }
 }
