@@ -96,7 +96,7 @@ body{
     margin:var(--global-margin);
 }
 .header_category ul {
-    display: flex;
+    display:flex;
     justify-content: space-around;
     margin-top:30px;
     margin-bottom:10px;
@@ -119,7 +119,7 @@ body{
 }
 .main_category ul{
     display:flex;
-    align-items: center;
+    align-items:center;
     justify-content:space-around;
     padding-top:20px;
 }
@@ -138,58 +138,58 @@ body{
 
 /* ===============slide=============== */
 .main_slide{
-    position: relative;
-    width: 720px;
-    height: 410px;
-    margin: 0 auto;
-    margin-top: 10px;
-    overflow: hidden;
-  }
+    position:relative;
+    width:720px;
+    height:410px;
+    margin:0 auto;
+    margin-top:10px;
+    overflow:hidden;
+}
   
 .slides {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position:absolute;
+    left:0;
+    top:0;
     display:flex;
-  }
+}
   
 .slides.activeSlide {
-    transition: 0.5s ease-out;
-  }
+    transition:0.5s ease-out;
+}
   
 .slides div {
-    width: 720px;
-    height: 410px;
-    background-color: wheat;
+    width:720px;
+    height:410px;
     display: flex;
     align-items: flex-end;
-  }
+}
   
 .info img{
     width:100%;
-  }
+}
   
 .slider_btn {
-    position: absolute;
-    top: 50%;
-    z-index: 10;
+    position:absolute;
+    top:50%;
+    z-index:10;
     border:none;
-    background: rgba( 255, 255, 255, 0.5 );
-    color: #fff;
-    border-radius: 50%;
-    width: 40px;
+    background:rgba( 255, 255, 255, 0.5 );
+    color:#fff;
+    border-radius:50%;
+    width:40px;
     height:40px;
-    font-size: 18px;
-    cursor: pointer;
+    font-size:18px;
+    cursor:pointer;
 }
+
 .slider_btn_left {
-    left: 6%;
-    transform: translate(-50%, -50%);
+    left:6%;
+    transform:translate(-50%, -50%);
 }
   
 .slider_btn_right {
-    right: 6%;
-    transform: translate(50%, -50%);
+    right:6%;
+    transform:translate(50%, -50%);
 }  
 
 /* ===============tab=============== */
@@ -199,19 +199,19 @@ body{
     margin:var(--global-margin);
 }
 .underline{
-    border-bottom: 1px solid var(--letter-color);
+    border-bottom:1px solid var(--letter-color);
 }
 .all_web{
     display:flex;
-    justify-content: space-between;
-    line-height: 70px;
+    justify-content:space-between;
+    line-height:70px;
     font-size:20px;
     color:var(--letter-color);
     
 }
 
 .all_web .left{
-    display: flex;
+    display:flex;
     margin-left:20px;
     cursor:pointer;
 }
@@ -258,7 +258,7 @@ body{
 /* ===============webtoon-list=============== */
 .webtoon_list ul{
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     margin-top:20px;
 }
 
