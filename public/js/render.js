@@ -7,11 +7,12 @@ import { gridMenu } from "./component/grid-menu.js";
 import { adBanner } from "./component/ad-banner.js";
 import { footerInfo } from "./component/footer-info.js";
 import { dayPage } from "./component/day-page.js";
-import { gridList } from "./component/grid-list.js";
+import { dayPageList } from "./component/dayPageList.js";
 import { toonMain } from "./component/toon-main.js";
+import {} from "./carousel.js";
 
 const menuData = ["home", "toon", "novel", "vod", "broadcast", "book"];
-const dayPageList = ["월", "화", "수", "목", "금", "토", "일", "완결"];
+const dayPageData = ["월", "화", "수", "목", "금", "토", "일", "완결"];
 const categoryData = [
   "홈",
   "요일연재",
@@ -41,6 +42,11 @@ export const Render = {
 
   footerContent: () => {
     addComponent("footer", footerInfo());
+  },
+
+  carousel: (target) => {
+    console.log("target :>> ", target);
+    // .toon-jumbotron_left, .toon-jumbotron_right
   },
 
   //* active functions
@@ -91,8 +97,8 @@ export const Render = {
     addComponent(".toon-jumbotron", jumbotron(data));
     addComponent(".toon-todaymenu", gridMenu(data));
     addComponent(".toon-ad-banner-1", adBanner(data, "미슐랭스타"));
-    addComponent(".toon-daytop", dayPage(data, dayPageList));
-    addComponent(".toon-daytop_album", gridList(data, getToday()));
+    addComponent(".toon-daytop", dayPage(data, dayPageData));
+    addComponent(".toon-daytop_album", dayPageList(data, getToday()));
   },
 
   toonCategory: (target = $(".toon-category a:first-child")) => {
@@ -123,6 +129,6 @@ export const Render = {
       ? "월"
       : "화";
 
-    addComponent(".toon-daytop_album", gridList(data, clickDay));
+    addComponent(".toon-daytop_album", dayPageList(data, clickDay));
   },
 };
