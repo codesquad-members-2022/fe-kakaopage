@@ -23,35 +23,20 @@ function showDayWebtoon(){
             weekCategory.querySelector(".sub_active").classList.remove("sub_active");
             event.target.classList.add("weekend_check");
             event.target.classList.add("sub_active"); 
-            // showWebtoon(event);
+            getWebtoonData(event);
         }
     }
     weekCategory.addEventListener("click",getDay);
 }
 
-function showWebtoon(event){
-    const dayWebToonData = webtoonData.filter(function(webtoon){
-        return event.target.dataset.value === webtoon.day
-    });
-    // document.querySelector('.webtoon_list ul').innerHTML = "";
-    makeHtml(dayWebToonData);
-}
-
-function makeHtml(dayWebToonData){
-    const webtoonCardTemplate = dayWebToonData.map(e => webtoonCard(e)).reduce((acc,cur)=>acc+cur,"");
-    // const webtoonCardTemplate = dayWebToonData.reduce((acc,cur) => acc + webtoonCard(cur),"");
-    document.querySelector('.webtoon_list ul').innerHTML = webtoonCardTemplate;
-}
 // ==================json
-
-const getWebtoonData = function(){
+function getWebtoonData(event){
     fetch('http://localhost:3000/webtoonData/data')
     .then(response => response.json())
-    .then(data =>console.log(data))
+    .then(data => document.querySelector('.webtoon_list ul').innerHTML = data.filter((e) => event.target.dataset.value === e.day)
+    .map(e => webtoonCard(e))
+    .reduce((acc,cur)=>acc+cur,""));
 };
-
-getWebtoonData();
-
 // ==================slide
 
 function showSlides(){
