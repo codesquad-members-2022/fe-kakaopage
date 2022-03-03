@@ -6,6 +6,10 @@ const data = require("./fakeDB.json");
 const { genre, bannerUrl, week, toonItemData, toggleLeft } = data;
 app.use(express.static(__dirname + "/public"));
 
+app.get("/index/wholeData", (req, res, next) => {
+  res.json(data);
+});
+
 app.get("/main/home", (req, res, next) => {
   res.json(genre);
 });

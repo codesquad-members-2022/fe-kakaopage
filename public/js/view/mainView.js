@@ -15,6 +15,7 @@ const renderToonbyDay = (fetchedData) => {
 
 const renderMainSecHome = (genre) => {
   const FilterdByGenre = getToonGenre(genre);
+  console.log(genre);
   domUtil.$(".main").innerHTML = FilterdByGenre.reduce(
     (mainHtml, currGenre, idx) => {
       mainHtml +=
@@ -22,7 +23,8 @@ const renderMainSecHome = (genre) => {
         getImgCardHtml(currGenre);
 
       return mainHtml;
-    }
+    },
+    ""
   );
 };
 

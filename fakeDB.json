@@ -22,10 +22,10 @@
     {
       "tab": "홈",
       "url": [
-        "./pageImage/katana.jpg",
-        "./pageImage/lisa.jpg",
-        "./pageImage/skul.jpg",
-        "./pageImage/mother.png"
+        "/image/pageImage/katana.jpg",
+        "/image/pageImage/lisa.jpg",
+        "/image/pageImage/skul.jpg",
+        "/image/pageImage/mother.png"
       ]
     },
     {
