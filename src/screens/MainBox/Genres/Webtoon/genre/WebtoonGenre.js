@@ -54,7 +54,15 @@ WebtoonGenre.prototype.setup = async function () {
   this.state = {
     webtoons,
     contents: [
-      { elementId: "wtMainBanner", className: "mainBanner", state: {} },
+      {
+        elementId: "wtMainBanner",
+        className: "mainBanner",
+        state: {
+          filteredBy: {
+            isMain: "home",
+          },
+        },
+      },
       { elementId: "wtNavDetail", className: "navDetail", state: {} },
       { elementId: "wtSubBanner", className: "subBanner", state: {} },
       {
