@@ -1,4 +1,4 @@
-import {makeSelectDayItems} from './selectDayList.js'
+import makeSelectDayItems from './selectDayItem.js'
 import {makeWebtoonList} from '../webtoonList.js'
 import {getData} from '../../utility.js'
 
