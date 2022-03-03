@@ -1,4 +1,4 @@
-import {renderHome, renderDaily, renderWebtoon, renderBoy} from './render.js';
+import {renderHome, renderDaily, renderWebtoon, renderBoy} from './render/pages.js';
 import {makeWebtoonList} from './components/webtoonList.js';
 import Slider from './slider.js';
 import {$, $all, getData} from './utility.js';
