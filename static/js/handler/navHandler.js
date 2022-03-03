@@ -1,7 +1,7 @@
 import { select, initElement, updateDocumentTitle } from '../util.js';
 
 import { renderer } from '../view/renderer.js';
-import { loaderMap } from '../view/loader/loaderMap.js';
+import { categoryLoader } from '../view/categoryLoader.js';
 import { dataMap } from '../../data/dataMap.js';
 
 const addHandlerOnGnb = () => select(`.gnb__list`).addEventListener('click', handleNav);
@@ -48,7 +48,7 @@ const loadCategoryContent = (globalCategory, subCategory = null) => {
 
   if (!subCategory) {
     updateDocumentTitle(globalCategory);
-    loaderMap[globalCategory]();
+    categoryLoader[globalCategory]();
     return;
   }
 
@@ -56,7 +56,7 @@ const loadCategoryContent = (globalCategory, subCategory = null) => {
 
   updateNavStyle('snb', subCategory);
   updateDocumentTitle(`${subCategory} - ${globalCategory}`);
-  loaderMap[globalCategory][subCategory](subCategoryData);
+  categoryLoader[globalCategory][subCategory](subCategoryData);
 };
 
 const getSubCategoryList = (globalCategory) => dataMap[globalCategory].subCategory;

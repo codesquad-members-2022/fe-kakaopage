@@ -1,11 +1,11 @@
-import { home } from './category/home.js';
-import { webtoon } from './category/webtoon.js';
-import { webnovel } from './category/webnovel.js';
-import { movie } from './category/movie.js';
-import { broadcast } from './category/broadcast.js';
-import { book } from './category/book.js';
+import { home } from './categories/home.js';
+import { webtoon } from './categories/webtoon.js';
+import { webnovel } from './categories/webnovel.js';
+import { movie } from './categories/movie.js';
+import { broadcast } from './categories/broadcast.js';
+import { book } from './categories/book.js';
 
-const loaderMap = {
+const categoryLoader = {
   홈: home,
 
   웹툰: {
@@ -57,4 +57,4 @@ const loaderMap = {
   },
 };
 
-export { loaderMap };
+export { categoryLoader };

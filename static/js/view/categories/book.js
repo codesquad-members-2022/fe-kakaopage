@@ -1,4 +1,4 @@
-import { renderer } from '../../renderer.js';
+import { renderer } from '../renderer.js';
 
 const book = {
   home: (DATA) => {},
