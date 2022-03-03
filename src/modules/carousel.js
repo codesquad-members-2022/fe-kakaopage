@@ -48,7 +48,7 @@ const createCarouselElems = (elems) => {
  * @param  {...Node} elems 캐러셀에 넣을 요소들
  * @returns {Node} $carousel
  */
-const carousel = (...elems) => {
+const carousel = ({ elems, unit, elemWidth }) => {
   if (elems.length === 1) {
     const ONLY_ONE_SCREEN = elems[0];
     return ONLY_ONE_SCREEN;
@@ -58,7 +58,9 @@ const carousel = (...elems) => {
     ...elems.slice(0, elems.length - 1),
   ];
   const isRequireClone = elems.length === 2;
-  const WIDTH_PER_ELEM = 100 / (newElems.length * (isRequireClone ? 2 : 1));
+  // const WIDTH_PER_ELEM = 100 / (newElems.length * (isRequireClone ? 2 : 1));
+  const WIDTH_PER_ELEM = elemWidth;
+  const ELEM_UNIT = unit;
 
   const carouselChildren = isRequireClone
     ? [...createCarouselElems(newElems), ...createCarouselElems(newElems)]
@@ -73,7 +75,7 @@ const carousel = (...elems) => {
     newElems.length * 100 * (isRequireClone ? 2 : 1)
   }%`;
 
-  carouselBox.style.transform = `translateX(-${WIDTH_PER_ELEM}%)`;
+  carouselBox.style.transform = `translateX(-${WIDTH_PER_ELEM}${ELEM_UNIT})`;
 
   const carouselOrder = createCarouselOrder(newElems);
   const carousel = createElement({
@@ -87,7 +89,9 @@ const carousel = (...elems) => {
       /(?<curX>-[\d]+(\.[\d])?)/
     ).groups;
     target.style.transition = "none";
-    target.style.transform = `translateX(${+curX + +WIDTH_PER_ELEM}%)`;
+    target.style.transform = `translateX(${
+      +curX + +WIDTH_PER_ELEM
+    }${ELEM_UNIT})`;
 
     const firstElem = target.querySelector(".carousel-elem");
     target.removeChild(firstElem);
@@ -109,7 +113,7 @@ const carousel = (...elems) => {
     return setInterval(() => {
       const cBox = document.querySelector(".carousel-box");
       cBox.style.transition = "transform 0.2s";
-      cBox.style.transform = `translateX(-${WIDTH_PER_ELEM * 2}%)`;
+      cBox.style.transform = `translateX(-${WIDTH_PER_ELEM * 2}${ELEM_UNIT})`;
       cBox.removeEventListener("transitionstart", handleTransitionStart);
       cBox.removeEventListener("transitionend", handleTransitionEnd);
 

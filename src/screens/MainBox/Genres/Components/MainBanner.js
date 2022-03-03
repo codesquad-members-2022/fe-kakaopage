@@ -19,7 +19,11 @@ MainBanner.prototype.mount = function () {
     div.innerHTML = wtTpl;
     return div;
   });
-  const { $carousel, getInterval } = carousel(...$bannerElems);
+  const { $carousel, getInterval } = carousel({
+    elems: $bannerElems,
+    elemWidth: 720,
+    unit: "px",
+  });
   $mainBanner.appendChild($carousel);
   this.$props.setCarousel(getInterval);
 };
