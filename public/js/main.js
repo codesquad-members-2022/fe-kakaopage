@@ -1,35 +1,16 @@
-import {
-  toggleActiveTab,
-  toggleActiveWebtoonTab,
-  setWebtoonList,
-} from './webtoon-list.js'
-import {
-  setSlideImgStart,
-  setSlideImg,
-  setSlideBtn,
-  moveAutoSlide,
-} from './slide.js'
-import { data } from './slide-datas.js'
+import { toggleActiveTab, toggleActiveWebtoonTab } from './webtoon-list.js'
+import { moveAutoSlide } from './slide-move.js'
 import { searchSelector } from './utility.js'
+import { parseData } from './fetch.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const SLIDE_IMG_FIRST = 3
-
   const dayTab = searchSelector('.serial__list')
-  const slides = searchSelector('.webtoon-slide__imgs')
-  const slideEl = searchSelector('.webtoon-slide__img')
 
   dayTab.addEventListener('click', toggleActiveTab)
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
 
-  setSlideImgStart(slides, slideEl, data[SLIDE_IMG_FIRST])
-  data.forEach((e) => {
-    setSlideImg(slides, slideEl, e)
-  })
-  slides.appendChild(slideEl.cloneNode(true))
-
-  setSlideBtn()
   moveAutoSlide()
+  parseData()
 
-  setWebtoonList()
+  // setWebtoonList()
 })

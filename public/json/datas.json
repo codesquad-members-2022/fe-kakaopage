@@ -27,7 +27,7 @@
       "banner": "연재 재개 기념, 이벤트 중!"
     }
   ],
-  "webtoon-list": [
+  "webtoonList": [
     {
       "thumbnail__class": ".serial__thumbnail--img",
       "thumbnail__src": "./resource_4.png",

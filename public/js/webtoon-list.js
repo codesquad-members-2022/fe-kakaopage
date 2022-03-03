@@ -3,7 +3,7 @@ import { data } from './webtoon-datas.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
-export function setWebtoonList() {
+export function setWebtoonList(webtoonListData) {
   const container = document.querySelector('#container')
   const serial = container.querySelector('.serial')
   const webtoon = container.querySelector('.serial__webtoons')

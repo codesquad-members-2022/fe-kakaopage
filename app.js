@@ -9,11 +9,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/webtoon/datas', (req, res) => {
-  res.sendFile(path.join(__dirname, '/json/datas.json'))
+  res.sendFile(path.join(__dirname, '/public/json/datas.json'))
 })
 
-// const image
-// app.use('/webtoon/datas')
 app.use('/', express.static(path.join(__dirname, './public/js')))
 app.use('/', express.static(path.join(__dirname, './public/json')))
 app.use('/', express.static(path.join(__dirname, './public/css')))

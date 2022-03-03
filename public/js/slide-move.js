@@ -193,3 +193,5 @@ export function moveAutoSlide() {
   }
   rafCallback()
 }
+
+export async function parseSlideData() {}
