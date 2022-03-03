@@ -1,7 +1,6 @@
-import { dataOfEvent } from "../data/home/event.js";
 import { $, $$, insertIntoMain } from "../utils.js";
 
-const getEventImgs = () => {
+const getEventImgs = (dataOfEvent) => {
   const imgs = dataOfEvent.reduce((acc, data, idx) => {
     const img = `<img
     class="event-img"
@@ -16,31 +15,43 @@ const getEventImgs = () => {
   return imgs;
 };
 
-const addSlideEvL = () => {
-  $("#left").addEventListener("click", () => {
-    const curIdx = Number($("#event-count").textContent);
-    if (curIdx === 1) return;
+const updateCountText = (count) => {
+  $("#event-count").textContent = count;
+};
 
-    $("#event-count").textContent = curIdx - 1;
-
-    $$(".event-img").forEach((img) => {
-      img.style.transform = `translateX(${-670 * (curIdx - 2)}px)`;
-    });
-  });
-
-  $("#right").addEventListener("click", () => {
-    const curIdx = Number($("#event-count").textContent);
-    if (curIdx === dataOfEvent.length) return;
-
-    $("#event-count").textContent = curIdx + 1;
-
-    $$(".event-img").forEach((img) => {
-      img.style.transform = `translateX(${-670 * curIdx}px)`;
-    });
+const relocateEventImg = (location) => {
+  $$(".event-img").forEach((img) => {
+    img.style.transform = `translateX(${-670 * location}px)`;
   });
 };
 
-const createEventBlock = () => {
+const slideEvent = (target, dataOfEvent) => {
+  const start = 1;
+  const end = dataOfEvent.length;
+  const direction = target.id;
+  const curIdx = Number($("#event-count").textContent);
+
+  if (direction === "left") {
+    if (curIdx === start) return;
+    updateCountText(curIdx - 1);
+    relocateEventImg(curIdx - 2);
+  } else {
+    if (curIdx === end) return;
+    updateCountText(curIdx + 1);
+    relocateEventImg(curIdx);
+  }
+};
+
+const addSlideEvL = (dataOfEvent) => {
+  $("#left").addEventListener("click", ({ target }) =>
+    slideEvent(target, dataOfEvent)
+  );
+  $("#right").addEventListener("click", ({ target }) =>
+    slideEvent(target, dataOfEvent)
+  );
+};
+
+const createEventBlock = (dataOfEvent) => {
   const eventBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">추천 이벤트</h2>
@@ -63,7 +74,7 @@ const createEventBlock = () => {
   </header>
   <div class="position-rel">
     <div class="round-container side-by-side">
-      ${getEventImgs()}
+      ${getEventImgs(dataOfEvent)}
     </div>
     <div
       class="layout-center event-count-container text-color--transparent-white"
@@ -106,7 +117,7 @@ const createEventBlock = () => {
 </div>`;
 
   insertIntoMain(eventBlock);
-  addSlideEvL();
+  addSlideEvL(dataOfEvent);
 };
 
 export { createEventBlock };

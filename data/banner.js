@@ -41,4 +41,4 @@ const banner = [
   },
 ];
 
-export { banner as dataOfBanner };
+module.exports = banner;

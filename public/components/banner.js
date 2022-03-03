@@ -1,11 +1,10 @@
-import { $, insertIntoMain } from "../utils.js";
-import { dataOfsBanner } from "../data/home/smallBanner.js";
-import { dataOfBanner } from "../data/home/banner.js";
+import { $, fillWithData, insertIntoMain } from "../utils.js";
 
 const BANNER_WIDTH = 700;
 let curBanner;
 let autoSlideTimer;
 let clickable;
+let dataOfBanner;
 
 const resetSlideTimer = () => {
   curBanner = 1;
@@ -154,7 +153,8 @@ const offAnimation = () => {
   $("#banners-container").style.transitionDuration = "0s";
 };
 
-const createBanner = () => {
+const createBanner = (data) => {
+  dataOfBanner = data;
   const banner = `<div class="center container position-rel">
   <svg
     class="arrow-icon arrow--round-border arrow-left arrow--white" id="banner-left"
@@ -243,7 +243,7 @@ const createSmallBanner = (data) => {
   return smallBanner;
 };
 
-const createSmallBannerBlock = () => {
+const createSmallBannerBlock = (dataOfsBanner) => {
   const smallBanner = createSmallBanner(dataOfsBanner);
   const smallBannerBlock = `<div class="center container contents-container">
   <header class="header-container">

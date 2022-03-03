@@ -290,6 +290,7 @@ main {
 
 .daily-rank-title {
   margin-bottom: 5px;
+  width: fit-content;
 }
 
 .clock-img--yellow {

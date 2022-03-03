@@ -21,4 +21,11 @@ const getDay = () => {
   return day;
 };
 
-export { $, $$, range, insertIntoMain, getDay };
+const fillWithData = (req) => {
+  fetch(`http://localhost:3000/${req.path}`)
+    .then((res) => res.json())
+    .then((data) => req.createBlock(data))
+    .catch((err) => console.log(err));
+};
+
+export { $, $$, range, insertIntoMain, getDay, fillWithData };

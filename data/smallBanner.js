@@ -6,4 +6,4 @@ const sBanner = {
   desc: "누가 아군이고, 누가 적인가.",
 };
 
-export { sBanner as dataOfsBanner };
+module.exports = sBanner;

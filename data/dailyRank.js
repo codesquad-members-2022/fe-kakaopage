@@ -19,4 +19,4 @@ const dailyRank = [
   },
 ];
 
-export { dailyRank as dataOfDailyRank };
+module.exports = dailyRank;

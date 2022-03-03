@@ -49,4 +49,4 @@ const days = [
   },
 ];
 
-export { days as dataOfDays };
+module.exports = days;
