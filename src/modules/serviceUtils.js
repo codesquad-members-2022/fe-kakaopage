@@ -9,10 +9,13 @@ const getComponentsTemplate = (components) => {
   }, "");
 };
 
+const getKoreaDays = () => {
+  return ["일", "월", "화", "수", "목", "금", "토", "완결"];
+};
 const getKoreaDay = () => {
   const day = new Date().getDay();
-  const days = ["일", "월", "화", "수", "목", "금", "토", "완결"];
+  const days = getKoreaDays();
   return days[day];
 };
 
-export { formatUserCount, getComponentsTemplate, getKoreaDay };
+export { formatUserCount, getComponentsTemplate, getKoreaDay, getKoreaDays };

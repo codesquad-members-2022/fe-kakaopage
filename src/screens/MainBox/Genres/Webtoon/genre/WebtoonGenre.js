@@ -36,9 +36,13 @@ WebtoonGenre.prototype.mount = function () {
       : null;
     new components[className]({
       $target: $content,
-      state: { ...state, webtoons: filteredWebtoons },
+      state: {
+        ...state,
+        webtoons: className !== "daysTop" ? filteredWebtoons : webtoons,
+      },
       $props: {
         sortRanking: this.sortRanking,
+        filterContent: this.filterContent,
       },
     });
   });
@@ -58,9 +62,6 @@ WebtoonGenre.prototype.setup = async function () {
         className: "daysTop",
         state: {
           title: "요일연재 TOP",
-          filteredBy: {
-            days: koreaDay,
-          },
         },
       },
       {

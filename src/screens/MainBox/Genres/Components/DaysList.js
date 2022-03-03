@@ -1,25 +1,31 @@
-import Card from "./CardList.js";
-import Component from "../../../Component.js";
 import { createExtendsRelation } from "../../../../utils.js";
-import { getComponentsTemplate } from "../../../../modules/serviceUtils.js";
+import Component from "../../../Component.js";
 
-function DaysList(target, state) {
-  Component.call(this, target, state);
+function DaysList(infoObject) {
+  Component.call(this, infoObject);
 }
-
 createExtendsRelation(DaysList, Component);
 
+DaysList.prototype.setEvent = function () {
+  const { updateDay } = this.$props;
+
+  const handleAddEvent = ({ target }) => {
+    const $eventTarget = target.closest(".daysNav-item");
+    updateDay($eventTarget.dataset.day);
+  };
+  this.addEvent("click", ".daysNav-item", handleAddEvent);
+};
+
 DaysList.prototype.template = function () {
-  const webtoons = JSON.parse(localStorage.getItem("webtoons"));
-  const cardList = webtoons.filter((webtoon) =>
-    webtoon.days.includes(this.state.koreaDay)
-  );
-  const sliceCardList = cardList.slice(
-    0,
-    this.state.count ? this.state.count : cardList.length
-  );
-  const cards = sliceCardList.map((cardInfo) => new Card("_", cardInfo));
-  return getComponentsTemplate(cards);
+  const { days, selected } = this.state;
+  return days.reduce((tags, day) => {
+    tags += `
+      <li class='daysNav-item ${selected === day ? " selected" : ""}'
+        data-day="${day}">
+          ${day}
+      </li>`;
+    return tags;
+  }, "");
 };
 
 export default DaysList;

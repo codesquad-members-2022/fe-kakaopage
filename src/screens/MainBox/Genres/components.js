@@ -1,5 +1,5 @@
 import BigCardList from "./Components/BigCardList.js";
-import DaysTop from "./Components/DaysTop.js";
+import DaysTop from "./Components/ContentsBox/DaysTop.js";
 import FullButton from "./Components/FullButton.js";
 import MainBanner from "./Components/MainBanner.js";
 import NavDetail from "./Components/NavDetail";
