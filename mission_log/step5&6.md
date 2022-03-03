@@ -93,4 +93,11 @@
           ```
         - 오늘 UP 부분과 배너 부분의 순서가 바뀜. 
         <br><img width="441" alt="image" src="https://user-images.githubusercontent.com/90082464/156375915-a85835a2-be9c-48e0-a22c-903e6857cf02.png">
-    
+
+#### refactoring
+
+- 폴더 분류 변경
+    - 서버에서 static 폴더로 지정할 public 을 만들고 내부에 css, images, js 옮김.
+    - 서버 관련 js 인 express.js 와 index.html 만 별도 폴더 없이 존재
+    - static 경로 변경하는데 path.resolve() 가 현재 실행 중인 js 파일의 경로를 반환하지 않아 이상했다.
+    - html 내부 ref 경로는 public 폴더 기준 경로이므로 수정 안해도 됨.
