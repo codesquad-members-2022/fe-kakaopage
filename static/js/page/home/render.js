@@ -14,18 +14,19 @@ export const renderHome = () => {
     html += category.getHtml();
     html += slideBanner.getHtml();
 
-    const getGenreBestHtml = (genre, data) => {
-        const genreBest = new GenreBest({ genre, genreItem: data });
+    const getGenreBestHtml = (genreName, data) => {
+        const genreBest = new GenreBest({ genreName, genreItem: data });
         return genreBest.getHtml();
     };
 
     const renderJSONData = (path) => {
         getJSON(path)
-            .then((data) => {
-                html += getGenreBestHtml("로맨스", data);
+            .then((data) => (html += getGenreBestHtml("로맨스", data)))
+            .then((html) => render(html))
+            .catch((err) => {
+                console.error(err);
                 render(html);
-            })
-            .catch(render(html));
+            });
     };
 
     renderSubMenu();
