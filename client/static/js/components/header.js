@@ -1,4 +1,4 @@
-import { icons } from "../data/icons.js";
+import { icons } from "../../server/data/icons.js";
 
 const renderHeader = () => {
     const header = document.querySelector('header');

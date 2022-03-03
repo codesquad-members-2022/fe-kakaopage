@@ -1,4 +1,4 @@
-import { gridData } from '../data/categoryGridData.js';
+import { gridData } from '../../server/data/categoryGridData.js';
 
 export const renderCategoryGrid = (genre) => {
   const categoryGrid = document.createElement('div');

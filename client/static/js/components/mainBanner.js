@@ -1,4 +1,4 @@
-import { mainBannerData } from '../data/mainBannerData.js';
+import { mainBannerData } from '../../server/data/mainBannerData.js';
 import { START_SLIDE_INDEX } from '../constant.js';
 import { getBannerContentTemplate} from './banner.js';
 import { getSlideBtnTemplate, getpageNumTemplate, activateBtns, activateAutoSlide, activateSlide} from './slide.js';

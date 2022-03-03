@@ -1,4 +1,4 @@
-import { genreTabData } from '../data/genreTabData.js';
+import { genreTabData } from '../../server/data/genreTabData.js';
 import { DEFAULT_GENRE_INDEX } from '../constant.js';
 
 const genreTab = document.querySelector('.genre-tab');

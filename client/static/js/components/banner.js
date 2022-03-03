@@ -1,4 +1,4 @@
-import { icons } from '../data/icons.js';
+import { icons } from '../../server/data/icons.js';
 
 export const getBannerContentTemplate = (parent, bannerData) => {
     const tagTemplate = getBannerTagTemplate(parent, bannerData.tags);

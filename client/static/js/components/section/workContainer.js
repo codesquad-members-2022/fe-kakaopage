@@ -1,4 +1,4 @@
-import { icons } from '../../data/icons.js'
+import { icons } from '../../../server/data/icons.js'
 import { getBannerContentTemplate } from '../banner.js'
 
 export const makeWorkContainer = (genre, workDataArr, type) => {

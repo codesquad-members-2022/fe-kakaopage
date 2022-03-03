@@ -1,5 +1,5 @@
 import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH, AUTO_SLIDE_INTERVAL } from '../constant.js'
-import { icons } from '../data/icons.js'
+import { icons } from '../../server/data/icons.js'
 
 export const getSlideBtnTemplate = () => {
     return `

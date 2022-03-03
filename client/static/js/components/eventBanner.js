@@ -1,4 +1,4 @@
-import { eventBannerData } from '../data/eventBannerData.js';
+import { eventBannerData } from '../../server/data/eventBannerData.js';
 import { DEFAULT_GENRE_INDEX } from '../constant.js';
 import { getSlideBtnTemplate } from './slide.js'
 

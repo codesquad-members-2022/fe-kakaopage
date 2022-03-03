@@ -1,8 +1,8 @@
-import { dayRankingData } from '../../data/works/dayRankingData.js';
-import { newTopData } from '../../data/works/newTopData.js';
-import { dailyRankingData } from '../../data/works/dailyRankingData.js';
+import { dayRankingData } from '../../../server/data/works/dayRankingData.js';
+import { newTopData } from '../../../server/data/works/newTopData.js';
+import { dailyRankingData } from '../../../server/data/works/dailyRankingData.js';
 import { makeWorkContainer } from './workContainer.js';
-import { icons } from '../../data/icons.js';
+import { icons } from '../../../server/data/icons.js';
 import { DEFAULT_DAY } from '../../constant.js';
 
 const dataDic = {

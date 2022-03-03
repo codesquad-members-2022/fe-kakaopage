@@ -1,5 +1,5 @@
 import {DEFAULT_PAGE, DEFAULT_GENRE} from './constant.js';
-import { genreRenderList } from './data/renderData.js';
+import { genreRenderList } from '../../../server/data/renderData.js';
 import { renderHeader } from './components/header.js';
 import { renderGnb } from './components/gnb.js';
 import { renderGenreTab } from './components/genreTab.js';

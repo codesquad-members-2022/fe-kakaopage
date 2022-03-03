@@ -1,4 +1,4 @@
-import { gnbData } from '../data/gnbData.js'
+import { gnbData } from '../../server/data/gnbData.js'
 import { DEFAULT_PAGE } from '../constant.js';
 
 const gnb = document.querySelector('.gnb')

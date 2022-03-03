@@ -1,5 +1,5 @@
 import { getHeaderTemplate } from "./section/workSection.js";
-import { recommendEventData } from "../data/recommendEventData.js";
+import { recommendEventData } from "../../server/data/recommendEventData.js";
 import { START_SLIDE_INDEX } from "../constant.js";
 import { getRecommendEventControllerTemplate, activateBtns, activateSlide } from "./slide.js";
 
