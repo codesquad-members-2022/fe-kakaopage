@@ -1,6 +1,22 @@
 import { $ } from "../utils/dom.js";
-import { toggleWeekDayMenu } from "../tools/tools.js";
-import { renderWeekday } from "./renderer.js";
+
+import * as datas from "../data/datas.js";
+import { toggleWeekDayMenu, render } from "../tools/tools.js";
+
+import { Weekday } from "../views/views.js";
+
+export const renderWeekday = (today = new Date().getDay()) => {
+    const days = ["일", "월", "화", "수", "목", "금", "토"];
+    const weekday = new Weekday(
+        datas.weekdayData,
+        days[today] ? days[today] : today
+    );
+
+    let html = "";
+    html += weekday.getHtml();
+
+    render(html);
+};
 
 export const bindWeekdayMenuEvent = () => {
     $("#app").addEventListener("click", ({ target }) => {

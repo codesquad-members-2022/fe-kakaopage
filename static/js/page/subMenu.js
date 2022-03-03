@@ -3,8 +3,8 @@ import { $ } from "../utils/dom.js";
 import { toggleClass } from "../tools/tools.js";
 import * as datas from "../data/datas.js";
 
-// import { render, renderHome, renderWeekday } from "./renderer.js";
 import { renderHome } from "./home.js";
+import { renderWeekday } from "./weekday.js";
 import { renderCarousel } from "./carousel.js";
 
 // 현재 subMenu는 webtoon만 작동되는 것을 가정하고 작성됨
