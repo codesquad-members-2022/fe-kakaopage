@@ -1,5 +1,6 @@
-import { $, activateButton } from './utility.js';
-import { renderPage, renderDayTop, MAIN_BANNER_INFO, moveMainBanner, mainBannerTimer } from './controller.js';
+import { $, activateButton } from './util/utility.js';
+import { renderPage, renderDayTop } from './controller.js';
+import { MAIN_BANNER_INFO, moveMainBanner, mainBannerTimer } from './slide/slide.js';
 
 const renderAccordingGnb = target => {
   const targetIdx = target.dataset.target;

@@ -9,8 +9,4 @@ const dataUrl = {
   책: `${DATA_URL}book.json`
 };
 
-const getPageData = page => {
-  return dataUrl[page];
-};
-
-export { getPageData };
+export const getPageData = page => dataUrl[page];

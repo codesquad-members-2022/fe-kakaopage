@@ -1,5 +1,5 @@
 # 구현 결과
-[데모 페이지](https://jindonyy.github.io/fe-kakaopage/public/)  
+[데모 페이지](https://jindonyy.github.io/fe-kakaopage/static/)  
 
 - [X] 리뷰 반영하여 리팩토링
 - [X] 슬라이드 setTimeOut으로 수정
