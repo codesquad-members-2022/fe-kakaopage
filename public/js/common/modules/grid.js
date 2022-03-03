@@ -1,5 +1,4 @@
-import { jsonData } from '../../data/toonData.js';
-import { $, getElementByAttrSelector } from '../../util/index.js';
+import { $, getElementByAttrSelector, fetchData } from '../../util/index.js';
 import { gridItem } from '../../template/index.js';
 
 /* 전역 변수를 피하기 위해 함수로 선언 */
@@ -29,30 +28,29 @@ const findValue = (currentToon, key) => {
 };
 
 const selectToons = (key, lookUpValue) => {
-  const DATA_TOONS = JSON.parse(jsonData);
+  return fetchData('http://localhost:3000/api/toonData').then(data => {
+    Object.keys(data).reduce((toons, index) => {
+      const currentToon = data[index];
+      const value = findValue(currentToon, key);
+      const selectUseWeek = key === 'week' && value.includes(lookUpValue);
+      const selectUseOther = lookUpValue === value;
+      if (selectUseOther || selectUseWeek) {
+        toons.push(data[index]);
+      }
 
-  return Object.keys(DATA_TOONS).reduce((toons, index) => {
-    const currentToon = DATA_TOONS[index];
-    const value = findValue(currentToon, key);
-
-    const selectUseWeek = key === 'week' && value.includes(lookUpValue);
-    const selectUseOther = lookUpValue === value;
-    if (selectUseOther || selectUseWeek) {
-      toons.push(DATA_TOONS[index]);
-    }
-
-    return toons;
-  }, []);
+      return toons;
+    }, []);
+  });
 };
 
 const insertGridItem = (toons, section) => {
   const grid = getGridElement(section);
-  
-  toons.forEach(toon => {
-    grid.insertAdjacentHTML('beforeend', gridItem(toon));
+  toons.then(toons => {
+    console.log(123,toons)
+    // toons.forEach(toon => {
+    //   grid.insertAdjacentHTML('beforeend', gridItem(toon));
+    // });
   });
 };
 
-
 export { selectedTabClassName, clearGrid, selectToons, insertGridItem };
-

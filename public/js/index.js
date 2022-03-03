@@ -2,12 +2,12 @@ import { initDailySection, initGenreSections, initFooter } from './sections/inde
 
 const init = () => {
   initDailySection();
-  initGenreSections();
+  // initGenreSections();
   initFooter();
-}
+};
 
 const app = () => {
   init();
-}
+};
 
 app();
