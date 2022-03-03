@@ -1,0 +1,10 @@
+.notice-box {
+  padding: 80px 20px;
+  background: $gray-3;
+
+  &__desc {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}

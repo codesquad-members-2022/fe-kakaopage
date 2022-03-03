@@ -183,3 +183,7 @@ img { width: 100%; }
 .section-basic__view-more { position: absolute; top: 24px; right: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; gap: 4px; color: #adb5bd; cursor: pointer; }
 
 .section-basic__view-more img { width: 8px; }
+
+.notice-box { padding: 80px 20px; background: #dee2e6; }
+
+.notice-box__desc { text-align: center; font-size: 1.25rem; font-weight: 500; }
