@@ -10,7 +10,12 @@ const addHandlerOnSnb = () => select(`.snb__list`).addEventListener('click', han
 
 const handleNav = (event) => {
   if (!event.target.dataset.category || isAlreadyClicked(event.target)) return;
+
   const nav = event.currentTarget.dataset.navtype;
+  const category = event.target.dataset.category;
+
+  updateNavStyle(nav, category);
+
   nav === 'gnb' && handleGnb(event);
   nav === 'snb' && handleSnb(event);
 };
@@ -19,7 +24,6 @@ const handleGnb = (event) => {
   const globalCategory = event.target.dataset.category;
 
   loadMain(globalCategory);
-  updateNavStyle('gnb', globalCategory);
 };
 
 const handleSnb = (event) => {
@@ -54,7 +58,6 @@ const loadCategoryContent = (globalCategory, subCategory = null) => {
 
   const subCategoryData = getSubCategoryData(globalCategory, subCategory);
 
-  updateNavStyle('snb', subCategory);
   updateDocumentTitle(`${subCategory} - ${globalCategory}`);
   categoryLoader[globalCategory][subCategory](subCategoryData);
 };
