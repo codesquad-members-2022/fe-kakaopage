@@ -31,11 +31,11 @@ function fetchSlide() {
   return fetch(url)
     .then((res) => res.json())
     .then((json) => {
-      parseSlideData(json)
+      parseSlide(json)
     })
 }
 
-function parseSlideData(json) {
+function parseSlide(json) {
   const slideData = json.slide
   setSlideImgStart(slides, slideEl, slideData[SLIDE_IMG_FIRST])
   slideData.forEach((e) => {
@@ -43,6 +43,21 @@ function parseSlideData(json) {
   })
   slides.appendChild(slideEl.cloneNode(true))
   setSlideBtn()
+}
+
+function fetchWebtoonList() {
+  const url = 'http://localhost:3000/webtoon/datas'
+
+  return fetch(url)
+    .then((res) => res.json())
+    .then((json) => {
+      parseWebtoonList(json)
+    })
+}
+
+function parseWebtoonList(json) {
+  const webtoonListData = json.webtoonList
+  setWebtoonList(webtoonListData)
 }
 
 export async function parseData() {

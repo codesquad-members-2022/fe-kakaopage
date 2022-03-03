@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   dayTab.addEventListener('click', toggleActiveWebtoonTab)
 
   moveAutoSlide()
-  parseData()
 
-  // setWebtoonList()
+  parseData()
 })
