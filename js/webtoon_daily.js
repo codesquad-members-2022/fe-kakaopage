@@ -106,15 +106,12 @@ function createTodayContent() {
 
 let count = 0;
 export function initWebtoonDaily() {
-    fetch('http://localhost:3000/webtoon/data')
-        .then(response => response.json()) //parser ?
-        .then(data => {
-            console.log(data)
-            console.log('count:', count)
-            count ++
-            webtoonData = data;
-            createDailyNav();
-            createTodayContent();
-            listenEvent();
-        })
+    return fetch('http://localhost:3000/webtoon/webtoonData')
+            .then(response => response.json()) //parser ?
+            .then(data => {
+                webtoonData = data;
+                createDailyNav();
+                createTodayContent();
+                listenEvent();
+            })
 }

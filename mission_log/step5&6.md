@@ -54,10 +54,12 @@
     
 4. URL 라우팅
     - 특정 URL 경로로 요청이 왔을 경우, JSON 형태의 데이터를 줄 수 있도록 구현한다.
-    - 어떤 경로로 왔을 때 어떤 데이터를 줄 것 인지. => 지금으 크게 신경쓰지 말자.
+    - 어떤 경로로 왔을 때 어떤 데이터를 줄 것 인지. => REST API... 지금은 크게 신경쓰지 말자.
     - 리뷰를 하면서 깨달은 점
         - 특정 URL 로 라우팅을 하는 경우 데이터를 보냄과 동시에 페이지 렌더링을 해줘야 한다고 생각했는데 아니었다.
         - API 를 보낸다는 건 그 경로로 json 을 주는 것 그 자체인 듯 하다.
+        
+5. fetch 사용하여 api 요청 
     - fetch 를 사용하여 라우팅을 한 경로에서 JSON 형식 데이터를 받는다.
     - 우선 홈, 요일연재, 웹툰 탭 클릭 시 발생하는 dailyNav 및 dailyContents 영역 렌더링을 Fetch 로 데이터를 받도록 수정
         - fetch 를 어느 단계에서 하는 게 맞을까? 
@@ -79,5 +81,16 @@
                     })
             }
           ```     
-     
+    
+   - initContents 부분에도 동일하게 Fetch 적용하였는데 렌더링 순서에 문제 발생.
+        - 홈 탭의 경우 영역 구성이 콘텐츠(배너슬라이드) - 카테고리 - 웹툰데일리 인데, 콘텐츠가 Fetch 하는 동안 카테고리가 먼저 실행됨. 
+        - ```javascript
+          function renderHome() {
+              initContents();
+              createCategory(categoryMenus);
+              initWebtoonDaily();
+          }
+          ```
+        - 오늘 UP 부분과 배너 부분의 순서가 바뀜. 
+        <br><img width="441" alt="image" src="https://user-images.githubusercontent.com/90082464/156375915-a85835a2-be9c-48e0-a22c-903e6857cf02.png">
     

@@ -2,7 +2,7 @@
 import express from "express";
 import path from 'path';
 const __dirname = path.resolve();
-import { webtoonData } from "./webtoonData.js";
+import { webtoonData, contentsData } from "./webtoonData.js";
 
 const app = express();
 const port = 3000;
@@ -19,7 +19,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', "/index.html"))
 });
 
-app.get('/webtoon/data', (req, res) => {
-    const dayJSON = webtoonData
-    res.json(dayJSON)
+app.get('/webtoon/webtoonData', (req, res) => {
+    res.json(webtoonData)
+})
+
+app.get('/webtoon/contentsData', (req, res) => {
+    res.json(contentsData)
 })

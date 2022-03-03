@@ -73,9 +73,11 @@ function clearMenu() {
 }
 
 function renderHome() {
-    initContents();
-    createCategory(categoryMenus);
-    initWebtoonDaily();
+    initContents()
+    .then(()=> {
+        createCategory(categoryMenus)
+        initWebtoonDaily()
+    })
 }
 
 function renderDaily() {
