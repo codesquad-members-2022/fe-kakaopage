@@ -13,11 +13,13 @@ const getNav = (navItems) => {
 };
 
 const getAds = (info) => {
-  let target = info;
+  console.log(info);
+  let target = info.pre;
   let result = "";
   let count = 3;
   while (count !== 0) {
-    result += /*html*/ `<img src="../IMG/${target.adImage}" alt="ads image">`;
+    result += /*html*/ `<img src="../IMG/${target.adImage}" alt="${target.number}">`;
+    if (count === 2) target.view = true;
     target = target.post;
     count--;
   }
@@ -178,6 +180,7 @@ const listContents =
   `;
 
 export {
+  getAds,
   ads,
   webtoonNav,
   dummy,
