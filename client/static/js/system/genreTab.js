@@ -1,7 +1,18 @@
-import { genreTabData } from '../../server/data/genreTabData.js';
-import { DEFAULT_GENRE_INDEX } from '../constant.js';
+//import { DEFAULT_GENRE_INDEX } from '../constant.js';
 
 const genreTab = document.querySelector('.genre-tab');
+
+export const getGenreTabTemplate = (genreTabData) => {
+    return `
+        <div class="genre-tab">
+            <ul class='tab__container vertical-center'>
+                ${genreTabData.map(data => `
+                    <li class='genre-tab__item center' data-genre=${data.genre}><a href='#'>${data.text}</a></li>`
+                ).join('')}
+            </ul>
+        </div>
+    `
+}        
 
 const renderGenreTab = (currPage) => {
     if (currPage === 'home') {
@@ -12,16 +23,6 @@ const renderGenreTab = (currPage) => {
     genreTab.innerHTML = getTemplate(currPage);
     setDefault(genreTab);
 }
-
-const getTemplate = (currPage) => {
-    return `
-        <ul class='tab__container vertical-center'>
-            ${genreTabData[currPage].map(data => `
-                <li class='genre-tab__item center' data-genre=${data.genre}><a href='#'>${data.text}</a></li>`
-            ).join('')}
-        </ul>
-    `
-}        
 
 const setDefault = (genreTab) => {
     const defaultClicked = genreTab.querySelector(`li:nth-child(${DEFAULT_GENRE_INDEX})`);

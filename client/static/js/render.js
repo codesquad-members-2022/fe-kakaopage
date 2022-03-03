@@ -1,8 +1,9 @@
-//import { genreRenderList } from '../../../server/data/renderData.js';
-import { getHeaderTemplate } from './components/header.js';
-import { getGnbTemplate } from './components/gnb.js';
+import { DEFAULT_GENRE, DEFAULT_PAGE } from './constant.js';
 import { getData } from './utils.js';
-// import { renderGenreTab } from './components/genreTab.js';
+import { getHeaderTemplate } from './system/header.js';
+import { getGnbTemplate } from './system/gnb.js';
+import { getGenreTabTemplate } from './system/genreTab.js'
+import { getWebtoonPageTemplate } from './pages/webtoon.js';
 // import { renderMainBanner } from './components/mainBanner.js';
 // import { renderCategoryGrid } from './components/categoryGrid.js';
 // import { renderEventBanner } from './components/eventBanner.js';
@@ -11,8 +12,8 @@ import { getData } from './utils.js';
 
 export const initRender = () => {
     renderCommon();
-    
-    // renderGnb();
+    renderGenreTab(DEFAULT_PAGE);
+    renderContents(DEFAULT_PAGE, DEFAULT_GENRE);
     // renderGenreTab(DEFAULT_PAGE);
     // renderByGenre(DEFAULT_GENRE);
     // activateAll();
@@ -20,10 +21,30 @@ export const initRender = () => {
 
 const renderCommon = () => {
     getData('common', 'gnb')
-    .then(data => {
-        document.querySelector('body').insertAdjacentHTML('afterbegin', getHeaderTemplate() + getGnbTemplate(data));
+    .then(gnbData => {
+        document.querySelector('body').insertAdjacentHTML('afterbegin', getHeaderTemplate() + getGnbTemplate(gnbData));
     });
 }
+
+const renderGenreTab = (page) => {
+    getData('common', 'genreTab', 'webtoon')
+    .then(genreTabData => {
+        document.querySelector('.contents').insertAdjacentHTML('afterbegin', getGenreTabTemplate(genreTabData));
+    });
+}
+
+const pageDic = {
+    'webtoon': getWebtoonPageTemplate
+}
+
+const renderContents = (page, genre) => {
+    getData(page, genre)
+    .then(pageData => {
+        document.querySelector('.tab-contents').insertAdjacentHTML('beforeend', pageDic[page](genre, pageData));
+    });
+}
+
+
 
 // const reRender = (newSelected, type) => {
 //     const newTab = newSelected.dataset[type];

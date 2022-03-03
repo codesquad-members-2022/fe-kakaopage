@@ -2,8 +2,8 @@ import express from 'express';
 import webtoonData from '../data/webtoon.json';
 export const webtoonRouter = express.Router();
 
-webtoonRouter.get('/', (req, res) => {
-    res.json(webtoonData)
+webtoonRouter.get('/home', (req, res) => {
+    res.json(webtoonData.home)
 });
 webtoonRouter.get('/daily', (req, res) => {
     res.json(webtoonData.daily);

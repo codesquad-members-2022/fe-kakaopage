@@ -1,6 +1,6 @@
 import { eventBannerData } from '../../server/data/eventBannerData.js';
 import { DEFAULT_GENRE_INDEX } from '../constant.js';
-import { getSlideBtnTemplate } from './slide.js'
+import { getSlideBtnTemplate } from '../components/slide.js'
 
 export const renderEventBanner = (genre) => { 
     const eventBanner = document.createElement('div');

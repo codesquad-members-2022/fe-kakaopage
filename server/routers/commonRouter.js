@@ -5,18 +5,18 @@ export const commonRouter = express.Router();
 commonRouter.get('/gnb', (req, res) => {
     res.json(commonData.gnb)
 });
-commonRouter.get('/genre/webtoon', (req, res) => {
-    res.json(commonData.genre.webtoon)
+commonRouter.get('/genreTab/webtoon', (req, res) => {
+    res.json(commonData.genreTab.webtoon)
 });
-commonRouter.get('/genre/novel', (req, res) => {
-    res.json(commonData.genre.novel)
+commonRouter.get('/genreTab/novel', (req, res) => {
+    res.json(commonData.genreTab.novel)
 });
-commonRouter.get('/genre/movie', (req, res) => {
-    res.json(commonData.genre.movie)
+commonRouter.get('/genreTab/movie', (req, res) => {
+    res.json(commonData.genreTab.movie)
 });
-commonRouter.get('/genre/broadcast', (req, res) => {
-    res.json(commonData.genre.broadcast)
+commonRouter.get('/genreTab/broadcast', (req, res) => {
+    res.json(commonData.genreTab.broadcast)
 });
-commonRouter.get('/genre/book', (req, res) => {
-    res.json(commonData.genre.book)
+commonRouter.get('/genreTab/book', (req, res) => {
+    res.json(commonData.genreTab.book)
 });
