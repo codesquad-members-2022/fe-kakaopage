@@ -9,6 +9,8 @@ import { webtoonActionContent } from "../render/action/render-webtoon-action.js"
 import { webtoonBlContent } from "../render/bl/render-webtoon-bl.js";
 import { textSelectedPositionChange } from "../../components/text-selected-position-change.js";
 import { changeCirclePosition } from "../../components/change-circle-position.js";
+import { getNowDay } from "../../components/get-now-day.js";
+import { onClickListener } from "../../handler/on-click-listener.js";
 
 const app = document.querySelector(".app");
 const webtoonUl = document.querySelector(".nav-box__list");
@@ -43,21 +45,19 @@ const renderHandler = (tabName) => {
   textSelectedPositionChange(navBox.querySelectorAll("li"), tabIdx[tabName]);
 };
 
-webtoonUl.addEventListener("click", (evt) => {
+const webtoonUlEventHandler = (evt) => {
   if (evt.target.nodeName === "LI") {
     renderHandler(evt.target.innerHTML);
   }
-});
+};
+
+onClickListener(webtoonUl, webtoonUlEventHandler);
 
 const init = () => {
   app.firstElementChild.remove();
   const currentTag = app.firstElementChild;
   app.insertBefore(webtoonWeeklyContent, currentTag);
-  const now = new Date();
-  let nowDay = now.getDay() - 1;
-  if (nowDay === -1) {
-    nowDay = 6;
-  }
+  const nowDay = getNowDay();
   textSelectedPositionChange(
     document
       .querySelector(".webtoon-weekly-content__nav")
