@@ -1,5 +1,5 @@
-import { $ } from "./utils.js";
-import { CarouselContent } from "../component/CarouselContent.js";
+import { $ } from "../utils/utils.js";
+import { CarouselContent } from "../components/CarouselContent.js";
 // import { carouselData } from "./dummy.js";
 
 export const handleCarousel = () => {

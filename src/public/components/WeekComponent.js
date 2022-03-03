@@ -1,4 +1,4 @@
-import { days } from "../js/utils.js";
+import { days } from "../utils/utils.js";
 
 export const WeekComponent = (today) => {
     return /* html */`

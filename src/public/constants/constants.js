@@ -29,5 +29,3 @@ export const rowListTitleObj = {
   popularity: { name: "popularity", title: "지금 뜨는 인기작", imageSize: "mid", imageStatus: "clock"},
   exclusive: { name: "exclusive", title: "[ORIGINAL] 믿고보는 독.점.연.재", imageSize: "large", imageStatus: "clock"}
 };
-
-export const serverURL = 'http://localhost:3000';

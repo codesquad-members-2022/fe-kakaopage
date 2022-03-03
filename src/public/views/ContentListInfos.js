@@ -1,12 +1,12 @@
-import { IssueComponent } from "../component/IssueComponent.js";
-import { BannerComponent } from "../component/BannerComponent.js";
-import { rowListTitleObj } from "./constants.js";
+import { IssueComponent } from "../components/IssueComponent.js";
+import { BannerComponent } from "../components/BannerComponent.js";
+import { rowListTitleObj } from "../constants/constants.js";
 import { RowListContainer } from "../container/RowListContainer.js";
 import { WeekListContainer } from "../container/WeekListContainer.js";
 import { ColumnListContainer } from "../container/ColumnListContainer.js";
-import { FilterComponent } from "../component/FilterComponent.js";
-import { WeekComponent } from "../component/WeekComponent.js";
-import { today } from "./utils.js";
+import { FilterComponent } from "../components/FilterComponent.js";
+import { WeekComponent } from "../components/WeekComponent.js";
+import { today } from "../utils/utils.js";
 
 export const ContentListInfos = {
     addBannerComponent(bannerData) {

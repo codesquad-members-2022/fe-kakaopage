@@ -1,5 +1,5 @@
 import { WebtoonData } from "../dummy";
-import { days } from "../public/js/utils";
+import { days } from "../public/utils/utils";
 
 export const getWebtoons = (req, res) => {
     const webtoonsData = WebtoonData.slice(0, 20);
