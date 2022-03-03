@@ -3,37 +3,42 @@ import { selector } from "./utility.js";
 import { adsInfo } from "./dataEditor.js";
 import { getAds } from "./parts.js";
 
-const getTargetInfo = (image) => {
-  const firstImageNumber = selector("img", image).getAttribute("alt");
+const getTargetInfo = (isRight) => {
+  const targetDirection = isRight ? "post" : "pre";
+  const firstImage = selector("img", selector(".ads__image")).getAttribute(
+    "alt"
+  );
   let target = adsInfo;
-  while (target.number !== Number(firstImageNumber)) target = target.post;
-  return target.post.post;
+  while (target.number !== Number(firstImage)) target = target[targetDirection];
+  return isRight ? target.post.post : target;
 };
 
-const getNewImages = (image) => {
-  const targetInfo = getTargetInfo(image);
+const getNewImages = (isRight) => {
+  const targetInfo = getTargetInfo(isRight);
   const newImages = getAds(targetInfo);
-  image.innerHTML = newImages;
+  selector(".ads__image").innerHTML = newImages;
 };
 
-const onAdsRightClick = () => {
+const onAdsBtnClick = (direction) => {
   let length = 0;
+  const isRight = direction;
   const image = selector(".ads__image");
   const { style } = image;
   const lengthInterval = 10;
   const moveImage = () => {
-    style.left = `${-length}%`;
+    style.left = isRight ? `${-length}%` : `${-200 + length}%`;
     if (length < 100) {
       length += lengthInterval;
       window.requestAnimationFrame(moveImage);
     }
   };
-  getNewImages(image);
+  getNewImages(isRight);
   moveImage();
 };
 
 const onAdsClickHandler = ({ className }) => {
-  if (className.includes("right")) onAdsRightClick();
+  if (className.includes("right")) onAdsBtnClick(true);
+  if (className.includes("left")) onAdsBtnClick(false);
 };
 
 const clickEventHandler = ({ target }) => {
