@@ -25,6 +25,18 @@ const SLIDE_IMG_FIRST = 3
 const slides = searchSelector('.webtoon-slide__imgs')
 const slideEl = searchSelector('.webtoon-slide__img')
 
+function timer(time) {
+  return new Promise((resolve, reject) => {
+    resolve(time)
+  })
+}
+
+timer(5).then((time) => {
+  setTimeout(() => {
+    console.log(`${time}초 후...`)
+  }, time * 1000)
+})
+
 function fetchSlide() {
   const url = 'http://localhost:3000/webtoon/datas'
 
