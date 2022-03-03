@@ -31,6 +31,41 @@ function timer(time) {
   })
 }
 
+// timer(5)
+//   .then((time) => {
+//     setTimeout(() => {
+//       console.log(`${time}초 후...`)
+//       return '5'
+//     }, time * 1000)
+//   })
+//   .then((s) => console.log(s))
+
+// then은 동기로 작동(then 안에 넣는다고 비동기로 작동하는게 아님 비동기 함수에 넣어야 비동기로 작동)
+// let a
+
+// timer(5)
+//   .then((time) => {
+//     let b
+//     setTimeout(() => {
+//       a = 5
+//       b = 5
+//       console.log(`${time}초 후...`)
+//       console.log(a, b)
+//     }, time * 1000)
+//     return new Promise((resolve, reject) => {
+//       resolve(b)
+//     })
+//   })
+//   .then((time) => {
+//     a = 10
+//     time = 10
+//     console.log(time) // then 안에 넣는다고 비동기로 작동하는게 아님
+//     setTimeout(() => {
+//       console.log(`${time}초 후...`)
+//       console.log(a, time)
+//     }, time * 1000)
+//   })
+
 timer(5).then((time) => {
   setTimeout(() => {
     console.log(`${time}초 후...`)
