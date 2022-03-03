@@ -12,10 +12,10 @@ function renderSelectDayHome(num) {
 
       return json[day[today]];
     })
-    .then(data => makeSelectDayHomeList(num, data));
+    .then(data => makeSelectDayHome(num, data));
 }
 
-function makeSelectDayHomeList(num, data) {
+function makeSelectDayHome(num, data) {
   return `
     <ul class="select__day">
       ${makeSelectDayItems()}
@@ -28,16 +28,15 @@ function makeSelectDayItems() {
   const day = ['월', '화', '수', '목', '금', '토', '일', '완결'];
   const dataSet = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'];
 
-  let result = '';
-  day.forEach((el, index) => {
-    result += `
-      <li class="day" data-day="${dataSet[index]}">
-        <button type="button" class="day__btn">${day[index]}</button>
-      </li>
-    `
-  });
+  return day.reduce((acc, cur, index) => acc + makeSelectDayItem(cur, dataSet, index), '');
+}
 
-  return result;
+function makeSelectDayItem(day, dataSet, index) {
+  return `
+    <li class="day" data-day="${dataSet[index]}">
+      <button type="button" class="day__btn">${day}</button>
+    </li>
+  `
 }
 
 export {renderSelectDayHome, makeSelectDayItems}

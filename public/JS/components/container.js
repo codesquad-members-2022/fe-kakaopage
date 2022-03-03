@@ -6,14 +6,16 @@ import {getData} from '../utility.js';
 
 function renderContainer(containerInfo, tab) {
   return makeContainerLayout(containerInfo, tab)
-  .then(containerLayout => {
-    return `
-      <div class="container ${containerInfo.class}">
-        ${makeContainerTitle(containerInfo.title)}
-        ${containerLayout}
-      </div>
-    `;
-  })
+  .then(containerLayout => makeContainer(containerInfo, containerLayout))
+}
+
+function makeContainer(containerInfo, containerLayout) {
+  return `
+    <div class="container ${containerInfo.class}">
+      ${makeContainerTitle(containerInfo.title)}
+      ${containerLayout}
+    </div>
+  `;
 }
 
 function makeContainerTitle(title) {
@@ -31,13 +33,13 @@ function makeContainerTitle(title) {
 // ==================== layout ====================
 function makeContainerLayout(containerInfo, tab) {
   switch (containerInfo.layout) {
-    case 'SMALL_CARD':
-      return containerInfo.class === 'daily__top'
+    case 'SMALL_CARD_LAYOUT':
+      return containerInfo.datasetTop === 'daily'
         ? renderSelectDayHome(containerInfo.items)
         : renderGenreTop(containerInfo.items);
-    case 'RANKING':
+    case 'RANKING_LAYOUT':
       return renderRankingList(tab);
-      // case 'EVENT': 
+      // case 'EVENT_LAYOUT': 
       // return makeEventSection(containerInfo.class);
       // makeEventSection는 프로미스가 아니라 문자열을 반환하기 때문에 아무일도 안일어난다.
   }

@@ -19,19 +19,21 @@ function themeMenuTemplete(data) {
 }
 
 function makeThemeItems(data) {
-  let result = '';
-  data.forEach(el => {
-    const checkHighlight = el.highlight ? `<span class="item__highlight">${el.highlight}</span>` : '';
-    result += `
-      <li class="theme__item">
-        <a href="#">
-          <span class="item__text">${el.text}</span>
-          ${checkHighlight}
-        </a>
-      </li>
-    `
-  });
-  return result
+  return data.reduce((acc, cur) => {
+    const checkHighlight = cur.highlight ? `<span class="item__highlight">${cur.highlight}</span>` : '';
+    return acc + makeThemeItem(cur, checkHighlight)
+  }, '');
+}
+
+function makeThemeItem(data, checkHighlight) {
+  return `
+    <li class="theme__item">
+      <a href="#">
+        <span class="item__text">${data.text}</span>
+        ${checkHighlight}
+      </a>
+    </li>
+  `
 }
 
 export {renderThemeMenu}

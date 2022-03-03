@@ -6,43 +6,40 @@ const url = 'http://localhost:3000/main-banner';
 function renderMainBanner(tab) {
   return getData(url)
     .then(json => json[tab])
-    .then(data => mainBannerTemplete(data));
+    .then(data => makeMainBanner(data));
 }
 
-function mainBannerTemplete(data) {
+function makeMainBanner(data) {
+  const mainBannerItems = data.reduce((acc, cur, index) => acc + makeMainBannerItem(cur, index), '');
+  
   return `
     <article class="main__banner banner">
       ${makeBannerBtns()}
       <ul class="banner__list">
-        ${makeMainBannerItems(data)}
+        ${mainBannerItems}
       </ul>
       ${makeMainBannerCounter(data)}
     </article>
   `;
 }
 
-function makeMainBannerItems(data) {
-  let result = '';
-  data.forEach((el, index) => {
-    result += `
-      <li class="banner__item" data-index="${index + 1}">
-        <a href="#"><img src="${el.img_url}" alt="${el.img_alt}" class="banner__img"/></a>
-        <div class="banner__info">
-          <h3 class="banner__title">${el.title}</h3>
-          <div class="banner__viewer">
-            <p><i class="fas fa-clock"></i> 웹툰</p>
-            <div class="divider"></div>
-            <p><i class="fas fa-user"></i> ${el.viewer}</p>
-          </div>
-          <div class="banner__summary">
-            <span>${el.desc}</span>
-          </div>
+function makeMainBannerItem(item, index) {
+  return `
+    <li class="banner__item" data-index="${index + 1}">
+      <a href="#"><img src="${item.img_url}" alt="${item.img_alt}" class="banner__img"/></a>
+      <div class="banner__info">
+        <h3 class="banner__title">${item.title}</h3>
+        <div class="banner__viewer">
+          <p><i class="fas fa-clock"></i> 웹툰</p>
+          <div class="divider"></div>
+          <p><i class="fas fa-user"></i> ${item.viewer}</p>
         </div>
-      </li>
-    `
-  });
-
-  return result
+        <div class="banner__summary">
+          <span>${item.desc}</span>
+        </div>
+      </div>
+    </li>
+    ` 
 }
 
 function makeMainBannerCounter(data) {

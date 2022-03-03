@@ -13,10 +13,10 @@ function renderSelectDayDaily() {
 
       return json[day[today]];
     })
-    .then(data => selectDayDailyTemplete(data));
+    .then(data => makeSelectDayDaily(data));
 }
 
-function selectDayDailyTemplete(data) {
+function makeSelectDayDaily(data) {
   const DAILY_ITEMS = 10;
   return `
     <section class="daily__webtoons">
