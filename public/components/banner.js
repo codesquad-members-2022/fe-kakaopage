@@ -5,11 +5,15 @@ import { dataOfBanner } from "../data/home/banner.js";
 const BANNER_WIDTH = 700;
 let curBanner;
 let autoSlideTimer;
+let clickable;
 
 const resetSlideTimer = () => {
   curBanner = 1;
   if (autoSlideTimer) {
     clearTimeout(autoSlideTimer);
+  }
+  if (clickable) {
+    clickable = null;
   }
 };
 
@@ -101,44 +105,39 @@ const startAutoSlide = () => {
   }, 3000);
 };
 
-const addSlideEvL = () => {
-  let timer;
+const relocateBanner = () => {
+  if (curBanner === dataOfBanner.length + 1) {
+    offAnimation();
+    moveBanners();
+    curBanner = 1;
+  }
 
-  $("#banner-left").addEventListener("click", () => {
-    clearTimeout(autoSlideTimer);
-    startAutoSlide();
-    if (!timer) {
+  if (curBanner === 0) {
+    offAnimation();
+    moveBanners(dataOfBanner.length);
+    curBanner = dataOfBanner.length;
+  }
+};
+
+const slideEvent = ({ target }) => {
+  clearTimeout(autoSlideTimer);
+  startAutoSlide();
+  if (!clickable) {
+    if (target.id === "banner-left") {
       slideLeft2Right();
-      timer = setTimeout(() => {
-        timer = null;
-      }, 300);
-    }
-  });
-
-  $("#banner-right").addEventListener("click", () => {
-    clearTimeout(autoSlideTimer);
-    startAutoSlide();
-    if (!timer) {
+    } else {
       slideRight2Left();
-      timer = setTimeout(() => {
-        timer = null;
-      }, 300);
     }
-  });
+    clickable = setTimeout(() => {
+      clickable = null;
+    }, 300);
+  }
+};
 
-  $("#banners-container").addEventListener("transitionend", () => {
-    if (curBanner === dataOfBanner.length + 1) {
-      offAnimation();
-      moveBanners();
-      curBanner = 1;
-    }
-
-    if (curBanner === 0) {
-      offAnimation();
-      moveBanners(dataOfBanner.length);
-      curBanner = dataOfBanner.length;
-    }
-  });
+const addSlideEvL = () => {
+  $("#banner-left").addEventListener("click", slideEvent);
+  $("#banner-right").addEventListener("click", slideEvent);
+  $("#banners-container").addEventListener("transitionend", relocateBanner);
 };
 
 const moveBanners = (loc = 1) => {
