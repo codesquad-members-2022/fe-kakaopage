@@ -25,170 +25,24 @@
 # TODO
 
 - [ ] clearInterval로 버튼 누를 떄 이벤트 삭제 후 재등록
-- [ ] promise, then, async/await 동작 과정 이해
-- [ ] node js의 동작과정
+- [x] promise, then, async/await 동작 과정 이해
+- [ ] pr 요청에 따른 수정
+- [ ] db: 데이터 구조 (key, value가 최선일까?) map을 활용하면 더 좋을려나
+- [ ] nodejs babel사용해보기: require너무 불편함
+- [ ] 요일 탭 구현하면서 데이터 fetch와 렌더링 연습
 
-# 고민거리 (그룹리뷰용 정리)
+# pr 피드백 수정
 
-### 진행중.... 1. closure 이해 및 closure의 반환 값들
+1. [fallback이 뭐지](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#issuecomment-1056689774)
 
-# closure 반환 함수
+2. [db/store.js의 switch문](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817513689)
 
-1번에서 2번으로 pr 피드백에 따라 수정했지만, 명확한 차이를 모르겠다.
+- case명 수정: category이름으로
 
-### 1번 함수 그 자체를 반환
+3. [front/js/api/getUidContent.js](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817514168)
 
-```js
-export function handleMove() {
-  let idx = 0;
+- await 를 사용했으면 then을 사용할 필요가 없는데, 그 반대로 구현해도 되고요.
 
-  function renderCarouselIndex() {
-    // 생략
-  }
-  return {
-    renderCarouselIndex,
-    renderButtons() {
-      // 생략
-    },
-    initMove() {
-      // 생략
-    },
-  };
-}
-```
+4. [cors 미들웨어 설명](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817515426)
 
-<img width="704" alt="클로저 바로 함수" src="https://user-images.githubusercontent.com/71386219/156111129-fe9c0a9b-123f-4453-b23a-c790ed9f4284.png">
-
-### 2번 객체 형태로 반환
-
-```js
-export function handleMove() {
-  let idx = 0;
-
-  function renderCarouselIndex() {
-    // 생략
-  }
-  return {
-    renderCarouselIndex,
-    renderButtons: () => {
-      // 생략
-    },
-    initMove: function () {
-      // 생략
-    },
-  };
-}
-```
-
-<img width="434" alt="클로져 화살표함수 사용" src="https://user-images.githubusercontent.com/71386219/156111119-0ad7afcc-f1c9-46ab-afab-ad6e9e8bd5b5.png">
-
-### 해결: 2. api요청 이해 및 고민
-
-ssr, scr차이와 배포이후에 프론트와 백앤드가 어떻게 통신하는지 이해하고 적용해봄
-페이지를 라우팅하는 url과 데이터를 요청하는 api를 어떻게 구분할까 고민. 예를 들어, 프로젝트에서는 server.js에서 static폴더에 있는 정적인 리소스들을 아래와 같은 방식으로 관리하고 있음. 그런데 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링도록 설정.
-
-```js
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-```
-
-위와 같이 하면 url에 임의 대로 (http://localhost:4000/asdfasasjkf) 아무 의미 없는 url을 입력해도 정상적으로 작동함. 혹은 app.get("/user", cb)과 같이 서버에서 데이터를 가져오려고 만든 uri인데 클라이언트에서 라우팅이 작동함. (아래 예시)
-
-```js
-// 1번: app.get("/user", cb)가 먼저 작동해 index.html을 렌더링 하지 않음
-app.get('/user', (req, res) => {
-  res.send('user');
-});
-
-// 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링하기
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-
-// 2번: app.get("/*", cb)가 먼저 작동해 유저데이터를 받아오지 못함
-// 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링하기
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-
-app.get('/user', (req, res) => {
-  res.send('user');
-});
-
-//3번: /api로 시작하는 데이터만 요청하는 uri구분
-app.get('/api', apiRouter);
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-```
-
-`그렇다면 서버와 통신할 api주소는 어떻게 관리할까?`
-
-1. uri주소가 /api로 시작할 때 데이터만 전달하는 라우터 만들기
-
-2. 클라이언트를 렌더링하는 서버와 데이터를 처리하는 서버를 분리
-
-- 정적 파일을 렌더링하는 웹 서버와 동적 데이터(파일)을 관리하는 was로 구분해서 생각
-- 아래 해결방안에 자세히 설명
-
-✅ 해결방안
-
-클라이언트와 서버를 분리배포한다고 생각하고 작업
-
-> `클라이언트`: 페이지 이동관련 라우팅관리
-> `서버`: 클라이언트에서 들어온 요청에 대한 요청을 /api/로 관리
-
-`이전`
-
-```bash
-fe-kakaopage
-├── static
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   └── init.js
-│   └── index.html
-├── db
-│   └── store.js
-└── server.js
-```
-
-`이후`
-
-```bash
-fe-kakaopage
-├── front
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   └── init.js
-│   └── index.html
-└── server
-    ├── db
-    │   └── store.js
-    └── server.js
-```
-
-### 진행중... cors() 미들웨어 없이 header 설정으로 cors origin 문제해결해보기
-
-`이전`
-
-```js
-const allowlist = ['http://127.0.0.1:8080', 'http://localhost:8080'];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowlist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
-  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
-};
-app.use(cors(corsOptions));
-app.get('/api', cb);
-```
-
-`이후`
+5. [본문에서 파싱은 잘하셨고요, URL만 API라고 하지않고 다른 구체적인 정보를 담아보세요.](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817516559)
