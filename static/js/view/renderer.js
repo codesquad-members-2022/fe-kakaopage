@@ -52,14 +52,6 @@ const renderer = {
     select('.category-content').insertAdjacentHTML('beforeend', createSectionBasic(title, content));
   },
 
-  preparing: () => {
-    select('.category-content').textContent = `이 탭은 준비 중입니다.`;
-  },
-
-  categoryContentWrap: () => {
-    const categoryContentEl = document.createElement('div');
-    categoryContentEl.classList.add('category-content');
-    select('.main').append(categoryContentEl);
   noticeBox: (text) => {
     select('.category-content').insertAdjacentHTML('beforeend', createNoticeBox(text));
   },
