@@ -1,6 +1,13 @@
 import { renderer } from '../view/renderer.js';
 import { categoryLoader } from '../view/categoryLoader.js';
-import { select, initElement, updateDocumentTitle, getData } from '../utility/util.js';
+import {
+  select,
+  initElement,
+  removeElement,
+  updateDocumentTitle,
+  getCurrentCategory,
+  getData,
+} from '../utility/util.js';
 
 const addHandlerOnGnb = () => select('.gnb__list').addEventListener('click', handleNav);
 
@@ -51,11 +58,6 @@ const isAlreadyClicked = (eventTarget) => {
     window.scrollTo(0, 0);
     return true;
   }
-};
-
-const getCurrentCategory = (nav) => {
-  const currentEl = select(`.${nav}__item--active`);
-  return currentEl ? currentEl.dataset.category : null;
 };
 
 const updateNavStyle = (navtype, category) => {
