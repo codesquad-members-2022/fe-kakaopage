@@ -1,6 +1,6 @@
-import { formatUserCount } from "../../../modules/serviceUtils.js";
-import { createExtendsRelation } from "../../../utils.js";
-import Component from "../../Component.js";
+import { formatUserCount } from "../../../../modules/serviceUtils.js";
+import { createExtendsRelation } from "../../../../utils.js";
+import Component from "../../../Component.js";
 
 function BannerImage(target, state) {
   Component.call(this, target, state);

@@ -1,3 +1,6 @@
+import { createExtendsRelation } from "../../../../../utils.js";
+import { getComponentsTemplate } from "../../../../../modules/serviceUtils.js";
+import ContentsBox from "../../../Genres/ContentsBox.js";
 import BigCardList from "../../Components/BigCardList.js";
 import DateTop from "../../Components/DateTop.js";
 import DaysTop from "../../Components/DaysTop.js";
@@ -6,11 +9,8 @@ import MainBanner from "../../Components/MainBanner.js";
 import NavDetail from "../../Components/NavDetail.js";
 import RecommendEvent from "../../Components/RecommendEvent.js";
 import SubBanner from "../../Components/SubBanner.js";
-import Component from "../../../Component.js";
-import { createExtendsRelation } from "../../../../utils.js";
-import { getComponentsTemplate } from "../../../../modules/serviceUtils.js";
+import Component from "../../../../Component.js";
 import DaysList from "../../Components/DaysList.js";
-import ContentsBox from "../../Components/ContentsBox.js";
 import FullButton from "../../Components/FullButton.js";
 
 function HomeGenre(target) {

@@ -1,8 +1,8 @@
-import Component from "../../../Component.js";
+import { createExtendsRelation } from "../../../../../utils.js";
+import { getComponentsTemplate } from "../../../../../modules/serviceUtils.js";
+import Component from "../../../../Component.js";
 import MainBanner from "../../Components/MainBanner.js";
 import FullButton from "../../Components/FullButton.js";
-import { createExtendsRelation } from "../../../../utils.js";
-import { getComponentsTemplate } from "../../../../modules/serviceUtils.js";
 
 function DaysGenre(target) {
   Component.call(this, target);

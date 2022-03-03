@@ -1,7 +1,7 @@
 import Component from "../Component.js";
 import { createExtendsRelation } from "../../utils.js";
 import categories from "./categories.js";
-import GenreList from "./Components/GenreList.js";
+import GenreList from "./Genres/GenreList.js";
 
 function MainBox(infoObject) {
   Component.call(this, infoObject);

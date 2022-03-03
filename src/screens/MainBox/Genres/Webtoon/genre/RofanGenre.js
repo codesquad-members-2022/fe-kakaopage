@@ -1,5 +1,5 @@
-import Component from "../../../Component.js";
-import { createExtendsRelation } from "../../../../utils.js";
+import Component from "../../../../Component.js";
+import { createExtendsRelation } from "../../../../../utils.js";
 
 function RofanGenre(target) {
   Component.call(this, target);

@@ -1,5 +1,5 @@
-import { createExtendsRelation } from "../../../utils.js";
-import ContentsBox from "./ContentsBox.js";
+import { createExtendsRelation } from "../../../../utils.js";
+import ContentsBox from "../ContentsBox.js";
 import CardList from "./CardList.js";
 
 function GenreTop(infoObject) {

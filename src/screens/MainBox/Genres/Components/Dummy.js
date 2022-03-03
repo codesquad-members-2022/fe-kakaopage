@@ -1,5 +1,5 @@
-import Component from "../../Component.js";
-import { createExtendsRelation } from "../../../utils.js";
+import Component from "../../../Component.js";
+import { createExtendsRelation } from "../../../../utils.js";
 
 function Dummy(target) {
   Component.call(this, target);

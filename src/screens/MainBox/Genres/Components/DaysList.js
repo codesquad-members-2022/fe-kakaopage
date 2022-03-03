@@ -1,7 +1,7 @@
 import Card from "./CardList.js";
-import Component from "../../Component.js";
-import { createExtendsRelation } from "../../../utils.js";
-import { getComponentsTemplate } from "../../../modules/serviceUtils.js";
+import Component from "../../../Component.js";
+import { createExtendsRelation } from "../../../../utils.js";
+import { getComponentsTemplate } from "../../../../modules/serviceUtils.js";
 
 function DaysList(target, state) {
   Component.call(this, target, state);

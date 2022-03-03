@@ -1,6 +1,6 @@
-import Component from "../../../Component.js";
-import { createExtendsRelation, getJson } from "../../../../utils.js";
-import { getKoreaDay } from "../../../../modules/serviceUtils";
+import Component from "../../../../Component.js";
+import { createExtendsRelation, getJson } from "../../../../../utils.js";
+import { getKoreaDay } from "../../../../../modules/serviceUtils";
 import components from "../../components.js";
 
 function WebtoonGenre(infoObject) {

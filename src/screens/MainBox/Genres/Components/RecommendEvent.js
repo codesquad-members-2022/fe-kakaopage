@@ -1,5 +1,5 @@
-import { createExtendsRelation } from "../../../utils.js";
-import ContentsBox from "./ContentsBox.js";
+import { createExtendsRelation } from "../../../../utils.js";
+import ContentsBox from "../ContentsBox.js";
 
 function RecommendEvent(infoObject) {
   ContentsBox.call(this, infoObject);
