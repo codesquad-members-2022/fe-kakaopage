@@ -7,20 +7,22 @@ import { renderCarousel } from "/js/page/carousel/carousel.js";
 import { renderSubMenu } from "/js/page/sub-menu/render.js";
 
 export const renderHome = () => {
-    const category = new Category({ categories: datas.homeData.category });
+    const { homeData } = datas;
+    const category = new Category({ categories: homeData.category });
     const slideBanner = new SlideBanner();
     let html = "";
     html += category.getHtml();
     html += slideBanner.getHtml();
 
+    const getGenreBestHtml = (genre, data) => {
+        const genreBest = new GenreBest({ genre, genreItem: data });
+        return genreBest.getHtml();
+    };
+
     const renderJSONData = (path) => {
         getJSON(path)
             .then((data) => {
-                html += new GenreBest({
-                    genre: "로맨스",
-                    genreItem: data,
-                }).getHtml();
-
+                html += getGenreBestHtml("로맨스", data);
                 render(html);
             })
             .catch(render(html));
