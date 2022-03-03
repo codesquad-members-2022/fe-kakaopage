@@ -1,4 +1,4 @@
-import { DATA_URL } from './constant.js';
+const DATA_URL = '/src/data/';
 
 const dataUrl = {
   홈: `${DATA_URL}home.json`,
