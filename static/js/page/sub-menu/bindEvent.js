@@ -1,16 +1,16 @@
-import { $ } from "../utils/dom.js";
+import { $ } from "/js/utils/dom.js";
 
-import * as datas from "../data/datas.js";
-import { toggleClass } from "../tools/toggleClass.js";
-import { render } from "../tools/renderer.js";
+import * as datas from "/js/data/datas.js";
+import { toggleClass } from "/js/tools/toggleClass.js";
+import { render } from "/js/tools/renderer.js";
 
-import { renderHome } from "./home.js";
-import { renderWeekday } from "./weekday.js";
-import { renderCarousel } from "./carousel.js";
+import { renderHome } from "/js/page/home/render.js";
+import { renderWeekday } from "/js/page/week-day/weekday.js";
+import { renderCarousel } from "/js/page/carousel/carousel.js";
 
 // 현재 subMenu는 webtoon만 작동되는 것을 가정하고 작성됨
 const subMenus = datas.subMenu.webtoon;
-const renderItem = (item) => {
+const renderSelectedPage = (item) => {
     switch (item) {
         case "Home":
             renderHome();
@@ -34,7 +34,7 @@ const bindSubMenuEvent = () => {
 
         toggleClass(curEl, "active");
         renderTargets.forEach((item) => {
-            renderItem(item);
+            renderSelectedPage(item);
         });
     });
 };

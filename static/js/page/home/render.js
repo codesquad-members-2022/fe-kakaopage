@@ -1,16 +1,10 @@
-import { $ } from "../utils/dom.js";
-import * as datas from "../data/datas.js";
-import { getJSON } from "../tools/getJSON.js";
-import { render } from "../tools/renderer.js";
+import * as datas from "/js/data/datas.js";
+import { getJSON } from "/js/tools/getJSON.js";
+import { render } from "/js/tools/renderer.js";
 
-import { SubMenu, Category, SlideBanner, GenreBest } from "../views/views.js";
-import { renderCarousel } from "./carousel.js";
-
-const renderSubMenu = () => {
-    $(".sub-menu").innerHTML = new SubMenu({
-        menus: datas.subMenu.webtoon.menuNames,
-    }).getHtml();
-};
+import { Category, SlideBanner, GenreBest } from "/js/views/views.js";
+import { renderCarousel } from "/js/page/carousel/carousel.js";
+import { renderSubMenu } from "/js/page/sub-menu/render.js";
 
 export const renderHome = () => {
     const category = new Category({ categories: datas.homeData.category });
