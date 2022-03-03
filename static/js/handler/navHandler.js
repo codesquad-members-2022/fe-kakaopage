@@ -9,7 +9,7 @@ const addHandlerOnGnb = () => select(`.gnb__list`).addEventListener('click', han
 const addHandlerOnSnb = () => select(`.snb__list`).addEventListener('click', handleNav);
 
 const handleNav = (event) => {
-  if (!event.target.dataset.category || isAlreadyClicked(event.target)) return;
+  if (!isCorrectTarget(event.target) || isAlreadyClicked(event.target)) return;
 
   const nav = event.currentTarget.dataset.navtype;
   const category = event.target.dataset.category;
@@ -65,6 +65,8 @@ const loadCategoryContent = (globalCategory, subCategory = null) => {
 const getSubCategoryList = (globalCategory) => dataMap[globalCategory].subCategory;
 
 const getSubCategoryData = (globalCategory, subCategory) => dataMap[globalCategory][subCategory];
+
+const isCorrectTarget = (eventTarget) => (eventTarget.dataset.category ? true : false);
 
 const isAlreadyClicked = (eventTarget) => {
   if (eventTarget.dataset.active === 'on') {
