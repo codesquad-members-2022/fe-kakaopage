@@ -4,9 +4,9 @@ import { renderer } from '../view/renderer.js';
 import { categoryLoader } from '../view/categoryLoader.js';
 import { dataMap } from '../../data/dataMap.js';
 
-const addHandlerOnGnb = () => select(`.gnb__list`).addEventListener('click', handleNav);
+const addHandlerOnGnb = () => select('.gnb__list').addEventListener('click', handleNav);
 
-const addHandlerOnSnb = () => select(`.snb__list`).addEventListener('click', handleNav);
+const addHandlerOnSnb = () => select('.snb__list').addEventListener('click', handleNav);
 
 const handleNav = (event) => {
   if (!isCorrectTarget(event.target) || isAlreadyClicked(event.target)) return;
@@ -16,21 +16,8 @@ const handleNav = (event) => {
 
   updateNavStyle(nav, category);
 
-  nav === 'gnb' && handleGnb(event);
-  nav === 'snb' && handleSnb(event);
-};
-
-const handleGnb = (event) => {
-  const globalCategory = event.target.dataset.category;
-
-  loadMain(globalCategory);
-};
-
-const handleSnb = (event) => {
-  const globalCategory = getCurrentCategory('gnb');
-  const subCategory = event.target.dataset.category;
-
-  loadCategoryContent(globalCategory, subCategory);
+  nav === 'gnb' && loadMain(category);
+  nav === 'snb' && loadCategoryContent(getCurrentCategory('gnb'), category);
 };
 
 const loadMain = (globalCategory) => {
