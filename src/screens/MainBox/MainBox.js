@@ -13,21 +13,25 @@ MainBox.prototype.mount = function () {
   const $navGenre = this.$target.querySelector(".main__navGenre");
   const $contentsBox = this.$target.querySelector(".main__contentsBox");
   const { genres, selected, category } = this.state;
-  this.selected = "webtoon";
+  this.selected = selected;
   if (category !== "home") {
     new GenreList({
       $target: $navGenre,
       state: {
         genres,
-        selected: "webtoon",
+        selected,
       },
       $props: {
         updateGenre: this.updateGenre.bind(this),
       },
     });
   }
-  new categories[category]["webtoon"]({
+  new categories[category][selected]({
     $target: $contentsBox,
+    $props: {
+      setCarousel: this.setCarousel.bind(this),
+      clearCarousel: this.clearCarousel.bind(this),
+    },
   });
 };
 
@@ -45,6 +49,17 @@ MainBox.prototype.template = function () {
 
 MainBox.prototype.updateGenre = function (genre) {
   this.setState({ selected: genre });
+};
+
+MainBox.prototype.setCarousel = function (getInterval) {
+  const interval = getInterval();
+  this.state.interval = interval;
+};
+MainBox.prototype.clearCarousel = function () {
+  if (this.state.interval) {
+    clearInterval(this.state.interval);
+    this.state.interval = "";
+  }
 };
 
 export default MainBox;

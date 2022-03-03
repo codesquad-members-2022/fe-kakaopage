@@ -9,6 +9,17 @@ function WebtoonGenre(infoObject) {
 
 createExtendsRelation(WebtoonGenre, Component);
 
+WebtoonGenre.prototype.setCarousel = function (getInterval) {
+  const interval = getInterval();
+  this.state.interval = interval;
+};
+WebtoonGenre.prototype.clearCarousel = function () {
+  console.log(this.state);
+  if (this.state.interval) {
+    clearInterval(this.state.interval);
+    this.state.interval = "";
+  }
+};
 WebtoonGenre.prototype.sortRanking = function (items) {
   return items.sort((i1, i2) => i2.rank - i1.rank);
 };
@@ -43,6 +54,10 @@ WebtoonGenre.prototype.mount = function () {
       $props: {
         sortRanking: this.sortRanking,
         filterContent: this.filterContent,
+        setCarousel:
+          className === "mainBanner" ? this.$props.setCarousel : null,
+        clearCarousel:
+          className === "mainBanner" ? this.$props.clearCarousel : null,
       },
     });
   });

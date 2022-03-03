@@ -1,134 +1,139 @@
-import { createExtendsRelation } from "../../../../../utils.js";
-import { getComponentsTemplate } from "../../../../../modules/serviceUtils.js";
-import BigCardList from "../../Components/ContentsBox/Components/BigCardList.js";
-import MainBanner from "../../Components/MainBanner.js";
-import NavDetail from "../../Components/NavDetail.js";
-import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../../../Component.js";
-import DaysList from "../../Components/ContentsBox/Components/DaysList.js";
-import FullButton from "../../Components/FullButton.js";
-import ContentsBox from "../../Components/ContentsBox.js";
-import DateTop from "../../Components/ContentsBox/DateTop.js";
-import DaysTop from "../../Components/ContentsBox/DaysTop.js";
-import GenreTop from "../../Components/ContentsBox/GenreTop.js";
-import RecommendEvent from "../../Components/ContentsBox/RecommendEvent.js";
+import { createExtendsRelation, getJson } from "../../../../../utils.js";
+import { getKoreaDay } from "../../../../../modules/serviceUtils";
+import components from "../../components.js";
 
-function HomeGenre(target) {
-  Component.call(this, target);
-  const WEBTOONS_TOTAL_COUNT = 1318;
-  const DAYS_TOP_WEBTOON_PER_PAGE = 10;
-
-  /* 메인 배너 Component */
-  const mainBanner = new MainBanner(target, { genre: "home" });
-  /* Nav Detail (Webtoon Status Nav) Component */
-  const navDetail = new NavDetail(target);
-  /* 서브 배너 (promotion) Component */
-  const subBanner = new SubBanner(target);
-
-  const day = new Date().getDay();
-  const days = ["일", "월", "화", "수", "목", "금", "토", "완결"];
-  const koreaDay = days[day];
-
-  /* 요일 연재 TOP Component */
-  const daysTopBox = new ContentsBox(target, {
-    title: "요일 연재 TOP",
-    contents: "daysTop",
-    titleNum: WEBTOONS_TOTAL_COUNT,
-  });
-  const daysTopBoxTarget = daysTopBox.state.contentsBodyDiv;
-  const daysList = new DaysList("_", {
-    koreaDay,
-    count: DAYS_TOP_WEBTOON_PER_PAGE,
-  });
-  const daysTop = new DaysTop(daysTopBoxTarget, {
-    days,
-    koreaDay,
-    daysList,
-  });
-  daysTopBox.setState({
-    contentsBody: daysTop,
-  });
-  /* 기대 신작 TOP Component */
-  const bigCardListBox = new ContentsBox(target, {
-    title: "기대 신작 TOP",
-    contents: "bigCardList",
-    contentsBody: new BigCardList(),
-  });
-  /* 로판 TOP Component */
-  const rofanTopBox = new ContentsBox(target, {
-    title: "로판 TOP",
-    contents: "rofanTop",
-    contentsBody: new GenreTop("_", { genre: "로판" }),
-  });
-  /* 드라마 TOP Component */
-  const dramaTopBox = new ContentsBox(target, {
-    title: "드라마 TOP",
-    contents: "dramaTop",
-    contentsBody: new GenreTop("_", { genre: "드라마" }),
-  });
-  /* 일간 랭킹 TOP Component */
-  const dateTopBox = new ContentsBox(target, {
-    title: "일간 랭킹 TOP",
-    contents: "dateTop",
-    contentsBody: new DateTop("_", { koreaDay }),
-  });
-  /* 추천 이벤트 Component */
-  const recommendEventBox = new ContentsBox(target, {
-    title: "추천 이벤트",
-    contents: "recommendEvent",
-    classes: ["main__mainBanner"],
-    contentsBody: new RecommendEvent(),
-  });
-
-  this.setState({
-    contents: [
-      mainBanner,
-      navDetail,
-      subBanner,
-      daysTopBox,
-      bigCardListBox,
-      rofanTopBox,
-      dramaTopBox,
-      dateTopBox,
-      recommendEventBox,
-      new FullButton(),
-    ],
-  });
+function HomeGenre(infoObject) {
+  Component.call(this, infoObject);
 }
 
 createExtendsRelation(HomeGenre, Component);
 
-HomeGenre.prototype.setEvent = function () {
-  this.addEvent("click", ".daysNav-item", ({ target }) => {
-    const eventTarget = target.closest(".daysNav-item");
-    updateNodeClasses(eventTarget, "selected");
-    const koreaDay = eventTarget.textContent;
+HomeGenre.prototype.sortRanking = function (items) {
+  return items.sort((i1, i2) => i2.rank - i1.rank);
+};
 
-    const isDaysTopBox = (content) =>
-      content.constructor.name === "ContentsBox" &&
-      content.state.contents === "daysTop";
+HomeGenre.prototype.filterContent = function (webtoons, where, what) {
+  return webtoons.filter((webtoon) =>
+    typeof webtoon[where] === "object"
+      ? webtoon[where].includes(what)
+      : webtoon[where] === what
+  );
+};
 
-    const daysTopBox = this.state.contents.find((content) =>
-      isDaysTopBox(content)
-    );
+HomeGenre.prototype.mount = function () {
+  const { contents, webtoons } = this.state;
 
-    const { contentsBodyDiv, contentsBody } = daysTopBox.state;
-    const daysList = new DaysList(contentsBodyDiv, {
-      koreaDay,
-      count: DAYS_TOP_WEBTOON_PER_PAGE,
+  contents.forEach((content) => {
+    const { elementId, className, state } = content;
+    const { filteredBy } = state;
+    const $content = this.$target.querySelector(`#${elementId}`);
+    const filteredWebtoons = filteredBy
+      ? Object.keys(filteredBy).reduce(
+          (wts, key) => this.filterContent(wts, key, filteredBy[key]),
+          webtoons
+        )
+      : null;
+    new components[className]({
+      $target: $content,
+      state: {
+        ...state,
+        webtoons: className !== "daysTop" ? filteredWebtoons : webtoons,
+      },
+      $props: {
+        sortRanking: this.sortRanking,
+        filterContent: this.filterContent,
+        setCarousel:
+          className === "mainBanner" ? this.$props.setCarousel : null,
+        clearCarousel:
+          className === "mainBanner" ? this.$props.clearCarousel : null,
+      },
     });
-
-    contentsBody.setState({
-      koreaDay,
-      daysList,
-    });
-
-    this.render();
   });
 };
 
+HomeGenre.prototype.setup = async function () {
+  const { results: webtoons } = await getJson("webtoons");
+  const koreaDay = getKoreaDay();
+  this.state = {
+    webtoons,
+    contents: [
+      {
+        elementId: "wtMainBanner",
+        className: "mainBanner",
+        state: {
+          filteredBy: {
+            isMain: "home",
+          },
+        },
+      },
+      { elementId: "wtNavDetail", className: "navDetail", state: {} },
+      { elementId: "wtSubBanner", className: "subBanner", state: {} },
+      {
+        elementId: "wtDaysTop",
+        className: "daysTop",
+        state: {
+          title: "요일연재 TOP",
+        },
+      },
+      {
+        elementId: "wtNewWorkTop",
+        className: "newWorkTop",
+        state: {
+          title: "기대신작 TOP",
+          filteredBy: {
+            status: "N",
+          },
+        },
+      },
+      {
+        elementId: "wtRofanGenreTop",
+        className: "genreTop",
+        state: {
+          title: "로판 TOP",
+          filteredBy: {
+            genre: "로판",
+          },
+        },
+      },
+      {
+        elementId: "wtDramaGenreTop",
+        className: "genreTop",
+        state: {
+          title: "드라마 TOP",
+          filteredBy: {
+            genre: "드라마",
+          },
+        },
+      },
+      {
+        elementId: "wtDateTop",
+        className: "dateTop",
+        state: {
+          title: "일간 랭킹 TOP",
+          filteredBy: {
+            days: koreaDay,
+          },
+        },
+      },
+      {
+        elementId: "wtRecommendEvent",
+        className: "recommendEvent",
+        state: {
+          title: "추천이벤트",
+        },
+      },
+      { elementId: "wtFullButton", className: "fullButton", state: {} },
+    ],
+  };
+};
+
 HomeGenre.prototype.template = function () {
-  return getComponentsTemplate(this.state.contents);
+  const { contents } = this.state;
+  return contents.reduce((tags, { elementId, className }) => {
+    tags += `<li id="${elementId}" class="mainBox main__${className}"></li>`;
+    return tags;
+  }, "");
 };
 
 export default HomeGenre;

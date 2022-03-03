@@ -5,6 +5,7 @@ import bannerImgBoxTpl from "./Templates/bannerImgBoxTpl.js";
 
 function MainBanner(infoObject) {
   Component.call(this, infoObject);
+  this.$props.clearCarousel();
 }
 
 createExtendsRelation(MainBanner, Component);
@@ -20,8 +21,9 @@ MainBanner.prototype.mount = function () {
   });
   const { $carousel, getInterval } = carousel(...$bannerElems);
   $mainBanner.appendChild($carousel);
-  getInterval();
+  this.$props.setCarousel(getInterval);
 };
+
 MainBanner.prototype.template = function () {
   return `
     <li id="wtMainBanner" class="mainBox main__mainBanner"></li>
