@@ -52,8 +52,10 @@ const isAlreadyClicked = (eventTarget) => {
   }
 };
 
-const getCurrentCategory = (nav) =>
-  select(`.${nav}__item--active`) ? select(`.${nav}__item--active`).dataset.category : null;
+const getCurrentCategory = (nav) => {
+  const currentEl = select(`.${nav}__item--active`);
+  currentEl ? currentEl.dataset.category : null;
+};
 
 const updateNavStyle = (navtype, category) => {
   const classNameForActive = `${navtype}__item--active`;
