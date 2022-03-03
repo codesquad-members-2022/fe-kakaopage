@@ -137,92 +137,6 @@ body{
 }
 
 /* ===============slide=============== */
-.slider {
-    width: 720px;
-    height:420px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
-  
-.slideshow_slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 1s;
-}
-  
-.slideshow_slide{
-    width:var(--global-width);
-    height:450px;
-    display:flex;
-    align-items:flex-end;
-}
-
-.firstSlide{
-    background-image:url(img/roadofmoney.jpg);
-    background-size: cover;
-}
-
-.secondSlide{
-    background-image:url(img/img-1.jpg);
-    background-size: cover;
-}
-
-.thirdSlide{
-    background-image:url(img/img-2.png);
-    background-size: cover;
-}
-
-.slideshow_text{
-    margin-bottom:35px;
-    margin-left:20px;
-    color:var(--background-color);
-    position:absolute;
-    bottom:0;
-}
-
-.slideshow_press{
-    width:var(--global-width);
-    margin:var(--global-margin);
-    display:flex;
-    justify-content:space-between;
-}
-
-.slideshow_icon{
-    display:flex;
-}
-
-.slideshow_icon p{
-    margin-right:10px;
-}
-
-.slideshow_numbertext{
-    margin-right:40px;
-    font-size:20px;
-}
-
-.slideshow_info{
-    width:var(--global-width);
-    height:40px;
-    text-align:center;
-    line-height: 40px;
-    background:var(--primary-color);
-}
-  
-.slider_btn_left {
-    left: 6%;
-    transform: translate(-50%, -50%);
-}
-  
-.slider_btn_right {
-    right: 6%;
-    transform: translate(50%, -50%);
-}
-/* ===============slide2=============== */
 .main_slide{
     position: relative;
     width: 720px;
@@ -268,7 +182,15 @@ body{
     font-size: 18px;
     cursor: pointer;
 }
+.slider_btn_left {
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
   
+.slider_btn_right {
+    right: 6%;
+    transform: translate(50%, -50%);
+}  
 
 /* ===============tab=============== */
 .tab{
