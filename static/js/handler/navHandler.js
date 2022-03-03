@@ -1,6 +1,6 @@
 import { select, initElement, updateDocumentTitle } from '../util.js';
 
-import { renderer } from '../renderer.js';
+import { renderer } from '../view/renderer.js';
 import { loaderMap } from '../loaderMap.js';
 import { dataMap } from '../../data/dataMap.js';
 

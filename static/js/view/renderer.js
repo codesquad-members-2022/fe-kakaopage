@@ -1,16 +1,16 @@
-import { select } from './util.js';
+import { select } from '../util.js';
 
-import { addHandlerOnGnb, addHandlerOnSnb } from './handler/navHandler.js';
-import { addHandlerOnBanner } from './handler/bannerHandler.js';
+import { addHandlerOnGnb, addHandlerOnSnb } from '../handler/navHandler.js';
+import { addHandlerOnBanner } from '../handler/bannerHandler.js';
 
-import { createHeader } from './components/header.js';
-import { createFooter } from './components/footer.js';
-import { createGnb } from './components/gnb.js';
-import { createSnb } from './components/snb.js';
-import { createGridMenu } from './components/gridMenu.js';
-import { createMainBanner } from './components/mainBanner.js';
-import { createPromotionBanner } from './components/promotionBanner.js';
-import { createSectionBasic } from './components/sectionBasic.js';
+import { createHeader } from '../components/header.js';
+import { createFooter } from '../components/footer.js';
+import { createGnb } from '../components/gnb.js';
+import { createSnb } from '../components/snb.js';
+import { createGridMenu } from '../components/gridMenu.js';
+import { createMainBanner } from '../components/mainBanner.js';
+import { createPromotionBanner } from '../components/promotionBanner.js';
+import { createSectionBasic } from '../components/sectionBasic.js';
 
 const renderer = {
   header() {

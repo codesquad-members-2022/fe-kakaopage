@@ -1,10 +1,11 @@
-import { renderer } from './renderer.js';
+import { renderer } from './view/renderer.js';
 
 const loader = {
   // 홈
   home() {
     renderer.preparing();
   },
+
   // 홈 - 웹툰
   webtoonHome(DATA) {
     renderer.mainBanner(DATA.mainBanner);
