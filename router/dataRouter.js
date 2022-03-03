@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const data = require('./database/data.json');
+const data = require('../database/data.json');
 
 router.get('/home', (req, res) => res.json(data.home));
 router.get('/webtoon', (req, res) => res.json(data.webtoon));
