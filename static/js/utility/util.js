@@ -6,4 +6,9 @@ const removeElement = (selector) => select(selector).remove();
 
 const updateDocumentTitle = (title) => (document.title = `${title} | 카카오페이지`);
 
-export { select, initElement, removeElement, updateDocumentTitle };
+const getData = (...paths) => {
+  const resource = paths.join('/');
+  return fetch(resource).then((response) => response.json());
+};
+
+export { select, initElement, removeElement, updateDocumentTitle, getData };
