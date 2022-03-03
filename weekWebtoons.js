@@ -1,19 +1,10 @@
 import { webtoonContents, week } from "./data/contents.js";
-import { createLiListTemplate } from "./util/createTag.js";
-
-const $weekTap = createLiListTemplate(week);
-
-const htmlString2htmlElement = ({
-  tag = "div",
-  htmlString,
-  className = "",
-}) => {
-  const $element = document.createElement(tag);
-  $element.className = className;
-  $element.innerHTML = htmlString;
-
-  return $element;
-};
+import {
+  createLiListTemplate,
+  htmlString2htmlElement,
+  htmlStrings2htmlElementList,
+  targetQuerySelector,
+} from "./util/util.js";
 
 const createTuesdayTapTemplate = ({ imageUrl, title, star, read }) => {
   const htmlString = `
@@ -47,22 +38,6 @@ const createTuesdayTapTemplate = ({ imageUrl, title, star, read }) => {
   return htmlString2htmlElement({ htmlString });
 };
 
-const htmlStrings2htmlElementList = ({
-  tag = "div",
-  data,
-  className = "",
-  createChildElement,
-}) => {
-  const $element = document.createElement(tag);
-  $element.className = className;
-
-  data.map((data) =>
-    $element.insertAdjacentElement("beforeend", createChildElement(data))
-  );
-
-  return $element;
-};
-
 const createToonList = ({ data }) => {
   const className = "main__toon__category toon__grid toons__box";
 
@@ -75,10 +50,6 @@ const createToonList = ({ data }) => {
   return $toonList;
 };
 
-const targetQuerySelector = ({ target = document, className = "" }) => {
-  return target.querySelector(`.${className}`);
-};
-
 const createWeekWebtoons = ({ data }) => {
   const className = "week__webtoons";
   const filterClass = "filter";
@@ -87,6 +58,7 @@ const createWeekWebtoons = ({ data }) => {
     "main__navigation__menu main__week__menu interval";
   const filterClassName =
     "filter header__container main__toon__category container__space__between";
+  const $weekTap = createLiListTemplate(week);
 
   const htmlString = `
       <nav>
