@@ -37,14 +37,12 @@
 
 1. [fallback이 뭐지](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#issuecomment-1056689774)
 
-2. [db/store.js의 switch문](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817513689)
+# 구조 변경
 
-- case명 수정: category이름으로
+/category/mainCategory(main, webtoon).js들은 레이아웃만 전달하는 듯
 
-3. [front/js/api/getUidContent.js](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817514168)
+어차피 categoryUid, subCategoryUid에 따라 서버에서 해당하는 데이터를 받고, 프론트는 렌더링하는 거라면, render를 각 카테고리 안으로 넣어도 될듯.
 
-- await 를 사용했으면 then을 사용할 필요가 없는데, 그 반대로 구현해도 되고요.
+수정하고 싶은 방향
 
-4. [cors 미들웨어 설명](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817515426)
-
-5. [본문에서 파싱은 잘하셨고요, URL만 API라고 하지않고 다른 구체적인 정보를 담아보세요.](https://github.com/codesquad-members-2022/fe-kakaopage/pull/172#discussion_r817516559)
+파리미터에 따라 템플릿을 가져올 때 selectedCategory.Category(content)로 선언하고, contentObj.render()이런식으로 실행apah
