@@ -112,6 +112,14 @@ function showSlides(){
         timer = 0;
     }
 
+    slides.addEventListener('mouseenter',function(){
+        stopSlide();
+    });
+
+    slides.addEventListener('mouseleave',function(){
+        autoSlide();
+    });
+
     function makeSlide() {
         appendClone();
         prependClone();
