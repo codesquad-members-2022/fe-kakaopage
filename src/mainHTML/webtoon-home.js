@@ -5,16 +5,13 @@ import { createDayTopSection } from "../components/day-top-section.js";
 import { createEventSlide } from "../components/event-slide.js";
 import { createMainSlide } from "../components/main-slide.js";
 import romanceTopData from "../data/webtoon/home/romance-top.js";
-import mainSlideData from "../data/webtoon/home/main-slide.js";
 
 const sectionDatas = [
   { id: "new-work-top-section", header: "기대신작 TOP", contents: null },
   {
     id: "romance-top-section",
     header: "로맨스 TOP",
-    contents: romanceTopData
-      .map((data) => createContentVerticalSmall(data))
-      .join(),
+    contents: romanceTopData.map((data) => createContentVerticalSmall(data)).join(),
   },
   { id: "romance-fantasy-top-section", header: "로판 TOP", contents: null },
   { id: "drama-top-section", header: "드라마 TOP", contents: null },
@@ -34,11 +31,6 @@ const dayTopData = {
   contentsNumber: "1,624",
 };
 
-export default [
-  createMainSlide(mainSlideData),
-  createBannerSection(),
-  createDayTopSection(dayTopData),
-  sectionDatas
-    .map((sectionData) => createContentsSection(sectionData))
-    .join(""),
-].join("");
+export default function ({ mainSlideData }) {
+  return [createMainSlide(mainSlideData), createBannerSection(), createDayTopSection(dayTopData), sectionDatas.map((sectionData) => createContentsSection(sectionData)).join("")].join("");
+}

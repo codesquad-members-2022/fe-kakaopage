@@ -6,6 +6,5 @@ const mainContainer = document.querySelector("main .container");
 
 createEventListenerMenu();
 renderWebtoonMain();
-fetchData("main-slide").then((data) => console.log(data));
 
 export { mainContainer };
