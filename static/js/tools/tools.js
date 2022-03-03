@@ -24,4 +24,8 @@ const getJSON = (path) => {
     return fetch(`/${path}`).then((response) => response.json());
 };
 
-export { toggleClass, toggleWeekDayMenu, preventHyperLinks, getJSON };
+const render = (html) => {
+    $("#app").innerHTML = html;
+};
+
+export { toggleClass, toggleWeekDayMenu, preventHyperLinks, getJSON, render };

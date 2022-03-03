@@ -4,7 +4,8 @@ import { bindSubMenuEvent } from "./page/subMenu.js";
 import { bindCaroulselEvent } from "./page/carousel.js";
 import { bindWeekdayMenuEvent } from "./page/weekday.js";
 
-import { renderHome } from "./page/renderer.js";
+// import { renderHome } from "./page/renderer.js";
+import { renderHome } from "./page/home.js";
 
 const bindEventListeners = () => {
     bindSubMenuEvent();
