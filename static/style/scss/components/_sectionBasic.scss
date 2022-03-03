@@ -8,6 +8,11 @@
     font-size: 1.25rem;
   }
 
+  &__count {
+    color: $gray-6;
+    font-size: 0.875rem;
+  }
+
   &__view-more {
     position: absolute;
     top: 24px;
