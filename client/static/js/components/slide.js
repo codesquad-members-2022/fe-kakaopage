@@ -1,6 +1,15 @@
 import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH, AUTO_SLIDE_INTERVAL } from '../constant.js'
 import { icons } from "../../icons.js";
 
+export const getSlidesTemplate = (bannerData, currIndex, contentsTemplateMakingFunction) => {
+    //const prevIndex = Math.max((currIndex - 1), 0);
+    const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;
+    const nextIndex = currIndex + 1 >= bannerData.length ? 0 : currIndex + 1;
+    const indexSeries = [prevIndex, currIndex, nextIndex];
+    const slidesTemplate = indexSeries.map(index => contentsTemplateMakingFunction('main-banner', bannerData[index])).join('');
+    return slidesTemplate;
+}
+
 export const getSlideBtnTemplate = () => {
     return `
         <div class='slide__btns'>
@@ -17,9 +26,9 @@ export const getSlideBtnTemplate = () => {
 export const getpageNumTemplate = (parent, currNum, totalNum) => {
     return `
         <div class=${parent}__page-nums slide__page-nums>
-            <span class='${parent}__page-num--curr'>${currNum}</span>
+            <span class='${parent}__page-num--curr page-num--curr'>${currNum}</span>
             <span>/</span>
-            <span class='${parent}__page-num--total'>${totalNum}</span>
+            <span class='${parent}__page-num--total page-num--total'>${totalNum}</span>
         </div>
     `
 }
@@ -40,66 +49,74 @@ export const getRecommendEventControllerTemplate = (parent, currNum, totalNum) =
     `
 }
 
-export const activateBtns = (parentElement) => {
-    const prevBtn = parentElement.querySelector('.slide__btn--prev');
-    const nextBtn = parentElement.querySelector('.slide__btn--next');
+export const activateBtns = (parent) => {
+    const prevBtn = parent.querySelector('.slide__btn--prev');
+    const nextBtn = parent.querySelector('.slide__btn--next');
     prevBtn.addEventListener('click', moveToPrev);
     nextBtn.addEventListener('click', moveToNext);
 }
 
-export const activateAutoSlide = (parentElement) => {
-    const autoSlide = startAutoSlide(parentElement);
-    parentElement.addEventListener('mouseenter', () => {clearInterval(autoSlide)});
-    parentElement.addEventListener('mouseleave', () => {activateAutoSlide(parentElement)});
+export const activateAutoSlide = (parent) => {
+    const slideIntervalId = startAutoSlide(parent);
+    parent.addEventListener('mouseenter', () => {clearInterval(slideIntervalId)});
+    parent.addEventListener('mouseleave', () => {activateAutoSlide(parent)});
 }
 
 const startAutoSlide = (slide) => {
-    const autoSlide = setInterval(() => {
+    const slideIntervalId = setInterval(() => {
         moveSlide(slide, 'next');
     }, AUTO_SLIDE_INTERVAL);
-    return autoSlide;
+    return slideIntervalId;
 }
 
 const moveToNext = (event) => {
-    moveSlide(event.target, 'next');
+    const slideDiv = event.target.closest('.slides');
+    moveSlide(slideDiv, 'next');
+    updatePageNum(slideDiv, 'next');
 }
 
 const moveToPrev = (event) => {
-    moveSlide(event.target, 'prev');
+    const slideDiv = event.target.closest('.slides');
+    moveSlide(slideDiv, 'prev');
+    updatePageNum(slideDiv, 'prev');
 }
 
-const moveSlide = (slideElement, direction) => {
-    const slidesDiv = slideElement.closest('.slides');
-    const container = slidesDiv.querySelector('ul');
-    const containerWidth = getComputedStyle(container).width; 
-    const slideWidth = `${parseInt(containerWidth , 10) / SLIDE_CONTAINER_LENGTH}px`;
-    const currSlide = direction === 'prev' ? container.firstElementChild : container.lastElementChild;
+const moveSlide = (slideDiv, direction) => {
+    const slideWrapper = slideDiv.querySelector('ul');
+    const slideWrapperWidth = getComputedStyle(slideWrapper).width; 
+    const slideWidth = `${parseInt(slideWrapperWidth , 10) / SLIDE_CONTAINER_LENGTH}px`;
+    const currSlide = direction === 'prev' ? slideWrapper.firstElementChild : slideWrapper.lastElementChild;
     
     currSlide.classList.add('curr-slide');
-    container.style.transition = `${SLIDE_DELAY} ease-out`;
-    container.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
+    slideWrapper.style.transition = `${SLIDE_DELAY} ease-out`;
+    slideWrapper.style.transform = `translateX(${direction === 'prev' ? `${slideWidth}` : `-${slideWidth}`})`;
 }
 
-
-export const activateSlide = (parent, contentData, slideMakingFunction) => {
-    const container = parent.querySelector('ul');
-    container.addEventListener('transitionend', () => {updateSlide(parent, contentData, slideMakingFunction)});
+const updatePageNum = (slideDiv, direction) => {
+    const currNumEl = slideDiv.querySelector('.page-num--curr');
+    const totalNumEl = slideDiv.querySelector('.page-num--total');
+    const currNum = Number(currNumEl.innerText);
+    const totalNum = Number(totalNumEl.innerText);
+    if (direction === 'next') {
+        currNumEl.innerText = currNum === totalNum ? 1 : currNum + 1;  
+    } else if (direction === 'prev') {
+        currNumEl.innerText = currNum === 1 ? totalNum : currNum - 1;  
+    }
 }
 
-const updateSlide = (parent, contentData, slideMakingFunction) => {
-    const container = parent.querySelector('ul');
-    const currIndex = Number(container.querySelector('.curr-slide').dataset.index);
-    updateContainer(container, contentData, currIndex, slideMakingFunction);
-    updatePageNum(parent, currIndex)
+export const activateSlide = (parent, slideData, slideMakingFunction) => {
+    const slideWrapper = parent.querySelector('ul');
+    slideWrapper.addEventListener('transitionend', () => {updateSlideWrapper(slideWrapper, slideData, slideMakingFunction)});
 }
 
-const updateContainer = (container, contentData, currIndex, slideMakingFunction) => {
-    container.style.transition = 'none';
-    container.style.transform = 'translateX(0px)';
-    container.innerHTML = slideMakingFunction(contentData, currIndex);
+const updateSlideWrapper = (slideWrapper, slideData, slideMakingFunction) => {
+    const currIndex = Number(slideWrapper.querySelector('.curr-slide').dataset.index);
+    updateSlide(slideWrapper, slideData, currIndex, slideMakingFunction);
 }
 
-const updatePageNum = (parent, currIndex) => {
-    const pageNum = parent.querySelector(`.${parent.dataset.name}__page-num--curr`);
-    pageNum.innerText = currIndex + 1;
+const updateSlide = (slideWrapper, slideData, currIndex, slideMakingFunction) => {
+    slideWrapper.style.transition = 'none';
+    slideWrapper.style.transform = 'translateX(0px)';
+    slideWrapper.innerHTML = getSlidesTemplate(slideData, currIndex, slideMakingFunction);
 }
+

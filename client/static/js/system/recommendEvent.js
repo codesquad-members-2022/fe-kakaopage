@@ -1,7 +1,7 @@
 import { getHeaderTemplate } from "./section/workSection.js";
 import { recommendEventData } from "../../server/data/recommendEventData.js";
 import { START_SLIDE_INDEX } from "../constant.js";
-import { getRecommendEventControllerTemplate, activateBtns, activateSlide } from "./slide.js";
+import { getSlidesTemplate, getRecommendEventControllerTemplate, activateBtns, activateSlide } from "./slide.js";
 
 export const renderRecommendEvent = (genre) => {
     const eventData = recommendEventData[genre];
@@ -29,17 +29,9 @@ const getContentWrapperTemplate = (eventData) => {
 const getEventContentsTemplate = (eventData) => {
     return `
         <ul class='recommend-event__contents'>
-            ${getRecommendEventSlideTemplate(eventData, START_SLIDE_INDEX)}
+            ${getSlidesTemplate(eventData, START_SLIDE_INDEX, getEventContentTemplate)}
         </ul>
     `
-}
-
-const getRecommendEventSlideTemplate = (eventData, currIndex) => {
-    const prevIndex = currIndex - 1 < 0 ? eventData.length - 1 : currIndex - 1;
-    const nextIndex = currIndex + 1 >= eventData.length ? 0 : currIndex + 1;
-    const indexSeries = [prevIndex, currIndex, nextIndex];
-    const recommendEventSlideTemplate = indexSeries.map(index => getEventContentTemplate(eventData[index])).join('');
-    return recommendEventSlideTemplate;
 }
 
 const getEventContentTemplate = (data) => {
@@ -52,7 +44,8 @@ const getEventContentTemplate = (data) => {
     `
 }
 
-const activateRecommendEvent = (recommendEvent, bannerData) => {
+const activateRecommendEvent = (bannerData) => {
+    const recommendEvent = document.querySelector('.recommned-event-section')
     activateSlide(recommendEvent, bannerData, getRecommendEventSlideTemplate);
     activateBtns(recommendEvent);
 }

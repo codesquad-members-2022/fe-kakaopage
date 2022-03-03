@@ -3,6 +3,7 @@ import { getData } from './utils.js';
 import { getHeaderTemplate } from './system/header.js';
 import { getGnbTemplate, setNewMarkEvent } from './system/gnb.js';
 import { getGenreTabTemplate, setDefault } from './system/genreTab.js'
+import { activateMainBanner } from './system/mainBanner.js';
 import { getWebtoonPageTemplate } from './pages/webtoon.js';
 // import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
 
@@ -18,7 +19,7 @@ const renderCommon = () => {
     .then(gnbData => {
         document.querySelector('header').innerHTML = getHeaderTemplate();
         document.querySelector('.gnb').innerHTML = getGnbTemplate(gnbData);
-    });
+    })
 }
 
 const renderGenreTab = (page) => {
@@ -36,10 +37,12 @@ const renderContents = (page, genre) => {
     return getData(page, genre)
     .then(pageData => {
         document.querySelector('.tab-contents').innerHTML = pageDic[page](genre, pageData);
-    });
+        return pageData
+    })
+    .then(pageData => {
+        activateMainBanner(pageData.mainBanner);
+    })
 }
-
-
 
 const reRender = (newSelected, type) => {
     const newTab = newSelected.dataset[type];
@@ -48,37 +51,19 @@ const reRender = (newSelected, type) => {
             renderGenreTab(newTab);
             break;
         case 'genre':
-            renderContents('webtoon', newTab);
+            const currPage = document.querySelector('.gnb-tab__item--selected').dataset['gnb'];
+            renderContents(currPage, newTab);
             break;
         case 'day':
             const dayRankSection = newSelected.closest('section');
             changeContentsByDay(dayRankSection, newTab);
+            break;
+        default:
+            console.log(`${type} is not valid.`)
     }
 }
 
-// const renderByGenre = (genre) => {
-//     const renderList = genreRenderList[genre];
-//     document.querySelector('.tab-contents').innerHTML = '';
-//     renderList.forEach(component => render(component, genre));
-//     activateDayTab();
-// }
-
-// const render = (component, genre) => {
-//     const funcs = {
-//         'mainBanner': renderMainBanner,
-//         'categoryGrid': renderCategoryGrid,
-//         'eventBanner': renderEventBanner,
-//         'daySeriesTop': renderWorkSection.bind(null, 'small', component),
-//         'newTop' : renderWorkSection.bind(null, 'banner', component),
-//         'dailyRanking': renderWorkSection.bind(null, 'horizontal', component),
-//         'recommendEvent': renderRecommendEvent
-//     }
-//     funcs[component](genre);
-// }
-
-
-
-export const activateAll = () => {
+export const activateTabs = () => {
     activateGnb();
     activateGenreTab();
     //activateDayTab();

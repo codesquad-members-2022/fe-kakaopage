@@ -1,23 +1,13 @@
 import { START_SLIDE_INDEX } from '../constant.js';
 import { getBannerContentTemplate } from '../components/banner.js';
-import { getSlideBtnTemplate, getpageNumTemplate, activateBtns, activateAutoSlide, activateSlide} from '../components/slide.js';
-
-export const renderMainBanner = (genre) => {
-    const mainBanner = document.createElement('div');
-    const bannerData = mainBannerData[genre];
-    mainBanner.dataset.name = 'main-banner';
-    mainBanner.classList.add('main-banner', 'slides')
-    mainBanner.innerHTML = getMainBannerTemplate(bannerData);
-    document.querySelector('.tab-contents').appendChild(mainBanner);
-    activateMainBanner(mainBanner, bannerData);
-}
+import { getSlidesTemplate, getSlideBtnTemplate, getpageNumTemplate, activateBtns, activateAutoSlide, activateSlide} from '../components/slide.js';
 
 export const getMainBannerTemplate = (bannerData) => {
     const mainBannerContentsTemplate = getMainBannerContentsTemplate(bannerData);
     const slideBtnTemplate = getSlideBtnTemplate();
     const pageNumTemplate = getpageNumTemplate('main-banner', START_SLIDE_INDEX + 1, bannerData.length);
     return `
-        <div class="main-banner slides">
+        <div class="main-banner slides" data-name="main-banner">
             ${mainBannerContentsTemplate}
             ${slideBtnTemplate}
             ${pageNumTemplate}
@@ -28,21 +18,15 @@ export const getMainBannerTemplate = (bannerData) => {
 const getMainBannerContentsTemplate = (bannerData) => {
     return `
         <ul class='main-banner__contents'>
-            ${getMainBannerSlidesTemplate(bannerData, START_SLIDE_INDEX)}
+            ${getSlidesTemplate(bannerData, START_SLIDE_INDEX, getBannerContentTemplate)}
         </ul>
     `
 }
 
-const getMainBannerSlidesTemplate = (bannerData, currIndex) => {
-    const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;
-    const nextIndex = currIndex + 1 >= bannerData.length ? 0 : currIndex + 1;
-    const indexSeries = [prevIndex, currIndex, nextIndex];
-    const mainBannerSlidesTemplate = indexSeries.map(index => getBannerContentTemplate('main-banner', bannerData[index])).join('');
-    return mainBannerSlidesTemplate;
-}
-
-const activateMainBanner = (mainBanner, bannerData) => {
-    activateSlide(mainBanner, bannerData, getMainBannerSlidesTemplate);
+//bannerData는 쓰던거
+export const activateMainBanner = (bannerData) => {
+    const mainBanner = document.querySelector('.main-banner');
+    activateSlide(mainBanner, bannerData, getBannerContentTemplate);
     activateBtns(mainBanner);
     activateAutoSlide(mainBanner);
 }
