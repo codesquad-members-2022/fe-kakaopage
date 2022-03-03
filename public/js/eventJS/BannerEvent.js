@@ -1,17 +1,20 @@
-import { renderMainSecHome, renderMainSecWoD } from "../view/bannerView";
-import { bannerSlide } from "../animation/sliderAnimation";
-import { domUtil } from "../Util/util";
+import { renderMainSecHome, renderMainSecWoD } from "/js/view/mainView.js";
+import { bannerSlide } from "/js/animation/sliderAnimation.js";
+import { domUtil } from "/js/Util/util.js";
 
 const onclickBannerNav = ({ target: { textContent } }) => {
   const { contentsChecker } = data;
+
   if (textContent === "홈" && textContent !== contentsChecker) {
-    // renderMainSecHome(textContent);
     domUtil.getDataAndRender(`/main/${clickedNav}`, renderMainSecHome);
     domUtil.getDataAndRender(`/banner/${clickedNav}`, renderBanner);
-  } else if (textContent === "요일연재" && textContent !== contentsChecker) {
-    // renderMainSecWoD(textContent);
-    domUtil.getDataAndRender(`/main/${clickedNav}`, renderMainSecHome);
+    return;
+  }
+
+  if (textContent === "요일연재" && textContent !== contentsChecker) {
+    domUtil.getDataAndRender(`/main/${clickedNav}`, renderMainSecWoD);
     domUtil.getDataAndRender(`/banner/${clickedNav}`, renderBanner);
+    return;
   }
 };
 

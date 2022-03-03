@@ -1,5 +1,6 @@
-import { renderToonbyDay } from "../view/mainView";
-import { domUtil } from "../Util/util.js";
+import { renderToonbyDay } from "/js/view/mainView.js";
+import { domUtil } from "/js/Util/util.js";
+
 const onclickDowNav = ({ target: { textContent } }) => {
   domUtil.getDataAndRender(`/weekCategory/${textContent}`, renderToonbyDay);
 };

@@ -1,11 +1,9 @@
 import { domUtil } from "../Util/util.js";
-import { getImgCardHtml } from "../component/mainComponent.js";
-import { renderToonbyDay } from "./mainView.js";
 import {
   getImgCardHtml,
   getWeekNavHTML,
   getToggleNavHTML,
-} from "../component/mainComponent.js";
+} from "/js/component/mainComponent.js";
 import { WHOLE_DATA } from "../../index.js";
 
 const renderToonbyDay = (fetchedData) => {
@@ -34,7 +32,7 @@ const renderMainSecWoD = ({ week, toggleLeft, toonItemData }) => {
     getToggleNavHTML(toggleLeft) +
     getImgCardHtml(toonItemData);
 
-  domUtil.eventsAdder(".main__nav__dow", "click", onclickDowNav); // 이부분은 고칠려면 html을 고쳐야해서 시간상 패스
+  domUtil.eventsAdder(".main__nav__dow", "click", onclickDowNav); // 얼리 리턴으로 없애 버리기
 };
 
 const getToonGenre = (toonGenre) =>

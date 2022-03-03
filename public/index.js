@@ -1,11 +1,11 @@
-import { init } from "./js/Util/init.js";
+import { initMainPage } from "./js/Util/init.js";
 let WHOLE_DATA;
 
 fetch("/index/wholeData")
   .then((response) => response.json())
   .then((serverData) => {
     WHOLE_DATA = serverData;
-    init();
+    initMainPage();
   });
 
 export { WHOLE_DATA };

@@ -1,11 +1,10 @@
+import { setBannerDisplayByDefault } from "/js/view/bannerView.js";
+import { onclickDowNav } from "/js/eventJS/mainEvent.js";
+import { domUtil } from "/js/Util/util.js";
 import {
   onclickBannerNav,
   onclickBannerController,
-  setBannerDisplayByDefault,
-} from "../view/bannerView.js";
-import { onclickDowNav } from "../eventJS/mainEvent.js";
-import { domUtil } from "./util.js";
-
+} from "/js/eventJS/BannerEvent.js";
 const initMainPage = () => {
   const INIT_PAGE = "홈";
   renderMainSecHome(INIT_PAGE);

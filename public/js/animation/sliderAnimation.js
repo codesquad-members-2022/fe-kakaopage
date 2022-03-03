@@ -1,4 +1,4 @@
-import { domUtil } from "../Util/util.js";
+import { domUtil } from "/js/Util/util.js";
 
 // prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
 let pageCount = -1;
@@ -61,4 +61,4 @@ const bannerImgLoop2end = (
 // const imageloop = setInterval(() => {
 //   onclickNext();
 // }, 2000); // 이부분 2초를 어떻게 표현할 수 있을까?
-export { bannerSlide, setBannerDisplayByDefault };
+export { bannerSlide };
