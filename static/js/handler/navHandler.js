@@ -1,8 +1,6 @@
-import { select, initElement, updateDocumentTitle } from '../utility/util.js';
-
 import { renderer } from '../view/renderer.js';
 import { categoryLoader } from '../view/categoryLoader.js';
-import { dataMap } from '../../data/dataMap.js';
+import { select, initElement, updateDocumentTitle, getData } from '../utility/util.js';
 
 const addHandlerOnGnb = () => select('.gnb__list').addEventListener('click', handleNav);
 
@@ -24,24 +22,29 @@ const loadMain = (globalCategory) => {
   initElement('.main');
   renderer.categoryContentWrap();
 
-  const subCategoryList = getSubCategoryList(globalCategory);
+  getData('data', globalCategory).then((response) => {
+    const DATA = response;
+    if (DATA.subCategory) renderer.snb(DATA.subCategory);
 
-  if (subCategoryList) renderer.snb(subCategoryList);
-
-  loadCategoryContent(globalCategory, '홈');
+    loadCategoryContent(globalCategory, '홈', DATA.홈);
+  });
 };
 
-const loadCategoryContent = (globalCategory, subCategory) => {
+const loadCategoryContent = (globalCategory, subCategory, DATA = null) => {
   initElement('.category-content');
 
-  const subCategoryData = getSubCategoryData(globalCategory, subCategory);
-  updateDocumentTitle(`${subCategory} - ${globalCategory}`);
-  categoryLoader[globalCategory][subCategory](subCategoryData);
+  if (DATA) {
+    categoryLoader[globalCategory][subCategory](DATA);
+    updateDocumentTitle(`${subCategory} - ${globalCategory}`);
+    return;
+  }
+
+  getData('data', globalCategory).then((response) => {
+    const DATA = response[subCategory];
+    categoryLoader[globalCategory][subCategory](DATA);
+    updateDocumentTitle(`${subCategory} - ${globalCategory}`);
+  });
 };
-
-const getSubCategoryList = (globalCategory) => dataMap[globalCategory].subCategory;
-
-const getSubCategoryData = (globalCategory, subCategory) => dataMap[globalCategory][subCategory];
 
 const isCorrectTarget = (eventTarget) => (eventTarget.dataset.category ? true : false);
 
