@@ -1,7 +1,7 @@
 import Component from "./Component.js";
-import Header from "./Components/Header.js";
-import MainBox from "./Components/MainBox.js";
-import Footer from "./Components/Footer.js";
+import Header from "./Header/Header.js";
+import MainBox from "./MainBox/MainBox.js";
+import Footer from "./Footer/Footer.js";
 import { createExtendsRelation } from "../utils.js";
 
 function App($target, state) {
