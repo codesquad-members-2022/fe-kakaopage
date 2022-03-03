@@ -7,16 +7,31 @@ import { createGenreBlock } from "./components/webtoon.js";
 import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { createDailyContents } from "./components/daily-contents.js";
-import { fillWithData } from "./utils.js";
+
+const fillWithData = (req) => {
+  fetch(`http://localhost:3000/${req.path}`)
+    .then((res) => res.json())
+    .then((data) => req.createBlock(data))
+    .catch((err) => console.log(err));
+};
 
 const renderHome = async () => {
-  fillWithData({ path: "webtoons/banner", createBlock: createBanner });
-  fillWithData({ path: "category-btn", createBlock: createCateBtnBlock });
+  fillWithData({
+    path: "webtoons/banner",
+    createBlock: createBanner,
+  });
+  fillWithData({
+    path: "category-btn",
+    createBlock: createCateBtnBlock,
+  });
   fillWithData({
     path: "webtoons/promotion",
     createBlock: createPromotionBlock,
   });
-  fillWithData({ path: "webtoons/days", createBlock: createDaysBlock });
+  fillWithData({
+    path: "webtoons/days",
+    createBlock: createDaysBlock,
+  });
   fillWithData({
     path: "webtoons/banner/small",
     createBlock: createSmallBannerBlock,
@@ -29,7 +44,10 @@ const renderHome = async () => {
     path: "webtoons/top3",
     createBlock: createDailyRankBlock,
   });
-  fillWithData({ path: "webtoons/event", createBlock: createEventBlock });
+  fillWithData({
+    path: "webtoons/event",
+    createBlock: createEventBlock,
+  });
 };
 
 const renderDailyContents = () => {
