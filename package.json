@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/moonyerim2/fe-kakaopage#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
     "expresss": "0.0.0"
   }

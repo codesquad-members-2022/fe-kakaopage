@@ -20,7 +20,7 @@ const gridItem = toon => {
       </div>
       <div class="grid__item__bottom">
         <div class="flex items-center_justify-center">
-          <img class="w-16" src="/fe-kakaopage/src/img/badge-thumbnail-star.svg" alt="별점" />
+          <img class="w-16" src="/img/badge-thumbnail-star.svg" alt="별점" />
           <span class="mg-l-5 pd-t-2">${score.toFixed(1)}</span>
         </div>
         ${toon.additional.wait === true ? GRID.ITEM_BOTTOM.WAIT : GRID.ITEM_BOTTOM.WEBTOON}
