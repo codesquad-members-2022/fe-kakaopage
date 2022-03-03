@@ -1,7 +1,8 @@
 import { $ } from "../utils/dom.js";
 
-import { toggleClass } from "../tools/tools.js";
 import * as datas from "../data/datas.js";
+import { toggleClass } from "../tools/toggleClass.js";
+import { render } from "../tools/renderer.js";
 
 import { renderHome } from "./home.js";
 import { renderWeekday } from "./weekday.js";

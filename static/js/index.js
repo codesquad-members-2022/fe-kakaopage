@@ -1,4 +1,4 @@
-import { preventHyperLinks } from "./tools/tools.js";
+import { preventHyperLinks } from "./tools/preventHyperLinks.js";
 
 import { bindSubMenuEvent } from "./page/subMenu.js";
 import { bindCaroulselEvent } from "./page/carousel.js";

@@ -1,7 +1,8 @@
 import { $ } from "../utils/dom.js";
 
 import * as datas from "../data/datas.js";
-import { toggleWeekDayMenu, render } from "../tools/tools.js";
+import { toggleWeekDayMenu } from "../tools/toggleClass.js";
+import { render } from "../tools/renderer.js";
 
 import { Weekday } from "../views/views.js";
 

@@ -1,6 +1,7 @@
 import { $ } from "../utils/dom.js";
 import * as datas from "../data/datas.js";
-import { getJSON, render } from "../tools/tools.js";
+import { getJSON } from "../tools/getJSON.js";
+import { render } from "../tools/renderer.js";
 
 import { SubMenu, Category, SlideBanner, GenreBest } from "../views/views.js";
 import { renderCarousel } from "./carousel.js";
