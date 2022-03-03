@@ -32,17 +32,16 @@ const loadMain = (globalCategory) => {
 
 const loadCategoryContent = (globalCategory, subCategory, DATA = null) => {
   initElement('.category-content');
+  updateDocumentTitle();
 
   if (DATA) {
     categoryLoader[globalCategory][subCategory](DATA);
-    updateDocumentTitle(`${subCategory} - ${globalCategory}`);
     return;
   }
 
   getData('data', globalCategory).then((response) => {
     const DATA = response[subCategory];
     categoryLoader[globalCategory][subCategory](DATA);
-    updateDocumentTitle(`${subCategory} - ${globalCategory}`);
   });
 };
 
