@@ -1,4 +1,4 @@
-import { getClassifiedData } from "./editData.js";
+import { getClassifiedData } from "./dataEditor.js";
 
 const dataAddress = "http://localhost:4000/data";
 const init = () => {

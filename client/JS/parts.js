@@ -1,10 +1,10 @@
-import { daysInfo, adsInfo } from "./editData.js";
+import { daysInfo, adsInfo } from "./dataEditor.js";
 import {
   webtoonNavItems,
   daysNavItems,
   selectedNav,
   daysMenuNavItems,
-} from "./nav.js";
+} from "./navigator.js";
 
 const getNav = (navItems) => {
   return navItems.reduce((preItem, postItem) => {

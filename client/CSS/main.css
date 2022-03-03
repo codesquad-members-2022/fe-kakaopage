@@ -58,11 +58,13 @@ main > * {
 }
 
 .ads__image {
+  position: absolute;
   display: flex;
+  left: -100%;
 }
 
 .ads__image > img {
-  width: 100%;
+  width: var(--width-main);
 }
 
 /* days ======================================================= */

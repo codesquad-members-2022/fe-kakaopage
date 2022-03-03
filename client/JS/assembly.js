@@ -8,7 +8,7 @@ import {
   webtoonNav,
 } from "./parts.js";
 import { selector } from "./utility.js";
-import { markAllSelectedNav } from "./nav.js";
+import { markAllSelectedNav } from "./navigator.js";
 
 const removePart = (part, remain) => {
   const remainedPart = selector(`.${remain}`);

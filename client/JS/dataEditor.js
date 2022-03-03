@@ -1,4 +1,4 @@
-import { daysNavItems } from "./nav.js";
+import { daysNavItems } from "./navigator.js";
 
 const daysInfo = {};
 let adsInfo = {};
