@@ -14,4 +14,8 @@ const renderToonbyDay = ({ target: { textContent } }) => {
     });
 };
 
+const onclickDowNav = ({ target: { textContent } }) => {
+  renderToonbyDay(textContent);
+};
+
 export { renderToonbyDay };

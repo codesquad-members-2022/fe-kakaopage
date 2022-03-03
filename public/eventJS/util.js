@@ -18,6 +18,9 @@ const domUtil = {
       .then((response) => response.json())
       .then(render);
   },
+  eventAdder(className, eventType, callBack) {
+    domUtil.$(className).addEventListener(eventType, callBack);
+  },
 };
 
 export { domUtil };

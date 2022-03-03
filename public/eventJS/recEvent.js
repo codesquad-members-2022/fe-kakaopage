@@ -34,9 +34,6 @@ const renderMainSecWoD = (clickedNav) => {
         true,
         week
       );
-      domUtil
-        .$(".main__nav__dow--ul")
-        .addEventListener("click", renderToonbyDay);
       renderBanner(clickedNav);
     });
 };
@@ -52,24 +49,13 @@ const renderBanner = (clickedNav) => {
     });
 };
 
-const renderMainSecToon = () => {
-  // domUtil.remove(".main");
-  // const containers = [true, false].map((isTrue) => {
-  //   const isTrueData = getIsHot(isTrue);
-  //   return domUtil.createDomEl(
-  //     "section",
-  //     "main",
-  //     createDomEl(
-  //       {
-  //         left: "HOT 최근 프로모션 진행작",
-  //         rigth: "더보기",
-  //       },
-  //       isTrueData
-  //     )
-  //   );
-  // });
-  // domUtil.$All(".");
-  // domUtil.createEl();
+const onclickBannerNav = ({ target: { textContent } }) => {
+  const { contentsChecker } = data;
+  if (textContent === "홈" && textContent !== contentsChecker) {
+    renderMainSecHome(textContent);
+  } else if (textContent === "요일연재" && textContent !== contentsChecker) {
+    renderMainSecWoD(textContent);
+  }
 };
 
-export { renderMainSecHome, renderMainSecWoD, renderBanner };
+export { renderMainSecHome, renderMainSecWoD, renderBanner, onclickBannerNav };

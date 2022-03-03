@@ -1,23 +1,21 @@
-import { renderMainSecHome, renderMainSecWoD } from "./recEvent.js";
+import {
+  renderMainSecHome,
+  renderMainSecWoD,
+  onclickBannerNav,
+} from "./recEvent.js";
 import { domUtil } from "./util.js";
 import { data } from "../component/data.js";
 
-const init = () => {
+const initMainPage = () => {
   renderMainSecHome("홈");
 
-  domUtil.$(".recommand__nav--ul").addEventListener("click", function (event) {
-    const clickedNav = event.target.textContent;
-    const { contentsChecker } = data;
-    if (clickedNav === "홈" && clickedNav !== contentsChecker) {
-      renderMainSecHome(clickedNav);
-    } else if (clickedNav === "요일연재" && clickedNav !== contentsChecker) {
-      renderMainSecWoD(clickedNav);
-    }
-  });
+  domUtil.eventsAdder(".recommand__nav--ul", "click", onclickBannerNav);
+  domUtil.eventsAdder(".main__nav__dow", "click", onclickDowNav);
 
+  // 이부분도 세팅 하게 바꿔야함
   domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
     domUtil.$(".recommand__image--wrapper").offsetWidth
   }px)`;
 };
 
-export { init };
+export { initMainPage };

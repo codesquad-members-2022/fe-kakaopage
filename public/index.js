@@ -7,9 +7,16 @@ import {
 } from "./eventJS/recEvent.js";
 import { data } from "./component/data.js";
 import { init } from "./eventJS/init.js";
+let WHOLE_DATA;
 
-init();
+fetch("/index/wholeData")
+  .then((response) => response.json())
+  .then((serverData) => {
+    WHOLE_DATA = serverData;
+    init();
+  });
 
+export { WHOLE_DATA };
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {
 //   const $mainComponet = document.querySelector(".main");
