@@ -11,7 +11,7 @@ function init() {
 init();
 checkApi();
 function checkApi() {
-  const promise = fetch("http://localhost:3000/data").then((response) =>
+  const promise = fetch("http://localhost:3000/data/data").then((response) =>
     console.log(response)
   );
 }

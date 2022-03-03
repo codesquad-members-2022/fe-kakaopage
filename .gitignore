@@ -1,4 +1,9 @@
 node_moules/
 
+kakaoPage/node_moules 
+
+
+
+node_modules
 dist/*
 *.log
