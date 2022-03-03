@@ -97,6 +97,33 @@ function showSlides(){
     nextBtn.addEventListener("click", () => {
         moveSlide(currentSlide + 1);
     });
+    
+// 자동슬라이드
+    function autoSlide(){
+        if(timer == 0){
+            timer = setInterval(function(){
+            moveSlide(currentSlide + 1);
+            },3000);
+        }
+    }
+
+    function stopSlide(){
+        clearInterval(timer);
+        timer = 0;
+    }
+
+    function makeSlide() {
+        appendClone();
+        prependClone();
+        makeWidth();
+        getFirstSlide();
+        autoSlide();
+        setTimeout(function () {
+            slides.classList.add("activeSlide");
+        }, 100);
+    }
+    
+    makeSlide();
 };
 
 showSlides();
