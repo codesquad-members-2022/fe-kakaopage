@@ -30,6 +30,8 @@
 - [ ] db: 데이터 구조 (key, value가 최선일까?) map을 활용하면 더 좋을려나
 - [ ] nodejs babel사용해보기: require너무 불편함
 - [ ] 요일 탭 구현하면서 데이터 fetch와 렌더링 연습
+- [ ] individual DOM : createDocumentFragement()
+- [ ] mvc 패턴 (+observer)
 
 # pr 피드백 수정
 

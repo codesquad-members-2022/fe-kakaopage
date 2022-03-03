@@ -1,7 +1,7 @@
-const API = '/api';
+const UID_CONTENT = '/uid-content';
 
 const routes = {
-  api: API,
+  uidContent: UID_CONTENT,
 };
 
 module.exports = routes;

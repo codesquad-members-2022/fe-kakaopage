@@ -35,7 +35,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get('/api', async (req, res) => {
+app.get(routes.uidContent, async (req, res) => {
   const { categoryUid, subCategoryUid } = req.query;
   const mainUid = Number(categoryUid);
   const subUid = Number(subCategoryUid);
