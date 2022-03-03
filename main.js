@@ -34,7 +34,7 @@ const renderToon = () => {
 
   $week__webtoons?.parentNode.removeChild($week__webtoons);
   $current__main__container?.parentNode.removeChild($current__main__container);
-  $banner__container.insertAdjacentHTML("afterend", $weekWebtoons);
+  $banner__container.insertAdjacentElement("afterend", $weekWebtoons);
 };
 
 const renderTapContents = (className) => {
