@@ -1,49 +1,48 @@
-import { dayRankingData } from '../../../server/data/works/dayRankingData.js';
-import { newTopData } from '../../../server/data/works/newTopData.js';
-import { dailyRankingData } from '../../../server/data/works/dailyRankingData.js';
-import { makeWorkContainer } from './workContainer.js';
-import { icons } from '../../../server/data/icons.js';
-import { DEFAULT_DAY } from '../../constant.js';
-
-const dataDic = {
-  'dayRanking': dayRankingData,
-  'newTop': newTopData,
-  'dailyRanking': dailyRankingData,
-}
-
-const sectionTitleDic = {
-  'dayRanking': '요일 연재',
-  'newTop': '기대신작',
-  'dailyRanking': '일간 랭킹',
-  'recommendEvent': '추천 이벤트'
-}
+import { getWorkContainerTemplate } from '../components/workContainer.js';
+import { icons } from '../../icons.js';
+import { DEFAULT_DAY } from '../constant.js';
 
 export const renderWorkSection = (layout, contents, genre) => {
   const workSection = document.createElement('section');
   let workSectionTemplate = '';
   workSectionTemplate += getHeaderTemplate(contents)
-  if (contents === 'dayRanking') workSectionTemplate += getDayTabTemplate();
+  if (contents === 'daySeriesTop') workSectionTemplate += getDayTabTemplate();
   workSectionTemplate += getWorkContainerTemplate(layout, contents, genre);
   workSection.innerHTML = workSectionTemplate;
   document.querySelector('.tab-contents').appendChild(workSection);
 }
 
+export const getWorkSectionTemplate = (layout, contents, workData) => {
+  let workSectionTemplate = '';
+  workSectionTemplate += getHeaderTemplate(contents);
+  if (contents === 'daySeriesTop') workSectionTemplate += getDayTabTemplate();
+  workSectionTemplate += getWorkContainerTemplate(layout, workData);
+  return `
+    <section>
+      ${workSectionTemplate}
+    </section>
+  `
+}
+
+const sectionTitleDic = {
+  'daySeriesTop': '요일 연재',
+  'newTop': '기대신작',
+  'dailyRanking': '일간 랭킹',
+  'recommendEvent': '추천 이벤트'
+}
+
 export const getHeaderTemplate = (contents) => {
     return  `
     <div class='section__header'>
-          <div class='section__title-box'>
-            <span class='section__title'>${sectionTitleDic[contents]} TOP</span>
-          </div>
-          <div class='section__more-btn'>
-            <span>더보기</span>
-            <img src=${icons.moreArrow} />
-          </div>
-        </div>`
-}
-
-const getWorkContainerTemplate = (layout, contents, genre, day = DEFAULT_DAY) => {
-  const data = contents === 'dayRanking' ? dataDic[contents][genre][day] : dataDic[contents][genre];
-  return makeWorkContainer(genre, data, layout);
+      <div class='section__title-box'>
+        <span class='section__title'>${sectionTitleDic[contents]} TOP</span>
+      </div>
+      <div class='section__more-btn'>
+        <span>더보기</span>
+        <img src=${icons.moreArrow} />
+      </div>
+    </div>
+    `
 }
 
 const getDayTabTemplate = () => {
@@ -71,7 +70,7 @@ const markDefault = (day) => {
 export const changeContentsByDay = (dayRankSection, day) => {
   const oldContainer = dayRankSection.querySelector('.work-container');
   const currGenre = oldContainer.dataset.genre;
-  const newContainerTemplate = getWorkContainerTemplate('small', 'dayRanking', currGenre, day);
+  const newContainerTemplate = getWorkContainerTemplate('small', 'daySeriesTop', currGenre, day);
   dayRankSection.removeChild(oldContainer);
   dayRankSection.insertAdjacentHTML('beforeend', newContainerTemplate);
 }

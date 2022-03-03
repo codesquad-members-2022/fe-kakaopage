@@ -1114,7 +1114,7 @@ const dailyData = {
     ]
 }
 
-export const dayRankingData = {
+export const daySeriesTopData = {
     "home": homeData,
     // 원래는 daily탭과  webtoon탭의 요일 랭킹 데이터가 따로 있어야하지만,
     // 시간관계상 homeData 사용 

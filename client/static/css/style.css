@@ -36,16 +36,6 @@
     margin-bottom: 15px;
 }
 
-.tab-contents {
-    background-color: var(--color-body);
-}
-
-.tab-contents > * {
-    width: var(--main-width);
-    background-color: var(--color-white);
-    margin-bottom: 15px;
-}
-
 .divider {
     background-color: var(--color-light-gray);
     width: 1px;

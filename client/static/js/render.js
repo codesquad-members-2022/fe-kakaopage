@@ -4,18 +4,12 @@ import { getHeaderTemplate } from './system/header.js';
 import { getGnbTemplate } from './system/gnb.js';
 import { getGenreTabTemplate } from './system/genreTab.js'
 import { getWebtoonPageTemplate } from './pages/webtoon.js';
-// import { renderMainBanner } from './components/mainBanner.js';
-// import { renderCategoryGrid } from './components/categoryGrid.js';
-// import { renderEventBanner } from './components/eventBanner.js';
 // import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
-// import { renderRecommendEvent } from './components/recommendEvent.js';
 
 export const initRender = () => {
     renderCommon();
     renderGenreTab(DEFAULT_PAGE);
     renderContents(DEFAULT_PAGE, DEFAULT_GENRE);
-    // renderGenreTab(DEFAULT_PAGE);
-    // renderByGenre(DEFAULT_GENRE);
     // activateAll();
 }
 
@@ -40,7 +34,7 @@ const pageDic = {
 const renderContents = (page, genre) => {
     getData(page, genre)
     .then(pageData => {
-        document.querySelector('.tab-contents').insertAdjacentHTML('beforeend', pageDic[page](genre, pageData));
+        document.querySelector('.contents').insertAdjacentHTML('beforeend', pageDic[page](genre, pageData));
     });
 }
 
@@ -73,7 +67,7 @@ const renderContents = (page, genre) => {
 //         'mainBanner': renderMainBanner,
 //         'categoryGrid': renderCategoryGrid,
 //         'eventBanner': renderEventBanner,
-//         'dayRanking': renderWorkSection.bind(null, 'small', component),
+//         'daySeriesTop': renderWorkSection.bind(null, 'small', component),
 //         'newTop' : renderWorkSection.bind(null, 'banner', component),
 //         'dailyRanking': renderWorkSection.bind(null, 'horizontal', component),
 //         'recommendEvent': renderRecommendEvent

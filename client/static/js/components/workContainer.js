@@ -1,10 +1,10 @@
-import { icons } from '../../../server/data/icons.js'
-import { getBannerContentTemplate } from '../banner.js'
+import { icons } from '../../icons.js'
+import { getBannerContentTemplate } from './banner.js'
 
-export const makeWorkContainer = (genre, workDataArr, type) => {
-    const worksTemplate = workDataArr.map(workData => layoutDic[type](workData)).join(''); 
+export const getWorkContainerTemplate = (layout, workData) => {
+    const worksTemplate = workData.map(data => layoutDic[layout](data)).join(''); 
     return `
-      <ul class='work-container' data-genre='${genre}'>
+      <ul class='work-container'>
         ${worksTemplate}
       </ul>
     `

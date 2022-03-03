@@ -1,7 +1,7 @@
 const workSections = {
-    'home': ['dayRanking', 'newTop', 'dailyRanking'],
-    'daily': ['dayRanking'],
-    'webtoon': ['dayRanking'],
+    'home': ['daySeriesTop', 'newTop', 'dailyRanking'],
+    'daily': ['daySeriesTop'],
+    'webtoon': ['daySeriesTop'],
     'boy': [],
     'drama': [],
     'romance': [],
