@@ -1,8 +1,8 @@
-import { icons } from "../../server/data/icons.js";
+import { icons } from "../../icons.js";
 
-const renderHeader = () => {
-    const header = document.querySelector('header');
-    header.innerHTML = `
+const getHeaderTemplate = () => {
+    return `
+    <header class="top">
         <div class="header__container">
             <h1 class="header__logo">
               <a href="#"
@@ -33,9 +33,10 @@ const renderHeader = () => {
               </div>
             </div>
         </div>
+    </header>
     `
 }
 
-export {renderHeader}
+export {getHeaderTemplate}
 
     

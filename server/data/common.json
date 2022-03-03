@@ -1,0 +1,98 @@
+{
+    "gnb": [
+        {   
+            "dataTab": "home",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31",
+            "alt":"홈",
+            "new":"true"
+        },
+        {   
+            "dataTab": "webtoon",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8",
+            "alt":"웹툰",
+            "new":"true"
+        },
+        {   
+            "dataTab": "novel",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55",
+            "alt":"웹소설",
+            "new":"true"
+        },
+        {
+            "dataTab": "movie",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f",
+            "alt":"영화",
+            "new":"true"
+        },
+        {
+            "dataTab": "broadcast",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18",
+            "alt":"방송",
+            "new":"true"
+        },
+        {
+            "dataTab": "book",
+            "link": "#", 
+            "src":"https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504",
+            "alt":"책",
+            "new":"true"
+        }
+    ],
+    "genreTab": {
+        "webtoon": [
+            {"genre": "home", "text": "홈"},
+            {"genre": "daily", "text": "요일연재"},
+            {"genre": "webtoon", "text": "웹툰"},
+            {"genre": "boy", "text": "소년"},
+            {"genre": "drama", "text": "드라마"},
+            {"genre": "romance", "text": "로맨스"},
+            {"genre": "rofan", "text": "로판"},
+            {"genre": "action", "text": "액션무협"},
+            {"genre": "BL", "text": "BL"}
+        ],
+        "novel": [
+            {"genre": "novel-home", "text": "홈"},
+            {"genre": "novel-daily", "text": "요일연재"},
+            {"genre": "novel-novel", "text": "웹소설"},
+            {"genre": "novel-fantasy", "text": "판타지"},
+            {"genre": "novel-modern", "text": "현판"},
+            {"genre": "novel-romance", "text": "로맨스"},
+            {"genre": "novel-rofan", "text": "로판"},
+            {"genre": "novel-action", "text": "무협"},
+            {"genre": "novel-fand", "text": "판드"},
+            {"genre": "novel-BL", "text": "BL"},
+            {"genre": "novel-paper", "text": "단행본"}
+        ],
+        "movie": [
+            {"genre": "movie-home", "text": "홈"},
+            {"genre": "movie-ranking", "text": "랭킹"},
+            {"genre": "movie-romance", "text": "로맨스"},
+            {"genre": "movie-action", "text": "액션"},
+            {"genre": "movie-animation", "text": "애니메이션"},
+            {"genre": "movie-all", "text": "장르전체"}
+        ],
+        "broadcast": [
+            {"genre": "broadcast-home", "text": "홈"},
+            {"genre": "broadcast-entertainment", "text": "예능"},
+            {"genre": "broadcast-drama", "text": "드라마"},
+            {"genre": "broadcast-animation", "text": "애니메이션"},
+            {"genre": "broadcast-overseas", "text": "해외시리즈"},
+            {"genre": "broadcast-ranking", "text": "랭킹"},
+            {"genre": "broadcast-all", "text": "장르전체"}
+        ],
+        "book": [
+            {"genre": "book-home", "text": "홈"},
+            {"genre": "book-series", "text": "연재"},
+            {"genre": "book-best", "text": "베스트셀러"},
+            {"genre": "book-ranking", "text": "랭킹"},
+            {"genre": "book-thriller", "text": "스릴러"},
+            {"genre": "book-selfdev", "text": "자기계발"},
+            {"genre": "book-study", "text": "학습만화"}
+        ]
+    }
+}
