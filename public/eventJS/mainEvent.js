@@ -1,21 +1,7 @@
-import { domUtil } from "./util.js";
-import { getImgCardHtml } from "../component/mainComponent.js";
-
-const renderToonbyDay = ({ target: { textContent } }) => {
-  fetch(`/weekCategory/${textContent}`)
-    .then((response) => response.json())
-    .then((filterdByDayData) => {
-      domUtil.$(".main__cartoonZone").innerHTML = "";
-      const imgCardHTML = filterdByDayData.reduce(
-        (toonHtml, tooninfo) => (toonHtml += getImgCardHtml(tooninfo)),
-        ""
-      );
-      domUtil.$(".main__cartoonZone").innerHTML = imgCardHTML;
-    });
-};
-
+import { renderToonbyDay } from "../view/mainView";
+import { domUtil } from "../Util/util.js";
 const onclickDowNav = ({ target: { textContent } }) => {
-  renderToonbyDay(textContent);
+  domUtil.getDataAndRender(`/weekCategory/${textContent}`, renderToonbyDay);
 };
 
-export { renderToonbyDay };
+export { onclickDowNav };

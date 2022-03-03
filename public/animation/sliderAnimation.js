@@ -1,4 +1,4 @@
-import { domUtil } from "./util.js";
+import { domUtil } from "../Util/util.js";
 
 // prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
 let pageCount = -1;

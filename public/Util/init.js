@@ -4,7 +4,7 @@ import {
   onclickBannerNav,
 } from "./recEvent.js";
 import { domUtil } from "./util.js";
-import { data } from "../component/data.js";
+import { data } from "../data/data.js";
 
 const initMainPage = () => {
   renderMainSecHome("홈");

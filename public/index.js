@@ -1,12 +1,12 @@
-import { domUtil } from "./eventJS/util.js";
+import { domUtil } from "./Util/util.js";
 
 import {
   renderMainSecHome,
   renderMainSecWoD,
   renderBanner,
 } from "./eventJS/recEvent.js";
-import { data } from "./component/data.js";
-import { init } from "./eventJS/init.js";
+import { data } from "./data/data.js";
+import { init } from "./Util/init.js";
 let WHOLE_DATA;
 
 fetch("/index/wholeData")

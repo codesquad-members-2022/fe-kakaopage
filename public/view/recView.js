@@ -1,7 +1,7 @@
 import { domUtil } from "./util.js";
 import { getMainHtml, getToonGenre } from "../component/mainComponent.js";
-import { data } from "../component/data.js";
-import { renderToonbyDay } from "./mainEvent.js";
+import { data } from "../data/data.js";
+import { renderToonbyDay } from "./mainView.js";
 import { getBannerHtml } from "../component/BannerComponent.js";
 import { onClickBannerController } from "./slider.js";
 
@@ -47,15 +47,6 @@ const renderBanner = (clickedNav) => {
         .$(".recommand__image--controller")
         .addEventListener("click", onClickBannerController);
     });
-};
-
-const onclickBannerNav = ({ target: { textContent } }) => {
-  const { contentsChecker } = data;
-  if (textContent === "홈" && textContent !== contentsChecker) {
-    renderMainSecHome(textContent);
-  } else if (textContent === "요일연재" && textContent !== contentsChecker) {
-    renderMainSecWoD(textContent);
-  }
 };
 
 export { renderMainSecHome, renderMainSecWoD, renderBanner, onclickBannerNav };

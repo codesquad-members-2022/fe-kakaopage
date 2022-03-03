@@ -1,12 +1,5 @@
-import { domUtil } from "../eventJS/util.js";
-import { data } from "./data.js";
-
-const createDomEl = (tagType, className, innerHTML) => {
-  const domElement = domUtil.createEl(tagType);
-  domElement.classList.add(className);
-  domElement.innerHTML = innerHTML;
-  return domElement;
-};
+import { domUtil } from "../Util/util.js";
+import { data } from "../data/data.js";
 
 const getMainNavHtml = (data) => {
   return /* html */ `
@@ -19,6 +12,7 @@ const getMainNavHtml = (data) => {
   `;
 };
 
+// 제일 중요함 함수그냥 전부 빼버리기
 const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
   return `
   ${hasWeekNav(weekNav, weekNavinfo) ?? ""}

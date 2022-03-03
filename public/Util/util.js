@@ -13,12 +13,12 @@ const domUtil = {
       this.$All(dom).forEach((el) => el.remove());
     }
   },
-  getData(url, render) {
+  getDataAndRender(url, render) {
     fetch(url)
       .then((response) => response.json())
       .then(render);
   },
-  eventAdder(className, eventType, callBack) {
+  eventsAdder(className, eventType, callBack) {
     domUtil.$(className).addEventListener(eventType, callBack);
   },
 };
