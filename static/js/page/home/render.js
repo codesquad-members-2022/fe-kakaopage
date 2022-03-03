@@ -15,7 +15,7 @@ export const renderHome = () => {
     html += slideBanner.getHtml();
 
     const getGenreBestHtml = (genreName, data) => {
-        const genreBest = new GenreBest({ genreName, genreItem: data });
+        const genreBest = new GenreBest({ genre: genreName, genreItem: data });
         return genreBest.getHtml();
     };
 
