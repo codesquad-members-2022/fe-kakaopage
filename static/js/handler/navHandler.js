@@ -39,25 +39,15 @@ const loadMain = (globalCategory) => {
 
   const subCategoryList = getSubCategoryList(globalCategory);
 
-  if (!subCategoryList) {
-    loadCategoryContent(globalCategory);
-    return;
-  }
-  renderer.snb(subCategoryList);
+  if (subCategoryList) renderer.snb(subCategoryList);
+
   loadCategoryContent(globalCategory, '홈');
 };
 
-const loadCategoryContent = (globalCategory, subCategory = null) => {
+const loadCategoryContent = (globalCategory, subCategory) => {
   initElement('.category-content');
 
-  if (!subCategory) {
-    updateDocumentTitle(globalCategory);
-    categoryLoader[globalCategory]();
-    return;
-  }
-
   const subCategoryData = getSubCategoryData(globalCategory, subCategory);
-
   updateDocumentTitle(`${subCategory} - ${globalCategory}`);
   categoryLoader[globalCategory][subCategory](subCategoryData);
 };
