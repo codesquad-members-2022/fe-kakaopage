@@ -10,10 +10,9 @@ import {homeContainerInfo} from './containerInfo/home.js'
 // ============== 유틸리티 모듈 ==============
 import {$} from './utility.js';
 
-async function renderHome(tab) {
+function renderHome(tab) {
   const containerInfo = homeContainerInfo;
-
-  return await Promise.all([
+  return Promise.all([
     renderMainBanner(tab), 
     renderThemeMenu(tab),
     renderPromotionBanner(tab),
@@ -25,21 +24,21 @@ async function renderHome(tab) {
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderDaily(tab) {
-  return await Promise.all([
+function renderDaily(tab) {
+  return Promise.all([
     renderMainBanner(tab),
     renderSelectDayDaily()
   ])
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderWebtoon(tab) {
-  return await Promise.all([renderMainBanner(tab)])
+function renderWebtoon(tab) {
+  return Promise.all([renderMainBanner(tab)])
     .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderBoy(tab) {
-  return await Promise.all([
+function renderBoy(tab) {
+  return Promise.all([
     renderMainBanner(tab), 
     renderThemeMenu(tab),
     renderPromotionBanner(tab),
@@ -47,4 +46,19 @@ async function renderBoy(tab) {
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
+
 export {renderHome, renderDaily, renderWebtoon, renderBoy}
+
+const baseData = [1,2,3,4,5,6,100];
+
+const asyncRun = (arr, fn) => {
+    arr.forEach((v,i)=> {
+      setTimeout(()=> {
+        setTimeout(() => {
+          console.log('cb 2');
+          fn(i);
+        }, 1000);
+        console.log('cb 1'); 
+      }, 1000)
+    });
+}
