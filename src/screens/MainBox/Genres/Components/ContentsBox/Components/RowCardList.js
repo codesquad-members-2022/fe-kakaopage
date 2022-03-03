@@ -1,6 +1,6 @@
-import { createExtendsRelation } from "../../../../utils.js";
-import { formatUserCount } from "../../../../modules/serviceUtils.js";
-import Component from "../../../Component.js";
+import { createExtendsRelation } from "../../../../../../utils.js";
+import { formatUserCount } from "../../../../../../modules/serviceUtils.js";
+import Component from "../../../../../Component.js";
 
 function RowCardList(infoObject) {
   Component.call(this, infoObject);

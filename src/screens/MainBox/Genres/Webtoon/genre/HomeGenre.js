@@ -1,11 +1,11 @@
 import { createExtendsRelation } from "../../../../../utils.js";
 import { getComponentsTemplate } from "../../../../../modules/serviceUtils.js";
-import BigCardList from "../../Components/BigCardList.js";
+import BigCardList from "../../Components/ContentsBox/Components/BigCardList.js";
 import MainBanner from "../../Components/MainBanner.js";
 import NavDetail from "../../Components/NavDetail.js";
 import SubBanner from "../../Components/SubBanner.js";
 import Component from "../../../../Component.js";
-import DaysList from "../../Components/DaysList.js";
+import DaysList from "../../Components/ContentsBox/Components/DaysList.js";
 import FullButton from "../../Components/FullButton.js";
 import ContentsBox from "../../Components/ContentsBox.js";
 import DateTop from "../../Components/ContentsBox/DateTop.js";

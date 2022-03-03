@@ -9,11 +9,12 @@ function MainBanner(infoObject) {
 
 createExtendsRelation(MainBanner, Component);
 
+MainBanner.prototype.mount = function () {
+  const $mainBanner = this.$target.querySelector("#wtMainBanner");
+};
 MainBanner.prototype.template = function () {
   return `
-    <li class="mainBox main__mainBanner">
-        
-    </li>
+    <li id="wtMainBanner" class="mainBox main__mainBanner"></li>
     `;
 };
 

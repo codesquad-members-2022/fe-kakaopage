@@ -1,6 +1,6 @@
 import { createExtendsRelation } from "../../../../../utils.js";
 import ContentsBox from "../ContentsBox.js";
-import RowCardList from "../RowCardList.js";
+import RowCardList from "./Components/RowCardList.js";
 
 function DateTop(infoObject) {
   ContentsBox.call(this, infoObject);

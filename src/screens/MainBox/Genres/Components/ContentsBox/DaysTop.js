@@ -4,8 +4,8 @@ import {
   getKoreaDay,
 } from "../../../../../modules/serviceUtils.js";
 import ContentsBox from "../ContentsBox.js";
-import CardList from "../CardList.js";
-import DaysList from "../DaysList.js";
+import CardList from "./Components/CardList.js";
+import DaysList from "./Components/DaysList.js";
 
 function DaysTop(infoObject) {
   ContentsBox.call(this, infoObject);

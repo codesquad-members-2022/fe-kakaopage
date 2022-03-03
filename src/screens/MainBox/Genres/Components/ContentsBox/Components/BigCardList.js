@@ -1,6 +1,6 @@
-import Component from "../../../Component.js";
-import { formatUserCount } from "../../../../modules/serviceUtils.js";
-import { createExtendsRelation } from "../../../../utils.js";
+import Component from "../../../../../Component.js";
+import { formatUserCount } from "../../../../../../modules/serviceUtils.js";
+import { createExtendsRelation } from "../../../../../../utils.js";
 
 function BigCardList(infoObject) {
   Component.call(this, infoObject);

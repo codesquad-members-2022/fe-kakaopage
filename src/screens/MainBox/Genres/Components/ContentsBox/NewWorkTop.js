@@ -1,6 +1,6 @@
 import { createExtendsRelation } from "../../../../../utils.js";
 import ContentsBox from "../ContentsBox.js";
-import BigCardList from "../BigCardList.js";
+import BigCardList from "./Components/BigCardList.js";
 
 function NewWorkTop(infoObject) {
   ContentsBox.call(this, infoObject);
