@@ -2,7 +2,7 @@ import { $ } from "../utils/dom.js";
 
 export const preventHyperLinks = () => {
     $("body").addEventListener("click", (e) => {
-        if (!e.target.matches("[data-link]")) return;
+        if (!e.target.closest("a").dataset.link) return;
         e.preventDefault();
     });
 };
