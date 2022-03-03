@@ -1,8 +1,3 @@
-import IconSrc from "./data/IconSrc.json" assert { type: "json" };
-import DailyTop from "./data/DailyTop.json" assert { type: "json" };
-import GenreTop from "./data/GenreTop.json" assert { type: "json" };
-import SliderBanner from "./data/SliderBanner.json" assert { type: "json" };
-
 export function createTopThumbHTML(comicInfo) {
     const ratingIconClass = isNaN(comicInfo.rating) ? 'comic-thumb__star gone' : 'comic-thumb__star';
     const thumbHTML = /* html */ `
@@ -27,16 +22,16 @@ export function createTopThumbHTML(comicInfo) {
     return thumbHTML;
 }
 
-export function createTopListHTML(type){
+export function createTopListHTML(type) {
     const comicData = type in DailyTop ? DailyTop[type] : GenreTop[type];
     let listHTML = comicData.reduce((listHTML, data) => listHTML + createTopThumbHTML(data), '');
     return listHTML;
 }
 
-export function createMenuItemHTML(data){
+export function createMenuItemHTML(data) {
     let badgeHTML = '';
 
-    if(data.badge !== null) {
+    if (data.badge !== null) {
         badgeHTML = /* html */ `
         <div class="count_badge">
             <span class="count_badge__text border__ellipse">${data.badge}</span>
@@ -50,7 +45,7 @@ export function createMenuItemHTML(data){
         </a>`;
 }
 
-export function createSubBannerHTML(){
+export function createSubBannerHTML() {
     return /* html */ `
         <div class="banner center">
             <img src="resources/images/thumbnail/sub_banner.png" alt="서브배너 이미지" class="sub-banner__image">
@@ -62,7 +57,7 @@ export function createSubBannerHTML(){
     `;
 }
 
-export function createContainerHeaderHTML(title, count = null){
+export function createContainerHeaderHTML(title, count = null) {
     const $countSpanHTML = !count ? '' : `<span class="contents-container__comic-count">(${count})</span>`;
     return /* html */ `
         <span class="contents-container__title">${title}</span>
@@ -71,14 +66,14 @@ export function createContainerHeaderHTML(title, count = null){
     `;
 }
 
-export function createWeekNavItemHTML(text, dataKey, selected){
+export function createWeekNavItemHTML(text, dataKey, selected) {
     const selectedClass = !selected ? '' : 'week-nav__item-selected';
     return /* html */ `
         <li class="week-nav__item ${selectedClass}" data-data-key="${dataKey}">${text}</li>
     `;
 }
 
-export function createInstallButtonHTML(){
+export function createInstallButtonHTML() {
     return /* html */ `
         <button class="btn__app">
             <img src="${IconSrc.button_app}" alt="카카오페이지 앱 다운로드 버튼">
@@ -86,7 +81,7 @@ export function createInstallButtonHTML(){
     `;
 }
 
-function createSliderItemHTML(itemData){
+function createSliderItemHTML(itemData) {
     const title = itemData.title.split('\n').reduce((title, contents) => title + `<p>${contents}</p>`, '');
     return /* html */ `
         <li class="banner__item">
@@ -116,15 +111,15 @@ function createSliderItemHTML(itemData){
     `;
 }
 
-function createSliderListHTML(tabName){
+function createSliderListHTML(tabName) {
     const sliderData = SliderBanner[tabName];
     let firstItem = 0;
     let endItem = sliderData.length - 1;
-    const listHTML = sliderData.reduce((listHTML, itemData, index) => { 
+    const listHTML = sliderData.reduce((listHTML, itemData, index) => {
         const itemHTML = createSliderItemHTML(itemData);
-        
-        if(index === firstItem) firstItem = itemHTML;
-        if(index === endItem) endItem = itemHTML;
+
+        if (index === firstItem) firstItem = itemHTML;
+        if (index === endItem) endItem = itemHTML;
 
         return listHTML + itemHTML;
     }, '');
@@ -139,7 +134,7 @@ function createSliderListHTML(tabName){
     `;
 }
 
-function createSliderOrderHTML(){
+function createSliderOrderHTML() {
     return /* html */ `
         <div class="banner__order z-index_1">
             <span class="banner__order--text"></span>
@@ -147,7 +142,7 @@ function createSliderOrderHTML(){
     `
 }
 
-function createSliderButtonHTML(){
+function createSliderButtonHTML() {
     return /* html */ `
         <div class="banner__paging z-index_2">
             <img src="${IconSrc.banner_paging_back}" alt="메인배너 이전버튼"
@@ -158,7 +153,7 @@ function createSliderButtonHTML(){
     `
 }
 
-export function createMainBannerHTML(tabName){
+export function createMainBannerHTML(tabName) {
     return /* html */ `
         <div class="banner">
             ${createSliderListHTML(tabName)}

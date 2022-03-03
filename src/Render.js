@@ -1,29 +1,31 @@
 import * as HTMLCreator from "./HTMLCreator.js"
 import * as SliderController from "./SliderController.js";
-import { setNavEvent } from "./NavEventController.js"
+import {
+    setNavEvent
+} from "./NavEventController.js"
 import * as Utils from "./Utils.js";
 
 const $body_main = document.querySelector('.custom');
 
 const tabRenders = {
-    'home' : renderHomePage,
-    'daily' : renderDailyPage,
-    'webToon' : renderWebToonPage,
-    'boy' : renderBoyPage,
-    'drama' : renderDramaPage,
-    'romance' : renderRomancePage,
-    'rofan' : renderRofanPage,
-    'action' : renderActionPage,
-    'bl' : renderBlPage
+    'home': renderHomePage,
+    'daily': renderDailyPage,
+    'webToon': renderWebToonPage,
+    'boy': renderBoyPage,
+    'drama': renderDramaPage,
+    'romance': renderRomancePage,
+    'rofan': renderRofanPage,
+    'action': renderActionPage,
+    'bl': renderBlPage
 }
 
-export function rendering(tabName){
+export function rendering(tabName) {
     $body_main.innerHTML = '';
     tabRenders[tabName](tabName);
     setNavEvent('main-nav__list');
 }
 
-function renderHomePage(tabName){
+function renderHomePage(tabName) {
     renderSliderBanner(tabName);
     renderMenu(tabName);
     renderSubBanner(tabName);
@@ -32,44 +34,44 @@ function renderHomePage(tabName){
     renderInstallButton();
 }
 
-function renderDailyPage(tabName){
+function renderDailyPage(tabName) {
     renderDailyTop();
     renderInstallButton();
 }
 
-function renderWebToonPage(tabName){
+function renderWebToonPage(tabName) {
     renderGenreTop();
     renderInstallButton();
 }
 
-function renderDramaPage(){
+function renderDramaPage() {
     renderDailyTop();
     renderInstallButton();
 }
 
-function renderBoyPage(){
+function renderBoyPage() {
     renderDailyTop();
 }
 
-function renderRomancePage(){
+function renderRomancePage() {
     renderGenreTop();
     renderInstallButton();
 }
 
-function renderRofanPage(){
+function renderRofanPage() {
     renderDailyTop();
 }
 
-function renderActionPage(){
+function renderActionPage() {
     renderInstallButton();
 }
 
-function renderBlPage(){
+function renderBlPage() {
     renderDailyTop();
     renderGenreTop();
 }
 
-function renderSliderBanner(tabName){
+function renderSliderBanner(tabName) {
     const $banner_section = document.createElement('section');
     $banner_section.classList.add('main-banner', 'section');
     $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(tabName);
@@ -77,7 +79,7 @@ function renderSliderBanner(tabName){
     SliderController.init();
 }
 
-function renderMenu(tabName){
+function renderMenu(tabName) {
     const $menu_section = document.createElement('section');
     const $menu_div = document.createElement('div');
     $menu_div.classList.add('contents_menu__container', 'center');
@@ -87,26 +89,26 @@ function renderMenu(tabName){
     Utils.getData('data', 'menu').then((menuData) => menuData[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data)));
 }
 
-function createMenu(dataObject, tabName, $menu_div){
+function createMenu(dataObject, tabName, $menu_div) {
     console.log('createMenu : ' + dataObject);
     dataObject[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
 }
 
-function renderSubBanner(tabName){
+function renderSubBanner(tabName) {
     const $sub_banner_section = document.createElement('section');
     $sub_banner_section.innerHTML = HTMLCreator.createSubBannerHTML(tabName);
     $sub_banner_section.classList.add('sub-banner', 'section');
     $body_main.appendChild($sub_banner_section);
 }
 
-function renderContentsContainer($header, $main){
+function renderContentsContainer($header, $main) {
     const $container = document.createElement('section');
     $container.classList.add('contents-container', 'section', 'center');
     $container.append($header, $main);
     $body_main.appendChild($container);
 }
 
-function createContentsHeader(title, count = null){
+function createContentsHeader(title, count = null) {
     const $header = document.createElement('div');
     const headerHTML = HTMLCreator.createContainerHeaderHTML(title, count);
     $header.classList.add('contents-container__header', 'center');
@@ -114,18 +116,18 @@ function createContentsHeader(title, count = null){
     return $header;
 }
 
-function createContentsMain(...children){
+function createContentsMain(...children) {
     const $main = document.createElement('div');
     $main.classList.add('contents-container__main');
 
-    if(children.length){
+    if (children.length) {
         $main.append(...children);
     }
 
     return $main;
 }
 
-function renderDailyTop(selectedWeek = 'mon'){
+function renderDailyTop(selectedWeek = 'mon') {
     const $nav = createWeeklyNavNode(getWeekNavData());
     const $week_list = createTopList('week', selectedWeek);
     const $main = createContentsMain($nav, $week_list);
@@ -134,20 +136,51 @@ function renderDailyTop(selectedWeek = 'mon'){
     setNavEvent('week-nav__list');
 }
 
-function getWeekNavData(){
-    return [
-        { text : '월', dataKey : 'mon', selected : true },
-        { text : '화', dataKey : 'tue', selected : false },
-        { text : '수', dataKey : 'wed', selected : false },
-        { text : '목', dataKey : 'thu', selected : false },
-        { text : '금', dataKey : 'fri', selected : false },
-        { text : '토', dataKey : 'sat', selected : false },
-        { text : '일', dataKey : 'sun', selected : false },
-        { text : '완결', dataKey : 'end', selected : false },
+function getWeekNavData() {
+    return [{
+            text: '월',
+            dataKey: 'mon',
+            selected: true
+        },
+        {
+            text: '화',
+            dataKey: 'tue',
+            selected: false
+        },
+        {
+            text: '수',
+            dataKey: 'wed',
+            selected: false
+        },
+        {
+            text: '목',
+            dataKey: 'thu',
+            selected: false
+        },
+        {
+            text: '금',
+            dataKey: 'fri',
+            selected: false
+        },
+        {
+            text: '토',
+            dataKey: 'sat',
+            selected: false
+        },
+        {
+            text: '일',
+            dataKey: 'sun',
+            selected: false
+        },
+        {
+            text: '완결',
+            dataKey: 'end',
+            selected: false
+        },
     ]
 }
 
-function createWeeklyNavNode(weekData){
+function createWeeklyNavNode(weekData) {
     const $nav = document.createElement('nav');
     const $list = document.createElement('ul');
 
@@ -155,12 +188,12 @@ function createWeeklyNavNode(weekData){
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.forEach( data => $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected));
+    weekData.forEach(data => $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected));
 
     return $nav;
 }
 
-function createTopList(listType, dataKey = null){
+function createTopList(listType, dataKey = null) {
     const $list = document.createElement('ul');
     $list.classList.add('comic-list', 'center');
     $list.id = `list-${listType}`;
@@ -168,12 +201,12 @@ function createTopList(listType, dataKey = null){
     return $list;
 }
 
-export function renderTopList(listType, dataKey = null){
+export function renderTopList(listType, dataKey = null) {
     const comicList = document.getElementById(`list-${listType}`);
     comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
 }
 
-function renderGenreTop(){
+function renderGenreTop() {
     const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
     const genreTitle = ['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협'];
     genreList.forEach((genre, index) => {
@@ -185,7 +218,7 @@ function renderGenreTop(){
     });
 }
 
-function renderInstallButton(){
+function renderInstallButton() {
     const $section = document.createElement('section');
     $section.innerHTML = HTMLCreator.createInstallButtonHTML();
     $body_main.appendChild($section);

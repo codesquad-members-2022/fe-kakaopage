@@ -1,6 +1,6 @@
 import * as Render from "./Render.js"
 
-function init(){
+function init() {
     Render.rendering('home');
 }
 
