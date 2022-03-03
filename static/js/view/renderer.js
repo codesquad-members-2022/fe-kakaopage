@@ -3,14 +3,14 @@ import { select } from '../util.js';
 import { addHandlerOnGnb, addHandlerOnSnb } from '../handler/navHandler.js';
 import { addHandlerOnBanner } from '../handler/bannerHandler.js';
 
-import { createHeader } from '../components/header.js';
-import { createFooter } from '../components/footer.js';
-import { createGnb } from '../components/gnb.js';
-import { createSnb } from '../components/snb.js';
-import { createGridMenu } from '../components/gridMenu.js';
-import { createMainBanner } from '../components/mainBanner.js';
-import { createPromotionBanner } from '../components/promotionBanner.js';
-import { createSectionBasic } from '../components/sectionBasic.js';
+import { createHeader } from './components/header.js';
+import { createFooter } from './components/footer.js';
+import { createGnb } from './components/gnb.js';
+import { createSnb } from './components/snb.js';
+import { createGridMenu } from './components/gridMenu.js';
+import { createMainBanner } from './components/mainBanner.js';
+import { createPromotionBanner } from './components/promotionBanner.js';
+import { createSectionBasic } from './components/sectionBasic.js';
 
 const renderer = {
   header: () => {
@@ -51,11 +51,8 @@ const renderer = {
     select('.category-content').insertAdjacentHTML('beforeend', createSectionBasic(title, content));
   },
 
-  preparing() {
-    select(
-      '.category-content'
-    ).innerHTML = `<p style="text-align:center;padding:100px 0;">이 탭은 준비 중입니다.</p>`;
   preparing: () => {
+    select('.category-content').textContent = `이 탭은 준비 중입니다.`;
   },
 
   categoryContentWrap: () => {

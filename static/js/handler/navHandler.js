@@ -1,7 +1,7 @@
 import { select, initElement, updateDocumentTitle } from '../util.js';
 
 import { renderer } from '../view/renderer.js';
-import { loaderMap } from '../loaderMap.js';
+import { loaderMap } from '../view/loader/loaderMap.js';
 import { dataMap } from '../../data/dataMap.js';
 
 const addHandlerOnGnb = () => select(`.gnb__list`).addEventListener('click', handleNav);
@@ -19,6 +19,7 @@ const handleGnb = (event) => {
   const globalCategory = event.target.dataset.category;
 
   loadMain(globalCategory);
+  updateNavStyle('gnb', globalCategory);
 };
 
 const handleSnb = (event) => {
@@ -29,7 +30,6 @@ const handleSnb = (event) => {
 };
 
 const loadMain = (globalCategory) => {
-  updateNavStyle('gnb', globalCategory);
   initElement('.main');
   renderer.categoryContentWrap();
 
