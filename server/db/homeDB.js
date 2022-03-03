@@ -1,6 +1,7 @@
-const { ELEMENT_ID } = require('./subCategoryID');
+const { SUBCATEGORY_CHILD_ID } = require('../constants/uid.js');
 
-const { CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } = ELEMENT_ID;
+const { CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
+  SUBCATEGORY_CHILD_ID;
 
 function getHomeData() {
   return {

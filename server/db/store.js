@@ -1,6 +1,9 @@
 const getHomeData = require('./homeDB.js');
 const getWebtoonData = require('./webtoonDB.js');
 const getNovelData = require('./novelDB.js');
+const { MAIN_CATEGORY_UID } = require('../constants/uid.js');
+
+const { MAIN, WEBTOON, NOVEL, MOVIE, TV, BOOK } = MAIN_CATEGORY_UID;
 
 function mockDB() {
   const initMsg = '✅ Connect with mock DB';
@@ -13,13 +16,13 @@ function mockDB() {
         let state = null;
         try {
           switch (mainUid) {
-            case 0:
+            case MAIN:
               state = getHomeData(subUid);
               break;
-            case 1:
+            case WEBTOON:
               state = getWebtoonData(subUid);
               break;
-            case 2:
+            case NOVEL:
               state = getNovelData(subUid);
               break;
             default:

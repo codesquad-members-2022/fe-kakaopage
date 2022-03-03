@@ -1,7 +1,7 @@
-const { ELEMENT_ID } = require('./subCategoryID');
+const { SUBCATEGORY_CHILD_ID } = require('../constants/uid.js');
 
 const { SUB_CATEGORY, CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } =
-  ELEMENT_ID;
+  SUBCATEGORY_CHILD_ID;
 
 function getNovelData(subUid) {
   return {
