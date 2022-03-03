@@ -9,6 +9,12 @@ function init() {
   section.renderEventButtons();
 }
 init();
+checkApi();
+function checkApi() {
+  const promise = fetch("http://localhost:3000/data").then((response) =>
+    console.log(response)
+  );
+}
 function changeTabsColor(target) {
   const Tabs = target.parentNode.childNodes;
   for (let i = 1; i < Tabs.length; i += 2) {
