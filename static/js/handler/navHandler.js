@@ -54,7 +54,7 @@ const isAlreadyClicked = (eventTarget) => {
 
 const getCurrentCategory = (nav) => {
   const currentEl = select(`.${nav}__item--active`);
-  currentEl ? currentEl.dataset.category : null;
+  return currentEl ? currentEl.dataset.category : null;
 };
 
 const updateNavStyle = (navtype, category) => {
