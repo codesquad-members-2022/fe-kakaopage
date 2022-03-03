@@ -15,44 +15,52 @@ const fillWithData = (req) => {
     .catch((err) => console.log(err));
 };
 
-const renderHome = async () => {
+const renderHome = () => {
+  const curTab = "home";
   fillWithData({
-    path: "webtoons/banner",
+    path: `${curTab}/webtoons/banner`,
     createBlock: createBanner,
   });
   fillWithData({
-    path: "category-btn",
+    path: `${curTab}/category-btn`,
     createBlock: createCateBtnBlock,
   });
   fillWithData({
-    path: "webtoons/promotion",
+    path: `${curTab}/webtoons/promotion`,
     createBlock: createPromotionBlock,
   });
   fillWithData({
-    path: "webtoons/days",
+    path: `${curTab}/webtoons/days`,
     createBlock: createDaysBlock,
   });
   fillWithData({
-    path: "webtoons/banner/small",
+    path: `${curTab}/webtoons/banner/small`,
     createBlock: createSmallBannerBlock,
   });
   fillWithData({
-    path: "webtoons/drama/home",
+    path: `${curTab}/webtoons/drama`,
     createBlock: createGenreBlock,
   });
   fillWithData({
-    path: "webtoons/top3",
+    path: `${curTab}/webtoons/top3`,
     createBlock: createDailyRankBlock,
   });
   fillWithData({
-    path: "webtoons/event",
+    path: `${curTab}/webtoons/event`,
     createBlock: createEventBlock,
   });
 };
 
 const renderDailyContents = () => {
-  createBanner();
-  createDailyContents();
+  const curTab = "daily-contents";
+  fillWithData({
+    path: `${curTab}/webtoons/banner`,
+    createBlock: createBanner,
+  });
+  fillWithData({
+    path: `${curTab}/webtoons/days`,
+    createBlock: createDailyContents,
+  });
 };
 
 export { renderHome, renderDailyContents };

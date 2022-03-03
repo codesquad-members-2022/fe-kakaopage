@@ -11,7 +11,7 @@ const makeRoundTodayTab = (day) => {
   });
 };
 
-const addDaysEvL = () => {
+const addDaysEvL = (dataOfDays) => {
   $(".nav-days").addEventListener("click", ({ target }) => {
     const days = target.closest("ul").childNodes;
 
@@ -29,11 +29,14 @@ const addDaysEvL = () => {
 
     target.classList.add("current-tab--round", "text-color--black");
 
-    $("#daily-contents").innerHTML = getDayWebtoon(target.dataset.day);
+    $("#daily-contents").innerHTML = getDayWebtoon(
+      dataOfDays,
+      target.dataset.day
+    );
   });
 };
 
-const createDailyContents = () => {
+const createDailyContents = (dataOfDays) => {
   const day = getDay();
 
   const dailyContentsBlock = `<div class="center container">
@@ -84,13 +87,13 @@ const createDailyContents = () => {
   </div>
 
   <div class="grid-5col contents-container" id='daily-contents'>
-  ${getDayWebtoon(day)}
+  ${getDayWebtoon(dataOfDays, day)}
   </div>
 </div>`;
 
   insertIntoMain(dailyContentsBlock);
   makeRoundTodayTab(day);
-  addDaysEvL();
+  addDaysEvL(dataOfDays);
 };
 
 export { createDailyContents };
