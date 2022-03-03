@@ -93,7 +93,7 @@
 .eventSlide {
   height: 440px;
   width: 720px;
-  background-image: url("../images/소설\ _\ 그\ 악녀가\ 검을\ 든\ 이유\ 2타\ _\ 10-24.png");
+  background-image: url("/images/소설\ _\ 그\ 악녀가\ 검을\ 든\ 이유\ 2타\ _\ 10-24.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -548,7 +548,7 @@
   width: 678px;
   height: 339px;
   margin: 0.5px 0;
-  background-image: url("/FE/FE01-html/images/_진격의\ 거인_\ 정주행\ 프로모션\ \(2_14_2_28\).png");
+  background-image: url("/images/_진격의\ 거인_\ 정주행\ 프로모션\ \(2_14_2_28\).png");
   background-size: cover;
   border-radius: 6px;
   padding: 20px;
