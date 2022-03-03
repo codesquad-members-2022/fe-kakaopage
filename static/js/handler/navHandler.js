@@ -19,8 +19,7 @@ const handleNav = (event) => {
 };
 
 const loadMain = (globalCategory) => {
-  initElement('.main');
-  renderer.categoryContentWrap();
+  select('.snb') && removeElement('.snb');
 
   getData('data', globalCategory).then((response) => {
     const DATA = response;
@@ -32,6 +31,7 @@ const loadMain = (globalCategory) => {
 
 const loadCategoryContent = (globalCategory, subCategory, DATA = null) => {
   initElement('.category-content');
+  select('.snb') && updateNavStyle('snb', subCategory);
   updateDocumentTitle();
 
   if (DATA) {
