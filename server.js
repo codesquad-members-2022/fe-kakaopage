@@ -9,7 +9,7 @@ server.use(cors());
 server.use(express.static(__dirname));
 server.use('/data', router);
 
-server.set('port', process.env.PORT || 3000);
+server.set('port', process.env.PORT || PORT);
 
 server.get('/', (req, res) => {
     res.sendFile(__dirname + './index.html');
