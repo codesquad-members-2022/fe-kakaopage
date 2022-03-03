@@ -1,0 +1,77 @@
+{
+  "main": [
+    {
+      "webtoonInfo": {
+        "title": "8클래스 마법사의 회귀",
+        "writer": {
+          "writing": "테스",
+          "drawing": "류송"
+        },
+        "readers": 815000,
+        "genre": "소년",
+        "waitFree": true,
+        "ageLimit": "All",
+        "serialDate": ["월"],
+        "shortDesc": "'내가 원했던 참회란, 모든 것을 되돌려놓는 것.'",
+        "rating": "10.0",
+        "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=imfCM/hzmU0W1V6o/0q5JUn4tQIXrhPV98ng4n0&filename=th1",
+        "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bhe9o7/hzmU3zpvL3/DWRcsmPxJAlrjDw7MkGWwK&filename=th2"
+      },
+      "bannerImage": "src/img/mainBanner/main-banner.png",
+      "bannerText": "시즌2 런칭 기념, 경품 이벤트!",
+      "bannerBadge": "이벤트",
+      "link": "#"
+    },
+    {
+      "webtoonInfo": {
+        "title": "화산전생",
+        "writer": {
+          "writing": "토마씨",
+          "drawing": "정준"
+        },
+        "readers": 1832000,
+        "genre": "액션무협",
+        "waitFree": true,
+        "ageLimit": "All",
+        "serialDate": ["토"],
+        "shortDesc": "영웅을 동경했던 한 사내의 악전고투기",
+        "rating": "10.0",
+        "coverImage": "https://dn-img-page.kakao.com/download/resource?kid=Bhw9l/hzhOj1XUfE/zN2Zb5ipGewccBpvp63KY0&filename=th1",
+        "squareImage": "https://dn-img-page.kakao.com/download/resource?kid=bmxLRK/hzp2mI0hMJ/NSDWKWoCxLz0qDRXFDrdR0&filename=th2"
+      },
+      "bannerImage": "src/img/mainBanner/main-banner-2.png",
+      "bannerText": "나도 그들처럼 영웅이 되고 싶었다",
+      "bannerBadge": "이벤트",
+      "link": "#"
+    }
+  ],
+  "sub": [
+    {
+      "title": "롱리브더킹",
+      "bannerImage": "src/img/sub-banner.png",
+      "link": "#"
+    },
+    {
+      "title": "롱리브더킹",
+      "bannerImage": "src/img/sub-banner.png",
+      "link": "#"
+    }
+  ],
+  "event": [
+    {
+      "title": "이그레트",
+      "bannerImage": "https://dn-img-page.kakao.com/download/resource?kid=E8yMN/hzp2nOI0PT/XjH8y8XBKB7K53kSq88HKk",
+      "link": "#"
+    },
+    {
+      "title": "말하지 말까",
+      "bannerImage": "https://dn-img-page.kakao.com/download/resource?kid=bqv0jL/hzp2lKaW1Q/Llk2akzVbz3KS3de6EiCK1",
+      "link": "#"
+    },
+    {
+      "title": "악녀를 죽여줘",
+      "bannerImage": "https://dn-img-page.kakao.com/download/resource?kid=vclDM/hzp2jMmccH/puk6BjZ053YNLYcanFLj3k",
+      "link": "#"
+    }
+  ]
+}
