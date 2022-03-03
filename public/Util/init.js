@@ -1,18 +1,24 @@
-import {
-  renderMainSecHome,
-  renderMainSecWoD,
-  onclickBannerNav,
-} from "./recEvent.js";
+import { onclickBannerNav, onclickBannerController } from "../view/recView.js";
+import { onclickDowNav } from "../eventJS/mainEvent.js";
 import { domUtil } from "./util.js";
-import { data } from "../data/data.js";
 
 const initMainPage = () => {
-  renderMainSecHome("홈");
+  const INIT_PAGE = "홈";
+  renderMainSecHome(INIT_PAGE);
+  renderBanner(INIT_PAGE);
 
   domUtil.eventsAdder(".recommand__nav--ul", "click", onclickBannerNav);
   domUtil.eventsAdder(".main__nav__dow", "click", onclickDowNav);
+  domUtil.eventsAdder(
+    ".recommand__image--controller",
+    "click",
+    onclickBannerController
+  );
 
-  // 이부분도 세팅 하게 바꿔야함
+  setBannerDisplayByDefault();
+};
+
+const setBannerDisplayByDefault = () => {
   domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
     domUtil.$(".recommand__image--wrapper").offsetWidth
   }px)`;

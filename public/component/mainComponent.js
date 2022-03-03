@@ -1,29 +1,22 @@
-import { domUtil } from "../Util/util.js";
-import { data } from "../data/data.js";
-
-const getMainNavHtml = (data) => {
-  return /* html */ `
+const getWeekNavHTML = (weekNavinfo) => {
+  return /* html */ `<nav class="main__nav__dow">
       <ul class="main__nav__dow--ul">
-      ${data.week.reduce(
+      ${weekNavinfo.reduce(
         (listHtml, day) => (listHtml += `<li>${day}</li>`),
         ""
       )}
       </ul>
-  `;
+    </nav>
+    `;
 };
 
-// 제일 중요함 함수그냥 전부 빼버리기
-const getMainHtml = (imgInfo, toggleNav, toggleinfo, weekNav, weekNavinfo) => {
-  return `
-  ${hasWeekNav(weekNav, weekNavinfo) ?? ""}
-  ${hasToggleNav(toggleNav, toggleinfo) ?? ""}
-  <ul class="main__cartoonZone">
-    ${imgInfo.reduce(
-      (imgHtml, imgData) => (imgHtml += getImgCardHtml(imgData)),
-      ""
-    )}
-  </ul>
-`;
+const getToggleNavHTML = ({ left, right }) => {
+  return /* html */ `<nav class="main__nav--toggle">
+      <ul class="main--toggle--left">
+        ${left.reduce((html, font) => (html += `<li>${font}</li>`), "")}
+      </ul>
+      <div class="main--toggle--right">${right}</div>
+    </nav>`;
 };
 
 const getImgCardHtml = ({ imgUrl, title, info }, test) => {
@@ -49,42 +42,4 @@ const getImgCardHtml = ({ imgUrl, title, info }, test) => {
 `;
 };
 
-const getToonGenre = (toonGenre) =>
-  data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
-
-const getIsHot = (isTrue) =>
-  data.toonData.filter((toonInfo) => toonInfo.hot === isTrue);
-
-const hasToggleNav = (isTrue, { left, right }) => {
-  if (isTrue) {
-    return /* html */ `<nav class="main__nav--toggle">
-      <ul class="main--toggle--left">
-        ${left.reduce((html, font) => (html += `<li>${font}</li>`), "")}
-      </ul>
-      <div class="main--toggle--right">${right}</div>
-    </nav>`;
-  }
-};
-
-const hasWeekNav = (isTrue, weekNavinfo) => {
-  if (isTrue) {
-    return /* html */ `<nav class="main__nav__dow">
-      <ul class="main__nav__dow--ul">
-      ${weekNavinfo.reduce(
-        (listHtml, day) => (listHtml += `<li>${day}</li>`),
-        ""
-      )}
-      </ul>
-    </nav>
-    `;
-  }
-};
-
-export {
-  createDomEl,
-  getMainNavHtml,
-  getMainHtml,
-  getToonGenre,
-  getImgCardHtml,
-  getIsHot,
-};
+export { getImgCardHtml, getWeekNavHTML, getToggleNavHTML };
