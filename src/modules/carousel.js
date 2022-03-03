@@ -58,7 +58,6 @@ const carousel = ({ elems, unit, elemWidth }) => {
     ...elems.slice(0, elems.length - 1),
   ];
   const isRequireClone = elems.length === 2;
-  // const WIDTH_PER_ELEM = 100 / (newElems.length * (isRequireClone ? 2 : 1));
   const WIDTH_PER_ELEM = elemWidth;
   const ELEM_UNIT = unit;
 
