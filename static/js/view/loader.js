@@ -1,4 +1,4 @@
-import { renderer } from './view/renderer.js';
+import { renderer } from './renderer.js';
 
 const loader = {
   // 홈
