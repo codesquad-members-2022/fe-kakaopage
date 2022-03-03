@@ -1,7 +1,7 @@
 const webtoonData = require('../public/data/webtoon.json');
 
 const webtoon = {
-  getAll: async (req, res) => {
+  getAll: (req, res) => {
     try {
       res.json(webtoonData);
     } catch (err) {
