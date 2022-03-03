@@ -16,7 +16,7 @@ export const getGnbTemplate = (gnbData) => {
 
 export const setNewMarkEvent = () => {
     setDefault();
-    document.querySelector('gnb').addEventListener('click', (e) => {
+    document.querySelector('.gnb').addEventListener('click', (e) => {
         const clickedTab = e.target.closest('li');
         const newMarker = clickedTab.querySelector('.gnb__new-mark');
         newMarker.classList.add('erase');

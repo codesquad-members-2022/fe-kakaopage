@@ -1,7 +1,7 @@
-import { initRender } from "./render.js";
+import { initRender, activateAll } from "./render.js";
 
 const main = () => {
-    initRender();
+    initRender().then(() => {activateAll()})
 }
 
 main();
