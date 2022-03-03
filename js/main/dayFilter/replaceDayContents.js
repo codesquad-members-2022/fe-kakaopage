@@ -17,10 +17,10 @@ const replaceDayContents = ({ webtoonArr, coverType }) => {
     WEBTOON_CONTAINER_CLASSNAME
   );
 
-  for (let i = 0; i < webtoonArr.length; i++) {
-    const $webtoonComponent = createWebtoonComponent(coverType, webtoonArr[i]);
-    $webtoonComponentContainer.appendChild($webtoonComponent);
-  }
+  webtoonArr
+    .map((webtoon) => createWebtoonComponent(coverType, webtoon))
+    .forEach(($webtoon) => $webtoonComponentContainer.appendChild($webtoon));
+
   $dayContentsMain.appendChild($webtoonComponentContainer);
   $contentsContainer.appendChild($dayContentsMain);
 };
