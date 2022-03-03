@@ -1,7 +1,9 @@
 import { renderer } from '../renderer.js';
 
-const home = () => {
-  renderer.preparing();
+const home = {
+  home: (DATA) => {
+    renderer.preparing(DATA);
+  },
 };
 
 export { home };

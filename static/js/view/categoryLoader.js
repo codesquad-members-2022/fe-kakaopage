@@ -6,7 +6,9 @@ import { broadcast } from './categories/broadcast.js';
 import { book } from './categories/book.js';
 
 const categoryLoader = {
-  홈: home,
+  홈: {
+    홈: home.home,
+  },
 
   웹툰: {
     홈: webtoon.home,
