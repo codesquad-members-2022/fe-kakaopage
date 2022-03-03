@@ -16,14 +16,15 @@ export const initRender = () => {
 const renderCommon = () => {
     return getData('common', 'gnb')
     .then(gnbData => {
-        document.querySelector('body').insertAdjacentHTML('afterbegin', getHeaderTemplate() + getGnbTemplate(gnbData));
+        document.querySelector('header').innerHTML = getHeaderTemplate();
+        document.querySelector('.gnb').innerHTML = getGnbTemplate(gnbData);
     });
 }
 
 const renderGenreTab = (page) => {
-    return getData('common', 'genreTab', 'webtoon')
+    return getData('common', 'genreTab', page)
     .then(genreTabData => {
-        document.querySelector('.contents').insertAdjacentHTML('afterbegin', getGenreTabTemplate(genreTabData));
+        document.querySelector('.genre-tab').innerHTML = getGenreTabTemplate(genreTabData);
     });
 }
 
@@ -34,26 +35,26 @@ const pageDic = {
 const renderContents = (page, genre) => {
     return getData(page, genre)
     .then(pageData => {
-        document.querySelector('.contents').insertAdjacentHTML('beforeend', pageDic[page](genre, pageData));
+        document.querySelector('.tab-contents').innerHTML = pageDic[page](genre, pageData);
     });
 }
 
 
 
-// const reRender = (newSelected, type) => {
-//     const newTab = newSelected.dataset[type];
-//     switch (type) {
-//         case 'gnb': 
-//             renderGenreTab(newTab);
-//             break;
-//         case 'genre':
-//             renderByGenre(newTab);
-//             break;
-//         case 'day':
-//             const dayRankSection = newSelected.closest('section');
-//             changeContentsByDay(dayRankSection, newTab);
-//     }
-// }
+const reRender = (newSelected, type) => {
+    const newTab = newSelected.dataset[type];
+    switch (type) {
+        case 'gnb':
+            renderGenreTab(newTab);
+            break;
+        case 'genre':
+            renderContents('webtoon', newTab);
+            break;
+        case 'day':
+            const dayRankSection = newSelected.closest('section');
+            changeContentsByDay(dayRankSection, newTab);
+    }
+}
 
 // const renderByGenre = (genre) => {
 //     const renderList = genreRenderList[genre];
@@ -106,7 +107,7 @@ const handleTabClick = (event, type) => {
     const newSelected = event.target.closest('li');
     if (prevSelected === newSelected) return;
     moveSelectionMark(prevSelected, newSelected, type);
-    //reRender(newSelected, type);
+    reRender(newSelected, type);
 }
 
 const moveSelectionMark = (prevSelected, newSelected, type) => {

@@ -2,15 +2,13 @@ import { DEFAULT_PAGE } from '../constant.js';
 
 export const getGnbTemplate = (gnbData) => {
     return `
-        <nav class="gnb top">
-            <ul class='gnb__container tab__container'>
-            ${gnbData.map(data => `
-                <li class='gnb__item center' data-gnb=${data.dataTab}>
-                    <a href=${data.link}><img src=${data.src} alt=${data.alt} /></a>
-                    ${data.new ? '<div class="gnb__new-mark"></div>' : ''}
-                </li>`).join('')}
-            </ul>
-        </nav>
+        <ul class='gnb__container tab__container'>
+        ${gnbData.map(data => `
+            <li class='gnb__item center' data-gnb=${data.dataTab}>
+                <a href=${data.link}><img src=${data.src} alt=${data.alt} /></a>
+                ${data.new ? '<div class="gnb__new-mark"></div>' : ''}
+            </li>`).join('')}
+        </ul>
     `
 }
 

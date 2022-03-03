@@ -1405,7 +1405,7 @@
             }
         ]
     },
-    "romace": {
+    "romance": {
         "mainBanner": [
             {
                 "index": "0",
@@ -1501,7 +1501,7 @@
                 "title": "기다무 플러스"
             }
         ],
-        "rofan": [
+        "eventBanner": [
             {
                 "src": "https://dn-img-page.kakao.com/download/resource?kid=zjKSo/hzhOlrWnde/l1Xf4DULjd2sXPrkJUs4n0"
             }

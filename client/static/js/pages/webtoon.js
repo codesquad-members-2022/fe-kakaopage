@@ -4,7 +4,15 @@ import { getEventBannerTemplate } from "../system/eventBanner.js";
 import { getWorkSectionTemplate } from "../system/workSection.js";
 
 const componentsListDic = {
-    "home": ['mainBanner', 'categoryGrid', 'eventBanner','newTop'] //'daySeriesTop','dailyRankingTop', 'recommendEventTop'],
+    "home": ['mainBanner', 'categoryGrid', 'eventBanner','newTop'], //'daySeriesTop','dailyRankingTop', 'recommendEventTop'],
+    "daily": ['mainBanner'],
+    "webtoon": ['mainBanner'],
+    "boy": ['mainBanner', 'categoryGrid', 'eventBanner'],
+    "drama": ['mainBanner', 'categoryGrid'],
+    "romance": ['mainBanner', 'categoryGrid', 'eventBanner'],
+    "rofan": ['mainBanner', 'categoryGrid', 'eventBanner'],
+    "action": ['mainBanner', 'categoryGrid', 'eventBanner'],
+    "BL": ['mainBanner', 'categoryGrid']
 }
 
 const componentMakeFunctionDic = {
