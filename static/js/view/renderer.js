@@ -11,6 +11,7 @@ import { createGridMenu } from './components/gridMenu.js';
 import { createMainBanner } from './components/mainBanner.js';
 import { createPromotionBanner } from './components/promotionBanner.js';
 import { createSectionBasic } from './components/sectionBasic.js';
+import { createNoticeBox } from './components/noticeBox.js';
 
 const renderer = {
   header: () => {
@@ -59,6 +60,8 @@ const renderer = {
     const categoryContentEl = document.createElement('div');
     categoryContentEl.classList.add('category-content');
     select('.main').append(categoryContentEl);
+  noticeBox: (text) => {
+    select('.category-content').insertAdjacentHTML('beforeend', createNoticeBox(text));
   },
 };
 
