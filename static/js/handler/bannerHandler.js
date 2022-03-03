@@ -1,4 +1,4 @@
-import { select } from '../util.js';
+import { select } from '../utility/util.js';
 
 const addHandlerOnBanner = (banner) => select(`.${banner}`).addEventListener('click', handleBanner);
 

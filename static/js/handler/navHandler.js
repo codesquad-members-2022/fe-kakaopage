@@ -1,4 +1,4 @@
-import { select, initElement, updateDocumentTitle } from '../util.js';
+import { select, initElement, updateDocumentTitle } from '../utility/util.js';
 
 import { renderer } from '../view/renderer.js';
 import { categoryLoader } from '../view/categoryLoader.js';

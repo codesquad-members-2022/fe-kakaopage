@@ -1,4 +1,4 @@
-import { select } from '../util.js';
+import { select } from '../utility/util.js';
 
 import { addHandlerOnGnb, addHandlerOnSnb } from '../handler/navHandler.js';
 import { addHandlerOnBanner } from '../handler/bannerHandler.js';
