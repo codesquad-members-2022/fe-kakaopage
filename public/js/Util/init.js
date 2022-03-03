@@ -1,4 +1,8 @@
-import { onclickBannerNav, onclickBannerController } from "../view/recView.js";
+import {
+  onclickBannerNav,
+  onclickBannerController,
+  setBannerDisplayByDefault,
+} from "../view/bannerView.js";
 import { onclickDowNav } from "../eventJS/mainEvent.js";
 import { domUtil } from "./util.js";
 
@@ -16,12 +20,6 @@ const initMainPage = () => {
   );
 
   setBannerDisplayByDefault();
-};
-
-const setBannerDisplayByDefault = () => {
-  domUtil.$(".recommand__image--wrapper").style.transform = `translate(-${
-    domUtil.$(".recommand__image--wrapper").offsetWidth
-  }px)`;
 };
 
 export { initMainPage };

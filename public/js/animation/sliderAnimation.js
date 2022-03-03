@@ -57,7 +57,8 @@ const bannerImgLoop2end = (
     img.style.transform = `translate(${pageCount * imgWidth}px)`;
   }, TRANSITION_TIME);
 };
+
 // const imageloop = setInterval(() => {
 //   onclickNext();
 // }, 2000); // 이부분 2초를 어떻게 표현할 수 있을까?
-export { bannerSlide };
+export { bannerSlide, setBannerDisplayByDefault };

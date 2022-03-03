@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const data = require("./test.json");
+const data = require("./fkeDB.json");
 
 const { genre, bannerUrl, week, toonItemData, toggleLeft } = data;
 app.use(express.static(__dirname + "/public"));
