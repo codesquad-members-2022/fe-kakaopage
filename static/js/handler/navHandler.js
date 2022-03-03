@@ -12,14 +12,13 @@ const handleNav = (event) => {
   const nav = event.currentTarget.dataset.navtype;
   const category = event.target.dataset.category;
 
-  updateNavStyle(nav, category);
-
   nav === 'gnb' && loadMain(category);
   nav === 'snb' && loadCategoryContent(getCurrentCategory('gnb'), category);
 };
 
 const loadMain = (globalCategory) => {
   select('.snb') && removeElement('.snb');
+  updateNavStyle('gnb', globalCategory);
 
   getData('data', globalCategory).then((response) => {
     const DATA = response;
