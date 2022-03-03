@@ -1,11 +1,13 @@
 import * as common from "./common.js";
-import * as data from "./data.js";
+
+const promotionWebtoonList = await common.fetchURL("promotionWebtoonList");
+const weeklyWebtoonList = await common.fetchURL("weeklyWebtoonList");
 
 let HTMLTemplate = "";
-const promotionWebtoonSection = common.createPromotionWebtoonSection(data.weeklyPromotionWebtoonList);
+const promotionWebtoonSection = common.createPromotionWebtoonSection(promotionWebtoonList["weeklyPublication"]);
 const webtoonCategorySection = createWebtoonCategorySection();
 const weekday = common.calculateWeekday();
-const webtoonBoardSection = common.createWebtoonBoardSection(data.weeklyWebtoonList[weekday]);
+const webtoonBoardSection = common.createWebtoonBoardSection(weeklyWebtoonList[weekday]);
 HTMLTemplate += promotionWebtoonSection + webtoonCategorySection + webtoonBoardSection;
 export const weeklyPublicationTemplate = HTMLTemplate;
 

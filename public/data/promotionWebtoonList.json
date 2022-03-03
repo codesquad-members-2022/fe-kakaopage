@@ -1,0 +1,40 @@
+{
+  "weeklyPublication": [
+    {
+      "title": "샬롯에게는 다섯 명의 제자가 있다",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=cD5tz/hzmU3TSrXT/k6KBgUVNlUEHTNxScnTjgK",
+      "readCount": "108.7만명",
+      "phrase": "대마법사 샬롯의 제자들이 이상하다?!"
+    },
+    {
+      "title": "업데이터",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bmTDEe/hzmU1Iwssx/dsR8jkXMn1ydsJhHXGaHkK",
+      "readCount": "35만명",
+      "phrase": "영구 삭제 NPC, 관리자로 부활"
+    }, {
+      "title": "나쁜 색기",
+      "url" :"https://dn-img-page.kakao.com/download/resource?kid=l3zIk/hzp2fbNXZG/zAI4KS8LFj9epYxYu9bxf1",
+      "readCount": "7만명",
+      "phrase": "우리 이렇게 엮여도 괜찮은 거야?"
+    }
+  ],
+  "home": [
+    {
+      "title": "샬롯에게는 다섯 명의 제자가 있다",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=cD5tz/hzmU3TSrXT/k6KBgUVNlUEHTNxScnTjgK",
+      "readCount": "108.7만명",
+      "phrase": "대마법사 샬롯의 제자들이 이상하다?!"
+    },
+    {
+      "title": "업데이터",
+      "url": "https://dn-img-page.kakao.com/download/resource?kid=bmTDEe/hzmU1Iwssx/dsR8jkXMn1ydsJhHXGaHkK",
+      "readCount": "35만명",
+      "phrase": "영구 삭제 NPC, 관리자로 부활"
+    }, {
+      "title": "나쁜 색기",
+      "url" :"https://dn-img-page.kakao.com/download/resource?kid=l3zIk/hzp2fbNXZG/zAI4KS8LFj9epYxYu9bxf1",
+      "readCount": "7만명",
+      "phrase": "우리 이렇게 엮여도 괜찮은 거야?"
+    }
+  ]
+}

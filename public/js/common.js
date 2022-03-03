@@ -90,3 +90,17 @@ export function calculateWeekday() {
   const weekday = weekdayList[weekdayIndex];
   return weekday;
 }
+
+export function fetchURL(dataName) {
+  const DATA_URL = `http://localhost:3000/${dataName}`;
+  return fetch(DATA_URL)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
