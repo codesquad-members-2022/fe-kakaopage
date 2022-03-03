@@ -65,8 +65,8 @@ WebtoonGenre.prototype.setup = async function () {
         },
       },
       {
-        elementId: "wtBigCardList",
-        className: "bigCardList",
+        elementId: "wtNewWorkTop",
+        className: "newWorkTop",
         state: {
           title: "기대신작 TOP",
           filteredBy: {

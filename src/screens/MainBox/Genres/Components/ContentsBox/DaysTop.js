@@ -49,7 +49,7 @@ DaysTop.prototype.mount = function () {
     $target: $contentsCard,
     state: {
       webtoons:
-        filteredWebtoons.length === MAXIMUM_CARD_COUNT
+        filteredWebtoons.length > MAXIMUM_CARD_COUNT
           ? filteredWebtoons.slice(0, MAXIMUM_CARD_COUNT)
           : filteredWebtoons,
     },

@@ -21,7 +21,7 @@ GenreTop.prototype.mount = function () {
     $target: $contentsCard,
     state: {
       webtoons:
-        webtoons.length === MAXIMUM_CARD_COUNT
+        webtoons.length > MAXIMUM_CARD_COUNT
           ? webtoons.slice(0, MAXIMUM_CARD_COUNT)
           : webtoons,
     },

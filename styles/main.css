@@ -323,10 +323,11 @@
   font-size: 12px;
 }
 
-.contentsBigCard {
+.contents__bigCard {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .bigCard {
@@ -341,10 +342,6 @@
 .info-category,
 .info-users {
   font-size: 12px;
-}
-
-.contentsBigCard {
-  height: 100%;
 }
 
 .contentRow {

@@ -19,7 +19,7 @@ DateTop.prototype.mount = function () {
   const MAXIMUM_CARD_COUNT = 3;
 
   const sliceWebtoons =
-    webtoons.length === MAXIMUM_CARD_COUNT
+    webtoons.length > MAXIMUM_CARD_COUNT
       ? webtoons.slice(0, MAXIMUM_CARD_COUNT)
       : webtoons;
 
