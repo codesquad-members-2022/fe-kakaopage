@@ -33,12 +33,16 @@ function showDayWebtoon(){
 function getWebtoonData(event){
     fetch('http://localhost:3000/webtoonData/data')
     .then(response => response.json())
-    .then(data => document.querySelector('.webtoon_list ul').innerHTML = data.filter((e) => event.target.dataset.value === e.day)
-    .map(e => webtoonCard(e))
-    .reduce((acc,cur)=>acc+cur,""));
+    .then(data => getImgData(data,event))
 };
-// ==================slide
 
+function getImgData(data,event){
+    document.querySelector('.webtoon_list ul').innerHTML = data.filter((e) => event.target.dataset.value === e.day)
+    .map(e => webtoonCard(e))
+    .reduce((acc,cur)=>acc+cur,"");
+}
+
+// ==================slide
 function showSlides(){
     const slides = document.querySelectorAll('.slideshow_slide');
     const btnLeft = document.querySelector('.slider_btn_left');
