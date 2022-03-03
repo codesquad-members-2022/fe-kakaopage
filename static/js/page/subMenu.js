@@ -1,7 +1,7 @@
-import { $ } from "./utils/dom.js";
+import { $ } from "../utils/dom.js";
 
-import { toggleClass } from "./tools.js";
-import * as datas from "./data/datas.js";
+import { toggleClass } from "../tools/tools.js";
+import * as datas from "../data/datas.js";
 
 import { render, renderHome, renderWeekday } from "./renderer.js";
 import { renderCarousel } from "./carousel.js";

@@ -1,4 +1,4 @@
-import { $ } from "./utils/dom.js";
+import { $ } from "../utils/dom.js";
 
 const toggleClass = (curEl, className) => {
     const parentNode = curEl.parentNode;

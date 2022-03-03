@@ -1,5 +1,5 @@
-import { $ } from "./utils/dom.js";
-import { CaroulselItems } from "./views/views.js";
+import { $ } from "../utils/dom.js";
+import { CaroulselItems } from "../views/views.js";
 
 const setCarouselPager = (carouselImgIdx = 1) => {
     const carouselItemWrapper = $(".carousel-item-wrap");

@@ -1,10 +1,10 @@
-import { preventHyperLinks } from "./tools.js";
+import { preventHyperLinks } from "./tools/tools.js";
 
-import { bindSubMenuEvent } from "./subMenu.js";
-import { bindCaroulselEvent } from "./carousel.js";
-import { bindWeekdayMenuEvent } from "./weekday.js";
+import { bindSubMenuEvent } from "./page/subMenu.js";
+import { bindCaroulselEvent } from "./page/carousel.js";
+import { bindWeekdayMenuEvent } from "./page/weekday.js";
 
-import { renderHome } from "./renderer.js";
+import { renderHome } from "./page/renderer.js";
 
 const bindEventListeners = () => {
     bindSubMenuEvent();

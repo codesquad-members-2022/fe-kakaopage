@@ -1,5 +1,5 @@
-import { $ } from "./utils/dom.js";
-import { toggleWeekDayMenu } from "./tools.js";
+import { $ } from "../utils/dom.js";
+import { toggleWeekDayMenu } from "../tools/tools.js";
 import { renderWeekday } from "./renderer.js";
 
 export const bindWeekdayMenuEvent = () => {

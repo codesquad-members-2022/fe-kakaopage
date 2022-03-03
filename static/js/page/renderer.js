@@ -1,7 +1,7 @@
-import { $ } from "./utils/dom.js";
-import { getJSON } from "./tools.js";
+import { $ } from "../utils/dom.js";
+import { getJSON } from "../tools/tools.js";
 
-import * as datas from "./data/datas.js";
+import * as datas from "../data/datas.js";
 
 import { renderCarousel } from "./carousel.js";
 import {
@@ -10,7 +10,7 @@ import {
     GenreBest,
     Weekday,
     SubMenu,
-} from "./views/views.js";
+} from "../views/views.js";
 
 const render = (html) => {
     $("#app").innerHTML = html;
