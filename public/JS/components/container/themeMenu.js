@@ -1,14 +1,4 @@
-import {getData} from '../utility.js'
-
-const url = 'http://localhost:3000/theme-Menu';
-
-function renderThemeMenu(tab) {
-  return getData(url)
-    .then(json => json[tab])
-    .then(data => themeMenuTemplete(data))
-}
-
-function themeMenuTemplete(data) {
+export default function makeThemeMenu(data) {
   return `
     <div class="theme">
       <ul class="theme__list">
@@ -35,5 +25,3 @@ function makeThemeItem(data, checkHighlight) {
     </li>
   `
 }
-
-export {renderThemeMenu}

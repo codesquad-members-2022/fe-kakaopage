@@ -1,15 +1,6 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {getData} from '../../utility.js'
 
-const url = 'http://localhost:3000/main-banner';
-
-function renderMainBanner(tab) {
-  return getData(url)
-    .then(json => json[tab])
-    .then(data => makeMainBanner(data));
-}
-
-function makeMainBanner(data) {
+export default function makeMainBanner(data) {
   const mainBannerItems = data.reduce((acc, cur, index) => acc + makeMainBannerItem(cur, index), '');
   
   return `
@@ -51,5 +42,3 @@ function makeMainBannerCounter(data) {
     </div>
   `
 }
-
-export {renderMainBanner} 

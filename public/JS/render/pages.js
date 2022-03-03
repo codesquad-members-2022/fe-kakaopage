@@ -1,14 +1,10 @@
 // ============== render 관련 모듈 ==============
-import {renderMainBanner} from './components/banner/bannerMain.js'
-import {renderThemeMenu} from './components/themeMenu.js'
-import {renderPromotionBanner} from './components/banner/bannerPromotion.js'
-import {renderContainer} from './components/container.js'
-import {renderMoveApp} from './components/moveApp.js'
-import {renderSelectDayDaily} from './components/selectDay/selectDayDaily.js'
-// ============== 각 탭의 컨테이너의 정보 ==============
-import {homeContainerInfo} from './containerInfo/home.js'
+import {renderMainBanner, renderPromotionBanner, renderThemeMenu, renderContainer, renderSelectDayDaily} from './components.js'
+import {renderMoveApp} from '../components/moveApp.js'
+// // ============== 각 탭의 컨테이너의 정보 ==============
+import {homeContainerInfo} from '../containerInfo/home.js'
 // ============== 유틸리티 모듈 ==============
-import {$} from './utility.js';
+import {$} from '../utility.js';
 
 function renderHome(tab) {
   const containerInfo = homeContainerInfo;
@@ -45,6 +41,5 @@ function renderBoy(tab) {
   ])
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
-
 
 export {renderHome, renderDaily, renderWebtoon, renderBoy}

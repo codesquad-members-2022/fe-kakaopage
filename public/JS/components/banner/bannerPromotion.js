@@ -1,15 +1,6 @@
 import {makeBannerBtns} from './bannerBtn.js';
-import {getData} from '../../utility.js'
 
-const url = 'http://localhost:3000/promotion-banner';
-
-function renderPromotionBanner(tab) {
-  return getData(url)
-    .then(json => json[tab])
-    .then(data => makePromotionBanner(data));
-}
-
-function makePromotionBanner(data) {
+export default function makePromotionBanner(data) {
   return  `
     <div class="promotion__banner">
       ${makeBannerBtns()}
@@ -38,5 +29,3 @@ function makePromotionItem(data, focus) {
     </li>
   `
 }
-
-export {renderPromotionBanner}
