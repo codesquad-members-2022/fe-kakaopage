@@ -34,6 +34,9 @@ const setMainContents = ({
     })
     .then(() => {
       stopFlag.setFalse();
+    })
+    .catch(() => {
+      stopFlag.setFalse();
     });
 };
 
