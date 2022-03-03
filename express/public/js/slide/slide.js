@@ -1,37 +1,39 @@
-import { slideData } from '../data/slide-data/slide-data.js';
+import { getJson } from '../util.js';
 import { contents } from '../html-template.js';
 
 const $ = (selected) => document.querySelector(selected);
 let CHILD_NUMBER = 0;
 let intervalID;
 
-export default function init() {
-  addHTML();
-  const container = $('.image_container');
-  const totalSlide = container.childElementCount;
-  addCount(totalSlide);
-  addEvent(container, totalSlide);
-
-  startSlide(-1, container, totalSlide, 3000);
+export default function slideInit() {
+  getJson('slide-data/slide-data.json').then((data) => {
+    addImage(data);
+    startSlide();
+  });
 }
 
-function addHTML() {
+function addImage(data) {
   let mainImageArr = new Set();
   const totalImageSize = 3;
-
   while (mainImageArr.size !== totalImageSize) {
-    mainImageArr.add(slideData[Math.floor(Math.random() * slideData.length)]);
+    mainImageArr.add(data[Math.floor(Math.random() * data.length)]);
   }
-
   let template = [...mainImageArr].reduce(
     (acc, curList) => acc + contents.makeImageSection(curList),
     ''
   );
-
   $('.image_container').innerHTML = template;
 }
 
-function startSlide(direction, container, totalSlide, SECOND) {
+function startSlide() {
+  const container = $('.image_container');
+  const totalSlide = container.childElementCount;
+  addEvent(container, totalSlide);
+  addCount(totalSlide);
+  startInterval(-1, container, totalSlide, 3000);
+}
+
+function startInterval(direction, container, totalSlide, SECOND) {
   intervalID = setInterval(() => {
     translateContainer(direction, container, totalSlide);
   }, SECOND);
@@ -51,7 +53,7 @@ function addEvent(container, totalSlide) {
 
 function intervalInit(container, totalSlide) {
   clearInterval(intervalID);
-  startSlide(-1, container, totalSlide, 3000);
+  startInterval(-1, container, totalSlide, 3000);
 }
 
 function translateContainer(direction, container, totalSlide) {
@@ -83,6 +85,7 @@ function addCount(totalSlide) {
   let selectedChild = $(`.image_container > li:nth-child(${CHILD_NUMBER})`);
   let nextCount = getIndex(selectedChild);
   $('.num_total').innerHTML = `${nextCount} / ${totalSlide}`;
+  return;
 }
 
 function getIndex(ele) {
