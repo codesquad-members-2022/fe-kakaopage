@@ -213,20 +213,6 @@ body{
     background:var(--primary-color);
 }
   
-.slider_btn {
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    border: none;
-    background: var(--background-color);
-    color: #333;
-    border-radius: 50%;
-    width: 40px;
-    height:40px;
-    font-size: 18px;
-    cursor: pointer;
-}
-  
 .slider_btn_left {
     left: 6%;
     transform: translate(-50%, -50%);
@@ -236,6 +222,53 @@ body{
     right: 6%;
     transform: translate(50%, -50%);
 }
+/* ===============slide2=============== */
+.main_slide{
+    position: relative;
+    width: 720px;
+    height: 410px;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display:flex;
+  }
+  
+.slides.activeSlide {
+    transition: 0.5s ease-out;
+  }
+  
+.slides div {
+    width: 720px;
+    height: 410px;
+    background-color: wheat;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+.info img{
+    width:100%;
+  }
+  
+.slider_btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border:none;
+    background: rgba( 255, 255, 255, 0.5 );
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
 
 /* ===============tab=============== */
 .tab{
