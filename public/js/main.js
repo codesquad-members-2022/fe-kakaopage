@@ -6,7 +6,7 @@ let previousSubCategory = document.createElement("div");
 let previousWeekdayCategory = document.createElement("div");
 let webtoonSlideIndex = 0;
 let isMovable = true;
-let reservedAutoSlide = null;
+let isAutoSlideScheduled = null;
 
 init();
 
@@ -74,10 +74,10 @@ function moveWebtoonSlide() {
 
 function executeAutoSlide() {
   const delayTime = 3000;
-  if (!isMovable || reservedAutoSlide) {
+  if (!isMovable || isAutoSlideScheduled) {
     return;
   }
-  reservedAutoSlide = setTimeout(() => {
+  isAutoSlideScheduled = setTimeout(() => {
     autoWebtoonSlide();
   }, delayTime);
 }
@@ -85,7 +85,7 @@ function executeAutoSlide() {
 function autoWebtoonSlide() {
   webtoonSlideIndex++;
   moveWebtoonSlide();
-  reservedAutoSlide = null;
+  isAutoSlideScheduled = null;
   executeAutoSlide();
 }
 
