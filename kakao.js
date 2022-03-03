@@ -62,6 +62,14 @@ function showSlides(){
             slides.prepend(cloneSlide);
         }
     }
+
+    prevBtn.addEventListener("click", () => {
+        moveSlide(currentSlide - 1);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        moveSlide(currentSlide + 1);
+    });
 };
 
 showSlides();
