@@ -1,6 +1,9 @@
 {
   "home": {
-    "subCategory": null
+    "subCategory": null,
+    "홈": {
+      "gridMenu": [["오늘 신작", "5"], ["사내맞선 DAY"], ["설렘 충전소"]]
+    }
   },
   "webtoon": {
     "subCategory": ["홈", "요일연재", "소년", "드라마", "로맨스", "로판", "액션무협", "BL"],
