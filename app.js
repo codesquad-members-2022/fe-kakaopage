@@ -6,11 +6,11 @@ const data = require("./fkeDB.json");
 const { genre, bannerUrl, week, toonItemData, toggleLeft } = data;
 app.use(express.static(__dirname + "/public"));
 
-app.get("/subCategory/home", (req, res, next) => {
+app.get("/main/home", (req, res, next) => {
   res.json(genre);
 });
 
-app.get("/subCategory/week", (req, res, next) => {
+app.get("/main/week", (req, res, next) => {
   res.json({ week, toonItemData, toggleLeft });
 });
 

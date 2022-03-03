@@ -6,6 +6,7 @@ import {
   getWeekNavHTML,
   getToggleNavHTML,
 } from "../component/mainComponent.js";
+import { WHOLE_DATA } from "../../index.js";
 
 const renderToonbyDay = (fetchedData) => {
   domUtil.$(".main__cartoonZone").innerHTML = fetchedData.reduce(
@@ -14,28 +15,29 @@ const renderToonbyDay = (fetchedData) => {
   );
 };
 
-const renderMainSecHome = (fetchedData) => {
-  const FilterdByGenre = getToonGenre(fetchedData);
-  domUtil.$(".main").innerHTML =
-    getToggleNavHTML(toggleinfo) +
-    `<ul class="main__cartoonZone">
-    ${FilterdByGenre.reduce((data) => getImgCardHtml(data))}</ul>
-    `;
+const renderMainSecHome = (genre) => {
+  const FilterdByGenre = getToonGenre(genre);
+  domUtil.$(".main").innerHTML = FilterdByGenre.reduce(
+    (mainHtml, currGenre, idx) => {
+      mainHtml +=
+        getToggleNavHTML({ left: genre[idx], right: "더보기" }) +
+        getImgCardHtml(currGenre);
+
+      return mainHtml;
+    }
+  );
 };
 
-const renderMainSecWoD = (fetchedData) => {
+const renderMainSecWoD = ({ week, toggleLeft, toonItemData }) => {
   domUtil.$(".main").innerHTML =
     getWeekNavHTML(week) +
-    getToggleNavHTML(toggleinfo) +
-    `<ul class="main__cartoonZone">
-    ${getImgCardHtml(fetchedData)}
-    </ul>
-    `;
+    getToggleNavHTML(toggleLeft) +
+    getImgCardHtml(toonItemData);
 
   domUtil.eventsAdder(".main__nav__dow", "click", onclickDowNav); // 이부분은 고칠려면 html을 고쳐야해서 시간상 패스
 };
 
 const getToonGenre = (toonGenre) =>
-  data.toonData.filter((toonInfo) => toonInfo.genre === toonGenre);
+  WHOLE_DATA.toonItemData.filter((toonInfo) => toonInfo.genre === toonGenre);
 
 export { renderToonbyDay, renderMainSecHome, renderMainSecWoD };
