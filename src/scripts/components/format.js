@@ -1,6 +1,6 @@
 import { createBannerAd, createBannerMain, createContentForms, createContentFormsBigger, createHorizontalContents, createRankingContents, createRankingContentsWithoutNum } from "./loop.js"
-import { dummy } from "./sources.js"
-import { pickFromArr } from "./util.js"
+import { dummy } from "../../data/sources.js"
+import { pickFromArr } from "../utils/util.js"
 
 export const createFormatBannerMain = (imgArr) => {
     const formatBannerMain = `

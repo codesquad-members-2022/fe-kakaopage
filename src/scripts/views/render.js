@@ -1,8 +1,8 @@
-import { setSlideBanner } from "./banner.js";
-import { genreNavEventHandler, headNavEventHandler, addSelected } from "./event.js";
-import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "./format.js";
-import { dummy } from "./sources.js";
-import { addClickEventToElement, addToContents, combineFormats } from "./util.js";
+import { setSlideBanner } from "../components/banner.js";
+import { genreNavEventHandler, headNavEventHandler, addSelected } from "../event.js";
+import { createFormatBannerMain, createFormatContentsBoxBigger, createFormatTotal, createFormatHotizontalList, createFormatSummaryA, createFormatSummaryB, createFormatBannerAd, createFormatDailyTop, createFormatImgWithLine, createFormatContentsBox, createFormatRanking, createFormatBannerSub, createFormatDailyWebtoon, createFormatHorizontalContents, createFormatNotYet } from "../components/format.js";
+import { dummy } from "../../data/sources.js";
+import { addClickEventToElement, addToContents, combineFormats } from "../utils/util.js";
 
 export function initPage(){
     const contents = document.getElementById('contents');

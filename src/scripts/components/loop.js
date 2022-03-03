@@ -1,5 +1,5 @@
-import { dummy } from "./sources.js";
-import { pickFromArr, randomView } from "./util.js";
+import { dummy } from "../../data/sources.js";
+import { pickFromArr, randomView } from "../utils/util.js";
 
 
 // 반복되는 컴포넌트들을 생성하는 함수들

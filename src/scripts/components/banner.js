@@ -1,4 +1,4 @@
-import { addClickEventToElement } from "./util.js";
+import { addClickEventToElement } from "../utils/util.js";
 
 let xPos = 0;
 

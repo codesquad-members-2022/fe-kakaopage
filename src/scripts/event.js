@@ -1,5 +1,5 @@
-import { createContentForms } from "./loop.js";
-import { genreFunction, headerFunction } from "./render.js";
+import { createContentForms } from "./components/loop.js";
+import { genreFunction, headerFunction } from "./views/render.js";
 
 export function selectedInit(target){
     target.parentNode.childNodes.forEach(el => {
