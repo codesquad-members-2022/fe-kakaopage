@@ -1,5 +1,4 @@
-import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
-// import { data } from './webtoon-datas.js'
+import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-parsing.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
