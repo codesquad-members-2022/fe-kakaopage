@@ -8,7 +8,7 @@ import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { createDailyContents } from "./components/daily-contents.js";
 
-const port = require("../express.js");
+const port = process.env.PORT || 3000;
 
 const fillWithData = (req) => {
   fetch(`http://localhost:${port}/${req.path}`)

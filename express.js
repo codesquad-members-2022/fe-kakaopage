@@ -57,5 +57,3 @@ app.get("/daily-contents/webtoons/days", (req, res) => {
 app.listen(port, () => {
   console.log(`server is listening at localhost:${port}`);
 });
-
-module.exports = port;
