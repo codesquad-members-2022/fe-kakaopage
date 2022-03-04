@@ -1,165 +1,165 @@
 const datas = {
-  weekdayContents: [
-    [
-      "월",
-      `
-      <div class="toonContent">
-          <div class="toonContentTop">
-              <img src="/images/궁귀검신.png" alt="" class="contentImage">
-          </div>
-          <div class="contentLank heightCenterSort ">
-              <div class="contentLankInfo">1위</div>
-              <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-          </div>
-          <div class="contentTitle">웹툰 제목</div>
-          <div class="contentInfo">
-              <img src="/images/새 작품.svg" alt="" class="contentStatus">
-              <img src="/images/icon_read_count.png" alt="" class="contentCount">
-              <span class="contentFollow">28.8만명</span>
-          </div>
-      </div>`,
-    ],
-    [
-      "화",
-      `
-        <div class="toonContent">
-        <div class="toonContentTop">
-          <img src="/images/도굴왕.png" alt="" class="contentImage">
-        </div>
-        <div class="contentLank heightCenterSort ">
-            <div class="contentLankInfo">1위</div>
-            <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-        </div>
-        <div class="contentTitle">웹툰 제목</div>
-        <div class="contentInfo">
-            <img src="/images/새 작품.svg" alt="" class="contentStatus">
-            <img src="/images/icon_read_count.png" alt="" class="contentCount">
-            <span class="contentFollow">28.8만명</span>
-        </div>
-      </div>
-        `,
-    ],
-    [
-      "수",
-      `
-      <div class="toonContent">
-      <div class="toonContentTop">
-          <img src="/images/던전 리셋.png" alt="" class="contentImage">
-      </div>
-      <div class="contentLank heightCenterSort ">
-          <div class="contentLankInfo">1위</div>
-          <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-      </div>
-      <div class="contentTitle">웹툰 제목</div>
-      <div class="contentInfo">
-          <img src="/images/새 작품.svg" alt="" class="contentStatus">
-          <img src="/images/icon_read_count.png" alt="" class="contentCount">
-          <span class="contentFollow">28.8만명</span>
-      </div>
-      </div>
-      `,
-    ],
-    [
-      `목`,
-      `
-          <div class="toonContent">
-          <div class="toonContentTop">
-              <img src="/images/용사의 전 여친입니다.png" alt="" class="contentImage">
-          </div>
-          <div class="contentLank heightCenterSort ">
-              <div class="contentLankInfo">1위</div>
-              <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-          </div>
-          <div class="contentTitle">웹툰 제목</div>
-          <div class="contentInfo">
-              <img src="/images/새 작품.svg" alt="" class="contentStatus">
-              <img src="/images/icon_read_count.png" alt="" class="contentCount">
-              <span class="contentFollow">28.8만명</span>
-          </div>
-      </div>  
-            `,
-    ],
-    [
-      "금",
-      `
-            <div class="toonContent">
-            <div class="toonContentTop">
-                <img src="/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
-            </div>
-            <div class="contentLank heightCenterSort ">
-                <div class="contentLankInfo">1위</div>
-                <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-            </div>
-            <div class="contentTitle">웹툰 제목</div>
-            <div class="contentInfo">
-                <img src="/images/새 작품.svg" alt="" class="contentStatus">
-                <img src="/images/icon_read_count.png" alt="" class="contentCount">
-                <span class="contentFollow">28.8만명</span>
-            </div>
-        </div>
-            `,
-    ],
-    [
-      "토",
-      `
-            <div class="toonContent">
-            <div class="toonContentTop">
-                <img src="/images/다정한 그대를 지키는 방법.png" alt="" class="contentImage">
-            </div>
-            <div class="contentLank heightCenterSort ">
-                <div class="contentLankInfo">1위</div>
-                <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-            </div>
-            <div class="contentTitle">웹툰 제목</div>
-            <div class="contentInfo">
-                <img src="/images/새 작품.svg" alt="" class="contentStatus">
-                <img src="/images/icon_read_count.png" alt="" class="contentCount">
-                <span class="contentFollow">28.8만명</span>
-            </div>
-        </div>  
-            `,
-    ],
-    [
-      "일",
-      `
-        <div class="toonContent">
-        <div class="toonContentTop">
-            <img src="/images/흑막을 버리는 데 실패했다.png" alt="" class="contentImage">
-        </div>
-        <div class="contentLank heightCenterSort ">
-            <div class="contentLankInfo">1위</div>
-            <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-        </div>
-        <div class="contentTitle">웹툰 제목</div>
-        <div class="contentInfo">
-            <img src="/images/새 작품.svg" alt="" class="contentStatus">
-            <img src="/images/icon_read_count.png" alt="" class="contentCount">
-            <span class="contentFollow">28.8만명</span>
-        </div>
-      </div>
-        `,
-    ],
-    [
-      "완결",
-      `
-            <div class="toonContent">
-            <div class="toonContentTop">
-                <img src="/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
-            </div>
-            <div class="contentLank heightCenterSort ">
-                <div class="contentLankInfo">1위</div>
-                <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
-            </div>
-            <div class="contentTitle">웹툰 제목</div>
-            <div class="contentInfo">
-                <img src="/images/새 작품.svg" alt="" class="contentStatus">
-                <img src="/images/icon_read_count.png" alt="" class="contentCount">
-                <span class="contentFollow">28.8만명</span>
-            </div>
-        </div>
-            `,
-    ],
-  ],
+  //   weekdayContents: [
+  //     [
+  //       "월",
+  //       `
+  //       <div class="toonContent">
+  //           <div class="toonContentTop">
+  //               <img src="/images/궁귀검신.png" alt="" class="contentImage">
+  //           </div>
+  //           <div class="contentLank heightCenterSort ">
+  //               <div class="contentLankInfo">1위</div>
+  //               <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //           </div>
+  //           <div class="contentTitle">웹툰 제목</div>
+  //           <div class="contentInfo">
+  //               <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //               <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //               <span class="contentFollow">28.8만명</span>
+  //           </div>
+  //       </div>`,
+  //     ],
+  //     [
+  //       "화",
+  //       `
+  //         <div class="toonContent">
+  //         <div class="toonContentTop">
+  //           <img src="/images/도굴왕.png" alt="" class="contentImage">
+  //         </div>
+  //         <div class="contentLank heightCenterSort ">
+  //             <div class="contentLankInfo">1위</div>
+  //             <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //         </div>
+  //         <div class="contentTitle">웹툰 제목</div>
+  //         <div class="contentInfo">
+  //             <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //             <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //             <span class="contentFollow">28.8만명</span>
+  //         </div>
+  //       </div>
+  //         `,
+  //     ],
+  //     [
+  //       "수",
+  //       `
+  //       <div class="toonContent">
+  //       <div class="toonContentTop">
+  //           <img src="/images/던전 리셋.png" alt="" class="contentImage">
+  //       </div>
+  //       <div class="contentLank heightCenterSort ">
+  //           <div class="contentLankInfo">1위</div>
+  //           <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //       </div>
+  //       <div class="contentTitle">웹툰 제목</div>
+  //       <div class="contentInfo">
+  //           <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //           <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //           <span class="contentFollow">28.8만명</span>
+  //       </div>
+  //       </div>
+  //       `,
+  //     ],
+  //     [
+  //       `목`,
+  //       `
+  //           <div class="toonContent">
+  //           <div class="toonContentTop">
+  //               <img src="/images/용사의 전 여친입니다.png" alt="" class="contentImage">
+  //           </div>
+  //           <div class="contentLank heightCenterSort ">
+  //               <div class="contentLankInfo">1위</div>
+  //               <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //           </div>
+  //           <div class="contentTitle">웹툰 제목</div>
+  //           <div class="contentInfo">
+  //               <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //               <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //               <span class="contentFollow">28.8만명</span>
+  //           </div>
+  //       </div>
+  //             `,
+  //     ],
+  //     [
+  //       "금",
+  //       `
+  //             <div class="toonContent">
+  //             <div class="toonContentTop">
+  //                 <img src="/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
+  //             </div>
+  //             <div class="contentLank heightCenterSort ">
+  //                 <div class="contentLankInfo">1위</div>
+  //                 <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //             </div>
+  //             <div class="contentTitle">웹툰 제목</div>
+  //             <div class="contentInfo">
+  //                 <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //                 <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //                 <span class="contentFollow">28.8만명</span>
+  //             </div>
+  //         </div>
+  //             `,
+  //     ],
+  //     [
+  //       "토",
+  //       `
+  //             <div class="toonContent">
+  //             <div class="toonContentTop">
+  //                 <img src="/images/다정한 그대를 지키는 방법.png" alt="" class="contentImage">
+  //             </div>
+  //             <div class="contentLank heightCenterSort ">
+  //                 <div class="contentLankInfo">1위</div>
+  //                 <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //             </div>
+  //             <div class="contentTitle">웹툰 제목</div>
+  //             <div class="contentInfo">
+  //                 <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //                 <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //                 <span class="contentFollow">28.8만명</span>
+  //             </div>
+  //         </div>
+  //             `,
+  //     ],
+  //     [
+  //       "일",
+  //       `
+  //         <div class="toonContent">
+  //         <div class="toonContentTop">
+  //             <img src="/images/흑막을 버리는 데 실패했다.png" alt="" class="contentImage">
+  //         </div>
+  //         <div class="contentLank heightCenterSort ">
+  //             <div class="contentLankInfo">1위</div>
+  //             <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //         </div>
+  //         <div class="contentTitle">웹툰 제목</div>
+  //         <div class="contentInfo">
+  //             <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //             <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //             <span class="contentFollow">28.8만명</span>
+  //         </div>
+  //       </div>
+  //         `,
+  //     ],
+  //     [
+  //       "완결",
+  //       `
+  //             <div class="toonContent">
+  //             <div class="toonContentTop">
+  //                 <img src="/images/시한부라서 흑막의 며느리가 되었는데.png" alt="" class="contentImage">
+  //             </div>
+  //             <div class="contentLank heightCenterSort ">
+  //                 <div class="contentLankInfo">1위</div>
+  //                 <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
+  //             </div>
+  //             <div class="contentTitle">웹툰 제목</div>
+  //             <div class="contentInfo">
+  //                 <img src="/images/새 작품.svg" alt="" class="contentStatus">
+  //                 <img src="/images/icon_read_count.png" alt="" class="contentCount">
+  //                 <span class="contentFollow">28.8만명</span>
+  //             </div>
+  //         </div>
+  //             `,
+  //     ],
+  //   ],
   sectionContents: [
     [
       "홈",

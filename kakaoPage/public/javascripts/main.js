@@ -44,7 +44,7 @@ function init(datas) {
             <img src="${webtoon.imgsrc}" alt="" class="contentImage">
         </div>
         <div class="contentLank heightCenterSort ">
-            <div class="contentLankInfo">1위</div>
+            <div class="contentLankInfo">${webtoon.rating}</div>
             <img src="/images/bmbadge_waitfree.svg" class="contentClock"></img>
         </div>
         <div class="contentTitle">${webtoon.title}</div>
