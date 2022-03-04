@@ -9,5 +9,5 @@ app.use(express.static("static"));
 app.use("/", router);
 
 app.listen(process.env.PORT || port, () => {
-    console.log(`App listening on port ${port}`);
+    console.log(`App listening on port ${process.env.PORT || port}`);
 });

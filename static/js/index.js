@@ -1,24 +1,18 @@
-import { $ } from "./utils/dom.js";
-import { toggleWeekDayMenu, preventDefaults } from "./tools.js";
-import { bindSubMenuEvent } from "./submenu.js";
-import { bindCaroulselEvent } from "./carousel.js";
-import { renderHome, renderWeekday } from "./renderer.js";
+import { preventHyperLinks } from "./tools/preventHyperLinks.js";
+
+import { bindSubMenuEvent } from "./page/sub-menu/bindEvent.js";
+import { bindCaroulselEvent } from "./page/carousel/carousel.js";
+import { bindWeekdayMenuEvent } from "./page/week-day/bindEvent.js";
+import { renderHome } from "./page/home/render.js";
 
 const bindEventListeners = () => {
     bindSubMenuEvent();
     bindCaroulselEvent();
-
-    $("#app").addEventListener("click", ({ target }) => {
-        if ($(".week-day-menu")?.contains(target)) {
-            const today = target.innerText;
-            toggleWeekDayMenu(target);
-            renderWeekday(today);
-        }
-    });
+    bindWeekdayMenuEvent();
 };
 
 const init = () => {
-    preventDefaults();
+    preventHyperLinks();
     renderHome();
     bindEventListeners();
 };

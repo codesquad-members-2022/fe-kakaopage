@@ -18,7 +18,7 @@ export default class extends Page {
                     : "";
 
                 return `
-            <a href="" class="group-flex flex-center" data-link="">
+            <a href="" class="group-flex flex-center" data-link="true">
             <span>${el.title}</span>
             ${badge}
             </a>

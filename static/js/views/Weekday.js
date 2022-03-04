@@ -13,7 +13,7 @@ export default class extends Page {
             .map((menuName) => {
                 return `
             <li class="${menuName === this.today ? "active" : ""}">
-            <a href="" data-link="">${menuName}</a>
+            <a href="" data-link="true">${menuName}</a>
             </li>`;
             })
             .join("");
