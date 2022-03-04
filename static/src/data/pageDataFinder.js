@@ -1,5 +1,5 @@
 export const getPageData = page => {
-  const DATA_URL = '/src/data/';
+  const DATA_URL = '/src/data/json/';
   const dataUrl = {
     홈: `${DATA_URL}home.json`,
     웹툰: `${DATA_URL}webtoon.json`,
@@ -8,6 +8,5 @@ export const getPageData = page => {
     방송: `${DATA_URL}tv.json`,
     책: `${DATA_URL}book.json`
   };
-
   return dataUrl[page];
 };
