@@ -4,9 +4,9 @@
 #### 구현 check list
 
 - [x] 클라이언트 정적인 자원요청(html,js,css,image)에 응답할 수 있는 서버 구성
-- [ ] 구현중인 기능에 대해서 모든 데이터 요청을 서버로부터 JSON형태로 받아서 처리하도록 한다.
-    - [ ] URL 라우팅을 통해서 request 를 분석한다
-    - [ ] JSON 데이터 응답 방법
+- [x] 구현중인 기능에 대해서 모든 데이터 요청을 서버로부터 JSON형태로 받아서 처리하도록 한다.
+    - [x] URL 라우팅을 통해서 request 를 분석한다
+    - [x] JSON 데이터 응답 방법
         - json데이터를 파일로 저장후 export한다. 필요한 곳에서 require 로 가져온다.
         - 실제 DB를 통해서 얻어오지 않는다.
         - json파일이 저장된 파일을 직접 read 하지 않는다.
@@ -118,7 +118,7 @@
                             .then(() => initCategory()) // 비동기 콜백이지만 프로미스를 반환하지 않음.
                             .then((res) => {
                                 createRecommend(genre)  // 동기 콜백
-                                console.log(res)
+                                console.log(res)    // 'a' 출력
                             })
                       }
           ```

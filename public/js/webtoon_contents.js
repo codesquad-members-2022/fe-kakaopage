@@ -136,5 +136,3 @@ function getContentsTemplate(object, index) {
 
     return template
 }
-
-
