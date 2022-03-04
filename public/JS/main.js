@@ -8,8 +8,7 @@ let slider = null;
 const setSlide = () => {
   const container = '.main__banner'
   const list = '.banner__list'
-  slider = new Slider(container, list);
-  slider.init();
+  slider.init(container, list);
 }
 
 const todayFocus = () => {
@@ -45,15 +44,11 @@ const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       renderHome(target.dataset.nav)
-        .then(() => eventHome());
+        .then(() => eventHomePage());
       break;
     case 'daily':
       renderDaily(target.dataset.nav)
-        .then(() => {
-          todayFocus();
-          setSlide();
-          clickDailyTopList();
-        });
+        .then(() => eventDailyPage());
       break;
     case 'webtoon':
       renderWebtoon(target.dataset.nav)
@@ -61,10 +56,7 @@ const moveGenreNav = (target) => {
       break;  
     case 'boy':
       renderBoy(target.dataset.nav)
-        .then(() => {
-          setSlide(),
-          clickPromotionBanner();
-        });
+        .then(() => eventBoyPage());
       break; 
   }
 }
@@ -140,17 +132,29 @@ const clickPromotionBanner = () => {
   })
 }
 
-const eventHome = () => {
+const eventHomePage = () => {
   todayFocus();
+  setSlide();
   clickPromotionBanner();
   clickDailyTopList();
+}
+
+const eventDailyPage = () => {
+  todayFocus();
   setSlide();
+  clickDailyTopList();
+}
+
+const eventBoyPage = () => {
+  setSlide(),
+  clickPromotionBanner();
 }
 
 window.addEventListener('load', () => {
   renderHome('home')
     .then(() => {
+      slider = new Slider();
       clickGenresList();
-      eventHome();
+      eventHomePage();
     });
 });
