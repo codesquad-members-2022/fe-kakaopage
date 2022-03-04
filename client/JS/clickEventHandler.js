@@ -19,9 +19,8 @@ const getNewImages = (isRight) => {
   selector(".ads__image").innerHTML = newImages;
 };
 
-const onAdsBtnClick = (direction) => {
+const onAdsBtnClick = (isRight) => {
   let length = 0;
-  const isRight = direction;
   const image = selector(".ads__image");
   const { style } = image;
   const lengthInterval = 10;
@@ -37,8 +36,8 @@ const onAdsBtnClick = (direction) => {
 };
 
 const onAdsClickHandler = ({ className }) => {
-  if (className.includes("right")) onAdsBtnClick(true);
-  if (className.includes("left")) onAdsBtnClick(false);
+  const isRight = className.includes("right");
+  onAdsBtnClick(isRight);
 };
 
 const clickEventHandler = ({ target }) => {
