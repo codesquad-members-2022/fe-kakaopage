@@ -1,7 +1,7 @@
 import { $ } from "../../util/utils.js";
 import { handleCategory } from "../../controllers/handle-cateogry.js";
 import { dowTopContents } from "../blocks/dow-top.js";
-import { renderingMainAd } from "./main-ad-banner.js";
+import { renderingMainAd } from "../components/main-ad-banner.js";
 
 export const renderingContents = (selectedValue, navContents, navRendering) => {
   renderingMainAd(selectedValue);
