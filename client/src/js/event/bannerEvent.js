@@ -13,7 +13,7 @@ const Slide = {
   },
 };
 
-const setSlideTotal = (main, sub, event) => {
+const setSlideTotal = ({ main, sub, event }) => {
   Slide.main.total = main;
   Slide.sub.total = sub;
   Slide.event.total = event;
