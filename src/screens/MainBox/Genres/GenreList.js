@@ -7,11 +7,12 @@ function GenreList(infoObject) {
 createExtendsRelation(GenreList, Component);
 
 GenreList.prototype.setEvent = function () {
-  const { updateGenre } = this.$props;
+  const { updateGenre, clearCarousel } = this.$props;
 
   const handleAddEvent = ({ target }) => {
     const $eventTarget = target.closest(".navGenre-item");
     updateGenre($eventTarget.dataset.genre);
+    clearCarousel();
   };
 
   this.addEvent("click", ".navGenre-item", handleAddEvent);

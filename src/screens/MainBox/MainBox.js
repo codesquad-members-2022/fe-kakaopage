@@ -23,6 +23,7 @@ MainBox.prototype.mount = function () {
       },
       $props: {
         updateGenre: this.updateGenre.bind(this),
+        clearCarousel: this.$props.clearCarousel,
       },
     });
   }
@@ -33,8 +34,7 @@ MainBox.prototype.mount = function () {
       genre: selected,
     },
     $props: {
-      setCarousel: this.setCarousel.bind(this),
-      clearCarousel: this.clearCarousel.bind(this),
+      setCarousel: this.$props.setCarousel,
     },
   });
 };
@@ -53,17 +53,6 @@ MainBox.prototype.template = function () {
 
 MainBox.prototype.updateGenre = function (genre) {
   this.setState({ selected: genre });
-};
-
-MainBox.prototype.setCarousel = function (getInterval) {
-  const interval = getInterval();
-  this.state.interval = interval;
-};
-MainBox.prototype.clearCarousel = function () {
-  if (this.state.interval) {
-    clearInterval(this.state.interval);
-    this.state.interval = "";
-  }
 };
 
 export default MainBox;

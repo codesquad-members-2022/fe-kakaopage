@@ -25,6 +25,7 @@ App.prototype.mount = function () {
     },
     $props: {
       updateCategory: this.updateCategory.bind(this),
+      clearCarousel: this.clearCarousel.bind(this),
     },
   });
 
@@ -35,6 +36,10 @@ App.prototype.mount = function () {
       genres: genres[category],
       selected: "home",
     },
+    $props: {
+      setCarousel: this.setCarousel.bind(this),
+      clearCarousel: this.clearCarousel.bind(this),
+    },
   });
 
   new Footer({
@@ -44,6 +49,18 @@ App.prototype.mount = function () {
 
 App.prototype.updateCategory = function (category) {
   this.setState({ category });
+};
+
+App.prototype.setCarousel = function (getInterval) {
+  const interval = getInterval();
+  this.state.interval = interval;
+};
+
+App.prototype.clearCarousel = function () {
+  if (this.state.interval) {
+    clearInterval(this.state.interval);
+    this.state.interval = "";
+  }
 };
 
 App.prototype.template = function () {

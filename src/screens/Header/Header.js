@@ -10,10 +10,11 @@ createExtendsRelation(Header, Component);
 
 Header.prototype.setEvent = function () {
   const handleAddEvent = ({ target }) => {
-    const { updateCategory } = this.$props;
+    const { updateCategory, clearCarousel } = this.$props;
     const $eventTarget = target.closest(".header__nav-item");
     const category = $eventTarget.dataset.category;
     updateCategory(category);
+    clearCarousel();
     this.setState({ selected: category });
   };
 

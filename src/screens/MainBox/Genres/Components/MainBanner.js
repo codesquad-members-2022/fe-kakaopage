@@ -5,7 +5,6 @@ import bannerImgBoxTpl from "./Templates/bannerImgBoxTpl.js";
 
 function MainBanner(infoObject) {
   Component.call(this, infoObject);
-  this.$props.clearCarousel();
 }
 
 createExtendsRelation(MainBanner, Component);

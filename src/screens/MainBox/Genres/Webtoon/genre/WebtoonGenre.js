@@ -28,8 +28,6 @@ WebtoonGenre.prototype.mount = function () {
       $props: {
         setCarousel:
           className === "mainBanner" ? this.$props.setCarousel : null,
-        clearCarousel:
-          className === "mainBanner" ? this.$props.clearCarousel : null,
       },
     });
   });
