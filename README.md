@@ -1,6 +1,6 @@
 # fe-kakaopage
 
-## 🤹‍♀️ 기능 구현
+## 🤹‍♀️ 기능 구현 ([데모페이지](https://mogooee.github.io/fe-kakaopage/))
 
 ## 1. 요일 탭 이동
 
@@ -22,5 +22,9 @@
 
 ## 3. 무한 슬라이드
 
-<p align="center"><img src="https://user-images.githubusercontent.com/92701121/155511158-c217534b-5833-42d1-9049-3fb718d586e7.gif
-" width="50%" heigth="50%"></p>
+- 가장 첫번째와 마지막 슬라이드를 클론하여 슬라이드의 끝단에 붙이고 복사본의 마지막 슬라이드로 이동시 즉시 원본으로 넘어가게 하여 무한 슬라이드를 구현함.
+- 슬라이드가 완전히 넘어가기 전에 발생하는 클릭 이벤트를 막아 오류를 방지
+- 슬라이드 위에 커서가 올라오면 자동재생이 멈추고 버튼을 클릭하면 슬라이드를 넘길 수 있음
+- 탭 클릭시 카데고리에 맞는 슬라이드 데이터를 사용하여 렌더링 함.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/92701121/156715538-a9bc0a1b-b9c9-4c8f-a62c-896f7cf3f23a.gif" width="50%" heigth="50%"></p>
