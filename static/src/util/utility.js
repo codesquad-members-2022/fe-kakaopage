@@ -6,7 +6,14 @@ export const removeAndInsertHTML = (target, position, template) => {
   $(target).insertAdjacentHTML(position, template);
 };
 
-export const activateButton = (removeSelector, addSelector, className) => {
-  removeSelector.classList.remove(className);
+export const activateButton = (className, addSelector) => {
+  $(`.${className}`).classList.remove(className);
   addSelector.classList.add(className);
+};
+
+export const getToday = () => {
+  const date = new Date();
+  let today = date.getDay() - 1;
+  if (today === -1) today = 6;
+  return today;
 };
