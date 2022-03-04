@@ -1,10 +1,7 @@
 // 이미지 카드 하나를 만들어서 문자로 리턴
 export const createImageCard = (imageCardInfo) => {
-  const url = imageCardInfo["url"];
-  const rank = imageCardInfo["rank"];
-  const title = imageCardInfo["title"];
-  const [newIcon, updateIcon, yearsIcon, humanIcon] = imageCardInfo["info"];
-  const subscriber = imageCardInfo["subscriber"];
+  const { url, rank, title, info, subscriber } = imageCardInfo;
+  const [newIcon, updateIcon, yearsIcon, humanIcon] = info;
 
   return `
   <div class="image-card">

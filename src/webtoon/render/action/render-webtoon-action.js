@@ -1,6 +1,5 @@
+import { createDummyImgTag } from "../../../components/create-dummy-img-tag.js";
 const webtoonActionContent = document.createElement("div");
-const dummyImg = document.createElement("img");
-dummyImg.setAttribute("src", "../../image/dummy-action.png");
-dummyImg.setAttribute("width", "720px");
-webtoonActionContent.appendChild(dummyImg);
+const imgFileName = "action";
+webtoonActionContent.appendChild(createDummyImgTag(imgFileName));
 export { webtoonActionContent };

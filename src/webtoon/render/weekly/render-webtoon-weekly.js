@@ -1,15 +1,25 @@
 import { createImageCard } from "../../../components/createImageCard.js";
+import { getNowDay } from "../../../components/get-now-day.js";
+import { textSelectedPositionChange } from "../../../components/text-selected-position-change.js";
+import { changeCirclePosition } from "../../../components/change-circle-position.js";
+import { onClickListener } from "../../../handler/on-click-listener.js";
 // import { weeklyWebtoonImageCardInfo } from "../../../data/imageCard-data.js";
 
+const URL = "//localhost:3000/";
+const JSON_PATH = "webtoon/weekly/imageCard";
+
+// app : 카테고리 이동시 렌더링이 바뀔 전역 공간
+const app = document.querySelector(".app");
 const weeklyIdxChanger = {
-  mon: 0,
-  tue: 1,
-  wed: 2,
-  thu: 3,
-  fri: 4,
-  sat: 5,
-  sun: 6,
+  월: 0,
+  화: 1,
+  수: 2,
+  목: 3,
+  금: 4,
+  토: 5,
+  일: 6,
 };
+const dayOfTheWeeks = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 const webtoonWeeklyMain = document.createElement("div");
 webtoonWeeklyMain.className = "webtoon-weekly-main";
@@ -79,11 +89,8 @@ webtoonWeeklyContent.appendChild(webtoonWeeklyWebtoon);
 // 요일 어떻게 입력받지?? 오늘의 요일을 찾을까?? 아니야 입력받은 요일대로 얘가 렌더하는 방향으로 진행하자
 // 요일 입력 받기, create해줘야 하는 정보 입력받기 (월~일 전체 요일 있는거로) -> 걔를 필요 요일에 맞게 (월 : 0 ~ 방식) createimage(정보[요일]) 해줘서 태그 생성 -> 생성된 태그들을 전부 순서대로 webtoonWeeklyWebtoon 밑에 어펜드 해주기
 // 마지막으로 제일 큰애를 html에 넣어주기 (webWeeklyMain 을 html main 안에 넣어주자)
-const now = new Date();
-let nowDay = now.getDay() - 1;
-if (nowDay === -1) {
-  nowDay = 6;
-}
+
+const nowDay = getNowDay();
 
 const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
   weeklyWebtoonImageCardInfo[dayOfTheWeek]["card"].forEach((imageCardInfo) => {
@@ -94,18 +101,49 @@ const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
   });
 };
 
+const getJSONData = (path) => {
+  return fetch(`${URL}${path}`).then((response) => response.json());
+};
+
 const renderWebtoonWeeklyImageCard = (path, dayOfTheWeek) => {
-  fetch(`//localhost:3000/${path}`)
-    .then((response) => response.json())
-    .then((data) => {
-      insertImageCardsToParent(data, dayOfTheWeek);
-    });
+  getJSONData(JSON_PATH).then((data) => {
+    insertImageCardsToParent(data, dayOfTheWeek);
+  });
 };
 
 const createHTMLImageCard = (dayOfTheWeek) => {
-  renderWebtoonWeeklyImageCard("webtoon/weekly/imageCard", dayOfTheWeek);
-
+  renderWebtoonWeeklyImageCard(JSON_PATH, dayOfTheWeek);
   return webtoonWeeklyMain;
 };
+
+const changeWeeklyImageCard = (webtoonWeeklyWebtoon, data, dayOfTheWeek) => {
+  const currentImageCardInfo =
+    webtoonWeeklyWebtoon.querySelectorAll(".image-card");
+  insertImageCardsToParent(data, dayOfTheWeek);
+  currentImageCardInfo.forEach((a) => a.remove());
+};
+
+const ImageCardInfoView = (webtoonWeeklyWebtoon, dayOfTheWeek) => {
+  getJSONData(JSON_PATH).then((data) => {
+    changeWeeklyImageCard(webtoonWeeklyWebtoon, data, dayOfTheWeek);
+  });
+};
+
+const weeklyNavClickHandler = (evt) => {
+  if (evt.target.nodeName === "LI") {
+    const dayOfTheWeek = weeklyIdxChanger[evt.target.innerHTML];
+    ImageCardInfoView(webtoonWeeklyWebtoon, dayOfTheWeek);
+    textSelectedPositionChange(
+      document
+        .querySelector(".webtoon-weekly-content__nav")
+        .querySelectorAll("li"),
+      dayOfTheWeek
+    );
+    changeCirclePosition(dayOfTheWeeks[dayOfTheWeek]);
+  }
+};
+
+onClickListener(app, weeklyNavClickHandler);
+
 createHTMLImageCard(nowDay);
 export { webtoonWeeklyContent };

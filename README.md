@@ -7,58 +7,36 @@
 - 슬라이딩 배너 구현 ( 3초에 한번씩 or 클릭시 전환 )
 - 데모 페이지에는 json을 생략하였지만, 코드는 express 서버를 열어 json 요청, fetch 받아 사용하는 방식 구현
 
-## step5 변경사항:
+## 피드백
 
-- HTML 부분 하드 코딩 데이터를 js로 동적으로 생성
-- 더미데이터를 추가하여 탭 간 전환 기능 추가
-- JS 폴더 구조 변경 ( 기존 JS파일을 이동하지는 않았지만, 새로 구성한다면 해보고 싶은 폴더 구조로 변경. 좋은 구조는 아닌듯 하지만 기존의 구성보다는 발전된 것 같다. )
-- 함수 단위를 조금 더 작게 수정 (render에서 한번에 구성하지 않고 각각 요소에 필요한 렌더 함수로 나눔 )
-- 이미지 카드 교체 과정에서 불필요한 반복문 제거. (querySelector로 탐색은 진행되기 때문에 시간복잡도는 비슷하겠지만 코드의 가독성 증가)
-- imageCard[n].childNodes.children 등의 코드를 제거하여 html 구조 의존도 감소
+1. change-image-card.js
 
-## step5 미션:
+- [x] changeImageCardInfo가 뭐하는 함수인가? ⇒ 렌더링 하는 거라면 ImageCardInfoView 라고 해도 될 듯
+- [x] change-image-card.js 파일에 8번째줄 forEach로 바꿔보기
+- sol : change-image-card.js파일에 실패 테스트 케이스를 발견 (요일별로 이미지 갯수가 다를 경우 에러) -> 파일을 삭제하고 render > weekly > render-webtoon-weekly.js 파일에 수정 함수 추가
 
-- [x] Express 서버에서 JSON 응답을 받아오기
-- [ ] REST API URL 구성에 대해서 이해
-- [x] fetch API 사용 데이터 통신
-- [x] 비동기 통신의 장점을 이해하고 적용해야 하는 상황을 공부해보기
-
-## PR 피드백 :
-
-- [x] forEach 등 고차함수 활용 (render-webtoon-weekly.js 에서 webtoonWeeklyWebtoon 태그에 이미지 카드를 만들어서 넣는 과정에서 입력받은 이미지 카드양에 따라 만들어서 넣을 수 있도록 forEach 활용 )
-- [x] imageCard[n].childNodes 의 사용 빈도가 5회 이상이어서 imageCardNodes 변수로 저장 -> 사용하는 함수 전부 리팩토링
-- [x] class가 추가된다면 className으로 비교할때 버그가 생길 수 있습니다. -> (change-image-card.js 파일 함수 : className 비교가 아니라 그냥 해당 클래스를 가진 요소를 쿼리셀렉터로 바로 선택 )
-- [x] 여기 함수는 좀 복잡해보이죠? 작은 함수 여러개를 만들어 보세요 -> (image-box-handler.js의 nextImg, prevImg 함수에서 중복을 추출해 selectContainerBoxRange, imageBoxCntChangeAndTimerReset 두 하위함수를 생성 )
+- [x] createImageCard.js 파일 destructuring 문법 활용 : 구조분해 할당 사용
+- [x] render-handler.js 파일 이벤트 등록 코드 함수 안에서 : 이벤트 등록 함수 분리
+- [x] render-handler.js 파일 57~60 줄 하나의 함수로 : getNowDay 함수 분리
+- [x] render폴더 안에 더미 데이터 생성 중복 함수로 분리 : 더미데이터 생성 함수 분리 재사용
 
 ## 학습진행상황
 
-- createElement나 insertBefore 등 메소드를 여러 메소드를 경험하기 위해 더미 페이지와의 전환 기능 추가
-- 함수간 중복 코드를 제거하여 작은 단위의 하위 함수를 생성
-- forEach 고차함수 사용
-- js 파일이 늘어날 때 구조를 어떻게 가져가야 할지 고민할 필요성을 느낌
-- 템플릿 리터럴로 html을 동적으로 생성하기 위해서는 기존 함수 로직 (지난번 pr에서 지적받은 배열의 길이만큼 반복하는 등의 구조)는 유효하지 않았음. 해당 부분을 추후 유지 보수가 용이한 형태로 작은 함수로 변경
-- http 프로토콜은 OSI7계층 or TCP/IP (Update 버전 포함) 에서 5계층에 포함되는 프로토콜. 네트워크 계층에 대해 학습
-
-## 현재 구조 문제점
-
-- 초기 레이아웃을 생각하지 않고 구현하면서 수정하다보니 폴더구조가 엉망
-- 클래스 명에 일관성이 떨어지는 부분이 존재.
-- 함수 구성이 html 구조에 의존적인 부분이 있다. (children[1].children 과 같은 구조, 이후 작성 파일에서는 피드백 내용처럼 selector.querySelector() 의 형태로 변경)
-- 더 작은 함수단위로 나눌 수 있는 부분이 있을 것 같다.
-- 리팩토링 과정에서 구조를 완전히 바꿔야하는 경험을 해 본 덕분에 왜 함수를 작게 나눠야 하는지 느낄 수 있었음
+- 이벤트 등록 함수를 왜 구분해야 하는지 의아했지만, 태그명과 콜백함수를 매개변수로 받아서 여러 파일에서 재사용 가능한 것을 보고 유지 보수에 강점이 있는 것을 느낌 하지만 원래 addEventListener 역시 핸들러를 콜백으로 받기 때문에 큰 이점이 있는지는 의문인 상황
+- 더미 파일의 경우 나중에 구현하게 되면 모두 로직이 달라지기 때문에 중복 코드가 많았음. 해당 중복을 생성해주는 함수를 분리하여 중복을 줄일 수 있음
+- 작은 단위의 함수로 나누면서 폴더 구조에 대해서 다시 한번 고민하게 됨
+- 기존 코드의 문제점을 발견(이미지 카드 변경 로직이, 각 요일별 이미지 갯수가 다를 경우 동작x)하고 로직을 변경하여 개선
+- 작은 단위의 함수를 조합하여 클래스-상속에 의지하지 않고도 재사용이 가능한 것을 느낌
+- promise-then 학습중
 
 ## 질문사항
 
-아래 코드의 insertImageCardsToParent 함수는 만들어진 이미지 카드들을 상위 태그에 insertAdjacentHTML 메소드를 사용해 추가해주려는 의도로 작성했습니다. 동작 과정은 insertImageCardsToParent 함수 내부에서 이미지 카드를 만들어주는 함수 (createImageCard) 를 사용해서 이미지 카드 태그를 만들어 준 뒤 상위 태그에 insertAdjacentHTML 메소드를 이용해서 추가해줍니다.
-'생성 함수는 외부에 정의되어있는 createImageCard함수를 사용한 것이기에 이 함수는 태그를 카드 갯수만큼 forEach로 돌면서 상위 태그에 추가하는 역할만 수행한다' 는 생각이었습니다. 이 경우 insertImageCardsToParent 함수는 하나의 역할만 하는 것이라고 말할 수 있을까요?
+- 이벤트 등록 코드를 함수 안에서 해보라는 피드백을 듣고, 아래 코드처럼 이벤트 등록 함수를 별도로 분리시켰습니다. 그런데 해놓고 보니 addEventListener이랑 큰 차이가 없는 것 같이 느껴집니다. 이렇게 분리하는 것이 강점이 있을까요?? 아니면 피드백해주신 내용은 이렇게 분리하라는 것이 아니라 이벤트 등록 코드만 외부 공간에 있으니, 이벤트 등록역시 다른 코드들처럼 함수 안에서 진행하라는 뜻이었을까요?
 
 ```javascript
-const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
-  weeklyWebtoonImageCardInfo[dayOfTheWeek]["card"].forEach((imageCardInfo) => {
-    webtoonWeeklyWebtoon.insertAdjacentHTML(
-      "beforeend",
-      createImageCard(imageCardInfo)
-    );
+export const onClickListener = (targetTag, callback) => {
+  targetTag.addEventListener("click", (evt) => {
+    callback(evt);
   });
 };
 ```
@@ -126,3 +104,19 @@ const insertImageCardsToParent = (weeklyWebtoonImageCardInfo, dayOfTheWeek) => {
 - 변수명 네이밍컨벤션 변경 : main -> webtoon-weekly, cardInfo -> weeklyWebtoonImageCard 등
 - 폴더구조 변경 : js파일 별도 폴더로 이동
 - express 서버 구현
+
+## step5 변경사항:
+
+- HTML 부분 하드 코딩 데이터를 js로 동적으로 생성
+- 더미데이터를 추가하여 탭 간 전환 기능 추가
+- JS 폴더 구조 변경 ( 기존 JS파일을 이동하지는 않았지만, 새로 구성한다면 해보고 싶은 폴더 구조로 변경. 좋은 구조는 아닌듯 하지만 기존의 구성보다는 발전된 것 같다. )
+- 함수 단위를 조금 더 작게 수정 (render에서 한번에 구성하지 않고 각각 요소에 필요한 렌더 함수로 나눔 )
+- 이미지 카드 교체 과정에서 불필요한 반복문 제거. (querySelector로 탐색은 진행되기 때문에 시간복잡도는 비슷하겠지만 코드의 가독성 증가)
+- imageCard[n].childNodes.children 등의 코드를 제거하여 html 구조 의존도 감소
+
+## PR 피드백 :
+
+- [x] forEach 등 고차함수 활용 (render-webtoon-weekly.js 에서 webtoonWeeklyWebtoon 태그에 이미지 카드를 만들어서 넣는 과정에서 입력받은 이미지 카드양에 따라 만들어서 넣을 수 있도록 forEach 활용 )
+- [x] imageCard[n].childNodes 의 사용 빈도가 5회 이상이어서 imageCardNodes 변수로 저장 -> 사용하는 함수 전부 리팩토링
+- [x] class가 추가된다면 className으로 비교할때 버그가 생길 수 있습니다. -> (change-image-card.js 파일 함수 : className 비교가 아니라 그냥 해당 클래스를 가진 요소를 쿼리셀렉터로 바로 선택 )
+- [x] 여기 함수는 좀 복잡해보이죠? 작은 함수 여러개를 만들어 보세요 -> (image-box-handler.js의 nextImg, prevImg 함수에서 중복을 추출해 selectContainerBoxRange, imageBoxCntChangeAndTimerReset 두 하위함수를 생성 )

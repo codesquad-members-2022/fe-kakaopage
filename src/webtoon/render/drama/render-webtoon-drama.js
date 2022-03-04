@@ -1,6 +1,5 @@
+import { createDummyImgTag } from "../../../components/create-dummy-img-tag.js";
 const webtoonDramaContent = document.createElement("div");
-const dummyImg = document.createElement("img");
-dummyImg.setAttribute("src", "../../image/dummy-drama.png");
-dummyImg.setAttribute("width", "720px");
-webtoonDramaContent.appendChild(dummyImg);
+const imgFileName = "drama";
+webtoonDramaContent.appendChild(createDummyImgTag(imgFileName));
 export { webtoonDramaContent };
