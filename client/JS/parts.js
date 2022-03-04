@@ -5,6 +5,7 @@ import {
   selectedNav,
   daysMenuNavItems,
 } from "./navigator.js";
+import { icons } from "./icons.js";
 
 const getNav = (navItems) => {
   return navItems.reduce((preItem, postItem) => {
@@ -13,7 +14,6 @@ const getNav = (navItems) => {
 };
 
 const getAds = (info) => {
-  console.log(info);
   let target = info.pre;
   let result = "";
   let count = 3;
@@ -33,8 +33,8 @@ const ads =
     <div class="ads__image">
       ${getAds(adsInfo)}  
     </div>
-    <div class="ads__left"><i class="far fa-arrow-circle-left"></i></div>
-    <div class="ads__right"><i class="far fa-arrow-circle-right"></i></div>
+    <div class="ads__left"><i class="${icons.arrowCircle}left"></i></div>
+    <div class="ads__right"><i class="${icons.arrowCircle}right"></i></div>
   </section>
   `;
 
@@ -77,13 +77,13 @@ const columnContent = ({ name, image, rank, views }) => {
           <div class="column-contents__content--info">
             <div class="column-contents__content--rank">${rank}위</div>
             <div class="column-contents__content--clock">
-              <i class="fas fa-history"></i>
+              <i class="${icons.history}"></i>
             </div>
           </div>
         </div>
           <div class="column-contents__content--name">${name}</div>
           <div class="column-contents__content--views">
-            <span><i class="fas fa-user-circle"></i>${views}만 명</span>
+            <span><i class="${icons.history}"></i>${views}만 명</span>
           </div>
         </div>
         `;
@@ -105,7 +105,7 @@ const getEmptyColumnContents = (columnCount, targetDay) => {
 
 const getColumContentsByDayMenu = (dayMenuNav, contentInfo) => {
   const content = columnContent(contentInfo);
-  const nav = dayMenuNav.includes("fas fa") ? "아이콘" : dayMenuNav;
+  const nav = dayMenuNav.includes(`${icons.clock}`) ? "아이콘" : dayMenuNav;
   switch (nav) {
     case "전체":
       return content;
