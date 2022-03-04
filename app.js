@@ -10,13 +10,22 @@ app.get("/index/wholeData", (req, res, next) => {
   res.json(data);
 });
 
-app.get("/main/홈", (req, res, next) => {
-  res.json(genre);
+app.get(`/main/:tab`, (req, res, next) => {
+  const params = decodeURIComponent(req.params.tab);
+  if (params === "홈") {
+    res.json(genre);
+    return;
+  }
+
+  if (params === "요일연재") {
+    res.json({ week, toonItemData, toggleLeft });
+    return;
+  }
 });
 
-app.get("/main/요일연재", (req, res, next) => {
-  res.json({ week, toonItemData, toggleLeft });
-});
+// app.get("/main/요일연재", (req, res, next) => {
+//   res.json({ week, toonItemData, toggleLeft });
+// });
 
 app.get("/banner/:tab", (req, res, next) => {
   const params = req.params;
