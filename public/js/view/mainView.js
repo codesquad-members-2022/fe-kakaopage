@@ -14,18 +14,20 @@ const renderToonbyDay = (fetchedData) => {
 };
 
 const renderMainSecHome = (genre) => {
-  const FilterdByGenre = getToonGenre(genre);
-  console.log(genre);
-  domUtil.$(".main").innerHTML = FilterdByGenre.reduce(
-    (mainHtml, currGenre, idx) => {
-      mainHtml +=
-        getToggleNavHTML({ left: genre[idx], right: "더보기" }) +
-        getImgCardHtml(currGenre);
+  domUtil.$(".main").innerHTML = genre.reduce((mainHtml, currGenre) => {
+    const filterdByGenre = getToonGenre(currGenre);
+    mainHtml +=
+      getToggleNavHTML({ left: [currGenre], right: "더보기" }) +
+      `<ul class="main__cartoonZone">
+      ${filterdByGenre.reduce((imgHtml, toonData) => {
+        imgHtml += getImgCardHtml(toonData);
+        return imgHtml;
+      }, "")}
+      </ul>
+      `;
 
-      return mainHtml;
-    },
-    ""
-  );
+    return mainHtml;
+  }, "");
 };
 
 const renderMainSecWoD = ({ week, toggleLeft, toonItemData }) => {

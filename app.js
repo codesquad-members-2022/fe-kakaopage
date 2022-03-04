@@ -10,11 +10,11 @@ app.get("/index/wholeData", (req, res, next) => {
   res.json(data);
 });
 
-app.get("/main/home", (req, res, next) => {
+app.get("/main/홈", (req, res, next) => {
   res.json(genre);
 });
 
-app.get("/main/week", (req, res, next) => {
+app.get("/main/요일연재", (req, res, next) => {
   res.json({ week, toonItemData, toggleLeft });
 });
 
