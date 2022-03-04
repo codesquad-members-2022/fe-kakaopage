@@ -2,35 +2,16 @@ import menuData from "../tabData/mainMenu.js"
 import createDom from "../createDOM.js"
 function makeMainMenu(tabName) {
   let currTab = menuData[tabName];
-  // return `<a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">${currTab[0]['description']}</div>
-  //         <div class="menu-content_num">231</div>
-  //       </a>
-  //       <a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">오늘 신작</div>
-  //         <div class="menu-content_num">1</div>
-  //       </a>
-  //       <a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">오리지널</div>
-  //         <div class="menu-content_num">2,337</div>
-  //       </a>
-  //       <a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">완결까지 정주행</div>
-  //       </a>
-  //       <a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">독립운동가 웹툰</div>
-  //       </a>
-  //       <a href="#" class="menu-content flex__center">
-  //         <div class="menu-content__text">오늘 랭킹</div>
-  //         <div class="menu-content_num">1위</div>
-  //       </a>`
   let html = '';
         currTab.forEach((el, idx) => {
           html += `<a href="#" class="menu-content flex__center">
-            <div class="menu-content__text">${el['description']}</div>
-            <div class="menu-content_num">231</div>
-          </a>`
-        })
+            <div class="menu-content__text">${el['description']}</div>`
+          if (el['num'] !== '') {
+            html += `<div class="menu-content_num">${el['num']}</div></a>`
+          } else {
+            html += '</a>';
+          }
+          })
   return html;
 
   
