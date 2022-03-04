@@ -4,10 +4,11 @@ import {
   activateTab,
   changeTitle,
   removeAlarm,
-} from './utils/util.js';
-import { CL, WEBTOON_URL } from './utils/constants.js';
-import { render } from './render.js';
-import { initSlider, slideBanner } from './slider.js';
+  getData,
+} from '../utils/util.js';
+import { CL, WEBTOON_URL, URLS } from '../utils/constants.js';
+import { render } from '../render/render.js';
+import { initSlider, slideBanner } from '../feature/slider.js';
 
 const $gnb = $('.gnb__list');
 
@@ -25,9 +26,9 @@ function gnbHandler(e) {
     render.otherPage(target.id);
     return;
   }
-  loadData(WEBTOON_URL)
-    .then(wt => {
-      render.webtoonPage(wt);
+  getData(URLS)
+    .then(data => {
+      render.webtoonPage(data);
       setEventHandlers();
     })
     .catch(console.log);
@@ -46,12 +47,12 @@ const handlerComponent = {
     $snb.addEventListener('click', e => {
       const target = e.target.closest('.snb__item');
       if (e.target !== target) return;
-      const category = target.dataset.category;
+      const cateName = target.dataset.category;
 
       loadData(WEBTOON_URL)
         .then(wt => {
           activateTab(target);
-          render.contents(wt, category); // 이때 다보내지 말고 카테고리별로
+          render.contents(wt, { cateName });
           this.daybar();
           this.mainBannerBtn();
           clearInterval(this.intervalId);
@@ -98,7 +99,7 @@ const handlerComponent = {
       let day = e.target.id;
       if (day === CL.WHOLE) day = '';
 
-      loadData(WEBTOON_URL + day)
+      loadData(WEBTOON_URL, day)
         .then(wt => {
           activateTab(target);
           render.webtoonList(wt);
