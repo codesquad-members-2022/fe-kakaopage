@@ -1,5 +1,5 @@
 import { getWorkContainerTemplate } from '../components/workContainer.js';
-import { icons } from '../../icons.js';
+import { icons } from '../../assets/icons.js';
 import { DEFAULT_DAY } from '../constant.js';
 
 export const getWorkSectionTemplate = (layout, contents, workData) => {

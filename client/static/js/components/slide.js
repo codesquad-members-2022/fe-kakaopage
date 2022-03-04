@@ -1,5 +1,5 @@
 import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH, AUTO_SLIDE_INTERVAL } from '../constant.js'
-import { icons } from "../../icons.js";
+import { icons } from "../../assets/icons.js";
 
 export const getSlidesTemplate = (bannerData, currIndex, contentsTemplateMakingFunction) => {
     const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;

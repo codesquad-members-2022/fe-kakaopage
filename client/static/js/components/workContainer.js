@@ -1,4 +1,4 @@
-import { icons } from '../../icons.js'
+import { icons } from '../../assets/icons.js'
 import { getBannerContentTemplate } from './banner.js'
 
 export const getWorkContainerTemplate = (layout, workData) => {

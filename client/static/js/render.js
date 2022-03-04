@@ -23,7 +23,9 @@ const renderCommon = () => {
 const renderGenreTab = (page) => {
     return getData('common', 'genreTab', page)
     .then(genreTabData => {
-        document.querySelector('.genre-tab').innerHTML = getGenreTabTemplate(genreTabData);
+        const genreTab = document.querySelector('.genre-tab');
+        genreTab.innerHTML = getGenreTabTemplate(page, genreTabData);
+        setDefault(genreTab);
     });
 }
 
@@ -40,6 +42,8 @@ const renderContents = (page, genre) => {
 }
 
 const reRender = (newSelected, type) => {
+    const tabContentsDiv = document.querySelector('.tab-contents');
+    tabContentsDiv.innerHTML = ''
     const newTab = newSelected.dataset[type];
     switch (type) {
         case 'gnb':
@@ -73,7 +77,6 @@ const activateGnb = () => {
 const activateGenreTab = () => {
     const genreTab = document.querySelector('.genre-tab');
     genreTab.addEventListener('click', (e) => handleTabClick(e, 'genre'));
-    setDefault(genreTab);
 }
 
 // const activateDayTab = () => {
@@ -82,6 +85,7 @@ const activateGenreTab = () => {
 // }
 
 const handleTabClick = (event, type) => {
+    event.preventDefault();
     const selectionMark = `${type}-tab__item--selected`;
     const prevSelected = document.querySelector(`.${selectionMark}`);
     const newSelected = event.target.closest('li');
