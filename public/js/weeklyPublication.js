@@ -1,14 +1,13 @@
 import * as common from "./common.js";
-
 const promotionWebtoonList = await common.fetchData("promotionWebtoonList");
 const weeklyWebtoonList = await common.fetchData("weeklyWebtoonList");
 
-let HTMLTemplate = "";
+const weekday = common.calculateWeekday();
 const promotionWebtoonSection = common.createPromotionWebtoonSection(promotionWebtoonList["weeklyPublication"]);
 const webtoonCategorySection = createWebtoonCategorySection();
-const weekday = common.calculateWeekday();
 const webtoonBoardSection = common.createWebtoonBoardSection(weeklyWebtoonList[weekday]);
-HTMLTemplate += promotionWebtoonSection + webtoonCategorySection + webtoonBoardSection;
+const HTMLTemplate = promotionWebtoonSection + webtoonCategorySection + webtoonBoardSection;
+
 export const weeklyPublicationTemplate = HTMLTemplate;
 
 function createWebtoonCategorySection() {
@@ -36,12 +35,10 @@ function createWebtoonTypeFilterNav() {
 }
 
 function createWebtoonGenreFilterUl() {
+  const webtoonGenreList = ["전체", "소년", "드라마", "로맨스","로판", "액션무협","BL"];
   let webtoonGenreFilterTemplate = `<ul class="webtoon_genre_filter">
   <span class="webtoon_genre_total">전체 (152)</span>`;
-  const webtoonGenreList = ["전체", "소년", "드라마", "로맨스","로판", "액션무협","BL"];
-  webtoonGenreList.forEach((webtoonGenre) => {
-    webtoonGenreFilterTemplate+= `<li class="webtoon_genre">${webtoonGenre}</li>`;
-  });
+  webtoonGenreFilterTemplate+= webtoonGenreList.map((webtoonGenre) => `<li class="webtoon_genre">${webtoonGenre}</li>`).join('');
   webtoonGenreFilterTemplate += `</ul>`;
   return webtoonGenreFilterTemplate;
 }
