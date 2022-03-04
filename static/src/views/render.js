@@ -1,34 +1,36 @@
-import { getHomePageTemplate } from './home.js';
-import { getWebtoonPageTemplate } from './webtoon.js';
-import { getWebFictionPageTemplate } from './webFiction.js';
-import { getMoviePageTemplate } from './movie.js';
+import { removeAndInsertHTML } from '../util/utility.js';
+import { getHomePageTemplate } from './pages/home.js';
+import { getWebtoonPageTemplate, addWebtoonPageEvent } from './pages/webtoon.js';
+import { getWebFictionPageTemplate, addWebFictionPageEvent } from './pages/webFiction.js';
+import { getMoviePageTemplate } from './pages/movie.js';
 import { getTVPageTemplate } from './pages/tv.js';
 import { getBookPageTemplate } from './pages/book.js';
-import { getDayTopContentTemplate } from './components/dayTop.js';
-import { getMainBannerTemplate } from './components/mainBanners.js';
 
-export const getPageTemplate = (pageName, data, today) => {
-  const pageTemplate = {
-    홈: getHomePageTemplate(data, today),
-    웹툰: getWebtoonPageTemplate(data, today),
-    웹소설: getWebFictionPageTemplate(data, today),
-    영화: getMoviePageTemplate(data),
-    방송: getTVPageTemplate(data),
-    책: getBookPageTemplate(data)
+export const renderPage = (pageName, currentPageData) => {
+  const pageRendering = {
+    홈: {
+      template: getHomePageTemplate
+    },
+    웹툰: {
+      template: getWebtoonPageTemplate,
+      event: addWebtoonPageEvent
+    },
+    웹소설: {
+      template: getWebFictionPageTemplate,
+      event: addWebFictionPageEvent
+    },
+    영화: {
+      template: getMoviePageTemplate
+    },
+    방송: {
+      template: getTVPageTemplate
+    },
+    책: {
+      template: getBookPageTemplate
+    }
   };
-  const currentPageTemplate = pageTemplate[pageName];
-
-  return currentPageTemplate;
+  const pageTemplate = pageRendering[pageName].template(currentPageData);
+  const pageEvent = pageRendering[pageName].event;
+  removeAndInsertHTML('.contents', 'afterbegin', pageTemplate);
+  pageEvent(currentPageData);
 };
-
-export const getToday = () => {
-  const date = new Date();
-  let today = date.getDay() - 1;
-  if (today === -1) today = 6;
-  return today;
-};
-
-export const getNewDayTopContentTemplate = (dayTopData, currentTabIdx) =>
-  getDayTopContentTemplate(dayTopData, currentTabIdx);
-
-export const getNewMainBannerTemplate = (data, className) => getMainBannerTemplate(data, className);

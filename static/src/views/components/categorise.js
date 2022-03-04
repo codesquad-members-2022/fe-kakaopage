@@ -1,12 +1,14 @@
 const getCategoryTemplate = dataEl => {
-  return `<li class="category"><a href="javascript:;" class="category__link" data-category="${dataEl}">${dataEl}</a></li>`;
+  return `<li class="category">
+            <a href="javascript:;" class="category__link" data-category="${dataEl}">${dataEl}</a>
+          </li>`;
 };
 
 const getCategoriesTemplate = data => {
-  const categoryList = data.reduce((acc, cur) => (acc += getCategoryTemplate(cur)), "");
+  const categoryList = data.reduce((acc, cur) => (acc += getCategoryTemplate(cur)), '');
   return `<ul class="categories">
-          ${categoryList}
-      </ul>`;
+            ${categoryList}
+          </ul>`;
 };
 
 export { getCategoriesTemplate };
