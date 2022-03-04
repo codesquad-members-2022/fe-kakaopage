@@ -93,6 +93,47 @@
           ```
         - 오늘 UP 부분과 배너 부분의 순서가 바뀜. 
         <br><img width="441" alt="image" src="https://user-images.githubusercontent.com/90082464/156375915-a85835a2-be9c-48e0-a22c-903e6857cf02.png">
+        
+   - Fetch then 사용하여 동기적으로 각 영역이 생성되도록 수정
+        - ```javascript
+          function renderHome() {
+              initContents()
+                  .then(() => initWebtoonDaily()) // fetch 를 리턴한다.
+                  .then(() => initCategory())
+          }
+          ``` 
+   - then 메서드의 return 값이 없거나 promise 가 아닌 값을 return 하면 실행과 동시에 return = resolve 이므로 다음 then 이 실행되어 이전 then 콜백함수 내의 비동기 작업을 기다려주지 않는다.
+        - ```javascript       
+          // 비동기 작업이나 return 이 프로미스가 아닌 경우  
+          export function initCategory() {
+              fetch('http://localhost:3000/webtoon/categoryMenus')
+                  .then(res => res.json())
+                  .then(data => createCategory(data))
+          
+              return 'a'
+          }
+          
+          function renderGenre(genre) {
+                        initContents() // 프로미스를 반환
+                            .then(() => initCategory()) // 비동기 콜백이지만 프로미스를 반환하지 않음.
+                            .then((res) => {
+                                createRecommend(genre)  // 동기 콜백
+                                console.log(res)
+                            })
+                      }
+          ```
+        - 카테고리 영역과 추천 영역의 렌더 순서가 바뀐다.
+        <br><img width="744" alt="image" src="https://user-images.githubusercontent.com/90082464/156690371-ced9404a-1b43-46c1-bfcb-51eca1b8bb18.png">
+        
+6. fetch 와 Promise 공부..
+    - promise 는 콜백으로 resolve, reject 를 받는다.
+    - 콜백에서 resolve() 가 실행되면 promise 는 이행상태가 되며, promise Value 를 전달한다.
+    - 그 값은 .then 을 사용하여 받을 수 있으며, then 도 promise 를 반환하므로 then 을 체이닝해서 사용할 수 있다.
+    - then 자체는 콜스택에 바로 올라가고 콜백함수를 콜백큐로 보내므로, then(실행함수) 로 하면 함수는 이전 then 의 콜백함수와 상관없이 동기적으로 바로 실행된다. => async & await 의 경우 await 시 함수 자체를 지연한다.
+    - then 의 return 은 resolve 와 같다.
+    - 그럼 Fetch 는 내부에 resolve 가 있는 건가? => 요청이 성공하면 resolve.
+        - fetch()로 부터 반환되는 Promise 객체는 HTTP error 상태를 reject하지 않습니다. HTTP Statue Code가 404나 500을 반환하더라도요. 대신 ok 상태가 false인 resolve가 반환되며, 네트워크 장애나 요청이 완료되지 못한 상태에는 reject가 반환됩니다. 
+    
 
 #### refactoring
 

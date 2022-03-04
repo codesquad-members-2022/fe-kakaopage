@@ -16,3 +16,9 @@ export function createCategory(categoryMenus) {
     categoryMenus.forEach((menu) => template += `<li class="category__menu">${menu}</li>`)
     $categoryMenus.innerHTML = template;
 }
+
+export function initCategory() {
+    return fetch('http://localhost:3000/webtoon/categoryMenus')
+        .then(res => res.json())
+        .then(data => createCategory(data))
+}

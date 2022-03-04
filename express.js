@@ -1,7 +1,7 @@
 
 import express from "express";
 import path from 'path';
-import { webtoonData, contentsData } from "./public/js/webtoonData.js";
+import { webtoonData, contentsData, categoryMenus } from "./public/js/webtoonData.js";
 
 const app = express();
 const port = 3000;
@@ -26,4 +26,8 @@ app.get('/webtoon/webtoonData', (req, res) => {
 
 app.get('/webtoon/contentsData', (req, res) => {
     res.json(contentsData)
+})
+
+app.get('/webtoon/categoryMenus', (req, res) => {
+    res.json(categoryMenus)
 })
