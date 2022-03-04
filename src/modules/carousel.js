@@ -183,8 +183,8 @@ const carousel = ({ elems, unit, elemWidth, css }) => {
     children: carouselChildren,
   });
   carouselBox.style.width = `${
-    newElems.length * 100 * (isRequireClone ? 2 : 1)
-  }%`;
+    newElems.length * WIDTH_PER_ELEM * (isRequireClone ? 2 : 1)
+  }${ELEM_UNIT}`;
 
   carouselBox.style.transform = `translateX(-${WIDTH_PER_ELEM}${ELEM_UNIT})`;
 
