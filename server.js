@@ -1,6 +1,7 @@
 const router = require('./server/api/DataRouter.js');
-const express = require("express");
+const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const server = express();
 const PORT = 3000;
@@ -12,7 +13,7 @@ server.use('/data', router);
 server.set('port', process.env.PORT || PORT);
 
 server.get('/', (req, res) => {
-    res.sendFile(__dirname + './index.html');
+    res.sendFile(path.join(__dirname, './index.html'));
 });
 
 server.listen(PORT, () => {
