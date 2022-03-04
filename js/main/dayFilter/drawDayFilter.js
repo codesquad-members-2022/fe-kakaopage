@@ -28,8 +28,8 @@ const drawDayFilter = ({
   dayWebtoonsMap,
   categoriesWithDayFilter,
 }) => {
-  let curday = $category.dataset[DATA_PROP_CURDAY];
-  let category = $category.textContent;
+  const curday = $category.dataset[DATA_PROP_CURDAY];
+  const category = $category.textContent;
   if (!categoriesWithDayFilter.includes(category)) return;
 
   const WEBTOON_CATEGORY_IDX = 2;

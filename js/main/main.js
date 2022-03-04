@@ -13,12 +13,12 @@ import initCategoryCurDay from './category/initCategoryCurDay.js';
 import CarouselSlider from './preview/slider/CarouselSlider.js';
 import createPreview from './preview/createPreview.js';
 
-/* selector */
 const test = false;
 const apiURL = test
   ? 'http://localhost:3000/'
   : 'https://fe-kakaopage-api-server.herokuapp.com/';
 
+/* selector */
 const PREV_BTN_SELECTOR = '.prev-btn';
 const NEXT_BTN_SELECTOR = '.next-btn';
 const SLIDE_CUR_NUM_SELECTOR = '.slide-number .cur-number';

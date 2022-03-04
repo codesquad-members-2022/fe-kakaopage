@@ -39,14 +39,15 @@ const createContentsContainer = (title) => {
 // type = "normalCover", "bigCover", "smallCover", "wideCover"
 const drawWebtoons = ({ webtoonArr, coverType, contentsTitle }) => {
   const $container = createContentsContainer(contentsTitle);
-  const webtoonComponentContainer = selector(
+  const $webtoonComponentContainer = selector(
     `.${WEBTOON_CONTAINER_CLASSNAME}`,
     $container
   );
-  for (let i = 0; i < webtoonArr.length; i++) {
-    const $webtoonComponent = createComponent(coverType, webtoonArr[i]);
-    webtoonComponentContainer.appendChild($webtoonComponent);
-  }
+
+  webtoonArr
+    .map((webtoon) => createComponent(coverType, webtoon))
+    .forEach(($webtoon) => $webtoonComponentContainer.appendChild($webtoon));
+
   const $mainContainer = createWebtoonsContainer();
   $mainContainer.appendChild($container);
 
