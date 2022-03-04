@@ -10,7 +10,7 @@ import { createDailyContents } from "./components/daily-contents.js";
 
 const fillWithData = (req) => {
   // `http://localhost:3000/${req.path}`
-  fetch(`https://kakapage-nanjeong.herokuapp.com/${req.path}`)
+  return fetch(`https://kakapage-nanjeong.herokuapp.com/${req.path}`)
     .then((res) => res.json())
     .then((data) => req.createBlock(data));
 };
