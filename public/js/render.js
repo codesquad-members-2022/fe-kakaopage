@@ -1,15 +1,15 @@
-import { $, addComponent, toggleList, getToday } from "./dom-lib.js";
+import { $, addComponent, toggleList, getToday } from "./util/dom-lib.js";
 import { headerMenu } from "./component/header-menu.js";
 import { category } from "./component/category.js";
 import { empty } from "./component/empty.js";
 import { jumbotron } from "./component/jumbotron.js";
-import { gridMenu } from "./component/grid-menu.js";
+import { simpleMenu } from "./component/simple-menu.js";
 import { adBanner } from "./component/ad-banner.js";
 import { footerInfo } from "./component/footer-info.js";
 import { dayPage } from "./component/day-page.js";
 import { dayPageList } from "./component/dayPageList.js";
 import { toonMain } from "./component/toon-main.js";
-import {} from "./carousel.js";
+import { initCarouselEvent, playCarousel } from "./util/carousel.js";
 
 const menuData = ["home", "toon", "novel", "vod", "broadcast", "book"];
 const dayPageData = ["월", "화", "수", "목", "금", "토", "일", "완결"];
@@ -26,7 +26,7 @@ const categoryData = [
 ];
 const data = await getJson("/api");
 
-async function getJson(url = "/") {
+async function getJson(url = "") {
   try {
     const res = await fetch(url);
     return await res.json();
@@ -35,6 +35,7 @@ async function getJson(url = "/") {
   }
 }
 
+// Render.property => clickEvent name
 export const Render = {
   fixedHeader: () => {
     addComponent("header", headerMenu(data.headerImg, menuData));
@@ -45,8 +46,10 @@ export const Render = {
   },
 
   carousel: (target) => {
-    console.log("target :>> ", target);
-    // .toon-jumbotron_left, .toon-jumbotron_right
+    const targetBtn = target.classList.value.includes("left")
+      ? "left"
+      : "right";
+    playCarousel[targetBtn]();
   },
 
   //* active functions
@@ -60,7 +63,6 @@ export const Render = {
     toggleList(target, "check");
     addComponent(".toon-category", category(categoryData));
     Render.toon_main();
-    Render.toonDaySeriesTop();
   },
 
   header_novel: (target) => {
@@ -86,7 +88,6 @@ export const Render = {
     addComponent(".toon-category", empty("😅 EMPTY SPACE"));
     addComponent(".toon-main", empty("😅 EMPTY SPACE"));
   },
-
   // home_main:
   // novel_main:
   // movie_main:
@@ -94,11 +95,21 @@ export const Render = {
   // book_main:
   toon_main: () => {
     addComponent(".toon-main", toonMain());
+    addComponent(".toon-category", category(categoryData));
     addComponent(".toon-jumbotron", jumbotron(data));
-    addComponent(".toon-todaymenu", gridMenu(data));
+    addComponent(".toon-todaymenu", simpleMenu(data));
     addComponent(".toon-ad-banner-1", adBanner(data, "미슐랭스타"));
     addComponent(".toon-daytop", dayPage(data, dayPageData));
     addComponent(".toon-daytop_album", dayPageList(data, getToday()));
+
+    Render.toonCategory();
+    Render.toonDaySeriesTop();
+    initCarouselEvent({
+      slideContainer: ".toon-jumbotron",
+      slide: ".toon-jumbotron_slides",
+      slides: ".toon-jumbotron_carousel",
+      INTERVAL: 4000,
+    });
   },
 
   toonCategory: (target = $(".toon-category a:first-child")) => {
@@ -124,7 +135,7 @@ export const Render = {
     toggleList(target, "check");
     let clickDay = target.innerHTML;
 
-    // [수목금토일완결] 데이터 없어서 임시용
+    //todo [수목금토일완결] 데이터 없어서 임시용
     clickDay = ["월", "수", "금", "일"].some((v) => v === clickDay)
       ? "월"
       : "화";
