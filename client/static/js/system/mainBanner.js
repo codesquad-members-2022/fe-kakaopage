@@ -23,7 +23,6 @@ const getMainBannerContentsTemplate = (bannerData) => {
     `
 }
 
-//bannerData는 쓰던거
 export const activateMainBanner = (bannerData) => {
     const mainBanner = document.querySelector('.main-banner');
     activateSlide(mainBanner, bannerData, getBannerContentTemplate);

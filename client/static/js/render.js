@@ -3,8 +3,7 @@ import { getData } from './utils.js';
 import { getHeaderTemplate } from './system/header.js';
 import { getGnbTemplate, setNewMarkEvent } from './system/gnb.js';
 import { getGenreTabTemplate, setDefault } from './system/genreTab.js'
-import { activateMainBanner } from './system/mainBanner.js';
-import { getWebtoonPageTemplate } from './pages/webtoon.js';
+import { getWebtoonPageTemplate, activateWebtoonPage } from './pages/webtoon.js';
 // import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
 
 export const initRender = () => {
@@ -29,18 +28,15 @@ const renderGenreTab = (page) => {
     });
 }
 
-const pageDic = {
-    'webtoon': getWebtoonPageTemplate
+const pageFunctionDic = {
+    'webtoon': {"getTemplate": getWebtoonPageTemplate, "activatePage": activateWebtoonPage} 
 }
 
 const renderContents = (page, genre) => {
     return getData(page, genre)
     .then(pageData => {
-        document.querySelector('.tab-contents').innerHTML = pageDic[page](genre, pageData);
-        return pageData
-    })
-    .then(pageData => {
-        activateMainBanner(pageData.mainBanner);
+        document.querySelector('.tab-contents').innerHTML = pageFunctionDic[page].getTemplate(genre, pageData);
+        pageFunctionDic[page].activatePage(pageData)
     })
 }
 

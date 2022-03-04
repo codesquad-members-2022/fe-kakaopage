@@ -1,10 +1,11 @@
-import { getMainBannerTemplate } from "../system/mainBanner.js"
+import { getMainBannerTemplate, activateMainBanner } from "../system/mainBanner.js"
 import { getCategoryGridTemplate } from "../system/categoryGrid.js"
 import { getEventBannerTemplate } from "../system/eventBanner.js";
 import { getWorkSectionTemplate } from "../system/workSection.js";
+import { getRecommendEventTemplate } from "../system/recommendEvent.js";
 
 const componentsListDic = {
-    "home": ['mainBanner', 'categoryGrid', 'eventBanner','newTop'], //'daySeriesTop','dailyRankingTop', 'recommendEventTop'],
+    "home": ['mainBanner', 'categoryGrid', 'eventBanner','newTop', 'recommendEvent'], //'daySeriesTop','dailyRankingTop', 'recommendEvent'],
     "daily": ['mainBanner'],
     "webtoon": ['mainBanner'],
     "boy": ['mainBanner', 'categoryGrid', 'eventBanner'],
@@ -20,7 +21,8 @@ const componentMakeFunctionDic = {
     "categoryGrid": getCategoryGridTemplate,
     "eventBanner": getEventBannerTemplate,
     "daySeriesTop": getWorkSectionTemplate.bind(null, 'small', 'daySeriesTop'),
-    "newTop": getWorkSectionTemplate.bind(null, 'banner', 'newTop')
+    "newTop": getWorkSectionTemplate.bind(null, 'banner', 'newTop'),
+    "recommendEvent": getRecommendEventTemplate
 }
 
 export const getWebtoonPageTemplate = (genre, pageData) => {
@@ -31,4 +33,8 @@ export const getWebtoonPageTemplate = (genre, pageData) => {
         return template + componentTemplate;
     },'');
     return pageTemplate;
+}
+
+export const activateWebtoonPage = (pageData) => {
+    activateMainBanner(pageData.mainBanner);
 }
