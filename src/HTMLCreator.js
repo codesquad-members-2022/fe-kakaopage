@@ -1,5 +1,3 @@
-import * as Utils from "./Utils.js";
-
 let IconSrc;
 
 export function setIconSrc(iconSrcData) {
@@ -129,6 +127,7 @@ function createSliderListHTML(sliderData) {
 
         return listHTML + itemHTML;
     }, '');
+
     return /* html */ `
         <div class="banner__contents">
             <ul class="banner__list">

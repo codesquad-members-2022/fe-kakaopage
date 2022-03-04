@@ -1,9 +1,7 @@
 import * as HTMLCreator from "./HTMLCreator.js"
 import * as SliderController from "./SliderController.js";
-import {
-    setNavEvent
-} from "./NavEventController.js"
 import * as Utils from "./Utils.js";
+import setNavEvent from "./NavEventController.js"
 
 const $body_main = document.querySelector('.custom');
 

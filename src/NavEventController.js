@@ -1,7 +1,7 @@
 import * as Render from "./Render.js"
 import * as Utils from "./Utils.js"
 
-function setNavEvent(className) {
+export default function setNavEvent(className) {
     const $nav = document.querySelector(`.${className}`);
     const eventHandler = getNavEventHandler(className);
     $nav.addEventListener('click', eventHandler);
@@ -56,7 +56,3 @@ function headerNavClickHandler(event) {
     $nav_item_selected.classList.remove(selected);
     Render.rendering(dataKey);
 }
-
-export {
-    setNavEvent
-};
