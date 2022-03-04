@@ -74,9 +74,11 @@ function renderBlPage() {
 function renderSliderBanner(tabName) {
     const $banner_section = document.createElement('section');
     $banner_section.classList.add('main-banner', 'section');
-    $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(tabName);
     $body_main.appendChild($banner_section);
-    SliderController.init();
+    Utils.getDataWithCallback((data) => {
+        $banner_section.innerHTML = HTMLCreator.createMainBannerHTML(data);
+        SliderController.init();
+    }, 'slider', tabName);
 }
 
 function renderMenu(tabName) {
@@ -86,12 +88,9 @@ function renderMenu(tabName) {
     $menu_section.classList.add('contents_menu', 'section');
     $menu_section.appendChild($menu_div);
     $body_main.appendChild($menu_section);
-    Utils.getData('data', 'menu').then((menuData) => menuData[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data)));
-}
-
-function createMenu(dataObject, tabName, $menu_div) {
-    console.log('createMenu : ' + dataObject);
-    dataObject[tabName].forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
+    Utils.getDataWithCallback((menuData) => {
+        menuData.forEach(data => $menu_div.innerHTML += HTMLCreator.createMenuItemHTML(data));
+    }, 'menu', tabName);
 }
 
 function renderSubBanner(tabName) {
@@ -128,12 +127,17 @@ function createContentsMain(...children) {
 }
 
 function renderDailyTop(selectedWeek = 'mon') {
-    const $nav = createWeeklyNavNode(getWeekNavData());
-    const $week_list = createTopList('week', selectedWeek);
-    const $main = createContentsMain($nav, $week_list);
-    const $header = createContentsHeader('요일연재 TOP', '1,626');
-    renderContentsContainer($header, $main);
-    setNavEvent('week-nav__list');
+    const $container = document.createElement('section');
+    $container.classList.add('contents-container', 'section', 'center');
+    $body_main.appendChild($container);
+    Utils.getDataWithCallback((data) => {
+        const $nav = createWeeklyNavNode(getWeekNavData());
+        const $week_list = createTopList('week', data);
+        const $main = createContentsMain($nav, $week_list);
+        const $header = createContentsHeader('요일연재 TOP', '1,626');
+        $container.append($header, $main);
+        setNavEvent('week-nav__list');
+    }, 'daily', selectedWeek);
 }
 
 function getWeekNavData() {
@@ -188,34 +192,45 @@ function createWeeklyNavNode(weekData) {
     $nav.classList.add('week-nav');
     $list.classList.add('week-nav__list', 'center');
 
-    weekData.forEach(data => $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected));
+    weekData.forEach((data) => {
+        $list.innerHTML += HTMLCreator.createWeekNavItemHTML(data.text, data.dataKey, data.selected)
+    });
 
     return $nav;
 }
 
-function createTopList(listType, dataKey = null) {
+function createTopList(listType, data) {
     const $list = document.createElement('ul');
     $list.classList.add('comic-list', 'center');
     $list.id = `list-${listType}`;
-    $list.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
+    $list.innerHTML = HTMLCreator.createTopListHTML(data);
     return $list;
 }
 
-export function renderTopList(listType, dataKey = null) {
+export function renderTopList(listType, data) {
     const comicList = document.getElementById(`list-${listType}`);
-    comicList.innerHTML = HTMLCreator.createTopListHTML(dataKey ? dataKey : listType);
+    comicList.innerHTML = HTMLCreator.createTopListHTML(data);
 }
 
 function renderGenreTop() {
     const genreList = ['romance', 'rofan', 'drama', 'bl', 'boy', 'action'];
     const genreTitle = ['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협'];
     genreList.forEach((genre, index) => {
-        const $header = createContentsHeader(`${genreTitle[index]} TOP`);
-        const $list = createTopList(genre);
-        const $main = createContentsMain($list);
-        renderContentsContainer($header, $main);
-        renderTopList(genre);
+        const $container = document.createElement('section');
+        $container.classList.add('contents-container', 'section', 'center');
+        $body_main.appendChild($container);
+        Utils.getDataWithCallback((data) => {
+            renderGenreTopContents($container, genre, genreTitle[index], data);
+        }, 'genre', genre);
     });
+}
+
+function renderGenreTopContents($container, genre, genreTitle, data) {
+    const $header = createContentsHeader(`${genreTitle} TOP`);
+    const $list = createTopList(genre, data);
+    const $main = createContentsMain($list);
+    $container.append($header, $main);
+    renderTopList(genre, data);
 }
 
 function renderInstallButton() {

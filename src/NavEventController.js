@@ -1,4 +1,5 @@
 import * as Render from "./Render.js"
+import * as Utils from "./Utils.js"
 
 function setNavEvent(className) {
     const $nav = document.querySelector(`.${className}`);
@@ -26,7 +27,10 @@ function weekNavClickHandler(event) {
 
     $nav_item.classList.add(selected);
     $nav_item_selected.classList.remove(selected);
-    Render.renderTopList('week', dataKey);
+
+    Utils.getDataWithCallback((data) => {
+        Render.renderTopList('week', data);
+    }, 'daily', dataKey);
 }
 
 function headerNavClickHandler(event) {
