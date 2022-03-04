@@ -18,10 +18,10 @@ SubBanner.prototype.mount = function () {
   const { list } = section_text_banner[FIRST_ELEMENT];
 
   const $subBanner = this.$target;
-  const $bannerElems = list.map(({ bg_img, webtoon }) => {
+  const $bannerElems = list.map(({ bg_img, title }) => {
     const wtTpl = `
     <img class="subImg" src=
-    "${KAKAO_DATA_URL + bg_img}" alt="${webtoon}" />`;
+    "${KAKAO_DATA_URL + bg_img}" alt="${title}" />`;
     const div = document.createElement("div");
     div.innerHTML = wtTpl;
     return div;
