@@ -1,4 +1,4 @@
-import { CL } from './constants.js';
+import { CL, today } from './constants.js';
 
 const $ = (selector, base = document) => base.querySelector(selector);
 const $$ = (selector, base = document) => base.querySelectorAll(selector);
@@ -9,11 +9,9 @@ const activateTab = target => {
   });
 };
 
-const loadData = async url => {
-  const response = await fetch(url);
-  const json = await response.json();
-  const data = await json;
-  return data;
+const loadData = async (url, path = '') => {
+  const response = await fetch(`${url}${path}`);
+  return response.json();
 };
 
 const changeTitle = targetId => {
@@ -24,4 +22,36 @@ const removeAlarm = target => {
   target.classList.remove('alarm');
 };
 
-export { $, $$, loadData, activateTab, changeTitle, removeAlarm };
+const displayTodayTab = () => {
+  const $dayList = $('.day__list');
+  [...$dayList.children].forEach(day => {
+    if (day.id === today) {
+      day.classList.add(CL.SELECTED);
+      return;
+    }
+  });
+};
+
+const getData = urls => {
+  const requests = Object.values(urls).map(url =>
+    fetch(url).then(responses => responses.json())
+  );
+  return Promise.all(requests);
+};
+
+const setDefaultCategory = ({ cateName }) => {
+  const defaultCategory = $(`[data-category="${cateName}"]`);
+  defaultCategory.classList.add(CL.SELECTED);
+};
+
+export {
+  $,
+  $$,
+  loadData,
+  activateTab,
+  changeTitle,
+  removeAlarm,
+  displayTodayTab,
+  getData,
+  setDefaultCategory,
+};

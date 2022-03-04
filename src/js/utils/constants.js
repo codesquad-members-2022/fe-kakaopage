@@ -1,4 +1,10 @@
 const WEBTOON_URL = 'https://millie-kakaopage.herokuapp.com/webtoon/';
+const CATEGORY_URL = 'https://millie-kakaopage.herokuapp.com/category/';
+
+const URLS = {
+  webtoon: 'https://millie-kakaopage.herokuapp.com/webtoon/',
+  category: 'https://millie-kakaopage.herokuapp.com/category/',
+};
 
 const CL = {
   SELECTED: 'selected',
@@ -23,4 +29,4 @@ const today = new Date()
   .toLocaleString('en-us', { weekday: 'short' })
   .toLowerCase();
 
-export { WEBTOON_URL, CL, TITLE, VAL, today };
+export { WEBTOON_URL, CATEGORY_URL, URLS, CL, TITLE, VAL, today };
