@@ -12,7 +12,7 @@ import {
   DailyRanking,
   RecommendEvent,
 } from '../components';
-import { Categories } from './index.js';
+import { store } from './store.js';
 
 const PageComponent = {
   home: () => TempPage('Home'),
@@ -23,16 +23,16 @@ const PageComponent = {
   book: () => TempPage('Book'),
 };
 
-const sectionComponent = {
+const SectionComponent = {
   action: () => [
     MainNav(),
-    CategoryMenu(Categories.action),
+    CategoryMenu(store.categories.action),
     GenreTop('액션무협'),
     AppDownloadLink(),
   ],
   bl: () => [
     MainNav(),
-    CategoryMenu(Categories.bl),
+    CategoryMenu(store.categories.bl),
     GenreTop('BL/GL'),
     AppDownloadLink(),
   ],
@@ -44,42 +44,38 @@ const sectionComponent = {
   ],
   drama: () => [
     MainNav(),
-    CategoryMenu(Categories.drama),
+    CategoryMenu(store.categories.drama),
     GenreTop('드라마'),
     AppDownloadLink(),
   ],
   home: () => [
     MainNav(),
     MainBanner(),
-    CategoryMenu(Categories.home),
+    CategoryMenu(store.categories.home),
     SubBanner(),
     DailySeriesRanking(),
     AnticipatedWork(),
-    GenreTop('로맨스'),
-    GenreTop('로판'),
-    GenreTop('드라마'),
-    GenreTop('BL/GL'),
-    GenreTop('소년'),
-    GenreTop('액션무협'),
+    ...['로맨스', '로판', '드라마', 'BL/GL', '소년', '액션무협']
+      .map((genre) => GenreTop(genre)),
     DailyRanking(),
     RecommendEvent(),
     AppDownloadLink(),
   ],
   romance: () => [
     MainNav(),
-    CategoryMenu(Categories.romance),
+    CategoryMenu(store.categories.romance),
     GenreTop('로맨스'),
     AppDownloadLink(),
   ],
   romanceFantasy: () => [
     MainNav(),
-    CategoryMenu(Categories.romanceFantasy),
+    CategoryMenu(store.categories.romanceFantasy),
     GenreTop('로판'),
     AppDownloadLink(),
   ],
   shonen: () => [
     MainNav(),
-    CategoryMenu(Categories.shonen),
+    CategoryMenu(store.categories.shonen),
     GenreTop('소년'),
     AppDownloadLink(),
   ],
@@ -92,5 +88,5 @@ const sectionComponent = {
 
 export {
   PageComponent,
-  sectionComponent,
+  SectionComponent,
 };

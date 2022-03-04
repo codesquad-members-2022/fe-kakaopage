@@ -1,16 +1,16 @@
 import { BannerList } from '../index.js';
-import { MainBanners } from '../../data';
-import { bannerCallback, carouselCallback, setCarousel, carouselTransitionHandler } from '../../js';
-import { convertStringToHTML, setContainerWidth } from '../../utils.js';
+import { store } from '../../data/store.js';
+import { bannerCallback, carouselCallback, setCarousel, carouselTransitionHandler } from '../../js/event';
+import { convertStringToHTML, setContainerWidth } from '../../js/util';
 
 const MainBanner = (type = 'carousel') => {
 
   let html = convertStringToHTML(
           `<section class="contents main-banner" data-banner="main">
-            ${BannerList('main', MainBanners)}
+            ${BannerList('main', store.banners.main)}
             <p class="banner-count">
               <span class="current">1</span> / 
-              <span class="total">${MainBanners.length}</span>
+              <span class="total">${store.banners.main.length}</span>
             </p>
             <div class="banner-btn-group">
               <button type="button" class="back">이전 배너</button>

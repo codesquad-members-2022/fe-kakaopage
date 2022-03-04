@@ -1,4 +1,4 @@
-import { convertReader } from '../../utils.js';
+import { convertReader } from '../../js/util';
 
 const BannerItem = (idx, { webtoonInfo, bannerImage, bannerText, bannerBadge, link }) => {
   return `<li class="banner" data-count="${idx}">

@@ -1,6 +1,6 @@
-import { AnticipatedWorks } from '../../data';
 import { ContentsHeader, ContentsList } from '../index.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
+import { store } from '../../data/store.js';
 
 const AnticipatedWork = () => {
 
@@ -9,7 +9,7 @@ const AnticipatedWork = () => {
   return convertStringToHTML(
           `<section class="contents" data-genre="기대신작">
             ${ContentsHeader(title)}
-            ${ContentsList('large', AnticipatedWorks)}
+            ${ContentsList('large', store.banners.anticipatedWork)}
           </section>`);
 };
 

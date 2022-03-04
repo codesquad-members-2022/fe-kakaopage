@@ -1,10 +1,10 @@
-import { sectionComponent } from '../../data';
-import { convertStringToHTML } from '../../utils.js';
+import { SectionComponent } from '../../data/components.js';
+import { convertStringToHTML } from '../../js/util';
 
-const MainContents = (type) => {
+const MainContents = (contentsType) => {
 
   const div = convertStringToHTML('<div class="main-contents"></div>');
-  div.append(...sectionComponent[type]());
+  div.append(...SectionComponent[contentsType]());
 
   return div;
 };

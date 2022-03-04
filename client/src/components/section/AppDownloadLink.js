@@ -1,4 +1,4 @@
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 
 const AppDownloadLink = () => {
   return convertStringToHTML(

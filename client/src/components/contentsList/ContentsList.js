@@ -1,10 +1,10 @@
 import { BannerItem, ContentsListItem } from '../index.js';
 
-const ContentsList = (list, contentsList) => {
-  return `<ul class="contents-list ${list}">
+const ContentsList = (listType, contentsList) => {
+  return `<ul class="contents-list ${listType}">
             ${contentsList.length ? 
                 contentsList.reduce((prev, cur, idx) => {
-                  return prev += list === 'small' ?
+                  return prev += listType === 'small' ?
                     ContentsListItem(cur) :
                     BannerItem(idx + 1, cur);
                 }, '') :

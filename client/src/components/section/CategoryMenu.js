@@ -1,5 +1,5 @@
 import { CategoryMenuList } from '../index.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 
 const CategoryMenu = (menuList) => {
   return convertStringToHTML(

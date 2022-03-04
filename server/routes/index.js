@@ -6,5 +6,8 @@ router.get('/', (req, res) => {
 });
 
 router.use('/webtoon', require('./webtoon'));
+router.use('/nav-item', require('./navItem'));
+router.use('/banner', require('./banner'));
+router.use('/category', require('./category'));
 
 module.exports = router;

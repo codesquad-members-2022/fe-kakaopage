@@ -1,15 +1,25 @@
 const BASE_URL = 'http://localhost:3000';
 
-const request = (url) => {
+const request = (url, callback) => {
   return fetch(url)
     .then((response) => response.json())
-    .catch((err) => console.log(err));
+    .then(callback)
+    .catch((err) => console.error(err));
 };
 
-const WebtoonApi = {
-  getAllWebtoon() {
-    return request(`${BASE_URL}/webtoon`);
+const DataApi = {
+  getWebtoon(callback) {
+    return request(`${BASE_URL}/webtoon`, callback);
+  },
+  getNavItem(callback) {
+    return request(`${BASE_URL}/nav-item`, callback);
+  },
+  getBanner(callback) {
+    return request(`${BASE_URL}/banner`, callback);
+  },
+  getCategory(callback) {
+    return request(`${BASE_URL}/category`, callback);
   },
 };
 
-export default WebtoonApi;
+export default DataApi;

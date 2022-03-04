@@ -1,5 +1,5 @@
-import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../../render.js';
-import { MainNavItems, ContentsNavItems, PageNavItems } from '../../data';
+import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../render';
+import { store } from '../../data/store.js';
 
 const changeSelectedItem = (items, selectedItem) => {
   items.forEach((item) => {
@@ -8,7 +8,7 @@ const changeSelectedItem = (items, selectedItem) => {
 };
 
 const resetNav = () => {
-  !MainNavItems[0].isSelected && changeSelectedItem(MainNavItems, MainNavItems[0].name);
+  !store.navItems.main[0].isSelected && changeSelectedItem(store.navItems.main, store.navItems.main[0].name);
 };
 
 const handleNav = (e) => {
@@ -20,19 +20,19 @@ const handleNav = (e) => {
   if (e.target.classList.contains('selected')) return;
 
   if (nav.classList.contains('page-nav')) {
-    changeSelectedItem(PageNavItems, selectedItem);
+    changeSelectedItem(store.navItems.page, selectedItem);
     resetNav();
     renderPageNav();
     renderPage(category);
   }
 
   else if (nav.classList.contains('main-nav')) {
-    changeSelectedItem(MainNavItems, selectedItem);
+    changeSelectedItem(store.navItems.main, selectedItem);
     renderContents(category);
   }
 
   else if (nav.classList.contains('contents-nav')) {
-    changeSelectedItem(ContentsNavItems, selectedItem);
+    changeSelectedItem(store.navItems.contents, selectedItem);
     renderDailySeriesRanking();
   }
 };
