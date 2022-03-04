@@ -45,10 +45,7 @@ const moveGenreNav = (target) => {
   switch (target.dataset.nav) {
     case 'home':
       renderHome(target.dataset.nav)
-        .then(() => {
-          eventHome();
-          setSlide();
-        });
+        .then(() => eventHome());
       break;
     case 'daily':
       renderDaily(target.dataset.nav)
@@ -95,8 +92,8 @@ const clickDailyTopList = () => {
       const DAILY_ITEMS = 10; 
       const targetDay = event.target.parentNode.dataset.day;
       
-      const dailyTopUrl = 'http://localhost:3000/daily-top';
-      getData(dailyTopUrl)
+      const dailyTopRouter = 'daily-top';
+      getData(dailyTopRouter)
         .then(json => json[targetDay])
         .then(data => makeWebtoonList(DAILY_ITEMS, data))
         .then(templete => topContainer.insertAdjacentHTML('beforeend', templete));
@@ -147,13 +144,13 @@ const eventHome = () => {
   todayFocus();
   clickPromotionBanner();
   clickDailyTopList();
+  setSlide();
 }
 
 window.addEventListener('load', () => {
   renderHome('home')
     .then(() => {
-      eventHome();
       clickGenresList();
-      setSlide();
+      eventHome();
     });
 });

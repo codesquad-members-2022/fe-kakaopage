@@ -10,29 +10,29 @@ import { makeWebtoonList } from '../components/webtoonList.js'
 import {getData} from '../utility.js'
 
 function renderMainBanner(tab) {
-  const url = 'http://localhost:3000/main-banner';
-  return getData(url)
+  const router = 'main-banner';
+  return getData(router)
     .then(json => json[tab])
     .then(data => makeMainBanner(data));
 }
 
 function renderPromotionBanner(tab) {
-  const url = 'http://localhost:3000/promotion-banner';
-  return getData(url)
+  const router = 'promotion-banner';
+  return getData(router)
     .then(json => json[tab])
     .then(data => makePromotionBanner(data));
 }
 
 function renderThemeMenu(tab) {
-  const url = 'http://localhost:3000/theme-Menu';
-  return getData(url)
+  const router = 'theme-Menu';
+  return getData(router)
     .then(json => json[tab])
     .then(data => makeThemeMenu(data));
 }
 
 function renderSelectDayDaily() {
-  const url = 'http://localhost:3000/daily-top';
-  return getData(url)
+  const router = 'daily-top';
+  return getData(router)
     .then(json => {
       const today = new Date().getDay();
       const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
@@ -46,7 +46,7 @@ function renderSelectDayDaily() {
 // =========== container 관련 ===========
 function renderContainer(containerInfo, tab) {
   return renderContainerLayout(containerInfo, tab)
-  .then(containerLayout => makeContainer(containerInfo, containerLayout))
+  .then(containerLayout => makeContainer(containerInfo, containerLayout));
 }
 
 function renderContainerLayout(containerInfo, tab) {
@@ -61,8 +61,8 @@ function renderContainerLayout(containerInfo, tab) {
 }
 
 function renderSelectDayHome(num) {
-  const url = 'http://localhost:3000/daily-top';
-  return getData(url)
+  const router = 'daily-top';
+  return getData(router)
     .then(json => {
       const today = new Date().getDay();
       const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
@@ -73,15 +73,15 @@ function renderSelectDayHome(num) {
 }
 
 function renderGenreTop(items) {
-  const url = 'http://localhost:3000/home-genre-top'
-  return getData(url)
+  const router = 'home-genre-top'
+  return getData(router)
     .then(json => json['romanceTop'])
     .then(data => makeWebtoonList(items, data));
 }
 
 function renderRankingList(tab) {
-  const url = 'http://localhost:3000/daily-ranking'
-  return getData(url)
+  const router = 'daily-ranking'
+  return getData(router)
     .then(json => json)
     .then(data => makeRankingList(data, tab));
 }
