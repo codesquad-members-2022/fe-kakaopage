@@ -1,7 +1,12 @@
+import * as Utils from "./Utils.js";
 import * as Render from "./Render.js"
+import * as HTMLCreator from "./HTMLCreator.js"
 
 function init() {
-    Render.rendering('home');
+    Utils.getData('icon-src').then((data) => {
+        HTMLCreator.setIconSrc(data);
+        Render.rendering('home');
+    });
 }
 
 init();

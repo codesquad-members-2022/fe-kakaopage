@@ -1,3 +1,11 @@
+import * as Utils from "./Utils.js";
+
+let IconSrc;
+
+export function setIconSrc(iconSrcData) {
+    IconSrc = iconSrcData;
+}
+
 export function createTopThumbHTML(comicInfo) {
     const ratingIconClass = isNaN(comicInfo.rating) ? 'comic-thumb__star gone' : 'comic-thumb__star';
     const thumbHTML = /* html */ `
@@ -22,9 +30,8 @@ export function createTopThumbHTML(comicInfo) {
     return thumbHTML;
 }
 
-export function createTopListHTML(type) {
-    const comicData = type in DailyTop ? DailyTop[type] : GenreTop[type];
-    let listHTML = comicData.reduce((listHTML, data) => listHTML + createTopThumbHTML(data), '');
+export function createTopListHTML(data) {
+    let listHTML = data.reduce((listHTML, data) => listHTML + createTopThumbHTML(data), '');
     return listHTML;
 }
 
@@ -111,8 +118,7 @@ function createSliderItemHTML(itemData) {
     `;
 }
 
-function createSliderListHTML(tabName) {
-    const sliderData = SliderBanner[tabName];
+function createSliderListHTML(sliderData) {
     let firstItem = 0;
     let endItem = sliderData.length - 1;
     const listHTML = sliderData.reduce((listHTML, itemData, index) => {
@@ -153,10 +159,10 @@ function createSliderButtonHTML() {
     `
 }
 
-export function createMainBannerHTML(tabName) {
+export function createMainBannerHTML(data) {
     return /* html */ `
         <div class="banner">
-            ${createSliderListHTML(tabName)}
+            ${createSliderListHTML(data)}
             ${createSliderOrderHTML()}
             ${createSliderButtonHTML()}
         </div>
