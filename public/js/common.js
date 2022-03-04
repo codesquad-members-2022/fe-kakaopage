@@ -104,3 +104,11 @@ export function fetchURL(dataName) {
     console.error('Error:', error);
   });
 }
+
+export function delegateEventListener(parentElement, func) {
+  parentElement.addEventListener("click", ({target}) => {
+    if (target.tagName === "DIV") {
+      func(target);
+    }
+  });
+}
