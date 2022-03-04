@@ -29,9 +29,14 @@ getHtml()
   })
   .then((res) => {
     console.log(res);
-    fs.writeFile("webtoons.js", JSON.stringify(res, null, 2), "utf8", (err) => {
-      if (err) {
-        console.log(err);
+    fs.writeFile(
+      "webtoons.json",
+      JSON.stringify(res, null, 2),
+      "utf8",
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
       }
-    });
+    );
   });

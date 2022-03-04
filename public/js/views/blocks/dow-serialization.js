@@ -1,6 +1,6 @@
 import { dowNav } from "../components/dow-nav.js";
 import { dowSerializationNav } from "../components/dow-serialization-nav.js";
-import { dowTopWebtoons } from "../../../../fixing-webtoons.js";
+import { dowTopWebtoons } from "../../../../data/fixing-webtoons.js";
 import { webtoonCard } from "../components/webtoon-card.js";
 
 const position = "beforeend";
