@@ -1,5 +1,5 @@
 import {renderHome, renderDaily, renderWebtoon, renderBoy} from './render/pages.js';
-import {makeWebtoonList} from './components/webtoonList.js';
+import {makeWebtoonItems} from './components/webtoonList.js';
 import Slider from './slider.js';
 import {$, $all, getData} from './utility.js';
 
@@ -80,8 +80,7 @@ const clickDailyTopList = () => {
       const focusedClass = 'day--focused';
       setFocus(parentNode, focusedClass);
 
-      const topContainer = event.target.closest('.select__day').parentNode;
-      topContainer.removeChild($('.webtoons__list'));
+      const webtoonList = event.target.closest('.select__day').parentNode.lastElementChild;
 
       const DAILY_ITEMS = 10; 
       const targetDay = event.target.parentNode.dataset.day;
@@ -89,8 +88,8 @@ const clickDailyTopList = () => {
       const dailyTopRouter = 'daily-top';
       getData(dailyTopRouter)
         .then(json => json[targetDay])
-        .then(data => makeWebtoonList(DAILY_ITEMS, data))
-        .then(templete => topContainer.insertAdjacentHTML('beforeend', templete));
+        .then(data => makeWebtoonItems(DAILY_ITEMS, data))
+        .then(templete => webtoonList.innerHTML = templete);
     })
   })
 }
