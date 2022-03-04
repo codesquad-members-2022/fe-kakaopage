@@ -1,6 +1,6 @@
 import { $ } from "../utils/utils.js";
 import { CarouselContent } from "../components/CarouselContent.js";
-import { carouselData } from "../../data/dummy.js";
+import { carouselData } from "/data/dummy.js";
 
 export const handleCarousel = () => {
     const carouselList = $(".carousel__list");

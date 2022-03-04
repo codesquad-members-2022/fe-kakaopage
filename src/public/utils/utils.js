@@ -1,7 +1,8 @@
 export const $ = (className) => document.querySelector(className);
 export const days = ['월', '화', '수', '목', '금', '토', '일', '완결'];
 export const today = days[new Date().getDay() - 1];
-const serverURL = 'http://localhost:3000';
+const deploy = "DEV";
+const serverURL = deploy === "DEV" ? 'http://localhost:3000' : 'https://kakao-muffin.herokuapp.com';
 
 export const fetchData = (path, id) => {
     const url = id !== undefined ? `${serverURL}/${path}/${id}` : `${serverURL}/${path}`;
