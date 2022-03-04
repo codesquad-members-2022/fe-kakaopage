@@ -91,7 +91,7 @@ export function calculateWeekday() {
   return weekday;
 }
 
-export function fetchURL(dataName) {
+export function fetchData(dataName) {
   const DATA_URL = `http://localhost:3000/${dataName}`;
   return fetch(DATA_URL)
   .then((response) => {

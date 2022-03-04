@@ -1,7 +1,7 @@
 import * as common from "./common.js";
 
-const promotionWebtoonList = await common.fetchURL("promotionWebtoonList");
-const weeklyWebtoonList = await common.fetchURL("weeklyWebtoonList");
+const promotionWebtoonList = await common.fetchData("promotionWebtoonList");
+const weeklyWebtoonList = await common.fetchData("weeklyWebtoonList");
 
 let HTMLTemplate = "";
 const promotionWebtoonSection = common.createPromotionWebtoonSection(promotionWebtoonList["weeklyPublication"]);

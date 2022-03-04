@@ -1,7 +1,7 @@
 import * as common from "./common.js";
 import {weeklyPublicationTemplate} from "./weeklyPublication.js";
 import {homeTemplate} from "./home.js";
-const weeklyWebtoonList = await common.fetchURL("weeklyWebtoonList");
+const weeklyWebtoonList = await common.fetchData("weeklyWebtoonList");
 let previousSubCategory = document.createElement("div");
 let previousWeekdayCategory = document.createElement("div");
 let webtoonSlideIndex = 0;

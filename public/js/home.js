@@ -1,6 +1,6 @@
 import * as common from "./common.js";
 
-const promotionWebtoonList = await common.fetchURL("promotionWebtoonList");
+const promotionWebtoonList = await common.fetchData("promotionWebtoonList");
 
 function createHomeTemplate() {
   const todayCategoryList = ["오늘 UP", "오늘 신작", "오리지널", "완결까지 정주행", "독립운동가 웹툰", "오늘 랭킹 1위"];
