@@ -19,7 +19,6 @@ const setMainContents = ({
   fetch(apiURL + `api/webtoons/${selectedIdx}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const dayWebtoonsMap = data.dayWebtoons;
       const dayWebtoonsArr = dayWebtoonsMap?.[selectedDay];
       const webtoonsArr = data.popWebtoons;
