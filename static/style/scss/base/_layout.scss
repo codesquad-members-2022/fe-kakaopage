@@ -1,0 +1,28 @@
+body {
+  background: $gray-2;
+  color: $gray-9;
+
+  &::before {
+    content: '';
+    display: block;
+    clear: both;
+    height: 148px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  width: 720px;
+  min-height: 400px;
+}
+
+.category-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
