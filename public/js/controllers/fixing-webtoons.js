@@ -1,4 +1,4 @@
-import { webtoons } from "../../data/webtoons.js";
+import { webtoons } from "../../../data/webtoons.js";
 
 const dowTopList = ["일", "월", "화", "수", "목", "금", "토", "완결"];
 const dowLength = dowTopList.length - 1;

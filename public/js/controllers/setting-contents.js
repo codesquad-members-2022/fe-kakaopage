@@ -1,13 +1,13 @@
-import { webtoons } from "../../data/webtoons.js";
-import { renderingContents } from "./rendering/contents.js";
-import { promotionBanner } from "./components/promotion-banner.js";
-import { subAdBanner } from "./components/sub-ad-banner.js";
-import { dowTop } from "./blocks/dow-top.js";
-import { expectedTop } from "./blocks/expected-top.js";
-import { romanceTop } from "./blocks/romance-top.js";
-import { dailyTop } from "./blocks/daily-top.js";
-import { eventBanner } from "./components/event-banner.js";
-import { dowSerialization } from "./blocks/dow-serialization.js";
+import { webtoons } from "../../../data/webtoons.js";
+import { renderingContents } from "../views/render/contents.js";
+import { promotionBanner } from "../views/components/promotion-banner.js";
+import { subAdBanner } from "../views/components/sub-ad-banner.js";
+import { dowTop } from "../views/blocks/dow-top.js";
+import { expectedTop } from "../views/blocks/expected-top.js";
+import { romanceTop } from "../views/blocks/romance-top.js";
+import { dailyTop } from "../views/blocks/daily-top.js";
+import { eventBanner } from "../views/components/event-banner.js";
+import { dowSerialization } from "../views/blocks/dow-serialization.js";
 
 const mainNavContents = {
   홈: [

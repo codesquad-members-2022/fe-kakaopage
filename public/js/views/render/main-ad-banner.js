@@ -1,6 +1,6 @@
-import { $ } from "../utils.js";
+import { $ } from "../../util/utils.js";
 import { mainAdBanner } from "../components/main-ad-banner.js";
-import { makingClone, changeTab } from "../event/event-slide.js";
+import { makingClone, changeTab } from "../../controllers/event-slide.js";
 
 const render = (selectedData) => {
   $(".event-slider").innerHTML = selectedData

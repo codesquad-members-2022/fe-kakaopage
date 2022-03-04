@@ -1,5 +1,5 @@
-import { $ } from "../utils.js";
-import { handleCategory } from "../handle-cateogry.js";
+import { $ } from "../../util/utils.js";
+import { handleCategory } from "../../controllers/handle-cateogry.js";
 import { dowTopContents } from "../blocks/dow-top.js";
 import { renderingMainAd } from "./main-ad-banner.js";
 

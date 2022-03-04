@@ -1,6 +1,6 @@
 import { frameHeader } from "../components/frame-header.js";
 import { webtoonCard } from "../components/webtoon-card.js";
-import { webtoons } from "../../../data/webtoons.js";
+import { webtoons } from "../../../../data/webtoons.js";
 
 const romanceWebtoons = webtoons.romanceTop;
 

@@ -1,7 +1,11 @@
-import { handleCategory } from "../handle-cateogry.js";
-import { scrollDowSerialization } from "../blocks/dow-serialization.js";
-import { slideShow, autoPlayStart, autoPlayStop } from "./event-slide.js";
-import { $ } from "../utils.js";
+import { handleCategory } from "../controllers/handle-cateogry.js";
+import { scrollDowSerialization } from "../views/blocks/dow-serialization.js";
+import {
+  slideShow,
+  autoPlayStart,
+  autoPlayStop,
+} from "../controllers/event-slide.js";
+import { $ } from "../util/utils.js";
 
 const initEventListener = () => {
   document.querySelectorAll(".nav__list").forEach((e) => {

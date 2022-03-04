@@ -1,4 +1,4 @@
-import { $ } from "../utils.js";
+import { $ } from "../util/utils.js";
 const slideWidth = $(".event-slider").clientWidth;
 const slideSpeed = 0.4;
 const sec = 1000;
