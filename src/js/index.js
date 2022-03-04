@@ -1,5 +1,5 @@
-import { addTabFeature } from './eventHandler.js';
-import { render } from './render.js';
+import { addTabFeature } from './handler/eventHandler.js';
+import { render } from './render/render.js';
 
 const init = () => {
   render.otherPage('home');
