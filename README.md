@@ -6,9 +6,9 @@
 
 - [x] Contents Box 렌더 마무리
 - [x] Carousel 버그 수정
-  - PR 을 보낼 때 다시 확인해봤는데, MainBox 의 카테고리 이동시의 Carousel Interval 을 Clear 하는 것은 해결했는데, Header 의 Category 이동시의 Clear 하는 것을 생각을 놓쳐서 이 부분을 다시 수정할 예정입니다..
-- [ ] 슬라이더 버튼 추가
+- [x] 슬라이더 버튼 추가
 - [x] v2(카카오페이지 api response를 긁어온) api 로 데이터 구조 바꿔보기
+- [x] 만든 Carousel 활용해서 추천이벤트, 서브배너에서 사용하기
 
 ### ✅ PR 리뷰에서 개선한 점
 
