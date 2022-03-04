@@ -51,7 +51,7 @@ button {
 .divider {
   width: 1px;
   height: 16px;
-  background-image: url(../assets/divider.png);
+  background-image: url(../images/divider.png);
   background-color: lightgray;
 }
 
