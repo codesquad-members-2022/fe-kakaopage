@@ -1,13 +1,13 @@
-import home from './components/home.js';
-import serial from './components/serial.js';
-import webtoon from './components/webtoon.js';
+import home from './menu/home.js';
+import serial from './menu/serial.js';
+import webtoon from './menu/webtoon.js';
 import dataWebtoon from './date-webtoon.js';
-import boy from './components/boy.js';
-import drama from './components/drama.js';
-import romance from './components/romance.js';
-import fantasy from './components/fantasy.js';
-import martialArts from './components/martial-arts.js';
-import bl from './components/bl.js';
+import boy from './menu/boy.js';
+import drama from './menu/drama.js';
+import romance from './menu/romance.js';
+import fantasy from './menu/fantasy.js';
+import martialArts from './menu/martial-arts.js';
+import bl from './menu/bl.js';
 import slide from './slide/slide.js';
 
 (function init() {

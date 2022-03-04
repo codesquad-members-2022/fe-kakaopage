@@ -1,10 +1,10 @@
-import { webtoonData } from './data/webtoon-data/webtoon-data.js';
+import { webtoonData } from './data/date-webtoon-data/date-webtoon-data.js';
 import { contents } from './html-template.js';
 
 export default function init() {
   document.querySelector('.date').addEventListener('click', changeDate);
 
-  paintTodayList();
+  addTodayList();
   changeWebtoonContents();
 }
 
@@ -17,7 +17,7 @@ function selectedList() {
   return document.querySelectorAll('.date ul li');
 }
 
-function paintTodayList() {
+function addTodayList() {
   const dayWeek = getDayOfTheWeek();
   const todayNum = new Date().getDay();
   const additionalList = selectedList();
