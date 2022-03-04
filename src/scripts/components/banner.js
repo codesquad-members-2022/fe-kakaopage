@@ -61,6 +61,8 @@ export function moveSlideRight (widthRem, element, transitionTimeMs, maxWidth) {
     element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
     element.style.transform = `translateX(${xPos}rem)`;
 
+    if(xPos !== maxWidth*(-1) + widthRem) return;
+    
     if(xPos === maxWidth*(-1) + widthRem){
         xPos = widthRem*(-1);
         setTimeout(() => {
@@ -74,6 +76,8 @@ export function moveSlideLeft (widthRem, element, transitionTimeMs, maxWidth) {
     xPos += widthRem;
     element.style.transition = `ease-in-out ${transitionTimeMs}ms`;
     element.style.transform = `translateX(${xPos}rem)`;
+
+    if(xPos !== 0) return;
 
     if(xPos === 0){
         xPos = maxWidth*(-1) + widthRem*2;
