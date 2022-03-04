@@ -35,6 +35,7 @@ const loadMain = (globalCategory) => {
     })
     .catch((err) => {
       console.error(err);
+      initElement('.category-content');
       renderer.noticeBox('콘텐츠를 불러오지 못했습니다. 탭을 다시 클릭해주세요.');
     });
 };
