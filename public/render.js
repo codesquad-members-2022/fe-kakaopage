@@ -8,8 +8,10 @@ import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { createDailyContents } from "./components/daily-contents.js";
 
+const port = require("../express.js");
+
 const fillWithData = (req) => {
-  fetch(`http://localhost:3000/${req.path}`)
+  fetch(`http://localhost:${port}/${req.path}`)
     .then((res) => res.json())
     .then((data) => req.createBlock(data))
     .catch((err) => console.log(err));
