@@ -14,6 +14,13 @@ const loadData = async (url, path = '') => {
   return response.json();
 };
 
+const getAllData = urls => {
+  const requests = Object.values(urls).map(url =>
+    fetch(url).then(responses => responses.json())
+  );
+  return Promise.all(requests);
+};
+
 const changeTitle = targetId => {
   document.title = `${targetId} | kakaopage by Millie`;
 };
@@ -32,13 +39,6 @@ const displayTodayTab = () => {
   });
 };
 
-const getData = urls => {
-  const requests = Object.values(urls).map(url =>
-    fetch(url).then(responses => responses.json())
-  );
-  return Promise.all(requests);
-};
-
 const setDefaultCategory = ({ cateName }) => {
   const defaultCategory = $(`[data-category="${cateName}"]`);
   defaultCategory.classList.add(CL.SELECTED);
@@ -52,6 +52,6 @@ export {
   changeTitle,
   removeAlarm,
   displayTodayTab,
-  getData,
+  getAllData,
   setDefaultCategory,
 };
