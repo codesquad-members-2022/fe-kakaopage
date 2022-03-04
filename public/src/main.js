@@ -151,7 +151,7 @@ const eventBoyPage = () => {
   clickPromotionBanner();
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   renderHome('home')
     .then(() => {
       slider = new Slider();
