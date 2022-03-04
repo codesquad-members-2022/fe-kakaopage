@@ -34,3 +34,6 @@ export const getToday = () => {
   if (!day) day = 7;
   return day;
 };
+
+export const delay = (ms) =>
+  new Promise((resolve) => setTimeout(() => resolve(ms), ms));

@@ -1,4 +1,4 @@
-export const gridMenu = (data) => {
+export const simpleMenu = (data) => {
   const template = `${data.toonTodayMenu
     .map(
       (v) => `

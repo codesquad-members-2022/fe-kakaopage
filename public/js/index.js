@@ -1,14 +1,9 @@
-import { $ } from "./dom-lib.js";
+import { $ } from "./util/dom-lib.js";
 import { Render } from "./render.js";
 
 Render.fixedHeader();
 Render.toon_main();
 Render.footerContent();
-
-// 메뉴-초기선택
-Render.header_toon();
-Render.toonCategory();
-Render.toonDaySeriesTop();
 
 (function addEvent() {
   $("body").addEventListener("click", ({ target }) => {
