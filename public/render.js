@@ -18,6 +18,7 @@ const fillWithData = (req) => {
 
 const renderHome = () => {
   const curTab = "home";
+
   fillWithData({
     path: `${curTab}/webtoons/banner`,
     createBlock: createBanner,
@@ -54,6 +55,7 @@ const renderHome = () => {
 
 const renderDailyContents = () => {
   const curTab = "daily-contents";
+
   fillWithData({
     path: `${curTab}/webtoons/banner`,
     createBlock: createBanner,

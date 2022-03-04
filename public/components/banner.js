@@ -1,4 +1,4 @@
-import { $, insertIntoMain } from "../utils.js";
+import { $, insertIntoMain, delay } from "../utils.js";
 
 const BANNER_WIDTH = 700;
 let curBanner;
@@ -126,9 +126,9 @@ const slideEvent = (target, dataOfBanner) => {
     } else {
       slideRight2Left(dataOfBanner);
     }
-    clickable = setTimeout(() => {
+    clickable = delay(300).then(() => {
       clickable = null;
-    }, 300);
+    });
   }
 };
 
