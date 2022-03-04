@@ -16,6 +16,66 @@ export const categoryObj = {
   'BL': 9
 }
 
+export const naviRemoteObj = {
+  1: {},
+  2: {},
+  3: {},
+  4: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+  5: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+  6: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+  7: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+  8: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+  9: [
+    {'issue': 'ISSUE'},
+    {'recommend': '오늘의 추천'},
+    {'advertise': '배너'},
+    {'popularity': '지금 뜨는 인기작'},
+    {'exclusive': '독점연재'},
+    {'gift': '오늘의 추천'},
+    {'dailyRanking': '일간 랭킹 TOP'}
+  ],
+}
+
 export const rowListTitleObj = {
   weeks: {name: "weeks", imageSize:"small", imageStatus: 'grade' },
   recommendation: { name: "recommend", title: "오늘의 추천", imageSize: "large", imageStatus: "clock" },

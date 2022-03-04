@@ -1,12 +1,12 @@
 import { $, fetchData, days, today } from "../utils/utils.js";
 import { ContentListInfos } from "./ContentListInfos.js";
-import { categoryObj } from "../constants/constants.js";
+import { categoryObj, naviRemoteObj } from "../constants/constants.js";
 import { NaviRemoteComponent } from "../components/NaviRemoteComponent.js";
 import { navEvent } from "../events/navEvent.js";
 
 const commonGenreRender = async (element, categoryId) => {
     const mainInner = $('.main__inner');
-    mainInner.insertAdjacentHTML("beforeend", NaviRemoteComponent());
+    mainInner.insertAdjacentHTML("beforeend", NaviRemoteComponent(naviRemoteObj[categoryId]));
     navEvent.remoteClick();
 
     const issueData = await fetchData('category/issue', categoryId);
