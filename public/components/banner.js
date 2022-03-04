@@ -1,15 +1,17 @@
-import { $, insertIntoMain } from "../utils.js";
-import { dataOfsBanner } from "../data/home/smallBanner.js";
-import { dataOfBanner } from "../data/home/banner.js";
+import { $, insertIntoMain, delay } from "../utils.js";
 
 const BANNER_WIDTH = 700;
 let curBanner;
 let autoSlideTimer;
+let clickable;
 
 const resetSlideTimer = () => {
   curBanner = 1;
   if (autoSlideTimer) {
     clearTimeout(autoSlideTimer);
+  }
+  if (clickable) {
+    clickable = null;
   }
 };
 
@@ -39,7 +41,7 @@ const getBannerImg = (data, idx) => {
   return img;
 };
 
-const getBannerImgs = () => {
+const getBannerImgs = (dataOfBanner) => {
   const imgs = dataOfBanner.reduce((acc, data, idx) => {
     const img = getBannerImg(data, idx);
     return acc + img;
@@ -48,8 +50,8 @@ const getBannerImgs = () => {
   return imgs;
 };
 
-const insertBannerImgs = () => {
-  const imgs = getBannerImgs();
+const insertBannerImgs = (dataOfBanner) => {
+  const imgs = getBannerImgs(dataOfBanner);
 
   const bannersContainer = $("#banners-container");
   bannersContainer.innerHTML = imgs;
@@ -66,7 +68,7 @@ const insertBannerImgs = () => {
   bannersContainer.appendChild(firstBannerClone);
 };
 
-const slideLeft2Right = () => {
+const slideLeft2Right = (dataOfBanner) => {
   onAnimation();
   curBanner -= 1;
   let curIdx = Number($("#banner-count").textContent);
@@ -80,7 +82,7 @@ const slideLeft2Right = () => {
   $("#banner-count").textContent = curIdx - 1;
 };
 
-const slideRight2Left = () => {
+const slideRight2Left = (dataOfBanner) => {
   onAnimation();
   curBanner += 1;
   let curIdx = Number($("#banner-count").textContent);
@@ -94,51 +96,52 @@ const slideRight2Left = () => {
   $("#banner-count").textContent = curIdx + 1;
 };
 
-const startAutoSlide = () => {
+const startAutoSlide = (dataOfBanner) => {
   autoSlideTimer = setTimeout(() => {
-    slideRight2Left();
-    startAutoSlide();
+    slideRight2Left(dataOfBanner);
+    startAutoSlide(dataOfBanner);
   }, 3000);
 };
 
-const addSlideEvL = () => {
-  let timer;
+const relocateBanner = (dataOfBanner) => {
+  if (curBanner === dataOfBanner.length + 1) {
+    offAnimation();
+    moveBanners();
+    curBanner = 1;
+  }
 
-  $("#banner-left").addEventListener("click", () => {
-    clearTimeout(autoSlideTimer);
-    startAutoSlide();
-    if (!timer) {
-      slideLeft2Right();
-      timer = setTimeout(() => {
-        timer = null;
-      }, 300);
-    }
-  });
+  if (curBanner === 0) {
+    offAnimation();
+    moveBanners(dataOfBanner.length);
+    curBanner = dataOfBanner.length;
+  }
+};
 
-  $("#banner-right").addEventListener("click", () => {
-    clearTimeout(autoSlideTimer);
-    startAutoSlide();
-    if (!timer) {
-      slideRight2Left();
-      timer = setTimeout(() => {
-        timer = null;
-      }, 300);
+const slideEvent = (target, dataOfBanner) => {
+  clearTimeout(autoSlideTimer);
+  startAutoSlide(dataOfBanner);
+  if (!clickable) {
+    if (target.id === "banner-left") {
+      slideLeft2Right(dataOfBanner);
+    } else {
+      slideRight2Left(dataOfBanner);
     }
-  });
+    clickable = delay(300).then(() => {
+      clickable = null;
+    });
+  }
+};
 
-  $("#banners-container").addEventListener("transitionend", () => {
-    if (curBanner === dataOfBanner.length + 1) {
-      offAnimation();
-      moveBanners();
-      curBanner = 1;
-    }
-
-    if (curBanner === 0) {
-      offAnimation();
-      moveBanners(dataOfBanner.length);
-      curBanner = dataOfBanner.length;
-    }
-  });
+const addSlideEvL = (dataOfBanner) => {
+  $("#banner-left").addEventListener("click", ({ target }) =>
+    slideEvent(target, dataOfBanner)
+  );
+  $("#banner-right").addEventListener("click", ({ target }) =>
+    slideEvent(target, dataOfBanner)
+  );
+  $("#banners-container").addEventListener("transitionend", () =>
+    relocateBanner(dataOfBanner)
+  );
 };
 
 const moveBanners = (loc = 1) => {
@@ -155,7 +158,7 @@ const offAnimation = () => {
   $("#banners-container").style.transitionDuration = "0s";
 };
 
-const createBanner = () => {
+const createBanner = (dataOfBanner) => {
   const banner = `<div class="center container position-rel">
   <svg
     class="arrow-icon arrow--round-border arrow-left arrow--white" id="banner-left"
@@ -198,10 +201,10 @@ const createBanner = () => {
 
   resetSlideTimer();
   insertIntoMain(banner);
-  insertBannerImgs();
+  insertBannerImgs(dataOfBanner);
   moveBanners();
-  addSlideEvL();
-  startAutoSlide();
+  addSlideEvL(dataOfBanner);
+  startAutoSlide(dataOfBanner);
 };
 
 const createSmallBanner = (data) => {
@@ -244,7 +247,7 @@ const createSmallBanner = (data) => {
   return smallBanner;
 };
 
-const createSmallBannerBlock = () => {
+const createSmallBannerBlock = (dataOfsBanner) => {
   const smallBanner = createSmallBanner(dataOfsBanner);
   const smallBannerBlock = `<div class="center container contents-container">
   <header class="header-container">

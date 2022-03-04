@@ -1,5 +1,4 @@
 import { insertIntoMain, range } from "../utils.js";
-import { dataOfDailyRank } from "../data/home/dailyRank.js";
 
 const createDailyRank = (data, i) => {
   const dailyRank = `<li class="layout-center">
@@ -31,7 +30,7 @@ const createDailyRank = (data, i) => {
   return dailyRank;
 };
 
-const getTop3 = () => {
+const getTop3 = (dataOfDailyRank) => {
   const TOP3 = 3;
   const dailyRank = range(TOP3).reduce((acc, i) => {
     return acc + createDailyRank(dataOfDailyRank[i], i);
@@ -40,7 +39,7 @@ const getTop3 = () => {
   return dailyRank;
 };
 
-const createDailyRankBlock = () => {
+const createDailyRankBlock = (dataOfDailyRank) => {
   const dailyRankBlock = `<div class="center container contents-container">
   <header class="header-container">
     <h2 class="mr--auto">일간 랭킹 TOP</h2>
@@ -63,7 +62,7 @@ const createDailyRankBlock = () => {
   </header>
   <div>
     <ol class="daily-rank-list">
-      ${getTop3()}
+      ${getTop3(dataOfDailyRank)}
     </ol>
   </div>
 </div>`;

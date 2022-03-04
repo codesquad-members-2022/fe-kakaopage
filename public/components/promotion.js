@@ -1,6 +1,6 @@
 import { insertIntoMain } from "../utils.js";
 
-const createPromotionBlock = () => {
+const createPromotionBlock = (dataOfPromotion) => {
   const promotion = `<div class="center container promotion-container">
   <svg
     class="arrow-icon arrow--round-border arrow--gray"
@@ -18,7 +18,7 @@ const createPromotionBlock = () => {
     />
   </svg>
   <img
-    src="https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK"
+    src="${dataOfPromotion}"
   />
   <svg
     class="arrow-icon arrow--round-border arrow--gray"

@@ -1,8 +1,7 @@
-import { insertIntoMain, range, $, getDay } from "../utils.js";
+import { insertIntoMain, $, getDay } from "../utils.js";
 import { getNWebtoonsWithGrade, getNWebtoonsWithRank } from "./webtoon.js";
-import { dataOfDays } from "../data/home/days.js";
 
-const getDayWebtoon = (day) => {
+const getDayWebtoon = (dataOfDays, day) => {
   const NUM_OF_WEBTOONS = 5;
 
   let webtoons = getNWebtoonsWithRank(NUM_OF_WEBTOONS, dataOfDays[day]);
@@ -19,7 +18,7 @@ const underlineTodayTab = (day) => {
   });
 };
 
-const addDaysEvL = () => {
+const addDaysEvL = (dataOfDays) => {
   $(".nav-days").addEventListener("click", ({ target }) => {
     const days = target.closest("ul").childNodes;
 
@@ -35,11 +34,11 @@ const addDaysEvL = () => {
 
     target.classList.add("current-tab", "underline-thin", "text-color--black");
 
-    $("#days-top").innerHTML = getDayWebtoon(target.dataset.day);
+    $("#days-top").innerHTML = getDayWebtoon(dataOfDays, target.dataset.day);
   });
 };
 
-const createDaysBlock = () => {
+const createDaysBlock = (dataOfDays) => {
   const day = getDay();
 
   const daysBlock = `<div class="center container contents-container">
@@ -75,13 +74,13 @@ const createDaysBlock = () => {
     </ul>
   </nav>
   <div id="days-top" class="grid-5col mt--m">
-    ${getDayWebtoon(day)}
+    ${getDayWebtoon(dataOfDays, day)}
   </div>
 </div>`;
 
   insertIntoMain(daysBlock);
   underlineTodayTab(day);
-  addDaysEvL();
+  addDaysEvL(dataOfDays);
 };
 
 export { createDaysBlock, getDayWebtoon };

@@ -21,4 +21,4 @@ const event = [
   },
 ];
 
-export { event as dataOfEvent };
+module.exports = event;

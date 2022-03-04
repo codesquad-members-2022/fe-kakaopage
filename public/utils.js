@@ -21,4 +21,10 @@ const getDay = () => {
   return day;
 };
 
-export { $, $$, range, insertIntoMain, getDay };
+const delay = (ms) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms);
+  });
+};
+
+export { $, $$, range, insertIntoMain, getDay, delay };

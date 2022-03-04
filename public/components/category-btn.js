@@ -1,14 +1,22 @@
-import { insertIntoMain } from "../utils.js";
+import { insertIntoMain, range } from "../utils.js";
 
-const createCateBtnBlock = () => {
+const getCateBtn = (categoryName) => {
+  const cateBtn = `<button class="category-button">${categoryName}</button>`;
+  return cateBtn;
+};
+
+const getCateBtns = (dataOfCategoryName) => {
+  const cateBtns = range(dataOfCategoryName.length).reduce(
+    (acc, i) => acc + getCateBtn(dataOfCategoryName[i]),
+    ""
+  );
+  return cateBtns;
+};
+
+const createCateBtnBlock = (dataOfCategoryName) => {
   const cateBtnBlock = `<div class="center container category-buttons-container">
   <div class="round-container grid-3col">
-    <button class="category-button">오늘 UP</button>
-    <button class="category-button">오늘 신작</button>
-    <button class="category-button">오리지널</button>
-    <button class="category-button">완결까지 정주행</button>
-    <button class="category-button">독립운동가 웹툰</button>
-    <button class="category-button">오늘 랭킹</button>
+    ${getCateBtns(dataOfCategoryName)}
   </div>
 </div>`;
 
