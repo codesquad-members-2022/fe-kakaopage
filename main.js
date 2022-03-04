@@ -7,14 +7,6 @@ const element = document.querySelector(".main__week__menu");
 const toonsBox = document.querySelector(".toons__box");
 const $main__container__copy = $main__container?.cloneNode(true);
 
-const getData = () => {
-  fetch("/category/home")
-    .then((response) => response.json())
-    .then((data) => handleClickToonTap({ data }));
-};
-
-getData();
-
 const renderHome = () => {
   const $banner__container = document.querySelector(".banner__container");
   const $week__webtoons = document.querySelector(".week__webtoons");
@@ -53,6 +45,14 @@ const handleClickToonTap = ({ data }) => {
     renderTapContents({ className, data });
   });
 };
+
+const getData = (fn) => {
+  fetch("/category/home")
+    .then((response) => response.json())
+    .then((data) => fn({ data }));
+};
+
+getData(handleClickToonTap);
 
 element.addEventListener("click", (event) => {
   const className = event.target.className;
