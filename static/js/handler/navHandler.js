@@ -27,12 +27,16 @@ const loadMain = (globalCategory) => {
   select('.snb') && removeElement('.snb');
   updateNavStyle('gnb', globalCategory);
 
-  getData('data', globalCategory).then((response) => {
-    const DATA = response;
-    if (DATA.subCategory) renderer.snb(DATA.subCategory);
-
-    loadCategoryContent(globalCategory, '홈', DATA.홈);
-  });
+  getData('data', globalCategory)
+    .then((response) => {
+      const DATA = response;
+      if (DATA.subCategory) renderer.snb(DATA.subCategory);
+      loadCategoryContent(globalCategory, '홈', DATA.홈);
+    })
+    .catch((err) => {
+      console.error(err);
+      renderer.noticeBox('콘텐츠를 불러오지 못했습니다. 탭을 다시 클릭해주세요.');
+    });
 };
 
 const loadCategoryContent = (globalCategory, subCategory, DATA = null) => {
@@ -45,10 +49,15 @@ const loadCategoryContent = (globalCategory, subCategory, DATA = null) => {
     return;
   }
 
-  getData('data', globalCategory).then((response) => {
-    const DATA = response[subCategory];
-    categoryLoader[globalCategory][subCategory](DATA);
-  });
+  getData('data', globalCategory)
+    .then((response) => {
+      const DATA = response[subCategory];
+      categoryLoader[globalCategory][subCategory](DATA);
+    })
+    .catch((err) => {
+      console.error(err);
+      renderer.noticeBox('콘텐츠를 불러오지 못했습니다. 탭을 다시 클릭해주세요.');
+    });
 };
 
 const isCorrectTarget = (eventTarget) => (eventTarget.dataset.category ? true : false);
