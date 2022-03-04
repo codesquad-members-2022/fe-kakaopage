@@ -1,22 +1,23 @@
-import { $ } from './utils/util.js';
-import { CL, TITLE, today, VAL } from './utils/constants.js';
-import { SNB } from './components/SNB.js';
-import { MainBanner } from './components/MainBanner.js';
-import { DayBar } from './components/DayBar.js';
-import { WebtoonList } from './components/WebtoonList.js';
-import { ThemeBox } from './components/ThemeBox.js';
-import { ScrollBanner } from './components/ScrollBanner.js';
+import { $, displayTodayTab, setDefaultCategory } from '../utils/util.js';
+import { TITLE, today, VAL } from '../utils/constants.js';
+import { SNB } from '../components/SNB.js';
+import { MainBanner } from '../components/MainBanner.js';
+import { DayBar } from '../components/DayBar.js';
+import { WebtoonList } from '../components/WebtoonList.js';
+import { ThemeBox } from '../components/ThemeBox.js';
+import { ScrollBanner } from '../components/ScrollBanner.js';
 
 const $main = $('.main');
 
 const render = {
-  webtoonPage(data) {
+  webtoonPage([webtoon, category]) {
     $main.innerHTML = '';
-    $main.append(SNB());
+    $main.append(SNB(category));
+    setDefaultCategory({ cateName: '홈' });
     const $mainContents = document.createElement('div');
     $mainContents.classList.add('main-contents');
     $main.append($mainContents);
-    this.contents(data, '홈');
+    this.contents(webtoon, { cateName: '홈' });
   },
 
   otherPage(tabName) {
@@ -29,7 +30,7 @@ const render = {
     $mainContents.replaceChild(WebtoonList(data), webtoonBox);
   },
 
-  contents(data, category) {
+  contents(data, { cateName }) {
     const content = {
       홈: data => renderContent.home(data),
       요일연재: data => renderContent.day(data),
@@ -42,7 +43,7 @@ const render = {
       BL: data => renderContent.BL(data),
     };
 
-    content[category](data);
+    content[cateName](data);
   },
 };
 
@@ -124,27 +125,19 @@ const renderComponent = {
   dayBar() {
     const $mainContents = $('.main-contents');
     $mainContents.append(DayBar());
-    displayTodaysDayBar();
+    displayTodayTab();
   },
 };
 
 function displayWebtoon(data, header) {
-  if (!header) return WebtoonList(data.filter(v => v.day.includes(today)));
+  if (!header) {
+    return WebtoonList(data.filter(v => v.day.includes(today)));
+  }
   return WebtoonList(
     data.filter(v => v[header]),
     header,
     TITLE[header]
   );
-}
-
-function displayTodaysDayBar() {
-  const $dayList = $('.day__list');
-  [...$dayList.children].forEach(day => {
-    if (day.id === today) {
-      day.classList.add(CL.SELECTED);
-      return;
-    }
-  });
 }
 
 export { render };

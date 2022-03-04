@@ -1,43 +1,7 @@
-import {
-  $,
-  loadData,
-  activateTab,
-  changeTitle,
-  removeAlarm,
-} from './utils/util.js';
-import { CL, WEBTOON_URL } from './utils/constants.js';
-import { render } from './render.js';
-import { initSlider, slideBanner } from './slider.js';
-
-const $gnb = $('.gnb__list');
-
-function addTabFeature() {
-  $gnb.addEventListener('click', gnbHandler);
-}
-
-function gnbHandler(e) {
-  if (e.target.matches('.gnb__list')) return;
-  const target = e.target.closest('.gnb__item');
-  removeAlarm(target);
-  activateTab(target);
-  changeTitle(target.id);
-  if (target.id !== 'webtoon') {
-    render.otherPage(target.id);
-    return;
-  }
-  loadData(WEBTOON_URL)
-    .then(wt => {
-      render.webtoonPage(wt);
-      setEventHandlers();
-    })
-    .catch(console.log);
-}
-
-function setEventHandlers() {
-  handlerComponent.snb();
-  handlerComponent.mainBannerBtn();
-  handlerComponent.daybar();
-}
+import { $, loadData, activateTab } from '../utils/util.js';
+import { initSlider, slideBanner } from '../feature/slider.js';
+import { CL, WEBTOON_URL } from '../utils/constants.js';
+import { render } from '../render/render.js';
 
 const handlerComponent = {
   snb() {
@@ -46,12 +10,12 @@ const handlerComponent = {
     $snb.addEventListener('click', e => {
       const target = e.target.closest('.snb__item');
       if (e.target !== target) return;
-      const category = target.dataset.category;
+      const cateName = target.dataset.category;
 
       loadData(WEBTOON_URL)
         .then(wt => {
           activateTab(target);
-          render.contents(wt, category); // 이때 다보내지 말고 카테고리별로
+          render.contents(wt, { cateName });
           this.daybar();
           this.mainBannerBtn();
           clearInterval(this.intervalId);
@@ -98,7 +62,7 @@ const handlerComponent = {
       let day = e.target.id;
       if (day === CL.WHOLE) day = '';
 
-      loadData(WEBTOON_URL + day)
+      loadData(WEBTOON_URL, day)
         .then(wt => {
           activateTab(target);
           render.webtoonList(wt);
@@ -108,4 +72,4 @@ const handlerComponent = {
   },
 };
 
-export { addTabFeature };
+export { handlerComponent };
