@@ -1,15 +1,15 @@
-function Component({ $target, state, $props }) {
+async function Component({ $target, state, $props }) {
   this.$target = $target;
   this.$props = $props;
   this.state = state || {};
   this.eventTypes = [];
-  this.setup();
+  await this.setup();
   this.render();
   this.setEvent();
 }
 
 Component.prototype = {
-  setup() {},
+  async setup() {},
   mount() {},
   render() {
     this.$target.innerHTML = this.template();
