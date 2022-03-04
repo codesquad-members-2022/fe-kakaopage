@@ -5,14 +5,23 @@ const app = express();
 const port = 3000;
 
 app.use(logger("dev"));
+
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
-app.use("/weeklyPromotionWebtoonList", function(req, res, next) {
-  const weeklyPromotionWebtoonList = require("./public/data/weeklyPromotionWebtoonList.json");
-  res.json(weeklyPromotionWebtoonList);
+
+app.use("/promotionWebtoonList", function(req, res, next) {
+  const promotionWebtoonList = require("./public/data/promotionWebtoonList.json");
+  res.json(promotionWebtoonList);
+  next();
+});
+
+app.use("/weeklyWebtoonList", function(req, res, next) {
+  const weeklyWebtoonList = require("./public/data/weeklyWebtoonList.json");
+  res.json(weeklyWebtoonList);
   next();
 });
 
