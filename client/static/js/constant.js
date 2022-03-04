@@ -7,4 +7,5 @@ export const DEFAULT_DAY = week[new Date().getDay()];
 export const SLIDE_DELAY = '.3s'
 export const SLIDE_CONTAINER_LENGTH = 3;
 export const AUTO_SLIDE_INTERVAL = 3000;
-export const serverURL = 'http://localhost:3000/';
+const PORT = process.env.PORT || 3000;
+export const serverURL = `http://localhost:${PORT}/`;

@@ -5,7 +5,7 @@ import { commonRouter } from './routers/commonRouter.js';
 
 const app = express();
 const __dirname = path.resolve();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.resolve(__dirname, 'client', 'static')));
 app.use('/common', commonRouter);
