@@ -19,7 +19,6 @@ const getAds = (info) => {
   let count = 3;
   while (count !== 0) {
     result += /*html*/ `<img src="../IMG/${target.adImage}" alt="${target.number}">`;
-    if (count === 2) target.view = true;
     target = target.post;
     count--;
   }
@@ -31,10 +30,11 @@ const ads =
   `
   <section class="ads">
     <div class="ads__image">
-      ${getAds(adsInfo)}  
-    </div>
+      ${getAds(adsInfo.first)}  
+      </div>
     <div class="ads__left"><i class="${icons.arrowCircle}left"></i></div>
     <div class="ads__right"><i class="${icons.arrowCircle}right"></i></div>
+    <div class="ads__number">1 / ${adsInfo.number}</div>
   </section>
   `;
 

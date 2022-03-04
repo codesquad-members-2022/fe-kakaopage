@@ -57,6 +57,14 @@ main > * {
   right: 5%;
 }
 
+.ads__number {
+  font-size: 1rem;
+  color: var(--color-grey3);
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
 .ads__image {
   position: absolute;
   display: flex;

@@ -18,7 +18,8 @@
     "day": "화",
     "type": "웹툰",
     "now": true,
-    "ad": false
+    "ad": true,
+    "adImage":"4.jpg"
   },
   {
     "name": "구름",
