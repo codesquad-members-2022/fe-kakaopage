@@ -16,6 +16,6 @@ server.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html'));
 });
 
-server.listen(PORT, () => {
+server.listen(server.get('port'), () => {
     console.log('서버 시작 : ' + server.get('port'));
 });
