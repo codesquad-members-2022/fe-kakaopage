@@ -1,4 +1,4 @@
-import { domUtil } from "../eventJS/util.js";
+import { domUtil } from "../Util/util.js";
 
 const getBannerHtml = (imgUrl) => {
   return /*html*/ `      

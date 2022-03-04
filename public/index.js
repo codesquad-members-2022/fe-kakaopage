@@ -1,15 +1,14 @@
-import { domUtil } from "./eventJS/util.js";
+import { initMainPage } from "./js/Util/init.js";
+let WHOLE_DATA;
 
-import {
-  renderMainSecHome,
-  renderMainSecWoD,
-  renderBanner,
-} from "./eventJS/recEvent.js";
-import { data } from "./component/data.js";
-import { init } from "./eventJS/init.js";
+fetch("/index/wholeData")
+  .then((response) => response.json())
+  .then((serverData) => {
+    WHOLE_DATA = serverData;
+    initMainPage();
+  });
 
-init();
-
+export { WHOLE_DATA };
 // 메인화면 홈으로 레이아웃 변경
 // function chageMainSecHome() {
 //   const $mainComponet = document.querySelector(".main");

@@ -1,9 +1,9 @@
-import { domUtil } from "./util.js";
+import { domUtil } from "/js/Util/util.js";
 
 // prev와 next는 거의 비슷하다. pageCount를 올리냐 마느냐의 차이일뿐
 let pageCount = -1;
 
-function onClickBannerController({ target: { className } }) {
+function bannerSlide(className) {
   const img = domUtil.$(".recommand__image--wrapper");
   const imgWidth = img.offsetWidth;
   const maxPage = domUtil.$(".recommand__image--wrapper").childElementCount - 1;
@@ -57,7 +57,8 @@ const bannerImgLoop2end = (
     img.style.transform = `translate(${pageCount * imgWidth}px)`;
   }, TRANSITION_TIME);
 };
+
 // const imageloop = setInterval(() => {
 //   onclickNext();
 // }, 2000); // 이부분 2초를 어떻게 표현할 수 있을까?
-export { onClickBannerController };
+export { bannerSlide };

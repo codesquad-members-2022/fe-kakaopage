@@ -7,11 +7,6 @@ const data = {
     "기다리면 무료 소설",
     "인기 웹소설",
   ],
-  eventDisplay: [
-    { og: ".main__cartoonZone__cell", ev: "ev__main__cartoonZone__cell" },
-    { og: ".main__cartoonZone--imgTag", ev: "ev__main__cartoonZone--imgTag" },
-    { og: ".main__cartoonZone--info", ev: "ev__main__cartoonZone--info" },
-  ],
   week: ["월", "화", "수", "목", "금", "토", "일", "요일완결"],
   genre: ["소년", "드라마", "로맨스", "로판", "액션무협", "BL"],
   toggleLeft: ["전체", "웹툰", "웹툰"],

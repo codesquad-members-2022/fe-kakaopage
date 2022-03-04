@@ -22,10 +22,10 @@
     {
       "tab": "홈",
       "url": [
-        "./pageImage/katana.jpg",
-        "./pageImage/lisa.jpg",
-        "./pageImage/skul.jpg",
-        "./pageImage/mother.png"
+        "/image/pageImage/katana.jpg",
+        "/image/pageImage/lisa.jpg",
+        "/image/pageImage/skul.jpg",
+        "/image/pageImage/mother.png"
       ]
     },
     {
@@ -126,7 +126,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로맨스",
@@ -134,7 +134,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로맨스",
@@ -142,7 +142,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로맨스",
@@ -150,7 +150,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로맨스",
@@ -158,7 +158,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로판",
@@ -166,7 +166,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로판",
@@ -174,7 +174,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로판",
@@ -182,7 +182,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로판",
@@ -190,7 +190,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "로판",
@@ -198,7 +198,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "액션무협",
@@ -206,7 +206,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "액션무협",
@@ -214,7 +214,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "액션무협",
@@ -222,7 +222,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "액션무협",
@@ -230,7 +230,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "액션무협",
@@ -238,7 +238,7 @@
       "hot": false
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "BL",
@@ -246,7 +246,7 @@
       "hot": true
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "BL",
@@ -254,7 +254,7 @@
       "hot": true
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "BL",
@@ -262,7 +262,7 @@
       "hot": true
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "BL",
@@ -270,7 +270,7 @@
       "hot": true
     },
     {
-      "imgUrl": "./pageImage/madothuki.png",
+      "imgUrl": "/image/pageImage/madothuki.png",
       "title": "타이틀 테스트",
       "info": "인포 테스트",
       "genre": "BL",
