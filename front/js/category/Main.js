@@ -3,7 +3,7 @@ import renderPage from './_renderPage.js';
 
 const { CAROUSEL, EVENT_BOX, EVENT_CAROUSEL, MAIN_CONTENT } = ELEMENT_ID;
 
-export default function Main(content) {
+export default function Main() {
   const template = {
     [`${CAROUSEL}`]: 'Main',
     [`${EVENT_BOX}`]: `Main`,

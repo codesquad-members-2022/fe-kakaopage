@@ -4,7 +4,7 @@ const mockDB = require('./db/store.js');
 const cors = require('cors');
 const routes = require('./routes.js');
 
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 const app = express();
 
 const db = mockDB();
@@ -13,13 +13,15 @@ db.initDB();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// 직접 http header로 cors문제 해결
 // app.use((req, res, next) => {
-//   req.header('Access-Control-Allow-Origin', '*');
-//   req.header('Content-Type', 'application/x-www-form-urlencoded');
+//   res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
+//   res.header('Content-Type', 'application/x-www-form-urlencoded');
 //   res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE');
 //   next();
 // });
 
+// 프론트가 실행되고 있는 로컬 8080포트 cors허용하기(cors가 localhost랑 127.0.0.1을 다르게 봄)
 const allowlist = ['http://127.0.0.1:8080', 'http://localhost:8080'];
 const corsOptions = {
   origin: function (origin, callback) {
@@ -53,7 +55,6 @@ app.get(routes.uidContent, async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  console.log(req.url);
   res.send('프론트와 분리된 서버입니다.');
 });
 
