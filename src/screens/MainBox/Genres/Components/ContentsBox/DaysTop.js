@@ -1,8 +1,5 @@
 import { createExtendsRelation } from "../../../../../utils.js";
-import {
-  getKoreaDays,
-  getKoreaDay,
-} from "../../../../../modules/serviceUtils.js";
+import { getKoreaDays, getDay } from "../../../../../modules/serviceUtils.js";
 import ContentsBox from "../ContentsBox.js";
 import CardList from "./Components/CardList.js";
 import DaysList from "./Components/DaysList.js";
@@ -14,7 +11,7 @@ function DaysTop(infoObject) {
 createExtendsRelation(DaysTop, ContentsBox);
 
 DaysTop.prototype.setup = function () {
-  this.state.selected = getKoreaDay();
+  this.state.selected = getDay();
   this.state.contentBody = `
     <ul id="wtDaysTopNav" class="contents__daysNav"></ul>
     <ul id="wtDaysTopCards" class="contents__card"></ul>
@@ -26,19 +23,21 @@ DaysTop.prototype.mount = function () {
   const $contentsCard = this.$target.querySelector("#wtDaysTopCards");
 
   const days = getKoreaDays();
-  const { webtoons, selected } = this.state;
   const MAXIMUM_CARD_COUNT = 10;
-  const filteredWebtoons = this.$props.filterContent(
-    webtoons,
-    "days",
-    selected
-  );
+
+  const {
+    webtoons: { section_week_top },
+    selected: selectedDay,
+  } = this.state;
+  const FIRST_ELEMENT = 0;
+  const { list } = section_week_top[FIRST_ELEMENT];
+  const filteredWebtoons = list.find(({ day }) => day === +selectedDay).list;
 
   new DaysList({
     $target: $contentNav,
     state: {
       days,
-      selected,
+      selected: selectedDay,
     },
     $props: {
       updateDay: this.updateDay.bind(this),

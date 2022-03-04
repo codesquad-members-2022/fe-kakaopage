@@ -18,12 +18,24 @@ DaysList.prototype.setEvent = function () {
 
 DaysList.prototype.template = function () {
   const { days, selected } = this.state;
-  return days.reduce((tags, day) => {
+  const PROGRAM_SUNDAY = 0;
+  const SERVICE_SUNDAY = 7;
+  const SERVICE_FINISH = 12;
+
+  return days.reduce((tags, day, index) => {
+    const serviceDay =
+      index === SERVICE_SUNDAY
+        ? SERVICE_FINISH
+        : index === PROGRAM_SUNDAY
+        ? SERVICE_SUNDAY
+        : index;
+
     tags += `
-      <li class='daysNav-item ${selected === day ? " selected" : ""}'
-        data-day="${day}">
+      <li class='daysNav-item ${+selected === serviceDay ? " selected" : ""}'
+        data-day="${serviceDay}">
           ${day}
       </li>`;
+
     return tags;
   }, "");
 };

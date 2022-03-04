@@ -14,16 +14,21 @@ GenreTop.prototype.setup = function () {
 
 GenreTop.prototype.mount = function () {
   const $contentsCard = this.$target.querySelector("#wtGenreTop");
-  const { webtoons } = this.state;
+  const {
+    webtoons: { section_series },
+  } = this.state;
+
+  const FIRST_ELEMENT = 0;
+  const { list } = section_series[FIRST_ELEMENT];
   const MAXIMUM_CARD_COUNT = 5;
 
   new CardList({
     $target: $contentsCard,
     state: {
       webtoons:
-        webtoons.length > MAXIMUM_CARD_COUNT
-          ? webtoons.slice(0, MAXIMUM_CARD_COUNT)
-          : webtoons,
+        list.length > MAXIMUM_CARD_COUNT
+          ? list.slice(0, MAXIMUM_CARD_COUNT)
+          : list,
     },
   });
 };

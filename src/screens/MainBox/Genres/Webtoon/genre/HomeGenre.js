@@ -1,7 +1,9 @@
 import Component from "../../../../Component.js";
 import { createExtendsRelation, getJson } from "../../../../../utils.js";
-import { getKoreaDay } from "../../../../../modules/serviceUtils";
 import components from "../../components.js";
+import { API_POINT } from "../../../../../constants.js";
+import CategoryId from "../../../../../enums/CategoryId.js";
+import GenreId from "../../../../../enums/GenreId.js";
 
 function HomeGenre(infoObject) {
   Component.call(this, infoObject);
@@ -9,36 +11,31 @@ function HomeGenre(infoObject) {
 
 createExtendsRelation(HomeGenre, Component);
 
-HomeGenre.prototype.sortRanking = function (items) {
-  return items.sort((i1, i2) => i2.rank - i1.rank);
-};
+// HomeGenre.prototype.sortRanking = function (items) {
+//   return items.sort((i1, i2) => i2.rank - i1.rank);
+// };
 
-HomeGenre.prototype.filterContent = function (webtoons, where, what) {
-  return webtoons.filter((webtoon) =>
-    typeof webtoon[where] === "object"
-      ? webtoon[where].includes(what)
-      : webtoon[where] === what
-  );
-};
+// HomeGenre.prototype.filterContent = function (webtoons, where, what) {
+//   return webtoons.filter((webtoon) =>
+//     typeof webtoon[where] === "object"
+//       ? webtoon[where].includes(what)
+//       : webtoon[where] === what
+//   );
+// };
 
 HomeGenre.prototype.mount = function () {
-  const { contents, webtoons } = this.state;
+  const { contents } = this.state;
 
   contents.forEach((content) => {
     const { elementId, className, state } = content;
-    const { filteredBy } = state;
+    const { list, webtoons } = state;
     const $content = this.$target.querySelector(`#${elementId}`);
-    const filteredWebtoons = filteredBy
-      ? Object.keys(filteredBy).reduce(
-          (wts, key) => this.filterContent(wts, key, filteredBy[key]),
-          webtoons
-        )
-      : null;
+
     new components[className]({
       $target: $content,
       state: {
         ...state,
-        webtoons: className !== "daysTop" ? filteredWebtoons : webtoons,
+        webtoons: className === "mainBanner" ? list : webtoons,
       },
       $props: {
         sortRanking: this.sortRanking,
@@ -53,18 +50,39 @@ HomeGenre.prototype.mount = function () {
 };
 
 HomeGenre.prototype.setup = async function () {
-  const { results: webtoons } = await getJson("webtoons");
-  const koreaDay = getKoreaDay();
+  const { category, genre } = this.state;
+
+  const {
+    section_containers,
+    top_banner: { list },
+  } = await getJson(
+    API_POINT({ categoryId: CategoryId[category], genreId: GenreId[genre] })
+  );
+
+  const [
+    _1,
+    _2,
+    _3,
+    daysTopWt,
+    newWorkTopWt,
+    _4,
+    romanceTopWt,
+    rofanTopWt,
+    dramaTopWt,
+    blTopWt,
+    boyTopWt,
+    actionTopWt,
+    dateTopWt,
+    rcEventWt,
+  ] = section_containers;
+
   this.state = {
-    webtoons,
     contents: [
       {
         elementId: "wtMainBanner",
         className: "mainBanner",
         state: {
-          filteredBy: {
-            isMain: "home",
-          },
+          list,
         },
       },
       { elementId: "wtNavDetail", className: "navDetail", state: {} },
@@ -74,6 +92,7 @@ HomeGenre.prototype.setup = async function () {
         className: "daysTop",
         state: {
           title: "요일연재 TOP",
+          webtoons: daysTopWt,
         },
       },
       {
@@ -81,9 +100,15 @@ HomeGenre.prototype.setup = async function () {
         className: "newWorkTop",
         state: {
           title: "기대신작 TOP",
-          filteredBy: {
-            status: "N",
-          },
+          webtoons: newWorkTopWt,
+        },
+      },
+      {
+        elementId: "wtRomanceGenreTop",
+        className: "genreTop",
+        state: {
+          title: "로맨스 TOP",
+          webtoons: romanceTopWt,
         },
       },
       {
@@ -91,9 +116,7 @@ HomeGenre.prototype.setup = async function () {
         className: "genreTop",
         state: {
           title: "로판 TOP",
-          filteredBy: {
-            genre: "로판",
-          },
+          webtoons: rofanTopWt,
         },
       },
       {
@@ -101,9 +124,31 @@ HomeGenre.prototype.setup = async function () {
         className: "genreTop",
         state: {
           title: "드라마 TOP",
-          filteredBy: {
-            genre: "드라마",
-          },
+          webtoons: dramaTopWt,
+        },
+      },
+      {
+        elementId: "wtBLGenreTop",
+        className: "genreTop",
+        state: {
+          title: "BL TOP",
+          webtoons: blTopWt,
+        },
+      },
+      {
+        elementId: "wtBoyGenreTop",
+        className: "genreTop",
+        state: {
+          title: "소년 TOP",
+          webtoons: boyTopWt,
+        },
+      },
+      {
+        elementId: "wtActionGenreTop",
+        className: "genreTop",
+        state: {
+          title: "액션무협 TOP",
+          webtoons: actionTopWt,
         },
       },
       {
@@ -111,9 +156,7 @@ HomeGenre.prototype.setup = async function () {
         className: "dateTop",
         state: {
           title: "일간 랭킹 TOP",
-          filteredBy: {
-            days: koreaDay,
-          },
+          webtoons: dateTopWt,
         },
       },
       {
@@ -121,6 +164,7 @@ HomeGenre.prototype.setup = async function () {
         className: "recommendEvent",
         state: {
           title: "추천이벤트",
+          webtoons: rcEventWt,
         },
       },
       { elementId: "wtFullButton", className: "fullButton", state: {} },

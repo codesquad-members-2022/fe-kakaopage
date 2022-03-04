@@ -14,24 +14,22 @@ DateTop.prototype.setup = function () {
 
 DateTop.prototype.mount = function () {
   const $dateTop = this.$target.querySelector("#wtDateTop");
-  const { webtoons } = this.state;
-  const { sortRanking } = this.$props;
+
+  const {
+    webtoons: { section_series },
+  } = this.state;
+  const FIRST_ELEMENT = 0;
+  const { list } = section_series[FIRST_ELEMENT];
+
   const MAXIMUM_CARD_COUNT = 3;
-
-  const sliceWebtoons =
-    webtoons.length > MAXIMUM_CARD_COUNT
-      ? webtoons.slice(0, MAXIMUM_CARD_COUNT)
-      : webtoons;
-
-  const newWebtoons = sortRanking(sliceWebtoons).map((webtoon, idx) => ({
-    ...webtoon,
-    ranking: idx + 1,
-  }));
 
   new RowCardList({
     $target: $dateTop,
     state: {
-      webtoons: newWebtoons,
+      webtoons:
+        list.length > MAXIMUM_CARD_COUNT
+          ? list.slice(0, MAXIMUM_CARD_COUNT)
+          : list,
     },
   });
 };

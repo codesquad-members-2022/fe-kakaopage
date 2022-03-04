@@ -28,6 +28,10 @@ MainBox.prototype.mount = function () {
   }
   new categories[category][selected]({
     $target: $contentsBox,
+    state: {
+      category,
+      genre: selected,
+    },
     $props: {
       setCarousel: this.setCarousel.bind(this),
       clearCarousel: this.clearCarousel.bind(this),

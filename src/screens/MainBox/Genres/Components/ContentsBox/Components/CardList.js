@@ -1,6 +1,8 @@
 import { formatUserCount } from "../../../../../../modules/serviceUtils.js";
 import { createExtendsRelation } from "../../../../../../utils.js";
 import Component from "../../../../../Component.js";
+import { KAKAO_DATA_URL } from "../../../../../../constants";
+import badgeInfo from "./constants/badgeInfo.js";
 
 function CardList(infoObject) {
   Component.call(this, infoObject);
@@ -14,25 +16,30 @@ CardList.prototype.template = function () {
   const templateWtCard = (webtoon) => {
     const {
       title,
-      imageVerticalUrl,
+      image,
       rank,
-      adult,
-      status,
-      userCount,
-      waitForFree,
+      rating,
+      age_grade,
+      badge,
+      read_count,
+      waitfree,
     } = webtoon;
+
+    const { badgeSpan, badgeBgColor } = badgeInfo;
 
     return `<li class="card">
       <div class="card__imgBox">
         <img
           class="cardImg"
-          src="${imageVerticalUrl}"
+          src="${KAKAO_DATA_URL + image}"
           alt="${title}"
         />
         <div class="imgInfo">
-          <span class="rank">✭ ${rank}</span>
+          <span class="rank">${
+            rank > 0 ? `${rank}위` : `✭ ${rating.toFixed(1)}`
+          }</span>
           ${
-            waitForFree
+            waitfree === "Y"
               ? '<span><i class="fas fa-clock"></i></span>'
               : "<span>웹툰</span>"
           }
@@ -43,16 +50,14 @@ CardList.prototype.template = function () {
       </div>
       <div class="card__info">
         ${
-          status
-            ? `<span class="info-status ${
-                status === "N" ? "red" : "blue"
-              }">${status}</span>`
+          badge
+            ? `<span class="info-status ${badgeBgColor[badge]}">${badgeSpan[badge]}</span>`
             : ""
         }
-        ${adult ? `<span class="info-age">15</span>` : ""}
+        ${age_grade !== 0 ? `<span class="info-age">${age_grade}</span>` : ""}
         <span class="info-user">
           <i class="fas fa-user"></i>
-          <span>${formatUserCount(userCount)}</span>
+          <span>${formatUserCount(read_count)}</span>
         </span>
       </div>
     </li>`;

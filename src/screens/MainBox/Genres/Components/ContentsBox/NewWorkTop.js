@@ -16,9 +16,15 @@ NewWorkTop.prototype.setup = function () {
 
 NewWorkTop.prototype.mount = function () {
   const $contentsBigCard = this.$target.querySelector("#wtNewWorkTop");
-  const { webtoons } = this.state;
+  const {
+    webtoons: { section_text_banner },
+  } = this.state;
   const MAXIMUM_CARD_COUNT = 2;
-  const sortedWebtoons = this.$props.sortRanking(webtoons);
+
+  const FIRST_ELEMENT = 0;
+  const { list } = section_text_banner[FIRST_ELEMENT];
+  const sortedWebtoons = list.sort((b1, b2) => b1.item_order - b2.item_order);
+
   new BigCardList({
     $target: $contentsBigCard,
     state: {
