@@ -1,78 +1,71 @@
 import { throttle } from "throttle-debounce";
 
-const createElement = ({ tag, classes, textContent, children, event }) => {
+const createElement = ({ tag, classes, textContent, children, event, css }) => {
   const element = document.createElement(tag);
   classes.forEach((className) => {
     element.classList.add(className);
   });
   element.textContent = textContent;
   children?.forEach((child) => {
-    element.appendChild(child);
+    if (child) element.appendChild(child);
   });
   if (event) {
     const { eventType, callback } = event;
     element.addEventListener(eventType, callback);
   }
+  if (css) {
+    Object.keys(css).forEach((attr) => {
+      element.style[attr] = css[attr];
+    });
+  }
   return element;
 };
 
-const handlePrevButton = ({ elemWidth, elemUnit }) => {
-  const cBox = document.querySelector(".carousel-box");
-  const { curX } = cBox.style.transform.match(
+const handleArrowButton = ({
+  isPrev = false,
+  carouselBox,
+  elemWidth,
+  elemUnit,
+  css,
+}) => {
+  const { curX } = carouselBox.style.transform.match(
     /(?<curX>-?[\d]+(\.[\d])?)/
   ).groups;
 
-  cBox.style.transition = "transform 0.2s";
-  cBox.style.transform = `translateX(${+curX + +elemWidth}${elemUnit})`;
+  const moveX = isPrev ? +curX + +elemWidth : +curX - +elemWidth;
 
+  carouselBox.style.transition = "transform 0.2s";
+  carouselBox.style.transform = `translateX(${moveX}${elemUnit})`;
+  if (css) {
+    Object.keys(css).forEach((attr) => {
+      carouselBox.style[attr] = css[attr];
+    });
+  }
   setTimeout(() => {
-    cBox.style.transition = "none";
-    cBox.style.transform = `translateX(${+curX}${elemUnit})`;
-    const lastElem = cBox.lastChild;
-    cBox.removeChild(lastElem);
+    const removeElem = isPrev ? carouselBox.lastChild : carouselBox.firstChild;
+    carouselBox.removeChild(removeElem);
 
-    const cBoxes = cBox.querySelectorAll(".carousel-elem");
-    cBoxes.forEach((box) => box.classList.remove("main-elem"));
-    const mainElem = cBoxes[0];
+    const cElems = carouselBox.querySelectorAll(".carousel-elem");
+    cElems.forEach((box) => box.classList.remove("main-elem"));
+    const mainElem = isPrev ? cElems[0] : cElems[1];
     mainElem.classList.add("main-elem");
 
-    const curNum = cBox.parentNode.querySelector(".curNum");
-    curNum.textContent = mainElem.dataset.index;
+    const curNum = carouselBox.parentNode.querySelector(".curNum");
+    if (curNum) curNum.textContent = mainElem.dataset.index;
 
-    const firstElem = cBox.firstChild;
-    cBox.insertBefore(lastElem, firstElem);
-  }, 200);
-};
+    if (isPrev) {
+      const firstElem = carouselBox.firstChild;
+      carouselBox.insertBefore(removeElem, firstElem);
+    } else {
+      carouselBox.appendChild(removeElem);
+    }
 
-const handleNextButton = ({ elemWidth, elemUnit }) => {
-  const cBox = document.querySelector(".carousel-box");
-  const { curX } = cBox.style.transform.match(
-    /(?<curX>-?[\d]+(\.[\d])?)/
-  ).groups;
-
-  cBox.style.transition = "transform 0.2s";
-  cBox.style.transform = `translateX(${+curX - +elemWidth}${elemUnit})`;
-
-  setTimeout(() => {
-    const firstElem = cBox.firstChild;
-    cBox.removeChild(firstElem);
-
-    const cBoxes = cBox.querySelectorAll(".carousel-elem");
-    cBoxes.forEach((box) => box.classList.remove("main-elem"));
-    const mainElem = cBoxes[1];
-    mainElem.classList.add("main-elem");
-
-    const curNum = cBox.parentNode.querySelector(".curNum");
-    curNum.textContent = mainElem.dataset.index;
-
-    cBox.appendChild(firstElem);
-
-    cBox.style.transition = "none";
-    cBox.style.transform = `translateX(${+curX}${elemUnit})`;
+    carouselBox.style.transition = "none";
+    carouselBox.style.transform = `translateX(${+curX}${elemUnit})`;
   }, 210);
 };
 
-const createArrowBox = ({ elemWidth, elemUnit }) => {
+const createArrowBox = ({ carouselBox, elemWidth, elemUnit, css }) => {
   const prevArrow = createElement({
     tag: "div",
     classes: ["arrow", "arrow__prev"],
@@ -80,9 +73,16 @@ const createArrowBox = ({ elemWidth, elemUnit }) => {
     event: {
       eventType: "click",
       callback: throttle(500, () => {
-        handlePrevButton({ elemWidth, elemUnit });
+        handleArrowButton({
+          isPrev: true,
+          carouselBox,
+          elemWidth,
+          elemUnit,
+          css: css.elemCss,
+        });
       }),
     },
+    css: css.arrowCss,
   });
   const nextArrow = createElement({
     tag: "div",
@@ -91,19 +91,27 @@ const createArrowBox = ({ elemWidth, elemUnit }) => {
     event: {
       eventType: "click",
       callback: throttle(500, () => {
-        handleNextButton({ elemWidth, elemUnit });
+        handleArrowButton({
+          isPrev: false,
+          carouselBox,
+          elemWidth,
+          elemUnit,
+          css: css.elemCss,
+        });
       }),
     },
+    css: css.arrowCss,
   });
   const arrowBox = createElement({
     tag: "div",
     classes: ["arrow-box"],
     children: [prevArrow, nextArrow],
+    css: css.arrowBoxCss,
   });
   return arrowBox;
 };
 
-const createCarouselOrder = (elems) => {
+const createCarouselOrder = ({ elems, css }) => {
   const carouselCurNum = createElement({
     tag: "span",
     classes: ["orderNum", "curNum"],
@@ -123,25 +131,33 @@ const createCarouselOrder = (elems) => {
     tag: "div",
     classes: ["carousel-order"],
     children: [carouselCurNum, orderBar, carouselTotalNum],
+    css,
   });
   return carouselOrder;
 };
 
-const createCarouselElems = (elems) => {
+const createCarouselElems = ({ elems, css }) => {
   return elems.map((elem, index) => {
     const cloneElem = elem.cloneNode(true);
     cloneElem.classList.add("carousel-elem");
     cloneElem.setAttribute("data-index", index === 0 ? elems.length : index);
+    if (css) {
+      Object.keys(css).forEach((attr) => {
+        cloneElem.style[attr] = css[attr];
+      });
+    }
     return cloneElem;
   });
 };
 
 /**
  *
- * @param  {...Node} elems 캐러셀에 넣을 요소들
- * @returns {Node} $carousel
+ * @param  {{elems:[Node], unit:string, elemWidth:number, css:object}} carouselInfo 캐러셀 정보
+ * @returns {object} {$carousel, getInterval}
  */
-const carousel = ({ elems, unit, elemWidth }) => {
+const carousel = ({ elems, unit, elemWidth, css }) => {
+  const { elemCss, orderCss, arrowBoxCss, arrowCss } = css;
+
   if (elems.length === 1) {
     const ONLY_ONE_SCREEN = elems[0];
     return ONLY_ONE_SCREEN;
@@ -155,8 +171,11 @@ const carousel = ({ elems, unit, elemWidth }) => {
   const ELEM_UNIT = unit;
 
   const carouselChildren = isRequireClone
-    ? [...createCarouselElems(newElems), ...createCarouselElems(newElems)]
-    : createCarouselElems(newElems);
+    ? [
+        ...createCarouselElems({ elems: newElems, css: elemCss }),
+        ...createCarouselElems({ elems: newElems, css: elemCss }),
+      ]
+    : createCarouselElems({ elems: newElems, css: elemCss });
 
   const carouselBox = createElement({
     tag: "div",
@@ -169,8 +188,18 @@ const carousel = ({ elems, unit, elemWidth }) => {
 
   carouselBox.style.transform = `translateX(-${WIDTH_PER_ELEM}${ELEM_UNIT})`;
 
-  const arrowBox = createArrowBox({ elemWidth, elemUnit: unit });
-  const carouselOrder = createCarouselOrder(newElems);
+  const arrowBox = arrowBoxCss
+    ? createArrowBox({
+        carouselBox,
+        elemWidth,
+        elemUnit: unit,
+        css: { arrowBoxCss, arrowCss, elemCss },
+      })
+    : null;
+
+  const carouselOrder = orderCss
+    ? createCarouselOrder({ elems: newElems, css: orderCss })
+    : null;
   const carousel = createElement({
     tag: "div",
     classes: ["carousel"],
@@ -178,20 +207,20 @@ const carousel = ({ elems, unit, elemWidth }) => {
   });
 
   const handleTransitionStart = ({ target }) => {
-    console.log(target, "start");
+    // next, prev 버튼의 비활성화? 어떻게?
   };
   const handleTransitionEnd = ({ target }) => {
-    console.log(target, "end");
+    // next, prev 버튼의 활성화? 어떻게?
   };
 
   const getInterval = () => {
     return setInterval(() => {
-      const cBox = document.querySelector(".carousel-box");
-      handleNextButton({ elemWidth, elemUnit: unit });
-      cBox.addEventListener("transitionstart", handleTransitionStart, {
+      const carouselBox = document.querySelector(".carousel-box");
+      handleArrowButton({ carouselBox, elemWidth, elemUnit: unit });
+      carouselBox.addEventListener("transitionstart", handleTransitionStart, {
         once: true,
       });
-      cBox.addEventListener("transitionend", handleTransitionEnd, {
+      carouselBox.addEventListener("transitionend", handleTransitionEnd, {
         once: true,
       });
     }, 3000);

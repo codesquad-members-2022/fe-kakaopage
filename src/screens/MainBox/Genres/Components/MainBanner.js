@@ -11,7 +11,7 @@ createExtendsRelation(MainBanner, Component);
 
 MainBanner.prototype.mount = function () {
   const { webtoons } = this.state;
-  const $mainBanner = this.$target.querySelector("#wtMainBanner");
+  const $mainBanner = this.$target;
   const $bannerElems = webtoons.map((webtoon) => {
     const wtTpl = bannerImgBoxTpl(webtoon);
     const div = document.createElement("div");
@@ -22,15 +22,23 @@ MainBanner.prototype.mount = function () {
     elems: $bannerElems,
     elemWidth: 720,
     unit: "px",
+    css: {
+      orderCss: {
+        bottom: "60px",
+        right: "30px",
+        fontSize: "20px",
+      },
+      arrowBoxCss: {
+        top: "200px",
+      },
+      arrowCss: {
+        backgroundColor: "rgba(0,0,0,0.2)",
+        color: "#fff",
+      },
+    },
   });
   $mainBanner.appendChild($carousel);
   this.$props.setCarousel(getInterval);
-};
-
-MainBanner.prototype.template = function () {
-  return `
-    <li id="wtMainBanner" class="mainBox main__mainBanner"></li>
-    `;
 };
 
 export default MainBanner;

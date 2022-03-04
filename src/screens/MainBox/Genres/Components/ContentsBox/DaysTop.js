@@ -29,6 +29,7 @@ DaysTop.prototype.mount = function () {
     webtoons: { section_week_top },
     selected: selectedDay,
   } = this.state;
+
   const FIRST_ELEMENT = 0;
   const { list } = section_week_top[FIRST_ELEMENT];
   const filteredWebtoons = list.find(({ day }) => day === +selectedDay).list;

@@ -26,8 +26,6 @@ HomeGenre.prototype.mount = function () {
         webtoons: className === "mainBanner" ? list : webtoons,
       },
       $props: {
-        sortRanking: this.sortRanking,
-        filterContent: this.filterContent,
         setCarousel:
           className === "mainBanner" ? this.$props.setCarousel : null,
       },
@@ -48,10 +46,10 @@ HomeGenre.prototype.setup = async function () {
   const [
     _1,
     _2,
-    _3,
+    subBannerWt,
     daysTopWt,
     newWorkTopWt,
-    _4,
+    _3,
     romanceTopWt,
     rofanTopWt,
     dramaTopWt,
@@ -72,7 +70,13 @@ HomeGenre.prototype.setup = async function () {
         },
       },
       { elementId: "wtNavDetail", className: "navDetail", state: {} },
-      { elementId: "wtSubBanner", className: "subBanner", state: {} },
+      {
+        elementId: "wtSubBanner",
+        className: "subBanner",
+        state: {
+          webtoons: subBannerWt,
+        },
+      },
       {
         elementId: "wtDaysTop",
         className: "daysTop",
