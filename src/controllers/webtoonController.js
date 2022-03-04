@@ -1,4 +1,4 @@
-import { WebtoonData } from "../dummy";
+import { WebtoonData } from "../data/dummy";
 import { days } from "../public/utils/utils";
 
 export const getWebtoons = (req, res) => {

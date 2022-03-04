@@ -1,4 +1,4 @@
-import { issueObj, bannerObj, WebtoonData } from "../dummy";
+import { issueObj, bannerObj, WebtoonData } from "../data/dummy";
 
 export const getCategory = (req, res) => {
     const id = +req.params.id;
