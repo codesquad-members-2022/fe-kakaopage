@@ -32,4 +32,4 @@ const setContainerWidth = (section) => {
   section.querySelector('.banner-container').style.width = `${100 * bannerCount}%`;
 };
 
-export { $, convertStringToHTML, convertReader, getDay, isNew, setContainerWidth };
+export { $, convertStringToHTML, convertReader, isNew, setContainerWidth };

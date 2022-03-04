@@ -1,5 +1,5 @@
-import { renderPage, renderPageNav } from './render.js';
-import { navCallback } from './js';
+import { renderPage, renderPageNav } from './js/render';
+import { navCallback } from './js/event';
 import DataApi from './js/api';
 import { store, setBanners, setCategories, setNavItems, setWebtoons } from './data/store.js';
 import { setSlideTotal } from './js/event/bannerEvent.js';

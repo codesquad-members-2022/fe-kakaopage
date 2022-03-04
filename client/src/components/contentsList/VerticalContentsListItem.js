@@ -1,5 +1,5 @@
 import { VerticalImgContainer } from '../index.js';
-import { convertReader, isNew } from '../../utils.js';
+import { convertReader, isNew } from '../../js/util';
 
 const VerticalContentsListItem = (rank, content) => {
 
@@ -22,7 +22,7 @@ const VerticalContentsListItem = (rank, content) => {
                   <span>${content.genre}</span>
                   <span>${writers}</span>
                 </div>
-                <span>${serialDates} 연재</span>
+                <span>${serialDates === '완결' ? serialDates : `${serialDates} 연재`}</span>
               </div>
             </a>
           </li>`;

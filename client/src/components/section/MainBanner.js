@@ -1,7 +1,7 @@
 import { BannerList } from '../index.js';
 import { store } from '../../data/store.js';
-import { bannerCallback, carouselCallback, setCarousel, carouselTransitionHandler } from '../../js';
-import { convertStringToHTML, setContainerWidth } from '../../utils.js';
+import { bannerCallback, carouselCallback, setCarousel, carouselTransitionHandler } from '../../js/event';
+import { convertStringToHTML, setContainerWidth } from '../../js/util';
 
 const MainBanner = (type = 'carousel') => {
 

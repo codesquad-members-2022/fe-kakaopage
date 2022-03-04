@@ -1,6 +1,6 @@
 import { ContentsHeader, VerticalContentsList } from '../index.js';
 import {store} from '../../data/store.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 
 const DailyRanking = () => {
 

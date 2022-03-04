@@ -1,5 +1,5 @@
 import { SmallImgContainer } from '../index.js';
-import { convertReader, isNew } from '../../utils.js';
+import { convertReader, isNew } from '../../js/util';
 
 const ContentsListItem = (content) => {
   return `<li class="list-item">

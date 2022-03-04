@@ -1,5 +1,5 @@
 import { SectionComponent } from '../../data/components.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 
 const MainContents = (contentsType) => {
 

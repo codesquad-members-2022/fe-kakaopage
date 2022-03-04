@@ -1,5 +1,5 @@
 import { AppDownloadLink } from '../index.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 
 const TempPage = (tab) => {
 

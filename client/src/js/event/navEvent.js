@@ -1,4 +1,4 @@
-import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../../render.js';
+import { renderPageNav, renderDailySeriesRanking, renderPage, renderContents } from '../render';
 import { store } from '../../data/store.js';
 
 const changeSelectedItem = (items, selectedItem) => {

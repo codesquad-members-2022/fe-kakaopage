@@ -1,5 +1,5 @@
 import { ContentsHeader, ContentsList } from '../index.js';
-import { convertStringToHTML } from '../../utils.js';
+import { convertStringToHTML } from '../../js/util';
 import { store } from '../../data/store.js';
 
 const AnticipatedWork = () => {
