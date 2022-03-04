@@ -16,7 +16,7 @@ export const ImagePosterComponent = (axis = 'col', obj, content) => {
                 `<div class="item__inner">
                     <img class="item__inner_star" alt="별 이미지" />
                     <span class="item__inner_rank">${content.rating}</span>
-                    <img class="item__inner_wait" src="images/bmbadge_waitfree.svg" alt="시계 이미지" />
+                    <img class="item__inner_wait" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf" alt="시계 이미지" />
                 </div>`
                 : ''}
             </div>

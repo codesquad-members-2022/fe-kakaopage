@@ -1,5 +1,5 @@
-import { ImagePosterComponent } from "../component/ImagePosterComponent.js"
-import { TopicComponent } from "../component/TopicComponent.js"
+import { ImagePosterComponent } from "../components/ImagePosterComponent.js"
+import { TopicComponent } from "../components/TopicComponent.js"
 
 export const ColumnListContainer = (menuObj, contents) => {
     return /* html */`

@@ -1,9 +1,9 @@
-import { $, days, fetchData, scrollMove } from "./utils.js";
-import { handleCategoryMenu } from "./handleCategoryMenu.js";
-import { ContentListInfos } from "./ContentListInfos.js";
-import { LoadingComponent } from "../component/LoadingComponent.js";
+import { $, days, fetchData, scrollMove } from "../utils/utils.js";
+import { handleCategoryMenu } from "../views/handleCategoryMenu.js";
+import { ContentListInfos } from "../views/ContentListInfos.js";
+import { LoadingComponent } from "../components/LoadingComponent.js";
 
-export const nav = {
+export const navEvent = {
     categoryClick() {
         const categoryElement = $(".main__nav-ul");
         categoryElement.addEventListener("click", ({ target }) => {
@@ -56,7 +56,7 @@ export const nav = {
     },
     removeLinkColor(elements, style) {
         for(const element of elements) {
-            element.firstChild.classList.remove(style)
+            element.firstChild.classList.remove(style);
         }
     }
 }

@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static("src/public"));
+app.use('/data', express.static("src/data"));
 app.use(cors());
 
 app.listen(PORT, () => {

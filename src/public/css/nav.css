@@ -1,12 +1,12 @@
 .nav-list {
     position: fixed;
     width: 150px;
-    height: 250px;
     top: 50%;
     left: 10%;
     transform: translate(-10%, -50%);
     border-radius: 8px;
     background-color: var(--color-white);
+    animation: fadeIn 1s ease-in-out 1;
 }
 
 .nav-list__ul {
@@ -18,13 +18,22 @@
 }
 
 .nav-list__li {
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 .nav-list_link {
     color: var(--color-yellow);
     text-decoration: none;
     font-size: var(--font-18);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1024px) {

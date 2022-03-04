@@ -1,4 +1,4 @@
-import { ImagePosterComponent } from "../component/ImagePosterComponent.js";
+import { ImagePosterComponent } from "../components/ImagePosterComponent.js";
 
 export const WeekListContainer = (obj, contents) => {
     return /* html */ `<div class="weeks">

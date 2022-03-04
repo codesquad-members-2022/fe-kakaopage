@@ -11,5 +11,13 @@
 }
 
 .topic__see {
-    /* 보류 */
+    display: flex;
+    text-decoration: none;
+    color: var(--color-pale-gray);
+}
+
+.topic__see_img {
+    width: 8px;
+    height: 14px;
+    margin-left: 5px;
 }
