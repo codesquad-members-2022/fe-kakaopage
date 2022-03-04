@@ -1,5 +1,5 @@
 {
-  " list": [
+  "list": [
     { "name": "홈", "genre": "home" },
     { "name": "요일연재", "genre": "days" },
     { "name": "웹툰", "genre": "webtoon" },

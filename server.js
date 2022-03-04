@@ -17,7 +17,7 @@ app.get('/webtoon', (req, res) => {
 
 app.get('/webtoon/:day', (req, res) => {
   const day = req.params.day;
-  const filteredWebtoon = data.webtoon.filter(wt => wt.day.includes(day));
+  const filteredWebtoon = webtoon.list.filter(wt => wt.day.includes(day));
   if (!filteredWebtoon) {
     return res.status(400).end();
   }
