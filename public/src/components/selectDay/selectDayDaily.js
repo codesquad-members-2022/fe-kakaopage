@@ -1,22 +1,8 @@
-import {makeSelectDayItems} from './selectDayList.js'
+import makeSelectDayItems from './selectDayItem.js'
 import {makeWebtoonList} from '../webtoonList.js'
-import {getData} from '../../utility.js'
 
 // ========== SelectDayDaily (웹툰-요일연재 화면의 요일탭)==========
-const url = 'http://localhost:3000/daily-top';
-
-function renderSelectDayDaily() {
-  return getData(url)
-    .then(json => {
-      const today = new Date().getDay();
-      const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-
-      return json[day[today]];
-    })
-    .then(data => selectDayDailyTemplete(data));
-}
-
-function selectDayDailyTemplete(data) {
+export default function makeSelectDayDaily(data) {
   const DAILY_ITEMS = 10;
   return `
     <section class="daily__webtoons">
@@ -52,5 +38,3 @@ function makeSelectDailyOptions() {
     </ul>
   `;
 }
-
-export {renderSelectDayDaily}

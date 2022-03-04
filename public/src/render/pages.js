@@ -1,19 +1,14 @@
 // ============== render 관련 모듈 ==============
-import {renderMainBanner} from './components/banner/bannerMain.js'
-import {renderThemeMenu} from './components/themeMenu.js'
-import {renderPromotionBanner} from './components/banner/bannerPromotion.js'
-import {renderContainer} from './components/container.js'
-import {renderMoveApp} from './components/moveApp.js'
-import {renderSelectDayDaily} from './components/selectDay/selectDayDaily.js'
-// ============== 각 탭의 컨테이너의 정보 ==============
-import {homeContainerInfo} from './containerInfo/home.js'
+import {renderMainBanner, renderPromotionBanner, renderThemeMenu, renderContainer, renderSelectDayDaily} from './components.js'
+import {renderMoveApp} from '../components/moveApp.js'
+// // ============== 각 탭의 컨테이너의 정보 ==============
+import {homeContainerInfo} from '../containerInfo/home.js'
 // ============== 유틸리티 모듈 ==============
-import {$} from './utility.js';
+import {$} from '../utility.js';
 
-async function renderHome(tab) {
+function renderHome(tab) {
   const containerInfo = homeContainerInfo;
-
-  return await Promise.all([
+  return Promise.all([
     renderMainBanner(tab), 
     renderThemeMenu(tab),
     renderPromotionBanner(tab),
@@ -25,21 +20,21 @@ async function renderHome(tab) {
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderDaily(tab) {
-  return await Promise.all([
+function renderDaily(tab) {
+  return Promise.all([
     renderMainBanner(tab),
     renderSelectDayDaily()
   ])
   .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderWebtoon(tab) {
-  return await Promise.all([renderMainBanner(tab)])
+function renderWebtoon(tab) {
+  return Promise.all([renderMainBanner(tab)])
     .then(templete =>  $('.main').insertAdjacentHTML('beforeend', templete.join('')));
 }
 
-async function renderBoy(tab) {
-  return await Promise.all([
+function renderBoy(tab) {
+  return Promise.all([
     renderMainBanner(tab), 
     renderThemeMenu(tab),
     renderPromotionBanner(tab),

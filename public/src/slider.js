@@ -1,24 +1,30 @@
 import {$} from './utility.js';
 
 export default class Slider {
-  constructor(container, list) {
-    this.container = $(`${container}`)
-    this.list = $(`${container} ${list}`);
+  constructor() {
+    this.container = null;
+    this.list = null;
     this.items = null;
     this.width = null;
-
-    this.counter = 1;
-    this.interval = 3000;
-    this.duration = 700;
+    
+    this.counter = null;
+    this.options = {
+      interval: 3000,
+      duration: 700,
+    }
 
     this.autoSlideTimer = false;
     this.throttleTimer = false;
   }
 
-  init() {
+  init(container, list) {
+    this.container = $(`${container}`);
+    this.list = $(`${container} ${list}`);
     this.makeCloneNode();
     this.items = this.list.children;
     this.width = this.list.firstElementChild.offsetWidth;
+
+    this.resetCounter();
     this.list.style.transform = `translate(${-this.width * this.counter}px)`;
 
     this.clickSlideBtns();
@@ -37,11 +43,15 @@ export default class Slider {
     this.list.insertBefore(lastNode, this.list.firstChild);
   }
 
+  resetCounter() {
+    return this.counter = 1;
+  }
+
   startAutoSlide() {
     this.autoSlideTimer = setTimeout(() => {
       this.moveNextSlide();
       this.startAutoSlide();
-    }, this.interval);
+    }, this.options.interval);
   }
 
   stopAutoSlide() {
@@ -60,7 +70,7 @@ export default class Slider {
   clickSlideBtns() {
     const nextBtn = this.container.querySelector('.banner__next');
     const prevBtn = this.container.querySelector('.banner__prev');
-    const DELAY = this.duration;
+    const DELAY = this.options.duration;
 
     nextBtn.addEventListener('click', () => {
       this.throttle(() => this.moveNextSlide(), DELAY);
@@ -75,7 +85,7 @@ export default class Slider {
     if (this.counter < 1) return;
     this.counter--;
     this.list.style.transform = `translate(${-this.width * this.counter}px)`;
-    this.list.style.transition = `transform ${this.duration}ms`;
+    this.list.style.transition = `transform ${this.options.duration}ms`;
 
     $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
   }
@@ -84,7 +94,7 @@ export default class Slider {
     if (this.counter > this.items.length - 1) return;
     this.counter++;
     this.list.style.transform = `translate(${-this.width * this.counter}px)`;
-    this.list.style.transition = `transform ${this.duration}ms`;
+    this.list.style.transition = `transform ${this.options.duration}ms`;
 
     $('.banner__count .now').innerText = this.items[this.counter].dataset.index;
   }

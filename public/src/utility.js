@@ -1,10 +1,9 @@
 const $ = (select) => document.querySelector(select);
 const $all = (select) => document.querySelectorAll(select);
 
-const getData = async (url) =>  {
-  const res = await fetch(url);
-  const body = await res.json();
-  return body;
+const getData = (router) =>  {
+  return fetch(`https://clone-kakaopage-dobby.herokuapp.com/${router}`)
+  .then(res => res.json());
 }
 
 export {$, $all, getData}

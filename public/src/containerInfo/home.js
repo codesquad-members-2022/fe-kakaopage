@@ -6,26 +6,27 @@ const homeContainerInfo = {
     class: 'daily__top',
     title: '요일 연재 TOP',
     items: DAILY_ITEMS,
-    layout: 'SMALL_CARD'
+    layout: 'SMALL_CARD_LAYOUT',
+    datasetTop: 'daily'
   },
   romenceTop: {
     class: 'romance__top',
     title: '로맨스 TOP',
     items: TOP_ITEMS,
-    layout: 'SMALL_CARD'
+    layout: 'SMALL_CARD_LAYOUT',
+    datasetTop: 'romance'
   },
   dailyRanking: {
     class: 'daily__ranking',
     title: '일간랭킹 TOP',
     items: TOP_ITEMS,
-    layout: 'RANKING'
+    layout: 'RANKING_LAYOUT'
   },
   event: {
     class: 'event',
     title: '추천 이벤트',
-    data: null,
     items: null,
-    layout: 'EVENT'
+    layout: 'EVENT_LAYOUT'
   }
 }
 
