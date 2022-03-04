@@ -8,7 +8,7 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/src/index.html");
 });
 
-app.get("/api", function (req, res) {
+app.get("/main-slide", function (req, res) {
   res.send(data);
 });
 
