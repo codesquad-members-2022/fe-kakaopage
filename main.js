@@ -56,7 +56,7 @@ getData(handleClickToonTap);
 
 element.addEventListener("click", (event) => {
   const className = event.target.className;
-  if (className === "day-월") {
+  if (className === "mon") {
     toonsBox.innerHTML = $mondayToon;
   }
 });
