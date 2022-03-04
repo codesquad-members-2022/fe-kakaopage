@@ -13,6 +13,7 @@ function paintTab($ul, targetId, isSub) {
 }
 
 export function handleTabActive({ categoryUid, subCategoryUid }) {
+  // mainUid 탭과 subUid탭을 동시에 관리
   const $mainCategory = document
     .getElementById(MAIN_CATEGORY)
     .querySelector('ul');

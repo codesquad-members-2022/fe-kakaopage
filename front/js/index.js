@@ -1,6 +1,6 @@
 import { ELEMENT_ID } from './constants/variable.js';
 import { render } from './render.js';
-import { handleClickNavigation, navigateTo } from './router.js';
+import { handleClickNavigation } from './router.js';
 import { $get } from './utils.js';
 
 const { MAIN_CATEGORY } = ELEMENT_ID;

@@ -21,5 +21,3 @@ export const MAIN_CHILD_NODE = [
   { CLASS: 'c-event', ID: 'event-carousel' },
   { CLASS: 'c-webtoons', ID: 'main-content' },
 ];
-
-export const NODE_SERVER = 'http://localhost:4000/api';

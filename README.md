@@ -2,11 +2,11 @@
 
 # 이론정리계획
 
-- [ ] 클로저에서 반환하는 타입 및 클로저 개념 공부
+- [x] 클로저에서 반환하는 타입 및 클로저 개념 공부
 - [x] 돔 렌더링 과정-간략히
 - [ ] Dynamic import in nodeJS
-- [ ] json으로 변환 및 json을 변환 하는 함수들
-- [ ] fetch API 및 HTTP Header 설정
+- [x] json으로 변환 및 json을 변환 하는 함수들
+- [x] fetch API 및 HTTP Header 설정
 - [ ] XMLHTTPRequest 는 잘 사용하지 않으나 그 사용법을 알아두자.
 - [x] 웹 클라와 서버 통신 이해 및 csr, ssr
 - [x] 탬플릿 렌더링의 장점
@@ -25,170 +25,71 @@
 # TODO
 
 - [ ] clearInterval로 버튼 누를 떄 이벤트 삭제 후 재등록
-- [ ] promise, then, async/await 동작 과정 이해
-- [ ] node js의 동작과정
+- [x] promise, then, async/await 동작 과정 이해
+- [x] pr 요청에 따른 수정
+- [ ] db: 데이터 구조 (key, value가 최선일까?) map을 활용하면 더 좋을려나
+- [ ] nodejs babel사용해보기: require너무 불편함
+- [ ] 요일 탭 구현하면서 데이터 fetch와 렌더링 연습
+- [ ] individual DOM : createDocumentFragement()
+- [ ] mvc 패턴 (+observer)이란?
 
-# 고민거리 (그룹리뷰용 정리)
+# 렌더링 방식 변경
 
-### 진행중.... 1. closure 이해 및 closure의 반환 값들
+## render.js와 각 카테고리별 관계 수정
 
-# closure 반환 함수
+`수정 전`
 
-1번에서 2번으로 pr 피드백에 따라 수정했지만, 명확한 차이를 모르겠다.
+render.js
 
-### 1번 함수 그 자체를 반환
+> 서버에서 데이터 가져오기 -> uid별 페이지 선택 -> 선택된 카테고리별 레이아웃 만들기 -> 레이아웃에 서버에서 가져온 데이터 넣기 -> 만들어진 레이아웃을 화면에 렌더링
+
+category별.js
+
+> innterHtml(탬플릿)을 article별로 return
 
 ```js
-export function handleMove() {
-  let idx = 0;
-
-  function renderCarouselIndex() {
-    // 생략
-  }
+function Main(content) {
   return {
-    renderCarouselIndex,
-    renderButtons() {
-      // 생략
-    },
-    initMove() {
-      // 생략
+    [`${CAROUSEL}`]: 'Main',
+    [`${EVENT_BOX}`]: `Main`,
+    [`${EVENT_CAROUSEL}`]: `Main`,
+    [`${MAIN_CONTENT}`]: `Main`,
+  };
+}
+```
+
+`수정 후`
+
+render.js
+
+> 수정 전과 흐름은 같지만 category별.js파일로 `정해진 레이아웃에 서버에서 가져온 데이터 넣기 -> 만들어진 레이아웃을 화면에 렌더링`하는 함수를 리턴하도록 수정했다.
+
+category별.js
+
+> uid별 페이지가 선택되면, 그 때 서버에서 가져온 데이터를 바로 넣기 -> render함수를 리턴해 render.js파일에서 사용가능하게 함
+
+```js
+export default function Main(content) {
+  const template = {
+    [`${CAROUSEL}`]: 'Main',
+    [`${EVENT_BOX}`]: `Main`,
+    [`${EVENT_CAROUSEL}`]: `Main`,
+    [`${MAIN_CONTENT}`]: `Main`,
+  };
+  return {
+    render() {
+      return renderPage(template);
     },
   };
 }
 ```
 
-<img width="704" alt="클로저 바로 함수" src="https://user-images.githubusercontent.com/71386219/156111129-fe9c0a9b-123f-4453-b23a-c790ed9f4284.png">
+수정 이유
 
-### 2번 객체 형태로 반환
+1. category 파일들의 기능을 명확히화게 하고 추가확장이 용이하게 하기 위해
 
-```js
-export function handleMove() {
-  let idx = 0;
+- 단순히 탬플릿을 전달하는 함수에서 템플릿을 만들고 render하는 함수로 변경
 
-  function renderCarouselIndex() {
-    // 생략
-  }
-  return {
-    renderCarouselIndex,
-    renderButtons: () => {
-      // 생략
-    },
-    initMove: function () {
-      // 생략
-    },
-  };
-}
-```
+2. render.js의 기능 줄이기
 
-<img width="434" alt="클로져 화살표함수 사용" src="https://user-images.githubusercontent.com/71386219/156111119-0ad7afcc-f1c9-46ab-afab-ad6e9e8bd5b5.png">
-
-### 해결: 2. api요청 이해 및 고민
-
-ssr, scr차이와 배포이후에 프론트와 백앤드가 어떻게 통신하는지 이해하고 적용해봄
-페이지를 라우팅하는 url과 데이터를 요청하는 api를 어떻게 구분할까 고민. 예를 들어, 프로젝트에서는 server.js에서 static폴더에 있는 정적인 리소스들을 아래와 같은 방식으로 관리하고 있음. 그런데 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링도록 설정.
-
-```js
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-```
-
-위와 같이 하면 url에 임의 대로 (http://localhost:4000/asdfasasjkf) 아무 의미 없는 url을 입력해도 정상적으로 작동함. 혹은 app.get("/user", cb)과 같이 서버에서 데이터를 가져오려고 만든 uri인데 클라이언트에서 라우팅이 작동함. (아래 예시)
-
-```js
-// 1번: app.get("/user", cb)가 먼저 작동해 index.html을 렌더링 하지 않음
-app.get('/user', (req, res) => {
-  res.send('user');
-});
-
-// 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링하기
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-
-// 2번: app.get("/*", cb)가 먼저 작동해 유저데이터를 받아오지 못함
-// 클라이언트에서 라우팅을 관리하기 때문에 어떤 path로 가든 index.html렌더링하기
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-
-app.get('/user', (req, res) => {
-  res.send('user');
-});
-
-//3번: /api로 시작하는 데이터만 요청하는 uri구분
-app.get('/api', apiRouter);
-app.get('/*', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'static/index.html'))
-);
-```
-
-`그렇다면 서버와 통신할 api주소는 어떻게 관리할까?`
-
-1. uri주소가 /api로 시작할 때 데이터만 전달하는 라우터 만들기
-
-2. 클라이언트를 렌더링하는 서버와 데이터를 처리하는 서버를 분리
-
-- 정적 파일을 렌더링하는 웹 서버와 동적 데이터(파일)을 관리하는 was로 구분해서 생각
-- 아래 해결방안에 자세히 설명
-
-✅ 해결방안
-
-클라이언트와 서버를 분리배포한다고 생각하고 작업
-
-> `클라이언트`: 페이지 이동관련 라우팅관리
-> `서버`: 클라이언트에서 들어온 요청에 대한 요청을 /api/로 관리
-
-`이전`
-
-```bash
-fe-kakaopage
-├── static
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   └── init.js
-│   └── index.html
-├── db
-│   └── store.js
-└── server.js
-```
-
-`이후`
-
-```bash
-fe-kakaopage
-├── front
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   └── init.js
-│   └── index.html
-└── server
-    ├── db
-    │   └── store.js
-    └── server.js
-```
-
-### 진행중... cors() 미들웨어 없이 header 설정으로 cors origin 문제해결해보기
-
-`이전`
-
-```js
-const allowlist = ['http://127.0.0.1:8080', 'http://localhost:8080'];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowlist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
-  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
-};
-app.use(cors(corsOptions));
-app.get('/api', cb);
-```
-
-`이후`
+- 수정 전에는 render.js에서 데이터를 받아오고, 템플릿은 선택하고, 템플릿에 데이터를 넣고, 렌더링하는 일을 모두 진행했는데, 템플릿을 만들고 렌더링하는 과정을 각 카데고리 파일로 분리
