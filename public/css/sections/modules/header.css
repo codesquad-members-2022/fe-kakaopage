@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background-color: var(--second-bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header__logo {
+  display: block;
+  background: url(../../../img/logo-kakaopage.svg) no-repeat;
+  width: 130px;
+  height: 29px;
+}
+
+.header .bar {
+  margin: 0 10px;
+  height: 12px;
+  background-color: #e2e2e2;
+}
+
+.header__btn__login {
+  color: var(--second-text-color);
+  font-size: var(--18px);
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gnb__item {
+  padding: 30px 39px 12px;
+}
+
+.gnb__item__selected {
+  border-bottom: 3px solid var(--sub-color);
+}

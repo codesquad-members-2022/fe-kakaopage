@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://static-page.kakao.com/static/common/favicon.ico?b65d26a018e7e801d042589459ab3611" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>홈 - 웹툰ㅣ카카오페이지</title>
+  </head>
+  <body>
+    <%- include ('../section/header.ejs') %>
+    <main class="page-w mg-row-center">
+      <nav class="mg-b-10">
+        <ul class="lnb flex justify-between">
+          <li class="lnb__item">
+            <a class="lnb__link lnb__item__selected" href="#">홈</a>
+          </li>
+          <li class="lnb__item">
+            <a href="/toon/daily" class="lnb__link" href="#">요일연재</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">웹툰</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">소년</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">드라마</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">로맨스</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">로판</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">액션무협</a>
+          </li>
+          <li class="lnb__item">
+            <a class="lnb__link" href="#">BL</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="banner p-relative">
+        <a href="#" class="flex">
+          <img class="w-100" src="/img/resource" alt="도굴왕" />
+          <div class="banner__info p-absolute">
+            <div class="mg-l-20 mg-b-20">
+              <div class="banner__info__title">도굴왕</div>
+              <div class="flex justify-between">
+                <div class="banner__info__description">
+                  <img src="/img/badge-bigthum-new.svg" alt="새 작품" />
+                  <img class="mg-l-10" src="/img/ico-bigthum-wait.svg" alt="기다리면 무료" />
+                  <div class="mg-l-5">웹툰</div>
+                  <div class="bar"></div>
+                  <img src="/img/ico-bigthum-person.svg" alt="구독자" />
+                  <div class="mg-l-5">200.9만명</div>
+                </div>
+                <div class="banner__page">3/4</div>
+              </div>
+            </div>
+            <p class="banner__info__comment flex items-center_justify-center">여기도 '그 자식'이 다 털어갔냐?</p>
+          </div>
+        </a>
+        <div class="banner__controller p-absolute">
+          <button><img src="/img/ic-banner-paging-back-nor.svg" alt="" /></button>
+          <button><img src="/img/ic-banner-paging-next-nor.svg" alt="" /></button>
+        </div>
+      </section>
+      <section class="container">
+        <div class="notice border-round">
+          <a class="notice__item flex items-center_justify-center" href="#">
+            <div>
+              <span>오늘 UP</span>
+              <span class="font-16 badge__yellow">205</span>
+            </div>
+          </a>
+          <a class="notice__item flex justify-center" href="#">
+            <div>
+              <span>오늘 신작</span>
+              <span class="font-16 badge__yellow">4</span>
+            </div>
+          </a>
+          <a class="notice__item flex items-center_justify-center" href="#">
+            <div>
+              <span>오리지널</span>
+              <span class="font-16 badge__yellow">2,328</span>
+            </div>
+          </a>
+          <a class="notice__item flex items-center_justify-center" href="#">
+            <div>
+              <span>완결까지 정주행</span>
+            </div>
+          </a>
+          <a class="notice__item flex items-center_justify-center" href="#">
+            <div>
+              <span>독립운동가 웹툰</span>
+            </div>
+          </a>
+          <a class="notice__item flex items-center_justify-center" href="#">
+            <div>
+              <span>오늘 랭킹</span>
+              <span class="font-16 badge__yellow">1위</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section data-section="daily" class="container">
+        <div class="flex justify-between">
+          <div class="flex items-center_justify-center">
+            <h3 class="section__title">요일 연재 TOP</h3>
+            <span class="section__total">(1,622)</span>
+          </div>
+          <a class="more" href="#">더보기 ></a>
+        </div>
+        <nav class="border-bottom">
+          <ul class="lnb flex justify-between">
+            <li data-day="1" class="lnb__item lnb__link pointer">월</li>
+            <li data-day="2" class="lnb__item lnb__link pointer">화</li>
+            <li data-day="3" class="lnb__item lnb__link pointer">수</li>
+            <li data-day="4" class="lnb__item lnb__link pointer">목</li>
+            <li data-day="5" class="lnb__item lnb__link pointer">금</li>
+            <li data-day="6" class="lnb__item lnb__link pointer">토</li>
+            <li data-day="0" class="lnb__item lnb__link pointer">일</li>
+            <li class="lnb__item lnb__link pointer">완결</li>
+          </ul>
+        </nav>
+        <div class="grid"></div>
+      </section>
+      <section class="new container">
+        <div class="flex justify-between">
+          <div class="flex items-center_justify-center">
+            <h3 class="section__title">기대신작 TOP</h3>
+          </div>
+          <a class="more" href="#">더보기 ></a>
+        </div>
+        <div class="flex justify-between mg-t-20">
+          <a href="#" class="banner width-half flex p-relative border-round">
+            <img class="w-100" src="/img/resource" alt="도굴왕" />
+            <div class="banner__info p-absolute">
+              <div class="mg-l-20 mg-b-20">
+                <div class="banner__info__title">도굴왕</div>
+                <div class="banner__info__description">
+                  <img class="h-15" src="/img/badge-bigthum-new.svg" alt="새 작품" />
+                  <img class="mg-l-10 h-15" src="/img/ico-bigthum-wait.svg" alt="기다리면 무료" />
+                  <div class="mg-l-5">웹툰</div>
+                  <div class="bar"></div>
+                  <img class="h-15" src="/img/ico-bigthum-person.svg" alt="구독자" />
+                  <div class="mg-l-5">200.9만명</div>
+                </div>
+              </div>
+              <p class="banner__info__comment flex items-center_justify-center">여기도 '그 자식'이 다 털어갔냐?</p>
+            </div>
+          </a>
+          <a href="#" class="banner width-half flex p-relative border-round">
+            <img class="w-100" src="/img/resource" alt="도굴왕" />
+            <div class="banner__info p-absolute">
+              <div class="mg-l-20 mg-b-20">
+                <div class="banner__info__title">도굴왕</div>
+                <div class="banner__info__description">
+                  <img class="h-15" src="/img/badge-bigthum-new.svg" alt="새 작품" />
+                  <img class="mg-l-10 h-15" src="/img/ico-bigthum-wait.svg" alt="기다리면 무료" />
+                  <div class="mg-l-5">웹툰</div>
+                  <div class="bar"></div>
+                  <img class="h-15" src="/img/ico-bigthum-person.svg" alt="구독자" />
+                  <div class="mg-l-5">200.9만명</div>
+                </div>
+              </div>
+              <p class="banner__info__comment flex items-center_justify-center">여기도 '그 자식'이 다 털어갔냐?</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section data-section="romance" data-genre="romance" class="container">
+        <div class="flex justify-between">
+          <div class="flex items-center_justify-center">
+            <h3 class="section__title">로맨스 TOP</h3>
+            <span class="section__total">(1,622)</span>
+          </div>
+          <a class="more" href="#">더보기 ></a>
+        </div>
+        <div class="grid"></div>
+      </section>
+      <section data-section="drama" data-genre="drama" class="container">
+        <div class="flex justify-between">
+          <div class="flex items-center_justify-center">
+            <h3 class="section__title">드라마 TOP</h3>
+            <span class="section__total">(1,622)</span>
+          </div>
+          <a class="more" href="#">더보기 ></a>
+        </div>
+        <div class="grid"></div>
+      </section>
+      <section data-section="boy" data-genre="boy" class="container">
+        <div class="flex justify-between">
+          <div class="flex items-center_justify-center">
+            <h3 class="section__title">소년 TOP</h3>
+            <span class="section__total">(1,622)</span>
+          </div>
+          <a class="more" href="#">더보기 ></a>
+        </div>
+        <div class="grid"></div>
+      </section>
+      <div class="app__btn flex justify-center">
+        <a class="flex" href="#"><img class="h-70" src="/img/appDownload.png" alt="앱 다운로드" /></a>
+      </div>
+    </main>
+    <%- include ('../section/footer.ejs') %>
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
