@@ -62,77 +62,75 @@ const handleArrowButton = ({
 
     carouselBox.style.transition = "none";
     carouselBox.style.transform = `translateX(${+curX}${elemUnit})`;
-  }, 210);
+  }, 201);
 };
 
 const createArrowBox = ({ carouselBox, elemWidth, elemUnit, css }) => {
-  const prevArrow = createElement({
-    tag: "div",
-    classes: ["arrow", "arrow__prev"],
-    textContent: "<",
-    event: {
-      eventType: "click",
-      callback: throttle(500, () => {
-        handleArrowButton({
-          isPrev: true,
-          carouselBox,
-          elemWidth,
-          elemUnit,
-          css: css.elemCss,
-        });
-      }),
+  const arrows = [
+    {
+      direction: "prev",
+      content: "<",
     },
-    css: css.arrowCss,
-  });
-  const nextArrow = createElement({
-    tag: "div",
-    classes: ["arrow", "arrow__next"],
-    textContent: ">",
-    event: {
-      eventType: "click",
-      callback: throttle(500, () => {
-        handleArrowButton({
-          isPrev: false,
-          carouselBox,
-          elemWidth,
-          elemUnit,
-          css: css.elemCss,
-        });
-      }),
+    {
+      direction: "next",
+      content: ">",
     },
-    css: css.arrowCss,
+  ];
+  const $arrows = arrows.map(({ direction, content }) => {
+    return createElement({
+      tag: "div",
+      classes: ["arrow", `arrow__${direction}`],
+      textContent: content,
+      event: {
+        eventType: "click",
+        callback: throttle(500, () => {
+          handleArrowButton({
+            isPrev: direction === "prev" ? true : false,
+            carouselBox,
+            elemWidth,
+            elemUnit,
+            css: css.elemCss,
+          });
+        }),
+      },
+      css: css.arrowCss,
+    });
   });
   const arrowBox = createElement({
     tag: "div",
     classes: ["arrow-box"],
-    children: [prevArrow, nextArrow],
+    children: [...$arrows],
     css: css.arrowBoxCss,
   });
   return arrowBox;
 };
 
 const createCarouselOrder = ({ elems, css }) => {
-  const carouselCurNum = createElement({
-    tag: "span",
-    classes: ["orderNum", "curNum"],
-    textContent: 1,
-  });
-  const orderBar = createElement({
-    tag: "span",
-    classes: ["orderBar"],
-    textContent: "/",
-  });
-  const carouselTotalNum = createElement({
-    tag: "span",
-    classes: ["orderNum"],
-    textContent: elems.length,
-  });
+  const orderInfos = [
+    {
+      tag: "span",
+      classes: ["orderNum", "curNum"],
+      textContent: 1,
+    },
+    {
+      tag: "span",
+      classes: ["orderBar"],
+      textContent: "/",
+    },
+    {
+      tag: "span",
+      classes: ["orderNum"],
+      textContent: elems.length,
+    },
+  ];
+
   const carouselOrder = createElement({
     tag: "div",
     classes: ["carousel-order"],
-    children: [carouselCurNum, orderBar, carouselTotalNum],
+    children: [...orderInfos.map((info) => createElement(info))],
     css,
   });
+
   return carouselOrder;
 };
 
