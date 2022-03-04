@@ -7,10 +7,10 @@ import { createGenreBlock } from "./components/webtoon.js";
 import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { createDailyContents } from "./components/daily-contents.js";
-import { port } from "../express.js";
 
 const fillWithData = (req) => {
-  fetch(`http://localhost:${port}/${req.path}`)
+  // `http://localhost:3000/${req.path}`
+  fetch(`https://kakapage-nanjeong.herokuapp.com/${req.path}`)
     .then((res) => res.json())
     .then((data) => req.createBlock(data))
     .catch((err) => console.log(err));

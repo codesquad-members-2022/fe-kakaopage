@@ -58,4 +58,4 @@ app.listen(port, () => {
   console.log(`server is listening at localhost:${port}`);
 });
 
-export { port };
+module.exports = { port };
