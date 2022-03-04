@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const webtoon = require('./data/webtoon.json');
+const category = require('./data/category.json');
 
 const app = express();
 const PORT = 3001;
@@ -21,6 +22,10 @@ app.get('/webtoon/:day', (req, res) => {
     return res.status(400).end();
   }
   res.json(filteredWebtoon);
+});
+
+app.get('/category', (req, res) => {
+  res.json(category.list);
 });
 
 app.get('/', (req, res) => {

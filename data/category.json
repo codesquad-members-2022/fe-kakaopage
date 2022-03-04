@@ -1,0 +1,13 @@
+{
+  " list": [
+    { "name": "홈", "genre": "home" },
+    { "name": "요일연재", "genre": "days" },
+    { "name": "웹툰", "genre": "webtoon" },
+    { "name": "소년", "genre": "boy" },
+    { "name": "드라마", "genre": "drama" },
+    { "name": "로맨스", "genre": "romance" },
+    { "name": "로판", "genre": "rofan" },
+    { "name": "액션무협", "genre": "action" },
+    { "name": "BL", "genre": "bl" }
+  ]
+}
