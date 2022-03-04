@@ -1,4 +1,4 @@
-import { getToday } from "../utils.js";
+import { getToday } from "../../util/utils.js";
 
 const dowNavContents = ["월", "화", "수", "목", "금", "토", "일", "완결"];
 

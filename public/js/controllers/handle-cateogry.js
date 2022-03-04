@@ -1,5 +1,5 @@
-import { renderingNav } from "./rendering/nav.js";
-import { settingContents } from "./setting-contents.js";
+import { renderingNav } from "../index.js";
+import { settingContents } from "../controllers/setting-contents.js";
 
 const blockingRerendering = (selectedNav, selectedValue) => {
   let originalSelected;

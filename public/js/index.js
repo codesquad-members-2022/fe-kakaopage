@@ -1,7 +1,20 @@
-import { initEventListener } from "./event/event-listener.js";
-import { dowTopDefault } from "./blocks/dow-top.js";
-import { renderingDowNavDefault } from "./rendering/nav.js";
-import { renderingMainAd } from "./rendering/main-ad-banner.js";
+import { getToday } from "./util/utils.js";
+import { dowTopDefault } from "./views/blocks/dow-top.js";
+import { renderingMainAd } from "./views/components/main-ad-banner.js";
+import { handleCategory } from "./controllers/handle-cateogry.js";
+
+export const renderingNav = (selectedNav, selectedElement) => {
+  document.querySelectorAll(`.${selectedNav} li`).forEach((e) => {
+    e.id = "";
+  });
+  selectedElement.id = "selected";
+};
+
+const renderingDowNavDefault = () => {
+  document.querySelectorAll(".dow__nav .nav__list .nav__item").forEach((e) => {
+    if (e.dataset.value === getToday()) return renderingNav("dow__nav", e);
+  });
+};
 
 const renderingDefault = () => {
   renderingMainAd("홈");
@@ -9,5 +22,11 @@ const renderingDefault = () => {
   dowTopDefault();
 };
 
+const setNavEvent = () => {
+  document.querySelectorAll(".nav__list").forEach((e) => {
+    e.addEventListener("click", handleCategory);
+  });
+};
+
 renderingDefault();
-initEventListener();
+setNavEvent();

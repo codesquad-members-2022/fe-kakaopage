@@ -1,4 +1,4 @@
-import { $ } from "../utils.js";
+import { $ } from "./utils.js";
 const slideWidth = $(".event-slider").clientWidth;
 const slideSpeed = 0.4;
 const sec = 1000;
@@ -19,7 +19,7 @@ const timerInterval = () => {
     if (clickFlag) return;
     clickFlag = true;
     playEvent();
-    isEnd();
+    checkingSlideEnd();
   }, autoTime);
 };
 
@@ -36,10 +36,10 @@ const autoPlay = {
 const makingClone = () => {
   const slides = $(".event-slider");
   const slideImg = document.querySelectorAll(".event-slider li");
-  const cloneSlide_first = slideImg[0].cloneNode(true);
-  const cloneSlide_last = slides.lastElementChild.cloneNode(true);
-  slides.append(cloneSlide_first);
-  slides.insertBefore(cloneSlide_last, slides.firstElementChild);
+  const cloneSlideFirst = slideImg[0].cloneNode(true);
+  const cloneSlideLast = slideImg[slideImg.length - 1].cloneNode(true);
+  slides.append(cloneSlideFirst);
+  slides.insertBefore(cloneSlideLast, $(".event-slider li"));
 };
 
 const autoPlayStart = () => {
@@ -61,7 +61,7 @@ const nonBlockingClick = () => {
   }, delay);
 };
 
-const isEnd = () => {
+const checkingSlideEnd = () => {
   const slideLength = document.querySelectorAll(".event-slider li").length;
   const clonedSlide = 2;
   const containerWidth = slideWidth * (slideLength - clonedSlide);
@@ -95,11 +95,11 @@ const playEvent = (btnEvent) => {
 };
 
 const slideShow = (e) => {
-  if (clickFlag) return;
+  if (clickFlag || e.target.parentNode.nodeName !== "BUTTON") return;
   clickFlag = true;
   const btnEvent = e.target.parentNode.dataset.event;
   playEvent(btnEvent);
-  isEnd();
+  checkingSlideEnd();
 };
 
 export { slideShow, autoPlayStart, autoPlayStop, makingClone, changeTab };
