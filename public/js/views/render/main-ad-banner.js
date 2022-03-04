@@ -1,6 +1,12 @@
 import { $ } from "../../util/utils.js";
 import { mainAdBanner } from "../components/main-ad-banner.js";
-import { makingClone, changeTab } from "../../controllers/event-slide.js";
+import {
+  slideShow,
+  autoPlayStart,
+  autoPlayStop,
+  makingClone,
+  changeTab,
+} from "../../controllers/slide.js";
 
 const render = (selectedData) => {
   $(".event-slider").innerHTML = selectedData
@@ -18,3 +24,11 @@ export const renderingMainAd = (selectedValue) => {
       changeTab();
     });
 };
+
+const setSlideEvent = () => {
+  $(".main-ad-banner").addEventListener("click", slideShow);
+  $(".main-ad-banner").addEventListener("mouseenter", autoPlayStop);
+  $(".main-ad-banner").addEventListener("mouseleave", autoPlayStart);
+};
+
+setSlideEvent();
