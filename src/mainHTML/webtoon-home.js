@@ -32,5 +32,10 @@ const dayTopData = {
 };
 
 export default function ({ mainSlideData }) {
-  return [createMainSlide(mainSlideData), createBannerSection(), createDayTopSection(dayTopData), sectionDatas.map((sectionData) => createContentsSection(sectionData)).join("")].join("");
+  return [
+    createMainSlide(mainSlideData),
+    createBannerSection(),
+    createDayTopSection(dayTopData),
+    sectionDatas.map((sectionData) => createContentsSection(sectionData)).join(""),
+  ].join("");
 }
