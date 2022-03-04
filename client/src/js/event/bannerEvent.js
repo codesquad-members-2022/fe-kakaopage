@@ -1,22 +1,23 @@
-import { MainBanners, SubBanners, EventBanners } from '../../data';
-
 const Slide = {
   main: {
     pos: 0,
     current: 1,
-    total: MainBanners.length,
   },
   sub: {
     pos: 0,
     current: 1,
-    total: SubBanners.length,
   },
   event: {
     pos: 0,
     current: 1,
-    total: EventBanners.length,
   },
 };
+
+const setSlideTotal = (main, sub, event) => {
+  Slide.main.total = main;
+  Slide.sub.total = sub;
+  Slide.event.total = event;
+}
 
 const setCarousel = (html) => {
   const ul = html.querySelector('.banner-container');
@@ -124,4 +125,4 @@ const bannerCallback = (e) => checkTarget(e) && bannerClickHandler(e);
 
 const carouselCallback = (e) => checkTarget(e) && carouselClickHandler(e);
 
-export { bannerCallback, setCarousel, carouselCallback, carouselTransitionHandler };
+export { bannerCallback, setCarousel, carouselCallback, carouselTransitionHandler, setSlideTotal };

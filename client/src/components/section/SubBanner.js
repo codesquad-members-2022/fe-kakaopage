@@ -1,5 +1,5 @@
 import { BannerList } from '../index.js';
-import { SubBanners } from '../../data';
+import { store } from '../../data/store.js';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 import { bannerCallback, carouselCallback, carouselTransitionHandler, setCarousel } from '../../js';
 
@@ -8,7 +8,7 @@ const SubBanner = (type = 'carousel') => {
   let html = convertStringToHTML(
           `<section class="contents sub-banner" data-banner="sub">
             <div class="sub-banner-wrapper">
-              ${BannerList('sub', SubBanners)}
+              ${BannerList('sub', store.banners.sub)}
             </div>
             <div class="banner-btn-group">
               <button type="button" class="back">이전 배너</button>

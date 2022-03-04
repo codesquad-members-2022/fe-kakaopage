@@ -12,7 +12,7 @@ import {
   DailyRanking,
   RecommendEvent,
 } from '../components';
-import { Categories } from './index.js';
+import { store } from './store.js';
 
 const PageComponent = {
   home: () => TempPage('Home'),
@@ -26,13 +26,13 @@ const PageComponent = {
 const sectionComponent = {
   action: () => [
     MainNav(),
-    CategoryMenu(Categories.action),
+    CategoryMenu(store.categories.action),
     GenreTop('액션무협'),
     AppDownloadLink(),
   ],
   bl: () => [
     MainNav(),
-    CategoryMenu(Categories.bl),
+    CategoryMenu(store.categories.bl),
     GenreTop('BL/GL'),
     AppDownloadLink(),
   ],
@@ -44,14 +44,14 @@ const sectionComponent = {
   ],
   drama: () => [
     MainNav(),
-    CategoryMenu(Categories.drama),
+    CategoryMenu(store.categories.drama),
     GenreTop('드라마'),
     AppDownloadLink(),
   ],
   home: () => [
     MainNav(),
     MainBanner(),
-    CategoryMenu(Categories.home),
+    CategoryMenu(store.categories.home),
     SubBanner(),
     DailySeriesRanking(),
     AnticipatedWork(),
@@ -67,19 +67,19 @@ const sectionComponent = {
   ],
   romance: () => [
     MainNav(),
-    CategoryMenu(Categories.romance),
+    CategoryMenu(store.categories.romance),
     GenreTop('로맨스'),
     AppDownloadLink(),
   ],
   romanceFantasy: () => [
     MainNav(),
-    CategoryMenu(Categories.romanceFantasy),
+    CategoryMenu(store.categories.romanceFantasy),
     GenreTop('로판'),
     AppDownloadLink(),
   ],
   shonen: () => [
     MainNav(),
-    CategoryMenu(Categories.shonen),
+    CategoryMenu(store.categories.shonen),
     GenreTop('소년'),
     AppDownloadLink(),
   ],

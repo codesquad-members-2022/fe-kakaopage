@@ -1,4 +1,4 @@
-import { Webtoons } from '../../data';
+import { store } from '../../data/store.js';
 import { ContentsHeader, ContentsList } from '../index.js';
 import { convertStringToHTML } from '../../utils.js';
 
@@ -7,7 +7,7 @@ const GenreTop = (genre) => {
   const title = `${genre} TOP`;
 
   const filteredWebtoon = () => {
-    const filteredGenreArray = Webtoons.filter((webtoon) => genre.includes(webtoon.genre));
+    const filteredGenreArray = store.webtoons.filter((webtoon) => genre.includes(webtoon.genre));
     return filteredGenreArray.length > 5 ?
       filteredGenreArray.slice(0, 5) :
       filteredGenreArray;

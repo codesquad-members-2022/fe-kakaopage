@@ -1,5 +1,5 @@
 import { ContentsHeader, BannerList } from '../index.js';
-import { EventBanners } from '../../data';
+import { store } from '../../data/store.js';
 import { convertStringToHTML, setContainerWidth } from '../../utils.js';
 import { bannerCallback, carouselCallback, carouselTransitionHandler, setCarousel } from '../../js';
 
@@ -11,10 +11,10 @@ const RecommendEvent = (type = 'carousel') => {
           `<section class="contents recommend-event">
             ${ContentsHeader(title)}
             <div class="event-banner-wrapper" data-banner="event">
-              ${BannerList('event', EventBanners)}
+              ${BannerList('event', store.banners.event)}
               <p class="banner-count">
                 <span class="current">1</span> / 
-                <span class="total">${EventBanners.length}</span>
+                <span class="total">${store.banners.event.length}</span>
               </p>              
               <div class="banner-btn-group">
                 <button type="button" class="back">back</button>

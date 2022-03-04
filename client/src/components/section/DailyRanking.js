@@ -1,16 +1,13 @@
 import { ContentsHeader, VerticalContentsList } from '../index.js';
-import { Webtoons } from '../../data';
+import {store} from '../../data/store.js';
 import { convertStringToHTML } from '../../utils.js';
 
 const DailyRanking = () => {
 
   const title = '일간 랭킹 TOP';
-  const filteredWebtoons = () => {
-    const sortedWebtoons = Webtoons.sort((a, b) => {
-      return b.readers - a.readers;
-    });
-    return sortedWebtoons.slice(0, 3);
-  };
+  const filteredWebtoons = () => store.webtoons
+    .sort((a, b) => b.readers - a.readers)
+    .slice(0, 3);
 
   return convertStringToHTML(
           `<section class="contents daily-ranking">
