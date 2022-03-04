@@ -19,9 +19,9 @@ export const renderHome = () => {
         return genreBest.getHtml();
     };
 
-    const renderJSONData = (path) => {
+    const renderJSONData = (genreName, path) => {
         getJSON(path)
-            .then((data) => (html += getGenreBestHtml("로맨스", data)))
+            .then((data) => (html += getGenreBestHtml(genreName, data)))
             .then((html) => render(html))
             .catch((err) => {
                 console.error(err);
@@ -30,6 +30,6 @@ export const renderHome = () => {
     };
 
     renderSubMenu();
-    renderJSONData("genre/romanceTop");
+    renderJSONData("로맨스", "genre/romanceTop");
     renderCarousel(datas.carouselImgs["Home"]);
 };
