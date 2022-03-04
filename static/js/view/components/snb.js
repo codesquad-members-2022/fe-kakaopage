@@ -1,9 +1,10 @@
 const createSnb = (subCategorys) => {
-  let items = '';
-
-  subCategorys.forEach((subCategory) => {
-    items += `<li data-active="off" data-category="${subCategory}" class="snb__item">${subCategory}</li>`;
-  });
+  const items = subCategorys.reduce(
+    (joined, subCategory) =>
+      joined +
+      `<li data-active="off" data-category="${subCategory}" class="snb__item">${subCategory}</li>`,
+    ''
+  );
 
   return `
     <nav class="snb">

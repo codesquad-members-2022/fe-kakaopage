@@ -1,9 +1,9 @@
 const createPromotionBanner = (bannerImgUrls) => {
-  let items = '';
-
-  bannerImgUrls.forEach((url, index) => {
-    items += `<li data-index="${index}" class="promotion-banner__item"><img src="${url}"/></li>`;
-  });
+  const items = bannerImgUrls.reduce(
+    (joined, url, index) =>
+      joined + `<li data-index="${index}" class="promotion-banner__item"><img src="${url}"/></li>`,
+    ''
+  );
 
   return `
     <div class="promotion-banner">
