@@ -1,9 +1,8 @@
-import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-els.js'
-import { data } from './webtoon-datas.js'
+import { setThumbnail, setIcon, setTitleUserCntDay } from './webtoon-parsing.js'
 
 let currentActiveTab = document.querySelector('.serial__item--focus')
 
-export function setWebtoonList() {
+export function setWebtoonList(webtoonListData) {
   const container = document.querySelector('#container')
   const serial = container.querySelector('.serial')
   const webtoon = container.querySelector('.serial__webtoons')
@@ -20,18 +19,22 @@ export function setWebtoonList() {
     serial.appendChild(wentoonCopy)
     setThumbnail(
       wentoonCopy,
-      data[i].thumbnail__class,
-      data[i].thumbnail__src,
-      data[i].thumbnail__alt
+      webtoonListData[i].thumbnail__class,
+      webtoonListData[i].thumbnail__src,
+      webtoonListData[i].thumbnail__alt
     )
     if (i === iconDays[0] || i === iconDays[1] || i === iconDays[2])
       setIcon(
         wentoonCopy,
-        data[i].icon__class,
-        data[i].icon__src,
-        data[i].icon__alt
+        webtoonListData[i].icon__class,
+        webtoonListData[i].icon__src,
+        webtoonListData[i].icon__alt
       )
-    setTitleUserCntDay(wentoonCopy, data[i].user__class, data[i].user__text)
+    setTitleUserCntDay(
+      wentoonCopy,
+      webtoonListData[i].user__class,
+      webtoonListData[i].user__text
+    )
   }
 }
 

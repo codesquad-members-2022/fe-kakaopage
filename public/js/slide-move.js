@@ -1,4 +1,4 @@
-import { searchSelctor } from './utility.js'
+import { searchSelector } from './utility.js'
 
 let sNum = 1
 let pos = 0
@@ -101,7 +101,7 @@ function setSlideNum(width) {
 function moveManualSlideRgiht() {
   const ANIMATION_SEC = 60 * 0.5
   const START_POS = 0
-  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+  const slideImgs = searchSelector('.webtoon-slide__imgs')
   const FRAME_CNT = 1
   const FRAME_RESET = 0
 
@@ -125,7 +125,7 @@ function moveManualSlideLeft() {
   const FRAME_CNT = 1
   const END_POS = -2880
 
-  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+  const slideImgs = searchSelector('.webtoon-slide__imgs')
 
   manualLrafId = requestAnimationFrame(moveManualSlideLeft)
   manualNum += FRAME_CNT
@@ -142,7 +142,7 @@ function moveManualSlideLeft() {
 
 function moveAutoSlideStartPos() {
   const slideNum = document.querySelector('.webtoon-slide__number')
-  const slideImgs = searchSelctor('.webtoon-slide__imgs')
+  const slideImgs = searchSelector('.webtoon-slide__imgs')
 
   const SLIDE_START_NUM = 1
   const SLIDE_END_NUM = 5
@@ -193,3 +193,5 @@ export function moveAutoSlide() {
   }
   rafCallback()
 }
+
+export async function parseSlideData() {}
