@@ -11,18 +11,6 @@ function BoyGenre(infoObject) {
 
 createExtendsRelation(BoyGenre, Component);
 
-BoyGenre.prototype.sortRanking = function (items) {
-  return items.sort((i1, i2) => i2.rank - i1.rank);
-};
-
-BoyGenre.prototype.filterContent = function (webtoons, where, what) {
-  return webtoons.filter((webtoon) =>
-    typeof webtoon[where] === "object"
-      ? webtoon[where].includes(what)
-      : webtoon[where] === what
-  );
-};
-
 BoyGenre.prototype.mount = function () {
   const { contents } = this.state;
 
@@ -38,8 +26,6 @@ BoyGenre.prototype.mount = function () {
         webtoons: className === "mainBanner" ? list : [],
       },
       $props: {
-        sortRanking: this.sortRanking,
-        filterContent: this.filterContent,
         setCarousel:
           className === "mainBanner" ? this.$props.setCarousel : null,
         clearCarousel:

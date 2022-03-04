@@ -11,18 +11,6 @@ function HomeGenre(infoObject) {
 
 createExtendsRelation(HomeGenre, Component);
 
-// HomeGenre.prototype.sortRanking = function (items) {
-//   return items.sort((i1, i2) => i2.rank - i1.rank);
-// };
-
-// HomeGenre.prototype.filterContent = function (webtoons, where, what) {
-//   return webtoons.filter((webtoon) =>
-//     typeof webtoon[where] === "object"
-//       ? webtoon[where].includes(what)
-//       : webtoon[where] === what
-//   );
-// };
-
 HomeGenre.prototype.mount = function () {
   const { contents } = this.state;
 

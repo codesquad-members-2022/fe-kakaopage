@@ -11,18 +11,6 @@ function DaysGenre(infoObject) {
 
 createExtendsRelation(DaysGenre, Component);
 
-// DaysGenre.prototype.sortRanking = function (items) {
-//   return items.sort((i1, i2) => i2.rank - i1.rank);
-// };
-
-// DaysGenre.prototype.filterContent = function (webtoons, where, what) {
-//   return webtoons.filter((webtoon) =>
-//     typeof webtoon[where] === "object"
-//       ? webtoon[where].includes(what)
-//       : webtoon[where] === what
-//   );
-// };
-
 DaysGenre.prototype.mount = function () {
   const { contents } = this.state;
 
@@ -38,8 +26,6 @@ DaysGenre.prototype.mount = function () {
         webtoons: className === "mainBanner" ? list : webtoons,
       },
       $props: {
-        // sortRanking: this.sortRanking,
-        // filterContent: this.filterContent,
         setCarousel:
           className === "mainBanner" ? this.$props.setCarousel : null,
         clearCarousel:

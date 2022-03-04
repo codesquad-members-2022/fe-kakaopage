@@ -56,7 +56,7 @@ RowCardList.prototype.template = function () {
             }
             <span>${webtoon.sub_category_title}</span>
             <span class="span-bar">|</span>
-            <span>${webtoon.publisher ? webtoon.publisher + "," : ""}
+            <span>${webtoon.publisher ? webtoon.publisher : ""}
             </span>
           </div>
           <div class="info-footer">
