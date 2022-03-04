@@ -7,8 +7,7 @@ import { createGenreBlock } from "./components/webtoon.js";
 import { createDailyRankBlock } from "./components/daily-rank.js";
 import { createEventBlock } from "./components/event.js";
 import { createDailyContents } from "./components/daily-contents.js";
-
-const port = process.env.PORT || 3000;
+import { port } from "../express.js";
 
 const fillWithData = (req) => {
   fetch(`http://localhost:${port}/${req.path}`)
