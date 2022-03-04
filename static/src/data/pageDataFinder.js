@@ -1,5 +1,5 @@
 export const getPageData = page => {
-  const DATA_URL = '/src/data/json/';
+  const DATA_URL = '/fe-kakaopage/static/src/data/json/';
   const dataUrl = {
     홈: `${DATA_URL}home.json`,
     웹툰: `${DATA_URL}webtoon.json`,
