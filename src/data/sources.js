@@ -1,15 +1,15 @@
 export const dummy = {
     slideBannerMainImg: [
-        'https://dn-img-page.kakao.com/download/resource?kid=UR3fh/hyF29PgleL/7fFerNikdZewZPxreBIH80',
-        'https://dn-img-page.kakao.com/download/resource?kid=d4euUn/hyZ8ANjBph/bQCJXK9YvC6oDTqvXp6aV1',
-        'https://dn-img-page.kakao.com/download/resource?kid=cLnYFA/hzmU3TywO7/9jccDOSIGBx0m3YopMIyfK',
-        'https://dn-img-page.kakao.com/download/resource?kid=smwym/hzp2hnos6O/CXrkxKFx3dC74VA3ECGU80',
-        'https://dn-img-page.kakao.com/download/resource?kid=ce21It/hyF23tXM8m/0wARwb5At6jjKwlfj3Kjo1',
-        'https://dn-img-page.kakao.com/download/resource?kid=bTBWMG/hzp2ifulZF/YkpvjY3a5Dl89wX9RtnxDk',
-        'https://dn-img-page.kakao.com/download/resource?kid=cfAzEK/hzaccWdy4A/UArh28KEq6qTNpBMqH1lbK',
-        'https://dn-img-page.kakao.com/download/resource?kid=bDvkGC/hzacbW2cAQ/ZS1Z5mX4Mpk9yN6A82B8q0',
-        'https://dn-img-page.kakao.com/download/resource?kid=bjdREm/hzb7AH9Pj6/ARsEC3Y67KSTHnaEUAmLxk',
-        'https://dn-img-page.kakao.com/download/resource?kid=b1G6sz/hzp2e5hBDs/rZxJLKfnt79jknCnuLJ83k'
+        // 'https://dn-img-page.kakao.com/download/resource?kid=UR3fh/hyF29PgleL/7fFerNikdZewZPxreBIH80',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=d4euUn/hyZ8ANjBph/bQCJXK9YvC6oDTqvXp6aV1',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=cLnYFA/hzmU3TywO7/9jccDOSIGBx0m3YopMIyfK',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=smwym/hzp2hnos6O/CXrkxKFx3dC74VA3ECGU80',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=ce21It/hyF23tXM8m/0wARwb5At6jjKwlfj3Kjo1',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=bTBWMG/hzp2ifulZF/YkpvjY3a5Dl89wX9RtnxDk',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=cfAzEK/hzaccWdy4A/UArh28KEq6qTNpBMqH1lbK',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=bDvkGC/hzacbW2cAQ/ZS1Z5mX4Mpk9yN6A82B8q0',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=bjdREm/hzb7AH9Pj6/ARsEC3Y67KSTHnaEUAmLxk',
+    //     'https://dn-img-page.kakao.com/download/resource?kid=b1G6sz/hzp2e5hBDs/rZxJLKfnt79jknCnuLJ83k'
     ],
     slideBannerEventImg: [
         'https://dn-img-page.kakao.com/download/resource?kid=FDCfL/hzp2jS2BJL/R4hKEhngW4V6MtJXwj67Yk',
@@ -162,4 +162,13 @@ export const dummy = {
     contentDays: [
     '월', '화', '수', '목', '금', '토', '일'
     ]
+}
+
+export function getData(url){
+    return new Promise((resolve, rej) => { 
+        fetch(url) 
+        .then(res => res.json())
+        .then(json => { dummy.slideBannerMainImg = Object.values(json.slideBannerMainImg) })
+        .then(() => resolve())
+    })
 }
