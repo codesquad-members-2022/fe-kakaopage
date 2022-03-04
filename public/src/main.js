@@ -30,6 +30,7 @@ const clickGenresList = () => {
   const genresItem = $all('.genres__item');
   genresItem.forEach(item => {
     item.addEventListener('click', (event) => {
+      if($('.genres__item.genres--focused') === event.target) return false;
       const focusedClass = 'genres--focused';
       setFocus(event.target, focusedClass);
       
@@ -73,6 +74,7 @@ const clickDailyTopList = () => {
   const selectDay = $all('.day');
   selectDay.forEach((item) => {
     item.addEventListener('click', (event) => {
+      if ($('.day.day--focused') === event.target.parentNode) return false;
       if (!event.target.classList.contains('day__btn')) return false
       const parentNode = event.target.parentNode;
       const focusedClass = 'day--focused';
