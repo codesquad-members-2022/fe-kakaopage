@@ -1,4 +1,6 @@
-const createElement = ({ tag, classes, textContent, children }) => {
+import { throttle } from "throttle-debounce";
+
+const createElement = ({ tag, classes, textContent, children, event }) => {
   const element = document.createElement(tag);
   classes.forEach((className) => {
     element.classList.add(className);
@@ -7,7 +9,98 @@ const createElement = ({ tag, classes, textContent, children }) => {
   children?.forEach((child) => {
     element.appendChild(child);
   });
+  if (event) {
+    const { eventType, callback } = event;
+    element.addEventListener(eventType, callback);
+  }
   return element;
+};
+
+const handlePrevButton = ({ elemWidth, elemUnit }) => {
+  const cBox = document.querySelector(".carousel-box");
+  const { curX } = cBox.style.transform.match(
+    /(?<curX>-?[\d]+(\.[\d])?)/
+  ).groups;
+
+  cBox.style.transition = "transform 0.2s";
+  cBox.style.transform = `translateX(${+curX + +elemWidth}${elemUnit})`;
+
+  setTimeout(() => {
+    cBox.style.transition = "none";
+    cBox.style.transform = `translateX(${+curX}${elemUnit})`;
+    const lastElem = cBox.lastChild;
+    cBox.removeChild(lastElem);
+
+    const cBoxes = cBox.querySelectorAll(".carousel-elem");
+    cBoxes.forEach((box) => box.classList.remove("main-elem"));
+    const mainElem = cBoxes[0];
+    mainElem.classList.add("main-elem");
+
+    const curNum = cBox.parentNode.querySelector(".curNum");
+    curNum.textContent = mainElem.dataset.index;
+
+    const firstElem = cBox.firstChild;
+    cBox.insertBefore(lastElem, firstElem);
+  }, 200);
+};
+
+const handleNextButton = ({ elemWidth, elemUnit }) => {
+  const cBox = document.querySelector(".carousel-box");
+  const { curX } = cBox.style.transform.match(
+    /(?<curX>-?[\d]+(\.[\d])?)/
+  ).groups;
+
+  cBox.style.transition = "transform 0.2s";
+  cBox.style.transform = `translateX(${+curX - +elemWidth}${elemUnit})`;
+
+  setTimeout(() => {
+    const firstElem = cBox.firstChild;
+    cBox.removeChild(firstElem);
+
+    const cBoxes = cBox.querySelectorAll(".carousel-elem");
+    cBoxes.forEach((box) => box.classList.remove("main-elem"));
+    const mainElem = cBoxes[1];
+    mainElem.classList.add("main-elem");
+
+    const curNum = cBox.parentNode.querySelector(".curNum");
+    curNum.textContent = mainElem.dataset.index;
+
+    cBox.appendChild(firstElem);
+
+    cBox.style.transition = "none";
+    cBox.style.transform = `translateX(${+curX}${elemUnit})`;
+  }, 210);
+};
+
+const createArrowBox = ({ elemWidth, elemUnit }) => {
+  const prevArrow = createElement({
+    tag: "div",
+    classes: ["arrow", "arrow__prev"],
+    textContent: "<",
+    event: {
+      eventType: "click",
+      callback: throttle(500, () => {
+        handlePrevButton({ elemWidth, elemUnit });
+      }),
+    },
+  });
+  const nextArrow = createElement({
+    tag: "div",
+    classes: ["arrow", "arrow__next"],
+    textContent: ">",
+    event: {
+      eventType: "click",
+      callback: throttle(500, () => {
+        handleNextButton({ elemWidth, elemUnit });
+      }),
+    },
+  });
+  const arrowBox = createElement({
+    tag: "div",
+    classes: ["arrow-box"],
+    children: [prevArrow, nextArrow],
+  });
+  return arrowBox;
 };
 
 const createCarouselOrder = (elems) => {
@@ -76,48 +169,31 @@ const carousel = ({ elems, unit, elemWidth }) => {
 
   carouselBox.style.transform = `translateX(-${WIDTH_PER_ELEM}${ELEM_UNIT})`;
 
+  const arrowBox = createArrowBox({ elemWidth, elemUnit: unit });
   const carouselOrder = createCarouselOrder(newElems);
   const carousel = createElement({
     tag: "div",
     classes: ["carousel"],
-    children: [carouselBox, carouselOrder],
+    children: [carouselBox, arrowBox, carouselOrder],
   });
 
-  const handleTransitionEnd = ({ target }) => {
-    const { curX } = target.style.transform.match(
-      /(?<curX>-[\d]+(\.[\d])?)/
-    ).groups;
-    target.style.transition = "none";
-    target.style.transform = `translateX(${
-      +curX + +WIDTH_PER_ELEM
-    }${ELEM_UNIT})`;
-
-    const firstElem = target.querySelector(".carousel-elem");
-    target.removeChild(firstElem);
-
-    const cBoxes = target.querySelectorAll(".carousel-elem");
-    cBoxes.forEach((box) => box.classList.remove("main-elem"));
-    const mainElem = cBoxes[1];
-    mainElem.classList.add("main-elem");
-
-    const curNum = target.parentNode.querySelector(".curNum");
-    curNum.textContent = mainElem.dataset.index;
-
-    target.appendChild(firstElem);
+  const handleTransitionStart = ({ target }) => {
+    console.log(target, "start");
   };
-
-  const handleTransitionStart = () => {};
+  const handleTransitionEnd = ({ target }) => {
+    console.log(target, "end");
+  };
 
   const getInterval = () => {
     return setInterval(() => {
       const cBox = document.querySelector(".carousel-box");
-      cBox.style.transition = "transform 0.2s";
-      cBox.style.transform = `translateX(-${WIDTH_PER_ELEM * 2}${ELEM_UNIT})`;
-      cBox.removeEventListener("transitionstart", handleTransitionStart);
-      cBox.removeEventListener("transitionend", handleTransitionEnd);
-
-      cBox.addEventListener("transitionstart", handleTransitionStart);
-      cBox.addEventListener("transitionend", handleTransitionEnd);
+      handleNextButton({ elemWidth, elemUnit: unit });
+      cBox.addEventListener("transitionstart", handleTransitionStart, {
+        once: true,
+      });
+      cBox.addEventListener("transitionend", handleTransitionEnd, {
+        once: true,
+      });
     }, 3000);
   };
 

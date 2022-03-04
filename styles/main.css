@@ -192,16 +192,34 @@
   width: 65%;
   border-radius: 5px;
 }
+.carousel > .arrow-box {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 200px;
+  width: 100%;
+}
+
+.arrow-box .arrow {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.main__subBanner .arrow {
+  color: #bbb;
+}
+
 .arrow {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 9px;
+  padding: 3px 11px;
   border-radius: 20px;
   font-size: 25px;
-  color: #808e9b;
-  border: 1px solid #bbbbbb;
+  border: 2px solid #bbbbbb;
+  margin: 0px 20px;
+  line-height: normal;
 }
 
 .main__contents {
