@@ -1,13 +1,6 @@
 import { DEFAULT_GENRE_INDEX } from '../constant.js';
 import { getSlideBtnTemplate } from '../components/slide.js'
 
-export const renderEventBanner = (genre) => { 
-    const eventBanner = document.createElement('div');
-    eventBanner.classList.add('event-banner','slides','center')
-    eventBanner.innerHTML = getEventBannerTemplate(genre);
-    document.querySelector('.tab-contents').appendChild(eventBanner);  
-}
-
 export const getEventBannerTemplate = (eventBannerData) => {
     const eventContent = getEventContentTemplate(eventBannerData[DEFAULT_GENRE_INDEX - 1]);
     const slideBtnTemplate = getSlideBtnTemplate();
@@ -35,5 +28,3 @@ const getEventContentTemplate = (data) => {
       </ul>
     `
 } 
-
-//아직 슬라이드화 하지 않음.

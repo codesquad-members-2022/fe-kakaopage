@@ -2,7 +2,7 @@ import { getMainBannerTemplate, activateMainBanner } from "../system/mainBanner.
 import { getCategoryGridTemplate } from "../system/categoryGrid.js"
 import { getEventBannerTemplate } from "../system/eventBanner.js";
 import { getWorkSectionTemplate } from "../system/workSection.js";
-import { getRecommendEventTemplate } from "../system/recommendEvent.js";
+import { getRecommendEventTemplate, activateRecommendEvent } from "../system/recommendEvent.js";
 
 const componentsListDic = {
     "home": ['mainBanner', 'categoryGrid', 'eventBanner','newTop', 'recommendEvent'], //'daySeriesTop','dailyRankingTop', 'recommendEvent'],
@@ -37,4 +37,5 @@ export const getWebtoonPageTemplate = (genre, pageData) => {
 
 export const activateWebtoonPage = (pageData) => {
     activateMainBanner(pageData.mainBanner);
+    activateRecommendEvent(pageData.recommendEvent);
 }

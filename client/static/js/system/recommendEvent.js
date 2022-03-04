@@ -1,19 +1,16 @@
-import { getHeaderTemplate } from "./section/workSection.js";
-import { recommendEventData } from "../../server/data/recommendEventData.js";
+import { getHeaderTemplate } from "./workSection.js";
 import { START_SLIDE_INDEX } from "../constant.js";
-import { getSlidesTemplate, getRecommendEventControllerTemplate, activateBtns, activateSlide } from "./slide.js";
+import { getSlidesTemplate, getRecommendEventControllerTemplate, activateBtns, activateSlide } from "../components/slide.js";
 
-export const renderRecommendEvent = (genre) => {
-    const eventData = recommendEventData[genre];
-    const recommendEvent = document.createElement('section');
-    recommendEvent.className = 'recommend-event-section';
-    recommendEvent.dataset.name = 'recommend-event';
+export const getRecommendEventTemplate = (recommendEventData) => {
     const headerTemplate = getHeaderTemplate('recommendEvent');
-    const contentWrapperTemplate = getContentWrapperTemplate(eventData);
-    recommendEvent.innerHTML = headerTemplate + contentWrapperTemplate;
-    document.querySelector('.tab-contents').appendChild(recommendEvent);
-
-    activateRecommendEvent(recommendEvent, eventData);
+    const contentWrapperTemplate = getContentWrapperTemplate(recommendEventData);
+    return `
+        <section class='recommend-event-section' data-name='recommend-event'>
+            ${headerTemplate}
+            ${contentWrapperTemplate}
+        </section>
+    `
 }
 
 const getContentWrapperTemplate = (eventData) => {
@@ -29,7 +26,7 @@ const getContentWrapperTemplate = (eventData) => {
 const getEventContentsTemplate = (eventData) => {
     return `
         <ul class='recommend-event__contents'>
-            ${getSlidesTemplate(eventData, START_SLIDE_INDEX, getEventContentTemplate)}
+            ${getSlidesTemplate(eventData, START_SLIDE_INDEX, getEventContentTemplate, 'recommend-event')}
         </ul>
     `
 }
@@ -44,8 +41,8 @@ const getEventContentTemplate = (data) => {
     `
 }
 
-const activateRecommendEvent = (bannerData) => {
-    const recommendEvent = document.querySelector('.recommned-event-section')
-    activateSlide(recommendEvent, bannerData, getRecommendEventSlideTemplate);
+export const activateRecommendEvent = (bannerData) => {
+    const recommendEvent = document.querySelector('.recommend-event-section');
+    activateSlide(recommendEvent, bannerData, getEventContentTemplate);
     activateBtns(recommendEvent);
 }

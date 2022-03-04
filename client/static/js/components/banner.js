@@ -1,9 +1,9 @@
 import { icons } from "../../icons.js";
 
-export const getBannerContentTemplate = (parent, bannerData) => {
-    const tagTemplate = getBannerTagTemplate(parent, bannerData.tags);
+export const getBannerContentTemplate = (bannerData, parentName) => {
+    const tagTemplate = getBannerTagTemplate(bannerData.tags, parentName);
     return `
-        <li class='${parent}__content banner__content' ${bannerData.index ? `data-index=${bannerData.index}` : ''}>
+        <li class='${parentName}__content banner__content' ${bannerData.index ? `data-index=${bannerData.index}` : ''}>
             <a href='#'>
               <div class='banner__img-wrapper'>
                 <img
@@ -12,11 +12,11 @@ export const getBannerContentTemplate = (parent, bannerData) => {
                   alt=${bannerData.title} 포스터
                 />
               </div>
-              <p class='${parent}__description banner__description center'>
+              <p class='${parentName}__description banner__description center'>
                 ${bannerData.description}
               </p>
-              <div class='${parent}__information banner__information'>
-                <p class='${parent}__title banner__title'>${bannerData.title}</p>
+              <div class='${parentName}__information banner__information'>
+                <p class='${parentName}__title banner__title'>${bannerData.title}</p>
                 ${tagTemplate}
               </div>
             </a>
@@ -24,9 +24,9 @@ export const getBannerContentTemplate = (parent, bannerData) => {
     `
 }
 
-const getBannerTagTemplate = (parent, tagData) => {
+const getBannerTagTemplate = (tagData, parentName) => {
     return  `    
-        <div class='${parent}__tags banner__tags vertical-center'>
+        <div class='${parentName}__tags banner__tags vertical-center'>
             <span class='banner__status'
                 ><img src=${icons[tagData.status]} alt=${tagData.status} 아이콘
             /></span>

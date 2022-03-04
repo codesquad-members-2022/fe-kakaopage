@@ -4,7 +4,6 @@ import { getHeaderTemplate } from './system/header.js';
 import { getGnbTemplate, setNewMarkEvent } from './system/gnb.js';
 import { getGenreTabTemplate, setDefault } from './system/genreTab.js'
 import { getWebtoonPageTemplate, activateWebtoonPage } from './pages/webtoon.js';
-// import { renderWorkSection, changeContentsByDay } from './components/section/workSection.js';
 
 export const initRender = () => {
     return Promise.all([

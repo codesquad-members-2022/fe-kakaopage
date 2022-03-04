@@ -2,11 +2,10 @@ import { SLIDE_DELAY, SLIDE_CONTAINER_LENGTH, AUTO_SLIDE_INTERVAL } from '../con
 import { icons } from "../../icons.js";
 
 export const getSlidesTemplate = (bannerData, currIndex, contentsTemplateMakingFunction) => {
-    //const prevIndex = Math.max((currIndex - 1), 0);
     const prevIndex = currIndex - 1 < 0 ? bannerData.length - 1 : currIndex - 1;
     const nextIndex = currIndex + 1 >= bannerData.length ? 0 : currIndex + 1;
     const indexSeries = [prevIndex, currIndex, nextIndex];
-    const slidesTemplate = indexSeries.map(index => contentsTemplateMakingFunction('main-banner', bannerData[index])).join('');
+    const slidesTemplate = indexSeries.map(index => contentsTemplateMakingFunction(bannerData[index], 'main-banner')).join('');
     return slidesTemplate;
 }
 
@@ -48,6 +47,8 @@ export const getRecommendEventControllerTemplate = (parent, currNum, totalNum) =
         </div>
     `
 }
+
+
 
 export const activateBtns = (parent) => {
     const prevBtn = parent.querySelector('.slide__btn--prev');

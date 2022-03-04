@@ -2,16 +2,6 @@ import { getWorkContainerTemplate } from '../components/workContainer.js';
 import { icons } from '../../icons.js';
 import { DEFAULT_DAY } from '../constant.js';
 
-export const renderWorkSection = (layout, contents, genre) => {
-  const workSection = document.createElement('section');
-  let workSectionTemplate = '';
-  workSectionTemplate += getHeaderTemplate(contents)
-  if (contents === 'daySeriesTop') workSectionTemplate += getDayTabTemplate();
-  workSectionTemplate += getWorkContainerTemplate(layout, contents, genre);
-  workSection.innerHTML = workSectionTemplate;
-  document.querySelector('.tab-contents').appendChild(workSection);
-}
-
 export const getWorkSectionTemplate = (layout, contents, workData) => {
   let workSectionTemplate = '';
   workSectionTemplate += getHeaderTemplate(contents);

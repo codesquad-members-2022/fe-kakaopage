@@ -62,7 +62,7 @@ const makeVerticalType = () => {
 }
 
 const makeBannerType = (workData) => {
-  return getBannerContentTemplate('new-top', workData);
+  return getBannerContentTemplate(workData, 'new-top');
 }
 
 const layoutDic = { 
