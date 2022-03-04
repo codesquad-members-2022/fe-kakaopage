@@ -1,4 +1,4 @@
-import { webtoonContents, week } from "./data/contents.js";
+import { week } from "./data/contents.js";
 import {
   createLiListTemplate,
   htmlString2htmlElement,
@@ -12,7 +12,7 @@ const createTuesdayTapTemplate = ({ imageUrl, title, star, read }) => {
       <div class="toon__box">
         <img
           class="toon"
-          src=${imageUrl}
+          src="${imageUrl}"
           alt="toon"
         />
       </div>
@@ -100,6 +100,4 @@ const createWeekWebtoons = ({ data }) => {
   return $weekTapSeciton;
 };
 
-const $weekWebtoons = createWeekWebtoons({ data: webtoonContents });
-
-export default $weekWebtoons;
+export default createWeekWebtoons;
