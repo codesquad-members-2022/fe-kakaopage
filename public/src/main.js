@@ -1,7 +1,6 @@
-import todayData from './webtoonData.js';
-import createDom from './createDOM.js';
-function makeTodayList(day) {
+function makeTodayHtml(day, jsonData) {
   let todayList = ''; 
+  let todayData = jsonData;
   todayData[`${day}`].forEach((contentData, idx) => {
     todayList += 
     `<a href="${contentData["link"]}" class="webtoon-content">
@@ -30,22 +29,28 @@ function makeTodayList(day) {
   return todayList;
 }
 
+function makeTodayList(day) {
+  return fetch('http://localhost:3000/src/tabData/webtoonData.json')
+    .then(response => response.json())
+    .then(result => makeTodayHtml(day, result));
+  }
+
 function makeTodayEvent(dayIdx, today) {
   const dayArr = ["mon", "tue", "wed", "thu", "fri", "sat", "sun", "end"];
   const day = dayArr[dayIdx];
   const toonList = document.querySelector(`.${day}`);
   const webtoons = document.querySelector(".webtoon-list-1");
   const toonListArr = document.querySelectorAll('.navbar-second-content');
-  webtoons.innerHTML = makeTodayList(day);
+  makeTodayList(day).then(result => webtoons.innerHTML = result);
   if(dayIdx === today) toonList.parentElement.classList.add("makeBold", "makeBackgroundImg");
   toonList.addEventListener('click', function (el) {
     toonListArr.forEach((el, idx) => {
       el.classList.remove("makeBold", "makeBackgroundImg");
     })
     toonList.parentElement.classList.add("makeBold", "makeBackgroundImg");
-    webtoons.innerHTML = makeTodayList(day);
+    makeTodayList(day).then(result => webtoons.innerHTML = result);
   });
 };
 
 
-export { makeTodayList, makeTodayEvent };
+export { makeTodayList as makeTodayList, makeTodayEvent };
