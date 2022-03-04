@@ -1,6 +1,6 @@
 import { $ } from './utils.js';
 import { Nav, PageNav, DailySeriesRanking, MainContents } from './components';
-import { PageComponent } from './data';
+import { PageComponent } from './data/components.js';
 import { store } from './data/store.js';
 
 const renderPageNav = () => {

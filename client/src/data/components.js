@@ -23,7 +23,7 @@ const PageComponent = {
   book: () => TempPage('Book'),
 };
 
-const sectionComponent = {
+const SectionComponent = {
   action: () => [
     MainNav(),
     CategoryMenu(store.categories.action),
@@ -92,5 +92,5 @@ const sectionComponent = {
 
 export {
   PageComponent,
-  sectionComponent,
+  SectionComponent,
 };
