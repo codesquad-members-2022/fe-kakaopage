@@ -1,0 +1,1613 @@
+{
+    "home": {
+        "mainBanner": [
+            {   
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=czwYqy/hzmU0WFkAi/WDxkk2GmDErRxNJ399JojK",
+                "title": "여우신랑",
+                "description": "여우와 얽힌 친구를 구하라!",
+                "tags": {"status": "up", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=yn7g7/hyF292TNMt/4XChRjVWahHf4ebIfh3NC1",
+                "title": "던전리셋",
+                "description": "하늘도 뚫어버릴 흙수저가 온다",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "72.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "오늘 UP",
+                "alarm": "198"
+            },
+            {
+                "title": "오늘 신작",
+                "alarm": "3"
+            },
+            {
+                "title": "오리지널",
+                "alarm": "2,350"
+            },
+            {
+                "title": "완결까지 정주행"
+            },
+            {
+                "title": "독립운동가 웹툰"
+            },
+            {
+                "title": "오늘 랭킹",
+                "alarm": "1위"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cLpNgw/hzp2moLmjN/dYhxv2zfFGIU9lDxuRkutK"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=d6OBqA/hzp2jZSWXI/2jQb8ZNUuJRItOFTer6lh0"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=PdCSa/hyEdiGIeqE/aUixLKtx06WhG8eDVgcQu1"
+            }
+        ],
+        "newTop": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dQLV6v/hzmU2UZesE/nZltHUhFfLyMuBSaLWjK90",
+                "title": "여우신랑",
+                "description": "마계로부터 지구를 지킬 수 있을까?",
+                "tags": { "status": "new", "free": "true", "type": "웹툰", "views": "12.5만명"}
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dsGvp/hzmU19A9H8/qakXhDkoF4bFOn6GYE83J1",
+                "title": "환생요마뎐",
+                "description": "요괴를 길들이고 복수를 다짐하다!",
+                "tags": { "status": "up", "free": "true", "type": "웹툰", "views": "3.1만명"}
+            }
+        ],
+        "dailyRankingTop": [
+            {   
+                "ranking": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cy4x92/hzmU3zt9Xb/puomeXsbc6IsBjbqKCfX20&filename=th2",
+                "titleIcon": "fifteen",
+                "title": "사내 맞선",
+                "tags": ["202.9만명", "기다무웹툰", "로맨스", "들꺠,NARAK,혜화"],
+                "updateDay": "월"    
+            },
+            {   
+                "ranking": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=eVtdO/hzmU2tEBKW/VuaxFpaYkAsyGg2tUoNJKk&filename=th2",
+                "title": "이번 생은 가주가 되겠습니다",
+                "tags": ["12.9만명", "기다무웹툰", "로판", "앤트스튜디오, 몬,김로아"],
+                "updateDay": "월"    
+            },
+            {   
+                "ranking": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=eVtdO/hzmU2tEBKW/VuaxFpaYkAsyGg2tUoNJKk&filename=th2",
+                "title": "악녀를 죽여 줘",
+                "tags": ["67.9만명", "기다무웹툰", "로판", "해기,사월생"],
+                "updateDay": "화"    
+            }
+        ],
+        "recommendEvent": [
+            {
+                "index": 0,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=DHuH7/hzp2gCacSm/CxKcdmOaKcmNKqULsxPtm0"
+            },
+            {
+                "index": 1,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=uK5UK/hzmU21KjTA/SvF1U2sJveCP7Sy2EmiJoK"
+            },
+            {
+                "index": 2,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=uVime/hzp2mvCsem/le2NuLTWJkK1kdmYkqhAak"
+            },
+            {
+                "index": 3,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cFRNYY/hzmU3fkAbK/jAeQIOY1xG5v8mKw8035eK"
+            },
+            {
+                "index": 4,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=j4Bhr/hzp2mbjBYF/wBnYvFKEJi590vLiHPTGq0"
+            },
+            {
+                "index": 5,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cpJenf/hzp2hgKZuo/SkJsNc71zZEMxSZZ1aXStk"
+            },
+            {
+                "index": 6,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cw2HVs/hzmU1Ixbbs/38f8KpXR3tVNullQMvKc30"
+            },
+            {
+                "index": 7,
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bYLNfc/hzmU3TS8ZK/stJRX2uYSsPuHlaBdhbLhk"
+            }
+        ],
+        "daySeriesTop": {
+            "mon": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "tue": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "wed": [
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                }
+            ],
+            "thr": [
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ],
+            "fri": [
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                }
+            ],
+            "sat": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "sun": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "end": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.9",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "⭐9.7",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "⭐9.4",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "⭐9.6",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ]
+        }
+    },
+    "daily": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=b8lhpM/hzp2jZTeQq/idpscnCSjQd93wOKxhvov1",
+                "title": "여우신랑",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            }
+        ],
+        "daySeriesTop": {
+            "mon": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "tue": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "wed": [
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                }
+            ],
+            "thr": [
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ],
+            "fri": [
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                }
+            ],
+            "sat": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "sun": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "end": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.9",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "⭐9.7",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "⭐9.4",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "⭐9.6",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ]
+        }
+    },
+    "webtoon": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=luwjD/hyVkMjKYTy/ocIYcV1pYCo6MzPpEYj8tK",
+                "title": "엑스텐",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "daySeriesTop": {
+            "mon": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "tue": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "wed": [
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                }
+            ],
+            "thr": [
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ],
+            "fri": [
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                }
+            ],
+            "sat": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                }
+            ],
+            "sun": [
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "5위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                }
+            ],
+            "end": [
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "1위",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "2위",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "3위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                },{
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "4위",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "이건 명백한 사과의 맛이다",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=b8XUDY/hzacdHFgq0/6K59Mtk85VEQmCLooyEv71&filename=th2",
+                    "label": "⭐9.8",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "127.7만명"
+                },
+                {
+                    "title": "나는 이 집 아이",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=cburiM/hy41PLVqom/1BQa5TQO17iJiSIsRTKVr0&filename=th2",
+                    "label": "⭐9.9",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "212.2만명"
+                },
+                {
+                    "title": "사내 맞선",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=bOkrb8/hzp2j6CvOQ/kbjxtdpkNHpQZpmThVLos1&filename=th2",
+                    "label": "⭐9.7",
+                    "labelIcon": "free",
+                    "tagIcons": ["fifteen"],
+                    "view": "202.3만명"
+                },
+                {
+                    "title": "하필이면 까마어쩌고저꺼고",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=ci204O/hzp2fXpq0c/kJYIUtWhdIWWczAEIGftD1&filename=th2",
+                    "label": "⭐9.4",
+                    "labelIcon": "free",
+                    "tagIcons": ["new"],
+                    "view": "36만명"
+                },
+                {
+                    "title": "이번 생은 가주로 태어나 돈이 많아요",
+                    "src": "https://dn-img-page.kakao.com/download/resource?kid=dpadT7/hzhOgqBSHA/HpZA6H7vPawsODuGIQaQO0&filename=th2",
+                    "label": "⭐9.6",
+                    "labelIcon": "free",
+                    "tagIcons": [],
+                    "view": "123만명"
+                }
+            ]
+        }
+    },
+    "boy": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bPyki0/hzhOfLhfRJ/Hg2KsU5P8odGmpNDG74Rt1",
+                "title": "리플: 버서커",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "독점 신작"
+            },
+            {
+                "title": "이벤트로 달리자"
+            },
+            {
+                "title": "ㅂㅅㅎ 기다무!"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cRTLts/hzp2kEtJvZ/Ip8GoL5e8Lo9AkAMkGTw30"
+            }
+        ]
+    },
+    "drama": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "파멸의 공주님",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "월간베스트#20"
+            },
+            {
+                "title": "#이벤트로달리자"
+            },
+            {
+                "title": "완결까지#정주행"
+            }
+        ]
+    },
+    "romance": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dAy72e/hzmU1BJ9rk/oq58nqY7JDjcUXEjVIpfs1",
+                "title": "파멸의 공주님",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "완결까지 정주행"
+            },
+            {
+                "title": "인기완결작"
+            },
+            {
+                "title": "기다무플러스"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bDWDc8/hzmU19w0tc/7ctgk2UZyvwP2KHf4iIap1"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=RnChT/hzp2fQGkC7/IbYqpX7EiCyMcjINLOTa5K"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=EsrIV/hzp2ec8PVX/gLwWwuutLZuY9dnMopZIZK"
+            }
+        ]
+    },
+    "rofan": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=cWdaE/hzp2nVyWEE/RnGrsOQNnGo9EVqNNoeuk1",
+                "title": "엑스텐",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "월간 베스트"
+            },
+            {
+                "title": "스테디셀러정주행"
+            },
+            {
+                "title": "기다무 플러스"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=zjKSo/hzhOlrWnde/l1Xf4DULjd2sXPrkJUs4n0"
+            }
+        ]
+    },
+    "action": {
+        "mainBanner":  [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=d99Egu/hzp2fiEdy2/pMPdXoXEcu1TzjHY7TTVm1",
+                "title": "리플: 버서커",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            },
+            {   
+                "index": "2",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bxZcSs/hzp2n8SxXD/8g9Lhn7fLLJ3WICsFJv9p1",
+                "title": "리플: 버서커",
+                "description": "세계 1위 게이머의 화려한 귀환",
+                "tags": {"status": "hot", "type": "웹툰","views": "8.6만명"}    
+            },
+            {   
+                "index": "3",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=98sMz/hzb7xDOeDp/I8h3CReVr2xz1k438kEhn1",
+                "title": "파멸의 공주님",
+                "description": "나를 다시 현대로 돌려보내 줘!",
+                "tags": {"status": "hot", "type": "웹툰","views": "38.7만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "독점 신작🔥"
+            },
+            {
+                "title": "이벤트로 달리자"
+            },
+            {
+                "title": "기다무 플러스"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bDWDc8/hzmU19w0tc/7ctgk2UZyvwP2KHf4iIap1"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=RnChT/hzp2fQGkC7/IbYqpX7EiCyMcjINLOTa5K"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=EsrIV/hzp2ec8PVX/gLwWwuutLZuY9dnMopZIZK"
+            }
+        ]
+    },  
+    "bl": {
+        "mainBanner": [
+            {
+                "index": "0",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bieQhm/hzp2mI9n4A/9aqnCcDnI3LGkjcXFC8n00",
+                "title": "파멸의 공주님",
+                "description": "'너도 괴물이구나?'",
+                "tags": {"status": "up", "free": "true", "type": "웹툰","views": "11.7만명"}    
+            },
+            {   
+                "index": "1",
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=dXzzKl/hzb7sQQHpN/DUpEJngFPezXo9ehwzKYf1",
+                "title": "엑스텐",
+                "description": "0.1cm의 오차도 허용하지 않아",
+                "tags": {"status": "recommend", "type": "웹툰","views": "7.8만명"}    
+            }
+        ],
+        "categoryGrid": [
+            {
+                "title": "지난달의 BL"
+            },
+            {
+                "title": "인기 완결작"
+            },
+            {
+                "title": "기다무 플러스"
+            },
+            {
+                "title": "오늘도 선물"
+            },
+            {
+                "title": "BL 소설"
+            },
+            {
+                "title": "오늘의 이벤트"
+            }
+        ],
+        "eventBanner": [
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=bDWDc8/hzmU19w0tc/7ctgk2UZyvwP2KHf4iIap1"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=RnChT/hzp2fQGkC7/IbYqpX7EiCyMcjINLOTa5K"
+            },
+            {
+                "src": "https://dn-img-page.kakao.com/download/resource?kid=EsrIV/hzp2ec8PVX/gLwWwuutLZuY9dnMopZIZK"
+            }
+        ]
+    }
+}
