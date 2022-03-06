@@ -1,18 +1,24 @@
 
 import { select } from "./util.js";
-import { contentsData } from "./webtoonData.js";
+//import { contentsData } from "./webtoonData.js";
 
 // 전역변수를 사용하지 않는 방법은 뭘까..?
 let index;
 let setTimer;
 const startIndex = 1;
 let transitionCheck = false;
+let contentsData;
 
 export function initContents() {
-    createContents();
-    createCloneNode();
-    listenEvent();
-    autoSlide();
+    return fetch('http://localhost:3000/webtoon/contentsData')
+        .then(res => res.json())
+        .then(data => {
+            contentsData = data;
+            createContents();
+            createCloneNode();
+            listenEvent();
+            autoSlide();
+        })
 }
 
 function listenEvent() {
@@ -130,5 +136,3 @@ function getContentsTemplate(object, index) {
 
     return template
 }
-
-

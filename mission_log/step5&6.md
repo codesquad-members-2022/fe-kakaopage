@@ -1,5 +1,3 @@
-# fe-kakaopage
-
 
 ### Express 를 통한 API server 
 
@@ -16,6 +14,43 @@
           
 
 #### 구현과정
+
+1. express 설치 및 Start
+    - `npm install express --save` 설치
+    - ES6 import 방식을 사용함. `import express from "express"`
+    - express 함수의 반환값을 변수로 선언하면서 서버 관련 응답,요청 메소드를 사용할 수 있다.
+        - `app = express()`
+        
+2. 포트 지정, get 요청하여 html 띄우기.
+    - `app.listen` 으로 특정 port 와 express 서버를 연결한다. 
+    - `app.get` : GET request 
+        - 첫 번째 파라미터는 URL 정의 (‘/’) 
+        - 두 번째 파라미터는 해당 url에서 수행할 작업 및 응답을 정의하는 콜백 함수
+        - 요청에 해당하는 req (request)와 응답에 해당하는 res (response)
+        - 요청에 대한 정보는 req에 저장되어있고, 응답할 때 res 파라미터를 사용하여 응답 정보를 송신
+    _ 브라우저에서 localhost:3000 + 'path' (또는 127.0.0.1:3000 + 'path') 입력 시 로컬의 3000 포트로 get 요청
+    - 이 때 `app.get` 의 콜백함수 중 response 로 요청에 대한 응답을 줄 수 있다.
+    - 해당 path에 있는 html 파일을 보낸다. 
+        - `res.sendFile(path.join(__dirname, '..', "/index.html"))`
+    - 이 때 경로를 알기 위해 __dirname (file 명을 제외한 절대 경로) 를 일반적으로 사용하는데, es6 module 을 사용하는 경우 별도로 path 모듈을 사용해야 한다.
+        - `import path from 'path'`
+        - `const __dirname = path.resolve();`
+    - [path module 참고 - 링크](https://p-iknow.netlify.app/node-js/path-moudle/)
+    
+3. Static 파일 설정
+    - Static 파일들은 클라이언트에서 동작하는 자바스크립트나 css, html과 같은 리소스 파일들을 지칭한다.
+    - 일반적으로 아래와 같이 static 파일을 가져올 폴더를 지정해준다. (public : 폴더이름)
+        - `app.use(express.static('public'))`
+        - 이제 html 에서 public 폴더를 기준으로 한 경로에서 css, js 등을 가져올 수 있다.
+    - 위의 방법은 소스파일이 위치한 경로를 기준으로 하기 때문에 사용자가 원하는 경로에 static파일을 지정해주고 싶을 수도 있다.
+    - 나의 경우 express.js 는 js 폴더 하위에 있어 css 나 imgaes 폴더에 접근하기 위해서는 static 폴더를 더 상위 폴더인 fe-kakaopage 로 해야했다.
+        - `app.use(express.static(path.join(__dirname, '..', '..', 'fe-kakaopage')))`
+        - 위의 path.join 경로를 console.log 하면 /Users/juyoungoh/WebstormProjects/bangtae/CodeSquad_Masters_FE/mission/fe-kakaopage 이다.
+    - 이제 index.html 의 ref 경로를 수정해준다.
+        - 변경 전 index.html 현재 위치 기준 상대경로 `<link rel="stylesheet" href="./css/reset.css">`
+        - 변경 후 static 폴더 기준 경로 `<link rel="stylesheet" href="/css/reset.css">`
+    - express.js 실행하니 이미지 및 tab 기능 동작함.
+    - 처음에는 sliding 이 동작하지 않았는데 시간이 지나서 새로고침하니까 동작함.
     
 4. URL 라우팅
     - 특정 URL 경로로 요청이 왔을 경우, JSON 형태의 데이터를 줄 수 있도록 구현한다.
@@ -33,7 +68,7 @@
             
         - ```javascript
             // 전역변수로 선언하여 하위 함수에서 template 구성 시 webtoonData 를 사용할 수 있도록 한다.
-            // 전역변수로 한 이유 : 각 하위 함수에 포함된 함수에서 data가 사용되어서 매개변수로 전달할 시 코드 변경이 여러 곳에서 필요함. 초기 설계가 중요하다...
+            // 전역변수로 한 이유 : 각 하위 함수에 포함된 하위 함수에서 data가 사용되어서 매개변수로 전달할 시 코드 변경이 여러 곳에서 필요함. 초기 설계가 중요하다...
             let webtoonData;
             export function initWebtoonDaily() {
                 fetch('http://localhost:3000/webtoon/data')
@@ -99,22 +134,11 @@
     - 그럼 Fetch 는 내부에 resolve 가 있는 건가? => 요청이 성공하면 resolve.
         - fetch()로 부터 반환되는 Promise 객체는 HTTP error 상태를 reject하지 않습니다. HTTP Statue Code가 404나 500을 반환하더라도요. 대신 ok 상태가 false인 resolve가 반환되며, 네트워크 장애나 요청이 완료되지 못한 상태에는 reject가 반환됩니다. 
     
-#### 어려웠던 점
 
-1. 새로운 기능을 추가할 때, 기존 코드를 건드리는 작업...
-    - 초기에 작은 기능 구현을 시작으로 덧붙이면서 코드를 짰더니 기능별로 구분도 안되어 있고 연결된 부분이 너무 많아졌습니다.
-    - 특히 HTML 탭 별로 main 내부에 rendering 할 영역을 구성하는 모듈 / 각 영역을 생성하는 모듈 / 각 영역에 이벤트를 거는 모듈 등으로 분리했으면 좋았을 것 같다는 생각을 했습니다.
-    - 지금은 영역을 생성하면서 이벤트도 걸고 바로 렌더링까지 하다보니 조금만 복잡해져도 보수가 어려울 것 같습니다.
-    - 구현된 기능이 많지 않고 데이터도 많지 않아서 이렇게 할 수 있었던 것 같습니다.
-    - 다음엔 초기 설계를 좀 더 잘해보고 싶습니다.
-    
-2. Promise, Fetch, Then 등.. 비동기 개념.
-    - Promise 의 동작 원리와 Fetch 와의 차이점,,
-        - Fetch 는 resolve 가 어떻게 발생하는지? 궁금했는데 어떤 응답이든 응답이 오면 resolve 가 된다고 이해했습니다.
-        
-    - Then 도 Promise 를 return 하는데 then 의 콜백 함수가 또 Promise 를 return 하면 어떻게 되는건지 이해하기가 어려웠습니다.
-        - 이해한 바로는, then 은 콜백함수의 return 을 resolve 로 간주합니다. 
-        - then 자체는 promise 를 return 하기 때문에, 다음 .then 을 사용할 수 있는 것이고, 다음 .then은 이전 콜백의 return 과 동시에 실행됩니다.
-        - 이전 콜백이 promise 를 반환할 때만 다음 .then 이 promise 의 value 반환값으로 동작합니다. 
-            - 즉 이전 콜백이 비동기 작업일 경우 promise 를 반환해야만 다음 .then 이 먼저 실행되지 않고 비동기 작업 이후에 동작한다. => async await 과의 차이는 여기서 발생하는 것 같습니다.
-            
+#### refactoring
+
+- 폴더 분류 변경
+    - 서버에서 static 폴더로 지정할 public 을 만들고 내부에 css, images, js 옮김.
+    - 서버 관련 js 인 express.js 와 index.html 만 별도 폴더 없이 존재
+    - static 경로 변경하는데 path.resolve() 가 현재 실행 중인 js 파일의 경로를 반환하지 않아 이상했다.
+    - html 내부 ref 경로는 public 폴더 기준 경로이므로 수정 안해도 됨.
