@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.listen(PORT);
 
-app.get("/home", (req, res) => {
+app.get("/category/home", (req, res) => {
   res.status(200).json(webtoonContents);
 });
 

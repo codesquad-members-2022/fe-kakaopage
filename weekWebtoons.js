@@ -1,56 +1,66 @@
-import { webtoonContents, week } from "./data/contents.js";
-import { createLiListTemplate } from "./util/createTag.js";
+import { week } from "./data/contents.js";
+import {
+  createLiListTemplate,
+  htmlString2htmlElement,
+  htmlStrings2htmlElementList,
+  targetQuerySelector,
+} from "./util/util.js";
 
-const $weekTap = createLiListTemplate(week);
-
-const createTuesdayTapTemplate = (imageUrl, title, star, read) => {
-  return `
-      <div>
-        <div>
-          <div class="toon__box">
-            <img
-              class="toon"
-              src=${imageUrl}
-              alt="toon"
-            />
-          </div>
-          <img
-            src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
-          />
-          <span>${star}</span>
-          <img
-            src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-          />
-        </div>
-        <h2 class="title">${title}</h2>
-        <div header__container>
-          <img
-            class="read__icon"
-            src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-            alt="read count"
-          />
-          <span>${read}</span>
-        </div>
+const createTuesdayTapTemplate = ({ imageUrl, title, star, read }) => {
+  const htmlString = `
+    <div>
+      <div class="toon__box">
+        <img
+          class="toon"
+          src="${imageUrl}"
+          alt="toon"
+        />
       </div>
+      <img
+        src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac"
+      />
+      <span>${star}</span>
+      <img
+        src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
+      />
+    </div>
+    <h2 class="title">${title}</h2>
+    <div header__container>
+      <img
+        class="read__icon"
+        src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+        alt="read count"
+      />
+      <span>${read}</span>
+    </div>
   `;
+
+  return htmlString2htmlElement({ htmlString });
 };
 
-const $tuesdayWebtoons = webtoonContents
-  .map(({ imageUrl, title, star, read }) =>
-    createTuesdayTapTemplate(imageUrl, title, star, read)
-  )
-  .join("");
+const createToonList = ({ data }) => {
+  const className = "main__toon__category toon__grid toons__box";
 
-const createWeekWebtoons = () => {
-  const weekTapClassName = "week__webtoons";
+  const $toonList = htmlStrings2htmlElementList({
+    data,
+    className,
+    createChildElement: createTuesdayTapTemplate,
+  });
+
+  return $toonList;
+};
+
+const createWeekWebtoons = ({ data }) => {
+  const className = "week__webtoons";
+  const filterClass = "filter";
+  const tag = "section";
   const navConatinerClassName =
     "main__navigation__menu main__week__menu interval";
   const filterClassName =
-    "header__container main__toon__category container__space__between";
-  const tuesToonClassName = "main__toon__category toon__grid toons__box";
+    "filter header__container main__toon__category container__space__between";
+  const $weekTap = createLiListTemplate(week);
 
-  return `
-    <section class="${weekTapClassName}">
+  const htmlString = `
       <nav>
         <ul class="${navConatinerClassName}">
           ${$weekTap}
@@ -71,13 +81,23 @@ const createWeekWebtoons = () => {
           <span>▼</span>
         </div>
       </section>
-      <div class="${tuesToonClassName}">
-        ${$tuesdayWebtoons}
-      </div>
-    </section>
   `;
+
+  const $weekTapSeciton = htmlString2htmlElement({
+    tag,
+    htmlString,
+    className,
+  });
+
+  const $filterSection = targetQuerySelector({
+    target: $weekTapSeciton,
+    className: filterClass,
+  });
+
+  const $toonList = createToonList({ data });
+  $filterSection?.insertAdjacentElement("afterend", $toonList);
+
+  return $weekTapSeciton;
 };
 
-const $weekWebtoons = createWeekWebtoons();
-
-export default $weekWebtoons;
+export default createWeekWebtoons;
