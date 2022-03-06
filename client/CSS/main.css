@@ -57,12 +57,22 @@ main > * {
   right: 5%;
 }
 
+.ads__number {
+  font-size: 1rem;
+  color: var(--color-grey3);
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
 .ads__image {
+  position: absolute;
   display: flex;
+  left: -100%;
 }
 
 .ads__image > img {
-  width: 100%;
+  width: var(--width-main);
 }
 
 /* days ======================================================= */

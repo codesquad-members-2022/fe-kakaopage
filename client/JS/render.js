@@ -1,5 +1,5 @@
 import { drawWithAssembly, headerAssembly } from "./assembly.js";
-import { markAllSelectedNav, selectedNav } from "./nav.js";
+import { markAllSelectedNav, selectedNav } from "./navigator.js";
 import { addEvent } from "./utility.js";
 import { clickEventHandler } from "./clickEventHandler.js";
 

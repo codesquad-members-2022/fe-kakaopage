@@ -6,7 +6,7 @@ import {
   daysAssembly,
 } from "./assembly.js";
 import { selector, addClass, removeClass } from "./utility.js";
-import { selectedNav } from "./nav.js";
+import { selectedNav } from "./navigator.js";
 
 const removeAndDrawView = (target, name) => {
   let _target = typeof target === "string" ? target : target.innerHTML;

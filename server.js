@@ -23,6 +23,6 @@ app.use("/", mainRouter);
 
 app.engine("html", ejs.renderFile);
 app.set("view engine", "ejs");
-app.set("views", process.cwd() + "/client/HTML");
+app.set("views", process.cwd() + "/views");
 
 export default app;

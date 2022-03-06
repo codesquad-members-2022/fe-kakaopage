@@ -1,4 +1,5 @@
 import { selector, addClass } from "./utility.js";
+import { icons } from "./icons.js";
 
 const webtoonNavItems = [
   "홈",
@@ -15,7 +16,7 @@ const daysNavItems = ["월", "화", "수", "목", "금", "토", "일", "완결"]
 const daysMenuNavItems = [
   "전체",
   "웹툰",
-  `<div><i class="fas fa-clock"></i></div> 웹툰`,
+  `<div><i class="${icons.clock}"></i></div> 웹툰`,
 ];
 
 const getToday = () => {
