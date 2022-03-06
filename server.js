@@ -4,6 +4,16 @@ const api = require("./public/data/data.json");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
 
+const helloTemplate = {
+  title: "KakaoPage API",
+  message: "Welcome to kakaoAPI ",
+  fontcolor: "<font color='blue'>font color</font>",
+  contents: `<div style="color: green">
+  <p>/api => toonList</p>
+  <p>/api/toon/:id => 해당하는 id에 맞는 toon 찾기</p>
+  </div>`,
+};
+
 app.locals.pretty = true;
 app.set("view engine", "pug");
 app.set("views", "./public/views");
@@ -16,15 +26,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/hello", (req, res) => {
-  res.render("hello", {
-    title: "KakaoPage API",
-    message: "Welcome to kakaoAPI ",
-    fontcolor: "<font color='blue'>font color</font>",
-    contents: `<div style="color: green">
-    <p>/api => toonList</p>
-    <p>/api/toon/:id => 해당하는 id에 맞는 toon 찾기</p>
-    </div>`,
-  });
+  res.render("hello", helloTemplate);
 });
 
 app.get("/api", (req, res) => {
