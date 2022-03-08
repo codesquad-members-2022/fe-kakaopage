@@ -4,60 +4,60 @@
           "genre": "홈",
           "title": "회귀자의 증권사 생활",
           "imgsrc":
-            "../public/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png",
+            "/images/소설 _ 회귀자의 증권사 생활 6타 _ 15-24.png",
           "follow": 18.5
         },
         {
           "genre": "요일연재",
           "title": "마법 아카데미의 육체파 천재",
           "imgsrc":
-            "../public/images/소설 _ 마법 아카데미의 육체파 천재 8타 _ 0-24.png",
+            "/images/소설 _ 마법 아카데미의 육체파 천재 8타 _ 0-24.png",
           "follow": 438.5
         },
         {
           "genre": "웹툰",
           "title": "그 악녀가 검을 든 이유",
           "imgsrc":
-            "../public/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
+            "/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
           "follow": 24.5
         },
         {
           "genre": "소년",
           "title": "롱리브더킹",
-          "imgsrc": "../public/images/웹툰 _ 롱리브더킹 1타 _ 21-24.png",
+          "imgsrc": "/images/웹툰 _ 롱리브더킹 1타 _ 21-24.png",
           "follow": 42.5
         },
         {
           "genre": "드라마",
           "title": "8클래스 마법사의 회귀",
           "imgsrc":
-            "../public/images/웹툰 _ 8클래스 마법사의 회귀 0타 _ 21-23.png",
+            "/images/웹툰 _ 8클래스 마법사의 회귀 0타 _ 21-23.png",
           "follow": 18.8
         },
         {
           "genre": "로맨스",
           "title": "학사재생",
-          "imgsrc": "../public/images/웹툰 _ 학사재생 9타 _ 0-24.png",
+          "imgsrc": "/images/웹툰 _ 학사재생 9타 _ 0-24.png",
           "follow": 17.5
         },
         {
           "genre": "로판",
           "title": "남주를 주웠더니 남편이 생겨버렸다",
           "imgsrc":
-            "../public/images/웹툰 _ 남주를 주웠더니 남편이 생겨버렸다 3타 _ 15-23.png",
+            "/images/웹툰 _ 남주를 주웠더니 남편이 생겨버렸다 3타 _ 15-23.png",
           "follow": 68.5
         },
         {
           "genre": "액션무협",
           "title": "더 라이브",
-          "imgsrc": "../public/images/웹툰 _ 더 라이브7타 _ 21-24.png",
+          "imgsrc": "/images/웹툰 _ 더 라이브7타 _ 21-24.png",
           "follow": 27.4
         },
         {
           "genre": "BL",
           "title": "그 악녀가 검을 든 이유",
           "imgsrc":
-            "../public/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
+            "/images/소설 _ 그 악녀가 검을 든 이유 2타 _ 10-24.png",
           "follow": 14.5
         }
       ],
@@ -69,7 +69,7 @@
             "fallow": 51.8,
             "rating": 9.8,
             "genre": "액션무협",
-            "imgsrc": "../public/images/궁귀검신.png",
+            "imgsrc": "/images/궁귀검신.png",
             "new":false,
             "event": true
           },
@@ -80,7 +80,7 @@
             "fallow": 202,
             "rating": 9.7,
             "genre": "소년",
-            "imgsrc": "../public/images/도굴왕.png",
+            "imgsrc": "/images/도굴왕.png",
             "new":false,
             "event": false
           },
@@ -91,7 +91,7 @@
             "fallow": 71.5,
             "rating": 9.5,
             "genre": "소년",
-            "imgsrc": "../public/images/던전 리셋.png",
+            "imgsrc": "/images/던전 리셋.png",
             "new":true,
             "event": false
           },
@@ -102,7 +102,7 @@
             "fallow": 37,
             "rating": 9.0,
             "genre": "로판",
-            "imgsrc": "../public/images/용사의 전 여친입니다.png",
+            "imgsrc": "/images/용사의 전 여친입니다.png",
             "new":false,
             "event": true
           },
@@ -113,7 +113,7 @@
             "fallow": 65.7,
             "rating": 7.1,
             "genre": "로판",
-            "imgsrc": "../public/images/시한부라서 흑막의 며느리가 되었는데.png",
+            "imgsrc": "/images/시한부라서 흑막의 며느리가 되었는데.png",
             "new":false,
             "event": false
           },
@@ -124,7 +124,7 @@
             "fallow": 82.8,
             "rating": 9.5,
             "genre": "로판",
-            "imgsrc": "../public/images/다정한 그대를 지키는 방법.png",
+            "imgsrc": "/images/다정한 그대를 지키는 방법.png",
             "new":false,
             "event": false
           },
@@ -135,7 +135,7 @@
             "fallow": 30.5,
             "rating": 8.7,
             "genre": "로판",
-            "imgsrc": "../public/images/흑막을 버리는 데 실패했다.png",
+            "imgsrc": "/images/흑막을 버리는 데 실패했다.png",
             "new":false,
             "event": false
           },
@@ -146,7 +146,7 @@
             "fallow": 65.7,
             "rating": 7.1,
             "genre": "로판",
-            "imgsrc": "../public/images/시한부라서 흑막의 며느리가 되었는데.png",
+            "imgsrc": "/images/시한부라서 흑막의 며느리가 되었는데.png",
             "new":false,
             "event": false
           }
